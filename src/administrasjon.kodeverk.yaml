@@ -1,0 +1,169 @@
+# yaml-language-server: $schema=https://w3id.org/linkml/meta.schema.json
+id: https://w3id.org/novari/fint/administrasjon/kodeverk
+name: administrasjon.kodeverk
+imports:
+  - linkml:types
+  - felles.basisklasser
+  - felles.komplekse-datatyper
+  - fellesmodell.basisklasser
+
+classes:
+
+  Ansvar:
+    description: |
+      Kodeverk som er en del av kontostrengen som beskriver hvem som har ansvaret for en utgift eller en inntekt
+      
+      # Beskrivelse
+      
+      Ansvar viser hvordan ansvaret i organisasjonen er bygd opp i samsvar med fylkeskommunens anvisningsmyndighet.
+      
+      Alternative navn: `Kostsenter`, `Koststed`.
+    is_a: Begrep
+    attributes:
+      forelder:
+        range: Ansvar
+        description: |
+          For å bygge hierarki av Ansvar
+
+  Arbeidforholdstype:
+    description: |
+      Viser hvilket behov hos arbeidsgiver som dekkes av arbeidsforholdet
+      
+      # Beskrivelse
+      
+      Viser hvilket behov hos arbeidsgiver som dekkes av arbeidsforholdet
+      
+      Alternative navn:
+      * Stillingstype
+      * Stillingskategori
+      * Ansattforholdkode
+      
+      # Eksempel
+      
+      Kode | Beskrivelse
+      ---|---
+      A   |     Fast
+      B    |    Timelønnet
+      C   |     Lærlinger
+      D   |     Folkevalgt/politiker
+      E    |    Midlertidig
+      ...   | ...
+      Z    |    Annet
+    is_a: Begrep
+    attributes:
+      forelder:
+        range: Arbeidforholdstype
+        description: |
+          For å bygge hierarki av Arbeidsforholdstype
+
+  Art:
+    description: |
+      Kodeverk som er en del av kontostrengen som beskriver hva slags inntekter og utgifter det gjelder. 
+      
+      # Beskrivelse
+      
+      Alternativt navn: Konto
+      
+      Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er drift, investering eller balanse. 
+      
+      # Eksempel
+      
+      [Oppland fylkeskommune kontoplan 2016 inneholder eksempel på Arter](http://www.oppland.no/Handlers/fh.ashx?MId1=1396&amp;FilId=3291)
+    is_a: Begrep
+
+  Funksjon:
+    description: |
+      Del av kontostrenges som beskriver hva som produseres
+      
+      # Beskrivelse
+      
+      Funksjon viser fylkeskommunens aktivitet og tjenesteproduksjon.
+      
+      Alternativ navn: `Tjenste`
+    is_a: Begrep
+    attributes:
+      forelder:
+        range: Funksjon
+        description: |
+          For å bygge hierarki av Funksjon
+
+  Personalressurskategori:
+    description: |
+      Arbeidforholdstype fra hovedstillingen.
+      
+      # Beskrivelse
+      
+      Alternativ navn:
+      * Ansatt (er ikke datatype, men kodeverk)
+      * Ansattkategori
+      * Ansattformer"
+      
+      # Eksempel
+      
+      ## Eksempel fra Visma HR - Kategori:
+      
+      Kode | Beskrivelse
+      ---|---
+      F | Fast
+      M | Midlertidig
+      O | Oppdragstaker
+      P | Politiker
+      S | Sluttet
+      
+      ## Eksempel fra Agresso - Ressurstype:
+      
+      Kode  | Beskrivelse
+      ---|---
+      1 | Ansatt - kommunal
+      10 | Lærling/Ung arb.taker
+      2 | Ansatt - undervisning
+      3 | Honorar/godtgjørelse
+      4 | Sluttet
+      5 | Nyansatt
+      6 | Ikke ansatt - kun bruker
+      7 | Politikere
+      8|  Selvstendig næringsdrivende
+    is_a: Begrep
+
+  Prosjekt:
+    description: |
+      Del av kontostrenges som peker på løpende prosjekter
+    is_a: Begrep
+
+  Stillingskode:
+    description: |
+      Et felles kodeverk for stillinger
+      
+      # Beskrivelse
+      
+      I det fylkeskommunale lønnssystemet har alle stillinger en stillingskode og en stillingsbetegnelse (for eksempel 7026 for bibliotekar eller 7076 for hjelpepleier). Stillingskoden kan angi noe om stillingens innhold og lønnsnivå.
+      
+      Det finnes en [KS standard for stillingskoder](http://www.ks.no/globalassets/vedlegg-til-hvert-fagomrader/arbeidsgiver/lonnpersonal---analyse-og-statistikk/innsamling-av-data/del-3---stillingskoder.pdf)
+    is_a: Begrep
+    attributes:
+      forelder:
+        range: Stillingskode
+        description: |
+          For å bygge hierarki av Stillingskoder
+
+  TimerPerUkeKode:
+    description: |
+      Timer per uke i 100 % stilling
+      
+      # Beskrivelse
+      
+      # Eksempel
+      
+      ## Eksempel fra Agresso - Arbeidsplan:  
+      
+      Kode   |     Beskrivelse
+      ---|---
+      33,6   |     33,6 timers uke
+      34,0    |    34,0 timers uke
+      34,5     |   34,5 timers uke
+      35,0     |   35,0 timers uke
+      35,5     |   35,5 timers uke
+      36,0     |   36,0 timers uke
+      37,5     |   37,5 timers uke
+      ...    | ...
+    is_a: Begrep

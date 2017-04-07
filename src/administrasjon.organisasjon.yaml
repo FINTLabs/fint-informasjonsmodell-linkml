@@ -1,0 +1,113 @@
+# yaml-language-server: $schema=https://w3id.org/linkml/meta.schema.json
+id: https://w3id.org/novari/fint/administrasjon/organisasjon
+name: administrasjon.organisasjon
+imports:
+  - linkml:types
+  - felles.basisklasser
+  - felles.komplekse-datatyper
+  - fellesmodell.basisklasser
+  - fellesmodell.komplekse-datatyper
+
+classes:
+
+  Organisasjonselement:
+    description: |
+      Et element i organisasjonsstrukturen
+      
+      # Beskrivelse
+      
+      Innslagspunkt i organisasjonsstrukturen. Organisasjonselement er en avdeling/seksjon/enhet, som inneholder relasjon til leder. 
+      
+      Flere organisasjonselement bygger hierarki med relasjon til orverordnet organisasjonselement, som former organisasjonsstrukturen.
+      
+      # Eksempler
+      
+      |     OrgKode     | OrgId |             Beskrivelse              | overordenetId |
+      |-----------------|---------|--------------------------------------|-----------------|
+      | F12             |      25 | OPPL Opplæringsavdelingen            |               0 |
+      | F12.10          |      28 | OPPL Videregående opplæring          |              25 |
+      | F12.10.44       |      39 | ASKI Askim vgs                       |              28 |
+      | F12.10.44.50.15 |      52 | ASKI Internasjonalisering og eksamen |              39 |
+      | F12.10.44.50.15 |      55 | ASKI FG Idrett                       |              52 |
+      | F12.10.44.10    |      70 | ASKI Personal- og renholdsstab       |              39 |
+    is_a: Enhet
+    attributes:
+      organisasjonsId:
+        range: Identifikator
+        description: |
+          Unikt internnummer som er unikt for organisasjonselement
+          
+          # Beskrivelse
+          
+          Dette kan være et nummer som ikke er synlig i fagsystem.
+        required: true
+      organisasjonsKode:
+        range: Identifikator
+        description: |
+          Beskrivende kode
+          
+          # Beskrivelse
+          Beskrivende kode, som ofte beskriver hvor man er i hierarkiet (for eksempel 35 er overordnet til 356).
+          
+          Verdien må være unik innenfor en gitt gyldighetsperiode.
+          
+          # Eksempel
+          
+          ## Eksempel fra Østfold fylkeskommune
+          
+          * F12
+          * F12.10
+          * F12.10.44
+          * F12.10.44.50
+          * F12.10.44.50.15
+          
+          ## Eksempel fra Vest-Agder fylkeskommune
+          
+          * 3 Fylkesrådmann
+          * 32 Utdanningsavdeling
+          * 3211 Seksjon for plan og utvikling
+          * 3212 Seksjon for inntak og gjennomføring
+          * 3213 Seksjon for fagopplæring
+          * 3215 SMI skolen
+          * 321501 SMI skolen, andre avdelinger
+          * 321502 Ungdomsskoleavdelingen - grunnskoleopplæring
+          * 321503 Ungdomsavdelingen - VGO
+        required: true
+      gyldighetsperiode:
+        range: Periode
+        description: |
+          Tidsperiode for når organisasjonselementer er gjeldene
+      kortnavn:
+        range: string
+        description: |
+          Forkortet navn som beskriver organisasjonselementet. 
+          
+          # Beskrivelse
+          Akronym navnet til organisasjonselementet.
+          
+          # Format
+          Tekst
+          
+          # Eksempler
+          
+          * ASKI (Askim videregående skole)
+          * IT (IT-seksjonen)
+          * FRS (Fylkesrådmannens stab)
+      navn:
+        range: string
+        description: |
+          Navnet til organisasjonsselemetet.
+          
+          # Beskrivelse
+          
+          
+          # Format
+          Tekst
+          
+          # Eksempler
+          
+          For eksempel:
+          * IT-seksjonen.
+          * Faggruppe lønn
+          * Askim Videregående skole
+          * Avdeling for helse og sosial

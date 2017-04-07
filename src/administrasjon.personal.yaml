@@ -1,0 +1,233 @@
+# yaml-language-server: $schema=https://w3id.org/linkml/meta.schema.json
+id: https://w3id.org/novari/fint/administrasjon/personal
+name: administrasjon.personal
+imports:
+  - linkml:types
+  - felles.basisklasser
+  - felles.komplekse-datatyper
+  - administrasjon.kodeverk
+  - fellesmodell.komplekse-datatyper
+
+classes:
+
+  Personalressurs:
+    description: |
+      Arbeidstaker eller oppdragstaker i organisasjonen
+      
+      # Beskrivelse
+      
+      Personalressurs er personer som leverer tjenester i form av å være ansatt. Personalressursen kan også være en person fra vikarbyrå, eller et firma som bekler et arbeidsforhold gjennom en kontrakt/avtale. Registrert i HR-systemet.
+      
+      # Eksempler
+      
+      * *ordinære* ansatte i faste og midlertidige stillinger
+      * oppdragstakere: 
+        * politikere
+        * ressurser med timelønn
+        * sensorer
+        * eksamensvakt
+        * hospitant
+      
+      Inneholder i utgangspunktet ikke *leverandørrepresenanter* (ekstern vikar, foredragsholdere, konsulenter).
+    attributes:
+      ansattnummer:
+        range: Identifikator
+        description: |
+          Den unike identifIkatoren til en ansatt i ansatt-/ressursregistret i HR-systemet
+          
+          # Beskrivelse
+          
+          Identifiserer en personalressurs unikt. En personalressurs vil kun være registert med ett ansattnummer.
+        required: true
+      brukernavn:
+        range: Identifikator
+        description: |
+          Brukernavn til en person
+          
+          # Beskrivelse
+          
+          Skal inneholde brukernavn for pålogging, som finnes i katalogtjenesten (feks Active Directory). Brukes som en identifikator som består, når fødselsnummer og/eller andre identifikatorer endrer seg.
+          
+          # Format
+          
+          Brukernavn i det format en personalressurs trenger for å logge seg på systemer i organisasjonen.
+        required: true
+      systemId:
+        range: Identifikator
+        description: |
+          Unik intern system-id for personalressurs
+          
+          # Beskrivelse
+          
+          Systemspesifikk id, som normalt ikke er synlig i fagsystemet.
+      ansettelsesperiode:
+        range: Periode
+        description: |
+          Perioden personalressursen er i et forhold til fylkeskommunen
+          
+          # Beskrivelse
+          
+          * Startdato: Datoen for når personalressursen første gang begynte i fylkeskommunene.
+          * Sluttdato: Dato for når personalressursen sitt forhold til fylkeskommunen opphører.
+        required: true
+      kontaktinformasjon:
+        range: Kontaktinformasjon
+        description: |
+          Arbeidsrelatert kontaktinformasjon til en personalressurs
+          
+          # Beskrivelse
+          
+          Den fortrukne måten å komme i kontakt med en personalressurs.
+      personalressurskategori:
+        range: Personalressurskategori
+        description: |
+          Angir hvilken kategori personalressurs
+          
+          # Beskrivelse
+          
+          Hvilken kategori/ansattform personalressursen innehar.
+          
+          # Eksempel
+          
+          Kan for eksempel velges blant følgende: `Fast`, `Midlertidig`, `Oppdragstaker`, `Politiker`, `Sluttet`
+          
+          Se kodeverk Personalressurskategori for utvidet eksempel.
+        required: true
+
+  Arbeidsforhold:
+    description: |
+      Arbeidsforhold er et avtaleforhold mellom personalressurs og arbeidsgiver
+      
+      # Beskrivelse
+      
+      Arbeidsforhold defineres som et avtaleforhold hvor den ene part (arbeidstakeren / personalressurs) forplikter seg til å utføre arbeid for den annen part (arbeidsgiveren / organisasjonselement). Arbeidsforholdet kan også utføres av en person fra vikarbyrå, eller et firma gjennom en kontrakt/avtale.
+      
+      # Eksempler
+      
+      * Ansatt som rådgiver i fast stilling
+      * Vikariat for en annen person som er i permisjon fra sitt arbeidsforhold
+    attributes:
+      systemId:
+        range: Identifikator
+        description: |
+          Unik identifikator innenfor alle arbeidsforhold
+          
+          # Beskrivelse
+          
+          Unik identifikator innenfor alle arbeidsforhold til alle ansatte.
+        required: true
+      ansettelsesprosent:
+        range: integer
+        description: |
+          Den prosenten personalressursen eier, i henholdt til arbeidsavtalen
+          
+          # Beskrivelse
+          
+          
+          
+          # Format
+          Angitt fra 0 til 100, med to desimaler.
+          
+          # Eksempler
+          
+          * `10`
+          * `10,33`
+          * `80`
+          * `100`
+          * For tilkallingsvikar kan denne være `0`
+        required: true
+      gyldighetsperiode:
+        range: Periode
+        description: |
+          Varigeheten til et bestemt arbeidsforhold.
+          
+          # Beskrivelse
+          
+          Periode en personalressurs har vært (eller er) ansatt i et bestemt arbeidsforhold.
+          
+          Inneholder en dato for start, og kan inneholde slutt-dato.  Har tilhørighet til stillingsnummeret på ansattforholdet
+          
+          # Format
+          
+          Dato
+        required: true
+      hovedstilling:
+        range: boolean
+        description: |
+          Angir hvilket arbeidsforhold som er hovedarbeidsforhold.
+          
+          # Beskrivelse
+          
+          Primærstillingen personalressursen er knyttet til, og som er grunnlaget for det juridiske arbeidsforholdet.
+          
+          En personalressurs kan ha flere arbeidsforhold, men kun en av disse kan være hovedstillingen.
+          
+          # Format
+          
+          true/false
+        required: true
+      lønnsprosent:
+        range: integer
+        description: |
+          Prosent den ansatte  jobber og skal ha utbetalt
+          
+          # Beskrivelse
+          
+          Det personalressursen faktisk jobber, og skal ha utbetalt. I hvilken prosentstørrelse personalressursen er tilgjengelig for arbeidsgiver.
+          
+          # Format
+          
+          Angitt fra 0 til 100, med to desmialer
+        required: true
+      stillingsnummer:
+        range: string
+        description: |
+          En identifikator for stilling til en ansatt
+          
+          # Beskrivelse
+          
+          Løpenummer over stillinger som arbeidstaker har eller har hatt som ansattressurs i organisasjonen. Innenfor en ansatt og arbeidsforholdsperiode skal denne være unik.
+          
+          # Format
+          
+          Id-verdi til en stilling.
+          
+          # Eksempler
+          
+          For en personalressurs med tre arbeidsforhold, kan det være:
+          `1`
+          `2`
+          `3`
+        required: true
+      stillingstittel:
+        range: string
+        description: |
+          Arbeidstakers stillingstittel i gjeldende stilling.
+          
+          # Beskrivelse
+          
+          Brukes i noen tilfeller som fritekst tittel slik at ansatte kan overstyre hva som skal vises på offentlige websider og intranett.
+          
+          Dette er ikke det samme som Stillingsbenevnelse som er titelen/tekstverdien til stillingskoden.
+          
+          # Format
+          
+          Tekst
+          
+          # Eksempler
+          
+          * "IT-sjef" (mens stillingsbenevnelse kan være "SEKSJONSLEDER"
+          * "Rådgiver, IT" (mens stillingsbenevnelse kan være "Rådgiver 1"
+      årslønn:
+        range: integer
+        description: |
+          Årslønn/grunnlønn i 100 % stilling.
+          
+          # Beskrivelse
+          Lønn i 100% stilling. Inneholder ikke definerte tillegg.
+          
+          
+          # Eksempel
+          
+          * `400000`
+        required: true
