@@ -396,7 +396,6 @@ Den fortrukne måten å komme i kontakt med en personalressurs.
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_80a17c8068f3af252f" visibility="public" start="EAID_CLS_7f69968205107fe6de" end="EAID_CLS_0e902a06c5b70e4340" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_7ab71940bab910a223" name="Arbeidsforhold">
               <properties documentation="Arbeidsforhold er et avtaleforhold mellom personalressurs og arbeidsgiver&#10;&#10;# Beskrivelse&#10;&#10;Arbeidsforhold defineres som et avtaleforhold hvor den ene part (arbeidstakeren / personalressurs) forplikter seg til å utføre arbeid for den annen part (arbeidsgiveren / organisasjonselement). Arbeidsforholdet kan også utføres av en person fra vikarbyrå, eller et firma gjennom en kontrakt/avtale.&#10;&#10;# Eksempler&#10;&#10;* Ansatt som rådgiver i fast stilling&#10;* Vikariat for en annen person som er i permisjon fra sitt arbeidsforhold&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_5b6cca4ad2376f4ca4">
@@ -676,7 +675,6 @@ Se beskrivelse for [Personnavn klasse](Class:Personnavn)
                 </ownedComment>
               </ownedAttribute>
             </packagedElement>
-          <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_aac577b99c2c7aeb54" visibility="public" start="EAID_CLS_a1107c925db55e01c1" end="EAID_CLS_2e137f75c5ab37416e" />
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_4dfad5c102a8f3b1e6" name="Basisklasser">
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_530f88bdba05242eb3" name="Aktør" isAbstract="true">
               <properties documentation="Person eller enhet vi samhandler med.&#10;&#10;# Beskrivelse&#10;&#10;Abstrakt klasse som inneholder relasjon til kontaktinformasjon og identifikator. Må enten brukes som Person, Enhet, eller annen underliggende klasse, som feks organisasjonselement.&#10;" stereotype="abstrakt" />
@@ -1881,23 +1879,6 @@ Ren tekst
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_aac577b99c2c7aeb54" idref="EAID_ASC_aac577b99c2c7aeb54" start="EAID_CLS_a1107c925db55e01c1" end="EAID_CLS_2e137f75c5ab37416e">
-        <source xmi:idref="EAID_CLS_a1107c925db55e01c1" idref="EAID_CLS_a1107c925db55e01c1">
-          <model type="Class" name="Person" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_2e137f75c5ab37416e" idref="EAID_CLS_2e137f75c5ab37416e">
-          <model type="Class" name="Kjønn" />
-          <role name="kjønn" visibility="Public" />
-          <type multiplicity="0..1" />
-          <documentation value="Kjønn for person.&#10;&#10;# Beskrivelse&#10;&#10;Se beskrivelse av [Kjønn klasse](Class:Kjønn)" />
-          <tags />
-          </target>
-        <properties ea_type="Association" direction="Source -&gt; Destination" />
-        <tags />
-        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_a28be2f763d459750d" idref="EAID_GEN_a28be2f763d459750d" start="EAID_CLS_7a1842f8370ceb4648" end="EAID_CLS_f617e6d61eb736e7db">
         <source xmi:idref="EAID_CLS_7a1842f8370ceb4648" idref="EAID_CLS_7a1842f8370ceb4648">
           <model type="Class" name="Ansvar" />
@@ -2108,23 +2089,6 @@ Ren tekst
           <tags />
           </target>
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
-        <tags />
-        </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_80a17c8068f3af252f" idref="EAID_ASC_80a17c8068f3af252f" start="EAID_CLS_7f69968205107fe6de" end="EAID_CLS_0e902a06c5b70e4340">
-        <source xmi:idref="EAID_CLS_7f69968205107fe6de" idref="EAID_CLS_7f69968205107fe6de">
-          <model type="Class" name="Personalressurs" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_0e902a06c5b70e4340" idref="EAID_CLS_0e902a06c5b70e4340">
-          <model type="Class" name="Personalressurskategori" />
-          <role name="personalressurskategori" visibility="Public" />
-          <type multiplicity="1" />
-          <documentation value="Angir hvilken kategori personalressurs&#10;&#10;# Beskrivelse&#10;&#10;Hvilken kategori/ansattform personalressursen innehar.&#10;&#10;# Eksempel&#10;&#10;Kan for eksempel velges blant følgende: `Fast`, `Midlertidig`, `Oppdragstaker`, `Politiker`, `Sluttet`&#10;&#10;Se kodeverk Personalressurskategori for utvidet eksempel." />
-          <tags />
-          </target>
-        <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_816245f8a22621d2d2" idref="EAID_GEN_816245f8a22621d2d2" start="EAID_CLS_95d74b0cd83c197e88" end="EAID_CLS_530f88bdba05242eb3">

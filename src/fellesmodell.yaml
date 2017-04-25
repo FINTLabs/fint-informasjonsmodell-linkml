@@ -6,7 +6,6 @@ imports:
   - felles.basisklasser
   - felles.komplekse-datatyper
   - fellesmodell.basisklasser
-  - fellesmodell.basisklasser.iso
   - fellesmodell.komplekse-datatyper
 
 classes:
@@ -93,11 +92,3 @@ classes:
           
           Se beskrivelse for [Personnavn klasse](Class:Personnavn)
         required: true
-      kjønn:
-        range: Kjønn
-        description: |
-          Kjønn for person.
-          
-          # Beskrivelse
-          
-          Se beskrivelse av [Kjønn klasse](Class:Kjønn)
