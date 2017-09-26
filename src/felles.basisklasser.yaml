@@ -1,11 +1,9 @@
 # yaml-language-server: $schema=https://w3id.org/linkml/meta.schema.json
-id: https://w3id.org/novari/fint/fellesmodell/basisklasser
-name: fellesmodell.basisklasser
+id: https://w3id.org/novari/fint/felles/basisklasser
+name: felles.basisklasser
 imports:
   - linkml:types
-  - felles.basisklasser
   - felles.komplekse-datatyper
-  - fellesmodell.komplekse-datatyper
 
 classes:
 
@@ -20,6 +18,8 @@ classes:
     attributes:
       kontaktinformasjon:
         range: Kontaktinformasjon
+        annotations:
+          writeable: true
         description: |
           Den foretrukne måten for å komme i kontakt med en aktør.
           
@@ -28,6 +28,8 @@ classes:
           Den fortrukne måten å komme i kontakt med en aktør. En aktør kan blant annet være en privat person eller et organisasjonselement i organisasjonsstrukturen.
       postadresse:
         range: Adresse
+        annotations:
+          writeable: true
         description: |
           Informasjon om postadresse til en aktør
           
@@ -99,6 +101,8 @@ classes:
           974770199
       forretningsadresse:
         range: Adresse
+        annotations:
+          writeable: true
         description: |
           Besøksadresse til en organisasjonsenhet i enhetsregisteret.
           

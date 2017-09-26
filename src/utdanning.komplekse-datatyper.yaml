@@ -1,0 +1,84 @@
+# yaml-language-server: $schema=https://w3id.org/linkml/meta.schema.json
+id: https://w3id.org/novari/fint/utdanning/komplekse-datatyper
+name: utdanning.komplekse-datatyper
+imports:
+  - linkml:types
+  - felles.basisklasser
+  - felles.komplekse-datatyper
+  - utdanning.kodeverk
+  - utdanning.vurdering
+
+classes:
+
+  Fravær:
+    description: |
+      Manglende tilstedeværelse i opplæringen.
+      
+      # Beskrivelse 
+      
+      * Elever i videregående skole skal møte opp og delta aktivt i opplæringen. 
+      * Fravær skal registreres, og det foreligger grenser på hvor mye fravær som tillates før rett til å få halvårsvurdering med karakter eller standpunktkarakter i et fag bortfaller. 
+      * Eleven må legge fram relevant dokumentasjon for å få fravær unntatt fra fraværsgrensen.
+      * Fraværsgrensen gjelder timefravær i enkeltfag, ikke elevenes totale fravær.
+      * Eleven skal få et varsel om han eller hun står i fare for å ikke få karakter på grunn av fravær.
+      
+      # Referanser
+      
+      * UDir Registreringshåndbok: http://regbok.udir.no/35004/3344/35042-1018643.html
+      * Forskrift til opplæringslova § 3-3, siste ledd: https://lovdata.no/forskrift/2006-06-23-724/§3-3
+      * Forskrift til opplæringslova § 3-47: https://lovdata.no/forskrift/2006-06-23-724/§3-47
+      * UDir. Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet, pkt 8: https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/8-fravar/
+      * SNL. Fravær: https://snl.no/fravær
+      * Rundskriv Udir-3-2016: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravarsgrense---udir-3-2016/
+      * UDir. Fravær i videregående skole: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravar-i-videregaende-skole/
+    attributes:
+      dokumentert:
+        range: boolean
+        description: |
+          Angir om fraværet er dokumentert eller ikke (ja/nei).
+          
+          Hva slags fravær som betraktes som dokumentert følger av [Rundskriv Udir 3-2016](https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravarsgrense---udir-3-2016/).
+        required: true
+      føresPåVitnemål:
+        range: boolean
+        description: |
+          Angir om fraværet skal føres på vitnemål / kompetansebevis.
+          
+          Føring på vitnemål bestemmes av [forskrift til opplæringslova § 3-47](http://www.lovdata.no/for/sf/kd/xd-20060623-0724.html#3-47) og skriv fra Utdanningsdirektoratet om [Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet, pkt 8](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/8-fravar/).
+        required: true
+      gjelderPeriode:
+        range: Periode
+        description: |
+          Tidsperioden fraværet oppstod/gjelder for.
+          
+          Fravær skal registreres i dager eller timer (60-minutters enheter). Det er ikke tillatt å konvertere timer til dager.
+        required: true
+      kommentar:
+        range: string
+        description: |
+          Kommentar til fraværet, evt ekstrainformasjon
+        required: true
+      fraværstype:
+        range: Fraværstype
+        required: true
+
+  Vurdering:
+    description: |
+      Karakterer og andre vurderingsuttrykk for deltakelse av en elev i en gruppe. Dette kan innbære både endelig og foreløpende karakter. 
+      
+      # Referanser
+      
+      * UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+      * Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+      * Forskrift til opplæringslova § 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#§3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#§3-4)
+    attributes:
+      kommentar:
+        range: string
+        description: |
+          Kommentar til vurderingen.
+        required: true
+      karakter:
+        range: Karakterverdi
+        description: |
+          Det aktuelle karakteren som er tildelt
+        required: true

@@ -1,12 +1,11 @@
 # yaml-language-server: $schema=https://w3id.org/linkml/meta.schema.json
-id: https://w3id.org/novari/fint/fellesmodell
-name: fellesmodell
+id: https://w3id.org/novari/fint/felles
+name: felles
 imports:
   - linkml:types
   - felles.basisklasser
+  - felles.kodeverk.iso
   - felles.komplekse-datatyper
-  - fellesmodell.basisklasser
-  - fellesmodell.komplekse-datatyper
 
 classes:
 
@@ -36,7 +35,7 @@ classes:
       fødselsnummer:
         range: Identifikator
         description: |
-          Fødselsnummer, D-, eller H-nummer til en person
+          Fødselsnummer eller en av de fiktive variantene
           
           # Beskrivelse
           
@@ -49,9 +48,18 @@ classes:
           # Referanser
           
           * [Wiki side](https://no.wikipedia.org/wiki/Fødselsnummer)
+          * [Registreringshåndboken A01.Fødselsnummer](http://regbok.udir.no/35004/3344/35042-1027331.html)
         required: true
+      bilde:
+        range: string
+        description: |
+          HTTP(S) lenke til et bilde av en person.
+          
+          Det forutsettes at det er bilde med den beste oppløsningen mulig.
       bostedsadresse:
         range: Adresse
+        annotations:
+          writeable: true
         description: |
           Folkeregsitreret adresse til en person
           
@@ -92,3 +100,19 @@ classes:
           
           Se beskrivelse for [Personnavn klasse](Class:Personnavn)
         required: true
+      kjønn:
+        range: Kjønn
+        description: |
+          Kjønn for person.
+          
+          # Beskrivelse
+          
+          Se beskrivelse av [Kjønn klasse](Class:Kjønn)
+      morsmål:
+        range: Språk
+        description: |
+          Morsmål til en person
+      målform:
+        range: Språk
+        description: |
+          Språkform som denne personen foretrekker å bruke (i utgangspunktet - nynork, bokmål eller samisk).

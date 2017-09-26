@@ -5,7 +5,6 @@ imports:
   - linkml:types
   - felles.basisklasser
   - felles.komplekse-datatyper
-  - fellesmodell.komplekse-datatyper
 
 classes:
 
@@ -40,6 +39,8 @@ classes:
         required: true
       brukernavn:
         range: Identifikator
+        annotations:
+          writeable: true
         description: |
           Brukernavn til en person
           
@@ -71,6 +72,8 @@ classes:
         required: true
       kontaktinformasjon:
         range: Kontaktinformasjon
+        annotations:
+          writeable: true
         description: |
           Arbeidsrelatert kontaktinformasjon til en personalressurs
           
@@ -105,35 +108,27 @@ classes:
         description: |
           Den prosenten personalressursen eier, i henholdt til arbeidsavtalen
           
-          # Beskrivelse
-          
-          
-          
           # Format
-          Angitt fra 0 til 100, med to desimaler.
+          Angitt fra 0 til 10000 i hundredelsprosent.
           
           # Eksempler
           
-          * `10`
-          * `10,33`
-          * `80`
-          * `100`
+          * `1000` tilsvarer 10 %
+          * `1033` tilsvarer 10,33 %
+          * `8000` tilsvarer 80 %
+          * `10000` tilsvarer 100 %
           * For tilkallingsvikar kan denne være `0`
         required: true
       gyldighetsperiode:
         range: Periode
         description: |
-          Varigeheten til et bestemt arbeidsforhold.
+          Varigeheten til et bestemt arbeidsforhold
           
           # Beskrivelse
           
           Periode en personalressurs har vært (eller er) ansatt i et bestemt arbeidsforhold.
           
-          Inneholder en dato for start, og kan inneholde slutt-dato.  Har tilhørighet til stillingsnummeret på ansattforholdet
-          
-          # Format
-          
-          Dato
+          Inneholder en dato for start, og kan inneholde slutt-dato.
         required: true
       hovedstilling:
         range: boolean
@@ -153,15 +148,15 @@ classes:
       lønnsprosent:
         range: integer
         description: |
-          Prosent den ansatte  jobber og skal ha utbetalt
+          Prosent av årslønn den ansatte  skal ha utbetalt
           
           # Beskrivelse
           
-          Det personalressursen faktisk jobber, og skal ha utbetalt. I hvilken prosentstørrelse personalressursen er tilgjengelig for arbeidsgiver.
+          Det personalressursen skal ha utbetalt.
           
           # Format
           
-          Angitt fra 0 til 100, med to desmialer
+          Angitt fra 0 til 10000 i hundredelsprosent.
         required: true
       stillingsnummer:
         range: string
@@ -185,6 +180,8 @@ classes:
         required: true
       stillingstittel:
         range: string
+        annotations:
+          writeable: true
         description: |
           Arbeidstakers stillingstittel i gjeldende stilling.
           
@@ -202,16 +199,28 @@ classes:
           
           * "IT-sjef" (mens stillingsbenevnelse kan være "SEKSJONSLEDER"
           * "Rådgiver, IT" (mens stillingsbenevnelse kan være "Rådgiver 1"
+      tilstedeprosent:
+        range: integer
+        description: |
+          Det personalressursen faktisk jobber
+          
+          # Beskrivelse
+          
+          I hvilken prosentstørrelse personalressursen er tilgjengelig for arbeidsgiver.
+          
+          # Format
+          
+          Angitt fra 0 til 10000 i hundredelsprosent.
+        required: true
       årslønn:
         range: integer
         description: |
           Årslønn/grunnlønn i 100 % stilling.
           
           # Beskrivelse
-          Lønn i 100% stilling. Inneholder ikke definerte tillegg.
-          
+          Lønn i 100% stilling. Inneholder ikke definerte tillegg. Angis i øre.
           
           # Eksempel
           
-          * `400000`
+          * `40000000` tilsvarer 400 000
         required: true

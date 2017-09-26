@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=https://w3id.org/linkml/meta.schema.json
+id: https://w3id.org/novari/fint/utdanning/kodeverk
+name: utdanning.kodeverk
+imports:
+  - linkml:types
+  - felles.basisklasser
+  - felles.komplekse-datatyper
+  - utdanning.vurdering
+
+classes:
+
+  Elevkategori:
+    description: |
+      Kategori som et elevforhold befinner seg innenfor
+      
+      # Eksempel
+      
+      Gyldige verdier kan være:
+      * heltid
+      * deltid
+      * voksen
+      * privatist
+      * norsk-utv-i-utlandet
+      * utenlandsk-utv-i-norge
+    is_a: Begrep
+
+  Fraværstype:
+    is_a: Begrep
+
+  Grepreferanse:
+    description: |
+      Ekstern referanse til Grep-kode.
+    annotations:
+      stereotype: referanse
+
+  Karakterskala:
+    description: |
+      Gruppering av karakterer etter skala (bokstav, orden osv). 
+      
+      # Eksempler
+      
+      * Bokstav – bokstavkarakterer
+      * Tall – tallkarakterer
+      * Binær – Bestått/Ikke-bestått
+      * Prosent – prosentpoeng.
+    is_a: Begrep
+    attributes:
+      verdi:
+        range: Karakterverdi
+        inverse: skala
+        description: |
+          Alle karakterene som er definerte på en gitt skala
+          
+          # Eksempel
+          
+          * Tall skala har karaterer 1, 2. 3, 4, 5 og 6
+        multivalued: true
+      vigoreferanse:
+        range: Vigoreferanse
+        description: |
+          Ekstern referanse til Vigo kodeverksdatabase.
+
+  Skoleeiertype:
+    description: |
+      Angir hvem er det som eier skole
+      
+      # Eksempler
+      
+      1 = Fylke
+      2 = Stat
+      3 = Kommune
+      4 = Privat 
+      
+      # Referanser
+      
+      * Vigo Kodeverkdatabase. Skole: [vigo.no/vigokv/skole.action](https://www.vigo.no/vigokv/skole.action)
+    is_a: Begrep
+
+  Vigoreferanse:
+    description: |
+      Ekstern referanse til Vigo Kodeverkdatabase
+    annotations:
+      stereotype: referanse

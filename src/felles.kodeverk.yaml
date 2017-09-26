@@ -1,0 +1,45 @@
+# yaml-language-server: $schema=https://w3id.org/linkml/meta.schema.json
+id: https://w3id.org/novari/fint/felles/kodeverk
+name: felles.kodeverk
+imports:
+  - linkml:types
+  - felles.basisklasser
+
+classes:
+
+  Fylke:
+    description: |
+      Liste over Norges fylker
+      
+      # Referanser
+      
+      * "SSB: Standard for fylkesinndeling":http://www.ssb.no/klass/#!/klassifikasjoner/104
+      * "data.norge.no":
+      http://data.norge.no/data/statistisk-sentralbyr%C3%A5/fylkesinndeling
+    is_a: Begrep
+    attributes:
+      kommune:
+        range: Kommune
+        inverse: fylke
+        description: |
+          Alle kommuner som inngår i fylke
+        multivalued: true
+
+  Kommune:
+    description: |
+      Liste over Norges kommuner
+      
+      Kilde:
+      
+      * "SSB. Kommuneinndeling 2017":http://www.ssb.no/klass/#!/klassifikasjoner/131
+      * "data.norge.no om kommuneinndeling":http://data.norge.no/data/statistisk-sentralbyr%C3%A5/kommuneinndeling
+    is_a: Begrep
+    attributes:
+      fylke:
+        range: Fylke
+        inverse: kommune
+        annotations:
+          primaryRelation: true
+        description: |
+          Fylke som kommune hører i
+        required: true

@@ -5,8 +5,7 @@ imports:
   - linkml:types
   - felles.basisklasser
   - felles.komplekse-datatyper
-  - fellesmodell.basisklasser
-  - fellesmodell.komplekse-datatyper
+  - utdanning.utdanningsprogram
 
 classes:
 
@@ -111,3 +110,26 @@ classes:
           * Faggruppe lønn
           * Askim Videregående skole
           * Avdeling for helse og sosial
+      overordnet:
+        range: Organisasjonselement
+        description: |
+          Referanse til organisasjonselement på nivået over gjeldende organisasjonselement.
+          
+          # Beskrivelse
+          Alle overordnede (forelder) organisasjonselement.
+          
+          På øverste nivå, vil overordnet peke til seg selv.
+          
+          # Format
+          Referanse til seg selv.
+          
+          # Eksempler
+          
+          * *Faggruppe for digitalisering og systemforvaltning* refererer til overordnet organisasjonselement, som er *IT-seksjonen*.
+          * *Avdeling for helse og sosial* kan referere til organisasjonselemenetet til skolen, som kan være *Byremo videregående skole*
+        required: true
+      skole:
+        range: Skole
+        inverse: organisasjon
+        description: |
+          Referanse til Utdannings domenet

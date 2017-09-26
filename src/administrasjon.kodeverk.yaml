@@ -5,7 +5,6 @@ imports:
   - linkml:types
   - felles.basisklasser
   - felles.komplekse-datatyper
-  - fellesmodell.basisklasser
 
 classes:
 
@@ -25,7 +24,7 @@ classes:
         description: |
           For å bygge hierarki av Ansvar
 
-  Arbeidforholdstype:
+  Arbeidsforholdstype:
     description: |
       Viser hvilket behov hos arbeidsgiver som dekkes av arbeidsforholdet
       
@@ -52,7 +51,7 @@ classes:
     is_a: Begrep
     attributes:
       forelder:
-        range: Arbeidforholdstype
+        range: Arbeidsforholdstype
         description: |
           For å bygge hierarki av Arbeidsforholdstype
 
@@ -87,9 +86,27 @@ classes:
         description: |
           For å bygge hierarki av Funksjon
 
+  Lønnsart:
+    description: |
+      Type ytelse.
+      
+      # Beskrivelse
+      
+      Lønnsart brukes av HRM-systemer for å indikere hvordan en ytelse skal behandles.
+      
+      Den inneholder også knytning til hvordan ytelsen skal rapporteres på A-meldingen.
+      
+      Tidligere hadde lønnsart knytning til LTO-kode og LT-kode.
+      
+      # Referanser
+      
+      * Rapportering av ytelser på A-meldingen: http://veiledning-amelding.smartlearn.no/Veiledn_Generell/index.html#!Documents/rapporteringavkontantytelser.htm
+      * Altinn: Innholdet i A-meldingen: https://www.altinn.no/no/a-ordningen/om-a-meldingen/Innholdet-i-a-meldingen/
+    is_a: Begrep
+
   Personalressurskategori:
     description: |
-      Arbeidforholdstype fra hovedstillingen.
+      Ansattform til et arbeidsforhold
       
       # Beskrivelse
       
@@ -127,7 +144,7 @@ classes:
 
   Prosjekt:
     description: |
-      Del av kontostrenges som peker på løpende prosjekter
+      Del av kontostrengen som peker på løpende prosjekter.
     is_a: Begrep
 
   Stillingskode:
@@ -146,7 +163,7 @@ classes:
         description: |
           For å bygge hierarki av Stillingskoder
 
-  TimerPerUkeKode:
+  Uketimetall:
     description: |
       Timer per uke i 100 % stilling
       

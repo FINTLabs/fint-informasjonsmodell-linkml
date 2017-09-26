@@ -1,52 +1,58 @@
 # yaml-language-server: $schema=https://w3id.org/linkml/meta.schema.json
-id: https://w3id.org/novari/fint/fellesmodell/komplekse-datatyper
-name: fellesmodell.komplekse-datatyper
+id: https://w3id.org/novari/fint/felles/komplekse-datatyper
+name: felles.komplekse-datatyper
 imports:
   - linkml:types
-  - felles.basisklasser
-  - felles.komplekse-datatyper
 
 classes:
 
   Adresse:
     description: |
-      En fysisk adresse. Dette betyr det er adresse som kan motta fysiske pakker eller hvor det 
-      er mulig å besøke.
+      Fysisk adresse eller postadresse.
       
       # Beskrivelse
       
-      En fysisk adresse. Dette betyr det er adresse som kan motta fysiske pakker eller hvor det er mulig å besøke.
+      Dette kan enten være en postadresse eller en fysisk adresse som det er mulig å besøke.
       
       # Eksempel
       
       |               adresse               |    poststed    | postnummer | land |
       |-------------------------------------|----------------|------------|------|
       | Nydalen allé 11                     | Oslo           |       0484 | NO   |
-      | Fakturamottak \n Postboks 501 Lund  | Kristiansand   |       4605 | -    |
+      | Fakturamottak&lt;br&gt;Postboks 501 Lund  | Kristiansand   |       4605 | -    |
       | Postboks 517 Lundsiden              | KRISTIANSAND S |       4605 | -    |
+      
+      
+      # Referanser
+      
+      - http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-postmottakere-i-norge
+      - http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-mottakere-i-utlandet
     attributes:
-      adresse:
+      adresselinje:
         range: string
         description: |
           Adresseinformasjon
           
           # Beskrivelse
           
-          Adresseinformasjon
+          Adresseinformasjon. Linjer representeres hver for seg, fra øverst til nederst.
           
-          Det kan være:
+          Dette kan være:
           * Gateadresse
           * Postboksadresse
-          * Boenheter og leilighetsadresse
+          * Bolignummer
+          * C/O adresse
+          * Attn:
+          * Mottak på vegne av andre
           
           # Format
           
-          Det er mulig å sette inn linjeskift i adresse for å skille linjer.
+          Som dokumentert i [referanser fra klassen](Class:Adresse).
           
-          #Eksempler
+          # Eksempler
           
-          Se [eksempler fra klassen](Class:Adresse) .
-        required: true
+          Se [eksempler fra klassen](Class:Adresse).
+        multivalued: true
       postnummer:
         range: string
         description: |
@@ -250,6 +256,17 @@ classes:
       * Fra 01.01.1999T00:00:00Z til ubestemt tid
       * Fra 01.01.1999T00:00:00Z til 01.01.2005T00:00:00Z
     attributes:
+      beskrivelse:
+        range: string
+        description: |
+          Brukes til å sette beskrivende navn på perioden.
+          
+          # Eksempel
+          
+          * 2010 – kalenderår
+          * 2010/2011 – skoleår
+          * H2010 – høstsemesteret
+          * V2011 – vårsemesteret
       slutt:
         range: datetime
         description: |
