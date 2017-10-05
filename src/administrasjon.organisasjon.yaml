@@ -5,6 +5,7 @@ imports:
   - linkml:types
   - felles.basisklasser
   - felles.komplekse-datatyper
+  - administrasjon.personal
   - utdanning.utdanningsprogram
 
 classes:
@@ -110,6 +111,24 @@ classes:
           * Faggruppe lønn
           * Askim Videregående skole
           * Avdeling for helse og sosial
+      arbeidsforhold:
+        range: Arbeidsforhold
+        inverse: arbeidssted
+        description: |
+          Alle arbeidsforhold til et organisasjonselement.
+        multivalued: true
+      leder:
+        range: Personalressurs
+        description: |
+          Ansvarlig leder for organisasjonselementet
+          
+          # Beskrivelse
+          Normalt vil dette være leder som har personal- og økonomi-ansvar for dette organisasjonselementet.
+          
+          # Format
+          Relasjon til en bestemt leder (Personalressurs).
+          
+          # Eksempler
       overordnet:
         range: Organisasjonselement
         description: |

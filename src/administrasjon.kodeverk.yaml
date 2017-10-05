@@ -63,11 +63,7 @@ classes:
       
       Alternativt navn: Konto
       
-      Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er drift, investering eller balanse. 
-      
-      # Eksempel
-      
-      [Oppland fylkeskommune kontoplan 2016 inneholder eksempel på Arter](http://www.oppland.no/Handlers/fh.ashx?MId1=1396&amp;FilId=3291)
+      Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er drift, investering eller balanse.
     is_a: Begrep
 
   Funksjon:
@@ -78,7 +74,7 @@ classes:
       
       Funksjon viser fylkeskommunens aktivitet og tjenesteproduksjon.
       
-      Alternativ navn: `Tjenste`
+      Alternativ navn: `Tjeneste`
     is_a: Begrep
     attributes:
       forelder:

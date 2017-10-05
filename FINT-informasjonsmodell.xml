@@ -51,7 +51,7 @@ Z    |    Annet
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_ae870d2f567d646477" visibility="public" start="EAID_CLS_99ad8092a898497ae7" end="EAID_CLS_99ad8092a898497ae7" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_b86eb7152bf9ecacd7" name="Art">
-              <properties documentation="Kodeverk som er en del av kontostrengen som beskriver hva slags inntekter og utgifter det gjelder. &#10;&#10;# Beskrivelse&#10;&#10;Alternativt navn: Konto&#10;&#10;Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er drift, investering eller balanse. &#10;&#10;# Eksempel&#10;&#10;[Oppland fylkeskommune kontoplan 2016 inneholder eksempel på Arter](http://www.oppland.no/Handlers/fh.ashx?MId1=1396&amp;amp;FilId=3291)&#10;" stereotype="hovedklasse" />
+              <properties documentation="Kodeverk som er en del av kontostrengen som beskriver hva slags inntekter og utgifter det gjelder. &#10;&#10;# Beskrivelse&#10;&#10;Alternativt navn: Konto&#10;&#10;Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er drift, investering eller balanse.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_288919598d0845dc45">
                 <body>Kodeverk som er en del av kontostrengen som beskriver hva slags inntekter og utgifter det gjelder. 
 
@@ -59,17 +59,13 @@ Z    |    Annet
 
 Alternativt navn: Konto
 
-Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er drift, investering eller balanse. 
-
-# Eksempel
-
-[Oppland fylkeskommune kontoplan 2016 inneholder eksempel på Arter](http://www.oppland.no/Handlers/fh.ashx?MId1=1396&amp;amp;FilId=3291)
+Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er drift, investering eller balanse.
 </body>
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_288919598d0845dc45" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_b86eb7152bf9ecacd7" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_b2fbf668ea3689009c" name="Funksjon">
-              <properties documentation="Del av kontostrenges som beskriver hva som produseres&#10;&#10;# Beskrivelse&#10;&#10;Funksjon viser fylkeskommunens aktivitet og tjenesteproduksjon.&#10;&#10;Alternativ navn: `Tjenste`&#10;" stereotype="hovedklasse" />
+              <properties documentation="Del av kontostrenges som beskriver hva som produseres&#10;&#10;# Beskrivelse&#10;&#10;Funksjon viser fylkeskommunens aktivitet og tjenesteproduksjon.&#10;&#10;Alternativ navn: `Tjeneste`&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d35798c615275abc97">
                 <body>Del av kontostrenges som beskriver hva som produseres
 
@@ -77,7 +73,7 @@ Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er d
 
 Funksjon viser fylkeskommunens aktivitet og tjenesteproduksjon.
 
-Alternativ navn: `Tjenste`
+Alternativ navn: `Tjeneste`
 </body>
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_d35798c615275abc97" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_b2fbf668ea3689009c" end="EAID_CLS_3385458244847ec7db" />
@@ -322,6 +318,7 @@ For eksempel:
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_0739a6ded5022e2f3e" visibility="public" start="EAID_CLS_11c618a515753fb259" end="EAID_CLS_7f69968205107fe6de" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_c2236976b005082939" visibility="public" start="EAID_CLS_11c618a515753fb259" end="EAID_CLS_11c618a515753fb259" />
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_b8abbe9c3c43e8a841" name="Personal">
@@ -418,6 +415,8 @@ Den fortrukne måten å komme i kontakt med en personalressurs.
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_5a65e53e9d7ec4ea26" visibility="public" start="EAID_CLS_7f69968205107fe6de" end="EAID_CLS_7ab71940bab910a223" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_80a17c8068f3af252f" visibility="public" start="EAID_CLS_7f69968205107fe6de" end="EAID_CLS_0e902a06c5b70e4340" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_7ab71940bab910a223" name="Arbeidsforhold">
               <properties documentation="Arbeidsforhold er et avtaleforhold mellom personalressurs og arbeidsgiver&#10;&#10;# Beskrivelse&#10;&#10;Arbeidsforhold defineres som et avtaleforhold hvor den ene part (arbeidstakeren / personalressurs) forplikter seg til å utføre arbeid for den annen part (arbeidsgiveren / organisasjonselement). Arbeidsforholdet kan også utføres av en person fra vikarbyrå, eller et firma gjennom en kontrakt/avtale.&#10;&#10;# Eksempler&#10;&#10;* Ansatt som rådgiver i fast stilling&#10;* Vikariat for en annen person som er i permisjon fra sitt arbeidsforhold&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_5b6cca4ad2376f4ca4">
@@ -599,6 +598,12 @@ Lønn i 100% stilling. Inneholder ikke definerte tillegg. Angis i øre.
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_13fddcb6973e3fd5ac" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_7a1842f8370ceb4648" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_e40c19e1fd537e36d1" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_99ad8092a898497ae7" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_616777eead5b9bf1c9" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_11c618a515753fb259" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a7e834bec647b7071d" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_b2fbf668ea3689009c" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_4702ec0f35c87e1d37" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_1d24d026ece51b64c5" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_cf2141cc136151dcf3" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_7928ce1d8618e22dce" />
             </packagedElement>
           </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_38f7bf53c51db64eb4" name="Felles">
@@ -720,6 +725,8 @@ Se beskrivelse for [Personnavn klasse](Class:Personnavn)
           <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_589f8189ed7e7a2473" visibility="public" start="EAID_CLS_8548ca6ef4e9f948e9" end="EAID_CLS_6d25024112361642d4" />
           <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_c1f955166e83e4705b" visibility="public" start="EAID_CLS_8548ca6ef4e9f948e9" end="EAID_CLS_f3a58ccad0a288d490" />
           <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_b48c9d5c7c0331bb38" visibility="public" start="EAID_CLS_8548ca6ef4e9f948e9" end="EAID_CLS_f3a58ccad0a288d490" />
+          <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_53edcf95399f514dd1" visibility="public" start="EAID_CLS_8548ca6ef4e9f948e9" end="EAID_CLS_7f69968205107fe6de" />
+          <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_607dceccd632050772" visibility="public" start="EAID_CLS_8548ca6ef4e9f948e9" end="EAID_CLS_21de96a2eceefd70b9" />
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_29ed5f4335a77f3f29" name="Basisklasser">
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_225ef60f99e8325a09" name="Aktør" isAbstract="true">
               <properties documentation="Person eller enhet vi samhandler med.&#10;&#10;# Beskrivelse&#10;&#10;Abstrakt klasse som inneholder relasjon til kontaktinformasjon og identifikator. Må enten brukes som Person, Enhet, eller annen underliggende klasse, som feks organisasjonselement.&#10;" stereotype="abstrakt" />
@@ -1071,6 +1078,7 @@ Se [eksempler fra klassen](Class:Adresse).
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a1caaaf9175ac05a30" visibility="public" start="EAID_CLS_16032b22e35475cac5" end="EAID_CLS_21de96a2eceefd70b9" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_46d2316789ea33b875" name="Identifikator">
               <properties documentation="Unik identifikasjon til et objekt.&#10;&#10;# Beskrivelse&#10;&#10;En kombinasjon av tegn eller og/eller bokstaver som unikt identifiserer et objekt blant andre objekter av samme type uten arv.&#10;&#10;# Eksempel&#10;&#10;Kan for eksempel brukes til å identifisere en person ut fra fødselsnummer eller ansattnummer.&#10;&#10;* For en person kan det være fødselnummer&#10;* For er personresurs kan det være ansattnummer eller signatur&#10;* For er elev kan det være elevnummer.&#10;* For organisasjonselement kan det være organisasjonsnummer fra Enhetsregistret.&#10;" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a7f7fc27a2c2f9b911">
@@ -1656,6 +1664,7 @@ Den fortrukne måten å komme i kontakt med en elev på skolen.
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_3ab99ccb718a40b7f7" visibility="public" start="EAID_CLS_389b7cf67bad56a453" end="EAID_CLS_8548ca6ef4e9f948e9" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_9be72467d299d27d2a" name="Elevforhold">
               <properties documentation="Elevens forskjellige utdanningsforhold&#10;&#10;# Beskrivelse&#10;&#10;En Elev kan ha flere Elevforhold.&#10;&#10;# Eksempel&#10;&#10;En elev kan være i elevforhold med status privatist og deltid samtidig. Eller en elev kan ha flere elevforhold på flere forskjellige skoler.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_e21d60fd011d939b70">
@@ -1763,6 +1772,7 @@ Dette kan for eksempel være lærerens undervisningsforhold til skolen. Underviser
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_26620df5d6b84ef22b" general="EAID_CLS_9564bd355ac64bb4d6" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_9564bd355ac64bb4d6" />
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_b98b916864b10e3233" visibility="public" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_7bd281acb04022531a" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_08206e76492e006cb4" visibility="public" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_7ab71940bab910a223" />
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_606159134ff04f6d3c" name="Kodeverk">
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_20ee2391e13a5e2da9" name="Elevkategori">
@@ -2398,13 +2408,13 @@ Den relaterte skalaen må refereres fra selve verdi.
       <element xmi:idref="EAID_CLS_b86eb7152bf9ecacd7" idref="EAID_CLS_b86eb7152bf9ecacd7" xmi:type="uml:Class" type="Class" name="Art" scope="public">
         <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Kodeverk som er en del av kontostrengen som beskriver hva slags inntekter og utgifter det gjelder. &#10;&#10;# Beskrivelse&#10;&#10;Alternativt navn: Konto&#10;&#10;Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er drift, investering eller balanse. &#10;&#10;# Eksempel&#10;&#10;[Oppland fylkeskommune kontoplan 2016 inneholder eksempel på Arter](http://www.oppland.no/Handlers/fh.ashx?MId1=1396&amp;amp;FilId=3291)&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Kodeverk som er en del av kontostrengen som beskriver hva slags inntekter og utgifter det gjelder. &#10;&#10;# Beskrivelse&#10;&#10;Alternativt navn: Konto&#10;&#10;Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er drift, investering eller balanse.&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_b2fbf668ea3689009c" idref="EAID_CLS_b2fbf668ea3689009c" xmi:type="uml:Class" type="Class" name="Funksjon" scope="public">
         <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Del av kontostrenges som beskriver hva som produseres&#10;&#10;# Beskrivelse&#10;&#10;Funksjon viser fylkeskommunens aktivitet og tjenesteproduksjon.&#10;&#10;Alternativ navn: `Tjenste`&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Del av kontostrenges som beskriver hva som produseres&#10;&#10;# Beskrivelse&#10;&#10;Funksjon viser fylkeskommunens aktivitet og tjenesteproduksjon.&#10;&#10;Alternativ navn: `Tjeneste`&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_f1d4a9bd27af04c15b" idref="EAID_CLS_f1d4a9bd27af04c15b" xmi:type="uml:Class" type="Class" name="Lønnsart" scope="public">
@@ -3347,6 +3357,41 @@ Den relaterte skalaen må refereres fra selve verdi.
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_53edcf95399f514dd1" idref="EAID_ASC_53edcf95399f514dd1" start="EAID_CLS_8548ca6ef4e9f948e9" end="EAID_CLS_7f69968205107fe6de">
+        <source xmi:idref="EAID_CLS_8548ca6ef4e9f948e9" idref="EAID_CLS_8548ca6ef4e9f948e9">
+          <model type="Class" name="Person" />
+          <role visibility="Public" name="person" />
+          <type multiplicity="1" />
+          <documentation value="Person som er en personalressurs" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7f69968205107fe6de" idref="EAID_CLS_7f69968205107fe6de">
+          <model type="Class" name="Personalressurs" />
+          <role name="personalressurs" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Personalressurs til person. Forhold som arbeidstaker." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_607dceccd632050772" idref="EAID_ASC_607dceccd632050772" start="EAID_CLS_8548ca6ef4e9f948e9" end="EAID_CLS_21de96a2eceefd70b9">
+        <source xmi:idref="EAID_CLS_8548ca6ef4e9f948e9" idref="EAID_CLS_8548ca6ef4e9f948e9">
+          <model type="Class" name="Person" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_21de96a2eceefd70b9" idref="EAID_CLS_21de96a2eceefd70b9">
+          <model type="Class" name="Landkode" />
+          <role name="statsborgerskap" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle statsborgerskap som personen har" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_a28be2f763d459750d" idref="EAID_GEN_a28be2f763d459750d" start="EAID_CLS_7a1842f8370ceb4648" end="EAID_CLS_3385458244847ec7db">
         <source xmi:idref="EAID_CLS_7a1842f8370ceb4648" idref="EAID_CLS_7a1842f8370ceb4648">
           <model type="Class" name="Ansvar" />
@@ -3575,6 +3620,23 @@ Den relaterte skalaen må refereres fra selve verdi.
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_0739a6ded5022e2f3e" idref="EAID_ASC_0739a6ded5022e2f3e" start="EAID_CLS_11c618a515753fb259" end="EAID_CLS_7f69968205107fe6de">
+        <source xmi:idref="EAID_CLS_11c618a515753fb259" idref="EAID_CLS_11c618a515753fb259">
+          <model type="Class" name="Organisasjonselement" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7f69968205107fe6de" idref="EAID_CLS_7f69968205107fe6de">
+          <model type="Class" name="Personalressurs" />
+          <role name="leder" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Ansvarlig leder for organisasjonselementet&#10;&#10;# Beskrivelse&#10;Normalt vil dette være leder som har personal- og økonomi-ansvar for dette organisasjonselementet.&#10;&#10;# Format&#10;Relasjon til en bestemt leder (Personalressurs).&#10;&#10;# Eksempler" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_c2236976b005082939" idref="EAID_ASC_c2236976b005082939" start="EAID_CLS_11c618a515753fb259" end="EAID_CLS_11c618a515753fb259">
         <source xmi:idref="EAID_CLS_11c618a515753fb259" idref="EAID_CLS_11c618a515753fb259">
           <model type="Class" name="Organisasjonselement" />
@@ -3587,6 +3649,144 @@ Den relaterte skalaen må refereres fra selve verdi.
           <role name="overordnet" visibility="Public" />
           <type multiplicity="1" />
           <documentation value="Referanse til organisasjonselement på nivået over gjeldende organisasjonselement.&#10;&#10;# Beskrivelse&#10;Alle overordnede (forelder) organisasjonselement.&#10;&#10;På øverste nivå, vil overordnet peke til seg selv.&#10;&#10;# Format&#10;Referanse til seg selv.&#10;&#10;# Eksempler&#10;&#10;* *Faggruppe for digitalisering og systemforvaltning* refererer til overordnet organisasjonselement, som er *IT-seksjonen*.&#10;* *Avdeling for helse og sosial* kan referere til organisasjonselemenetet til skolen, som kan være *Byremo videregående skole*" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_5a65e53e9d7ec4ea26" idref="EAID_ASC_5a65e53e9d7ec4ea26" start="EAID_CLS_7f69968205107fe6de" end="EAID_CLS_7ab71940bab910a223">
+        <source xmi:idref="EAID_CLS_7f69968205107fe6de" idref="EAID_CLS_7f69968205107fe6de">
+          <model type="Class" name="Personalressurs" />
+          <role visibility="Public" name="personalressurs" />
+          <type multiplicity="1" />
+          <documentation value="Pesonalressurs til et arbeidsforhold" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role name="arbeidsforhold" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Arbeidsforhold til en personalressurs" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_80a17c8068f3af252f" idref="EAID_ASC_80a17c8068f3af252f" start="EAID_CLS_7f69968205107fe6de" end="EAID_CLS_0e902a06c5b70e4340">
+        <source xmi:idref="EAID_CLS_7f69968205107fe6de" idref="EAID_CLS_7f69968205107fe6de">
+          <model type="Class" name="Personalressurs" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_0e902a06c5b70e4340" idref="EAID_CLS_0e902a06c5b70e4340">
+          <model type="Class" name="Personalressurskategori" />
+          <role name="personalressurskategori" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Angir hvilken kategori personalressurs&#10;&#10;# Beskrivelse&#10;&#10;Hvilken kategori/ansattform personalressursen innehar.&#10;&#10;# Format&#10;&#10;# Eksempel&#10;&#10;Kan for eksempel velges blant følgende: `Fast`, `Midlertidig`, `Oppdragstaker`, `Politiker`, `Sluttet`&#10;&#10;Se kodeverk Personalressurskategori for utvidet eksempel." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_13fddcb6973e3fd5ac" idref="EAID_ASC_13fddcb6973e3fd5ac" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_7a1842f8370ceb4648">
+        <source xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7a1842f8370ceb4648" idref="EAID_CLS_7a1842f8370ceb4648">
+          <model type="Class" name="Ansvar" />
+          <role name="ansvar" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Relasjon til begrepet ansvar&#10;&#10;# Beskrivelse&#10;&#10;Beskriver hvilket ansvar arbeidsforholdet vanligvis knyttes til. &#10;&#10;Synonymer:  kostsenter, kostnadsbærer.&#10;&#10;Se kodeverk [Ansvar](/docs/kodeverk_ansvar)." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_e40c19e1fd537e36d1" idref="EAID_ASC_e40c19e1fd537e36d1" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_99ad8092a898497ae7">
+        <source xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_99ad8092a898497ae7" idref="EAID_CLS_99ad8092a898497ae7">
+          <model type="Class" name="Arbeidsforholdstype" />
+          <role name="arbeidsforholdstype" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Beskrivende kode som kategoriserer hva slags funksjon stillingen grupperes til&#10;&#10;# Beskrivelse&#10;&#10;Beskrivende kode som kategoriserer hva slags funksjon stillingen grupperes til.&#10;&#10;Ansattkode eller stillingskategori som den også kalles.&#10;&#10;# Eksempler&#10;&#10;Se eksempel i Arbeidsforholdstype-kodeverk" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_616777eead5b9bf1c9" idref="EAID_ASC_616777eead5b9bf1c9" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_11c618a515753fb259">
+        <source xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role visibility="Public" name="arbeidsforhold" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle arbeidsforhold til et organisasjonselement." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_11c618a515753fb259" idref="EAID_CLS_11c618a515753fb259">
+          <model type="Class" name="Organisasjonselement" />
+          <role name="arbeidssted" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Tilhørighet til organisasjonsstruktur&#10;&#10;# Beskrivelse&#10;&#10;For eksempel koden til &quot;Avdeling for Helse og mijlø&quot;.&#10;&#10;Kommentar fra feltet organisasjonId:&#10;Kode for relasjon til organisasjonstruktur. &#10;&#10;Tilsvarer Arbeidssted i HR-system, mens VFS kaller dette for Ansvar og beskriver det med: &quot;Type 2 = Ansvar, benyttes til å plassere den ansatte på riktig skole&quot;.&#10;&#10;For eksempel kode for &quot;Bjerke videregående skole&quot;.&#10;&#10;Arbeid stedskode som er bygget på en eller flere organisasjonsenheter&#10;&#10;I en bedrift er en avdeling en organisasjonsenhet som utgjør ansvarsområdet til en (avdelings)sjef. Avdelingssjefen kan for eksempel hete formann, salgssjef eller kontorsjef. (ref.Store norske leksikon)&#10;&#10;# Format&#10;&#10;&#10;# Eksempler" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_a7e834bec647b7071d" idref="EAID_ASC_a7e834bec647b7071d" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_b2fbf668ea3689009c">
+        <source xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_b2fbf668ea3689009c" idref="EAID_CLS_b2fbf668ea3689009c">
+          <model type="Class" name="Funksjon" />
+          <role name="funksjon" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Arbeidsforholdets relasjon til funksjon. &#10;&#10;# Beskrivelse&#10;&#10;Beskriver hvilken funksjon arbeidsforholdet vanligvis knyttes til.&#10;&#10;Synonymer:  Tjeneste&#10;&#10;Se kodeverk [Funksjon](/docs/kodeverk_funksjon). &#10;&#10;&#10;# Eksempler&#10;&#10;R1 Visma 2 kostra funksjoner:&#10;&#10;For eksempel koden til &quot;Studiespesialisering&quot; eller &quot;PEDAGOGISK LEDELSE OG PEDAGOGISKE FELLESUTGIFTER&quot;." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_4702ec0f35c87e1d37" idref="EAID_ASC_4702ec0f35c87e1d37" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_1d24d026ece51b64c5">
+        <source xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_1d24d026ece51b64c5" idref="EAID_CLS_1d24d026ece51b64c5">
+          <model type="Class" name="Stillingskode" />
+          <role name="stillingskode" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="En fire- eller sekssifret stillingskode. Firesiffret kodeliste fra KS. Kan være utvidet i tillegg med to siffer. De to siste er egentilpasset.&#10;&#10;# Beskrivelse&#10;&#10;Se kodeverk Stillingskode.&#10;&#10;# Format&#10;&#10;# Eksempler&#10;&#10;# Referanser &#10;&#10;Tar utgangspunkt i stillingskodene fra hovedtariffavtalen: [Oversikt over stillingskoder fra KS.no](http://www.ks.no/globalassets/vedlegg-til-hvert-fagomrader/arbeidsgiver/lonnpersonal---analyse-og-statistikk/innsamling-av-data/del-3---stillingskoder.pdf)" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_cf2141cc136151dcf3" idref="EAID_ASC_cf2141cc136151dcf3" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_7928ce1d8618e22dce">
+        <source xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7928ce1d8618e22dce" idref="EAID_CLS_7928ce1d8618e22dce">
+          <model type="Class" name="Uketimetall" />
+          <role name="timerPerUke" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Timer pr uke i 100% stilling&#10;&#10;# Beskrivelse&#10;&#10;Ulike type stillinger kan ha ulikt timetall for en 100% stilling&#10;&#10;# Format&#10;&#10;&#10;# Eksempler" />
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
@@ -3658,6 +3858,23 @@ Den relaterte skalaen må refereres fra selve verdi.
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_a1caaaf9175ac05a30" idref="EAID_ASC_a1caaaf9175ac05a30" start="EAID_CLS_16032b22e35475cac5" end="EAID_CLS_21de96a2eceefd70b9">
+        <source xmi:idref="EAID_CLS_16032b22e35475cac5" idref="EAID_CLS_16032b22e35475cac5">
+          <model type="Class" name="Adresse" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_21de96a2eceefd70b9" idref="EAID_CLS_21de96a2eceefd70b9">
+          <model type="Class" name="Landkode" />
+          <role name="land" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Land hvor adressen befinner seg" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_c9848b25a06192b0c5" idref="EAID_ASC_c9848b25a06192b0c5" start="EAID_CLS_a62447c9dd60a973b1" end="EAID_CLS_c9f60b4d15aa43dab9">
         <source xmi:idref="EAID_CLS_a62447c9dd60a973b1" idref="EAID_CLS_a62447c9dd60a973b1">
           <model type="Class" name="Gruppe" />
@@ -3726,6 +3943,24 @@ Den relaterte skalaen må refereres fra selve verdi.
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_3ab99ccb718a40b7f7" idref="EAID_ASC_3ab99ccb718a40b7f7" start="EAID_CLS_389b7cf67bad56a453" end="EAID_CLS_8548ca6ef4e9f948e9">
+        <source xmi:idref="EAID_CLS_389b7cf67bad56a453" idref="EAID_CLS_389b7cf67bad56a453">
+          <model type="Class" name="Elev" />
+          <role visibility="Public" name="elev" />
+          <type multiplicity="0..1" />
+          <documentation value="En person kan være en elev" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_8548ca6ef4e9f948e9" idref="EAID_CLS_8548ca6ef4e9f948e9">
+          <model type="Class" name="Person" />
+          <role name="person" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Privatperson som er knyttet til en elev" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_e21d60fd011d939b70" idref="EAID_GEN_e21d60fd011d939b70" start="EAID_CLS_9be72467d299d27d2a" end="EAID_CLS_9564bd355ac64bb4d6">
         <source xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
           <model type="Class" name="Elevforhold" />
@@ -3770,7 +4005,7 @@ Den relaterte skalaen må refereres fra selve verdi.
         <target xmi:idref="EAID_CLS_20ee2391e13a5e2da9" idref="EAID_CLS_20ee2391e13a5e2da9">
           <model type="Class" name="Elevkategori" />
           <role name="kategori" visibility="Public" />
-          <type multiplicity="0..1" />
+          <type multiplicity="1" />
           <documentation value="Kategori på et elevforhold" />
           <tags />
           </target>
@@ -3876,6 +4111,24 @@ Den relaterte skalaen må refereres fra selve verdi.
           <role name="time" visibility="Public" />
           <type multiplicity="0..*" />
           <documentation value="Timer hvor lærer underviser" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_08206e76492e006cb4" idref="EAID_ASC_08206e76492e006cb4" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_7ab71940bab910a223">
+        <source xmi:idref="EAID_CLS_917b8b67ec1ceae3be" idref="EAID_CLS_917b8b67ec1ceae3be">
+          <model type="Class" name="Undervisningsforhold" />
+          <role visibility="Public" name="undervisningsforhold" />
+          <type multiplicity="0..1" />
+          <documentation value="Relasjon til en tilsvarende objekt i Utdannings domenet" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role name="arbeidsforhold" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Relasjon til en tilsvarende objekt i Adminstrasjons domenet" />
           <tags />
           </target>
         <properties ea_type="Association" direction="Bi-Directional" />

@@ -5,6 +5,8 @@ imports:
   - linkml:types
   - felles.basisklasser
   - felles.komplekse-datatyper
+  - administrasjon.personal
+  - felles
   - utdanning.basisklasser
   - utdanning.kodeverk
   - utdanning.komplekse-datatyper
@@ -103,6 +105,14 @@ classes:
         description: |
           Elevforholdene til en elev
         multivalued: true
+      person:
+        range: Person
+        inverse: elev
+        annotations:
+          primaryRelation: true
+        description: |
+          Privatperson som er knyttet til en elev
+        required: true
 
   Elevforhold:
     description: |
@@ -129,6 +139,7 @@ classes:
         range: Elevkategori
         description: |
           Kategori på et elevforhold
+        required: true
 
   Kontaktlærergruppe:
     description: |
@@ -224,3 +235,11 @@ classes:
         description: |
           Timer hvor lærer underviser
         multivalued: true
+      arbeidsforhold:
+        range: Arbeidsforhold
+        inverse: undervisningsforhold
+        annotations:
+          primaryRelation: true
+        description: |
+          Relasjon til en tilsvarende objekt i Adminstrasjons domenet
+        required: true
