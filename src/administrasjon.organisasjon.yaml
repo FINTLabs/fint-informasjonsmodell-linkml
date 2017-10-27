@@ -117,18 +117,6 @@ classes:
         description: |
           Alle arbeidsforhold til et organisasjonselement.
         multivalued: true
-      leder:
-        range: Personalressurs
-        description: |
-          Ansvarlig leder for organisasjonselementet
-          
-          # Beskrivelse
-          Normalt vil dette være leder som har personal- og økonomi-ansvar for dette organisasjonselementet.
-          
-          # Format
-          Relasjon til en bestemt leder (Personalressurs).
-          
-          # Eksempler
       overordnet:
         range: Organisasjonselement
         description: |

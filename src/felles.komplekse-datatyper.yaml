@@ -3,7 +3,6 @@ id: https://w3id.org/novari/fint/felles/komplekse-datatyper
 name: felles.komplekse-datatyper
 imports:
   - linkml:types
-  - felles.kodeverk.iso
 
 classes:
 
@@ -78,10 +77,6 @@ classes:
           
           
           # Eksempler
-      land:
-        range: Landkode
-        description: |
-          Land hvor adressen befinner seg
 
   Identifikator:
     description: |

@@ -153,6 +153,7 @@ classes:
           primaryRelation: true
         description: |
           Referanse til Adminsitrasjons domenet
+        required: true
       skoleeiertype:
         range: Skoleeiertype
         description: |

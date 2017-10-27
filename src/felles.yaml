@@ -3,11 +3,9 @@ id: https://w3id.org/novari/fint/felles
 name: felles
 imports:
   - linkml:types
-  - administrasjon.personal
   - felles.basisklasser
   - felles.kodeverk.iso
   - felles.komplekse-datatyper
-  - utdanning.elev
 
 classes:
 
@@ -102,11 +100,6 @@ classes:
           
           Se beskrivelse for [Personnavn klasse](Class:Personnavn)
         required: true
-      elev:
-        range: Elev
-        inverse: person
-        description: |
-          En person kan være en elev
       kjønn:
         range: Kjønn
         description: |
@@ -123,15 +116,3 @@ classes:
         range: Språk
         description: |
           Språkform som denne personen foretrekker å bruke (i utgangspunktet - nynork, bokmål eller samisk).
-      personalressurs:
-        range: Personalressurs
-        inverse: person
-        annotations:
-          primaryRelation: true
-        description: |
-          Personalressurs til person. Forhold som arbeidstaker.
-      statsborgerskap:
-        range: Landkode
-        description: |
-          Alle statsborgerskap som personen har
-        multivalued: true

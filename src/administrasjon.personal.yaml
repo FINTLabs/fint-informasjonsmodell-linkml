@@ -5,10 +5,7 @@ imports:
   - linkml:types
   - felles.basisklasser
   - felles.komplekse-datatyper
-  - administrasjon.kodeverk
   - administrasjon.organisasjon
-  - felles
-  - utdanning.elev
 
 classes:
 
@@ -84,37 +81,6 @@ classes:
           # Beskrivelse
           
           Den fortrukne måten å komme i kontakt med en personalressurs.
-      arbeidsforhold:
-        range: Arbeidsforhold
-        inverse: personalressurs
-        annotations:
-          primaryRelation: true
-        description: |
-          Arbeidsforhold til en personalressurs
-        multivalued: true
-      person:
-        range: Person
-        inverse: personalressurs
-        description: |
-          Person som er en personalressurs
-        required: true
-      personalressurskategori:
-        range: Personalressurskategori
-        description: |
-          Angir hvilken kategori personalressurs
-          
-          # Beskrivelse
-          
-          Hvilken kategori/ansattform personalressursen innehar.
-          
-          # Format
-          
-          # Eksempel
-          
-          Kan for eksempel velges blant følgende: `Fast`, `Midlertidig`, `Oppdragstaker`, `Politiker`, `Sluttet`
-          
-          Se kodeverk Personalressurskategori for utvidet eksempel.
-        required: true
 
   Arbeidsforhold:
     description: |
@@ -259,32 +225,6 @@ classes:
           
           * `40000000` tilsvarer 400 000
         required: true
-      ansvar:
-        range: Ansvar
-        description: |
-          Relasjon til begrepet ansvar
-          
-          # Beskrivelse
-          
-          Beskriver hvilket ansvar arbeidsforholdet vanligvis knyttes til. 
-          
-          Synonymer:  kostsenter, kostnadsbærer.
-          
-          Se kodeverk [Ansvar](/docs/kodeverk_ansvar).
-      arbeidsforholdstype:
-        range: Arbeidsforholdstype
-        description: |
-          Beskrivende kode som kategoriserer hva slags funksjon stillingen grupperes til
-          
-          # Beskrivelse
-          
-          Beskrivende kode som kategoriserer hva slags funksjon stillingen grupperes til.
-          
-          Ansattkode eller stillingskategori som den også kalles.
-          
-          # Eksempler
-          
-          Se eksempel i Arbeidsforholdstype-kodeverk
       arbeidssted:
         range: Organisasjonselement
         inverse: arbeidsforhold
@@ -313,62 +253,3 @@ classes:
           
           # Eksempler
         required: true
-      funksjon:
-        range: Funksjon
-        description: |
-          Arbeidsforholdets relasjon til funksjon. 
-          
-          # Beskrivelse
-          
-          Beskriver hvilken funksjon arbeidsforholdet vanligvis knyttes til.
-          
-          Synonymer:  Tjeneste
-          
-          Se kodeverk [Funksjon](/docs/kodeverk_funksjon). 
-          
-          
-          # Eksempler
-          
-          R1 Visma 2 kostra funksjoner:
-          
-          For eksempel koden til "Studiespesialisering" eller "PEDAGOGISK LEDELSE OG PEDAGOGISKE FELLESUTGIFTER".
-      personalressurs:
-        range: Personalressurs
-        inverse: arbeidsforhold
-        description: |
-          Pesonalressurs til et arbeidsforhold
-        required: true
-      stillingskode:
-        range: Stillingskode
-        description: |
-          En fire- eller sekssifret stillingskode. Firesiffret kodeliste fra KS. Kan være utvidet i tillegg med to siffer. De to siste er egentilpasset.
-          
-          # Beskrivelse
-          
-          Se kodeverk Stillingskode.
-          
-          # Format
-          
-          # Eksempler
-          
-          # Referanser 
-          
-          Tar utgangspunkt i stillingskodene fra hovedtariffavtalen: [Oversikt over stillingskoder fra KS.no](http://www.ks.no/globalassets/vedlegg-til-hvert-fagomrader/arbeidsgiver/lonnpersonal---analyse-og-statistikk/innsamling-av-data/del-3---stillingskoder.pdf)
-      timerPerUke:
-        range: Uketimetall
-        description: |
-          Timer pr uke i 100% stilling
-          
-          # Beskrivelse
-          
-          Ulike type stillinger kan ha ulikt timetall for en 100% stilling
-          
-          # Format
-          
-          
-          # Eksempler
-      undervisningsforhold:
-        range: Undervisningsforhold
-        inverse: arbeidsforhold
-        description: |
-          Relasjon til en tilsvarende objekt i Utdannings domenet
