@@ -17,7 +17,7 @@ classes:
       Ansvar viser hvordan ansvaret i organisasjonen er bygd opp i samsvar med fylkeskommunens anvisningsmyndighet.
       
       Alternative navn: `Kostsenter`, `Koststed`.
-    is_a: Begrep
+    is_a: Kodeverk
     attributes:
       forelder:
         range: Ansvar
@@ -48,7 +48,7 @@ classes:
       E    |    Midlertidig
       ...   | ...
       Z    |    Annet
-    is_a: Begrep
+    is_a: Kodeverk
     attributes:
       forelder:
         range: Arbeidsforholdstype
@@ -64,7 +64,7 @@ classes:
       Alternativt navn: Konto
       
       Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er drift, investering eller balanse.
-    is_a: Begrep
+    is_a: Kodeverk
 
   Funksjon:
     description: |
@@ -75,12 +75,25 @@ classes:
       Funksjon viser fylkeskommunens aktivitet og tjenesteproduksjon.
       
       Alternativ navn: `Tjeneste`
-    is_a: Begrep
+    is_a: Kodeverk
     attributes:
       forelder:
         range: Funksjon
         description: |
           For å bygge hierarki av Funksjon
+
+  Kodeverk:
+    abstract: true
+    is_a: Begrep
+    attributes:
+      passiv:
+        range: boolean
+        description: |
+          Angir at koden er passiv, og ikke kan velges.
+          
+          # Beskrivelse
+          
+          Passive koder kan henvises til i eksisterende data, men kan ikke velges ved registrering av nye data.
 
   Lønnsart:
     description: |
@@ -98,7 +111,7 @@ classes:
       
       * Rapportering av ytelser på A-meldingen: http://veiledning-amelding.smartlearn.no/Veiledn_Generell/index.html#!Documents/rapporteringavkontantytelser.htm
       * Altinn: Innholdet i A-meldingen: https://www.altinn.no/no/a-ordningen/om-a-meldingen/Innholdet-i-a-meldingen/
-    is_a: Begrep
+    is_a: Kodeverk
 
   Personalressurskategori:
     description: |
@@ -136,12 +149,12 @@ classes:
       6 | Ikke ansatt - kun bruker
       7 | Politikere
       8|  Selvstendig næringsdrivende
-    is_a: Begrep
+    is_a: Kodeverk
 
   Prosjekt:
     description: |
       Del av kontostrengen som peker på løpende prosjekter.
-    is_a: Begrep
+    is_a: Kodeverk
 
   Stillingskode:
     description: |
@@ -152,7 +165,7 @@ classes:
       I det fylkeskommunale lønnssystemet har alle stillinger en stillingskode og en stillingsbetegnelse (for eksempel 7026 for bibliotekar eller 7076 for hjelpepleier). Stillingskoden kan angi noe om stillingens innhold og lønnsnivå.
       
       Det finnes en [KS standard for stillingskoder](http://www.ks.no/globalassets/vedlegg-til-hvert-fagomrader/arbeidsgiver/lonnpersonal---analyse-og-statistikk/innsamling-av-data/del-3---stillingskoder.pdf)
-    is_a: Begrep
+    is_a: Kodeverk
     attributes:
       forelder:
         range: Stillingskode
@@ -179,4 +192,4 @@ classes:
       36,0     |   36,0 timers uke
       37,5     |   37,5 timers uke
       ...    | ...
-    is_a: Begrep
+    is_a: Kodeverk
