@@ -55,7 +55,10 @@ classes:
           # Format
           
           Brukernavn i det format en personalressurs trenger for å logge seg på systemer i organisasjonen.
-        required: true
+          
+          # NB!
+          
+          Fremtidig funksjon for dette feltet er under revisjon.
       systemId:
         range: Identifikator
         description: |

@@ -378,7 +378,7 @@ Identifiserer en personalressurs unikt. En personalressurs vil kun være register
                 </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_d537183b55d1734117" name="brukernavn" visibility="public">
                 <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_2cac9a85e86615899e" value="1" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_2cac9a85e86615899e" value="0" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_2cac9a85e86615899e" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_2cac9a85e86615899e">
                   <body>Brukernavn til en person
@@ -390,6 +390,10 @@ Skal inneholde brukernavn for pålogging, som finnes i katalogtjenesten (feks Act
 # Format
 
 Brukernavn i det format en personalressurs trenger for å logge seg på systemer i organisasjonen.
+
+# NB!
+
+Fremtidig funksjon for dette feltet er under revisjon.
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -1632,7 +1636,7 @@ Tilsvarende finnes for ansatte: __Personalressurs__.
                 </ownedComment>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_c25ba64beb5508e49a" name="brukernavn" visibility="public">
                 <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_d6ffb09dfaafbd3e66" value="1" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_d6ffb09dfaafbd3e66" value="0" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_d6ffb09dfaafbd3e66" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d6ffb09dfaafbd3e66">
                   <body>Brukernavn til en person
@@ -1644,6 +1648,10 @@ Skal inneholde brukernavn for pålogging, som finnes i katalogtjenesten (feks Act
 # Format
 
 Brukernavn i det format en elev trenger for å logge seg på systemer i organisasjonen.
+
+# NB!
+
+Fremtidig funksjon for dette feltet er under revisjon.
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -8050,9 +8058,9 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
             </attribute>
           <attribute xmi:idref="EAID_PRP_d537183b55d1734117" idref="EAID_PRP_d537183b55d1734117" name="brukernavn">
             <properties type="Identifikator" />
-            <bounds lower="1" upper="1" />
+            <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Brukernavn til en person&#10;&#10;# Beskrivelse&#10;&#10;Skal inneholde brukernavn for pålogging, som finnes i katalogtjenesten (feks Active Directory). Brukes som en identifikator som består, når fødselsnummer og/eller andre identifikatorer endrer seg.&#10;&#10;# Format&#10;&#10;Brukernavn i det format en personalressurs trenger for å logge seg på systemer i organisasjonen.&#10;" />
+            <documentation value="Brukernavn til en person&#10;&#10;# Beskrivelse&#10;&#10;Skal inneholde brukernavn for pålogging, som finnes i katalogtjenesten (feks Active Directory). Brukes som en identifikator som består, når fødselsnummer og/eller andre identifikatorer endrer seg.&#10;&#10;# Format&#10;&#10;Brukernavn i det format en personalressurs trenger for å logge seg på systemer i organisasjonen.&#10;&#10;# NB!&#10;&#10;Fremtidig funksjon for dette feltet er under revisjon.&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_fb14b4b1f99e8c8bd6" idref="EAID_PRP_fb14b4b1f99e8c8bd6" name="systemId">
@@ -8480,9 +8488,9 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <attributes>
           <attribute xmi:idref="EAID_PRP_c25ba64beb5508e49a" idref="EAID_PRP_c25ba64beb5508e49a" name="brukernavn">
             <properties type="Identifikator" />
-            <bounds lower="1" upper="1" />
+            <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Brukernavn til en person&#10;&#10;# Beskrivelse&#10;&#10;Skal inneholde brukernavn for pålogging, som finnes i katalogtjenesten (feks Active Directory). Brukes som en identifikator som består, når fødselsnummer og/eller andre identifikatorer endrer seg.&#10;&#10;# Format&#10;&#10;Brukernavn i det format en elev trenger for å logge seg på systemer i organisasjonen.&#10;" />
+            <documentation value="Brukernavn til en person&#10;&#10;# Beskrivelse&#10;&#10;Skal inneholde brukernavn for pålogging, som finnes i katalogtjenesten (feks Active Directory). Brukes som en identifikator som består, når fødselsnummer og/eller andre identifikatorer endrer seg.&#10;&#10;# Format&#10;&#10;Brukernavn i det format en elev trenger for å logge seg på systemer i organisasjonen.&#10;&#10;# NB!&#10;&#10;Fremtidig funksjon for dette feltet er under revisjon.&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_9b95d1caf64a899dc4" idref="EAID_PRP_9b95d1caf64a899dc4" name="elevnummer">
