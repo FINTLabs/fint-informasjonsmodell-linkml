@@ -4,6 +4,81 @@
     <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_68c2cc7f0ceaa3e499" name="Model">
       <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_58bd5b0e37fbcdd8ac" name="FINT">
         <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_87452f10731000f560" name="Administrasjon">
+          <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_231fbd2cc7d6403ec0" name="Fullmakt">
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_7448e1a279ec7a138b" name="Fullmakt">
+              <properties documentation="Fullmakt til å gjøre handlinger i forhold til en gitt Rolle.&#10;&#10;# Beskrivelse&#10;&#10;Fullmakter innehas av fysiske eller juridiske personer, og er knyttet til Ansvar i kontoplanen. Fullmakter er delegert til personer, disse benevnes som fullmektige.&#10;&#10;Fullmektige kan ha stedfortreder. Stedfortrederen kan utøve den samme fullmakten som den fullmektige.&#10;&#10;Fullmakter beskrives i delegasjonsreglementet for organisasjonen. For fylkeskommuner er dette et reglement besluttet av Fylkestinget og videre delegert av Fylkesrådmannen.&#10;&#10;# Eksempler&#10;&#10;Rektor ved Eidsvoll VGS har anvisningsfullmakt for ansvar 241.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_0155d96e810f369444">
+                <body>Fullmakt til å gjøre handlinger i forhold til en gitt Rolle.
+
+# Beskrivelse
+
+Fullmakter innehas av fysiske eller juridiske personer, og er knyttet til Ansvar i kontoplanen. Fullmakter er delegert til personer, disse benevnes som fullmektige.
+
+Fullmektige kan ha stedfortreder. Stedfortrederen kan utøve den samme fullmakten som den fullmektige.
+
+Fullmakter beskrives i delegasjonsreglementet for organisasjonen. For fylkeskommuner er dette et reglement besluttet av Fylkestinget og videre delegert av Fylkesrådmannen.
+
+# Eksempler
+
+Rektor ved Eidsvoll VGS har anvisningsfullmakt for ansvar 241.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_0754b9d316506ffdf4" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_d5123a499d2b9506d6" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_d5123a499d2b9506d6" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d5123a499d2b9506d6">
+                  <body>Kildesystemets unike identifikator for fullmakten.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_10ca213840f606c81b" name="gyldighetsperiode" visibility="public">
+                <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_2c965564565900401d" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_2c965564565900401d" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_2c965564565900401d">
+                  <body>Periode som fullmakten er gyldig for.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_5414cdc530c1a79b9a" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_b2d51228fff1754e2b" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_3a7c72615207d0ff33" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_7f69968205107fe6de" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_1ce213f9ef37fd53b2" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_5f1fef9b7872cf088d" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_14606bc82e9a7b12cd" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_7f69968205107fe6de" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_5f1fef9b7872cf088d" name="Rolle">
+              <properties documentation="Rettighet eller type fullmakt.&#10;&#10;De vanligste rollene er:&#10;&#10;- Attestant&#10;- Anviser&#10;- Bestiller&#10;- Kontering&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_0defb20abaf094b621">
+                <body>Rettighet eller type fullmakt.
+
+De vanligste rollene er:
+
+- Attestant
+- Anviser
+- Bestiller
+- Kontering
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_3f6757da14f487095c" name="navn" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_4984966ae4c3d9ef89" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_4984966ae4c3d9ef89" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_4984966ae4c3d9ef89">
+                  <body>Navn på rolle. Unik identifikator.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_11f8aa909c87577e63" name="beskrivelse" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_812f1831d1a5e0336d" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_812f1831d1a5e0336d" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_812f1831d1a5e0336d">
+                  <body>Utfyllende beskrivelse av hva rollen gir fullmakt til.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_bffb9eb00a2f968a52" name="Kodeverk">
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_7a1842f8370ceb4648" name="Ansvar">
               <properties documentation="Kodeverk som er en del av kontostrengen som beskriver hvem som har ansvaret for en utgift eller en inntekt&#10;&#10;# Beskrivelse&#10;&#10;Ansvar viser hvordan ansvaret i organisasjonen er bygd opp i samsvar med fylkeskommunens anvisningsmyndighet.&#10;&#10;Alternative navn: `Kostsenter`, `Koststed`.&#10;" stereotype="hovedklasse" />
@@ -17,9 +92,9 @@ Ansvar viser hvordan ansvaret i organisasjonen er bygd opp i samsvar med fylkesk
 Alternative navn: `Kostsenter`, `Koststed`.
 </body>
                 </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_a28be2f763d459750d" general="EAID_CLS_98ecf520623f10e247" start="EAID_CLS_7a1842f8370ceb4648" end="EAID_CLS_98ecf520623f10e247" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_a28be2f763d459750d" general="EAID_CLS_b2d51228fff1754e2b" start="EAID_CLS_7a1842f8370ceb4648" end="EAID_CLS_b2d51228fff1754e2b" />
               </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_1ac53270ff0109385c" visibility="public" start="EAID_CLS_7a1842f8370ceb4648" end="EAID_CLS_7a1842f8370ceb4648" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_5f53263aa434b4d7d0" visibility="public" start="EAID_CLS_7a1842f8370ceb4648" end="EAID_CLS_7a1842f8370ceb4648" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_99ad8092a898497ae7" name="Arbeidsforholdstype">
               <properties documentation="Viser hvilket behov hos arbeidsgiver som dekkes av arbeidsforholdet&#10;&#10;# Beskrivelse&#10;&#10;Viser hvilket behov hos arbeidsgiver som dekkes av arbeidsforholdet&#10;&#10;Alternative navn:&#10;* Stillingstype&#10;* Stillingskategori&#10;* Ansattforholdkode&#10;&#10;# Eksempel&#10;&#10;Kode | Beskrivelse&#10;---|---&#10;A   |     Fast&#10;B    |    Timelønnet&#10;C   |     Lærlinger&#10;D   |     Folkevalgt/politiker&#10;E    |    Midlertidig&#10;...   | ...&#10;Z    |    Annet&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_9a3ca18ca68b521f57">
@@ -47,7 +122,7 @@ E    |    Midlertidig
 Z    |    Annet
 </body>
                 </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_9a3ca18ca68b521f57" general="EAID_CLS_98ecf520623f10e247" start="EAID_CLS_99ad8092a898497ae7" end="EAID_CLS_98ecf520623f10e247" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_9a3ca18ca68b521f57" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_99ad8092a898497ae7" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_ae870d2f567d646477" visibility="public" start="EAID_CLS_99ad8092a898497ae7" end="EAID_CLS_99ad8092a898497ae7" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_b86eb7152bf9ecacd7" name="Art">
@@ -62,12 +137,12 @@ Alternativt navn: Konto
 Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er drift, investering eller balanse.
 </body>
                 </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_288919598d0845dc45" general="EAID_CLS_98ecf520623f10e247" start="EAID_CLS_b86eb7152bf9ecacd7" end="EAID_CLS_98ecf520623f10e247" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_288919598d0845dc45" general="EAID_CLS_b2d51228fff1754e2b" start="EAID_CLS_b86eb7152bf9ecacd7" end="EAID_CLS_b2d51228fff1754e2b" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_b2fbf668ea3689009c" name="Funksjon">
-              <properties documentation="Del av kontostrenges som beskriver hva som produseres&#10;&#10;# Beskrivelse&#10;&#10;Funksjon viser fylkeskommunens aktivitet og tjenesteproduksjon.&#10;&#10;Alternativ navn: `Tjeneste`&#10;" stereotype="hovedklasse" />
+              <properties documentation="Del av kontostrengen som beskriver hva som produseres&#10;&#10;# Beskrivelse&#10;&#10;Funksjon viser fylkeskommunens aktivitet og tjenesteproduksjon.&#10;&#10;Alternativ navn: `Tjeneste`&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d35798c615275abc97">
-                <body>Del av kontostrenges som beskriver hva som produseres
+                <body>Del av kontostrengen som beskriver hva som produseres
 
 # Beskrivelse
 
@@ -76,27 +151,20 @@ Funksjon viser fylkeskommunens aktivitet og tjenesteproduksjon.
 Alternativ navn: `Tjeneste`
 </body>
                 </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_d35798c615275abc97" general="EAID_CLS_98ecf520623f10e247" start="EAID_CLS_b2fbf668ea3689009c" end="EAID_CLS_98ecf520623f10e247" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_d35798c615275abc97" general="EAID_CLS_b2d51228fff1754e2b" start="EAID_CLS_b2fbf668ea3689009c" end="EAID_CLS_b2d51228fff1754e2b" />
               </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_cdddcda5d6ea173b43" visibility="public" start="EAID_CLS_b2fbf668ea3689009c" end="EAID_CLS_b2fbf668ea3689009c" />
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_98ecf520623f10e247" name="Kodeverk" isAbstract="true">
-              <properties stereotype="abstrakt" />
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_03993eecb1cda3c5cd" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_98ecf520623f10e247" end="EAID_CLS_3385458244847ec7db" />
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_f50f9b9d326a89a938" name="passiv" visibility="public">
-                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Boolean" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_d5683b46a40adf97cd" value="0" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_d5683b46a40adf97cd" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d5683b46a40adf97cd">
-                  <body>Angir at koden er passiv, og ikke kan velges.
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_d0f87a88b9373e99e0" visibility="public" start="EAID_CLS_b2fbf668ea3689009c" end="EAID_CLS_b2fbf668ea3689009c" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_b2d51228fff1754e2b" name="Kontodimensjon" isAbstract="true">
+              <properties documentation="Abstrakt fellesbegrep som beskriver dimensjon i kontoplan.&#10;&#10;# Beskrivelse&#10;&#10;Fellesbenevnelse for dimensjoner i en kontoplan.&#10;" stereotype="abstrakt" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_e2a3cbb9d68384a7ec">
+                <body>Abstrakt fellesbegrep som beskriver dimensjon i kontoplan.
 
 # Beskrivelse
 
-Passive koder kan henvises til i eksisterende data, men kan ikke velges ved registrering av nye data.
-
-Medmindre attributten finnes og er satt til usann regnes koden som aktiv.
+Fellesbenevnelse for dimensjoner i en kontoplan.
 </body>
-                  </ownedComment>
-                </ownedAttribute>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_e2a3cbb9d68384a7ec" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_b2d51228fff1754e2b" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_f1d4a9bd27af04c15b" name="Lønnsart">
               <properties documentation="Type ytelse.&#10;&#10;# Beskrivelse&#10;&#10;Lønnsart brukes av HRM-systemer for å indikere hvordan en ytelse skal behandles.&#10;&#10;Den inneholder også knytning til hvordan ytelsen skal rapporteres på A-meldingen.&#10;&#10;Tidligere hadde lønnsart knytning til LTO-kode og LT-kode.&#10;&#10;# Referanser&#10;&#10;* Rapportering av ytelser på A-meldingen: http://veiledning-amelding.smartlearn.no/Veiledn_Generell/index.html#!Documents/rapporteringavkontantytelser.htm&#10;* Altinn: Innholdet i A-meldingen: https://www.altinn.no/no/a-ordningen/om-a-meldingen/Innholdet-i-a-meldingen/&#10;" stereotype="hovedklasse" />
@@ -117,7 +185,7 @@ Tidligere hadde lønnsart knytning til LTO-kode og LT-kode.
 * Altinn: Innholdet i A-meldingen: https://www.altinn.no/no/a-ordningen/om-a-meldingen/Innholdet-i-a-meldingen/
 </body>
                 </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_bcb74521c763f2c514" general="EAID_CLS_98ecf520623f10e247" start="EAID_CLS_f1d4a9bd27af04c15b" end="EAID_CLS_98ecf520623f10e247" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_bcb74521c763f2c514" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_f1d4a9bd27af04c15b" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_0e902a06c5b70e4340" name="Personalressurskategori">
               <properties documentation="Ansattform til et arbeidsforhold&#10;&#10;# Beskrivelse&#10;&#10;Alternativ navn:&#10;* Ansatt (er ikke datatype, men kodeverk)&#10;* Ansattkategori&#10;* Ansattformer&quot;&#10;&#10;# Eksempel&#10;&#10;## Eksempel fra Visma HR - Kategori:&#10;&#10;Kode | Beskrivelse&#10;---|---&#10;F | Fast&#10;M | Midlertidig&#10;O | Oppdragstaker&#10;P | Politiker&#10;S | Sluttet&#10;&#10;## Eksempel fra Agresso - Ressurstype:&#10;&#10;Kode  | Beskrivelse&#10;---|---&#10;1 | Ansatt - kommunal&#10;10 | Lærling/Ung arb.taker&#10;2 | Ansatt - undervisning&#10;3 | Honorar/godtgjørelse&#10;4 | Sluttet&#10;5 | Nyansatt&#10;6 | Ikke ansatt - kun bruker&#10;7 | Politikere&#10;8|  Selvstendig næringsdrivende&#10;" stereotype="hovedklasse" />
@@ -158,15 +226,17 @@ Kode  | Beskrivelse
 8|  Selvstendig næringsdrivende
 </body>
                 </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_dd1c29bad74dec7bd9" general="EAID_CLS_98ecf520623f10e247" start="EAID_CLS_0e902a06c5b70e4340" end="EAID_CLS_98ecf520623f10e247" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_dd1c29bad74dec7bd9" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_0e902a06c5b70e4340" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_0f00acb3fd0e96ed60" name="Prosjekt">
-              <properties documentation="Del av kontostrengen som peker på løpende prosjekter.&#10;" stereotype="hovedklasse" />
+              <properties documentation="Del av kontostrengen som peker på løpende prosjekter&#10;&#10;.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_ad1c910a7fef1a059e">
-                <body>Del av kontostrengen som peker på løpende prosjekter.
+                <body>Del av kontostrengen som peker på løpende prosjekter
+
+.
 </body>
                 </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_ad1c910a7fef1a059e" general="EAID_CLS_98ecf520623f10e247" start="EAID_CLS_0f00acb3fd0e96ed60" end="EAID_CLS_98ecf520623f10e247" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_ad1c910a7fef1a059e" general="EAID_CLS_b2d51228fff1754e2b" start="EAID_CLS_0f00acb3fd0e96ed60" end="EAID_CLS_b2d51228fff1754e2b" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_1d24d026ece51b64c5" name="Stillingskode">
               <properties documentation="Et felles kodeverk for stillinger&#10;&#10;# Beskrivelse&#10;&#10;I det fylkeskommunale lønnssystemet har alle stillinger en stillingskode og en stillingsbetegnelse (for eksempel 7026 for bibliotekar eller 7076 for hjelpepleier). Stillingskoden kan angi noe om stillingens innhold og lønnsnivå.&#10;&#10;Det finnes en [KS standard for stillingskoder](http://www.ks.no/globalassets/vedlegg-til-hvert-fagomrader/arbeidsgiver/lonnpersonal---analyse-og-statistikk/innsamling-av-data/del-3---stillingskoder.pdf)&#10;" stereotype="hovedklasse" />
@@ -180,7 +250,7 @@ I det fylkeskommunale lønnssystemet har alle stillinger en stillingskode og en s
 Det finnes en [KS standard for stillingskoder](http://www.ks.no/globalassets/vedlegg-til-hvert-fagomrader/arbeidsgiver/lonnpersonal---analyse-og-statistikk/innsamling-av-data/del-3---stillingskoder.pdf)
 </body>
                 </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_d5249330beae743515" general="EAID_CLS_98ecf520623f10e247" start="EAID_CLS_1d24d026ece51b64c5" end="EAID_CLS_98ecf520623f10e247" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_d5249330beae743515" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_1d24d026ece51b64c5" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_1ca8c7ab684480abba" visibility="public" start="EAID_CLS_1d24d026ece51b64c5" end="EAID_CLS_1d24d026ece51b64c5" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_7928ce1d8618e22dce" name="Uketimetall">
@@ -206,8 +276,202 @@ Kode   |     Beskrivelse
 ...    | ...
 </body>
                 </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_3d479f6ddf771bd512" general="EAID_CLS_98ecf520623f10e247" start="EAID_CLS_7928ce1d8618e22dce" end="EAID_CLS_98ecf520623f10e247" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_3d479f6ddf771bd512" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_7928ce1d8618e22dce" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
+            </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_2e3c4bbc1f1692c7e1" name="Kompleksedatatyper">
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_ed7c659a13950c7516" name="Beskjeftigelse">
+              <properties documentation="Del av Fastlønn som beskriver en gitt lønnsprosent og hvordan den skal konteres.&#10;" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d5d41baf1fedf410c4">
+                <body>Del av Fastlønn som beskriver en gitt lønnsprosent og hvordan den skal konteres.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_611cd6f4947786b832" name="beskrivelse" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_80b49442b35dc5b655" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_80b49442b35dc5b655" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_80b49442b35dc5b655">
+                  <body>Beskrivelse av beskjeftigelse.
+
+# Beskrivelse
+
+Forklarende beskrivelse av beskjeftigelsen, til bruk i behandling av lønnsmeldingen, og for anføring på lønnsslipp.
+
+# Eksempel
+
+Fag- og gruppekode en lærer underviser i.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_1ed988323ac41d14fb" name="kontostreng" visibility="public">
+                <type xmi:idref="EAID_CLS_f287e1ac31a6f4340e" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_fb5006f1b91452482a" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_fb5006f1b91452482a" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_fb5006f1b91452482a">
+                  <body>Kontering av beskjeftigelsen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_e1232a2ec281a4cc9f" name="prosent" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Integer" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_fea942309062221af9" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_fea942309062221af9" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_fea942309062221af9">
+                  <body>Andel av lønnsprosent som beslaglegges av denne beskjeftigelsen, i hundredels prosent.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_b8ee9b1f64cde1fab8" visibility="public" start="EAID_CLS_ed7c659a13950c7516" end="EAID_CLS_f1d4a9bd27af04c15b" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_6e6e1c88965814953b" name="Fasttillegg">
+              <properties documentation="Fast tilleggsbeløp.&#10;" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_4fe52df9c0ec1aed64">
+                <body>Fast tilleggsbeløp.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_051cbb1f611adb1212" name="beløp" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Integer" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_c0e63fe04cced00345" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_c0e63fe04cced00345" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_c0e63fe04cced00345">
+                  <body>Beløp, i øre.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_604ec40706164f111d" name="beskrivelse" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_98dc91fb3205c07782" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_98dc91fb3205c07782" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_98dc91fb3205c07782">
+                  <body>Beskrivelse av tillegget, til føring på lønnsslipp.
+
+# Beskrivelse
+
+Forklarende beskrivelse av tillegget, til bruk i behandling av lønnsmeldingen, rapportering og for anføring på lønnsslipp.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_6ce07cb074de3ed986" name="kontostreng" visibility="public">
+                <type xmi:idref="EAID_CLS_f287e1ac31a6f4340e" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_eead16a41640a22abc" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_eead16a41640a22abc" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_eead16a41640a22abc">
+                  <body>Kontering av tillegget.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_d6a4dd5e15dd84e0c2" visibility="public" start="EAID_CLS_6e6e1c88965814953b" end="EAID_CLS_f1d4a9bd27af04c15b" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_f287e1ac31a6f4340e" name="Kontostreng">
+              <properties documentation="Sammensetning av kontodimensjoner for bokføring&#10;&#10;# Beskrivelse&#10;&#10;Henvisninger til koder i alle kontodimensjoner for kontering av en kostnad eller inntekt.&#10;&#10;# Eksempel&#10;&#10;For kontering av lønn kreves Art, Ansvar, Funksjon og eventuelt Prosjekt.&#10;&#10;Det finnes flere kontodimensjoner enn disse fire. Modellen vil utvides senere med disse dimensjonene.&#10;" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_bb85e0fd722d6d078b">
+                <body>Sammensetning av kontodimensjoner for bokføring
+
+# Beskrivelse
+
+Henvisninger til koder i alle kontodimensjoner for kontering av en kostnad eller inntekt.
+
+# Eksempel
+
+For kontering av lønn kreves Art, Ansvar, Funksjon og eventuelt Prosjekt.
+
+Det finnes flere kontodimensjoner enn disse fire. Modellen vil utvides senere med disse dimensjonene.
+</body>
+                </ownedComment>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_ff07e2ea805bdae7a1" visibility="public" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_7a1842f8370ceb4648" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_69e922fcc065b17d11" visibility="public" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_b86eb7152bf9ecacd7" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_8a582d97815307b717" visibility="public" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_b2fbf668ea3689009c" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_1cdf854213867d04b5" visibility="public" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_0f00acb3fd0e96ed60" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_8e76a06e7820d92484" name="Variabelttillegg">
+              <properties documentation="Del av variabel lønnsmelding som beskriver grunnlaget for en lønnsberegning.&#10;&#10;# Beskrivelse&#10;&#10;Faktisk lønn beregnes i HRM-systemet. I lønnsmeldingen skal grunnlaget for beregningen angis.&#10;&#10;Må brukes sammen med lønnsart for at HRM-systemet skal foreta korrekt beregning og rapportere riktig på A-meldingen.&#10;&#10;# Eksempler:&#10;&#10;1. Vikartime for undervisningspersonell: &#10;  - antall: antall timer * 1400 / årsramme&#10;2. Timelønn&#10;  - antall: antall timer&#10;3. Kjøregodtgjørelse&#10;  - antall: antall kilometer&#10;4. Kontantytelse for et møte&#10;  - antall: beløp&#10;" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_6842ba1c3bb29a32c0">
+                <body>Del av variabel lønnsmelding som beskriver grunnlaget for en lønnsberegning.
+
+# Beskrivelse
+
+Faktisk lønn beregnes i HRM-systemet. I lønnsmeldingen skal grunnlaget for beregningen angis.
+
+Må brukes sammen med lønnsart for at HRM-systemet skal foreta korrekt beregning og rapportere riktig på A-meldingen.
+
+# Eksempler:
+
+1. Vikartime for undervisningspersonell: 
+  - antall: antall timer * 1400 / årsramme
+2. Timelønn
+  - antall: antall timer
+3. Kjøregodtgjørelse
+  - antall: antall kilometer
+4. Kontantytelse for et møte
+  - antall: beløp
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_da13b419d972fc0b34" name="antall" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Integer" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_cacbf85892853577ff" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_cacbf85892853577ff" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_cacbf85892853577ff">
+                  <body>Mengde som beskrives av tillegget, i hundredeler.
+
+# Beskrivelse
+
+Enhet er spesifisert av lønnsart.
+
+# Eksempel
+
+- Antall hundredels timer.
+- Antall dekameter (km/100).
+- Antall øre
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_7f174298834157fc6a" name="beløp" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Integer" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_f238ebe3cea30ec857" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_f238ebe3cea30ec857" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_f238ebe3cea30ec857">
+                  <body>Beløp i øre som skal utbetales. Beregnes av lønnssystemet basert på antall og lønnsart.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_7b9e971ee9e5d35ff1" name="beskrivelse" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_7911a7c6a1279843f2" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_7911a7c6a1279843f2" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7911a7c6a1279843f2">
+                  <body>Beskrivelse av tillegget, til føring på lønnsslipp.
+
+# Beskrivelse
+
+Forklarende beskrivelse av tillegget, til bruk i behandling av lønnsmeldingen, rapportering og for anføring på lønnsslipp.
+
+# Eksempel
+
+- Fag- og gruppekode og antall timer en lærer vikarierte. 
+- Reisestrekning for kilometergodtgjørelse
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_b0c13718ea38100fd8" name="kontostreng" visibility="public">
+                <type xmi:idref="EAID_CLS_f287e1ac31a6f4340e" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_f84ff663e96d34738b" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_f84ff663e96d34738b" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_f84ff663e96d34738b">
+                  <body>Kontering av tillegget.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_e559fb7be82fcab304" name="periode" visibility="public">
+                <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_26ca0650e28e127824" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_26ca0650e28e127824" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_26ca0650e28e127824">
+                  <body>Periode når grunnlaget ble opptjent.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_4b83e97f580c1b8363" visibility="public" start="EAID_CLS_8e76a06e7820d92484" end="EAID_CLS_f1d4a9bd27af04c15b" />
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_0dfb51061c4b93cb2e" name="Organisasjon">
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_11c618a515753fb259" name="Organisasjonselement">
@@ -337,10 +601,141 @@ For eksempel:
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_5064a6296f394f455d" visibility="public" start="EAID_CLS_11c618a515753fb259" end="EAID_CLS_7a1842f8370ceb4648" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_0739a6ded5022e2f3e" visibility="public" start="EAID_CLS_11c618a515753fb259" end="EAID_CLS_7f69968205107fe6de" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_c2236976b005082939" visibility="public" start="EAID_CLS_11c618a515753fb259" end="EAID_CLS_11c618a515753fb259" />
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_b8abbe9c3c43e8a841" name="Personal">
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_0205423290c9bc7553" name="Fastlønn">
+              <properties documentation="Informasjon om fast lønnsbeskjeftigelse.&#10;&#10;Inneholder beskjeftigelser av den ansattes lønnsprosent.&#10;&#10;Summen av prosentene på beskjeftigelsene skal være lønnsprosent for en fullt dekket stilling.&#10;&#10;Dersom beskjeftigelsene ikke fyller lønnsprosenten har arbeidsforholdet teknisk undertid. &#10;&#10;I motsatt fall har arbeidsforholdet overtid.&#10;&#10;Kan også inneholde faste tillegg.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_ec7b2850aa40c56108">
+                <body>Informasjon om fast lønnsbeskjeftigelse.
+
+Inneholder beskjeftigelser av den ansattes lønnsprosent.
+
+Summen av prosentene på beskjeftigelsene skal være lønnsprosent for en fullt dekket stilling.
+
+Dersom beskjeftigelsene ikke fyller lønnsprosenten har arbeidsforholdet teknisk undertid. 
+
+I motsatt fall har arbeidsforholdet overtid.
+
+Kan også inneholde faste tillegg.
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_ec7b2850aa40c56108" general="EAID_CLS_081589ccb697846d22" start="EAID_CLS_0205423290c9bc7553" end="EAID_CLS_081589ccb697846d22" />
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_9816301a9d711d5299" name="beskjeftigelse" visibility="public">
+                <type xmi:idref="EAID_CLS_ed7c659a13950c7516" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_a16dddaec35b58443f" value="1" />
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_UPR_a16dddaec35b58443f" value="*" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a16dddaec35b58443f">
+                  <body>Fordeling av den ansattes ansettelsesprosent. Beskriver hvor mye av prosenten som benyttes, og hvordan den skal konteres.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_5803d7cff67e56969f" name="fasttillegg" visibility="public">
+                <type xmi:idref="EAID_CLS_6e6e1c88965814953b" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_6416f7190b9aba91b2" value="0" />
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_UPR_6416f7190b9aba91b2" value="*" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_6416f7190b9aba91b2">
+                  <body>Faste tillegg til utbetaling.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_081589ccb697846d22" name="Lønn" isAbstract="true">
+              <properties documentation="Informasjon om lønn for et arbeidsforhold.&#10;&#10;# Beskrivelse&#10;&#10;Lønn (eller Lønnsmelding) inneholder informasjon om lønn som skal utbetales for et arbeidsforhold.  Lønn er enten Fastlønn eller Variabellønn.&#10;&#10;Lønnsmeldinger blir kontert, attestert og anvist av personalressurser som har fullmakter til dette.&#10;&#10;Lønn utbetales til et arbeidsforhold, for en gitt periode.&#10;" stereotype="abstrakt" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_b0735c32020a3e6432">
+                <body>Informasjon om lønn for et arbeidsforhold.
+
+# Beskrivelse
+
+Lønn (eller Lønnsmelding) inneholder informasjon om lønn som skal utbetales for et arbeidsforhold.  Lønn er enten Fastlønn eller Variabellønn.
+
+Lønnsmeldinger blir kontert, attestert og anvist av personalressurser som har fullmakter til dette.
+
+Lønn utbetales til et arbeidsforhold, for en gitt periode.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_dbe66f3293d8fbbe93" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_dc5c4e0066d0d7e156" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_dc5c4e0066d0d7e156" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_dc5c4e0066d0d7e156">
+                  <body>Kildesystemets unike identifikator for lønnsmeldingen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_9eb7ae03a24d583d62" name="anvist" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#DateTime" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_4e890efaf85bfcb601" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_4e890efaf85bfcb601" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_4e890efaf85bfcb601">
+                  <body>Tidsstempel som angir når lønnsmeldingen ble anvist.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_7222b9b6ecc74761e5" name="attestert" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#DateTime" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_2dec2f989547fcb583" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_2dec2f989547fcb583" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_2dec2f989547fcb583">
+                  <body>Tidsstempel som angir når lønnsmeldingen ble attestert.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_7098a3bf6cb541e8a0" name="kontert" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#DateTime" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_06b50a636bfc2a84de" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_06b50a636bfc2a84de" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_06b50a636bfc2a84de">
+                  <body>Tidsstempel som angir når lønnsmeldingen ble kontert.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_5310a0618d117a6b55" name="periode" visibility="public">
+                <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_5c43f7811841e170c2" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_5c43f7811841e170c2" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_5c43f7811841e170c2">
+                  <body>Periode som lønnsmeldingen er gyldig for.
+
+# Eksempel
+
+- 01.08.2017 - 31.07.2018 (fastlønn for et skoleår)
+- 01.08.2017 - 31.08.2017 (for variabellønn)
+- 01.08.2017 og inntil videre (for øvrige faste ansatte)
+- 13.09.2017 - 15.09.2017 (for en vikar eller en sensor)
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_b7d07fb4c2c2854b66" visibility="public" start="EAID_CLS_081589ccb697846d22" end="EAID_CLS_7f69968205107fe6de" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_60be4c97fcb8f9f05b" visibility="public" start="EAID_CLS_081589ccb697846d22" end="EAID_CLS_7ab71940bab910a223" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_bdc3838a3a675503f4" visibility="public" start="EAID_CLS_081589ccb697846d22" end="EAID_CLS_7f69968205107fe6de" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_56c5d431bbf4c31038" visibility="public" start="EAID_CLS_081589ccb697846d22" end="EAID_CLS_7f69968205107fe6de" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_1c0669c4802d15f432" name="Variabellønn">
+              <properties documentation="Informasjon om variabel lønn.&#10;&#10;# Beskrivelse&#10;&#10;Variabel lønn består av ett eller flere tillegg, hver knyttet til en lønnsart.  Lønnsart bestemmer eventuelle faste satser for tillegget, samt grunnlag for skatt- og pensjonstrekk, og hvordan det rapporteres på A-meldingen.&#10;&#10;Selve beregningen av variabel lønn gjøres av HRM, og formålet er å overføre tilstrekkelig informasjon til at HRM kan foreta beregningen.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_76727e6a48f4c80e64">
+                <body>Informasjon om variabel lønn.
+
+# Beskrivelse
+
+Variabel lønn består av ett eller flere tillegg, hver knyttet til en lønnsart.  Lønnsart bestemmer eventuelle faste satser for tillegget, samt grunnlag for skatt- og pensjonstrekk, og hvordan det rapporteres på A-meldingen.
+
+Selve beregningen av variabel lønn gjøres av HRM, og formålet er å overføre tilstrekkelig informasjon til at HRM kan foreta beregningen.
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_76727e6a48f4c80e64" general="EAID_CLS_081589ccb697846d22" start="EAID_CLS_1c0669c4802d15f432" end="EAID_CLS_081589ccb697846d22" />
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_fec7159479f396d0d0" name="variabelttillegg" visibility="public">
+                <type xmi:idref="EAID_CLS_8e76a06e7820d92484" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_d7b1c4466e3c5d9514" value="1" />
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_UPR_d7b1c4466e3c5d9514" value="*" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d7b1c4466e3c5d9514">
+                  <body>Alle tilleggene beskrevet i variabellønn.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_7f69968205107fe6de" name="Personalressurs">
               <properties documentation="Arbeidstaker eller oppdragstaker i organisasjonen&#10;&#10;# Beskrivelse&#10;&#10;Personalressurs er personer som leverer tjenester i form av å være ansatt. Personalressursen kan også være en person fra vikarbyrå, eller et firma som bekler et arbeidsforhold gjennom en kontrakt/avtale. Registrert i HR-systemet.&#10;&#10;# Eksempler&#10;&#10;* *ordinære* ansatte i faste og midlertidige stillinger&#10;* oppdragstakere: &#10;  * politikere&#10;  * ressurser med timelønn&#10;  * sensorer&#10;  * eksamensvakt&#10;  * hospitant&#10;&#10;Inneholder i utgangspunktet ikke *leverandørrepresenanter* (ekstern vikar, foredragsholdere, konsulenter).&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_22896046b52a7b1fc2">
@@ -381,7 +776,7 @@ Identifiserer en personalressurs unikt. En personalressurs vil kun være register
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_2cac9a85e86615899e" value="0" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_2cac9a85e86615899e" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_2cac9a85e86615899e">
-                  <body>Brukernavn til en person
+                  <body>Brukernavn til en ansatt
 
 # Beskrivelse
 
@@ -625,6 +1020,7 @@ Lønn i 100% stilling. Inneholder ikke definerte tillegg. Angis i øre.
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_e40c19e1fd537e36d1" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_99ad8092a898497ae7" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_616777eead5b9bf1c9" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_11c618a515753fb259" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a7e834bec647b7071d" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_b2fbf668ea3689009c" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_50633b3319d717e74f" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_7f69968205107fe6de" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_4702ec0f35c87e1d37" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_1d24d026ece51b64c5" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_cf2141cc136151dcf3" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_7928ce1d8618e22dce" />
             </packagedElement>
@@ -836,6 +1232,21 @@ Sjekker ved innhenting av data:
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_2d5ec6a475ab5cb07b" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_2d5ec6a475ab5cb07b">
                   <body>Hovednavn for begrepet
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_e5df547913eb8a5c1d" name="passiv" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Boolean" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_268681e81fa7652820" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_268681e81fa7652820" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_268681e81fa7652820">
+                  <body>Angir at koden er passiv, og ikke kan velges.
+
+# Beskrivelse
+
+Passive koder kan henvises til i eksisterende data, men kan ikke velges ved registrering av nye data.
+
+Medmindre attributten finnes og er satt til usann regnes koden som aktiv.
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -1352,6 +1763,8 @@ Sluttdato må være senere eller lik startdato om den er definert.
 
 Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601":https://en.wikipedia.org/wiki/ISO_8601)
 
+Dersom klokkeslett ikke er definert, skal 00:00:00Z benyttes.
+
 YYYY-MM-DDThh:mm:ssZ
 
 # Eksempel
@@ -1375,6 +1788,8 @@ Sluttdato må være senere eller lik startdato om den er definert.
 # Format
 
 Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601":https://en.wikipedia.org/wiki/ISO_8601)
+
+Dersom klokkeslett ikke er definert, skal 00:00:00Z benyttes.
 
 YYYY-MM-DDThh:mm:ssZ
 
@@ -1591,6 +2006,7 @@ Dette kan være identifikator som eksisterer i skoleadministrativt system.
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_637eab90959ab24836" visibility="public" start="EAID_CLS_9564bd355ac64bb4d6" end="EAID_CLS_64e904f2ebf8b9f538" />
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_c5ee21afe2335d549a" name="Elev">
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_67991f31becd86403f" name="Basisgruppe">
@@ -1639,7 +2055,7 @@ Tilsvarende finnes for ansatte: __Personalressurs__.
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_d6ffb09dfaafbd3e66" value="0" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_d6ffb09dfaafbd3e66" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d6ffb09dfaafbd3e66">
-                  <body>Brukernavn til en person
+                  <body>Brukernavn til en elev
 
 # Beskrivelse
 
@@ -1748,21 +2164,21 @@ Dette kan være identifikator som eksisterer i SAS (SATS, Extens).
 </body>
                   </ownedComment>
                 </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_91b26d4b901be7bfcc" name="endeligVurdering" visibility="public">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_335a541fc930ba99fa" name="endeligKarakter" visibility="public">
                 <type xmi:idref="EAID_CLS_9c406643c5c3706d8d" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_0ddf5d550b01866ca0" value="0" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_0ddf5d550b01866ca0" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_0ddf5d550b01866ca0">
-                  <body>Den endelige vurderingen som eleven har fått som resultat av deltakelse i en gruppe
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_a92f1cfa3451f13085" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_a92f1cfa3451f13085" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a92f1cfa3451f13085">
+                  <body>Det endelige karakteret som eleven har fått som resultat av deltakelse i en gruppe
 </body>
                   </ownedComment>
                 </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_0269d06b713cbd7d6e" name="fortløpendeVurdering" visibility="public">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_d1383c94ac3d0204fc" name="fortløpendeKarater" visibility="public">
                 <type xmi:idref="EAID_CLS_9c406643c5c3706d8d" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_abe38941732b44c330" value="0" />
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_UPR_abe38941732b44c330" value="*" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_abe38941732b44c330">
-                  <body>Fortløpende vurdering som eleven har fått som resultat av deltakelse i en gruppe
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_6142f74cd083a5721c" value="0" />
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_UPR_6142f74cd083a5721c" value="*" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_6142f74cd083a5721c">
+                  <body>Fortløpende karakterer som eleven har fått som resultat av deltakelse i en gruppe
 
 # Eksempler
 
@@ -1780,8 +2196,8 @@ Dette kan være identifikator som eksisterer i SAS (SATS, Extens).
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_0acdf929b0e394494b" visibility="public" start="EAID_CLS_923314dcb9bf6b4540" end="EAID_CLS_9564bd355ac64bb4d6" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_2e30deb33b9d9cf34a" visibility="public" start="EAID_CLS_923314dcb9bf6b4540" end="EAID_CLS_a62447c9dd60a973b1" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_993dfa346dbc36a8ad" visibility="public" start="EAID_CLS_923314dcb9bf6b4540" end="EAID_CLS_9564bd355ac64bb4d6" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_917b8b67ec1ceae3be" name="Undervisningsforhold">
               <properties documentation="Undervisningsforhold til alle med en pedagogisk funksjon&#10;&#10;# Beskrivelse &#10;&#10;Alle med en pedagogisk funksjon på skolen kan ha et undervisningsforhold.&#10;&#10;# Eksempel&#10;&#10;Dette kan for eksempel være lærerens undervisningsforhold til skolen. Underviser en lærer på to skoler, vil det være naturlig å ha to undervisningsforhold.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_26620df5d6b84ef22b">
@@ -2132,6 +2548,7 @@ Programområdekoder som slutter på  `----` angir at det er standardversjon av pro
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_411d06a84574bb96be" general="EAID_CLS_a62447c9dd60a973b1" start="EAID_CLS_c317e0b3ba883a1162" end="EAID_CLS_a62447c9dd60a973b1" />
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_de219d5d86eb02bd03" visibility="public" start="EAID_CLS_c317e0b3ba883a1162" end="EAID_CLS_b2a41a5ceca288c6f4" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_0dc51685891595212a" visibility="public" start="EAID_CLS_c317e0b3ba883a1162" end="EAID_CLS_e755c56f229ed4bfb5" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_64e904f2ebf8b9f538" name="Skole">
               <properties documentation="Organisasjonsenhet som gjennomfører utdanning.&#10;&#10;# Beskrivelse&#10;&#10;Typisk er dette en videregående skole, men det kan også være eksamenskontor eller andre skolerelevante enheter.&#10;&#10;Inneholder utdanningsspesifikk informasjon om en organisasjonsenhet.&#10;&#10;# Eksempel&#10;&#10;- Videregående skole&#10;- SMI-skole&#10;- Fagskole&#10;- IB-skole&#10;- Eksamenskontor&#10;- Opplæringskontor&#10;- Ressurssenter&#10;- Fengselsundervisning&#10;" stereotype="hovedklasse" />
@@ -2232,8 +2649,7 @@ Navn på skole eller skoleeier
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a8f53b31b12e2ff29a" visibility="public" start="EAID_CLS_64e904f2ebf8b9f538" end="EAID_CLS_e92c2079bc89c6d11a" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_2c30516b91cd777ef8" visibility="public" start="EAID_CLS_64e904f2ebf8b9f538" end="EAID_CLS_11c618a515753fb259" />
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_8b5ba2ad714a8954cd" visibility="public" start="EAID_CLS_64e904f2ebf8b9f538" end="EAID_CLS_8ec705d192e01ca4aa" />
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_b4ec87ab52e1d91ab4" visibility="public" start="EAID_CLS_64e904f2ebf8b9f538" end="EAID_CLS_e755c56f229ed4bfb5" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_5677e42c429841a148" visibility="public" start="EAID_CLS_64e904f2ebf8b9f538" end="EAID_CLS_8ec705d192e01ca4aa" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_8937900734d184557e" visibility="public" start="EAID_CLS_64e904f2ebf8b9f538" end="EAID_CLS_9be83411188065746c" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_e755c56f229ed4bfb5" name="Utdanningsprogram">
               <properties documentation="Utdanningsløpene i videregående skole som fører fram til studie- og/eller yrkeskompetanse/fagbrev&#10;&#10;Synonym: Utdanningsgruppe&#10;&#10;# Eksempler&#10;&#10;* Bygg- og anleggsteknikk&#10;* Design og håndverk&#10;* Elektrofag&#10;* Helse- og oppvekstfag&#10;* Idrettsfag&#10;* Kunst, design og arkitektur&#10;* Medier og kommunikasjon&#10;* Musikk, dans og drama&#10;* Naturbruk&#10;* Restaurant- og matfag&#10;* Service og samferdsel&#10;* Studiespesialisering&#10;* Teknikk og ind. produksjon&#10;&#10;# Referanser&#10;&#10;*  Fag- og timefordeling og tilbudsstruktur for Kunnskapsløftet Udir-1-2017 : https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Innhold-i-opplaringen/udir-01-2017/&#10;* UDir Registreringshåndbok: http://regbok.udir.no/35004/3344/35042-1018606.html&#10;* Grepwiki: http://grepwiki.udir.no/index.php?title=Utdanningsprogram&#10;" stereotype="hovedklasse" />
@@ -2267,6 +2683,7 @@ Synonym: Utdanningsgruppe
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_8f81b9051cb247fba3" general="EAID_CLS_a62447c9dd60a973b1" start="EAID_CLS_e755c56f229ed4bfb5" end="EAID_CLS_a62447c9dd60a973b1" />
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_5e39f07a49161d3faf" visibility="public" start="EAID_CLS_e755c56f229ed4bfb5" end="EAID_CLS_64e904f2ebf8b9f538" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_b2a41a5ceca288c6f4" name="Årstrinn">
               <properties documentation="Hvert år i grunnopplæringen (grunnskole og videregående skole) kalles et årstrinn.&#10;&#10;# Eksempler&#10;&#10;* Vg1&#10;* Vg2&#10;* Vg3&#10;* Vg4&#10;&#10;# Synonym&#10;&#10;* Nivå (Rogaland)&#10;* Klassetrinn&#10;* Trinn&#10;&#10;# Referanser&#10;&#10;* http://grepwiki.udir.no/index.php?title=Årstrinn&#10;* http://psi.udir.no/ontologi/kl06/aarstrinn&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7aca24a699321f2d2f">
@@ -2293,7 +2710,6 @@ Synonym: Utdanningsgruppe
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_7aca24a699321f2d2f" general="EAID_CLS_a62447c9dd60a973b1" start="EAID_CLS_b2a41a5ceca288c6f4" end="EAID_CLS_a62447c9dd60a973b1" />
               </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_2e929067e5016cb40d" visibility="public" start="EAID_CLS_b2a41a5ceca288c6f4" end="EAID_CLS_c317e0b3ba883a1162" />
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_005aa392465e3500f2" name="Vurdering">
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_befc698f1817a298c1" name="Eksamensgruppe">
@@ -3297,10 +3713,10 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
               </ownedComment>
             <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_79cda92a76cd0d0f65" name="kode" visibility="public">
               <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_1bdfb8476f845d161d" value="1" />
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_1bdfb8476f845d161d" value="0" />
               <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_1bdfb8476f845d161d" value="1" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_1bdfb8476f845d161d">
-                <body>Finnes ikke i Vigo. Hentes fra Grep.
+                <body>Finnes ikke i Vigo. Hentes fra Grep hvis den finnes.
 </body>
                 </ownedComment>
               </ownedAttribute>
@@ -3508,10 +3924,10 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
               </ownedComment>
             <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_52f2ef351e17145479" name="kode" visibility="public">
               <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_9e6ab1aaec63de6fc9" value="1" />
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_9e6ab1aaec63de6fc9" value="0" />
               <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_9e6ab1aaec63de6fc9" value="1" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_9e6ab1aaec63de6fc9">
-                <body>Finnes ikke i Vigo. Hentes fra Grep.
+                <body>Finnes ikke i Vigo. Hentes fra Grep hvis den finnes.
 </body>
                 </ownedComment>
               </ownedAttribute>
@@ -3782,7 +4198,7 @@ Vigo: grunnleggende_ferdigheter_fri
               </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_a52fab7071ada94542" name="kompetansemålInnledning" visibility="public">
               <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_c2d4de8f6c5f4f0c9a" value="1" />
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_c2d4de8f6c5f4f0c9a" value="0" />
               <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_c2d4de8f6c5f4f0c9a" value="1" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_c2d4de8f6c5f4f0c9a">
                 <body>Vigo: kompetansemaal_innledning
@@ -3862,10 +4278,10 @@ Tabell: MERKELAPP
               </ownedComment>
             <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_2006d6eb62f0f55c35" name="kode" visibility="public">
               <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_a601c307f57fd754ed" value="1" />
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_a601c307f57fd754ed" value="0" />
               <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_a601c307f57fd754ed" value="1" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a601c307f57fd754ed">
-                <body>Finnes ikke i Vigo, hentes fra Grep.
+                <body>Finnes ikke i Vigo, hentes fra Grep hvis den finnes.
 </body>
                 </ownedComment>
               </ownedAttribute>
@@ -4366,11 +4782,6 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
               <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_8ca6491253ac50975c" value="1" />
               <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_8ca6491253ac50975c" value="1" />
-              </ownedAttribute>
-            <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_31062cf222092e34a8" name="PSI" visibility="public">
-              <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_6bc8f636cc2b90ae49" value="1" />
-              <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_6bc8f636cc2b90ae49" value="1" />
               </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_ab0ab7c6f9503ecefe" name="gyldigFoM" visibility="public">
               <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
@@ -6236,9 +6647,9 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <attributes>
           <attribute xmi:idref="EAID_PRP_79cda92a76cd0d0f65" idref="EAID_PRP_79cda92a76cd0d0f65" name="kode">
             <properties type="Identifikator" />
-            <bounds lower="1" upper="1" />
+            <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Finnes ikke i Vigo. Hentes fra Grep.&#10;" />
+            <documentation value="Finnes ikke i Vigo. Hentes fra Grep hvis den finnes.&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_9a9e9a165631d0118c" idref="EAID_PRP_9a9e9a165631d0118c" name="PSI">
@@ -6395,9 +6806,9 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <attributes>
           <attribute xmi:idref="EAID_PRP_52f2ef351e17145479" idref="EAID_PRP_52f2ef351e17145479" name="kode">
             <properties type="Identifikator" />
-            <bounds lower="1" upper="1" />
+            <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Finnes ikke i Vigo. Hentes fra Grep.&#10;" />
+            <documentation value="Finnes ikke i Vigo. Hentes fra Grep hvis den finnes.&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_8750db76756d1ff948" idref="EAID_PRP_8750db76756d1ff948" name="PSI">
@@ -6606,7 +7017,7 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
             </attribute>
           <attribute xmi:idref="EAID_PRP_a52fab7071ada94542" idref="EAID_PRP_a52fab7071ada94542" name="kompetansemålInnledning">
             <properties type="string" />
-            <bounds lower="1" upper="1" />
+            <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
             <documentation value="Vigo: kompetansemaal_innledning&#10;" />
             <tags />
@@ -6667,9 +7078,9 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <attributes>
           <attribute xmi:idref="EAID_PRP_2006d6eb62f0f55c35" idref="EAID_PRP_2006d6eb62f0f55c35" name="kode">
             <properties type="Identifikator" />
-            <bounds lower="1" upper="1" />
+            <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Finnes ikke i Vigo, hentes fra Grep.&#10;" />
+            <documentation value="Finnes ikke i Vigo, hentes fra Grep hvis den finnes.&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_889f444f550bb867ca" idref="EAID_PRP_889f444f550bb867ca" name="PSI">
@@ -7071,12 +7482,6 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties isAbstract="false" sType="Class" scope="public" documentation="Kilde: https://www.vigo.no/vigokv/kurskat.action&#10;&#10;Tabell: PROGRAMOMRAADEKATEGORI&#10;&#10;Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaering/dokumentbase/grensesnitt-mellom-vigo-sas-og-grep&#10;" stereotype="hovedklasse" />
         <attributes>
           <attribute xmi:idref="EAID_PRP_2738d6239070181a59" idref="EAID_PRP_2738d6239070181a59" name="kode">
-            <properties type="Identifikator" />
-            <bounds lower="1" upper="1" />
-            <stereotype stereotype="" />
-            <tags />
-            </attribute>
-          <attribute xmi:idref="EAID_PRP_31062cf222092e34a8" idref="EAID_PRP_31062cf222092e34a8" name="PSI">
             <properties type="Identifikator" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
@@ -7922,6 +8327,52 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
             </attribute>
           </attributes>
         </element>
+      <element xmi:idref="EAID_PKG_231fbd2cc7d6403ec0" idref="EAID_PKG_231fbd2cc7d6403ec0" xmi:type="uml:Package" type="Package" name="Fullmakt" scope="public">
+        <model package2="EAID_PKG_231fbd2cc7d6403ec0" ea_eleType="package" package="EAID_PKG_87452f10731000f560" />
+        <tags />
+        </element>
+      <element xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b" xmi:type="uml:Class" type="Class" name="Fullmakt" scope="public">
+        <model package="EAID_PKG_231fbd2cc7d6403ec0" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Fullmakt til å gjøre handlinger i forhold til en gitt Rolle.&#10;&#10;# Beskrivelse&#10;&#10;Fullmakter innehas av fysiske eller juridiske personer, og er knyttet til Ansvar i kontoplanen. Fullmakter er delegert til personer, disse benevnes som fullmektige.&#10;&#10;Fullmektige kan ha stedfortreder. Stedfortrederen kan utøve den samme fullmakten som den fullmektige.&#10;&#10;Fullmakter beskrives i delegasjonsreglementet for organisasjonen. For fylkeskommuner er dette et reglement besluttet av Fylkestinget og videre delegert av Fylkesrådmannen.&#10;&#10;# Eksempler&#10;&#10;Rektor ved Eidsvoll VGS har anvisningsfullmakt for ansvar 241.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_0754b9d316506ffdf4" idref="EAID_PRP_0754b9d316506ffdf4" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Kildesystemets unike identifikator for fullmakten.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_10ca213840f606c81b" idref="EAID_PRP_10ca213840f606c81b" name="gyldighetsperiode">
+            <properties type="Periode" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Periode som fullmakten er gyldig for.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_5f1fef9b7872cf088d" idref="EAID_CLS_5f1fef9b7872cf088d" xmi:type="uml:Class" type="Class" name="Rolle" scope="public">
+        <model package="EAID_PKG_231fbd2cc7d6403ec0" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Rettighet eller type fullmakt.&#10;&#10;De vanligste rollene er:&#10;&#10;- Attestant&#10;- Anviser&#10;- Bestiller&#10;- Kontering&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_3f6757da14f487095c" idref="EAID_PRP_3f6757da14f487095c" name="navn">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Navn på rolle. Unik identifikator.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_11f8aa909c87577e63" idref="EAID_PRP_11f8aa909c87577e63" name="beskrivelse">
+            <properties type="string" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Utfyllende beskrivelse av hva rollen gir fullmakt til.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
       <element xmi:idref="EAID_PKG_bffb9eb00a2f968a52" idref="EAID_PKG_bffb9eb00a2f968a52" xmi:type="uml:Package" type="Package" name="Kodeverk" scope="public">
         <model package2="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="package" package="EAID_PKG_87452f10731000f560" />
         <tags />
@@ -7947,22 +8398,14 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
       <element xmi:idref="EAID_CLS_b2fbf668ea3689009c" idref="EAID_CLS_b2fbf668ea3689009c" xmi:type="uml:Class" type="Class" name="Funksjon" scope="public">
         <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Del av kontostrenges som beskriver hva som produseres&#10;&#10;# Beskrivelse&#10;&#10;Funksjon viser fylkeskommunens aktivitet og tjenesteproduksjon.&#10;&#10;Alternativ navn: `Tjeneste`&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Del av kontostrengen som beskriver hva som produseres&#10;&#10;# Beskrivelse&#10;&#10;Funksjon viser fylkeskommunens aktivitet og tjenesteproduksjon.&#10;&#10;Alternativ navn: `Tjeneste`&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
-      <element xmi:idref="EAID_CLS_98ecf520623f10e247" idref="EAID_CLS_98ecf520623f10e247" xmi:type="uml:Class" type="Class" name="Kodeverk" scope="public">
+      <element xmi:idref="EAID_CLS_b2d51228fff1754e2b" idref="EAID_CLS_b2d51228fff1754e2b" xmi:type="uml:Class" type="Class" name="Kontodimensjon" scope="public">
         <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
         <tags />
-        <properties isAbstract="true" sType="Class" scope="public" stereotype="abstrakt" />
-        <attributes>
-          <attribute xmi:idref="EAID_PRP_f50f9b9d326a89a938" idref="EAID_PRP_f50f9b9d326a89a938" name="passiv">
-            <properties type="boolean" />
-            <bounds lower="0" upper="1" />
-            <stereotype stereotype="" />
-            <documentation value="Angir at koden er passiv, og ikke kan velges.&#10;&#10;# Beskrivelse&#10;&#10;Passive koder kan henvises til i eksisterende data, men kan ikke velges ved registrering av nye data.&#10;&#10;Medmindre attributten finnes og er satt til usann regnes koden som aktiv.&#10;" />
-            <tags />
-            </attribute>
-          </attributes>
+        <properties isAbstract="true" sType="Class" scope="public" documentation="Abstrakt fellesbegrep som beskriver dimensjon i kontoplan.&#10;&#10;# Beskrivelse&#10;&#10;Fellesbenevnelse for dimensjoner i en kontoplan.&#10;" stereotype="abstrakt" />
+        <attributes />
         </element>
       <element xmi:idref="EAID_CLS_f1d4a9bd27af04c15b" idref="EAID_CLS_f1d4a9bd27af04c15b" xmi:type="uml:Class" type="Class" name="Lønnsart" scope="public">
         <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
@@ -7979,7 +8422,7 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
       <element xmi:idref="EAID_CLS_0f00acb3fd0e96ed60" idref="EAID_CLS_0f00acb3fd0e96ed60" xmi:type="uml:Class" type="Class" name="Prosjekt" scope="public">
         <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Del av kontostrengen som peker på løpende prosjekter.&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Del av kontostrengen som peker på løpende prosjekter&#10;&#10;.&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_1d24d026ece51b64c5" idref="EAID_CLS_1d24d026ece51b64c5" xmi:type="uml:Class" type="Class" name="Stillingskode" scope="public">
@@ -7993,6 +8436,114 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Timer per uke i 100 % stilling&#10;&#10;# Beskrivelse&#10;&#10;# Eksempel&#10;&#10;## Eksempel fra Agresso - Arbeidsplan:  &#10;&#10;Kode   |     Beskrivelse&#10;---|---&#10;33,6   |     33,6 timers uke&#10;34,0    |    34,0 timers uke&#10;34,5     |   34,5 timers uke&#10;35,0     |   35,0 timers uke&#10;35,5     |   35,5 timers uke&#10;36,0     |   36,0 timers uke&#10;37,5     |   37,5 timers uke&#10;...    | ...&#10;" stereotype="hovedklasse" />
         <attributes />
+        </element>
+      <element xmi:idref="EAID_PKG_2e3c4bbc1f1692c7e1" idref="EAID_PKG_2e3c4bbc1f1692c7e1" xmi:type="uml:Package" type="Package" name="Kompleksedatatyper" scope="public">
+        <model package2="EAID_PKG_2e3c4bbc1f1692c7e1" ea_eleType="package" package="EAID_PKG_87452f10731000f560" />
+        <tags />
+        </element>
+      <element xmi:idref="EAID_CLS_ed7c659a13950c7516" idref="EAID_CLS_ed7c659a13950c7516" xmi:type="uml:Class" type="Class" name="Beskjeftigelse" scope="public">
+        <model package="EAID_PKG_2e3c4bbc1f1692c7e1" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Del av Fastlønn som beskriver en gitt lønnsprosent og hvordan den skal konteres.&#10;" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_611cd6f4947786b832" idref="EAID_PRP_611cd6f4947786b832" name="beskrivelse">
+            <properties type="string" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Beskrivelse av beskjeftigelse.&#10;&#10;# Beskrivelse&#10;&#10;Forklarende beskrivelse av beskjeftigelsen, til bruk i behandling av lønnsmeldingen, og for anføring på lønnsslipp.&#10;&#10;# Eksempel&#10;&#10;Fag- og gruppekode en lærer underviser i.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_1ed988323ac41d14fb" idref="EAID_PRP_1ed988323ac41d14fb" name="kontostreng">
+            <properties type="Kontostreng" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Kontering av beskjeftigelsen.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_e1232a2ec281a4cc9f" idref="EAID_PRP_e1232a2ec281a4cc9f" name="prosent">
+            <properties type="long" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Andel av lønnsprosent som beslaglegges av denne beskjeftigelsen, i hundredels prosent.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_6e6e1c88965814953b" idref="EAID_CLS_6e6e1c88965814953b" xmi:type="uml:Class" type="Class" name="Fasttillegg" scope="public">
+        <model package="EAID_PKG_2e3c4bbc1f1692c7e1" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Fast tilleggsbeløp.&#10;" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_051cbb1f611adb1212" idref="EAID_PRP_051cbb1f611adb1212" name="beløp">
+            <properties type="long" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Beløp, i øre.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_604ec40706164f111d" idref="EAID_PRP_604ec40706164f111d" name="beskrivelse">
+            <properties type="string" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Beskrivelse av tillegget, til føring på lønnsslipp.&#10;&#10;# Beskrivelse&#10;&#10;Forklarende beskrivelse av tillegget, til bruk i behandling av lønnsmeldingen, rapportering og for anføring på lønnsslipp.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_6ce07cb074de3ed986" idref="EAID_PRP_6ce07cb074de3ed986" name="kontostreng">
+            <properties type="Kontostreng" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Kontering av tillegget.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_f287e1ac31a6f4340e" idref="EAID_CLS_f287e1ac31a6f4340e" xmi:type="uml:Class" type="Class" name="Kontostreng" scope="public">
+        <model package="EAID_PKG_2e3c4bbc1f1692c7e1" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Sammensetning av kontodimensjoner for bokføring&#10;&#10;# Beskrivelse&#10;&#10;Henvisninger til koder i alle kontodimensjoner for kontering av en kostnad eller inntekt.&#10;&#10;# Eksempel&#10;&#10;For kontering av lønn kreves Art, Ansvar, Funksjon og eventuelt Prosjekt.&#10;&#10;Det finnes flere kontodimensjoner enn disse fire. Modellen vil utvides senere med disse dimensjonene.&#10;" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_8e76a06e7820d92484" idref="EAID_CLS_8e76a06e7820d92484" xmi:type="uml:Class" type="Class" name="Variabelttillegg" scope="public">
+        <model package="EAID_PKG_2e3c4bbc1f1692c7e1" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Del av variabel lønnsmelding som beskriver grunnlaget for en lønnsberegning.&#10;&#10;# Beskrivelse&#10;&#10;Faktisk lønn beregnes i HRM-systemet. I lønnsmeldingen skal grunnlaget for beregningen angis.&#10;&#10;Må brukes sammen med lønnsart for at HRM-systemet skal foreta korrekt beregning og rapportere riktig på A-meldingen.&#10;&#10;# Eksempler:&#10;&#10;1. Vikartime for undervisningspersonell: &#10;  - antall: antall timer * 1400 / årsramme&#10;2. Timelønn&#10;  - antall: antall timer&#10;3. Kjøregodtgjørelse&#10;  - antall: antall kilometer&#10;4. Kontantytelse for et møte&#10;  - antall: beløp&#10;" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_da13b419d972fc0b34" idref="EAID_PRP_da13b419d972fc0b34" name="antall">
+            <properties type="long" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Mengde som beskrives av tillegget, i hundredeler.&#10;&#10;# Beskrivelse&#10;&#10;Enhet er spesifisert av lønnsart.&#10;&#10;# Eksempel&#10;&#10;- Antall hundredels timer.&#10;- Antall dekameter (km/100).&#10;- Antall øre&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_7f174298834157fc6a" idref="EAID_PRP_7f174298834157fc6a" name="beløp">
+            <properties type="long" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Beløp i øre som skal utbetales. Beregnes av lønnssystemet basert på antall og lønnsart.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_7b9e971ee9e5d35ff1" idref="EAID_PRP_7b9e971ee9e5d35ff1" name="beskrivelse">
+            <properties type="string" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Beskrivelse av tillegget, til føring på lønnsslipp.&#10;&#10;# Beskrivelse&#10;&#10;Forklarende beskrivelse av tillegget, til bruk i behandling av lønnsmeldingen, rapportering og for anføring på lønnsslipp.&#10;&#10;# Eksempel&#10;&#10;- Fag- og gruppekode og antall timer en lærer vikarierte. &#10;- Reisestrekning for kilometergodtgjørelse&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_b0c13718ea38100fd8" idref="EAID_PRP_b0c13718ea38100fd8" name="kontostreng">
+            <properties type="Kontostreng" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Kontering av tillegget.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_e559fb7be82fcab304" idref="EAID_PRP_e559fb7be82fcab304" name="periode">
+            <properties type="Periode" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Periode når grunnlaget ble opptjent.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
         </element>
       <element xmi:idref="EAID_PKG_0dfb51061c4b93cb2e" idref="EAID_PKG_0dfb51061c4b93cb2e" xmi:type="uml:Package" type="Package" name="Organisasjon" scope="public">
         <model package2="EAID_PKG_0dfb51061c4b93cb2e" ea_eleType="package" package="EAID_PKG_87452f10731000f560" />
@@ -8044,6 +8595,83 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <model package2="EAID_PKG_b8abbe9c3c43e8a841" ea_eleType="package" package="EAID_PKG_87452f10731000f560" />
         <tags />
         </element>
+      <element xmi:idref="EAID_CLS_0205423290c9bc7553" idref="EAID_CLS_0205423290c9bc7553" xmi:type="uml:Class" type="Class" name="Fastlønn" scope="public">
+        <model package="EAID_PKG_b8abbe9c3c43e8a841" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Informasjon om fast lønnsbeskjeftigelse.&#10;&#10;Inneholder beskjeftigelser av den ansattes lønnsprosent.&#10;&#10;Summen av prosentene på beskjeftigelsene skal være lønnsprosent for en fullt dekket stilling.&#10;&#10;Dersom beskjeftigelsene ikke fyller lønnsprosenten har arbeidsforholdet teknisk undertid. &#10;&#10;I motsatt fall har arbeidsforholdet overtid.&#10;&#10;Kan også inneholde faste tillegg.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_9816301a9d711d5299" idref="EAID_PRP_9816301a9d711d5299" name="beskjeftigelse">
+            <properties type="Beskjeftigelse" />
+            <bounds lower="1" upper="*" />
+            <stereotype stereotype="writable" />
+            <documentation value="Fordeling av den ansattes ansettelsesprosent. Beskriver hvor mye av prosenten som benyttes, og hvordan den skal konteres.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_5803d7cff67e56969f" idref="EAID_PRP_5803d7cff67e56969f" name="fasttillegg">
+            <properties type="Fasttillegg" />
+            <bounds lower="0" upper="*" />
+            <stereotype stereotype="writable" />
+            <documentation value="Faste tillegg til utbetaling.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_081589ccb697846d22" idref="EAID_CLS_081589ccb697846d22" xmi:type="uml:Class" type="Class" name="Lønn" scope="public">
+        <model package="EAID_PKG_b8abbe9c3c43e8a841" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="true" sType="Class" scope="public" documentation="Informasjon om lønn for et arbeidsforhold.&#10;&#10;# Beskrivelse&#10;&#10;Lønn (eller Lønnsmelding) inneholder informasjon om lønn som skal utbetales for et arbeidsforhold.  Lønn er enten Fastlønn eller Variabellønn.&#10;&#10;Lønnsmeldinger blir kontert, attestert og anvist av personalressurser som har fullmakter til dette.&#10;&#10;Lønn utbetales til et arbeidsforhold, for en gitt periode.&#10;" stereotype="abstrakt" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_dbe66f3293d8fbbe93" idref="EAID_PRP_dbe66f3293d8fbbe93" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Kildesystemets unike identifikator for lønnsmeldingen.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_9eb7ae03a24d583d62" idref="EAID_PRP_9eb7ae03a24d583d62" name="anvist">
+            <properties type="datetime" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Tidsstempel som angir når lønnsmeldingen ble anvist.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_7222b9b6ecc74761e5" idref="EAID_PRP_7222b9b6ecc74761e5" name="attestert">
+            <properties type="datetime" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Tidsstempel som angir når lønnsmeldingen ble attestert.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_7098a3bf6cb541e8a0" idref="EAID_PRP_7098a3bf6cb541e8a0" name="kontert">
+            <properties type="datetime" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Tidsstempel som angir når lønnsmeldingen ble kontert.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_5310a0618d117a6b55" idref="EAID_PRP_5310a0618d117a6b55" name="periode">
+            <properties type="Periode" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Periode som lønnsmeldingen er gyldig for.&#10;&#10;# Eksempel&#10;&#10;- 01.08.2017 - 31.07.2018 (fastlønn for et skoleår)&#10;- 01.08.2017 - 31.08.2017 (for variabellønn)&#10;- 01.08.2017 og inntil videre (for øvrige faste ansatte)&#10;- 13.09.2017 - 15.09.2017 (for en vikar eller en sensor)&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_1c0669c4802d15f432" idref="EAID_CLS_1c0669c4802d15f432" xmi:type="uml:Class" type="Class" name="Variabellønn" scope="public">
+        <model package="EAID_PKG_b8abbe9c3c43e8a841" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Informasjon om variabel lønn.&#10;&#10;# Beskrivelse&#10;&#10;Variabel lønn består av ett eller flere tillegg, hver knyttet til en lønnsart.  Lønnsart bestemmer eventuelle faste satser for tillegget, samt grunnlag for skatt- og pensjonstrekk, og hvordan det rapporteres på A-meldingen.&#10;&#10;Selve beregningen av variabel lønn gjøres av HRM, og formålet er å overføre tilstrekkelig informasjon til at HRM kan foreta beregningen.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_fec7159479f396d0d0" idref="EAID_PRP_fec7159479f396d0d0" name="variabelttillegg">
+            <properties type="Variabelttillegg" />
+            <bounds lower="1" upper="*" />
+            <stereotype stereotype="writable" />
+            <documentation value="Alle tilleggene beskrevet i variabellønn.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
       <element xmi:idref="EAID_CLS_7f69968205107fe6de" idref="EAID_CLS_7f69968205107fe6de" xmi:type="uml:Class" type="Class" name="Personalressurs" scope="public">
         <model package="EAID_PKG_b8abbe9c3c43e8a841" ea_eleType="element" />
         <tags />
@@ -8060,7 +8688,7 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
             <properties type="Identifikator" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Brukernavn til en person&#10;&#10;# Beskrivelse&#10;&#10;Skal inneholde brukernavn for pålogging, som finnes i katalogtjenesten (feks Active Directory). Brukes som en identifikator som består, når fødselsnummer og/eller andre identifikatorer endrer seg.&#10;&#10;# Format&#10;&#10;Brukernavn i det format en personalressurs trenger for å logge seg på systemer i organisasjonen.&#10;&#10;# NB!&#10;&#10;Fremtidig funksjon for dette feltet er under revisjon.&#10;" />
+            <documentation value="Brukernavn til en ansatt&#10;&#10;# Beskrivelse&#10;&#10;Skal inneholde brukernavn for pålogging, som finnes i katalogtjenesten (feks Active Directory). Brukes som en identifikator som består, når fødselsnummer og/eller andre identifikatorer endrer seg.&#10;&#10;# Format&#10;&#10;Brukernavn i det format en personalressurs trenger for å logge seg på systemer i organisasjonen.&#10;&#10;# NB!&#10;&#10;Fremtidig funksjon for dette feltet er under revisjon.&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_fb14b4b1f99e8c8bd6" idref="EAID_PRP_fb14b4b1f99e8c8bd6" name="systemId">
@@ -8212,6 +8840,13 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
             <documentation value="Hovednavn for begrepet&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_e5df547913eb8a5c1d" idref="EAID_PRP_e5df547913eb8a5c1d" name="passiv">
+            <properties type="boolean" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Angir at koden er passiv, og ikke kan velges.&#10;&#10;# Beskrivelse&#10;&#10;Passive koder kan henvises til i eksisterende data, men kan ikke velges ved registrering av nye data.&#10;&#10;Medmindre attributten finnes og er satt til usann regnes koden som aktiv.&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -8371,14 +9006,14 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Tildato&#10;&#10;# Beskrivelse&#10;&#10;Tildato&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Format&#10;&#10;Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601&quot;:https://en.wikipedia.org/wiki/ISO_8601)&#10;&#10;YYYY-MM-DDThh:mm:ssZ&#10;&#10;# Eksempel&#10;&#10;01.01.1999T00:00:00Z&#10;" />
+            <documentation value="Tildato&#10;&#10;# Beskrivelse&#10;&#10;Tildato&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Format&#10;&#10;Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601&quot;:https://en.wikipedia.org/wiki/ISO_8601)&#10;&#10;Dersom klokkeslett ikke er definert, skal 00:00:00Z benyttes.&#10;&#10;YYYY-MM-DDThh:mm:ssZ&#10;&#10;# Eksempel&#10;&#10;01.01.1999T00:00:00Z&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_193ae2b0dd4cb84fac" idref="EAID_PRP_193ae2b0dd4cb84fac" name="start">
             <properties type="datetime" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Fradato&#10;&#10;# Beskrivelse&#10;&#10;Fradato&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Format&#10;&#10;Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601&quot;:https://en.wikipedia.org/wiki/ISO_8601)&#10;&#10;YYYY-MM-DDThh:mm:ssZ&#10;&#10;# Eksempel&#10;&#10;01.01.1999T00:00:00Z&#10;" />
+            <documentation value="Fradato&#10;&#10;# Beskrivelse&#10;&#10;Fradato&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Format&#10;&#10;Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601&quot;:https://en.wikipedia.org/wiki/ISO_8601)&#10;&#10;Dersom klokkeslett ikke er definert, skal 00:00:00Z benyttes.&#10;&#10;YYYY-MM-DDThh:mm:ssZ&#10;&#10;# Eksempel&#10;&#10;01.01.1999T00:00:00Z&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -8490,7 +9125,7 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
             <properties type="Identifikator" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Brukernavn til en person&#10;&#10;# Beskrivelse&#10;&#10;Skal inneholde brukernavn for pålogging, som finnes i katalogtjenesten (feks Active Directory). Brukes som en identifikator som består, når fødselsnummer og/eller andre identifikatorer endrer seg.&#10;&#10;# Format&#10;&#10;Brukernavn i det format en elev trenger for å logge seg på systemer i organisasjonen.&#10;&#10;# NB!&#10;&#10;Fremtidig funksjon for dette feltet er under revisjon.&#10;" />
+            <documentation value="Brukernavn til en elev&#10;&#10;# Beskrivelse&#10;&#10;Skal inneholde brukernavn for pålogging, som finnes i katalogtjenesten (feks Active Directory). Brukes som en identifikator som består, når fødselsnummer og/eller andre identifikatorer endrer seg.&#10;&#10;# Format&#10;&#10;Brukernavn i det format en elev trenger for å logge seg på systemer i organisasjonen.&#10;&#10;# NB!&#10;&#10;Fremtidig funksjon for dette feltet er under revisjon.&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_9b95d1caf64a899dc4" idref="EAID_PRP_9b95d1caf64a899dc4" name="elevnummer">
@@ -8540,18 +9175,18 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
             <documentation value="Systemidentifikator i fagsystem&#10;&#10;# Beskrivelse &#10;&#10;Dette kan være identifikator som eksisterer i SAS (SATS, Extens).&#10;" />
             <tags />
             </attribute>
-          <attribute xmi:idref="EAID_PRP_91b26d4b901be7bfcc" idref="EAID_PRP_91b26d4b901be7bfcc" name="endeligVurdering">
+          <attribute xmi:idref="EAID_PRP_335a541fc930ba99fa" idref="EAID_PRP_335a541fc930ba99fa" name="endeligKarakter">
             <properties type="Vurdering" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Den endelige vurderingen som eleven har fått som resultat av deltakelse i en gruppe&#10;" />
+            <documentation value="Det endelige karakteret som eleven har fått som resultat av deltakelse i en gruppe&#10;" />
             <tags />
             </attribute>
-          <attribute xmi:idref="EAID_PRP_0269d06b713cbd7d6e" idref="EAID_PRP_0269d06b713cbd7d6e" name="fortløpendeVurdering">
+          <attribute xmi:idref="EAID_PRP_d1383c94ac3d0204fc" idref="EAID_PRP_d1383c94ac3d0204fc" name="fortløpendeKarater">
             <properties type="Vurdering" />
             <bounds lower="0" upper="*" />
             <stereotype stereotype="" />
-            <documentation value="Fortløpende vurdering som eleven har fått som resultat av deltakelse i en gruppe&#10;&#10;# Eksempler&#10;&#10;* Terminkarakter&#10;" />
+            <documentation value="Fortløpende karakterer som eleven har fått som resultat av deltakelse i en gruppe&#10;&#10;# Eksempler&#10;&#10;* Terminkarakter&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_4320b92c76464e1ecb" idref="EAID_PRP_4320b92c76464e1ecb" name="fravær">
@@ -9724,15 +10359,87 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_a28be2f763d459750d" idref="EAID_GEN_a28be2f763d459750d" start="EAID_CLS_7a1842f8370ceb4648" end="EAID_CLS_98ecf520623f10e247">
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_5414cdc530c1a79b9a" idref="EAID_ASC_5414cdc530c1a79b9a" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_b2d51228fff1754e2b">
+        <source xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b">
+          <model type="Class" name="Fullmakt" />
+          <role visibility="Public" name="fullmakt" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle fullmakter knyttet til kontodimensjonen." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_b2d51228fff1754e2b" idref="EAID_CLS_b2d51228fff1754e2b">
+          <model type="Class" name="Kontodimensjon" />
+          <role name="myndighet" visibility="Public" />
+          <type multiplicity="1..*" />
+          <documentation value="Del av kontodimensjon som Personalressurs har blitt delegert en fullmakt for." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_3a7c72615207d0ff33" idref="EAID_ASC_3a7c72615207d0ff33" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_7f69968205107fe6de">
+        <source xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b">
+          <model type="Class" name="Fullmakt" />
+          <role visibility="Public" name="fullmakt" />
+          <type multiplicity="0..*" />
+          <documentation value="Fullmakter som Personalressursen har blitt gitt." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7f69968205107fe6de" idref="EAID_CLS_7f69968205107fe6de">
+          <model type="Class" name="Personalressurs" />
+          <role name="fullmektig" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Personalressurs som har blitt gitt fullmakt til en gitt rolle." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_1ce213f9ef37fd53b2" idref="EAID_ASC_1ce213f9ef37fd53b2" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_5f1fef9b7872cf088d">
+        <source xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b">
+          <model type="Class" name="Fullmakt" />
+          <role visibility="Public" name="fullmakt" />
+          <type multiplicity="1..*" />
+          <documentation value="Alle fullmakter av denne type" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_5f1fef9b7872cf088d" idref="EAID_CLS_5f1fef9b7872cf088d">
+          <model type="Class" name="Rolle" />
+          <role name="rolle" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Hvilken type fullmakt" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_14606bc82e9a7b12cd" idref="EAID_ASC_14606bc82e9a7b12cd" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_7f69968205107fe6de">
+        <source xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b">
+          <model type="Class" name="Fullmakt" />
+          <role visibility="Public" name="stedfortreder" />
+          <type multiplicity="0..*" />
+          <documentation value="Personalressurs som er stedfortreder for den fullmektige.&#10;&#10;# Beskrivelse&#10;&#10;Gjeldende stedfortreder innenfor angitt gyldighetsperiode til fullmakten.&#10;&#10;Dersom det finnes flere stedfortredere må kildesystemet velge den stedfortreder som er den primære. Stedfortreder må være tilgjengelig i perioden som fullmakten er gyldig." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7f69968205107fe6de" idref="EAID_CLS_7f69968205107fe6de">
+          <model type="Class" name="Personalressurs" />
+          <role name="stedfortreder" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Personalressurs som er stedfortreder for den fullmektige.&#10;&#10;# Beskrivelse&#10;&#10;Gjeldende stedfortreder innenfor angitt gyldighetsperiode til fullmakten.&#10;&#10;Dersom det finnes flere stedfortredere må kildesystemet velge den stedfortreder som er den primære. Stedfortreder må være tilgjengelig i perioden som fullmakten er gyldig." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_a28be2f763d459750d" idref="EAID_GEN_a28be2f763d459750d" start="EAID_CLS_7a1842f8370ceb4648" end="EAID_CLS_b2d51228fff1754e2b">
         <source xmi:idref="EAID_CLS_7a1842f8370ceb4648" idref="EAID_CLS_7a1842f8370ceb4648">
           <model type="Class" name="Ansvar" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
           </source>
-        <target xmi:idref="EAID_CLS_98ecf520623f10e247" idref="EAID_CLS_98ecf520623f10e247">
-          <model type="Class" name="Kodeverk" />
+        <target xmi:idref="EAID_CLS_b2d51228fff1754e2b" idref="EAID_CLS_b2d51228fff1754e2b">
+          <model type="Class" name="Kontodimensjon" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -9740,32 +10447,33 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_1ac53270ff0109385c" idref="EAID_ASC_1ac53270ff0109385c" start="EAID_CLS_7a1842f8370ceb4648" end="EAID_CLS_7a1842f8370ceb4648">
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_5f53263aa434b4d7d0" idref="EAID_ASC_5f53263aa434b4d7d0" start="EAID_CLS_7a1842f8370ceb4648" end="EAID_CLS_7a1842f8370ceb4648">
         <source xmi:idref="EAID_CLS_7a1842f8370ceb4648" idref="EAID_CLS_7a1842f8370ceb4648">
           <model type="Class" name="Ansvar" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
+          <role visibility="Public" name="underordnet" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle underansvar" />
           <tags />
           </source>
         <target xmi:idref="EAID_CLS_7a1842f8370ceb4648" idref="EAID_CLS_7a1842f8370ceb4648">
           <model type="Class" name="Ansvar" />
-          <role name="forelder" visibility="Public" />
+          <role name="overordnet" visibility="Public" />
           <type multiplicity="0..1" />
-          <documentation value="For å bygge hierarki av Ansvar" />
+          <documentation value="Overordnet ansvar" />
           <tags />
           </target>
-        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_9a3ca18ca68b521f57" idref="EAID_GEN_9a3ca18ca68b521f57" start="EAID_CLS_99ad8092a898497ae7" end="EAID_CLS_98ecf520623f10e247">
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_9a3ca18ca68b521f57" idref="EAID_GEN_9a3ca18ca68b521f57" start="EAID_CLS_99ad8092a898497ae7" end="EAID_CLS_3385458244847ec7db">
         <source xmi:idref="EAID_CLS_99ad8092a898497ae7" idref="EAID_CLS_99ad8092a898497ae7">
           <model type="Class" name="Arbeidsforholdstype" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
           </source>
-        <target xmi:idref="EAID_CLS_98ecf520623f10e247" idref="EAID_CLS_98ecf520623f10e247">
-          <model type="Class" name="Kodeverk" />
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -9790,15 +10498,15 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_288919598d0845dc45" idref="EAID_GEN_288919598d0845dc45" start="EAID_CLS_b86eb7152bf9ecacd7" end="EAID_CLS_98ecf520623f10e247">
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_288919598d0845dc45" idref="EAID_GEN_288919598d0845dc45" start="EAID_CLS_b86eb7152bf9ecacd7" end="EAID_CLS_b2d51228fff1754e2b">
         <source xmi:idref="EAID_CLS_b86eb7152bf9ecacd7" idref="EAID_CLS_b86eb7152bf9ecacd7">
           <model type="Class" name="Art" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
           </source>
-        <target xmi:idref="EAID_CLS_98ecf520623f10e247" idref="EAID_CLS_98ecf520623f10e247">
-          <model type="Class" name="Kodeverk" />
+        <target xmi:idref="EAID_CLS_b2d51228fff1754e2b" idref="EAID_CLS_b2d51228fff1754e2b">
+          <model type="Class" name="Kontodimensjon" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -9806,15 +10514,15 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_d35798c615275abc97" idref="EAID_GEN_d35798c615275abc97" start="EAID_CLS_b2fbf668ea3689009c" end="EAID_CLS_98ecf520623f10e247">
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_d35798c615275abc97" idref="EAID_GEN_d35798c615275abc97" start="EAID_CLS_b2fbf668ea3689009c" end="EAID_CLS_b2d51228fff1754e2b">
         <source xmi:idref="EAID_CLS_b2fbf668ea3689009c" idref="EAID_CLS_b2fbf668ea3689009c">
           <model type="Class" name="Funksjon" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
           </source>
-        <target xmi:idref="EAID_CLS_98ecf520623f10e247" idref="EAID_CLS_98ecf520623f10e247">
-          <model type="Class" name="Kodeverk" />
+        <target xmi:idref="EAID_CLS_b2d51228fff1754e2b" idref="EAID_CLS_b2d51228fff1754e2b">
+          <model type="Class" name="Kontodimensjon" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -9822,26 +10530,27 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_cdddcda5d6ea173b43" idref="EAID_ASC_cdddcda5d6ea173b43" start="EAID_CLS_b2fbf668ea3689009c" end="EAID_CLS_b2fbf668ea3689009c">
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_d0f87a88b9373e99e0" idref="EAID_ASC_d0f87a88b9373e99e0" start="EAID_CLS_b2fbf668ea3689009c" end="EAID_CLS_b2fbf668ea3689009c">
         <source xmi:idref="EAID_CLS_b2fbf668ea3689009c" idref="EAID_CLS_b2fbf668ea3689009c">
           <model type="Class" name="Funksjon" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
+          <role visibility="Public" name="underordnet" />
+          <type multiplicity="0..*" />
+          <documentation value="De underordnede funksjonene." />
           <tags />
           </source>
         <target xmi:idref="EAID_CLS_b2fbf668ea3689009c" idref="EAID_CLS_b2fbf668ea3689009c">
           <model type="Class" name="Funksjon" />
-          <role name="forelder" visibility="Public" />
+          <role name="overordnet" visibility="Public" />
           <type multiplicity="0..1" />
-          <documentation value="For å bygge hierarki av Funksjon" />
+          <documentation value="Overordnet funksjon." />
           <tags />
           </target>
-        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_03993eecb1cda3c5cd" idref="EAID_GEN_03993eecb1cda3c5cd" start="EAID_CLS_98ecf520623f10e247" end="EAID_CLS_3385458244847ec7db">
-        <source xmi:idref="EAID_CLS_98ecf520623f10e247" idref="EAID_CLS_98ecf520623f10e247">
-          <model type="Class" name="Kodeverk" />
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_e2a3cbb9d68384a7ec" idref="EAID_GEN_e2a3cbb9d68384a7ec" start="EAID_CLS_b2d51228fff1754e2b" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_b2d51228fff1754e2b" idref="EAID_CLS_b2d51228fff1754e2b">
+          <model type="Class" name="Kontodimensjon" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -9855,15 +10564,15 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_bcb74521c763f2c514" idref="EAID_GEN_bcb74521c763f2c514" start="EAID_CLS_f1d4a9bd27af04c15b" end="EAID_CLS_98ecf520623f10e247">
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_bcb74521c763f2c514" idref="EAID_GEN_bcb74521c763f2c514" start="EAID_CLS_f1d4a9bd27af04c15b" end="EAID_CLS_3385458244847ec7db">
         <source xmi:idref="EAID_CLS_f1d4a9bd27af04c15b" idref="EAID_CLS_f1d4a9bd27af04c15b">
           <model type="Class" name="Lønnsart" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
           </source>
-        <target xmi:idref="EAID_CLS_98ecf520623f10e247" idref="EAID_CLS_98ecf520623f10e247">
-          <model type="Class" name="Kodeverk" />
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -9871,15 +10580,15 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_dd1c29bad74dec7bd9" idref="EAID_GEN_dd1c29bad74dec7bd9" start="EAID_CLS_0e902a06c5b70e4340" end="EAID_CLS_98ecf520623f10e247">
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_dd1c29bad74dec7bd9" idref="EAID_GEN_dd1c29bad74dec7bd9" start="EAID_CLS_0e902a06c5b70e4340" end="EAID_CLS_3385458244847ec7db">
         <source xmi:idref="EAID_CLS_0e902a06c5b70e4340" idref="EAID_CLS_0e902a06c5b70e4340">
           <model type="Class" name="Personalressurskategori" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
           </source>
-        <target xmi:idref="EAID_CLS_98ecf520623f10e247" idref="EAID_CLS_98ecf520623f10e247">
-          <model type="Class" name="Kodeverk" />
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -9887,15 +10596,15 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_ad1c910a7fef1a059e" idref="EAID_GEN_ad1c910a7fef1a059e" start="EAID_CLS_0f00acb3fd0e96ed60" end="EAID_CLS_98ecf520623f10e247">
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_ad1c910a7fef1a059e" idref="EAID_GEN_ad1c910a7fef1a059e" start="EAID_CLS_0f00acb3fd0e96ed60" end="EAID_CLS_b2d51228fff1754e2b">
         <source xmi:idref="EAID_CLS_0f00acb3fd0e96ed60" idref="EAID_CLS_0f00acb3fd0e96ed60">
           <model type="Class" name="Prosjekt" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
           </source>
-        <target xmi:idref="EAID_CLS_98ecf520623f10e247" idref="EAID_CLS_98ecf520623f10e247">
-          <model type="Class" name="Kodeverk" />
+        <target xmi:idref="EAID_CLS_b2d51228fff1754e2b" idref="EAID_CLS_b2d51228fff1754e2b">
+          <model type="Class" name="Kontodimensjon" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -9903,15 +10612,15 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_d5249330beae743515" idref="EAID_GEN_d5249330beae743515" start="EAID_CLS_1d24d026ece51b64c5" end="EAID_CLS_98ecf520623f10e247">
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_d5249330beae743515" idref="EAID_GEN_d5249330beae743515" start="EAID_CLS_1d24d026ece51b64c5" end="EAID_CLS_3385458244847ec7db">
         <source xmi:idref="EAID_CLS_1d24d026ece51b64c5" idref="EAID_CLS_1d24d026ece51b64c5">
           <model type="Class" name="Stillingskode" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
           </source>
-        <target xmi:idref="EAID_CLS_98ecf520623f10e247" idref="EAID_CLS_98ecf520623f10e247">
-          <model type="Class" name="Kodeverk" />
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -9936,20 +10645,139 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_3d479f6ddf771bd512" idref="EAID_GEN_3d479f6ddf771bd512" start="EAID_CLS_7928ce1d8618e22dce" end="EAID_CLS_98ecf520623f10e247">
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_3d479f6ddf771bd512" idref="EAID_GEN_3d479f6ddf771bd512" start="EAID_CLS_7928ce1d8618e22dce" end="EAID_CLS_3385458244847ec7db">
         <source xmi:idref="EAID_CLS_7928ce1d8618e22dce" idref="EAID_CLS_7928ce1d8618e22dce">
           <model type="Class" name="Uketimetall" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
           </source>
-        <target xmi:idref="EAID_CLS_98ecf520623f10e247" idref="EAID_CLS_98ecf520623f10e247">
-          <model type="Class" name="Kodeverk" />
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
           </target>
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_b8ee9b1f64cde1fab8" idref="EAID_ASC_b8ee9b1f64cde1fab8" start="EAID_CLS_ed7c659a13950c7516" end="EAID_CLS_f1d4a9bd27af04c15b">
+        <source xmi:idref="EAID_CLS_ed7c659a13950c7516" idref="EAID_CLS_ed7c659a13950c7516">
+          <model type="Class" name="Beskjeftigelse" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_f1d4a9bd27af04c15b" idref="EAID_CLS_f1d4a9bd27af04c15b">
+          <model type="Class" name="Lønnsart" />
+          <role name="lønnsart" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Lønnsart for beskjeftigelsen." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_d6a4dd5e15dd84e0c2" idref="EAID_ASC_d6a4dd5e15dd84e0c2" start="EAID_CLS_6e6e1c88965814953b" end="EAID_CLS_f1d4a9bd27af04c15b">
+        <source xmi:idref="EAID_CLS_6e6e1c88965814953b" idref="EAID_CLS_6e6e1c88965814953b">
+          <model type="Class" name="Fasttillegg" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_f1d4a9bd27af04c15b" idref="EAID_CLS_f1d4a9bd27af04c15b">
+          <model type="Class" name="Lønnsart" />
+          <role name="lønnsart" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Lønnsart for tillegget." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_ff07e2ea805bdae7a1" idref="EAID_ASC_ff07e2ea805bdae7a1" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_7a1842f8370ceb4648">
+        <source xmi:idref="EAID_CLS_f287e1ac31a6f4340e" idref="EAID_CLS_f287e1ac31a6f4340e">
+          <model type="Class" name="Kontostreng" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7a1842f8370ceb4648" idref="EAID_CLS_7a1842f8370ceb4648">
+          <model type="Class" name="Ansvar" />
+          <role name="ansvar" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Ansvar eller kostsenter." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_69e922fcc065b17d11" idref="EAID_ASC_69e922fcc065b17d11" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_b86eb7152bf9ecacd7">
+        <source xmi:idref="EAID_CLS_f287e1ac31a6f4340e" idref="EAID_CLS_f287e1ac31a6f4340e">
+          <model type="Class" name="Kontostreng" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_b86eb7152bf9ecacd7" idref="EAID_CLS_b86eb7152bf9ecacd7">
+          <model type="Class" name="Art" />
+          <role name="art" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Art eller konto." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_8a582d97815307b717" idref="EAID_ASC_8a582d97815307b717" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_b2fbf668ea3689009c">
+        <source xmi:idref="EAID_CLS_f287e1ac31a6f4340e" idref="EAID_CLS_f287e1ac31a6f4340e">
+          <model type="Class" name="Kontostreng" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_b2fbf668ea3689009c" idref="EAID_CLS_b2fbf668ea3689009c">
+          <model type="Class" name="Funksjon" />
+          <role name="funksjon" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Funksjon eller tjeneste." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_1cdf854213867d04b5" idref="EAID_ASC_1cdf854213867d04b5" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_0f00acb3fd0e96ed60">
+        <source xmi:idref="EAID_CLS_f287e1ac31a6f4340e" idref="EAID_CLS_f287e1ac31a6f4340e">
+          <model type="Class" name="Kontostreng" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_0f00acb3fd0e96ed60" idref="EAID_CLS_0f00acb3fd0e96ed60">
+          <model type="Class" name="Prosjekt" />
+          <role name="prosjekt" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Prosjekt." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_4b83e97f580c1b8363" idref="EAID_ASC_4b83e97f580c1b8363" start="EAID_CLS_8e76a06e7820d92484" end="EAID_CLS_f1d4a9bd27af04c15b">
+        <source xmi:idref="EAID_CLS_8e76a06e7820d92484" idref="EAID_CLS_8e76a06e7820d92484">
+          <model type="Class" name="Variabelttillegg" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_f1d4a9bd27af04c15b" idref="EAID_CLS_f1d4a9bd27af04c15b">
+          <model type="Class" name="Lønnsart" />
+          <role name="lønnsart" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Lønnsart for tillegget." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_73e5a5026b5769cd46" idref="EAID_GEN_73e5a5026b5769cd46" start="EAID_CLS_11c618a515753fb259" end="EAID_CLS_2b24756f464cc1f31a">
@@ -9968,11 +10796,30 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_5064a6296f394f455d" idref="EAID_ASC_5064a6296f394f455d" start="EAID_CLS_11c618a515753fb259" end="EAID_CLS_7a1842f8370ceb4648">
+        <source xmi:idref="EAID_CLS_11c618a515753fb259" idref="EAID_CLS_11c618a515753fb259">
+          <model type="Class" name="Organisasjonselement" />
+          <role visibility="Public" name="organisasjonselement" />
+          <type multiplicity="0..*" />
+          <documentation value="Organisasjonselement ansvar er knyttet til." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7a1842f8370ceb4648" idref="EAID_CLS_7a1842f8370ceb4648">
+          <model type="Class" name="Ansvar" />
+          <role name="ansvar" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Ansvar i kontoplanen som organisasjonselement er knyttet til." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_0739a6ded5022e2f3e" idref="EAID_ASC_0739a6ded5022e2f3e" start="EAID_CLS_11c618a515753fb259" end="EAID_CLS_7f69968205107fe6de">
         <source xmi:idref="EAID_CLS_11c618a515753fb259" idref="EAID_CLS_11c618a515753fb259">
           <model type="Class" name="Organisasjonselement" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
+          <role visibility="Public" name="leder" />
+          <type multiplicity="0..*" />
+          <documentation value="Ansvarlig leder for organisasjonselementet&#10;&#10;# Beskrivelse&#10;Normalt vil dette være leder som har personal- og økonomi-ansvar for dette organisasjonselementet.&#10;&#10;# Format&#10;Relasjon til en bestemt leder (Personalressurs).&#10;&#10;# Eksempler" />
           <tags />
           </source>
         <target xmi:idref="EAID_CLS_7f69968205107fe6de" idref="EAID_CLS_7f69968205107fe6de">
@@ -9982,7 +10829,7 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
           <documentation value="Ansvarlig leder for organisasjonselementet&#10;&#10;# Beskrivelse&#10;Normalt vil dette være leder som har personal- og økonomi-ansvar for dette organisasjonselementet.&#10;&#10;# Format&#10;Relasjon til en bestemt leder (Personalressurs).&#10;&#10;# Eksempler" />
           <tags />
           </target>
-        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_c2236976b005082939" idref="EAID_ASC_c2236976b005082939" start="EAID_CLS_11c618a515753fb259" end="EAID_CLS_11c618a515753fb259">
@@ -9995,11 +10842,112 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <target xmi:idref="EAID_CLS_11c618a515753fb259" idref="EAID_CLS_11c618a515753fb259">
           <model type="Class" name="Organisasjonselement" />
           <role name="overordnet" visibility="Public" />
-          <type multiplicity="1" />
+          <type multiplicity="0..1" />
           <documentation value="Referanse til organisasjonselement på nivået over gjeldende organisasjonselement.&#10;&#10;# Beskrivelse&#10;Alle overordnede (forelder) organisasjonselement.&#10;&#10;På øverste nivå, vil overordnet peke til seg selv.&#10;&#10;# Format&#10;Referanse til seg selv.&#10;&#10;# Eksempler&#10;&#10;* *Faggruppe for digitalisering og systemforvaltning* refererer til overordnet organisasjonselement, som er *IT-seksjonen*.&#10;* *Avdeling for helse og sosial* kan referere til organisasjonselemenetet til skolen, som kan være *Byremo videregående skole*" />
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_ec7b2850aa40c56108" idref="EAID_GEN_ec7b2850aa40c56108" start="EAID_CLS_0205423290c9bc7553" end="EAID_CLS_081589ccb697846d22">
+        <source xmi:idref="EAID_CLS_0205423290c9bc7553" idref="EAID_CLS_0205423290c9bc7553">
+          <model type="Class" name="Fastlønn" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_081589ccb697846d22" idref="EAID_CLS_081589ccb697846d22">
+          <model type="Class" name="Lønn" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_b7d07fb4c2c2854b66" idref="EAID_ASC_b7d07fb4c2c2854b66" start="EAID_CLS_081589ccb697846d22" end="EAID_CLS_7f69968205107fe6de">
+        <source xmi:idref="EAID_CLS_081589ccb697846d22" idref="EAID_CLS_081589ccb697846d22">
+          <model type="Class" name="Lønn" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7f69968205107fe6de" idref="EAID_CLS_7f69968205107fe6de">
+          <model type="Class" name="Personalressurs" />
+          <role name="anviser" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Personalressurs som har anvist lønnsmeldingen etter fullmakt." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_60be4c97fcb8f9f05b" idref="EAID_ASC_60be4c97fcb8f9f05b" start="EAID_CLS_081589ccb697846d22" end="EAID_CLS_7ab71940bab910a223">
+        <source xmi:idref="EAID_CLS_081589ccb697846d22" idref="EAID_CLS_081589ccb697846d22">
+          <model type="Class" name="Lønn" />
+          <role visibility="Public" name="lønn" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle lønnsutbetalinger for et arbeidsforhold" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role name="arbeidsforhold" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Arbeidsforhold som mottar lønn" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_bdc3838a3a675503f4" idref="EAID_ASC_bdc3838a3a675503f4" start="EAID_CLS_081589ccb697846d22" end="EAID_CLS_7f69968205107fe6de">
+        <source xmi:idref="EAID_CLS_081589ccb697846d22" idref="EAID_CLS_081589ccb697846d22">
+          <model type="Class" name="Lønn" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7f69968205107fe6de" idref="EAID_CLS_7f69968205107fe6de">
+          <model type="Class" name="Personalressurs" />
+          <role name="attestant" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Personalressurs som har attestert lønnsmeldingen etter fullmakt." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_56c5d431bbf4c31038" idref="EAID_ASC_56c5d431bbf4c31038" start="EAID_CLS_081589ccb697846d22" end="EAID_CLS_7f69968205107fe6de">
+        <source xmi:idref="EAID_CLS_081589ccb697846d22" idref="EAID_CLS_081589ccb697846d22">
+          <model type="Class" name="Lønn" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7f69968205107fe6de" idref="EAID_CLS_7f69968205107fe6de">
+          <model type="Class" name="Personalressurs" />
+          <role name="konterer" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Personalressurs som har kontert lønnsmeldingen etter fullmakt." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_76727e6a48f4c80e64" idref="EAID_GEN_76727e6a48f4c80e64" start="EAID_CLS_1c0669c4802d15f432" end="EAID_CLS_081589ccb697846d22">
+        <source xmi:idref="EAID_CLS_1c0669c4802d15f432" idref="EAID_CLS_1c0669c4802d15f432">
+          <model type="Class" name="Variabellønn" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_081589ccb697846d22" idref="EAID_CLS_081589ccb697846d22">
+          <model type="Class" name="Lønn" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_5a65e53e9d7ec4ea26" idref="EAID_ASC_5a65e53e9d7ec4ea26" start="EAID_CLS_7f69968205107fe6de" end="EAID_CLS_7ab71940bab910a223">
@@ -10104,6 +11052,24 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_50633b3319d717e74f" idref="EAID_ASC_50633b3319d717e74f" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_7f69968205107fe6de">
+        <source xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role visibility="Public" name="personalansvar" />
+          <type multiplicity="0..*" />
+          <documentation value="Arbeidsforhold som Personalressurs har personalansvar for.&#10;&#10;# Beskrivelse&#10;&#10;Personalansvar" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7f69968205107fe6de" idref="EAID_CLS_7f69968205107fe6de">
+          <model type="Class" name="Personalressurs" />
+          <role name="personalleder" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Personalleder til et arbeidsforhold.&#10;&#10;# Beskrivelse&#10;&#10;Indikerer personalleder til et arbeidsforhold." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_4702ec0f35c87e1d37" idref="EAID_ASC_4702ec0f35c87e1d37" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_1d24d026ece51b64c5">
@@ -10257,6 +11223,24 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_637eab90959ab24836" idref="EAID_ASC_637eab90959ab24836" start="EAID_CLS_9564bd355ac64bb4d6" end="EAID_CLS_64e904f2ebf8b9f538">
+        <source xmi:idref="EAID_CLS_9564bd355ac64bb4d6" idref="EAID_CLS_9564bd355ac64bb4d6">
+          <model type="Class" name="Utdanningsforhold" />
+          <role visibility="Public" name="utdanningsforhold" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle utdanningsforhold (elever og lærere) knyttet til en skole." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_64e904f2ebf8b9f538" idref="EAID_CLS_64e904f2ebf8b9f538">
+          <model type="Class" name="Skole" />
+          <role name="skole" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Skole som utdanningsforhold er knyttet til." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_b807672350191f4c4a" idref="EAID_GEN_b807672350191f4c4a" start="EAID_CLS_67991f31becd86403f" end="EAID_CLS_a62447c9dd60a973b1">
         <source xmi:idref="EAID_CLS_67991f31becd86403f" idref="EAID_CLS_67991f31becd86403f">
           <model type="Class" name="Basisgruppe" />
@@ -10276,9 +11260,8 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_28492f2ee5581b8275" idref="EAID_ASC_28492f2ee5581b8275" start="EAID_CLS_67991f31becd86403f" end="EAID_CLS_b2a41a5ceca288c6f4">
         <source xmi:idref="EAID_CLS_67991f31becd86403f" idref="EAID_CLS_67991f31becd86403f">
           <model type="Class" name="Basisgruppe" />
-          <role visibility="Public" name="basisgruppe" />
-          <type multiplicity="0..*" />
-          <documentation value="Basisgruppene som hører hjemme på dette trinnet" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
           <tags />
           </source>
         <target xmi:idref="EAID_CLS_b2a41a5ceca288c6f4" idref="EAID_CLS_b2a41a5ceca288c6f4">
@@ -10288,7 +11271,7 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
           <documentation value="Det overordnet trinnet som gruppen hører inn i" />
           <tags />
           </target>
-        <properties ea_type="Association" direction="Bi-Directional" />
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_3ab99ccb718a40b7f7" idref="EAID_ASC_3ab99ccb718a40b7f7" start="EAID_CLS_389b7cf67bad56a453" end="EAID_CLS_8548ca6ef4e9f948e9">
@@ -10353,7 +11336,7 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <target xmi:idref="EAID_CLS_20ee2391e13a5e2da9" idref="EAID_CLS_20ee2391e13a5e2da9">
           <model type="Class" name="Elevkategori" />
           <role name="kategori" visibility="Public" />
-          <type multiplicity="1" />
+          <type multiplicity="0..1" />
           <documentation value="Kategori på et elevforhold" />
           <tags />
           </target>
@@ -10394,24 +11377,6 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_0acdf929b0e394494b" idref="EAID_ASC_0acdf929b0e394494b" start="EAID_CLS_923314dcb9bf6b4540" end="EAID_CLS_9564bd355ac64bb4d6">
-        <source xmi:idref="EAID_CLS_923314dcb9bf6b4540" idref="EAID_CLS_923314dcb9bf6b4540">
-          <model type="Class" name="Medlemskap" />
-          <role visibility="Public" name="medlemskap" />
-          <type multiplicity="0..*" />
-          <documentation value="Alle gruppene som elev eller lærer er medlem av." />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_9564bd355ac64bb4d6" idref="EAID_CLS_9564bd355ac64bb4d6">
-          <model type="Class" name="Utdanningsforhold" />
-          <role name="deltaker" visibility="Public" />
-          <type multiplicity="1" />
-          <documentation value="Alle deltakere i medlemskapet. Det er viktig å notere at det er både elevene og lærere som inngår i medlemskap i grupper." />
-          <tags />
-          </target>
-        <properties ea_type="Association" direction="Bi-Directional" />
-        <tags />
-        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_2e30deb33b9d9cf34a" idref="EAID_ASC_2e30deb33b9d9cf34a" start="EAID_CLS_923314dcb9bf6b4540" end="EAID_CLS_a62447c9dd60a973b1">
         <source xmi:idref="EAID_CLS_923314dcb9bf6b4540" idref="EAID_CLS_923314dcb9bf6b4540">
           <model type="Class" name="Medlemskap" />
@@ -10425,6 +11390,24 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
           <role name="gruppe" visibility="Public" />
           <type multiplicity="1" />
           <documentation value="Gruppen som omtales i medlemskapet" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_993dfa346dbc36a8ad" idref="EAID_ASC_993dfa346dbc36a8ad" start="EAID_CLS_923314dcb9bf6b4540" end="EAID_CLS_9564bd355ac64bb4d6">
+        <source xmi:idref="EAID_CLS_923314dcb9bf6b4540" idref="EAID_CLS_923314dcb9bf6b4540">
+          <model type="Class" name="Medlemskap" />
+          <role visibility="Public" name="medlemskap" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle gruppene som elev eller lærer er medlem av." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_9564bd355ac64bb4d6" idref="EAID_CLS_9564bd355ac64bb4d6">
+          <model type="Class" name="Utdanningsforhold" />
+          <role name="medlem" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Alle deltakere i medlemskapet. Det er viktig å notere at det er både elevene og lærere som inngår i medlemskap i grupper." />
           <tags />
           </target>
         <properties ea_type="Association" direction="Bi-Directional" />
@@ -10615,9 +11598,8 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_a01add91a916a77b6b" idref="EAID_ASC_a01add91a916a77b6b" start="EAID_CLS_e92c2079bc89c6d11a" end="EAID_CLS_c317e0b3ba883a1162">
         <source xmi:idref="EAID_CLS_e92c2079bc89c6d11a" idref="EAID_CLS_e92c2079bc89c6d11a">
           <model type="Class" name="Fag" />
-          <role visibility="Public" name="fag" />
-          <type multiplicity="0..*" />
-          <documentation value="Alle fag som er relaterte til en gitt programområdet" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
           <tags />
           </source>
         <target xmi:idref="EAID_CLS_c317e0b3ba883a1162" idref="EAID_CLS_c317e0b3ba883a1162">
@@ -10627,7 +11609,7 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
           <documentation value="Det overordnet progmraområdet" />
           <tags />
           </target>
-        <properties ea_type="Association" direction="Bi-Directional" />
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_3ec4b8cf6586711c34" idref="EAID_ASC_3ec4b8cf6586711c34" start="EAID_CLS_6613563c654c1f89b6" end="EAID_CLS_7bd281acb04022531a">
@@ -10715,6 +11697,23 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_de219d5d86eb02bd03" idref="EAID_ASC_de219d5d86eb02bd03" start="EAID_CLS_c317e0b3ba883a1162" end="EAID_CLS_b2a41a5ceca288c6f4">
+        <source xmi:idref="EAID_CLS_c317e0b3ba883a1162" idref="EAID_CLS_c317e0b3ba883a1162">
+          <model type="Class" name="Programområde" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_b2a41a5ceca288c6f4" idref="EAID_CLS_b2a41a5ceca288c6f4">
+          <model type="Class" name="Årstrinn" />
+          <role name="trinn" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle trinn som finnes på dette programområdet" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_0dc51685891595212a" idref="EAID_ASC_0dc51685891595212a" start="EAID_CLS_c317e0b3ba883a1162" end="EAID_CLS_e755c56f229ed4bfb5">
         <source xmi:idref="EAID_CLS_c317e0b3ba883a1162" idref="EAID_CLS_c317e0b3ba883a1162">
           <model type="Class" name="Programområde" />
@@ -10752,8 +11751,9 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_a8f53b31b12e2ff29a" idref="EAID_ASC_a8f53b31b12e2ff29a" start="EAID_CLS_64e904f2ebf8b9f538" end="EAID_CLS_e92c2079bc89c6d11a">
         <source xmi:idref="EAID_CLS_64e904f2ebf8b9f538" idref="EAID_CLS_64e904f2ebf8b9f538">
           <model type="Class" name="Skole" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
+          <role visibility="Public" name="skole" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle skoler som tilbyr faget" />
           <tags />
           </source>
         <target xmi:idref="EAID_CLS_e92c2079bc89c6d11a" idref="EAID_CLS_e92c2079bc89c6d11a">
@@ -10763,7 +11763,7 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
           <documentation value="Fagene som skolen tilbyr" />
           <tags />
           </target>
-        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_2c30516b91cd777ef8" idref="EAID_ASC_2c30516b91cd777ef8" start="EAID_CLS_64e904f2ebf8b9f538" end="EAID_CLS_11c618a515753fb259">
@@ -10784,7 +11784,7 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_8b5ba2ad714a8954cd" idref="EAID_ASC_8b5ba2ad714a8954cd" start="EAID_CLS_64e904f2ebf8b9f538" end="EAID_CLS_8ec705d192e01ca4aa">
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_5677e42c429841a148" idref="EAID_ASC_5677e42c429841a148" start="EAID_CLS_64e904f2ebf8b9f538" end="EAID_CLS_8ec705d192e01ca4aa">
         <source xmi:idref="EAID_CLS_64e904f2ebf8b9f538" idref="EAID_CLS_64e904f2ebf8b9f538">
           <model type="Class" name="Skole" />
           <role visibility="Public" />
@@ -10793,26 +11793,9 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
           </source>
         <target xmi:idref="EAID_CLS_8ec705d192e01ca4aa" idref="EAID_CLS_8ec705d192e01ca4aa">
           <model type="Class" name="Skoleeiertype" />
-          <role name="skoleeiertype" visibility="Public" />
+          <role name="skoleeierType" visibility="Public" />
           <type multiplicity="0..1" />
           <documentation value="Er denne skolen eid av kommunen, fylke, private aktører eller noe annet.&#10;Kilde er Vigo Kodeverkdatabase.&#10;&#10;# Eksempler&#10;&#10;* Fylke&#10;* Stat&#10;* Kommune&#10;* Privat &#10;&#10;# Referanser&#10;&#10;* Vigo Kodeverkdatabase: [vigo.no/vigokv/skole.action](https://www.vigo.no/vigokv/skole.action)" />
-          <tags />
-          </target>
-        <properties ea_type="Association" direction="Source -&gt; Destination" />
-        <tags />
-        </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_b4ec87ab52e1d91ab4" idref="EAID_ASC_b4ec87ab52e1d91ab4" start="EAID_CLS_64e904f2ebf8b9f538" end="EAID_CLS_e755c56f229ed4bfb5">
-        <source xmi:idref="EAID_CLS_64e904f2ebf8b9f538" idref="EAID_CLS_64e904f2ebf8b9f538">
-          <model type="Class" name="Skole" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_e755c56f229ed4bfb5" idref="EAID_CLS_e755c56f229ed4bfb5">
-          <model type="Class" name="Utdanningsprogram" />
-          <role name="utdanningsprogram" visibility="Public" />
-          <type multiplicity="0..*" />
-          <documentation value="Utdanningsprogram som inngår på en skole" />
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
@@ -10851,6 +11834,24 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_5e39f07a49161d3faf" idref="EAID_ASC_5e39f07a49161d3faf" start="EAID_CLS_e755c56f229ed4bfb5" end="EAID_CLS_64e904f2ebf8b9f538">
+        <source xmi:idref="EAID_CLS_e755c56f229ed4bfb5" idref="EAID_CLS_e755c56f229ed4bfb5">
+          <model type="Class" name="Utdanningsprogram" />
+          <role visibility="Public" name="utdanningsprogram" />
+          <type multiplicity="0..*" />
+          <documentation value="Utdanningsprogram som inngår på en skole" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_64e904f2ebf8b9f538" idref="EAID_CLS_64e904f2ebf8b9f538">
+          <model type="Class" name="Skole" />
+          <role name="skole" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle skoler som tilbyr utdanningsprogrammet" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_7aca24a699321f2d2f" idref="EAID_GEN_7aca24a699321f2d2f" start="EAID_CLS_b2a41a5ceca288c6f4" end="EAID_CLS_a62447c9dd60a973b1">
         <source xmi:idref="EAID_CLS_b2a41a5ceca288c6f4" idref="EAID_CLS_b2a41a5ceca288c6f4">
           <model type="Class" name="Årstrinn" />
@@ -10865,24 +11866,6 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
           <tags />
           </target>
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
-        <tags />
-        </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_2e929067e5016cb40d" idref="EAID_ASC_2e929067e5016cb40d" start="EAID_CLS_b2a41a5ceca288c6f4" end="EAID_CLS_c317e0b3ba883a1162">
-        <source xmi:idref="EAID_CLS_b2a41a5ceca288c6f4" idref="EAID_CLS_b2a41a5ceca288c6f4">
-          <model type="Class" name="Årstrinn" />
-          <role visibility="Public" name="trinn" />
-          <type multiplicity="0..*" />
-          <documentation value="Alle trinn som finnes på dette programområdet" />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_c317e0b3ba883a1162" idref="EAID_CLS_c317e0b3ba883a1162">
-          <model type="Class" name="Programområde" />
-          <role name="programområde" visibility="Public" />
-          <type multiplicity="0..*" />
-          <documentation value="Alle programområder som er relevante for trinnet" />
-          <tags />
-          </target>
-        <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_f3053e312270f2e9f7" idref="EAID_GEN_f3053e312270f2e9f7" start="EAID_CLS_befc698f1817a298c1" end="EAID_CLS_a62447c9dd60a973b1">

@@ -1,0 +1,188 @@
+# yaml-language-server: $schema=https://w3id.org/linkml/meta.schema.json
+id: https://w3id.org/novari/fint/administrasjon/komplekse-datatyper
+name: administrasjon.komplekse-datatyper
+imports:
+  - linkml:types
+  - felles.basisklasser
+  - felles.komplekse-datatyper
+  - administrasjon.kodeverk
+
+classes:
+
+  Beskjeftigelse:
+    description: |
+      Del av Fastlønn som beskriver en gitt lønnsprosent og hvordan den skal konteres.
+    attributes:
+      beskrivelse:
+        range: string
+        annotations:
+          writeable: true
+        description: |
+          Beskrivelse av beskjeftigelse.
+          
+          # Beskrivelse
+          
+          Forklarende beskrivelse av beskjeftigelsen, til bruk i behandling av lønnsmeldingen, og for anføring på lønnsslipp.
+          
+          # Eksempel
+          
+          Fag- og gruppekode en lærer underviser i.
+        required: true
+      kontostreng:
+        range: Kontostreng
+        description: |
+          Kontering av beskjeftigelsen.
+        required: true
+      prosent:
+        range: integer
+        annotations:
+          writeable: true
+        description: |
+          Andel av lønnsprosent som beslaglegges av denne beskjeftigelsen, i hundredels prosent.
+        required: true
+      lønnsart:
+        range: Lønnsart
+        description: |
+          Lønnsart for beskjeftigelsen.
+
+  Fasttillegg:
+    description: |
+      Fast tilleggsbeløp.
+    attributes:
+      beløp:
+        range: integer
+        annotations:
+          writeable: true
+        description: |
+          Beløp, i øre.
+        required: true
+      beskrivelse:
+        range: string
+        annotations:
+          writeable: true
+        description: |
+          Beskrivelse av tillegget, til føring på lønnsslipp.
+          
+          # Beskrivelse
+          
+          Forklarende beskrivelse av tillegget, til bruk i behandling av lønnsmeldingen, rapportering og for anføring på lønnsslipp.
+        required: true
+      kontostreng:
+        range: Kontostreng
+        description: |
+          Kontering av tillegget.
+        required: true
+      lønnsart:
+        range: Lønnsart
+        description: |
+          Lønnsart for tillegget.
+
+  Kontostreng:
+    description: |
+      Sammensetning av kontodimensjoner for bokføring
+      
+      # Beskrivelse
+      
+      Henvisninger til koder i alle kontodimensjoner for kontering av en kostnad eller inntekt.
+      
+      # Eksempel
+      
+      For kontering av lønn kreves Art, Ansvar, Funksjon og eventuelt Prosjekt.
+      
+      Det finnes flere kontodimensjoner enn disse fire. Modellen vil utvides senere med disse dimensjonene.
+    attributes:
+      ansvar:
+        range: Ansvar
+        description: |
+          Ansvar eller kostsenter.
+        required: true
+      art:
+        range: Art
+        description: |
+          Art eller konto.
+        required: true
+      funksjon:
+        range: Funksjon
+        description: |
+          Funksjon eller tjeneste.
+        required: true
+      prosjekt:
+        range: Prosjekt
+        description: |
+          Prosjekt.
+
+  Variabelttillegg:
+    description: |
+      Del av variabel lønnsmelding som beskriver grunnlaget for en lønnsberegning.
+      
+      # Beskrivelse
+      
+      Faktisk lønn beregnes i HRM-systemet. I lønnsmeldingen skal grunnlaget for beregningen angis.
+      
+      Må brukes sammen med lønnsart for at HRM-systemet skal foreta korrekt beregning og rapportere riktig på A-meldingen.
+      
+      # Eksempler:
+      
+      1. Vikartime for undervisningspersonell: 
+        - antall: antall timer * 1400 / årsramme
+      2. Timelønn
+        - antall: antall timer
+      3. Kjøregodtgjørelse
+        - antall: antall kilometer
+      4. Kontantytelse for et møte
+        - antall: beløp
+    attributes:
+      antall:
+        range: integer
+        annotations:
+          writeable: true
+        description: |
+          Mengde som beskrives av tillegget, i hundredeler.
+          
+          # Beskrivelse
+          
+          Enhet er spesifisert av lønnsart.
+          
+          # Eksempel
+          
+          - Antall hundredels timer.
+          - Antall dekameter (km/100).
+          - Antall øre
+        required: true
+      beløp:
+        range: integer
+        description: |
+          Beløp i øre som skal utbetales. Beregnes av lønnssystemet basert på antall og lønnsart.
+      beskrivelse:
+        range: string
+        annotations:
+          writeable: true
+        description: |
+          Beskrivelse av tillegget, til føring på lønnsslipp.
+          
+          # Beskrivelse
+          
+          Forklarende beskrivelse av tillegget, til bruk i behandling av lønnsmeldingen, rapportering og for anføring på lønnsslipp.
+          
+          # Eksempel
+          
+          - Fag- og gruppekode og antall timer en lærer vikarierte. 
+          - Reisestrekning for kilometergodtgjørelse
+        required: true
+      kontostreng:
+        range: Kontostreng
+        description: |
+          Kontering av tillegget.
+        required: true
+      periode:
+        range: Periode
+        annotations:
+          writeable: true
+        description: |
+          Periode når grunnlaget ble opptjent.
+        required: true
+      lønnsart:
+        range: Lønnsart
+        description: |
+          Lønnsart for tillegget.
+        required: true

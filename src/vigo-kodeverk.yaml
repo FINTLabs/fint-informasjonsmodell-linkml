@@ -639,8 +639,7 @@ classes:
       kode:
         range: Identifikator
         description: |
-          Finnes ikke i Vigo. Hentes fra Grep.
-        required: true
+          Finnes ikke i Vigo. Hentes fra Grep hvis den finnes.
       PSI:
         range: Identifikator
         required: true
@@ -826,8 +825,7 @@ classes:
       kode:
         range: Identifikator
         description: |
-          Finnes ikke i Vigo. Hentes fra Grep.
-        required: true
+          Finnes ikke i Vigo. Hentes fra Grep hvis den finnes.
       PSI:
         range: Identifikator
         required: true
@@ -1022,7 +1020,6 @@ classes:
         range: string
         description: |
           Vigo: kompetansemaal_innledning
-        required: true
       navn:
         range: string
         required: true
@@ -1098,8 +1095,7 @@ classes:
       kode:
         range: Identifikator
         description: |
-          Finnes ikke i Vigo, hentes fra Grep.
-        required: true
+          Finnes ikke i Vigo, hentes fra Grep hvis den finnes.
       PSI:
         range: Identifikator
         required: true
@@ -1190,7 +1186,6 @@ classes:
         range: string
         description: |
           Referanser til fagkoder som opplæringsfaget består av
-        required: true
       eksamensVurderingElev:
         range: string
         description: |
@@ -1453,9 +1448,6 @@ classes:
       Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaering/dokumentbase/grensesnitt-mellom-vigo-sas-og-grep
     attributes:
       kode:
-        range: Identifikator
-        required: true
-      PSI:
         range: Identifikator
         required: true
       gyldigFoM:

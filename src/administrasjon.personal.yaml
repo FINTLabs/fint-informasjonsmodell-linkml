@@ -5,12 +5,138 @@ imports:
   - linkml:types
   - felles.basisklasser
   - felles.komplekse-datatyper
+  - administrasjon.fullmakt
   - administrasjon.kodeverk
+  - administrasjon.komplekse-datatyper
   - administrasjon.organisasjon
   - felles
   - utdanning.elev
 
 classes:
+
+  Fastlønn:
+    description: |
+      Informasjon om fast lønnsbeskjeftigelse.
+      
+      Inneholder beskjeftigelser av den ansattes lønnsprosent.
+      
+      Summen av prosentene på beskjeftigelsene skal være lønnsprosent for en fullt dekket stilling.
+      
+      Dersom beskjeftigelsene ikke fyller lønnsprosenten har arbeidsforholdet teknisk undertid. 
+      
+      I motsatt fall har arbeidsforholdet overtid.
+      
+      Kan også inneholde faste tillegg.
+    is_a: Lønn
+    attributes:
+      beskjeftigelse:
+        range: Beskjeftigelse
+        annotations:
+          writeable: true
+        description: |
+          Fordeling av den ansattes ansettelsesprosent. Beskriver hvor mye av prosenten som benyttes, og hvordan den skal konteres.
+        multivalued: true
+        required: true
+      fasttillegg:
+        range: Fasttillegg
+        annotations:
+          writeable: true
+        description: |
+          Faste tillegg til utbetaling.
+        multivalued: true
+
+  Lønn:
+    description: |
+      Informasjon om lønn for et arbeidsforhold.
+      
+      # Beskrivelse
+      
+      Lønn (eller Lønnsmelding) inneholder informasjon om lønn som skal utbetales for et arbeidsforhold.  Lønn er enten Fastlønn eller Variabellønn.
+      
+      Lønnsmeldinger blir kontert, attestert og anvist av personalressurser som har fullmakter til dette.
+      
+      Lønn utbetales til et arbeidsforhold, for en gitt periode.
+    abstract: true
+    attributes:
+      systemId:
+        range: Identifikator
+        annotations:
+          writeable: true
+        description: |
+          Kildesystemets unike identifikator for lønnsmeldingen.
+        required: true
+      anvist:
+        range: datetime
+        annotations:
+          writeable: true
+        description: |
+          Tidsstempel som angir når lønnsmeldingen ble anvist.
+      attestert:
+        range: datetime
+        annotations:
+          writeable: true
+        description: |
+          Tidsstempel som angir når lønnsmeldingen ble attestert.
+      kontert:
+        range: datetime
+        annotations:
+          writeable: true
+        description: |
+          Tidsstempel som angir når lønnsmeldingen ble kontert.
+      periode:
+        range: Periode
+        annotations:
+          writeable: true
+        description: |
+          Periode som lønnsmeldingen er gyldig for.
+          
+          # Eksempel
+          
+          - 01.08.2017 - 31.07.2018 (fastlønn for et skoleår)
+          - 01.08.2017 - 31.08.2017 (for variabellønn)
+          - 01.08.2017 og inntil videre (for øvrige faste ansatte)
+          - 13.09.2017 - 15.09.2017 (for en vikar eller en sensor)
+        required: true
+      anviser:
+        range: Personalressurs
+        description: |
+          Personalressurs som har anvist lønnsmeldingen etter fullmakt.
+      arbeidsforhold:
+        range: Arbeidsforhold
+        inverse: lønn
+        annotations:
+          primaryRelation: true
+        description: |
+          Arbeidsforhold som mottar lønn
+        required: true
+      attestant:
+        range: Personalressurs
+        description: |
+          Personalressurs som har attestert lønnsmeldingen etter fullmakt.
+      konterer:
+        range: Personalressurs
+        description: |
+          Personalressurs som har kontert lønnsmeldingen etter fullmakt.
+
+  Variabellønn:
+    description: |
+      Informasjon om variabel lønn.
+      
+      # Beskrivelse
+      
+      Variabel lønn består av ett eller flere tillegg, hver knyttet til en lønnsart.  Lønnsart bestemmer eventuelle faste satser for tillegget, samt grunnlag for skatt- og pensjonstrekk, og hvordan det rapporteres på A-meldingen.
+      
+      Selve beregningen av variabel lønn gjøres av HRM, og formålet er å overføre tilstrekkelig informasjon til at HRM kan foreta beregningen.
+    is_a: Lønn
+    attributes:
+      variabelttillegg:
+        range: Variabelttillegg
+        annotations:
+          writeable: true
+        description: |
+          Alle tilleggene beskrevet i variabellønn.
+        multivalued: true
+        required: true
 
   Personalressurs:
     description: |
@@ -46,7 +172,7 @@ classes:
         annotations:
           writeable: true
         description: |
-          Brukernavn til en person
+          Brukernavn til en ansatt
           
           # Beskrivelse
           
@@ -95,12 +221,42 @@ classes:
         description: |
           Arbeidsforhold til en personalressurs
         multivalued: true
+      fullmakt:
+        range: Fullmakt
+        inverse: fullmektig
+        description: |
+          Fullmakter som Personalressursen har blitt gitt.
+        multivalued: true
+      leder:
+        range: Organisasjonselement
+        inverse: leder
+        description: |
+          Ansvarlig leder for organisasjonselementet
+          
+          # Beskrivelse
+          Normalt vil dette være leder som har personal- og økonomi-ansvar for dette organisasjonselementet.
+          
+          # Format
+          Relasjon til en bestemt leder (Personalressurs).
+          
+          # Eksempler
+        multivalued: true
       person:
         range: Person
         inverse: personalressurs
         description: |
           Person som er en personalressurs
         required: true
+      personalansvar:
+        range: Arbeidsforhold
+        inverse: personalleder
+        description: |
+          Arbeidsforhold som Personalressurs har personalansvar for.
+          
+          # Beskrivelse
+          
+          Personalansvar
+        multivalued: true
       personalressurskategori:
         range: Personalressurskategori
         description: |
@@ -118,6 +274,18 @@ classes:
           
           Se kodeverk Personalressurskategori for utvidet eksempel.
         required: true
+      stedfortreder:
+        range: Fullmakt
+        inverse: stedfortreder
+        description: |
+          Personalressurs som er stedfortreder for den fullmektige.
+          
+          # Beskrivelse
+          
+          Gjeldende stedfortreder innenfor angitt gyldighetsperiode til fullmakten.
+          
+          Dersom det finnes flere stedfortredere må kildesystemet velge den stedfortreder som er den primære. Stedfortreder må være tilgjengelig i perioden som fullmakten er gyldig.
+        multivalued: true
 
   Arbeidsforhold:
     description: |
@@ -183,6 +351,12 @@ classes:
           
           true/false
         required: true
+      lønn:
+        range: Lønn
+        inverse: arbeidsforhold
+        description: |
+          Alle lønnsutbetalinger for et arbeidsforhold
+        multivalued: true
       lønnsprosent:
         range: integer
         description: |
@@ -335,6 +509,17 @@ classes:
           R1 Visma 2 kostra funksjoner:
           
           For eksempel koden til "Studiespesialisering" eller "PEDAGOGISK LEDELSE OG PEDAGOGISKE FELLESUTGIFTER".
+      personalleder:
+        range: Personalressurs
+        inverse: personalansvar
+        annotations:
+          primaryRelation: true
+        description: |
+          Personalleder til et arbeidsforhold.
+          
+          # Beskrivelse
+          
+          Indikerer personalleder til et arbeidsforhold.
       personalressurs:
         range: Personalressurs
         inverse: arbeidsforhold

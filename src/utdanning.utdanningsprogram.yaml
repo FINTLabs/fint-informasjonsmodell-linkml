@@ -7,7 +7,6 @@ imports:
   - felles.komplekse-datatyper
   - administrasjon.organisasjon
   - utdanning.basisklasser
-  - utdanning.elev
   - utdanning.kodeverk
   - utdanning.timeplan
 
@@ -48,15 +47,8 @@ classes:
       * Grepwiki: http://grepwiki.udir.no/index.php?title=Programområde
     is_a: Gruppe
     attributes:
-      fag:
-        range: Fag
-        inverse: programområde
-        description: |
-          Alle fag som er relaterte til en gitt programområdet
-        multivalued: true
       trinn:
         range: Årstrinn
-        inverse: programområde
         description: |
           Alle trinn som finnes på dette programområdet
         multivalued: true
@@ -141,8 +133,17 @@ classes:
           * Moelv videregående skole (som Skole)
           * Telemark fylkeskommune (som Skoleeier)
         required: true
+      utdanningsforhold:
+        range: Utdanningsforhold
+        inverse: skole
+        description: |
+          Alle utdanningsforhold (elever og lærere) knyttet til en skole.
+        multivalued: true
       fag:
         range: Fag
+        inverse: skole
+        annotations:
+          primaryRelation: true
         description: |
           Fagene som skolen tilbyr
         multivalued: true
@@ -153,7 +154,7 @@ classes:
           primaryRelation: true
         description: |
           Referanse til Adminsitrasjons domenet
-      skoleeiertype:
+      skoleeierType:
         range: Skoleeiertype
         description: |
           Er denne skolen eid av kommunen, fylke, private aktører eller noe annet.
@@ -171,6 +172,7 @@ classes:
           * Vigo Kodeverkdatabase: [vigo.no/vigokv/skole.action](https://www.vigo.no/vigokv/skole.action)
       utdanningsprogram:
         range: Utdanningsprogram
+        inverse: skole
         description: |
           Utdanningsprogram som inngår på en skole
         multivalued: true
@@ -214,6 +216,14 @@ classes:
         description: |
           Alle underliggende programområdene
         multivalued: true
+      skole:
+        range: Skole
+        inverse: utdanningsprogram
+        annotations:
+          primaryRelation: true
+        description: |
+          Alle skoler som tilbyr utdanningsprogrammet
+        multivalued: true
 
   Årstrinn:
     description: |
@@ -237,18 +247,3 @@ classes:
       * http://grepwiki.udir.no/index.php?title=Årstrinn
       * http://psi.udir.no/ontologi/kl06/aarstrinn
     is_a: Gruppe
-    attributes:
-      basisgruppe:
-        range: Basisgruppe
-        inverse: trinn
-        description: |
-          Basisgruppene som hører hjemme på dette trinnet
-        multivalued: true
-      programområde:
-        range: Programområde
-        inverse: trinn
-        annotations:
-          primaryRelation: true
-        description: |
-          Alle programområder som er relevante for trinnet
-        multivalued: true

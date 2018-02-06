@@ -48,9 +48,6 @@ classes:
         multivalued: true
       trinn:
         range: Årstrinn
-        inverse: basisgruppe
-        annotations:
-          primaryRelation: true
         description: |
           Det overordnet trinnet som gruppen hører inn i
         required: true
@@ -68,7 +65,7 @@ classes:
       brukernavn:
         range: Identifikator
         description: |
-          Brukernavn til en person
+          Brukernavn til en elev
           
           # Beskrivelse
           
@@ -142,7 +139,6 @@ classes:
         range: Elevkategori
         description: |
           Kategori på et elevforhold
-        required: true
 
   Kontaktlærergruppe:
     description: |
@@ -182,22 +178,14 @@ classes:
           
           Dette kan være identifikator som eksisterer i SAS (SATS, Extens).
         required: true
-      deltaker:
-        range: Utdanningsforhold
-        inverse: medlemskap
-        annotations:
-          primaryRelation: true
-        description: |
-          Alle deltakere i medlemskapet. Det er viktig å notere at det er både elevene og lærere som inngår i medlemskap i grupper.
-        required: true
-      endeligVurdering:
+      endeligKarakter:
         range: Vurdering
         description: |
-          Den endelige vurderingen som eleven har fått som resultat av deltakelse i en gruppe
-      fortløpendeVurdering:
+          Det endelige karakteret som eleven har fått som resultat av deltakelse i en gruppe
+      fortløpendeKarater:
         range: Vurdering
         description: |
-          Fortløpende vurdering som eleven har fått som resultat av deltakelse i en gruppe
+          Fortløpende karakterer som eleven har fått som resultat av deltakelse i en gruppe
           
           # Eksempler
           
@@ -215,6 +203,14 @@ classes:
           primaryRelation: true
         description: |
           Gruppen som omtales i medlemskapet
+        required: true
+      medlem:
+        range: Utdanningsforhold
+        inverse: medlemskap
+        annotations:
+          primaryRelation: true
+        description: |
+          Alle deltakere i medlemskapet. Det er viktig å notere at det er både elevene og lærere som inngår i medlemskap i grupper.
         required: true
 
   Undervisningsforhold:

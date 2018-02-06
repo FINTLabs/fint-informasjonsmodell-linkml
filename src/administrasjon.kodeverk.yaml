@@ -5,6 +5,8 @@ imports:
   - linkml:types
   - felles.basisklasser
   - felles.komplekse-datatyper
+  - administrasjon.fullmakt
+  - administrasjon.organisasjon
 
 classes:
 
@@ -17,12 +19,29 @@ classes:
       Ansvar viser hvordan ansvaret i organisasjonen er bygd opp i samsvar med fylkeskommunens anvisningsmyndighet.
       
       Alternative navn: `Kostsenter`, `Koststed`.
-    is_a: Kodeverk
+    is_a: Kontodimensjon
     attributes:
-      forelder:
-        range: Ansvar
+      organisasjonselement:
+        range: Organisasjonselement
+        inverse: ansvar
         description: |
-          For å bygge hierarki av Ansvar
+          Organisasjonselement ansvar er knyttet til.
+        multivalued: true
+      overordnet:
+        range: Ansvar
+        inverse: underordnet
+        annotations:
+          primaryRelation: true
+        description: |
+          Overordnet ansvar
+      underordnet:
+        range: Ansvar
+        inverse: overordnet
+        annotations:
+          primaryRelation: true
+        description: |
+          Alle underansvar
+        multivalued: true
 
   Arbeidsforholdstype:
     description: |
@@ -48,7 +67,7 @@ classes:
       E    |    Midlertidig
       ...   | ...
       Z    |    Annet
-    is_a: Kodeverk
+    is_a: Begrep
     attributes:
       forelder:
         range: Arbeidsforholdstype
@@ -64,38 +83,51 @@ classes:
       Alternativt navn: Konto
       
       Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er drift, investering eller balanse.
-    is_a: Kodeverk
+    is_a: Kontodimensjon
 
   Funksjon:
     description: |
-      Del av kontostrenges som beskriver hva som produseres
+      Del av kontostrengen som beskriver hva som produseres
       
       # Beskrivelse
       
       Funksjon viser fylkeskommunens aktivitet og tjenesteproduksjon.
       
       Alternativ navn: `Tjeneste`
-    is_a: Kodeverk
+    is_a: Kontodimensjon
     attributes:
-      forelder:
+      overordnet:
         range: Funksjon
+        inverse: underordnet
+        annotations:
+          primaryRelation: true
         description: |
-          For å bygge hierarki av Funksjon
+          Overordnet funksjon.
+      underordnet:
+        range: Funksjon
+        inverse: overordnet
+        annotations:
+          primaryRelation: true
+        description: |
+          De underordnede funksjonene.
+        multivalued: true
 
-  Kodeverk:
+  Kontodimensjon:
+    description: |
+      Abstrakt fellesbegrep som beskriver dimensjon i kontoplan.
+      
+      # Beskrivelse
+      
+      Fellesbenevnelse for dimensjoner i en kontoplan.
     abstract: true
     is_a: Begrep
     attributes:
-      passiv:
-        range: boolean
+      fullmakt:
+        range: Fullmakt
+        inverse: myndighet
         description: |
-          Angir at koden er passiv, og ikke kan velges.
-          
-          # Beskrivelse
-          
-          Passive koder kan henvises til i eksisterende data, men kan ikke velges ved registrering av nye data.
-          
-          Medmindre attributten finnes og er satt til usann regnes koden som aktiv.
+          Alle fullmakter knyttet til kontodimensjonen.
+        multivalued: true
 
   Lønnsart:
     description: |
@@ -113,7 +145,7 @@ classes:
       
       * Rapportering av ytelser på A-meldingen: http://veiledning-amelding.smartlearn.no/Veiledn_Generell/index.html#!Documents/rapporteringavkontantytelser.htm
       * Altinn: Innholdet i A-meldingen: https://www.altinn.no/no/a-ordningen/om-a-meldingen/Innholdet-i-a-meldingen/
-    is_a: Kodeverk
+    is_a: Begrep
 
   Personalressurskategori:
     description: |
@@ -151,12 +183,14 @@ classes:
       6 | Ikke ansatt - kun bruker
       7 | Politikere
       8|  Selvstendig næringsdrivende
-    is_a: Kodeverk
+    is_a: Begrep
 
   Prosjekt:
     description: |
-      Del av kontostrengen som peker på løpende prosjekter.
-    is_a: Kodeverk
+      Del av kontostrengen som peker på løpende prosjekter
+      
+      .
+    is_a: Kontodimensjon
 
   Stillingskode:
     description: |
@@ -167,7 +201,7 @@ classes:
       I det fylkeskommunale lønnssystemet har alle stillinger en stillingskode og en stillingsbetegnelse (for eksempel 7026 for bibliotekar eller 7076 for hjelpepleier). Stillingskoden kan angi noe om stillingens innhold og lønnsnivå.
       
       Det finnes en [KS standard for stillingskoder](http://www.ks.no/globalassets/vedlegg-til-hvert-fagomrader/arbeidsgiver/lonnpersonal---analyse-og-statistikk/innsamling-av-data/del-3---stillingskoder.pdf)
-    is_a: Kodeverk
+    is_a: Begrep
     attributes:
       forelder:
         range: Stillingskode
@@ -194,4 +228,4 @@ classes:
       36,0     |   36,0 timers uke
       37,5     |   37,5 timers uke
       ...    | ...
-    is_a: Kodeverk
+    is_a: Begrep

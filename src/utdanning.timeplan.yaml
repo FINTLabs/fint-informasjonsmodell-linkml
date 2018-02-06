@@ -47,12 +47,15 @@ classes:
     attributes:
       programområde:
         range: Programområde
-        inverse: fag
-        annotations:
-          primaryRelation: true
         description: |
           Det overordnet progmraområdet
         required: true
+      skole:
+        range: Skole
+        inverse: fag
+        description: |
+          Alle skoler som tilbyr faget
+        multivalued: true
 
   Rom:
     description: |

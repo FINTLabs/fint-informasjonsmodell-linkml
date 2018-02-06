@@ -5,6 +5,7 @@ imports:
   - linkml:types
   - felles.basisklasser
   - felles.komplekse-datatyper
+  - administrasjon.kodeverk
   - administrasjon.personal
   - utdanning.utdanningsprogram
 
@@ -111,6 +112,14 @@ classes:
           * Faggruppe lønn
           * Askim Videregående skole
           * Avdeling for helse og sosial
+      ansvar:
+        range: Ansvar
+        inverse: organisasjonselement
+        annotations:
+          primaryRelation: true
+        description: |
+          Ansvar i kontoplanen som organisasjonselement er knyttet til.
+        multivalued: true
       arbeidsforhold:
         range: Arbeidsforhold
         inverse: arbeidssted
@@ -119,6 +128,9 @@ classes:
         multivalued: true
       leder:
         range: Personalressurs
+        inverse: leder
+        annotations:
+          primaryRelation: true
         description: |
           Ansvarlig leder for organisasjonselementet
           
@@ -146,7 +158,6 @@ classes:
           
           * *Faggruppe for digitalisering og systemforvaltning* refererer til overordnet organisasjonselement, som er *IT-seksjonen*.
           * *Avdeling for helse og sosial* kan referere til organisasjonselemenetet til skolen, som kan være *Byremo videregående skole*
-        required: true
       skole:
         range: Skole
         inverse: organisasjon

@@ -286,6 +286,8 @@ classes:
           
           Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601":https://en.wikipedia.org/wiki/ISO_8601)
           
+          Dersom klokkeslett ikke er definert, skal 00:00:00Z benyttes.
+          
           YYYY-MM-DDThh:mm:ssZ
           
           # Eksempel
@@ -304,6 +306,8 @@ classes:
           # Format
           
           Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601":https://en.wikipedia.org/wiki/ISO_8601)
+          
+          Dersom klokkeslett ikke er definert, skal 00:00:00Z benyttes.
           
           YYYY-MM-DDThh:mm:ssZ
           

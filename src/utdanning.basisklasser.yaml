@@ -7,6 +7,7 @@ imports:
   - felles.komplekse-datatyper
   - utdanning.elev
   - utdanning.kodeverk
+  - utdanning.utdanningsprogram
 
 classes:
 
@@ -112,7 +113,14 @@ classes:
         required: true
       medlemskap:
         range: Medlemskap
-        inverse: deltaker
+        inverse: medlem
         description: |
           Alle gruppene som elev eller lærer er medlem av.
         multivalued: true
+      skole:
+        range: Skole
+        inverse: utdanningsforhold
+        annotations:
+          primaryRelation: true
+        description: |
+          Skole som utdanningsforhold er knyttet til.

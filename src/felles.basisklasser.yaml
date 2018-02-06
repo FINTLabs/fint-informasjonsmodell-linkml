@@ -70,6 +70,16 @@ classes:
         description: |
           Hovednavn for begrepet
         required: true
+      passiv:
+        range: boolean
+        description: |
+          Angir at koden er passiv, og ikke kan velges.
+          
+          # Beskrivelse
+          
+          Passive koder kan henvises til i eksisterende data, men kan ikke velges ved registrering av nye data.
+          
+          Medmindre attributten finnes og er satt til usann regnes koden som aktiv.
 
   Enhet:
     description: |
