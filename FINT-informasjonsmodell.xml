@@ -139,6 +139,71 @@ Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er d
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_288919598d0845dc45" general="EAID_CLS_b2d51228fff1754e2b" start="EAID_CLS_b86eb7152bf9ecacd7" end="EAID_CLS_b2d51228fff1754e2b" />
               </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_9bda5b4490bce8664e" name="Fraværsgrunn">
+              <properties documentation="Grunn til fravær.&#10;&#10;# Eksempel&#10;&#10;- Arbeidsrelatert&#10;- Ikke arbeidsrelatert&#10;- Svangerskap&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d673e7391f273fd8f3">
+                <body>Grunn til fravær.
+
+# Eksempel
+
+- Arbeidsrelatert
+- Ikke arbeidsrelatert
+- Svangerskap
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_d673e7391f273fd8f3" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_9bda5b4490bce8664e" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_4fbf27adb2c39ef587" name="Fraværstype">
+              <properties documentation="Type fravær.&#10;&#10;# Beskrivelse&#10;&#10;Inneholder informasjon om hva slags type fravær det er som registreres, eksempelvis ferie, permisjon eller sykdom.&#10;&#10;Typen fravær brukes av HRM-systemet til å bestemme om fraværet har lønnskonsekvens, hvilken lønnsart som i så fall skal brukes, og om den er knyttet til en permisjon.&#10;&#10;# Eksempel&#10;&#10;- Egenmelding&#10;- Syk med legemelding&#10;- Barn og/ eller barnepassers sykdom&#10;- Ferie med lønn&#10;- Velferdspermisjon med lønn&#10;- Utdanningspermisjon med lønn&#10;- Utdanningspermisjon uten lønn&#10;- Foreldrepermisjon 100%&#10;- Foreldrepermisjon 80 %&#10;- Avspasering&#10;- Møter&#10;- Kurs&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_bfa575995af70ba69b">
+                <body>Type fravær.
+
+# Beskrivelse
+
+Inneholder informasjon om hva slags type fravær det er som registreres, eksempelvis ferie, permisjon eller sykdom.
+
+Typen fravær brukes av HRM-systemet til å bestemme om fraværet har lønnskonsekvens, hvilken lønnsart som i så fall skal brukes, og om den er knyttet til en permisjon.
+
+# Eksempel
+
+- Egenmelding
+- Syk med legemelding
+- Barn og/ eller barnepassers sykdom
+- Ferie med lønn
+- Velferdspermisjon med lønn
+- Utdanningspermisjon med lønn
+- Utdanningspermisjon uten lønn
+- Foreldrepermisjon 100%
+- Foreldrepermisjon 80 %
+- Avspasering
+- Møter
+- Kurs
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_bfa575995af70ba69b" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_4fbf27adb2c39ef587" end="EAID_CLS_3385458244847ec7db" />
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_15237ba8b21bdac3c9" name="overføres" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Boolean" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_ee2bcedf71e48ff130" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_ee2bcedf71e48ff130" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_ee2bcedf71e48ff130">
+                  <body>Angir om fravær av denne typen skal overføres til HR.
+
+# Beskrivelse
+
+Enkelte typer fravær indikerer fravær fra ordinære arbeidsoppgaver som utløser behov for vikar, men ikke fravær fra arbeidsforholdet.
+
+Disse skal ikke registreres i HR-systemet, men må likevel registreres i systemer som håndterer vikarer.
+
+Dersom feltet mangler, skal dette tolkes som at typen skal overføres.
+
+# Eksempel
+
+- Kurs
+- Møter
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_b2fbf668ea3689009c" name="Funksjon">
               <properties documentation="Del av kontostrengen som beskriver hva som produseres&#10;&#10;# Beskrivelse&#10;&#10;Funksjon viser fylkeskommunens aktivitet og tjenesteproduksjon.&#10;&#10;Alternativ navn: `Tjeneste`&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d35798c615275abc97">
@@ -312,6 +377,15 @@ Fag- og gruppekode en lærer underviser i.
 </body>
                   </ownedComment>
                 </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_b2a87c824c3db20122" name="periode" visibility="public">
+                <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_f4b93d777f56a7b5d1" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_f4b93d777f56a7b5d1" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_f4b93d777f56a7b5d1">
+                  <body>Periode når grunnlaget ble opptjent.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_e1232a2ec281a4cc9f" name="prosent" visibility="public">
                 <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Integer" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_fea942309062221af9" value="1" />
@@ -357,6 +431,15 @@ Forklarende beskrivelse av tillegget, til bruk i behandling av lønnsmeldingen, r
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_eead16a41640a22abc" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_eead16a41640a22abc">
                   <body>Kontering av tillegget.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_e4a576679215e181f7" name="periode" visibility="public">
+                <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_bc28812257ecdc25f4" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_bc28812257ecdc25f4" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_bc28812257ecdc25f4">
+                  <body>Periode når grunnlaget ble opptjent.
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -463,7 +546,7 @@ Forklarende beskrivelse av tillegget, til bruk i behandling av lønnsmeldingen, r
                 </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_e559fb7be82fcab304" name="periode" visibility="public">
                 <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_26ca0650e28e127824" value="1" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_26ca0650e28e127824" value="0" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_26ca0650e28e127824" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_26ca0650e28e127824">
                   <body>Periode når grunnlaget ble opptjent.
@@ -642,6 +725,65 @@ Kan også inneholde faste tillegg.
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_99e1fdeee7693150be" name="Fravær">
+              <properties documentation="Fravær fra et arbeidsforhold.&#10;&#10;# Beskrivelse&#10;&#10;Representerer fravær fra et gitt arbeidsforhold. Fraværet har en type og en varighet, og kan være helt eller delvis.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_4eedfd08aed4902cca">
+                <body>Fravær fra et arbeidsforhold.
+
+# Beskrivelse
+
+Representerer fravær fra et gitt arbeidsforhold. Fraværet har en type og en varighet, og kan være helt eller delvis.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_242006e4a151c9fc0a" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_4a9b9bd98e02f68498" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_4a9b9bd98e02f68498" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_4a9b9bd98e02f68498">
+                  <body>Unik identifikator i personalsystemet for fraværet.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_2e192450a7d5f6dbed" name="periode" visibility="public">
+                <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_22a78abce7b9dc9dab" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_22a78abce7b9dc9dab" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_22a78abce7b9dc9dab">
+                  <body>Periode for fraværet.
+
+Forskjellige fraværstyper kan ha begrensninger i forhold til om perioden må være et antall timer eller et antall dager.
+
+Perioden angir både tidspunkt for fraværet og varighet av fraværet.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_2e8f237c2c6e3a0a39" name="prosent" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Integer" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_a413e8cb244689b0e0" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_a413e8cb244689b0e0" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a413e8cb244689b0e0">
+                  <body>Prosent fraværende, i hundredels prosent.
+
+# Beskrivelse
+
+Andel av ansettelsesprosent den ansatte er fraværende.  Dersom fraværet er knyttet til flere arbeidsforhold, gjelder prosenten for summen av ansettelsesprosentene.
+
+# Eksempel
+
+- Helt sykemeldt fra 100% stilling:
+  - 10000
+- 50% permisjon fra 80% stilling:
+  - 4000
+- 80% gradert sykemelding fra to stillinger på 20% hver
+  - 3200
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_31837c454a6d963810" visibility="public" start="EAID_CLS_99e1fdeee7693150be" end="EAID_CLS_7ab71940bab910a223" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_6eef7e1094105f99a0" visibility="public" start="EAID_CLS_99e1fdeee7693150be" end="EAID_CLS_99e1fdeee7693150be" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_79b2a8e2eb9122f104" visibility="public" start="EAID_CLS_99e1fdeee7693150be" end="EAID_CLS_9bda5b4490bce8664e" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_9ad61b9d983ad34c8f" visibility="public" start="EAID_CLS_99e1fdeee7693150be" end="EAID_CLS_4fbf27adb2c39ef587" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_081589ccb697846d22" name="Lønn" isAbstract="true">
               <properties documentation="Informasjon om lønn for et arbeidsforhold.&#10;&#10;# Beskrivelse&#10;&#10;Lønn (eller Lønnsmelding) inneholder informasjon om lønn som skal utbetales for et arbeidsforhold.  Lønn er enten Fastlønn eller Variabellønn.&#10;&#10;Lønnsmeldinger blir kontert, attestert og anvist av personalressurser som har fullmakter til dette.&#10;&#10;Lønn utbetales til et arbeidsforhold, for en gitt periode.&#10;" stereotype="abstrakt" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_b0735c32020a3e6432">
@@ -2164,38 +2306,30 @@ Dette kan være identifikator som eksisterer i SAS (SATS, Extens).
 </body>
                   </ownedComment>
                 </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_335a541fc930ba99fa" name="endeligKarakter" visibility="public">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_91b26d4b901be7bfcc" name="endeligVurdering" visibility="public">
                 <type xmi:idref="EAID_CLS_9c406643c5c3706d8d" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_a92f1cfa3451f13085" value="0" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_a92f1cfa3451f13085" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a92f1cfa3451f13085">
-                  <body>Det endelige karakteret som eleven har fått som resultat av deltakelse i en gruppe
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_0ddf5d550b01866ca0" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_0ddf5d550b01866ca0" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_0ddf5d550b01866ca0">
+                  <body>Den endelige vurderingen som eleven har fått som resultat av deltakelse i en gruppe
 </body>
                   </ownedComment>
                 </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_d1383c94ac3d0204fc" name="fortløpendeKarater" visibility="public">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_0269d06b713cbd7d6e" name="fortløpendeVurdering" visibility="public">
                 <type xmi:idref="EAID_CLS_9c406643c5c3706d8d" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_6142f74cd083a5721c" value="0" />
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_UPR_6142f74cd083a5721c" value="*" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_6142f74cd083a5721c">
-                  <body>Fortløpende karakterer som eleven har fått som resultat av deltakelse i en gruppe
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_abe38941732b44c330" value="0" />
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_UPR_abe38941732b44c330" value="*" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_abe38941732b44c330">
+                  <body>Fortløpende vurdering som eleven har fått som resultat av deltakelse i en gruppe
 
 # Eksempler
 
-* Terminkarakter
-</body>
-                  </ownedComment>
-                </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_4320b92c76464e1ecb" name="fravær" visibility="public">
-                <type xmi:idref="EAID_CLS_b797d91b36de62cbc1" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_d3f8303297bf41390a" value="0" />
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_UPR_d3f8303297bf41390a" value="*" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d3f8303297bf41390a">
-                  <body>Fraværet til både lærer og elev som har vært registrert innen en gitt gruppe.
+- Terminkarakter
 </body>
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_4320b92c76464e1ecb" visibility="public" start="EAID_CLS_923314dcb9bf6b4540" end="EAID_CLS_99e1fdeee7693150be" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_2e30deb33b9d9cf34a" visibility="public" start="EAID_CLS_923314dcb9bf6b4540" end="EAID_CLS_a62447c9dd60a973b1" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_993dfa346dbc36a8ad" visibility="public" start="EAID_CLS_923314dcb9bf6b4540" end="EAID_CLS_9564bd355ac64bb4d6" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_917b8b67ec1ceae3be" name="Undervisningsforhold">
@@ -8395,6 +8529,26 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties isAbstract="false" sType="Class" scope="public" documentation="Kodeverk som er en del av kontostrengen som beskriver hva slags inntekter og utgifter det gjelder. &#10;&#10;# Beskrivelse&#10;&#10;Alternativt navn: Konto&#10;&#10;Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er drift, investering eller balanse.&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
+      <element xmi:idref="EAID_CLS_9bda5b4490bce8664e" idref="EAID_CLS_9bda5b4490bce8664e" xmi:type="uml:Class" type="Class" name="Fraværsgrunn" scope="public">
+        <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Grunn til fravær.&#10;&#10;# Eksempel&#10;&#10;- Arbeidsrelatert&#10;- Ikke arbeidsrelatert&#10;- Svangerskap&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_4fbf27adb2c39ef587" idref="EAID_CLS_4fbf27adb2c39ef587" xmi:type="uml:Class" type="Class" name="Fraværstype" scope="public">
+        <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Type fravær.&#10;&#10;# Beskrivelse&#10;&#10;Inneholder informasjon om hva slags type fravær det er som registreres, eksempelvis ferie, permisjon eller sykdom.&#10;&#10;Typen fravær brukes av HRM-systemet til å bestemme om fraværet har lønnskonsekvens, hvilken lønnsart som i så fall skal brukes, og om den er knyttet til en permisjon.&#10;&#10;# Eksempel&#10;&#10;- Egenmelding&#10;- Syk med legemelding&#10;- Barn og/ eller barnepassers sykdom&#10;- Ferie med lønn&#10;- Velferdspermisjon med lønn&#10;- Utdanningspermisjon med lønn&#10;- Utdanningspermisjon uten lønn&#10;- Foreldrepermisjon 100%&#10;- Foreldrepermisjon 80 %&#10;- Avspasering&#10;- Møter&#10;- Kurs&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_15237ba8b21bdac3c9" idref="EAID_PRP_15237ba8b21bdac3c9" name="overføres">
+            <properties type="boolean" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Angir om fravær av denne typen skal overføres til HR.&#10;&#10;# Beskrivelse&#10;&#10;Enkelte typer fravær indikerer fravær fra ordinære arbeidsoppgaver som utløser behov for vikar, men ikke fravær fra arbeidsforholdet.&#10;&#10;Disse skal ikke registreres i HR-systemet, men må likevel registreres i systemer som håndterer vikarer.&#10;&#10;Dersom feltet mangler, skal dette tolkes som at typen skal overføres.&#10;&#10;# Eksempel&#10;&#10;- Kurs&#10;- Møter&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
       <element xmi:idref="EAID_CLS_b2fbf668ea3689009c" idref="EAID_CLS_b2fbf668ea3689009c" xmi:type="uml:Class" type="Class" name="Funksjon" scope="public">
         <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
         <tags />
@@ -8456,8 +8610,15 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
           <attribute xmi:idref="EAID_PRP_1ed988323ac41d14fb" idref="EAID_PRP_1ed988323ac41d14fb" name="kontostreng">
             <properties type="Kontostreng" />
             <bounds lower="1" upper="1" />
-            <stereotype stereotype="" />
+            <stereotype stereotype="writable" />
             <documentation value="Kontering av beskjeftigelsen.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_b2a87c824c3db20122" idref="EAID_PRP_b2a87c824c3db20122" name="periode">
+            <properties type="Periode" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Periode når grunnlaget ble opptjent.&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_e1232a2ec281a4cc9f" idref="EAID_PRP_e1232a2ec281a4cc9f" name="prosent">
@@ -8491,8 +8652,15 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
           <attribute xmi:idref="EAID_PRP_6ce07cb074de3ed986" idref="EAID_PRP_6ce07cb074de3ed986" name="kontostreng">
             <properties type="Kontostreng" />
             <bounds lower="1" upper="1" />
-            <stereotype stereotype="" />
+            <stereotype stereotype="writable" />
             <documentation value="Kontering av tillegget.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_e4a576679215e181f7" idref="EAID_PRP_e4a576679215e181f7" name="periode">
+            <properties type="Periode" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Periode når grunnlaget ble opptjent.&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -8532,13 +8700,13 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
           <attribute xmi:idref="EAID_PRP_b0c13718ea38100fd8" idref="EAID_PRP_b0c13718ea38100fd8" name="kontostreng">
             <properties type="Kontostreng" />
             <bounds lower="1" upper="1" />
-            <stereotype stereotype="" />
+            <stereotype stereotype="writable" />
             <documentation value="Kontering av tillegget.&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_e559fb7be82fcab304" idref="EAID_PRP_e559fb7be82fcab304" name="periode">
             <properties type="Periode" />
-            <bounds lower="1" upper="1" />
+            <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
             <documentation value="Periode når grunnlaget ble opptjent.&#10;" />
             <tags />
@@ -8612,6 +8780,34 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
             <bounds lower="0" upper="*" />
             <stereotype stereotype="writable" />
             <documentation value="Faste tillegg til utbetaling.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_99e1fdeee7693150be" idref="EAID_CLS_99e1fdeee7693150be" xmi:type="uml:Class" type="Class" name="Fravær" scope="public">
+        <model package="EAID_PKG_b8abbe9c3c43e8a841" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Fravær fra et arbeidsforhold.&#10;&#10;# Beskrivelse&#10;&#10;Representerer fravær fra et gitt arbeidsforhold. Fraværet har en type og en varighet, og kan være helt eller delvis.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_242006e4a151c9fc0a" idref="EAID_PRP_242006e4a151c9fc0a" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Unik identifikator i personalsystemet for fraværet.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_2e192450a7d5f6dbed" idref="EAID_PRP_2e192450a7d5f6dbed" name="periode">
+            <properties type="Periode" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Periode for fraværet.&#10;&#10;Forskjellige fraværstyper kan ha begrensninger i forhold til om perioden må være et antall timer eller et antall dager.&#10;&#10;Perioden angir både tidspunkt for fraværet og varighet av fraværet.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_2e8f237c2c6e3a0a39" idref="EAID_PRP_2e8f237c2c6e3a0a39" name="prosent">
+            <properties type="long" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Prosent fraværende, i hundredels prosent.&#10;&#10;# Beskrivelse&#10;&#10;Andel av ansettelsesprosent den ansatte er fraværende.  Dersom fraværet er knyttet til flere arbeidsforhold, gjelder prosenten for summen av ansettelsesprosentene.&#10;&#10;# Eksempel&#10;&#10;- Helt sykemeldt fra 100% stilling:&#10;  - 10000&#10;- 50% permisjon fra 80% stilling:&#10;  - 4000&#10;- 80% gradert sykemelding fra to stillinger på 20% hver&#10;  - 3200&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -9175,25 +9371,18 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
             <documentation value="Systemidentifikator i fagsystem&#10;&#10;# Beskrivelse &#10;&#10;Dette kan være identifikator som eksisterer i SAS (SATS, Extens).&#10;" />
             <tags />
             </attribute>
-          <attribute xmi:idref="EAID_PRP_335a541fc930ba99fa" idref="EAID_PRP_335a541fc930ba99fa" name="endeligKarakter">
+          <attribute xmi:idref="EAID_PRP_91b26d4b901be7bfcc" idref="EAID_PRP_91b26d4b901be7bfcc" name="endeligVurdering">
             <properties type="Vurdering" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Det endelige karakteret som eleven har fått som resultat av deltakelse i en gruppe&#10;" />
+            <documentation value="Den endelige vurderingen som eleven har fått som resultat av deltakelse i en gruppe&#10;" />
             <tags />
             </attribute>
-          <attribute xmi:idref="EAID_PRP_d1383c94ac3d0204fc" idref="EAID_PRP_d1383c94ac3d0204fc" name="fortløpendeKarater">
+          <attribute xmi:idref="EAID_PRP_0269d06b713cbd7d6e" idref="EAID_PRP_0269d06b713cbd7d6e" name="fortløpendeVurdering">
             <properties type="Vurdering" />
             <bounds lower="0" upper="*" />
             <stereotype stereotype="" />
-            <documentation value="Fortløpende karakterer som eleven har fått som resultat av deltakelse i en gruppe&#10;&#10;# Eksempler&#10;&#10;* Terminkarakter&#10;" />
-            <tags />
-            </attribute>
-          <attribute xmi:idref="EAID_PRP_4320b92c76464e1ecb" idref="EAID_PRP_4320b92c76464e1ecb" name="fravær">
-            <properties type="Fravær" />
-            <bounds lower="0" upper="*" />
-            <stereotype stereotype="" />
-            <documentation value="Fraværet til både lærer og elev som har vært registrert innen en gitt gruppe.&#10;" />
+            <documentation value="Fortløpende vurdering som eleven har fått som resultat av deltakelse i en gruppe&#10;&#10;# Eksempler&#10;&#10;- Terminkarakter&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -10514,6 +10703,38 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_d673e7391f273fd8f3" idref="EAID_GEN_d673e7391f273fd8f3" start="EAID_CLS_9bda5b4490bce8664e" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_9bda5b4490bce8664e" idref="EAID_CLS_9bda5b4490bce8664e">
+          <model type="Class" name="Fraværsgrunn" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_bfa575995af70ba69b" idref="EAID_GEN_bfa575995af70ba69b" start="EAID_CLS_4fbf27adb2c39ef587" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_4fbf27adb2c39ef587" idref="EAID_CLS_4fbf27adb2c39ef587">
+          <model type="Class" name="Fraværstype" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_d35798c615275abc97" idref="EAID_GEN_d35798c615275abc97" start="EAID_CLS_b2fbf668ea3689009c" end="EAID_CLS_b2d51228fff1754e2b">
         <source xmi:idref="EAID_CLS_b2fbf668ea3689009c" idref="EAID_CLS_b2fbf668ea3689009c">
           <model type="Class" name="Funksjon" />
@@ -10863,6 +11084,76 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
           <tags />
           </target>
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_31837c454a6d963810" idref="EAID_ASC_31837c454a6d963810" start="EAID_CLS_99e1fdeee7693150be" end="EAID_CLS_7ab71940bab910a223">
+        <source xmi:idref="EAID_CLS_99e1fdeee7693150be" idref="EAID_CLS_99e1fdeee7693150be">
+          <model type="Class" name="Fravær" />
+          <role visibility="Public" name="fravær" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle fravær knyttet til arbeidsforhold." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role name="arbeidsforhold" visibility="Public" />
+          <type multiplicity="1..*" />
+          <documentation value="Arbeidsforholdene fraværet gjelder for." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_6eef7e1094105f99a0" idref="EAID_ASC_6eef7e1094105f99a0" start="EAID_CLS_99e1fdeee7693150be" end="EAID_CLS_99e1fdeee7693150be">
+        <source xmi:idref="EAID_CLS_99e1fdeee7693150be" idref="EAID_CLS_99e1fdeee7693150be">
+          <model type="Class" name="Fravær" />
+          <role visibility="Public" name="fortsetter" />
+          <type multiplicity="0..1" />
+          <documentation value="Fraværet som dette fraværet er fortsettende for." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_99e1fdeee7693150be" idref="EAID_CLS_99e1fdeee7693150be">
+          <model type="Class" name="Fravær" />
+          <role name="fortsettelse" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Fortsettende fravær." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_79b2a8e2eb9122f104" idref="EAID_ASC_79b2a8e2eb9122f104" start="EAID_CLS_99e1fdeee7693150be" end="EAID_CLS_9bda5b4490bce8664e">
+        <source xmi:idref="EAID_CLS_99e1fdeee7693150be" idref="EAID_CLS_99e1fdeee7693150be">
+          <model type="Class" name="Fravær" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_9bda5b4490bce8664e" idref="EAID_CLS_9bda5b4490bce8664e">
+          <model type="Class" name="Fraværsgrunn" />
+          <role name="fraværsgrunn" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Grunn til fraværet." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_9ad61b9d983ad34c8f" idref="EAID_ASC_9ad61b9d983ad34c8f" start="EAID_CLS_99e1fdeee7693150be" end="EAID_CLS_4fbf27adb2c39ef587">
+        <source xmi:idref="EAID_CLS_99e1fdeee7693150be" idref="EAID_CLS_99e1fdeee7693150be">
+          <model type="Class" name="Fravær" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_4fbf27adb2c39ef587" idref="EAID_CLS_4fbf27adb2c39ef587">
+          <model type="Class" name="Fraværstype" />
+          <role name="fraværstype" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Type fravær." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_b7d07fb4c2c2854b66" idref="EAID_ASC_b7d07fb4c2c2854b66" start="EAID_CLS_081589ccb697846d22" end="EAID_CLS_7f69968205107fe6de">
@@ -11375,6 +11666,23 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
           <tags />
           </target>
         <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_4320b92c76464e1ecb" idref="EAID_ASC_4320b92c76464e1ecb" start="EAID_CLS_923314dcb9bf6b4540" end="EAID_CLS_99e1fdeee7693150be">
+        <source xmi:idref="EAID_CLS_923314dcb9bf6b4540" idref="EAID_CLS_923314dcb9bf6b4540">
+          <model type="Class" name="Medlemskap" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_99e1fdeee7693150be" idref="EAID_CLS_99e1fdeee7693150be">
+          <model type="Class" name="Fravær" />
+          <role name="fravær" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Fraværet til både lærer og elev som har vært registrert innen en gitt gruppe." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_2e30deb33b9d9cf34a" idref="EAID_ASC_2e30deb33b9d9cf34a" start="EAID_CLS_923314dcb9bf6b4540" end="EAID_CLS_a62447c9dd60a973b1">

@@ -45,6 +45,83 @@ classes:
           Faste tillegg til utbetaling.
         multivalued: true
 
+  Fravær:
+    description: |
+      Fravær fra et arbeidsforhold.
+      
+      # Beskrivelse
+      
+      Representerer fravær fra et gitt arbeidsforhold. Fraværet har en type og en varighet, og kan være helt eller delvis.
+    attributes:
+      systemId:
+        range: Identifikator
+        description: |
+          Unik identifikator i personalsystemet for fraværet.
+        required: true
+      periode:
+        range: Periode
+        annotations:
+          writeable: true
+        description: |
+          Periode for fraværet.
+          
+          Forskjellige fraværstyper kan ha begrensninger i forhold til om perioden må være et antall timer eller et antall dager.
+          
+          Perioden angir både tidspunkt for fraværet og varighet av fraværet.
+        required: true
+      prosent:
+        range: integer
+        annotations:
+          writeable: true
+        description: |
+          Prosent fraværende, i hundredels prosent.
+          
+          # Beskrivelse
+          
+          Andel av ansettelsesprosent den ansatte er fraværende.  Dersom fraværet er knyttet til flere arbeidsforhold, gjelder prosenten for summen av ansettelsesprosentene.
+          
+          # Eksempel
+          
+          - Helt sykemeldt fra 100% stilling:
+            - 10000
+          - 50% permisjon fra 80% stilling:
+            - 4000
+          - 80% gradert sykemelding fra to stillinger på 20% hver
+            - 3200
+        required: true
+      arbeidsforhold:
+        range: Arbeidsforhold
+        inverse: fravær
+        annotations:
+          primaryRelation: true
+        description: |
+          Arbeidsforholdene fraværet gjelder for.
+        multivalued: true
+        required: true
+      fortsettelse:
+        range: Fravær
+        inverse: fortsetter
+        annotations:
+          primaryRelation: true
+        description: |
+          Fortsettende fravær.
+      fortsetter:
+        range: Fravær
+        inverse: fortsettelse
+        annotations:
+          primaryRelation: true
+        description: |
+          Fraværet som dette fraværet er fortsettende for.
+      fraværsgrunn:
+        range: Fraværsgrunn
+        description: |
+          Grunn til fraværet.
+      fraværstype:
+        range: Fraværstype
+        description: |
+          Type fravær.
+        required: true
+
   Lønn:
     description: |
       Informasjon om lønn for et arbeidsforhold.
@@ -490,6 +567,12 @@ classes:
           
           # Eksempler
         required: true
+      fravær:
+        range: Fravær
+        inverse: arbeidsforhold
+        description: |
+          Alle fravær knyttet til arbeidsforhold.
+        multivalued: true
       funksjon:
         range: Funksjon
         description: |

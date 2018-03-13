@@ -85,6 +85,61 @@ classes:
       Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er drift, investering eller balanse.
     is_a: Kontodimensjon
 
+  Fraværsgrunn:
+    description: |
+      Grunn til fravær.
+      
+      # Eksempel
+      
+      - Arbeidsrelatert
+      - Ikke arbeidsrelatert
+      - Svangerskap
+    is_a: Begrep
+
+  Fraværstype:
+    description: |
+      Type fravær.
+      
+      # Beskrivelse
+      
+      Inneholder informasjon om hva slags type fravær det er som registreres, eksempelvis ferie, permisjon eller sykdom.
+      
+      Typen fravær brukes av HRM-systemet til å bestemme om fraværet har lønnskonsekvens, hvilken lønnsart som i så fall skal brukes, og om den er knyttet til en permisjon.
+      
+      # Eksempel
+      
+      - Egenmelding
+      - Syk med legemelding
+      - Barn og/ eller barnepassers sykdom
+      - Ferie med lønn
+      - Velferdspermisjon med lønn
+      - Utdanningspermisjon med lønn
+      - Utdanningspermisjon uten lønn
+      - Foreldrepermisjon 100%
+      - Foreldrepermisjon 80 %
+      - Avspasering
+      - Møter
+      - Kurs
+    is_a: Begrep
+    attributes:
+      overføres:
+        range: boolean
+        description: |
+          Angir om fravær av denne typen skal overføres til HR.
+          
+          # Beskrivelse
+          
+          Enkelte typer fravær indikerer fravær fra ordinære arbeidsoppgaver som utløser behov for vikar, men ikke fravær fra arbeidsforholdet.
+          
+          Disse skal ikke registreres i HR-systemet, men må likevel registreres i systemer som håndterer vikarer.
+          
+          Dersom feltet mangler, skal dette tolkes som at typen skal overføres.
+          
+          # Eksempel
+          
+          - Kurs
+          - Møter
+
   Funksjon:
     description: |
       Del av kontostrengen som beskriver hva som produseres

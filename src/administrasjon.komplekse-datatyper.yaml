@@ -30,9 +30,17 @@ classes:
         required: true
       kontostreng:
         range: Kontostreng
+        annotations:
+          writeable: true
         description: |
           Kontering av beskjeftigelsen.
         required: true
+      periode:
+        range: Periode
+        annotations:
+          writeable: true
+        description: |
+          Periode når grunnlaget ble opptjent.
       prosent:
         range: integer
         annotations:
@@ -69,9 +77,17 @@ classes:
         required: true
       kontostreng:
         range: Kontostreng
+        annotations:
+          writeable: true
         description: |
           Kontering av tillegget.
         required: true
+      periode:
+        range: Periode
+        annotations:
+          writeable: true
+        description: |
+          Periode når grunnlaget ble opptjent.
       lønnsart:
         range: Lønnsart
         description: |
@@ -171,6 +187,8 @@ classes:
         required: true
       kontostreng:
         range: Kontostreng
+        annotations:
+          writeable: true
         description: |
           Kontering av tillegget.
         required: true
@@ -180,7 +198,6 @@ classes:
           writeable: true
         description: |
           Periode når grunnlaget ble opptjent.
-        required: true
       lønnsart:
         range: Lønnsart
         description: |

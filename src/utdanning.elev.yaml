@@ -178,18 +178,18 @@ classes:
           
           Dette kan være identifikator som eksisterer i SAS (SATS, Extens).
         required: true
-      endeligKarakter:
+      endeligVurdering:
         range: Vurdering
         description: |
-          Det endelige karakteret som eleven har fått som resultat av deltakelse i en gruppe
-      fortløpendeKarater:
+          Den endelige vurderingen som eleven har fått som resultat av deltakelse i en gruppe
+      fortløpendeVurdering:
         range: Vurdering
         description: |
-          Fortløpende karakterer som eleven har fått som resultat av deltakelse i en gruppe
+          Fortløpende vurdering som eleven har fått som resultat av deltakelse i en gruppe
           
           # Eksempler
           
-          * Terminkarakter
+          - Terminkarakter
         multivalued: true
       fravær:
         range: Fravær
