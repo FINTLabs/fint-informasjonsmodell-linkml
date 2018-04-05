@@ -201,6 +201,23 @@ classes:
       * Rapportering av ytelser på A-meldingen: http://veiledning-amelding.smartlearn.no/Veiledn_Generell/index.html#!Documents/rapporteringavkontantytelser.htm
       * Altinn: Innholdet i A-meldingen: https://www.altinn.no/no/a-ordningen/om-a-meldingen/Innholdet-i-a-meldingen/
     is_a: Begrep
+    attributes:
+      kategori:
+        range: string
+        description: |
+          Kategori lønnsart
+          
+          # Beskrivelse
+          
+          Enkelte lønnsarter kan kun benyttes i sammenheng med enten fast eller variabel lønn.
+          
+          Kategori er et felt som indikerer denne begrensningen.
+          
+          # Eksempel
+          
+          - F: Kun fast lønn
+          - V: Kun variabel lønn
+        required: true
 
   Personalressurskategori:
     description: |

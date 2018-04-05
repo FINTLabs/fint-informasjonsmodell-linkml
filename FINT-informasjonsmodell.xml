@@ -251,6 +251,26 @@ Tidligere hadde lønnsart knytning til LTO-kode og LT-kode.
 </body>
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_bcb74521c763f2c514" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_f1d4a9bd27af04c15b" end="EAID_CLS_3385458244847ec7db" />
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_2c8d5716a6eb8b4064" name="kategori" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_8679c430ab328e023c" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_8679c430ab328e023c" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_8679c430ab328e023c">
+                  <body>Kategori lønnsart
+
+# Beskrivelse
+
+Enkelte lønnsarter kan kun benyttes i sammenheng med enten fast eller variabel lønn.
+
+Kategori er et felt som indikerer denne begrensningen.
+
+# Eksempel
+
+- F: Kun fast lønn
+- V: Kun variabel lønn
+</body>
+                  </ownedComment>
+                </ownedAttribute>
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_0e902a06c5b70e4340" name="Personalressurskategori">
               <properties documentation="Ansattform til et arbeidsforhold&#10;&#10;# Beskrivelse&#10;&#10;Alternativ navn:&#10;* Ansatt (er ikke datatype, men kodeverk)&#10;* Ansattkategori&#10;* Ansattformer&quot;&#10;&#10;# Eksempel&#10;&#10;## Eksempel fra Visma HR - Kategori:&#10;&#10;Kode | Beskrivelse&#10;---|---&#10;F | Fast&#10;M | Midlertidig&#10;O | Oppdragstaker&#10;P | Politiker&#10;S | Sluttet&#10;&#10;## Eksempel fra Agresso - Ressurstype:&#10;&#10;Kode  | Beskrivelse&#10;---|---&#10;1 | Ansatt - kommunal&#10;10 | Lærling/Ung arb.taker&#10;2 | Ansatt - undervisning&#10;3 | Honorar/godtgjørelse&#10;4 | Sluttet&#10;5 | Nyansatt&#10;6 | Ikke ansatt - kun bruker&#10;7 | Politikere&#10;8|  Selvstendig næringsdrivende&#10;" stereotype="hovedklasse" />
@@ -2222,6 +2242,21 @@ Fremtidig funksjon for dette feltet er under revisjon.
 </body>
                   </ownedComment>
                 </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_8d0e9372b71c722b17" name="feidenavn" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_4babd29c498c4105ec" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_4babd29c498c4105ec" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_4babd29c498c4105ec">
+                  <body>Fullt Feide-navn
+
+# Beskrivelse
+Dette er det samme som `eduPersonPrincipalName` i Feide skjemaet. Se [eduPersonPrincipalName](https://docs.feide.no/schema/info_go/go_attributter_ch02.html#edupersonprincipalname) for utdypende informasjon.
+
+# Eksempel
+- oleolsen@haugaland.fylkeskommune.no
+</body>
+                  </ownedComment>
+                </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_92dcf449234e0f08b7" name="systemId" visibility="public">
                 <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_f50fbc3a74530c5f31" value="0" />
@@ -2332,6 +2367,39 @@ Dette kan være identifikator som eksisterer i SAS (SATS, Extens).
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_4320b92c76464e1ecb" visibility="public" start="EAID_CLS_923314dcb9bf6b4540" end="EAID_CLS_99e1fdeee7693150be" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_2e30deb33b9d9cf34a" visibility="public" start="EAID_CLS_923314dcb9bf6b4540" end="EAID_CLS_a62447c9dd60a973b1" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_993dfa346dbc36a8ad" visibility="public" start="EAID_CLS_923314dcb9bf6b4540" end="EAID_CLS_9564bd355ac64bb4d6" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_1effd1cacfa57a62ad" name="Skoleressurs">
+              <properties documentation="Ansatte på en skole.&#10;&#10;# Beskrivelse&#10;&#10;Kan være undervisningspersonell eller andre administrativt ansatte.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_5ba04ee0cded7302f4">
+                <body>Ansatte på en skole.
+
+# Beskrivelse
+
+Kan være undervisningspersonell eller andre administrativt ansatte.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_d49a82cb9358ec79c7" name="feidenavn" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_6d0be46eff7b1fa023" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_6d0be46eff7b1fa023" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_6d0be46eff7b1fa023">
+                  <body>Fullt Feide-navn
+
+# Beskrivelse
+Dette er det samme som `eduPersonPrincipalName` i Feide skjemaet. Se [eduPersonPrincipalName](https://docs.feide.no/schema/info_go/go_attributter_ch02.html#edupersonprincipalname) for utdypende informasjon.
+
+# Eksempel
+- oleolsen@haugaland.fylkeskommune.no
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_fa3823d9b8e30cfca6" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_c66404e67faa3b582b" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_c66404e67faa3b582b" value="1" />
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_4fcb92e956536a56be" visibility="public" start="EAID_CLS_1effd1cacfa57a62ad" end="EAID_CLS_7f69968205107fe6de" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_b320181ffc041fd2e8" visibility="public" start="EAID_CLS_1effd1cacfa57a62ad" end="EAID_CLS_917b8b67ec1ceae3be" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_917b8b67ec1ceae3be" name="Undervisningsforhold">
               <properties documentation="Undervisningsforhold til alle med en pedagogisk funksjon&#10;&#10;# Beskrivelse &#10;&#10;Alle med en pedagogisk funksjon på skolen kan ha et undervisningsforhold.&#10;&#10;# Eksempel&#10;&#10;Dette kan for eksempel være lærerens undervisningsforhold til skolen. Underviser en lærer på to skoler, vil det være naturlig å ha to undervisningsforhold.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_26620df5d6b84ef22b">
@@ -8565,7 +8633,15 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Type ytelse.&#10;&#10;# Beskrivelse&#10;&#10;Lønnsart brukes av HRM-systemer for å indikere hvordan en ytelse skal behandles.&#10;&#10;Den inneholder også knytning til hvordan ytelsen skal rapporteres på A-meldingen.&#10;&#10;Tidligere hadde lønnsart knytning til LTO-kode og LT-kode.&#10;&#10;# Referanser&#10;&#10;* Rapportering av ytelser på A-meldingen: http://veiledning-amelding.smartlearn.no/Veiledn_Generell/index.html#!Documents/rapporteringavkontantytelser.htm&#10;* Altinn: Innholdet i A-meldingen: https://www.altinn.no/no/a-ordningen/om-a-meldingen/Innholdet-i-a-meldingen/&#10;" stereotype="hovedklasse" />
-        <attributes />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_2c8d5716a6eb8b4064" idref="EAID_PRP_2c8d5716a6eb8b4064" name="kategori">
+            <properties type="string" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Kategori lønnsart&#10;&#10;# Beskrivelse&#10;&#10;Enkelte lønnsarter kan kun benyttes i sammenheng med enten fast eller variabel lønn.&#10;&#10;Kategori er et felt som indikerer denne begrensningen.&#10;&#10;# Eksempel&#10;&#10;- F: Kun fast lønn&#10;- V: Kun variabel lønn&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
         </element>
       <element xmi:idref="EAID_CLS_0e902a06c5b70e4340" idref="EAID_CLS_0e902a06c5b70e4340" xmi:type="uml:Class" type="Class" name="Personalressurskategori" scope="public">
         <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
@@ -9320,7 +9396,7 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
           <attribute xmi:idref="EAID_PRP_c25ba64beb5508e49a" idref="EAID_PRP_c25ba64beb5508e49a" name="brukernavn">
             <properties type="Identifikator" />
             <bounds lower="0" upper="1" />
-            <stereotype stereotype="" />
+            <stereotype stereotype="writable" />
             <documentation value="Brukernavn til en elev&#10;&#10;# Beskrivelse&#10;&#10;Skal inneholde brukernavn for pålogging, som finnes i katalogtjenesten (feks Active Directory). Brukes som en identifikator som består, når fødselsnummer og/eller andre identifikatorer endrer seg.&#10;&#10;# Format&#10;&#10;Brukernavn i det format en elev trenger for å logge seg på systemer i organisasjonen.&#10;&#10;# NB!&#10;&#10;Fremtidig funksjon for dette feltet er under revisjon.&#10;" />
             <tags />
             </attribute>
@@ -9329,6 +9405,13 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
             <documentation value="Et unikt nummer som identifiserer en elev&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_8d0e9372b71c722b17" idref="EAID_PRP_8d0e9372b71c722b17" name="feidenavn">
+            <properties type="Identifikator" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Fullt Feide-navn&#10;&#10;# Beskrivelse&#10;Dette er det samme som `eduPersonPrincipalName` i Feide skjemaet. Se [eduPersonPrincipalName](https://docs.feide.no/schema/info_go/go_attributter_ch02.html#edupersonprincipalname) for utdypende informasjon.&#10;&#10;# Eksempel&#10;- oleolsen@haugaland.fylkeskommune.no&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_92dcf449234e0f08b7" idref="EAID_PRP_92dcf449234e0f08b7" name="systemId">
@@ -9383,6 +9466,26 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
             <bounds lower="0" upper="*" />
             <stereotype stereotype="" />
             <documentation value="Fortløpende vurdering som eleven har fått som resultat av deltakelse i en gruppe&#10;&#10;# Eksempler&#10;&#10;- Terminkarakter&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_1effd1cacfa57a62ad" idref="EAID_CLS_1effd1cacfa57a62ad" xmi:type="uml:Class" type="Class" name="Skoleressurs" scope="public">
+        <model package="EAID_PKG_c5ee21afe2335d549a" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Ansatte på en skole.&#10;&#10;# Beskrivelse&#10;&#10;Kan være undervisningspersonell eller andre administrativt ansatte.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_d49a82cb9358ec79c7" idref="EAID_PRP_d49a82cb9358ec79c7" name="feidenavn">
+            <properties type="Identifikator" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Fullt Feide-navn&#10;&#10;# Beskrivelse&#10;Dette er det samme som `eduPersonPrincipalName` i Feide skjemaet. Se [eduPersonPrincipalName](https://docs.feide.no/schema/info_go/go_attributter_ch02.html#edupersonprincipalname) for utdypende informasjon.&#10;&#10;# Eksempel&#10;- oleolsen@haugaland.fylkeskommune.no&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_fa3823d9b8e30cfca6" idref="EAID_PRP_fa3823d9b8e30cfca6" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
             <tags />
             </attribute>
           </attributes>
@@ -11716,6 +11819,38 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
           <role name="medlem" visibility="Public" />
           <type multiplicity="1" />
           <documentation value="Alle deltakere i medlemskapet. Det er viktig å notere at det er både elevene og lærere som inngår i medlemskap i grupper." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_4fcb92e956536a56be" idref="EAID_ASC_4fcb92e956536a56be" start="EAID_CLS_1effd1cacfa57a62ad" end="EAID_CLS_7f69968205107fe6de">
+        <source xmi:idref="EAID_CLS_1effd1cacfa57a62ad" idref="EAID_CLS_1effd1cacfa57a62ad">
+          <model type="Class" name="Skoleressurs" />
+          <role visibility="Public" name="skoleressurs" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7f69968205107fe6de" idref="EAID_CLS_7f69968205107fe6de">
+          <model type="Class" name="Personalressurs" />
+          <role name="personalressurs" visibility="Public" />
+          <type multiplicity="1" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_b320181ffc041fd2e8" idref="EAID_ASC_b320181ffc041fd2e8" start="EAID_CLS_1effd1cacfa57a62ad" end="EAID_CLS_917b8b67ec1ceae3be">
+        <source xmi:idref="EAID_CLS_1effd1cacfa57a62ad" idref="EAID_CLS_1effd1cacfa57a62ad">
+          <model type="Class" name="Skoleressurs" />
+          <role visibility="Public" name="skoleressurs" />
+          <type multiplicity="1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_917b8b67ec1ceae3be" idref="EAID_CLS_917b8b67ec1ceae3be">
+          <model type="Class" name="Undervisningsforhold" />
+          <role name="undervisningsforhold" visibility="Public" />
+          <type multiplicity="0..*" />
           <tags />
           </target>
         <properties ea_type="Association" direction="Bi-Directional" />

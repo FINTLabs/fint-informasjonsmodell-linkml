@@ -351,6 +351,9 @@ classes:
           
           Se kodeverk Personalressurskategori for utvidet eksempel.
         required: true
+      skoleressurs:
+        range: Skoleressurs
+        inverse: personalressurs
       stedfortreder:
         range: Fullmakt
         inverse: stedfortreder

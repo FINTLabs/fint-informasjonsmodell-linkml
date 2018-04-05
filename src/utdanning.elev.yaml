@@ -64,6 +64,8 @@ classes:
     attributes:
       brukernavn:
         range: Identifikator
+        annotations:
+          writeable: true
         description: |
           Brukernavn til en elev
           
@@ -83,6 +85,18 @@ classes:
         description: |
           Et unikt nummer som identifiserer en elev
         required: true
+      feidenavn:
+        range: Identifikator
+        annotations:
+          writeable: true
+        description: |
+          Fullt Feide-navn
+          
+          # Beskrivelse
+          Dette er det samme som `eduPersonPrincipalName` i Feide skjemaet. Se [eduPersonPrincipalName](https://docs.feide.no/schema/info_go/go_attributter_ch02.html#edupersonprincipalname) for utdypende informasjon.
+          
+          # Eksempel
+          - oleolsen@haugaland.fylkeskommune.no
       systemId:
         range: Identifikator
         description: |
@@ -213,6 +227,42 @@ classes:
           Alle deltakere i medlemskapet. Det er viktig å notere at det er både elevene og lærere som inngår i medlemskap i grupper.
         required: true
 
+  Skoleressurs:
+    description: |
+      Ansatte på en skole.
+      
+      # Beskrivelse
+      
+      Kan være undervisningspersonell eller andre administrativt ansatte.
+    attributes:
+      feidenavn:
+        range: Identifikator
+        annotations:
+          writeable: true
+        description: |
+          Fullt Feide-navn
+          
+          # Beskrivelse
+          Dette er det samme som `eduPersonPrincipalName` i Feide skjemaet. Se [eduPersonPrincipalName](https://docs.feide.no/schema/info_go/go_attributter_ch02.html#edupersonprincipalname) for utdypende informasjon.
+          
+          # Eksempel
+          - oleolsen@haugaland.fylkeskommune.no
+      systemId:
+        range: Identifikator
+        required: true
+      personalressurs:
+        range: Personalressurs
+        inverse: skoleressurs
+        annotations:
+          primaryRelation: true
+        required: true
+      undervisningsforhold:
+        range: Undervisningsforhold
+        inverse: skoleressurs
+        annotations:
+          primaryRelation: true
+        multivalued: true
+
   Undervisningsforhold:
     description: |
       Undervisningsforhold til alle med en pedagogisk funksjon
@@ -241,4 +291,8 @@ classes:
           primaryRelation: true
         description: |
           Relasjon til en tilsvarende objekt i Adminstrasjons domenet
+        required: true
+      skoleressurs:
+        range: Skoleressurs
+        inverse: undervisningsforhold
         required: true
