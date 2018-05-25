@@ -280,6 +280,21 @@ classes:
           * Startdato: Datoen for når personalressursen første gang begynte i fylkeskommunene.
           * Sluttdato: Dato for når personalressursen sitt forhold til fylkeskommunen opphører.
         required: true
+      ansiennitet:
+        range: date
+        description: |
+          Ansiennitet for personalressurs hos arbeidsgiver.
+          
+          # Beskrivelse
+          
+          Ansiennitet er normalt den ansattes tiltredelsesdato hos arbeidsgiver, men tariffavtalene fastsetter tilleggsregler blant annet for godskriving av tidligere offentlig og privat tjeneste.
+          
+          # Referanser
+          
+          - KS Hovedtariffavtalen § 12
+          - Statens personalhåndbok 2018, kapittel 7.3.4
+          - https://snl.no/ansiennitet
+        required: true
       kontaktinformasjon:
         range: Kontaktinformasjon
         annotations:

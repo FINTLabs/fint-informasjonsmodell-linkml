@@ -253,7 +253,7 @@ Tidligere hadde lønnsart knytning til LTO-kode og LT-kode.
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_bcb74521c763f2c514" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_f1d4a9bd27af04c15b" end="EAID_CLS_3385458244847ec7db" />
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_2c8d5716a6eb8b4064" name="kategori" visibility="public">
                 <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_8679c430ab328e023c" value="1" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_8679c430ab328e023c" value="0" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_8679c430ab328e023c" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_8679c430ab328e023c">
                   <body>Kategori lønnsart
@@ -981,6 +981,25 @@ Systemspesifikk id, som normalt ikke er synlig i fagsystemet.
 </body>
                   </ownedComment>
                 </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_10f623546f9aa96fee" name="ansiennitet" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Date" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_46481fcb962aed4539" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_46481fcb962aed4539" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_46481fcb962aed4539">
+                  <body>Ansiennitet for personalressurs hos arbeidsgiver.
+
+# Beskrivelse
+
+Ansiennitet er normalt den ansattes tiltredelsesdato hos arbeidsgiver, men tariffavtalene fastsetter tilleggsregler blant annet for godskriving av tidligere offentlig og privat tjeneste.
+
+# Referanser
+
+- KS Hovedtariffavtalen § 12
+- Statens personalhåndbok 2018, kapittel 7.3.4
+- https://snl.no/ansiennitet
+</body>
+                  </ownedComment>
+                </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_ffc1e8f39c4e2a998b" name="kontaktinformasjon" visibility="public">
                 <type xmi:idref="EAID_CLS_52527f3a976509c805" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_1d84a99159261bd245" value="0" />
@@ -1188,6 +1207,60 @@ Lønn i 100% stilling. Inneholder ikke definerte tillegg. Angis i øre.
             </packagedElement>
           </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_38f7bf53c51db64eb4" name="Felles">
+          <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_f5cc7e74d95638309a" name="Kontaktperson">
+            <properties documentation="Kontaktperson til en person.&#10;&#10;Det er to begrep som brukes avhengig av alder:&#10;&#10;* Under 18 år: Her vil foreldre normalt være både foresatte og pårørende&#10;* 18 år og eldre: Disse har ingen foresatte og de velger selv eventuelle pårørende som blir kontaktet i spesielle situasjoner&#10;&#10;# Referanser&#10;&#10;* &quot;Foreldre, foresatte og pårørende&quot; http://ndla.no/nb/node/66296?fag=8&#10;* &quot;Behandle foresatte/pårørende&quot; https://wisweb.uservoice.com/knowledgebase/articles/1804210-behandle-foresatte-p%C3%A5r%C3%B8rende&#10;" stereotype="hovedklasse" />
+            <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7169e35666d2406bb6">
+              <body>Kontaktperson til en person.
+
+Det er to begrep som brukes avhengig av alder:
+
+* Under 18 år: Her vil foreldre normalt være både foresatte og pårørende
+* 18 år og eldre: Disse har ingen foresatte og de velger selv eventuelle pårørende som blir kontaktet i spesielle situasjoner
+
+# Referanser
+
+* "Foreldre, foresatte og pårørende" http://ndla.no/nb/node/66296?fag=8
+* "Behandle foresatte/pårørende" https://wisweb.uservoice.com/knowledgebase/articles/1804210-behandle-foresatte-p%C3%A5r%C3%B8rende
+</body>
+              </ownedComment>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_aa254d811a7b1f9461" name="systemId" visibility="public">
+              <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_3d14aaf7545be20403" value="1" />
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_3d14aaf7545be20403" value="1" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_3d14aaf7545be20403">
+                <body>Kildesystemets unike identifikator for kontaktperson.
+</body>
+                </ownedComment>
+              </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_ac8bbd596064b0870f" name="foreldreansvar" visibility="public">
+              <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Boolean" />
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_a88a037c09ef0029b8" value="1" />
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_a88a037c09ef0029b8" value="1" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a88a037c09ef0029b8">
+                <body>Angir om kontaktpersonen har foreldreansvar for personen vedkommende er pårørende for.
+</body>
+                </ownedComment>
+              </ownedAttribute>
+            <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_020b4362a148d1a201" name="type" visibility="public">
+              <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_7b3f9bad50b777d663" value="1" />
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_7b3f9bad50b777d663" value="1" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7b3f9bad50b777d663">
+                <body>Beskriver hva slags type kontaktperson.
+
+# Eksempel
+
+- forelder
+- ektefelle
+- barn
+- søsken
+- bestemor
+</body>
+                </ownedComment>
+              </ownedAttribute>
+            </packagedElement>
+          <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_05ec9d6bbfc69ec075" visibility="public" start="EAID_CLS_f5cc7e74d95638309a" end="EAID_CLS_8548ca6ef4e9f948e9" />
+          <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_e5eb4d42de212e67fb" visibility="public" start="EAID_CLS_f5cc7e74d95638309a" end="EAID_CLS_8548ca6ef4e9f948e9" />
           <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_8548ca6ef4e9f948e9" name="Person">
             <properties documentation="Fysiske private personer&#10;&#10;# Beskrivelse&#10;&#10;Fysiske personer. Arver felter fra [Aktør](Class:Aktør).&#10;&#10;# Eksempler&#10;&#10;## Riktig&#10;&#10;* Karl August Haraldsen&#10;&#10;## Feil&#10;&#10;* Statsminister&#10;&#10;# Referanse&#10;&#10;* [Wiki side](https://no.wikipedia.org/wiki/Fysisk_person)&#10;" stereotype="hovedklasse" />
             <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_6008f0274af34a48f7">
@@ -1268,7 +1341,7 @@ Se beskrivelse av [klasse Adresse](Class:Adresse)
 
 # Format
 
-ISO format YYYY-MM-DD.
+ISO 8601 format YYYY-MM-DDThh:mm:ssZ.
 
 # Referanser
 
@@ -1278,7 +1351,7 @@ ISO format YYYY-MM-DD.
 
 ## Riktig
 
-* `1990-03-29`
+* `1990-03-29T00:00:00Z`
 
 # Feil
 
@@ -6096,6 +6169,34 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <tags />
         <properties stereotype="ApplicationSchema" />
         </element>
+      <element xmi:idref="EAID_CLS_f5cc7e74d95638309a" idref="EAID_CLS_f5cc7e74d95638309a" xmi:type="uml:Class" type="Class" name="Kontaktperson" scope="public">
+        <model package="EAID_PKG_38f7bf53c51db64eb4" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Kontaktperson til en person.&#10;&#10;Det er to begrep som brukes avhengig av alder:&#10;&#10;* Under 18 år: Her vil foreldre normalt være både foresatte og pårørende&#10;* 18 år og eldre: Disse har ingen foresatte og de velger selv eventuelle pårørende som blir kontaktet i spesielle situasjoner&#10;&#10;# Referanser&#10;&#10;* &quot;Foreldre, foresatte og pårørende&quot; http://ndla.no/nb/node/66296?fag=8&#10;* &quot;Behandle foresatte/pårørende&quot; https://wisweb.uservoice.com/knowledgebase/articles/1804210-behandle-foresatte-p%C3%A5r%C3%B8rende&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_aa254d811a7b1f9461" idref="EAID_PRP_aa254d811a7b1f9461" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Kildesystemets unike identifikator for kontaktperson.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_ac8bbd596064b0870f" idref="EAID_PRP_ac8bbd596064b0870f" name="foreldreansvar">
+            <properties type="boolean" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Angir om kontaktpersonen har foreldreansvar for personen vedkommende er pårørende for.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_020b4362a148d1a201" idref="EAID_PRP_020b4362a148d1a201" name="type">
+            <properties type="string" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Beskriver hva slags type kontaktperson.&#10;&#10;# Eksempel&#10;&#10;- forelder&#10;- ektefelle&#10;- barn&#10;- søsken&#10;- bestemor&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
       <element xmi:idref="EAID_CLS_8548ca6ef4e9f948e9" idref="EAID_CLS_8548ca6ef4e9f948e9" xmi:type="uml:Class" type="Class" name="Person" scope="public">
         <model package="EAID_PKG_38f7bf53c51db64eb4" ea_eleType="element" />
         <tags />
@@ -6126,7 +6227,7 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
             <properties type="date" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Dato for fødsel&#10;&#10;# Format&#10;&#10;ISO format YYYY-MM-DD.&#10;&#10;# Referanser&#10;&#10;* [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)&#10;&#10;# Eksempler&#10;&#10;## Riktig&#10;&#10;* `1990-03-29`&#10;&#10;# Feil&#10;&#10;* `26.05.1678`&#10;* `29. Mar 1984`&#10;* `Første januar`&#10;* `I fjor`&#10;" />
+            <documentation value="Dato for fødsel&#10;&#10;# Format&#10;&#10;ISO 8601 format YYYY-MM-DDThh:mm:ssZ.&#10;&#10;# Referanser&#10;&#10;* [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)&#10;&#10;# Eksempler&#10;&#10;## Riktig&#10;&#10;* `1990-03-29T00:00:00Z`&#10;&#10;# Feil&#10;&#10;* `26.05.1678`&#10;* `29. Mar 1984`&#10;* `Første januar`&#10;* `I fjor`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_fa7d67325798e4a81f" idref="EAID_PRP_fa7d67325798e4a81f" name="navn">
@@ -8636,7 +8737,7 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         <attributes>
           <attribute xmi:idref="EAID_PRP_2c8d5716a6eb8b4064" idref="EAID_PRP_2c8d5716a6eb8b4064" name="kategori">
             <properties type="string" />
-            <bounds lower="1" upper="1" />
+            <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
             <documentation value="Kategori lønnsart&#10;&#10;# Beskrivelse&#10;&#10;Enkelte lønnsarter kan kun benyttes i sammenheng med enten fast eller variabel lønn.&#10;&#10;Kategori er et felt som indikerer denne begrensningen.&#10;&#10;# Eksempel&#10;&#10;- F: Kun fast lønn&#10;- V: Kun variabel lønn&#10;" />
             <tags />
@@ -8975,6 +9076,13 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
             <documentation value="Perioden personalressursen er i et forhold til fylkeskommunen&#10;&#10;# Beskrivelse&#10;&#10;* Startdato: Datoen for når personalressursen første gang begynte i fylkeskommunene.&#10;* Sluttdato: Dato for når personalressursen sitt forhold til fylkeskommunen opphører.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_10f623546f9aa96fee" idref="EAID_PRP_10f623546f9aa96fee" name="ansiennitet">
+            <properties type="date" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Ansiennitet for personalressurs hos arbeidsgiver.&#10;&#10;# Beskrivelse&#10;&#10;Ansiennitet er normalt den ansattes tiltredelsesdato hos arbeidsgiver, men tariffavtalene fastsetter tilleggsregler blant annet for godskriving av tidligere offentlig og privat tjeneste.&#10;&#10;# Referanser&#10;&#10;- KS Hovedtariffavtalen § 12&#10;- Statens personalhåndbok 2018, kapittel 7.3.4&#10;- https://snl.no/ansiennitet&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_ffc1e8f39c4e2a998b" idref="EAID_PRP_ffc1e8f39c4e2a998b" name="kontaktinformasjon">
@@ -9764,6 +9872,41 @@ Dokumentasjon: http://www.vigoiks.no/systeminformasjon/informasjon-vigo-opplaeri
         </element>
       </elements>
     <connectors>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_05ec9d6bbfc69ec075" idref="EAID_ASC_05ec9d6bbfc69ec075" start="EAID_CLS_f5cc7e74d95638309a" end="EAID_CLS_8548ca6ef4e9f948e9">
+        <source xmi:idref="EAID_CLS_f5cc7e74d95638309a" idref="EAID_CLS_f5cc7e74d95638309a">
+          <model type="Class" name="Kontaktperson" />
+          <role visibility="Public" name="pårørende" />
+          <type multiplicity="0..*" />
+          <documentation value="Kontaktperson er pårørende til disse personene." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_8548ca6ef4e9f948e9" idref="EAID_CLS_8548ca6ef4e9f948e9">
+          <model type="Class" name="Person" />
+          <role name="kontaktperson" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Personen kontaktpersonen er pårørende for." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_e5eb4d42de212e67fb" idref="EAID_ASC_e5eb4d42de212e67fb" start="EAID_CLS_f5cc7e74d95638309a" end="EAID_CLS_8548ca6ef4e9f948e9">
+        <source xmi:idref="EAID_CLS_f5cc7e74d95638309a" idref="EAID_CLS_f5cc7e74d95638309a">
+          <model type="Class" name="Kontaktperson" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_8548ca6ef4e9f948e9" idref="EAID_CLS_8548ca6ef4e9f948e9">
+          <model type="Class" name="Person" />
+          <role name="person" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Person som er kontaktperson." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_6008f0274af34a48f7" idref="EAID_GEN_6008f0274af34a48f7" start="EAID_CLS_8548ca6ef4e9f948e9" end="EAID_CLS_225ef60f99e8325a09">
         <source xmi:idref="EAID_CLS_8548ca6ef4e9f948e9" idref="EAID_CLS_8548ca6ef4e9f948e9">
           <model type="Class" name="Person" />

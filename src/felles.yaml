@@ -11,6 +11,56 @@ imports:
 
 classes:
 
+  Kontaktperson:
+    description: |
+      Kontaktperson til en person.
+      
+      Det er to begrep som brukes avhengig av alder:
+      
+      * Under 18 år: Her vil foreldre normalt være både foresatte og pårørende
+      * 18 år og eldre: Disse har ingen foresatte og de velger selv eventuelle pårørende som blir kontaktet i spesielle situasjoner
+      
+      # Referanser
+      
+      * "Foreldre, foresatte og pårørende" http://ndla.no/nb/node/66296?fag=8
+      * "Behandle foresatte/pårørende" https://wisweb.uservoice.com/knowledgebase/articles/1804210-behandle-foresatte-p%C3%A5r%C3%B8rende
+    attributes:
+      systemId:
+        range: Identifikator
+        description: |
+          Kildesystemets unike identifikator for kontaktperson.
+        required: true
+      foreldreansvar:
+        range: boolean
+        description: |
+          Angir om kontaktpersonen har foreldreansvar for personen vedkommende er pårørende for.
+        required: true
+      type:
+        range: string
+        description: |
+          Beskriver hva slags type kontaktperson.
+          
+          # Eksempel
+          
+          - forelder
+          - ektefelle
+          - barn
+          - søsken
+          - bestemor
+        required: true
+      kontaktperson:
+        range: Person
+        inverse: pårørende
+        annotations:
+          primaryRelation: true
+        description: |
+          Personen kontaktpersonen er pårørende for.
+      person:
+        range: Person
+        description: |
+          Person som er kontaktperson.
+        required: true
+
   Person:
     description: |
       Fysiske private personer
@@ -75,7 +125,7 @@ classes:
           
           # Format
           
-          ISO format YYYY-MM-DD.
+          ISO 8601 format YYYY-MM-DDThh:mm:ssZ.
           
           # Referanser
           
@@ -85,7 +135,7 @@ classes:
           
           ## Riktig
           
-          * `1990-03-29`
+          * `1990-03-29T00:00:00Z`
           
           # Feil
           
@@ -130,6 +180,12 @@ classes:
           primaryRelation: true
         description: |
           Personalressurs til person. Forhold som arbeidstaker.
+      pårørende:
+        range: Kontaktperson
+        inverse: kontaktperson
+        description: |
+          Kontaktperson er pårørende til disse personene.
+        multivalued: true
       statsborgerskap:
         range: Landkode
         description: |

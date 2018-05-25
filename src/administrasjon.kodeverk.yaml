@@ -217,7 +217,6 @@ classes:
           
           - F: Kun fast lønn
           - V: Kun variabel lønn
-        required: true
 
   Personalressurskategori:
     description: |
