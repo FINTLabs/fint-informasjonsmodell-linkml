@@ -9,9 +9,9 @@ imports:
   - felles
   - utdanning.basisklasser
   - utdanning.kodeverk
-  - utdanning.komplekse-datatyper
   - utdanning.timeplan
   - utdanning.utdanningsprogram
+  - utdanning.vurdering
 
 classes:
 
@@ -84,7 +84,6 @@ classes:
         range: Identifikator
         description: |
           Et unikt nummer som identifiserer en elev
-        required: true
       feidenavn:
         range: Identifikator
         annotations:
@@ -105,6 +104,7 @@ classes:
           # Beskrivelse 
           
           Dette kan være identifikator som eksisterer i SAS/SIS (IPOS/OID).
+        required: true
       kontaktinformasjon:
         range: Kontaktinformasjon
         description: |
@@ -192,6 +192,22 @@ classes:
           
           Dette kan være identifikator som eksisterer i SAS (SATS, Extens).
         required: true
+      gruppe:
+        range: Gruppe
+        inverse: medlemskap
+        annotations:
+          primaryRelation: true
+        description: |
+          Gruppen som omtales i medlemskapet
+        required: true
+      medlem:
+        range: Utdanningsforhold
+        inverse: medlemskap
+        annotations:
+          primaryRelation: true
+        description: |
+          Alle deltakere i medlemskapet. Det er viktig å notere at det er både elevene og lærere som inngår i medlemskap i grupper.
+        required: true
       endeligVurdering:
         range: Vurdering
         description: |
@@ -210,22 +226,6 @@ classes:
         description: |
           Fraværet til både lærer og elev som har vært registrert innen en gitt gruppe.
         multivalued: true
-      gruppe:
-        range: Gruppe
-        inverse: medlemskap
-        annotations:
-          primaryRelation: true
-        description: |
-          Gruppen som omtales i medlemskapet
-        required: true
-      medlem:
-        range: Utdanningsforhold
-        inverse: medlemskap
-        annotations:
-          primaryRelation: true
-        description: |
-          Alle deltakere i medlemskapet. Det er viktig å notere at det er både elevene og lærere som inngår i medlemskap i grupper.
-        required: true
 
   Skoleressurs:
     description: |

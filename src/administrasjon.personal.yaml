@@ -18,32 +18,44 @@ classes:
     description: |
       Informasjon om fast lønnsbeskjeftigelse.
       
-      Inneholder beskjeftigelser av den ansattes lønnsprosent.
+      Inneholder beskjeftigelse av den ansattes lønnsprosent.
       
       Summen av prosentene på beskjeftigelsene skal være lønnsprosent for en fullt dekket stilling.
       
       Dersom beskjeftigelsene ikke fyller lønnsprosenten har arbeidsforholdet teknisk undertid. 
       
       I motsatt fall har arbeidsforholdet overtid.
-      
-      Kan også inneholde faste tillegg.
     is_a: Lønn
     attributes:
-      beskjeftigelse:
-        range: Beskjeftigelse
+      prosent:
+        range: integer
         annotations:
           writeable: true
         description: |
-          Fordeling av den ansattes ansettelsesprosent. Beskriver hvor mye av prosenten som benyttes, og hvordan den skal konteres.
-        multivalued: true
+          Andel av lønnsprosent som beslaglegges, i hundredels prosent.
         required: true
-      fasttillegg:
-        range: Fasttillegg
+      lønnsart:
+        range: Lønnsart
+        description: |
+          Lønnsart for fastlønn.
+
+  Fasttillegg:
+    description: |
+      Faste tillegg til utbetaling.
+    is_a: Lønn
+    attributes:
+      beløp:
+        range: integer
         annotations:
           writeable: true
         description: |
-          Faste tillegg til utbetaling.
-        multivalued: true
+          Beløp, i øre.
+        required: true
+      lønnsart:
+        range: Lønnsart
+        description: |
+          Lønnsart for tillegget.
+        required: true
 
   Fravær:
     description: |
@@ -57,7 +69,6 @@ classes:
         range: Identifikator
         description: |
           Unik identifikator i personalsystemet for fraværet.
-        required: true
       periode:
         range: Periode
         annotations:
@@ -78,16 +89,14 @@ classes:
           
           # Beskrivelse
           
-          Andel av ansettelsesprosent den ansatte er fraværende.  Dersom fraværet er knyttet til flere arbeidsforhold, gjelder prosenten for summen av ansettelsesprosentene.
+          Grad av sykemelding for arbeidsforhold. 
           
           # Eksempel
           
-          - Helt sykemeldt fra 100% stilling:
+          - Helt sykemeldt:
             - 10000
-          - 50% permisjon fra 80% stilling:
-            - 4000
-          - 80% gradert sykemelding fra to stillinger på 20% hver
-            - 3200
+          - 50% permisjon:
+            - 5000
         required: true
       arbeidsforhold:
         range: Arbeidsforhold
@@ -95,7 +104,9 @@ classes:
         annotations:
           primaryRelation: true
         description: |
-          Arbeidsforholdene fraværet gjelder for.
+          Arbeidsforholdet fraværet gjelder for.
+          
+          Flere arbeidsforhold kan kun angis dersom det gjelder samme personalressurs, og type fravær og prosent fravær er identiske.
         multivalued: true
         required: true
       fortsettelse:
@@ -128,9 +139,9 @@ classes:
       
       # Beskrivelse
       
-      Lønn (eller Lønnsmelding) inneholder informasjon om lønn som skal utbetales for et arbeidsforhold.  Lønn er enten Fastlønn eller Variabellønn.
+      Lønn inneholder informasjon om lønn som skal utbetales for et arbeidsforhold.  Lønn er enten Fastlønn, Fasttillegg  eller Variabellønn.
       
-      Lønnsmeldinger blir kontert, attestert og anvist av personalressurser som har fullmakter til dette.
+      Lønn blir kontert, attestert og anvist av personalressurser som har fullmakter til dette.
       
       Lønn utbetales til et arbeidsforhold, for en gitt periode.
     abstract: true
@@ -140,32 +151,65 @@ classes:
         annotations:
           writeable: true
         description: |
-          Kildesystemets unike identifikator for lønnsmeldingen.
-        required: true
+          Kildesystemets unike identifikator for lønn.
       anvist:
         range: datetime
         annotations:
           writeable: true
         description: |
-          Tidsstempel som angir når lønnsmeldingen ble anvist.
+          Tidsstempel som angir når lønn ble anvist.
       attestert:
         range: datetime
         annotations:
           writeable: true
         description: |
-          Tidsstempel som angir når lønnsmeldingen ble attestert.
+          Tidsstempel som angir når lønn ble attestert.
+      beskrivelse:
+        range: string
+        annotations:
+          writeable: true
+        description: |
+          Beskrivelse av lønn, til føring på lønnsslipp.
+          
+          # Beskrivelse
+          
+          Forklarende beskrivelse, til bruk i behandling, rapportering og for anføring på lønnsslipp.
+          
+          # Eksempel
+          
+          - Fag- og gruppekode en lærer underviser i. 
+          - Reisestrekning for kilometergodtgjørelse
+          - Beskrivelse av tillegg.
+        required: true
       kontert:
         range: datetime
         annotations:
           writeable: true
         description: |
-          Tidsstempel som angir når lønnsmeldingen ble kontert.
+          Tidsstempel som angir når lønn ble kontert.
+      kontostreng:
+        range: Kontostreng
+        annotations:
+          writeable: true
+        description: |
+          Kontering av lønn.
+        required: true
+      opptjent:
+        range: Periode
+        annotations:
+          writeable: true
+        description: |
+          Periode hvor lønn ble opptjent.
+          
+          # Beskrivelse
+          
+          For etterbetaling av lønn kan opptjeningsperiode være forskjellig fra utbetalingsperiode.
       periode:
         range: Periode
         annotations:
           writeable: true
         description: |
-          Periode som lønnsmeldingen er gyldig for.
+          Periode som lønn utbetales.
           
           # Eksempel
           
@@ -204,15 +248,46 @@ classes:
       Variabel lønn består av ett eller flere tillegg, hver knyttet til en lønnsart.  Lønnsart bestemmer eventuelle faste satser for tillegget, samt grunnlag for skatt- og pensjonstrekk, og hvordan det rapporteres på A-meldingen.
       
       Selve beregningen av variabel lønn gjøres av HRM, og formålet er å overføre tilstrekkelig informasjon til at HRM kan foreta beregningen.
+      
+      Må brukes sammen med lønnsart for at HRM-systemet skal foreta korrekt beregning og rapportere riktig på A-meldingen.
+      
+      # Eksempler:
+      
+      1. Vikartime for undervisningspersonell: 
+        - antall: antall timer * 1400 / årsramme
+      2. Timelønn
+        - antall: antall timer
+      3. Kjøregodtgjørelse
+        - antall: antall kilometer
+      4. Kontantytelse for et møte
+        - antall: beløp
     is_a: Lønn
     attributes:
-      variabelttillegg:
-        range: Variabelttillegg
+      antall:
+        range: integer
         annotations:
           writeable: true
         description: |
-          Alle tilleggene beskrevet i variabellønn.
-        multivalued: true
+          Mengde som beskrives av tillegget, i hundredeler.
+          
+          # Beskrivelse
+          
+          Enhet er spesifisert av lønnsart.
+          
+          # Eksempel
+          
+          - Antall hundredels timer.
+          - Antall dekameter (km/100).
+          - Antall øre
+        required: true
+      beløp:
+        range: integer
+        description: |
+          Beløp i øre som skal utbetales. Beregnes av lønnssystemet basert på antall og lønnsart.
+      lønnsart:
+        range: Lønnsart
+        description: |
+          Lønnsart for variabel lønn.
         required: true
 
   Personalressurs:
@@ -294,7 +369,6 @@ classes:
           - KS Hovedtariffavtalen § 12
           - Statens personalhåndbok 2018, kapittel 7.3.4
           - https://snl.no/ansiennitet
-        required: true
       kontaktinformasjon:
         range: Kontaktinformasjon
         annotations:
