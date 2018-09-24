@@ -7,7 +7,6 @@ imports:
   - felles.komplekse-datatyper
   - utdanning.elev
   - utdanning.kodeverk
-  - utdanning.utdanningsprogram
 
 classes:
 
@@ -76,6 +75,7 @@ classes:
         inverse: gruppe
         description: |
           Alle medlemene (medlemskapsforholdene) i en gruppe
+        deprecated: "Erstattet av relasjon mellom Elevforhold / Undervisningsforhold og grupper."
         multivalued: true
       vigoreferanse:
         range: Vigoreferanse
@@ -116,11 +116,5 @@ classes:
         inverse: medlem
         description: |
           Alle gruppene som elev eller lærer er medlem av.
+        deprecated: "Erstattet av relasjon mellom Undervisningsforhold og Elevforhold og grupper."
         multivalued: true
-      skole:
-        range: Skole
-        inverse: utdanningsforhold
-        annotations:
-          primaryRelation: true
-        description: |
-          Skole som utdanningsforhold er knyttet til.

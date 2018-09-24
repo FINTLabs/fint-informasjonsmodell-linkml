@@ -443,6 +443,8 @@ classes:
       skoleressurs:
         range: Skoleressurs
         inverse: personalressurs
+        description: |
+          Relasjon til informasjon om undervisningsforhold.
       stedfortreder:
         range: Fullmakt
         inverse: stedfortreder

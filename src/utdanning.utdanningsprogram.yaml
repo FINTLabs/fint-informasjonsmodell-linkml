@@ -7,8 +7,10 @@ imports:
   - felles.komplekse-datatyper
   - administrasjon.organisasjon
   - utdanning.basisklasser
+  - utdanning.elev
   - utdanning.kodeverk
   - utdanning.timeplan
+  - utdanning.vurdering
 
 classes:
 
@@ -133,11 +135,23 @@ classes:
           * Moelv videregående skole (som Skole)
           * Telemark fylkeskommune (som Skoleeier)
         required: true
-      utdanningsforhold:
-        range: Utdanningsforhold
+      basisgruppe:
+        range: Basisgruppe
         inverse: skole
         description: |
-          Alle utdanningsforhold (elever og lærere) knyttet til en skole.
+          Alle basisgrupper ved en skole.
+        multivalued: true
+      eksamensgruppe:
+        range: Eksamensgruppe
+        inverse: skole
+        description: |
+          Alle eksamensgruppene ved en skole.
+        multivalued: true
+      elevforhold:
+        range: Elevforhold
+        inverse: skole
+        description: |
+          Alle elevforhold ved skole.
         multivalued: true
       fag:
         range: Fag
@@ -146,6 +160,12 @@ classes:
           primaryRelation: true
         description: |
           Fagene som skolen tilbyr
+        multivalued: true
+      kontaktlærergruppe:
+        range: Kontaktlærergruppe
+        inverse: skole
+        description: |
+          Alle kontaktlærergruppene ved skolen.
         multivalued: true
       organisasjon:
         range: Organisasjonselement
@@ -170,6 +190,24 @@ classes:
           # Referanser
           
           * Vigo Kodeverkdatabase: [vigo.no/vigokv/skole.action](https://www.vigo.no/vigokv/skole.action)
+      skoleressurs:
+        range: Skoleressurs
+        inverse: skole
+        description: |
+          Alle ansatte ved skolen
+        multivalued: true
+      undervisningsforhold:
+        range: Undervisningsforhold
+        inverse: skole
+        description: |
+          Alle undervisningsforhold (lærere) tilknyttet en skole.
+        multivalued: true
+      undervisningsgruppe:
+        range: Undervisningsgruppe
+        inverse: skole
+        description: |
+          Alle undervisningsgruppene ved en skole.
+        multivalued: true
       utdanningsprogram:
         range: Utdanningsprogram
         inverse: skole

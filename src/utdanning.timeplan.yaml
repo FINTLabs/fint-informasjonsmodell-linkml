@@ -48,8 +48,8 @@ classes:
       programområde:
         range: Programområde
         description: |
-          Det overordnet progmraområdet
-        required: true
+          Programområde faget tilhører.
+        multivalued: true
       skole:
         range: Skole
         inverse: fag
@@ -85,6 +85,8 @@ classes:
     attributes:
       systemId:
         range: Identifikator
+        description: |
+          Kildesystemets interne identifikator for timen.
         required: true
       beskrivelse:
         range: string
@@ -145,9 +147,29 @@ classes:
         description: |
           Timene hvor undervisningen til en undervisningsgruppe gjennomføres
         multivalued: true
+      elevforhold:
+        range: Elevforhold
+        inverse: undervisningsgruppe
+        description: |
+          Alle elevforhold i undervisningsgruppen.
+        multivalued: true
       fag:
         range: Fag
         description: |
           Fagene som det undervises i i gruppen
         multivalued: true
         required: true
+      skole:
+        range: Skole
+        inverse: undervisningsgruppe
+        annotations:
+          primaryRelation: true
+        description: |
+          Skolen en undervisningsgruppe tilhører.
+        required: true
+      undervisningsforhold:
+        range: Undervisningsforhold
+        inverse: undervisningsgruppe
+        description: |
+          Alle lærere i gruppen.
+        multivalued: true

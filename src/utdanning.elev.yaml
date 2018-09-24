@@ -40,17 +40,37 @@ classes:
       Øvre grense er beskrevet i Opplæringslova §8-3 eller i forskrift.
     is_a: Gruppe
     attributes:
+      elevforhold:
+        range: Elevforhold
+        inverse: basisgruppe
+        description: |
+          Alle elevforhold i basisgruppen.
+        multivalued: true
       kontaktlærergruppe:
         range: Kontaktlærergruppe
         inverse: basisgruppe
         description: |
           Grupper med en kontaktlærer og elever som ligger under en gitt basisgruppe
         multivalued: true
+      skole:
+        range: Skole
+        inverse: basisgruppe
+        annotations:
+          primaryRelation: true
+        description: |
+          Skolen en basisgruppe tilhører.
+        required: true
       trinn:
         range: Årstrinn
         description: |
           Det overordnet trinnet som gruppen hører inn i
         required: true
+      undervisningsforhold:
+        range: Undervisningsforhold
+        inverse: basisgruppe
+        description: |
+          Alle lærere tilknyttet basisgruppen.
+        multivalued: true
 
   Elev:
     description: |
@@ -141,6 +161,22 @@ classes:
       En elev kan være i elevforhold med status privatist og deltid samtidig. Eller en elev kan ha flere elevforhold på flere forskjellige skoler.
     is_a: Utdanningsforhold
     attributes:
+      basisgruppe:
+        range: Basisgruppe
+        inverse: elevforhold
+        annotations:
+          primaryRelation: true
+        description: |
+          Alle basisgrupper elevforholdet er medlem av.
+        multivalued: true
+      eksamensgruppe:
+        range: Eksamensgruppe
+        inverse: elevforhold
+        annotations:
+          primaryRelation: true
+        description: |
+          Alle eksamensgruppene elevforhold er medlem av.
+        multivalued: true
       elev:
         range: Elev
         inverse: elevforhold
@@ -149,10 +185,46 @@ classes:
         description: |
           Elev som elevforholdet gjelder for
         required: true
+      fravær:
+        range: Fravær
+        inverse: elevforhold
+        description: |
+          Alle fravær registrert på elevforhold.
+        multivalued: true
       kategori:
         range: Elevkategori
         description: |
           Kategori på et elevforhold
+      kontaktlærergruppe:
+        range: Kontaktlærergruppe
+        inverse: elevforhold
+        annotations:
+          primaryRelation: true
+        description: |
+          Alle kontaktlærergrupper elevforhold er medlem av.
+        multivalued: true
+      skole:
+        range: Skole
+        inverse: elevforhold
+        annotations:
+          primaryRelation: true
+        description: |
+          Skole elevforhold er knyttet til.
+        required: true
+      undervisningsgruppe:
+        range: Undervisningsgruppe
+        inverse: elevforhold
+        annotations:
+          primaryRelation: true
+        description: |
+          Alle undervisningsgruppene elevforhold er medlem av.
+        multivalued: true
+      vurdering:
+        range: Vurdering
+        inverse: elevforhold
+        description: |
+          Alle vurderinger i et elevforhold
+        multivalued: true
 
   Kontaktlærergruppe:
     description: |
@@ -172,6 +244,26 @@ classes:
           De overordnede basisgruppene
         multivalued: true
         required: true
+      elevforhold:
+        range: Elevforhold
+        inverse: kontaktlærergruppe
+        description: |
+          Alle elevforhold i kontaktlærergruppen.
+        multivalued: true
+      skole:
+        range: Skole
+        inverse: kontaktlærergruppe
+        annotations:
+          primaryRelation: true
+        description: |
+          Skolen kontaktlærergruppen tilhører.
+        required: true
+      undervisningsforhold:
+        range: Undervisningsforhold
+        inverse: kontaktlærergruppe
+        description: |
+          Alle kontaktlærere i gruppen.
+        multivalued: true
 
   Medlemskap:
     description: |
@@ -182,6 +274,7 @@ classes:
       * Elevers medlemskap i Undervisningsgrupper
       * Lærerens medlemskap i Kontaktgruppe
       * Viser Elevens fravær fra en gitt undervisningsgruppe
+    deprecated: "Medlemskap uttrykkes som relasjoner direkte mellom Undervisningsforhold og Gruppe."
     attributes:
       systemId:
         range: Identifikator
@@ -191,6 +284,7 @@ classes:
           # Beskrivelse 
           
           Dette kan være identifikator som eksisterer i SAS (SATS, Extens).
+        deprecated: "DEPRECATED"
         required: true
       gruppe:
         range: Gruppe
@@ -199,6 +293,7 @@ classes:
           primaryRelation: true
         description: |
           Gruppen som omtales i medlemskapet
+        deprecated: "Erstattet av relasjon mellom Elevforhold / Undervisningsforhold og grupper."
         required: true
       medlem:
         range: Utdanningsforhold
@@ -207,11 +302,13 @@ classes:
           primaryRelation: true
         description: |
           Alle deltakere i medlemskapet. Det er viktig å notere at det er både elevene og lærere som inngår i medlemskap i grupper.
+        deprecated: "Erstattet av relasjon mellom Undervisningsforhold og Elevforhold og grupper."
         required: true
       endeligVurdering:
         range: Vurdering
         description: |
           Den endelige vurderingen som eleven har fått som resultat av deltakelse i en gruppe
+        deprecated: "Erstattet av relesjon mellom Elevforhold og Vurdering"
       fortløpendeVurdering:
         range: Vurdering
         description: |
@@ -220,11 +317,13 @@ classes:
           # Eksempler
           
           - Terminkarakter
+        deprecated: "Erstattet av relasjon mellom Elevforhold og Vurdering"
         multivalued: true
       fravær:
         range: Fravær
         description: |
           Fraværet til både lærer og elev som har vært registrert innen en gitt gruppe.
+        deprecated: "Erstattet av relasjon mellom Elevforhold og Fravær"
         multivalued: true
 
   Skoleressurs:
@@ -249,18 +348,32 @@ classes:
           - oleolsen@haugaland.fylkeskommune.no
       systemId:
         range: Identifikator
+        description: |
+          Kildesystemets interne identifikator for skoleressurs.
         required: true
       personalressurs:
         range: Personalressurs
         inverse: skoleressurs
         annotations:
           primaryRelation: true
+        description: |
+          Relasjon til informasjon om ansettelsesforhold.
+        required: true
+      skole:
+        range: Skole
+        inverse: skoleressurs
+        annotations:
+          primaryRelation: true
+        description: |
+          Tilknyttet skole.
         required: true
       undervisningsforhold:
         range: Undervisningsforhold
         inverse: skoleressurs
         annotations:
           primaryRelation: true
+        description: |
+          Undervisningsforhold for skoleressurs.
         multivalued: true
 
   Undervisningsforhold:
@@ -292,7 +405,49 @@ classes:
         description: |
           Relasjon til en tilsvarende objekt i Adminstrasjons domenet
         required: true
+      basisgruppe:
+        range: Basisgruppe
+        inverse: undervisningsforhold
+        annotations:
+          primaryRelation: true
+        description: |
+          Alle basisgrupper tilknyttet læreren.
+        multivalued: true
+      eksamensgruppe:
+        range: Eksamensgruppe
+        inverse: undervisningsforhold
+        annotations:
+          primaryRelation: true
+        description: |
+          Alle eksamensgruppene tilknyttet læreren.
+        multivalued: true
+      kontaktlærergruppe:
+        range: Kontaktlærergruppe
+        inverse: undervisningsforhold
+        annotations:
+          primaryRelation: true
+        description: |
+          Alle grupper læreren er kontaktlærer for.
+        multivalued: true
+      skole:
+        range: Skole
+        inverse: undervisningsforhold
+        annotations:
+          primaryRelation: true
+        description: |
+          Skole som undervisningsforhold er tilknyttet.
+        required: true
       skoleressurs:
         range: Skoleressurs
         inverse: undervisningsforhold
+        description: |
+          Skoleressurs for undervisningsforhold.
         required: true
+      undervisningsgruppe:
+        range: Undervisningsgruppe
+        inverse: undervisningsforhold
+        annotations:
+          primaryRelation: true
+        description: |
+          Alle undervisningsgrupper læreren deltar i.
+        multivalued: true
