@@ -127,6 +127,8 @@ classes:
         required: true
       kontaktinformasjon:
         range: Kontaktinformasjon
+        annotations:
+          writeable: true
         description: |
           Skolespesifikk kontaktinformasjon til en elev
           
@@ -203,6 +205,13 @@ classes:
         description: |
           Alle kontaktlærergrupper elevforhold er medlem av.
         multivalued: true
+      programområde:
+        range: Programområde
+        inverse: elevforhold
+        annotations:
+          primaryRelation: true
+        description: |
+          Programområde elevforhold tilhører
       skole:
         range: Skole
         inverse: elevforhold
@@ -365,8 +374,8 @@ classes:
         annotations:
           primaryRelation: true
         description: |
-          Tilknyttet skole.
-        required: true
+          Tilknyttede skoler.
+        multivalued: true
       undervisningsforhold:
         range: Undervisningsforhold
         inverse: skoleressurs

@@ -15,15 +15,11 @@ classes:
     description: |
       Kontaktperson til en person.
       
-      Det er to begrep som brukes avhengig av alder:
+      # Beskrivelse
       
-      * Under 18 år: Her vil foreldre normalt være både foresatte og pårørende
-      * 18 år og eldre: Disse har ingen foresatte og de velger selv eventuelle pårørende som blir kontaktet i spesielle situasjoner
+      Kontaktperson er personer som kan kontaktes dersom det er behov for det.
       
-      # Referanser
-      
-      * "Foreldre, foresatte og pårørende" http://ndla.no/nb/node/66296?fag=8
-      * "Behandle foresatte/pårørende" https://wisweb.uservoice.com/knowledgebase/articles/1804210-behandle-foresatte-p%C3%A5r%C3%B8rende
+      Kontaktperson kalles også pårørende.
     attributes:
       systemId:
         range: Identifikator
@@ -32,11 +28,28 @@ classes:
         required: true
       foreldreansvar:
         range: boolean
+        annotations:
+          writeable: true
         description: |
           Angir om kontaktpersonen har foreldreansvar for personen vedkommende er pårørende for.
+        deprecated: "Feltet utgår.  Benytt relasjon `foreldreansvar` på Person."
         required: true
+      kontaktinformasjon:
+        range: Kontaktinformasjon
+        annotations:
+          writeable: true
+        description: |
+          Kontaktinformasjon for kontaktperson.
+      navn:
+        range: Personnavn
+        annotations:
+          writeable: true
+        description: |
+          Navn på kontaktperson.
       type:
         range: string
+        annotations:
+          writeable: true
         description: |
           Beskriver hva slags type kontaktperson.
           
@@ -54,12 +67,13 @@ classes:
         annotations:
           primaryRelation: true
         description: |
-          Personen kontaktpersonen er pårørende for.
+          Personer kontaktpersonen er pårørende for.
+        multivalued: true
       person:
         range: Person
         description: |
           Person som er kontaktperson.
-        required: true
+        deprecated: "Relasjon fra Kontaktperson til Person utgår, og skal ikke fylles ut."
 
   Person:
     description: |
@@ -157,6 +171,28 @@ classes:
         inverse: person
         description: |
           En person kan være en elev
+      foreldre:
+        range: Person
+        inverse: foreldreansvar
+        annotations:
+          primaryRelation: true
+        description: |
+          Foreldre til person.
+        multivalued: true
+      foreldreansvar:
+        range: Person
+        inverse: foreldre
+        annotations:
+          primaryRelation: true
+        description: |
+          Personer denne personen har foreldreansvar for.
+          
+          # Referanser
+          
+          - Folkeregisterloven §3-1 og Folkeregisterforskriften  §3-1-1
+          - Barnelova §§ 2-7
+          - https://www.skatteetaten.no/person/folkeregister/fodsel-og-navnevalg/barn-fodt-i-norge/farskap-og-foreldreansvar/
+        multivalued: true
       kjønn:
         range: Kjønn
         description: |
@@ -184,7 +220,7 @@ classes:
         range: Kontaktperson
         inverse: kontaktperson
         description: |
-          Kontaktperson er pårørende til disse personene.
+          Pårørende kontaktperson til person.
         multivalued: true
       statsborgerskap:
         range: Landkode

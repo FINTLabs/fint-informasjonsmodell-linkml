@@ -91,14 +91,19 @@ classes:
       
       En kombinasjon av tegn eller og/eller bokstaver som unikt identifiserer et objekt blant andre objekter av samme type uten arv.
       
+      Identifikatorer må være stabile over tid, og henvise til samme objekt.
+      
+      Dersom identifikatorer konstrueres av sammensatte verdier må særskilt hensyn tas for å sikre at identifikatorverdien ikke endres over tid.
+      
       # Eksempel
       
       Kan for eksempel brukes til å identifisere en person ut fra fødselsnummer eller ansattnummer.
       
-      * For en person kan det være fødselnummer
+      * For en person kan det være fødselsnummer
       * For er personresurs kan det være ansattnummer eller signatur
       * For er elev kan det være elevnummer.
       * For organisasjonselement kan det være organisasjonsnummer fra Enhetsregistret.
+      * systemId kan være objektID eller rowID i underliggende database, dersom denne er stabil over tid.
     attributes:
       gyldighetsperiode:
         range: Periode
@@ -107,7 +112,13 @@ classes:
       identifikatorverdi:
         range: string
         description: |
-          En konkret kombinasjonen av tegn og/eller bokstaver som utgjør en bestemt identifikator
+          En konkret kombinasjonen av tegn og/eller bokstaver som utgjør en bestemt identifikator.
+          
+          # Krav til identifikatorverdi
+          
+          - Må være et gyldig URI "path segment", ref. https://tools.ietf.org/html/rfc3986#section-3.3
+          - Må unikt identifisere en instans av en gitt type
+          - Kan ikke være tom
           
           # Eksempel
           

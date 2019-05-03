@@ -49,6 +49,12 @@ classes:
       * Grepwiki: http://grepwiki.udir.no/index.php?title=Programområde
     is_a: Gruppe
     attributes:
+      elevforhold:
+        range: Elevforhold
+        inverse: programområde
+        description: |
+          Alle elevforhold på programområde
+        multivalued: true
       trinn:
         range: Årstrinn
         description: |
