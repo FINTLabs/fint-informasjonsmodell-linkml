@@ -127,7 +127,7 @@ classes:
         annotations:
           writeable: true
         description: |
-          Folkeregsitreret adresse til en person
+          Folkeregistrert adresse til person
           
           # Format
           

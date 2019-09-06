@@ -148,11 +148,11 @@ classes:
       mobiltelefonnummer:
         range: string
         description: |
-          Person sitt mobiltelefonnummer ihht E.123,  international notation .
+          Person sitt mobiltelefonnummer.
           
           # Format 
-             
-          8 siffer, evt. flere siffer dersom første to siffer er utenlandsprefix 00 eller “+”.
+          
+          Anbefalt format er 8 siffer uten mellomrom, eller E.123 international notation.
           
           # Referanser
           
@@ -163,16 +163,15 @@ classes:
           
           ## Riktig:
           
+          * `47845326`
           * `+4747845326`
           * `+1234234234234`
           * `+79161238752`
-          * `+4781502645`
           
           ## Feil:
           
           * `456 45 334`
           * `0047 23 23 23 23`
-          * `56754345`
           * `02643`
           * `0VAFK`
       nettsted:
@@ -229,11 +228,11 @@ classes:
       telefonnummer:
         range: string
         description: |
-          Person sitt fasttelefonnummer ihht E.123,  international notation .
+          Person sitt telefonnummer.
           
           # Format 
-             
-          8 siffer, evt. flere siffer dersom første to siffer er utenlandsprefix 00 eller “+”.
+          
+          Anbefalt format er 8 siffer uten mellomrom, eller E.123 international notation.
           
           # Referanser
           
@@ -244,7 +243,8 @@ classes:
           
           ## Riktig:
           
-          * `+4747845326`
+          * `27845326`
+          * `+4727845326`
           * `+1234234234234`
           * `+79161238752`
           * `+4781502645`
@@ -253,7 +253,6 @@ classes:
           
           * `456 45 334`
           * `0047 23 23 23 23`
-          * `56754345`
           * `02643`
           * `0VAFK`
 

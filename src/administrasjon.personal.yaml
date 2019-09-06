@@ -193,12 +193,20 @@ classes:
       Lønn utbetales til et arbeidsforhold, for en gitt periode.
     abstract: true
     attributes:
-      systemId:
+      kildesystemId:
         range: Identifikator
         annotations:
           writeable: true
         description: |
           Kildesystemets unike identifikator for lønn.
+          
+          # Beskrivelse
+          
+          Forsystem som oppretter lønnstransaksjon kan angi en unik identifikator for transaksjonen.  Denne identifikatoren kan brukes av lønnssystemet for å oppdage duplikate transaksjoner.
+      systemId:
+        range: Identifikator
+        description: |
+          Lønnssystemets unike identifikator for lønn.
       anvist:
         range: datetime
         annotations:

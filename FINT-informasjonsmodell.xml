@@ -670,12 +670,25 @@ Lønn blir kontert, attestert og anvist av personalressurser som har fullmakter t
 Lønn utbetales til et arbeidsforhold, for en gitt periode.
 </body>
                 </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_f84877aa53345e0081" name="kildesystemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_a3ca88d4e6ff190527" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_a3ca88d4e6ff190527" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a3ca88d4e6ff190527">
+                  <body>Kildesystemets unike identifikator for lønn.
+
+# Beskrivelse
+
+Forsystem som oppretter lønnstransaksjon kan angi en unik identifikator for transaksjonen.  Denne identifikatoren kan brukes av lønnssystemet for å oppdage duplikate transaksjoner.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_dbe66f3293d8fbbe93" name="systemId" visibility="public">
                 <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_dc5c4e0066d0d7e156" value="0" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_dc5c4e0066d0d7e156" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_dc5c4e0066d0d7e156">
-                  <body>Kildesystemets unike identifikator for lønn.
+                  <body>Lønnssystemets unike identifikator for lønn.
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -1281,7 +1294,7 @@ Det forutsettes at det er bilde med den beste oppløsningen mulig.
               <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_83764da4fde9db5243" value="0" />
               <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_83764da4fde9db5243" value="1" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_83764da4fde9db5243">
-                <body>Folkeregsitreret adresse til en person
+                <body>Folkeregistrert adresse til person
 
 # Format
 
@@ -1791,11 +1804,11 @@ En ikke-fysisk adresse, i motsetning til [Adresse](/docs/komplekse_datatyper_adr
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_0fd3bd0b57a792b2d6" value="0" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_0fd3bd0b57a792b2d6" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_0fd3bd0b57a792b2d6">
-                  <body>Person sitt mobiltelefonnummer ihht E.123,  international notation .
+                  <body>Person sitt mobiltelefonnummer.
 
 # Format 
-   
-8 siffer, evt. flere siffer dersom første to siffer er utenlandsprefix 00 eller “+”.
+
+Anbefalt format er 8 siffer uten mellomrom, eller E.123 international notation.
 
 # Referanser
 
@@ -1806,16 +1819,15 @@ En ikke-fysisk adresse, i motsetning til [Adresse](/docs/komplekse_datatyper_adr
 
 ## Riktig:
 
+* `47845326`
 * `+4747845326`
 * `+1234234234234`
 * `+79161238752`
-* `+4781502645`
 
 ## Feil:
 
 * `456 45 334`
 * `0047 23 23 23 23`
-* `56754345`
 * `02643`
 * `0VAFK`
 </body>
@@ -1887,11 +1899,11 @@ https://snl.no/SIP
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_d9875bceeef4771eff" value="0" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_d9875bceeef4771eff" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d9875bceeef4771eff">
-                  <body>Person sitt fasttelefonnummer ihht E.123,  international notation .
+                  <body>Person sitt telefonnummer.
 
 # Format 
-   
-8 siffer, evt. flere siffer dersom første to siffer er utenlandsprefix 00 eller “+”.
+
+Anbefalt format er 8 siffer uten mellomrom, eller E.123 international notation.
 
 # Referanser
 
@@ -1902,7 +1914,8 @@ https://snl.no/SIP
 
 ## Riktig:
 
-* `+4747845326`
+* `27845326`
+* `+4727845326`
 * `+1234234234234`
 * `+79161238752`
 * `+4781502645`
@@ -1911,7 +1924,6 @@ https://snl.no/SIP
 
 * `456 45 334`
 * `0047 23 23 23 23`
-* `56754345`
 * `02643`
 * `0VAFK`
 </body>
@@ -3197,7 +3209,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="Adresse" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Folkeregsitreret adresse til en person&#10;&#10;# Format&#10;&#10;Se beskrivelse av [klasse Adresse](Class:Adresse)&#10;" />
+            <documentation value="Folkeregistrert adresse til person&#10;&#10;# Format&#10;&#10;Se beskrivelse av [klasse Adresse](Class:Adresse)&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_7ef5758c39bd6ca8ec" idref="EAID_PRP_7ef5758c39bd6ca8ec" name="fødselsdato">
@@ -3484,11 +3496,18 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <tags />
         <properties isAbstract="true" sType="Class" scope="public" documentation="Informasjon om lønn for et arbeidsforhold.&#10;&#10;# Beskrivelse&#10;&#10;Lønn inneholder informasjon om lønn som skal utbetales for et arbeidsforhold.  Lønn er enten Fastlønn, Fasttillegg  eller Variabellønn.&#10;&#10;Lønn blir kontert, attestert og anvist av personalressurser som har fullmakter til dette.&#10;&#10;Lønn utbetales til et arbeidsforhold, for en gitt periode.&#10;" stereotype="abstrakt" />
         <attributes>
-          <attribute xmi:idref="EAID_PRP_dbe66f3293d8fbbe93" idref="EAID_PRP_dbe66f3293d8fbbe93" name="systemId">
+          <attribute xmi:idref="EAID_PRP_f84877aa53345e0081" idref="EAID_PRP_f84877aa53345e0081" name="kildesystemId">
             <properties type="Identifikator" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Kildesystemets unike identifikator for lønn.&#10;" />
+            <documentation value="Kildesystemets unike identifikator for lønn.&#10;&#10;# Beskrivelse&#10;&#10;Forsystem som oppretter lønnstransaksjon kan angi en unik identifikator for transaksjonen.  Denne identifikatoren kan brukes av lønnssystemet for å oppdage duplikate transaksjoner.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_dbe66f3293d8fbbe93" idref="EAID_PRP_dbe66f3293d8fbbe93" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Lønnssystemets unike identifikator for lønn.&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_9eb7ae03a24d583d62" idref="EAID_PRP_9eb7ae03a24d583d62" name="anvist">
@@ -3862,7 +3881,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="string" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Person sitt mobiltelefonnummer ihht E.123,  international notation .&#10;&#10;# Format &#10;   &#10;8 siffer, evt. flere siffer dersom første to siffer er utenlandsprefix 00 eller “+”.&#10;&#10;# Referanser&#10;&#10;* [Standard fra ITU](http://www.itu.int/rec/T-REC-E.123/en)&#10;* [Wiki side](https://en.wikipedia.org/wiki/E.123)&#10;&#10;# Eksempel&#10;&#10;## Riktig:&#10;&#10;* `+4747845326`&#10;* `+1234234234234`&#10;* `+79161238752`&#10;* `+4781502645`&#10;&#10;## Feil:&#10;&#10;* `456 45 334`&#10;* `0047 23 23 23 23`&#10;* `56754345`&#10;* `02643`&#10;* `0VAFK`&#10;" />
+            <documentation value="Person sitt mobiltelefonnummer.&#10;&#10;# Format &#10;&#10;Anbefalt format er 8 siffer uten mellomrom, eller E.123 international notation.&#10;&#10;# Referanser&#10;&#10;* [Standard fra ITU](http://www.itu.int/rec/T-REC-E.123/en)&#10;* [Wiki side](https://en.wikipedia.org/wiki/E.123)&#10;&#10;# Eksempel&#10;&#10;## Riktig:&#10;&#10;* `47845326`&#10;* `+4747845326`&#10;* `+1234234234234`&#10;* `+79161238752`&#10;&#10;## Feil:&#10;&#10;* `456 45 334`&#10;* `0047 23 23 23 23`&#10;* `02643`&#10;* `0VAFK`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_dfb9e4175083516afd" idref="EAID_PRP_dfb9e4175083516afd" name="nettsted">
@@ -3883,7 +3902,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="string" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Person sitt fasttelefonnummer ihht E.123,  international notation .&#10;&#10;# Format &#10;   &#10;8 siffer, evt. flere siffer dersom første to siffer er utenlandsprefix 00 eller “+”.&#10;&#10;# Referanser&#10;&#10;* [Standard fra ITU](http://www.itu.int/rec/T-REC-E.123/en)&#10;* [Wiki side](https://en.wikipedia.org/wiki/E.123)&#10;&#10;# Eksempel&#10;&#10;## Riktig:&#10;&#10;* `+4747845326`&#10;* `+1234234234234`&#10;* `+79161238752`&#10;* `+4781502645`&#10;&#10;## Feil:&#10;&#10;* `456 45 334`&#10;* `0047 23 23 23 23`&#10;* `56754345`&#10;* `02643`&#10;* `0VAFK`&#10;" />
+            <documentation value="Person sitt telefonnummer.&#10;&#10;# Format &#10;&#10;Anbefalt format er 8 siffer uten mellomrom, eller E.123 international notation.&#10;&#10;# Referanser&#10;&#10;* [Standard fra ITU](http://www.itu.int/rec/T-REC-E.123/en)&#10;* [Wiki side](https://en.wikipedia.org/wiki/E.123)&#10;&#10;# Eksempel&#10;&#10;## Riktig:&#10;&#10;* `27845326`&#10;* `+4727845326`&#10;* `+1234234234234`&#10;* `+79161238752`&#10;* `+4781502645`&#10;&#10;## Feil:&#10;&#10;* `456 45 334`&#10;* `0047 23 23 23 23`&#10;* `02643`&#10;* `0VAFK`&#10;" />
             <tags />
             </attribute>
           </attributes>
