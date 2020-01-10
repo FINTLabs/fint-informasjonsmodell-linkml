@@ -23,6 +23,10 @@ classes:
       
       Det finnes flere kontodimensjoner enn disse fire. Modellen vil utvides senere med disse dimensjonene.
     attributes:
+      aktivitet:
+        range: Aktivitet
+      anlegg:
+        range: Anlegg
       ansvar:
         range: Ansvar
         description: |
@@ -33,12 +37,22 @@ classes:
         description: |
           Art eller konto.
         required: true
+      diverse:
+        range: Diverse
       funksjon:
         range: Funksjon
         description: |
           Funksjon eller tjeneste.
         required: true
+      kontrakt:
+        range: Kontrakt
+      løpenummer:
+        range: Løpenummer
+      objekt:
+        range: Objekt
       prosjekt:
         range: Prosjekt
         description: |
           Prosjekt.
+      ramme:
+        range: Ramme

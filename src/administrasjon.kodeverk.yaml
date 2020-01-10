@@ -10,6 +10,12 @@ imports:
 
 classes:
 
+  Aktivitet:
+    is_a: Kontodimensjon
+
+  Anlegg:
+    is_a: Kontodimensjon
+
   Ansvar:
     description: |
       Kodeverk som er en del av kontostrengen som beskriver hvem som har ansvaret for en utgift eller en inntekt
@@ -83,6 +89,9 @@ classes:
       Alternativt navn: Konto
       
       Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er drift, investering eller balanse.
+    is_a: Kontodimensjon
+
+  Diverse:
     is_a: Kontodimensjon
 
   Fraværsgrunn:
@@ -188,6 +197,9 @@ classes:
           Alle fullmakter knyttet til kontodimensjonen.
         multivalued: true
 
+  Kontrakt:
+    is_a: Kontodimensjon
+
   Lønnsart:
     description: |
       Type ytelse.
@@ -225,6 +237,12 @@ classes:
         range: Art
         description: |
           Art som lønnsart er tilknyttet.
+
+  Løpenummer:
+    is_a: Kontodimensjon
+
+  Objekt:
+    is_a: Kontodimensjon
 
   Personalressurskategori:
     description: |
@@ -269,6 +287,9 @@ classes:
       Del av kontostrengen som peker på løpende prosjekter
       
       .
+    is_a: Kontodimensjon
+
+  Ramme:
     is_a: Kontodimensjon
 
   Stillingskode:

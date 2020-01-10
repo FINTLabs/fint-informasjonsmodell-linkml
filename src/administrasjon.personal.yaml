@@ -569,13 +569,13 @@ classes:
       gyldighetsperiode:
         range: Periode
         description: |
-          Varigeheten til et bestemt arbeidsforhold
+          Gyldig periode for et gitt arbeidsforhold
           
-          # Beskrivelse
+          # Beskrivelse 
           
-          Periode en personalressurs har vært (eller er) ansatt i et bestemt arbeidsforhold.
+          Periode en personalressurs har v&#230;rt (eller er) ansatt i et bestemt arbeidsforhold. Inneholder en dato for start, og kan inneholde slutt-dato.
           
-          Inneholder en dato for start, og kan inneholde slutt-dato.
+          Endringer i samme stilling kan representeres som flere arbeidsforhold med samme stillingsnummer og ulike gyldighetsperioder.
         required: true
       hovedstilling:
         range: boolean
@@ -614,11 +614,11 @@ classes:
       stillingsnummer:
         range: string
         description: |
-          En identifikator for stilling til en ansatt
+          Løpenummer for stilling
           
           # Beskrivelse
           
-          Løpenummer over stillinger som arbeidstaker har eller har hatt som ansattressurs i organisasjonen. Innenfor en ansatt og arbeidsforholdsperiode skal denne være unik.
+          Løpenummer for stillinger som arbeidstaker har eller har hatt i organisasjonen.  Arbeidsforhold representerer tidslinjen til en stilling, alle arbeidsforhold med samme stillingsnummer representerer samme stilling. Gyldighetsperiodene til arbeidsforhold med samme stillingsnummer kan ikke overlappe.
           
           # Format
           
@@ -626,10 +626,7 @@ classes:
           
           # Eksempler
           
-          For en personalressurs med tre arbeidsforhold, kan det være:
-          `1`
-          `2`
-          `3`
+          For en personalressurs med tre arbeidsforhold, kan det være: 1 2 3
         required: true
       stillingstittel:
         range: string

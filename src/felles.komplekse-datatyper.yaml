@@ -150,30 +150,29 @@ classes:
         description: |
           Person sitt mobiltelefonnummer.
           
-          # Format 
+          # Format
           
-          Anbefalt format er 8 siffer uten mellomrom, eller E.123 international notation.
+          Format m&#229; f&#248;lge norsk nummerplan E.164, alternativt med `+` for &#229; angi internasjonalt prefiks for internasjonale numre.
           
           # Referanser
           
-          * [Standard fra ITU](http://www.itu.int/rec/T-REC-E.123/en)
-          * [Wiki side](https://en.wikipedia.org/wiki/E.123)
+          - [ITU E.164](https://www.itu.int/rec/T-REC-E.164/en)
+          - [Nummerplan (Wikipedia)](https://no.wikipedia.org/wiki/Nummerplan_(E.164))
           
           # Eksempel
-          
           ## Riktig:
           
-          * `47845326`
-          * `+4747845326`
-          * `+1234234234234`
-          * `+79161238752`
+          - 47845326
+          - +4747845326
+          - +1234234234234
+          - +79161238752
           
           ## Feil:
           
-          * `456 45 334`
-          * `0047 23 23 23 23`
-          * `02643`
-          * `0VAFK`
+          - 456 45 334
+          - 0047 23 23 23 23
+          - 02643
+          - 0VAFK
       nettsted:
         range: string
         description: |
@@ -230,31 +229,29 @@ classes:
         description: |
           Person sitt telefonnummer.
           
-          # Format 
+          # Format
           
-          Anbefalt format er 8 siffer uten mellomrom, eller E.123 international notation.
+          Format m&#229; f&#248;lge norsk nummerplan E.164, alternativt med `+` for &#229; angi internasjonalt prefiks for internasjonale numre.
           
           # Referanser
           
-          * [Standard fra ITU](http://www.itu.int/rec/T-REC-E.123/en)
-          * [Wiki side](https://en.wikipedia.org/wiki/E.123)
+          - [ITU E.164](https://www.itu.int/rec/T-REC-E.164/en)
+          - [Nummerplan (Wikipedia)](https://no.wikipedia.org/wiki/Nummerplan_(E.164))
           
           # Eksempel
-          
           ## Riktig:
           
-          * `27845326`
-          * `+4727845326`
-          * `+1234234234234`
-          * `+79161238752`
-          * `+4781502645`
+          - 47845326
+          - +4747845326
+          - +1234234234234
+          - +79161238752
           
           ## Feil:
           
-          * `456 45 334`
-          * `0047 23 23 23 23`
-          * `02643`
-          * `0VAFK`
+          - 456 45 334
+          - 0047 23 23 23 23
+          - 02643
+          - 0VAFK
 
   Periode:
     description: |

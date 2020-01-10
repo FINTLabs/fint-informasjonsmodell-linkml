@@ -14,6 +14,29 @@ imports:
 
 classes:
 
+  Årstrinn:
+    description: |
+      Hvert år i grunnopplæringen (grunnskole og videregående skole) kalles et årstrinn.
+      
+      # Eksempler
+      
+      * Vg1
+      * Vg2
+      * Vg3
+      * Vg4
+      
+      # Synonym
+      
+      * Nivå (Rogaland)
+      * Klassetrinn
+      * Trinn
+      
+      # Referanser
+      
+      * http://grepwiki.udir.no/index.php?title=Årstrinn
+      * http://psi.udir.no/ontologi/kl06/aarstrinn
+    is_a: Gruppe
+
   Programområde:
     description: |
       Programområde er et kurs i den videregående skolen. Et programområde strekker seg vanligvis over ett eller flere år og er gjerne en spesialisert retning eller område for fordypning innen utdanningsprogrammet.
@@ -268,26 +291,3 @@ classes:
         description: |
           Alle skoler som tilbyr utdanningsprogrammet
         multivalued: true
-
-  Årstrinn:
-    description: |
-      Hvert år i grunnopplæringen (grunnskole og videregående skole) kalles et årstrinn.
-      
-      # Eksempler
-      
-      * Vg1
-      * Vg2
-      * Vg3
-      * Vg4
-      
-      # Synonym
-      
-      * Nivå (Rogaland)
-      * Klassetrinn
-      * Trinn
-      
-      # Referanser
-      
-      * http://grepwiki.udir.no/index.php?title=Årstrinn
-      * http://psi.udir.no/ontologi/kl06/aarstrinn
-    is_a: Gruppe

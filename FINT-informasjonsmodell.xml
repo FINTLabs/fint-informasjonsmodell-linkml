@@ -80,6 +80,14 @@ De vanligste rollene er:
               </packagedElement>
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_bffb9eb00a2f968a52" name="Kodeverk">
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_00e9ec8784c8936cea" name="Aktivitet">
+              <properties stereotype="hovedklasse" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_c3f83bfe2deba1a56c" general="EAID_CLS_b2d51228fff1754e2b" start="EAID_CLS_00e9ec8784c8936cea" end="EAID_CLS_b2d51228fff1754e2b" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_8cb8f8bcd872b52833" name="Anlegg">
+              <properties stereotype="hovedklasse" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_daf4cdeb79ae656b71" general="EAID_CLS_b2d51228fff1754e2b" start="EAID_CLS_8cb8f8bcd872b52833" end="EAID_CLS_b2d51228fff1754e2b" />
+              </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_7a1842f8370ceb4648" name="Ansvar">
               <properties documentation="Kodeverk som er en del av kontostrengen som beskriver hvem som har ansvaret for en utgift eller en inntekt&#10;&#10;# Beskrivelse&#10;&#10;Ansvar viser hvordan ansvaret i organisasjonen er bygd opp i samsvar med fylkeskommunens anvisningsmyndighet.&#10;&#10;Alternative navn: `Kostsenter`, `Koststed`.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a28be2f763d459750d">
@@ -138,6 +146,10 @@ Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er d
 </body>
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_288919598d0845dc45" general="EAID_CLS_b2d51228fff1754e2b" start="EAID_CLS_b86eb7152bf9ecacd7" end="EAID_CLS_b2d51228fff1754e2b" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_2b445e41471ed7a4c9" name="Diverse">
+              <properties stereotype="hovedklasse" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_9a4fe589501b2050a9" general="EAID_CLS_b2d51228fff1754e2b" start="EAID_CLS_2b445e41471ed7a4c9" end="EAID_CLS_b2d51228fff1754e2b" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_9bda5b4490bce8664e" name="Fraværsgrunn">
               <properties documentation="Grunn til fravær.&#10;&#10;# Eksempel&#10;&#10;- Arbeidsrelatert&#10;- Ikke arbeidsrelatert&#10;- Svangerskap&#10;" stereotype="hovedklasse" />
@@ -232,6 +244,10 @@ Fellesbenevnelse for dimensjoner i en kontoplan.
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_e2a3cbb9d68384a7ec" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_b2d51228fff1754e2b" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_97acd9c5e2c4898e8b" name="Kontrakt">
+              <properties stereotype="hovedklasse" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_3756ab8a00571f56e7" general="EAID_CLS_b2d51228fff1754e2b" start="EAID_CLS_97acd9c5e2c4898e8b" end="EAID_CLS_b2d51228fff1754e2b" />
+              </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_f1d4a9bd27af04c15b" name="Lønnsart">
               <properties documentation="Type ytelse.&#10;&#10;# Beskrivelse&#10;&#10;Lønnsart brukes av HRM-systemer for å indikere hvordan en ytelse skal behandles.&#10;&#10;Den inneholder også knytning til hvordan ytelsen skal rapporteres på A-meldingen.&#10;&#10;Tidligere hadde lønnsart knytning til LTO-kode og LT-kode.&#10;&#10;# Referanser&#10;&#10;* Rapportering av ytelser på A-meldingen: http://veiledning-amelding.smartlearn.no/Veiledn_Generell/index.html#!Documents/rapporteringavkontantytelser.htm&#10;* Altinn: Innholdet i A-meldingen: https://www.altinn.no/no/a-ordningen/om-a-meldingen/Innholdet-i-a-meldingen/&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_bcb74521c763f2c514">
@@ -274,6 +290,14 @@ Kategori er et felt som indikerer denne begrensningen.
                 </ownedAttribute>
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_f8f2e02acc9b6ec638" visibility="public" start="EAID_CLS_f1d4a9bd27af04c15b" end="EAID_CLS_b86eb7152bf9ecacd7" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_c1a9372726e8777f93" name="Løpenummer">
+              <properties stereotype="hovedklasse" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_2d78b828f85527f295" general="EAID_CLS_b2d51228fff1754e2b" start="EAID_CLS_c1a9372726e8777f93" end="EAID_CLS_b2d51228fff1754e2b" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_7e721af34e787ad9c2" name="Objekt">
+              <properties stereotype="hovedklasse" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_e95e00be35bf0fa23e" general="EAID_CLS_b2d51228fff1754e2b" start="EAID_CLS_7e721af34e787ad9c2" end="EAID_CLS_b2d51228fff1754e2b" />
+              </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_0e902a06c5b70e4340" name="Personalressurskategori">
               <properties documentation="Ansattform til et arbeidsforhold&#10;&#10;# Beskrivelse&#10;&#10;Alternativ navn:&#10;* Ansatt (er ikke datatype, men kodeverk)&#10;* Ansattkategori&#10;* Ansattformer&quot;&#10;&#10;# Eksempel&#10;&#10;## Eksempel fra Visma HR - Kategori:&#10;&#10;Kode | Beskrivelse&#10;---|---&#10;F | Fast&#10;M | Midlertidig&#10;O | Oppdragstaker&#10;P | Politiker&#10;S | Sluttet&#10;&#10;## Eksempel fra Agresso - Ressurstype:&#10;&#10;Kode  | Beskrivelse&#10;---|---&#10;1 | Ansatt - kommunal&#10;10 | Lærling/Ung arb.taker&#10;2 | Ansatt - undervisning&#10;3 | Honorar/godtgjørelse&#10;4 | Sluttet&#10;5 | Nyansatt&#10;6 | Ikke ansatt - kun bruker&#10;7 | Politikere&#10;8|  Selvstendig næringsdrivende&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_dd1c29bad74dec7bd9">
@@ -324,6 +348,10 @@ Kode  | Beskrivelse
 </body>
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_ad1c910a7fef1a059e" general="EAID_CLS_b2d51228fff1754e2b" start="EAID_CLS_0f00acb3fd0e96ed60" end="EAID_CLS_b2d51228fff1754e2b" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_dd92a52d92cf9bebff" name="Ramme">
+              <properties stereotype="hovedklasse" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_37bff47e82e7696ff9" general="EAID_CLS_b2d51228fff1754e2b" start="EAID_CLS_dd92a52d92cf9bebff" end="EAID_CLS_b2d51228fff1754e2b" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_1d24d026ece51b64c5" name="Stillingskode">
               <properties documentation="Et felles kodeverk for stillinger&#10;&#10;# Beskrivelse&#10;&#10;I det fylkeskommunale lønnssystemet har alle stillinger en stillingskode og en stillingsbetegnelse (for eksempel 7026 for bibliotekar eller 7076 for hjelpepleier). Stillingskoden kan angi noe om stillingens innhold og lønnsnivå.&#10;&#10;Det finnes en [KS standard for stillingskoder](http://www.ks.no/globalassets/vedlegg-til-hvert-fagomrader/arbeidsgiver/lonnpersonal---analyse-og-statistikk/innsamling-av-data/del-3---stillingskoder.pdf)&#10;" stereotype="hovedklasse" />
@@ -384,10 +412,17 @@ Det finnes flere kontodimensjoner enn disse fire. Modellen vil utvides senere me
 </body>
                 </ownedComment>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_7a30172c465cec8f64" visibility="public" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_00e9ec8784c8936cea" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_91a9988c1715c73fae" visibility="public" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_8cb8f8bcd872b52833" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_ff07e2ea805bdae7a1" visibility="public" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_7a1842f8370ceb4648" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_69e922fcc065b17d11" visibility="public" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_b86eb7152bf9ecacd7" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a0a5fcd6f9356a1a29" visibility="public" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_2b445e41471ed7a4c9" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_8a582d97815307b717" visibility="public" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_b2fbf668ea3689009c" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_e705f54ce6290b78ff" visibility="public" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_97acd9c5e2c4898e8b" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_ce2c51eac35876b161" visibility="public" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_c1a9372726e8777f93" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_34b4db17fee1adf113" visibility="public" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_7e721af34e787ad9c2" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_1cdf854213867d04b5" visibility="public" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_0f00acb3fd0e96ed60" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_b805e961f1b1b6ab1c" visibility="public" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_dd92a52d92cf9bebff" />
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_0dfb51061c4b93cb2e" name="Organisasjon">
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_11c618a515753fb259" name="Organisasjonselement">
@@ -1023,13 +1058,13 @@ Angitt fra 0 til 10000 i hundredelsprosent.
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_237ea09245ff46905b" value="1" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_237ea09245ff46905b" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_237ea09245ff46905b">
-                  <body>Varigeheten til et bestemt arbeidsforhold
+                  <body>Gyldig periode for et gitt arbeidsforhold
 
-# Beskrivelse
+# Beskrivelse 
 
-Periode en personalressurs har vært (eller er) ansatt i et bestemt arbeidsforhold.
+Periode en personalressurs har v&amp;#230;rt (eller er) ansatt i et bestemt arbeidsforhold. Inneholder en dato for start, og kan inneholde slutt-dato.
 
-Inneholder en dato for start, og kan inneholde slutt-dato.
+Endringer i samme stilling kan representeres som flere arbeidsforhold med samme stillingsnummer og ulike gyldighetsperioder.
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -1074,11 +1109,11 @@ Angitt fra 0 til 10000 i hundredelsprosent.
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_f85925f12ff25808fd" value="1" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_f85925f12ff25808fd" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_f85925f12ff25808fd">
-                  <body>En identifikator for stilling til en ansatt
+                  <body>Løpenummer for stilling
 
 # Beskrivelse
 
-Løpenummer over stillinger som arbeidstaker har eller har hatt som ansattressurs i organisasjonen. Innenfor en ansatt og arbeidsforholdsperiode skal denne være unik.
+Løpenummer for stillinger som arbeidstaker har eller har hatt i organisasjonen.  Arbeidsforhold representerer tidslinjen til en stilling, alle arbeidsforhold med samme stillingsnummer representerer samme stilling. Gyldighetsperiodene til arbeidsforhold med samme stillingsnummer kan ikke overlappe.
 
 # Format
 
@@ -1086,10 +1121,7 @@ Id-verdi til en stilling.
 
 # Eksempler
 
-For en personalressurs med tre arbeidsforhold, kan det være:
-`1`
-`2`
-`3`
+For en personalressurs med tre arbeidsforhold, kan det være: 1 2 3
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -1806,30 +1838,29 @@ En ikke-fysisk adresse, i motsetning til [Adresse](/docs/komplekse_datatyper_adr
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_0fd3bd0b57a792b2d6">
                   <body>Person sitt mobiltelefonnummer.
 
-# Format 
+# Format
 
-Anbefalt format er 8 siffer uten mellomrom, eller E.123 international notation.
+Format m&amp;#229; f&amp;#248;lge norsk nummerplan E.164, alternativt med `+` for &amp;#229; angi internasjonalt prefiks for internasjonale numre.
 
 # Referanser
 
-* [Standard fra ITU](http://www.itu.int/rec/T-REC-E.123/en)
-* [Wiki side](https://en.wikipedia.org/wiki/E.123)
+- [ITU E.164](https://www.itu.int/rec/T-REC-E.164/en)
+- [Nummerplan (Wikipedia)](https://no.wikipedia.org/wiki/Nummerplan_(E.164))
 
 # Eksempel
-
 ## Riktig:
 
-* `47845326`
-* `+4747845326`
-* `+1234234234234`
-* `+79161238752`
+- 47845326
+- +4747845326
+- +1234234234234
+- +79161238752
 
 ## Feil:
 
-* `456 45 334`
-* `0047 23 23 23 23`
-* `02643`
-* `0VAFK`
+- 456 45 334
+- 0047 23 23 23 23
+- 02643
+- 0VAFK
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -1901,31 +1932,29 @@ https://snl.no/SIP
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d9875bceeef4771eff">
                   <body>Person sitt telefonnummer.
 
-# Format 
+# Format
 
-Anbefalt format er 8 siffer uten mellomrom, eller E.123 international notation.
+Format m&amp;#229; f&amp;#248;lge norsk nummerplan E.164, alternativt med `+` for &amp;#229; angi internasjonalt prefiks for internasjonale numre.
 
 # Referanser
 
-* [Standard fra ITU](http://www.itu.int/rec/T-REC-E.123/en)
-* [Wiki side](https://en.wikipedia.org/wiki/E.123)
+- [ITU E.164](https://www.itu.int/rec/T-REC-E.164/en)
+- [Nummerplan (Wikipedia)](https://no.wikipedia.org/wiki/Nummerplan_(E.164))
 
 # Eksempel
-
 ## Riktig:
 
-* `27845326`
-* `+4727845326`
-* `+1234234234234`
-* `+79161238752`
-* `+4781502645`
+- 47845326
+- +4747845326
+- +1234234234234
+- +79161238752
 
 ## Feil:
 
-* `456 45 334`
-* `0047 23 23 23 23`
-* `02643`
-* `0VAFK`
+- 456 45 334
+- 0047 23 23 23 23
+- 02643
+- 0VAFK
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -2726,6 +2755,32 @@ Synonym:
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_ac1d5c9bd89da99f3c" visibility="public" start="EAID_CLS_d404ea07009fe8b767" end="EAID_CLS_64e904f2ebf8b9f538" />
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_62662c7b1bff5787c8" name="Utdanningsprogram">
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_b2a41a5ceca288c6f4" name="Årstrinn">
+              <properties documentation="Hvert år i grunnopplæringen (grunnskole og videregående skole) kalles et årstrinn.&#10;&#10;# Eksempler&#10;&#10;* Vg1&#10;* Vg2&#10;* Vg3&#10;* Vg4&#10;&#10;# Synonym&#10;&#10;* Nivå (Rogaland)&#10;* Klassetrinn&#10;* Trinn&#10;&#10;# Referanser&#10;&#10;* http://grepwiki.udir.no/index.php?title=Årstrinn&#10;* http://psi.udir.no/ontologi/kl06/aarstrinn&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7aca24a699321f2d2f">
+                <body>Hvert år i grunnopplæringen (grunnskole og videregående skole) kalles et årstrinn.
+
+# Eksempler
+
+* Vg1
+* Vg2
+* Vg3
+* Vg4
+
+# Synonym
+
+* Nivå (Rogaland)
+* Klassetrinn
+* Trinn
+
+# Referanser
+
+* http://grepwiki.udir.no/index.php?title=Årstrinn
+* http://psi.udir.no/ontologi/kl06/aarstrinn
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_7aca24a699321f2d2f" general="EAID_CLS_a62447c9dd60a973b1" start="EAID_CLS_b2a41a5ceca288c6f4" end="EAID_CLS_a62447c9dd60a973b1" />
+              </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_c317e0b3ba883a1162" name="Programområde">
               <properties documentation="Programområde er et kurs i den videregående skolen. Et programområde strekker seg vanligvis over ett eller flere år og er gjerne en spesialisert retning eller område for fordypning innen utdanningsprogrammet.&#10;&#10;# Beskrivelse&#10;&#10;Innenfor utdanningsprogrammet studiespesialisering, er eksempler på programområder realfag, språk, samfunnsfag og økonomi og formgivingsfag.&#10;&#10;Innenfor utdanningsprogrammet naturbruk, finnes det for eksempel i andre klasse (Vg2) programområdene akvakultur, anleggsgartner og driftsoperatør idrettsanlegg, fiske og fangst, heste- og hovslagerfag, landbruk og gartneri, reindrift og skogbruk.&#10;&#10;Programområdekoder som slutter på  `----` angir at det er standardversjon av programområdet, og ikke en fylkeskommunal variant.&#10;&#10;# Eksempler&#10;&#10;* Anleggsmaskinførerf,PB&#10;* Asfaltfaget,PB&#10;* Banemontørfaget,PB&#10;* Betongfaget,PB&#10;* Bioenergi (D)&#10;* Byggdrifterfaget,PB&#10;* FDV-utdanning, 1 år (D)&#10;* Feierfaget,PB&#10;* Matrosfaget,PB&#10;* Modellbyggerfaget,PB&#10;* Motormannfaget,PB&#10;* Motormekanikerfaget,PB&#10;* Motorsykkelfaget,PB&#10;&#10;# Referanser&#10;&#10;* UDir Registreringshåndbok: [regbok.udir.no/35004/3344/35042-1014307.html](http://regbok.udir.no/35004/3344/35042-1014307.html)&#10;* Wikipedia: https://no.wikipedia.org/wiki/Programområde&#10;* Grepwiki: http://grepwiki.udir.no/index.php?title=Programområde&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_411d06a84574bb96be">
@@ -2900,32 +2955,6 @@ Synonym: Utdanningsgruppe
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_8f81b9051cb247fba3" general="EAID_CLS_a62447c9dd60a973b1" start="EAID_CLS_e755c56f229ed4bfb5" end="EAID_CLS_a62447c9dd60a973b1" />
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_5e39f07a49161d3faf" visibility="public" start="EAID_CLS_e755c56f229ed4bfb5" end="EAID_CLS_64e904f2ebf8b9f538" />
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_b2a41a5ceca288c6f4" name="Årstrinn">
-              <properties documentation="Hvert år i grunnopplæringen (grunnskole og videregående skole) kalles et årstrinn.&#10;&#10;# Eksempler&#10;&#10;* Vg1&#10;* Vg2&#10;* Vg3&#10;* Vg4&#10;&#10;# Synonym&#10;&#10;* Nivå (Rogaland)&#10;* Klassetrinn&#10;* Trinn&#10;&#10;# Referanser&#10;&#10;* http://grepwiki.udir.no/index.php?title=Årstrinn&#10;* http://psi.udir.no/ontologi/kl06/aarstrinn&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7aca24a699321f2d2f">
-                <body>Hvert år i grunnopplæringen (grunnskole og videregående skole) kalles et årstrinn.
-
-# Eksempler
-
-* Vg1
-* Vg2
-* Vg3
-* Vg4
-
-# Synonym
-
-* Nivå (Rogaland)
-* Klassetrinn
-* Trinn
-
-# Referanser
-
-* http://grepwiki.udir.no/index.php?title=Årstrinn
-* http://psi.udir.no/ontologi/kl06/aarstrinn
-</body>
-                </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_7aca24a699321f2d2f" general="EAID_CLS_a62447c9dd60a973b1" start="EAID_CLS_b2a41a5ceca288c6f4" end="EAID_CLS_a62447c9dd60a973b1" />
-              </packagedElement>
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_005aa392465e3500f2" name="Vurdering">
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_befc698f1817a298c1" name="Eksamensgruppe">
@@ -3287,6 +3316,18 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <model package2="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="package" package="EAID_PKG_87452f10731000f560" />
         <tags />
         </element>
+      <element xmi:idref="EAID_CLS_00e9ec8784c8936cea" idref="EAID_CLS_00e9ec8784c8936cea" xmi:type="uml:Class" type="Class" name="Aktivitet" scope="public">
+        <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_8cb8f8bcd872b52833" idref="EAID_CLS_8cb8f8bcd872b52833" xmi:type="uml:Class" type="Class" name="Anlegg" scope="public">
+        <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" stereotype="hovedklasse" />
+        <attributes />
+        </element>
       <element xmi:idref="EAID_CLS_7a1842f8370ceb4648" idref="EAID_CLS_7a1842f8370ceb4648" xmi:type="uml:Class" type="Class" name="Ansvar" scope="public">
         <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
         <tags />
@@ -3303,6 +3344,12 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Kodeverk som er en del av kontostrengen som beskriver hva slags inntekter og utgifter det gjelder. &#10;&#10;# Beskrivelse&#10;&#10;Alternativt navn: Konto&#10;&#10;Art er det første og såkalt styrende begrepet i kontostrengen. Angir om det er drift, investering eller balanse.&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_2b445e41471ed7a4c9" idref="EAID_CLS_2b445e41471ed7a4c9" xmi:type="uml:Class" type="Class" name="Diverse" scope="public">
+        <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_9bda5b4490bce8664e" idref="EAID_CLS_9bda5b4490bce8664e" xmi:type="uml:Class" type="Class" name="Fraværsgrunn" scope="public">
@@ -3337,6 +3384,12 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties isAbstract="true" sType="Class" scope="public" documentation="Abstrakt fellesbegrep som beskriver dimensjon i kontoplan.&#10;&#10;# Beskrivelse&#10;&#10;Fellesbenevnelse for dimensjoner i en kontoplan.&#10;" stereotype="abstrakt" />
         <attributes />
         </element>
+      <element xmi:idref="EAID_CLS_97acd9c5e2c4898e8b" idref="EAID_CLS_97acd9c5e2c4898e8b" xmi:type="uml:Class" type="Class" name="Kontrakt" scope="public">
+        <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" stereotype="hovedklasse" />
+        <attributes />
+        </element>
       <element xmi:idref="EAID_CLS_f1d4a9bd27af04c15b" idref="EAID_CLS_f1d4a9bd27af04c15b" xmi:type="uml:Class" type="Class" name="Lønnsart" scope="public">
         <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
         <tags />
@@ -3351,6 +3404,18 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             </attribute>
           </attributes>
         </element>
+      <element xmi:idref="EAID_CLS_c1a9372726e8777f93" idref="EAID_CLS_c1a9372726e8777f93" xmi:type="uml:Class" type="Class" name="Løpenummer" scope="public">
+        <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_7e721af34e787ad9c2" idref="EAID_CLS_7e721af34e787ad9c2" xmi:type="uml:Class" type="Class" name="Objekt" scope="public">
+        <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" stereotype="hovedklasse" />
+        <attributes />
+        </element>
       <element xmi:idref="EAID_CLS_0e902a06c5b70e4340" idref="EAID_CLS_0e902a06c5b70e4340" xmi:type="uml:Class" type="Class" name="Personalressurskategori" scope="public">
         <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
         <tags />
@@ -3361,6 +3426,12 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Del av kontostrengen som peker på løpende prosjekter&#10;&#10;.&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_dd92a52d92cf9bebff" idref="EAID_CLS_dd92a52d92cf9bebff" xmi:type="uml:Class" type="Class" name="Ramme" scope="public">
+        <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_1d24d026ece51b64c5" idref="EAID_CLS_1d24d026ece51b64c5" xmi:type="uml:Class" type="Class" name="Stillingskode" scope="public">
@@ -3654,7 +3725,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="Periode" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Varigeheten til et bestemt arbeidsforhold&#10;&#10;# Beskrivelse&#10;&#10;Periode en personalressurs har vært (eller er) ansatt i et bestemt arbeidsforhold.&#10;&#10;Inneholder en dato for start, og kan inneholde slutt-dato.&#10;" />
+            <documentation value="Gyldig periode for et gitt arbeidsforhold&#10;&#10;# Beskrivelse &#10;&#10;Periode en personalressurs har v&amp;#230;rt (eller er) ansatt i et bestemt arbeidsforhold. Inneholder en dato for start, og kan inneholde slutt-dato.&#10;&#10;Endringer i samme stilling kan representeres som flere arbeidsforhold med samme stillingsnummer og ulike gyldighetsperioder.&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_b86c806363422f7fa4" idref="EAID_PRP_b86c806363422f7fa4" name="hovedstilling">
@@ -3675,7 +3746,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="string" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="En identifikator for stilling til en ansatt&#10;&#10;# Beskrivelse&#10;&#10;Løpenummer over stillinger som arbeidstaker har eller har hatt som ansattressurs i organisasjonen. Innenfor en ansatt og arbeidsforholdsperiode skal denne være unik.&#10;&#10;# Format&#10;&#10;Id-verdi til en stilling.&#10;&#10;# Eksempler&#10;&#10;For en personalressurs med tre arbeidsforhold, kan det være:&#10;`1`&#10;`2`&#10;`3`&#10;" />
+            <documentation value="Løpenummer for stilling&#10;&#10;# Beskrivelse&#10;&#10;Løpenummer for stillinger som arbeidstaker har eller har hatt i organisasjonen.  Arbeidsforhold representerer tidslinjen til en stilling, alle arbeidsforhold med samme stillingsnummer representerer samme stilling. Gyldighetsperiodene til arbeidsforhold med samme stillingsnummer kan ikke overlappe.&#10;&#10;# Format&#10;&#10;Id-verdi til en stilling.&#10;&#10;# Eksempler&#10;&#10;For en personalressurs med tre arbeidsforhold, kan det være: 1 2 3&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_5cfb0dd75b17c5f85d" idref="EAID_PRP_5cfb0dd75b17c5f85d" name="stillingstittel">
@@ -3881,7 +3952,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="string" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Person sitt mobiltelefonnummer.&#10;&#10;# Format &#10;&#10;Anbefalt format er 8 siffer uten mellomrom, eller E.123 international notation.&#10;&#10;# Referanser&#10;&#10;* [Standard fra ITU](http://www.itu.int/rec/T-REC-E.123/en)&#10;* [Wiki side](https://en.wikipedia.org/wiki/E.123)&#10;&#10;# Eksempel&#10;&#10;## Riktig:&#10;&#10;* `47845326`&#10;* `+4747845326`&#10;* `+1234234234234`&#10;* `+79161238752`&#10;&#10;## Feil:&#10;&#10;* `456 45 334`&#10;* `0047 23 23 23 23`&#10;* `02643`&#10;* `0VAFK`&#10;" />
+            <documentation value="Person sitt mobiltelefonnummer.&#10;&#10;# Format&#10;&#10;Format m&amp;#229; f&amp;#248;lge norsk nummerplan E.164, alternativt med `+` for &amp;#229; angi internasjonalt prefiks for internasjonale numre.&#10;&#10;# Referanser&#10;&#10;- [ITU E.164](https://www.itu.int/rec/T-REC-E.164/en)&#10;- [Nummerplan (Wikipedia)](https://no.wikipedia.org/wiki/Nummerplan_(E.164))&#10;&#10;# Eksempel&#10;## Riktig:&#10;&#10;- 47845326&#10;- +4747845326&#10;- +1234234234234&#10;- +79161238752&#10;&#10;## Feil:&#10;&#10;- 456 45 334&#10;- 0047 23 23 23 23&#10;- 02643&#10;- 0VAFK&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_dfb9e4175083516afd" idref="EAID_PRP_dfb9e4175083516afd" name="nettsted">
@@ -3902,7 +3973,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="string" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Person sitt telefonnummer.&#10;&#10;# Format &#10;&#10;Anbefalt format er 8 siffer uten mellomrom, eller E.123 international notation.&#10;&#10;# Referanser&#10;&#10;* [Standard fra ITU](http://www.itu.int/rec/T-REC-E.123/en)&#10;* [Wiki side](https://en.wikipedia.org/wiki/E.123)&#10;&#10;# Eksempel&#10;&#10;## Riktig:&#10;&#10;* `27845326`&#10;* `+4727845326`&#10;* `+1234234234234`&#10;* `+79161238752`&#10;* `+4781502645`&#10;&#10;## Feil:&#10;&#10;* `456 45 334`&#10;* `0047 23 23 23 23`&#10;* `02643`&#10;* `0VAFK`&#10;" />
+            <documentation value="Person sitt telefonnummer.&#10;&#10;# Format&#10;&#10;Format m&amp;#229; f&amp;#248;lge norsk nummerplan E.164, alternativt med `+` for &amp;#229; angi internasjonalt prefiks for internasjonale numre.&#10;&#10;# Referanser&#10;&#10;- [ITU E.164](https://www.itu.int/rec/T-REC-E.164/en)&#10;- [Nummerplan (Wikipedia)](https://no.wikipedia.org/wiki/Nummerplan_(E.164))&#10;&#10;# Eksempel&#10;## Riktig:&#10;&#10;- 47845326&#10;- +4747845326&#10;- +1234234234234&#10;- +79161238752&#10;&#10;## Feil:&#10;&#10;- 456 45 334&#10;- 0047 23 23 23 23&#10;- 02643&#10;- 0VAFK&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -4287,6 +4358,12 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <model package2="EAID_PKG_62662c7b1bff5787c8" ea_eleType="package" package="EAID_PKG_93ea470388b4d82056" />
         <tags />
         </element>
+      <element xmi:idref="EAID_CLS_b2a41a5ceca288c6f4" idref="EAID_CLS_b2a41a5ceca288c6f4" xmi:type="uml:Class" type="Class" name="Årstrinn" scope="public">
+        <model package="EAID_PKG_62662c7b1bff5787c8" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Hvert år i grunnopplæringen (grunnskole og videregående skole) kalles et årstrinn.&#10;&#10;# Eksempler&#10;&#10;* Vg1&#10;* Vg2&#10;* Vg3&#10;* Vg4&#10;&#10;# Synonym&#10;&#10;* Nivå (Rogaland)&#10;* Klassetrinn&#10;* Trinn&#10;&#10;# Referanser&#10;&#10;* http://grepwiki.udir.no/index.php?title=Årstrinn&#10;* http://psi.udir.no/ontologi/kl06/aarstrinn&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
       <element xmi:idref="EAID_CLS_c317e0b3ba883a1162" idref="EAID_CLS_c317e0b3ba883a1162" xmi:type="uml:Class" type="Class" name="Programområde" scope="public">
         <model package="EAID_PKG_62662c7b1bff5787c8" ea_eleType="element" />
         <tags />
@@ -4339,12 +4416,6 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <model package="EAID_PKG_62662c7b1bff5787c8" ea_eleType="element" />
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Utdanningsløpene i videregående skole som fører fram til studie- og/eller yrkeskompetanse/fagbrev&#10;&#10;Synonym: Utdanningsgruppe&#10;&#10;# Eksempler&#10;&#10;* Bygg- og anleggsteknikk&#10;* Design og håndverk&#10;* Elektrofag&#10;* Helse- og oppvekstfag&#10;* Idrettsfag&#10;* Kunst, design og arkitektur&#10;* Medier og kommunikasjon&#10;* Musikk, dans og drama&#10;* Naturbruk&#10;* Restaurant- og matfag&#10;* Service og samferdsel&#10;* Studiespesialisering&#10;* Teknikk og ind. produksjon&#10;&#10;# Referanser&#10;&#10;*  Fag- og timefordeling og tilbudsstruktur for Kunnskapsløftet Udir-1-2017 : https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Innhold-i-opplaringen/udir-01-2017/&#10;* UDir Registreringshåndbok: http://regbok.udir.no/35004/3344/35042-1018606.html&#10;* Grepwiki: http://grepwiki.udir.no/index.php?title=Utdanningsprogram&#10;" stereotype="hovedklasse" />
-        <attributes />
-        </element>
-      <element xmi:idref="EAID_CLS_b2a41a5ceca288c6f4" idref="EAID_CLS_b2a41a5ceca288c6f4" xmi:type="uml:Class" type="Class" name="Årstrinn" scope="public">
-        <model package="EAID_PKG_62662c7b1bff5787c8" ea_eleType="element" />
-        <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Hvert år i grunnopplæringen (grunnskole og videregående skole) kalles et årstrinn.&#10;&#10;# Eksempler&#10;&#10;* Vg1&#10;* Vg2&#10;* Vg3&#10;* Vg4&#10;&#10;# Synonym&#10;&#10;* Nivå (Rogaland)&#10;* Klassetrinn&#10;* Trinn&#10;&#10;# Referanser&#10;&#10;* http://grepwiki.udir.no/index.php?title=Årstrinn&#10;* http://psi.udir.no/ontologi/kl06/aarstrinn&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_PKG_005aa392465e3500f2" idref="EAID_PKG_005aa392465e3500f2" xmi:type="uml:Package" type="Package" name="Vurdering" scope="public">
@@ -4684,6 +4755,38 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_c3f83bfe2deba1a56c" idref="EAID_GEN_c3f83bfe2deba1a56c" start="EAID_CLS_00e9ec8784c8936cea" end="EAID_CLS_b2d51228fff1754e2b">
+        <source xmi:idref="EAID_CLS_00e9ec8784c8936cea" idref="EAID_CLS_00e9ec8784c8936cea">
+          <model type="Class" name="Aktivitet" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_b2d51228fff1754e2b" idref="EAID_CLS_b2d51228fff1754e2b">
+          <model type="Class" name="Kontodimensjon" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_daf4cdeb79ae656b71" idref="EAID_GEN_daf4cdeb79ae656b71" start="EAID_CLS_8cb8f8bcd872b52833" end="EAID_CLS_b2d51228fff1754e2b">
+        <source xmi:idref="EAID_CLS_8cb8f8bcd872b52833" idref="EAID_CLS_8cb8f8bcd872b52833">
+          <model type="Class" name="Anlegg" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_b2d51228fff1754e2b" idref="EAID_CLS_b2d51228fff1754e2b">
+          <model type="Class" name="Kontodimensjon" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_a28be2f763d459750d" idref="EAID_GEN_a28be2f763d459750d" start="EAID_CLS_7a1842f8370ceb4648" end="EAID_CLS_b2d51228fff1754e2b">
         <source xmi:idref="EAID_CLS_7a1842f8370ceb4648" idref="EAID_CLS_7a1842f8370ceb4648">
           <model type="Class" name="Ansvar" />
@@ -4754,6 +4857,22 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_288919598d0845dc45" idref="EAID_GEN_288919598d0845dc45" start="EAID_CLS_b86eb7152bf9ecacd7" end="EAID_CLS_b2d51228fff1754e2b">
         <source xmi:idref="EAID_CLS_b86eb7152bf9ecacd7" idref="EAID_CLS_b86eb7152bf9ecacd7">
           <model type="Class" name="Art" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_b2d51228fff1754e2b" idref="EAID_CLS_b2d51228fff1754e2b">
+          <model type="Class" name="Kontodimensjon" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_9a4fe589501b2050a9" idref="EAID_GEN_9a4fe589501b2050a9" start="EAID_CLS_2b445e41471ed7a4c9" end="EAID_CLS_b2d51228fff1754e2b">
+        <source xmi:idref="EAID_CLS_2b445e41471ed7a4c9" idref="EAID_CLS_2b445e41471ed7a4c9">
+          <model type="Class" name="Diverse" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -4866,6 +4985,22 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_3756ab8a00571f56e7" idref="EAID_GEN_3756ab8a00571f56e7" start="EAID_CLS_97acd9c5e2c4898e8b" end="EAID_CLS_b2d51228fff1754e2b">
+        <source xmi:idref="EAID_CLS_97acd9c5e2c4898e8b" idref="EAID_CLS_97acd9c5e2c4898e8b">
+          <model type="Class" name="Kontrakt" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_b2d51228fff1754e2b" idref="EAID_CLS_b2d51228fff1754e2b">
+          <model type="Class" name="Kontodimensjon" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_bcb74521c763f2c514" idref="EAID_GEN_bcb74521c763f2c514" start="EAID_CLS_f1d4a9bd27af04c15b" end="EAID_CLS_3385458244847ec7db">
         <source xmi:idref="EAID_CLS_f1d4a9bd27af04c15b" idref="EAID_CLS_f1d4a9bd27af04c15b">
           <model type="Class" name="Lønnsart" />
@@ -4899,6 +5034,38 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_2d78b828f85527f295" idref="EAID_GEN_2d78b828f85527f295" start="EAID_CLS_c1a9372726e8777f93" end="EAID_CLS_b2d51228fff1754e2b">
+        <source xmi:idref="EAID_CLS_c1a9372726e8777f93" idref="EAID_CLS_c1a9372726e8777f93">
+          <model type="Class" name="Løpenummer" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_b2d51228fff1754e2b" idref="EAID_CLS_b2d51228fff1754e2b">
+          <model type="Class" name="Kontodimensjon" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_e95e00be35bf0fa23e" idref="EAID_GEN_e95e00be35bf0fa23e" start="EAID_CLS_7e721af34e787ad9c2" end="EAID_CLS_b2d51228fff1754e2b">
+        <source xmi:idref="EAID_CLS_7e721af34e787ad9c2" idref="EAID_CLS_7e721af34e787ad9c2">
+          <model type="Class" name="Objekt" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_b2d51228fff1754e2b" idref="EAID_CLS_b2d51228fff1754e2b">
+          <model type="Class" name="Kontodimensjon" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_dd1c29bad74dec7bd9" idref="EAID_GEN_dd1c29bad74dec7bd9" start="EAID_CLS_0e902a06c5b70e4340" end="EAID_CLS_3385458244847ec7db">
         <source xmi:idref="EAID_CLS_0e902a06c5b70e4340" idref="EAID_CLS_0e902a06c5b70e4340">
           <model type="Class" name="Personalressurskategori" />
@@ -4918,6 +5085,22 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_ad1c910a7fef1a059e" idref="EAID_GEN_ad1c910a7fef1a059e" start="EAID_CLS_0f00acb3fd0e96ed60" end="EAID_CLS_b2d51228fff1754e2b">
         <source xmi:idref="EAID_CLS_0f00acb3fd0e96ed60" idref="EAID_CLS_0f00acb3fd0e96ed60">
           <model type="Class" name="Prosjekt" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_b2d51228fff1754e2b" idref="EAID_CLS_b2d51228fff1754e2b">
+          <model type="Class" name="Kontodimensjon" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_37bff47e82e7696ff9" idref="EAID_GEN_37bff47e82e7696ff9" start="EAID_CLS_dd92a52d92cf9bebff" end="EAID_CLS_b2d51228fff1754e2b">
+        <source xmi:idref="EAID_CLS_dd92a52d92cf9bebff" idref="EAID_CLS_dd92a52d92cf9bebff">
+          <model type="Class" name="Ramme" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -4980,6 +5163,38 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_7a30172c465cec8f64" idref="EAID_ASC_7a30172c465cec8f64" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_00e9ec8784c8936cea">
+        <source xmi:idref="EAID_CLS_f287e1ac31a6f4340e" idref="EAID_CLS_f287e1ac31a6f4340e">
+          <model type="Class" name="Kontostreng" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_00e9ec8784c8936cea" idref="EAID_CLS_00e9ec8784c8936cea">
+          <model type="Class" name="Aktivitet" />
+          <role name="aktivitet" visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_91a9988c1715c73fae" idref="EAID_ASC_91a9988c1715c73fae" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_8cb8f8bcd872b52833">
+        <source xmi:idref="EAID_CLS_f287e1ac31a6f4340e" idref="EAID_CLS_f287e1ac31a6f4340e">
+          <model type="Class" name="Kontostreng" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_8cb8f8bcd872b52833" idref="EAID_CLS_8cb8f8bcd872b52833">
+          <model type="Class" name="Anlegg" />
+          <role name="anlegg" visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_ff07e2ea805bdae7a1" idref="EAID_ASC_ff07e2ea805bdae7a1" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_7a1842f8370ceb4648">
         <source xmi:idref="EAID_CLS_f287e1ac31a6f4340e" idref="EAID_CLS_f287e1ac31a6f4340e">
           <model type="Class" name="Kontostreng" />
@@ -5014,6 +5229,22 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_a0a5fcd6f9356a1a29" idref="EAID_ASC_a0a5fcd6f9356a1a29" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_2b445e41471ed7a4c9">
+        <source xmi:idref="EAID_CLS_f287e1ac31a6f4340e" idref="EAID_CLS_f287e1ac31a6f4340e">
+          <model type="Class" name="Kontostreng" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_2b445e41471ed7a4c9" idref="EAID_CLS_2b445e41471ed7a4c9">
+          <model type="Class" name="Diverse" />
+          <role name="diverse" visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_8a582d97815307b717" idref="EAID_ASC_8a582d97815307b717" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_b2fbf668ea3689009c">
         <source xmi:idref="EAID_CLS_f287e1ac31a6f4340e" idref="EAID_CLS_f287e1ac31a6f4340e">
           <model type="Class" name="Kontostreng" />
@@ -5031,6 +5262,54 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_e705f54ce6290b78ff" idref="EAID_ASC_e705f54ce6290b78ff" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_97acd9c5e2c4898e8b">
+        <source xmi:idref="EAID_CLS_f287e1ac31a6f4340e" idref="EAID_CLS_f287e1ac31a6f4340e">
+          <model type="Class" name="Kontostreng" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_97acd9c5e2c4898e8b" idref="EAID_CLS_97acd9c5e2c4898e8b">
+          <model type="Class" name="Kontrakt" />
+          <role name="kontrakt" visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_ce2c51eac35876b161" idref="EAID_ASC_ce2c51eac35876b161" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_c1a9372726e8777f93">
+        <source xmi:idref="EAID_CLS_f287e1ac31a6f4340e" idref="EAID_CLS_f287e1ac31a6f4340e">
+          <model type="Class" name="Kontostreng" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_c1a9372726e8777f93" idref="EAID_CLS_c1a9372726e8777f93">
+          <model type="Class" name="Løpenummer" />
+          <role name="løpenummer" visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_34b4db17fee1adf113" idref="EAID_ASC_34b4db17fee1adf113" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_7e721af34e787ad9c2">
+        <source xmi:idref="EAID_CLS_f287e1ac31a6f4340e" idref="EAID_CLS_f287e1ac31a6f4340e">
+          <model type="Class" name="Kontostreng" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7e721af34e787ad9c2" idref="EAID_CLS_7e721af34e787ad9c2">
+          <model type="Class" name="Objekt" />
+          <role name="objekt" visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_1cdf854213867d04b5" idref="EAID_ASC_1cdf854213867d04b5" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_0f00acb3fd0e96ed60">
         <source xmi:idref="EAID_CLS_f287e1ac31a6f4340e" idref="EAID_CLS_f287e1ac31a6f4340e">
           <model type="Class" name="Kontostreng" />
@@ -5043,6 +5322,22 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <role name="prosjekt" visibility="Public" />
           <type multiplicity="0..1" />
           <documentation value="Prosjekt." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_b805e961f1b1b6ab1c" idref="EAID_ASC_b805e961f1b1b6ab1c" start="EAID_CLS_f287e1ac31a6f4340e" end="EAID_CLS_dd92a52d92cf9bebff">
+        <source xmi:idref="EAID_CLS_f287e1ac31a6f4340e" idref="EAID_CLS_f287e1ac31a6f4340e">
+          <model type="Class" name="Kontostreng" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_dd92a52d92cf9bebff" idref="EAID_CLS_dd92a52d92cf9bebff">
+          <model type="Class" name="Ramme" />
+          <role name="ramme" visibility="Public" />
+          <type multiplicity="0..1" />
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
@@ -6530,6 +6825,22 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_7aca24a699321f2d2f" idref="EAID_GEN_7aca24a699321f2d2f" start="EAID_CLS_b2a41a5ceca288c6f4" end="EAID_CLS_a62447c9dd60a973b1">
+        <source xmi:idref="EAID_CLS_b2a41a5ceca288c6f4" idref="EAID_CLS_b2a41a5ceca288c6f4">
+          <model type="Class" name="Årstrinn" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_a62447c9dd60a973b1" idref="EAID_CLS_a62447c9dd60a973b1">
+          <model type="Class" name="Gruppe" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_411d06a84574bb96be" idref="EAID_GEN_411d06a84574bb96be" start="EAID_CLS_c317e0b3ba883a1162" end="EAID_CLS_a62447c9dd60a973b1">
         <source xmi:idref="EAID_CLS_c317e0b3ba883a1162" idref="EAID_CLS_c317e0b3ba883a1162">
           <model type="Class" name="Programområde" />
@@ -6699,22 +7010,6 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <tags />
           </target>
         <properties ea_type="Association" direction="Bi-Directional" />
-        <tags />
-        </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_7aca24a699321f2d2f" idref="EAID_GEN_7aca24a699321f2d2f" start="EAID_CLS_b2a41a5ceca288c6f4" end="EAID_CLS_a62447c9dd60a973b1">
-        <source xmi:idref="EAID_CLS_b2a41a5ceca288c6f4" idref="EAID_CLS_b2a41a5ceca288c6f4">
-          <model type="Class" name="Årstrinn" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_a62447c9dd60a973b1" idref="EAID_CLS_a62447c9dd60a973b1">
-          <model type="Class" name="Gruppe" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </target>
-        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_f3053e312270f2e9f7" idref="EAID_GEN_f3053e312270f2e9f7" start="EAID_CLS_befc698f1817a298c1" end="EAID_CLS_a62447c9dd60a973b1">
