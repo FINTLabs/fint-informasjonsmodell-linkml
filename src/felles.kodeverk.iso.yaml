@@ -20,10 +20,9 @@ classes:
       
       # Referanser
       
-      * [FINT api for ISO5218](https://api.felleskomponent.no/felles/kodeverk/iso/5218)
-      
-      * [ISO/IEC 5218 standard](http://standards.iso.org/ittf/PubliclyAvailableStandards/c036266_ISO_IEC_5218_2004(E_F).zip)
-      * [Wiki artikkel](https://en.wikipedia.org/wiki/ISO/IEC_5218)
+      * [FINT API for ISO/IEC 5218](https://api.felleskomponent.no/felles/kodeverk/kjonn)
+      * [ISO/IEC 5218:2004](https://iso.org/standard/36266.html)
+      * [Wikipedia artikkel](https://en.wikipedia.org/wiki/ISO/IEC_5218)
       
       # Eksempler
       

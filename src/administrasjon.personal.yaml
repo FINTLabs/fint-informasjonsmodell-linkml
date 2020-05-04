@@ -566,6 +566,14 @@ classes:
           * `10000` tilsvarer 100 %
           * For tilkallingsvikar kan denne være `0`
         required: true
+      arbeidsforholdsperiode:
+        range: Periode
+        description: |
+          Periode for en gitt stilling.
+          
+          # Beskrivelse
+          
+          Representerer reell start- og sluttdato for stilling, selv om stillingen er representert som flere arbeidsforhold.
       gyldighetsperiode:
         range: Periode
         description: |
@@ -573,7 +581,7 @@ classes:
           
           # Beskrivelse 
           
-          Periode en personalressurs har v&#230;rt (eller er) ansatt i et bestemt arbeidsforhold. Inneholder en dato for start, og kan inneholde slutt-dato.
+          Periode en personalressurs har vært (eller er) ansatt i et bestemt arbeidsforhold. Inneholder en dato for start, og kan inneholde slutt-dato.
           
           Endringer i samme stilling kan representeres som flere arbeidsforhold med samme stillingsnummer og ulike gyldighetsperioder.
         required: true

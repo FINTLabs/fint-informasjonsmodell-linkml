@@ -7,7 +7,9 @@ imports:
   - felles.komplekse-datatyper
   - utdanning.basisklasser
   - utdanning.elev
+  - utdanning.kodeverk
   - utdanning.utdanningsprogram
+  - utdanning.vurdering
 
 classes:
 
@@ -45,8 +47,17 @@ classes:
       * https://www.vigo.no/vigokv/index.action
     is_a: Gruppe
     attributes:
+      eksamensgruppe:
+        range: Eksamensgruppe
+        inverse: fag
+        description: |
+          Alle relaterte eksamensgrupper
+        multivalued: true
       programområde:
         range: Programområde
+        inverse: fag
+        annotations:
+          primaryRelation: true
         description: |
           Programområde faget tilhører.
         multivalued: true
@@ -55,6 +66,12 @@ classes:
         inverse: fag
         description: |
           Alle skoler som tilbyr faget
+        multivalued: true
+      undervisningsgruppe:
+        range: Undervisningsgruppe
+        inverse: fag
+        description: |
+          Alle undervisningsgrupper i et gitt fag
         multivalued: true
 
   Rom:
@@ -150,15 +167,26 @@ classes:
       elevforhold:
         range: Elevforhold
         inverse: undervisningsgruppe
+        annotations:
+          primaryRelation: true
         description: |
-          Alle elevforhold i undervisningsgruppen.
+          Alle elevforhold i undervisningsgruppen
         multivalued: true
       fag:
         range: Fag
+        inverse: undervisningsgruppe
+        annotations:
+          primaryRelation: true
         description: |
           Fagene som det undervises i i gruppen
         multivalued: true
         required: true
+      gruppemedlemskap:
+        range: Undervisningsgruppemedlemskap
+        inverse: undervisningsgruppe
+        description: |
+          Gruppemedlemskapene til en undervisningsgruppe.
+        multivalued: true
       skole:
         range: Skole
         inverse: undervisningsgruppe
@@ -167,9 +195,44 @@ classes:
         description: |
           Skolen en undervisningsgruppe tilhører.
         required: true
+      skoleår:
+        range: Skoleår
+        description: |
+          Skoleår for undervisningsgruppe
+      termin:
+        range: Termin
+        description: |
+          Terminer for undervisningsgruppe
+        multivalued: true
       undervisningsforhold:
         range: Undervisningsforhold
         inverse: undervisningsgruppe
         description: |
           Alle lærere i gruppen.
         multivalued: true
+
+  Undervisningsgruppemedlemskap:
+    description: |
+      Medlemskap i undervisningsgrupper.
+      
+      # Beskrivelse
+      
+      Gruppemedlemskap som knytter sammen elevforhold og undervisningsgrupper.
+    is_a: Gruppemedlemskap
+    attributes:
+      elevforhold:
+        range: Elevforhold
+        inverse: undervisningsgruppemedlemskap
+        annotations:
+          primaryRelation: true
+        description: |
+          Elevforhold et undervisningsgruppemedlemskap tilhører.
+        required: true
+      undervisningsgruppe:
+        range: Undervisningsgruppe
+        inverse: gruppemedlemskap
+        annotations:
+          primaryRelation: true
+        description: |
+          Undervisningsgruppen et gruppemedlemskap tilhører.
+        required: true

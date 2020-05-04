@@ -36,6 +36,21 @@ classes:
       * http://grepwiki.udir.no/index.php?title=Årstrinn
       * http://psi.udir.no/ontologi/kl06/aarstrinn
     is_a: Gruppe
+    attributes:
+      basisgruppe:
+        range: Basisgruppe
+        inverse: trinn
+        description: |
+          Basisgruppene som hører hjemme på dette trinnet
+        multivalued: true
+      programområde:
+        range: Programområde
+        inverse: trinn
+        annotations:
+          primaryRelation: true
+        description: |
+          Alle programområder som er relevante for trinnet
+        multivalued: true
 
   Programområde:
     description: |
@@ -75,11 +90,26 @@ classes:
       elevforhold:
         range: Elevforhold
         inverse: programområde
+        annotations:
+          primaryRelation: true
         description: |
           Alle elevforhold på programområde
         multivalued: true
+      fag:
+        range: Fag
+        inverse: programområde
+        description: |
+          Alle fag som er relatert til et gitt programområde
+        multivalued: true
+      gruppemedlemskap:
+        range: Programområdemedlemskap
+        inverse: programområde
+        description: |
+          Gruppemedlemskapene til et programområde.
+        multivalued: true
       trinn:
         range: Årstrinn
+        inverse: programområde
         description: |
           Alle trinn som finnes på dette programområdet
         multivalued: true
@@ -90,6 +120,32 @@ classes:
           primaryRelation: true
         description: |
           Den overordnet utdanningsprogrammen
+        required: true
+
+  Programområdemedlemskap:
+    description: |
+      Medlemskap i programområder.
+      
+      # Beskrivelse
+      
+      Gruppemedlemskap som knytter sammen elevforhold og programområder.
+    is_a: Gruppemedlemskap
+    attributes:
+      elevforhold:
+        range: Elevforhold
+        inverse: programområdemedlemskap
+        annotations:
+          primaryRelation: true
+        description: |
+          Elevforhold et programområdemedlemskap tilhører.
+        required: true
+      programområde:
+        range: Programområde
+        inverse: gruppemedlemskap
+        annotations:
+          primaryRelation: true
+        description: |
+          Programområde et gruppemedlemskap tilhører.
         required: true
 
   Skole:

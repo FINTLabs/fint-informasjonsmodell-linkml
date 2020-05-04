@@ -29,7 +29,15 @@ classes:
 
   Grepreferanse:
     description: |
-      Ekstern referanse til Grep-kode.
+      Ekstern referanse til Grep-kodeverket.
+      
+      # Beskrivelse
+      
+      Grep er den nasjonale databasen for fag, læreplaner og opplæringstilbud i grunopplæringen.
+      
+      Referanser til Grep-kodeverket skal referere til gyldige og unike koder i REST (JSON) API fra Udir.
+      
+      https://www.udir.no/om-udir/data/kl06-grep
     annotations:
       stereotype: referanse
 
@@ -60,6 +68,15 @@ classes:
         description: |
           Ekstern referanse til Vigo kodeverksdatabase.
 
+  Skoleår:
+    description: |
+      Del av året da skoler har undervisning (og ikke ferie).
+      
+      # Beskrivelse
+      
+      Et skoleår varer som hovedregel fra august til juni.
+    is_a: Begrep
+
   Skoleeiertype:
     description: |
       Angir hvem er det som eier skole
@@ -76,8 +93,25 @@ classes:
       * Vigo Kodeverkdatabase. Skole: [vigo.no/vigokv/skole.action](https://www.vigo.no/vigokv/skole.action)
     is_a: Begrep
 
+  Termin:
+    description: |
+      Inndeling av skoleåret
+      
+      # Beskrivelse
+      
+      Et skoleår er som hovedregel inndelt i to terminer. Første termin: medio august til medio januar. Andre termin: medio januar til medio juni.
+    is_a: Begrep
+
   Vigoreferanse:
     description: |
-      Ekstern referanse til Vigo Kodeverkdatabase
+      Ekstern referanse til VIGO Kodeverksbase.
+      
+      # Beskrivelse
+      
+      Kodeverket kommer fra Grep (Utdanningsdirektoratet sin læreplandatabase), Nasjonalt skoleregister og VIGO.
+      
+      Referanser til VIGO Kodeverksbase skal referere til gyldige og unike koder i REST (JSON) API fra Vigo IKS/FINTLabs.
+      
+      https://api.felleskomponent.no/utdanning/vigo/kodeverk/swagger-ui.html#/
     annotations:
       stereotype: referanse

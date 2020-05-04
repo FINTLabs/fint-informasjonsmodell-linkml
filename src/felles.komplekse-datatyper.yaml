@@ -255,18 +255,18 @@ classes:
 
   Periode:
     description: |
-      Tidsperiode (fra- og tildato).
+      Tidsperiode (start- og sluttdato).
       
       # Beskrivelse
       
-      Tidsperiode (fra- og tildato).
+      Tidsperiode (start- og sluttdato).
       Sluttdato må være senere eller lik startdato om den er definert.
       
       # Eksempel
       
-      For et arbeidsforhold det kan være gyldighetsperiode:
-      * Fra 01.01.1999T00:00:00Z til ubestemt tid
-      * Fra 01.01.1999T00:00:00Z til 01.01.2005T00:00:00Z
+      Et arbeidsforhold kan ha gyldighetsperiode:
+      * Fra 1999.01.01T00:00:00Z til ubestemt tid
+      * Fra 1999.01.01T00:00:00Z til 2005.01.01T00:00:00Z
     attributes:
       beskrivelse:
         range: string
@@ -282,16 +282,15 @@ classes:
       slutt:
         range: datetime
         description: |
-          Tildato
+          Til dato
           
           # Beskrivelse
           
-          Tildato
           Sluttdato må være senere eller lik startdato om den er definert.
           
           # Format
           
-          Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601":https://en.wikipedia.org/wiki/ISO_8601)
+          Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601)
           
           Dersom klokkeslett ikke er definert, skal 00:00:00Z benyttes.
           
@@ -299,28 +298,27 @@ classes:
           
           # Eksempel
           
-          01.01.1999T00:00:00Z
+          1999.01.01T00:00:00Z
       start:
         range: datetime
         description: |
-          Fradato
+          Fra dato
           
           # Beskrivelse
           
-          Fradato
           Sluttdato må være senere eller lik startdato om den er definert.
           
           # Format
           
-          Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601":https://en.wikipedia.org/wiki/ISO_8601)
+          Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601)
           
-          Dersom klokkeslett ikke er definert, skal 00:00:00Z benyttes.
+          Dersom klokkeslett ikke er definert,skal 00:00:00Z benyttes.
           
           YYYY-MM-DDThh:mm:ssZ
           
           # Eksempel
           
-          01.01.1999T00:00:00Z
+          1999.01.01T00:00:00Z
         required: true
 
   Personnavn:

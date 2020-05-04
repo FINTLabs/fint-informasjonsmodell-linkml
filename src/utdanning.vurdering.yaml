@@ -33,14 +33,25 @@ classes:
       elevforhold:
         range: Elevforhold
         inverse: eksamensgruppe
+        annotations:
+          primaryRelation: true
         description: |
-          Alle elevforhold i eksamensgruppen.
+          Alle elevforhold i eksamensgruppen
         multivalued: true
       fag:
         range: Fag
+        inverse: eksamensgruppe
+        annotations:
+          primaryRelation: true
         description: |
           Det faget som eksamen har vært i
         required: true
+      gruppemedlemskap:
+        range: Eksamensgruppemedlemskap
+        inverse: eksamensgruppe
+        description: |
+          Gruppemedlemskapene til en eksamensgruppe.
+        multivalued: true
       skole:
         range: Skole
         inverse: eksamensgruppe
@@ -49,12 +60,47 @@ classes:
         description: |
           Skolen eksamensgruppen tilhører.
         required: true
+      skoleår:
+        range: Skoleår
+        description: |
+          Skoleår for eksamensgruppe
+      termin:
+        range: Termin
+        description: |
+          Termin for eksamensgruppe
+        required: true
       undervisningsforhold:
         range: Undervisningsforhold
         inverse: eksamensgruppe
         description: |
           Alle lærerne tilknyttet eksamensgruppen.
         multivalued: true
+
+  Eksamensgruppemedlemskap:
+    description: |
+      Medlemskap i eksamensgrupper.
+      
+      # Beskrivelse
+      
+      Gruppemedlemskap som knytter sammen elevforhold og eksamensgrupper.
+    is_a: Gruppemedlemskap
+    attributes:
+      eksamensgruppe:
+        range: Eksamensgruppe
+        inverse: gruppemedlemskap
+        annotations:
+          primaryRelation: true
+        description: |
+          Eksamensgruppen et gruppemedlemskap tilhører.
+        required: true
+      elevforhold:
+        range: Elevforhold
+        inverse: eksamensgruppemedlemskap
+        annotations:
+          primaryRelation: true
+        description: |
+          Elevforhold et eksamensgruppemedlemskap tilhører.
+        required: true
 
   Fravær:
     description: |

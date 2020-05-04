@@ -158,6 +158,7 @@ classes:
           
           * *Faggruppe for digitalisering og systemforvaltning* refererer til overordnet organisasjonselement, som er *IT-seksjonen*.
           * *Avdeling for helse og sosial* kan referere til organisasjonselemenetet til skolen, som kan være *Byremo videregående skole*
+        required: true
       skole:
         range: Skole
         inverse: organisasjon

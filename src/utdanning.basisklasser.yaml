@@ -18,11 +18,9 @@ classes:
       
       Gruppe representeres som en spesialisering (se tabell nedenfor).
       
-      Grupper knyttes til Utdanningsforhold via Medlemskap.
+      Grupper knyttes til Utdanningsforhold via Gruppemedlemskap eller direkte relasjoner.
       
-      En gruppe kan ha en kode, og den kan ha en periode. Hvorvidt den har kode eller periode avhenger av hva slags konkret klasse som benyttes.
-      
-      Koden knyttes til kodeverk om igjen knyttes til Vigo/Grep, mens perioden angir når gruppen er gyldig i tid, for eksempel for et skoleår, en termin, eller en eksamensperiode.
+      En gruppe kan ha referanser til kodeverk fra Grep og VIGO. En gruppe kan ha perioder som angir når den er gyldig eller aktiv. Hvorvidt en gruppe har referanser og perioder avhenger av hvilken konkret klasse som benyttes.
       
       | Klasse | Kode | Periode |
       | ------- | ----- | ------ |
@@ -32,8 +30,8 @@ classes:
       | Programområde | X | |
       | Fag | X | |
       | Årstrinn | X | |
-      | Eksamensgruppe | X | X |
-      | Undervisningsgruppe | X | X |
+      | Eksamensgruppe | | X |
+      | Undervisningsgruppe | | X |
     abstract: true
     attributes:
       systemId:
@@ -81,6 +79,33 @@ classes:
         range: Vigoreferanse
         description: |
           Referanse til VIGO kode.
+
+  Gruppemedlemskap:
+    description: |
+      Deltagelse i en gruppe
+      
+      # Beskrivelse
+      
+      Knytter sammen et elevforhold og en gruppe (basisgruppe, kontaktlærergruppe, undervisningsgruppe, eksamensgruppe eller programområde). Gjør det mulig å uttrykke gyldighetsperiode for et medlemskap.
+    abstract: true
+    attributes:
+      systemId:
+        range: Identifikator
+        description: |
+          Unik identifikator for gruppemedlemskap
+          
+          # Beskrivelse
+          
+          Systemspesifikk id, som normalt ikke er synlig i fagsystemet.
+        required: true
+      gyldighetsperiode:
+        range: Periode
+        description: |
+          Gyldig periode for et gitt gruppemedlemskap.
+          
+          # Beskrivelse
+          
+          Periode en elev (elevforhold) er (eller har vært) i et gruppemedlemskap. Inneholder en startdato. Kan inneholde en sluttdato.
 
   Utdanningsforhold:
     description: |

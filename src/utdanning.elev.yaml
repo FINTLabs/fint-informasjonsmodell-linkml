@@ -43,8 +43,16 @@ classes:
       elevforhold:
         range: Elevforhold
         inverse: basisgruppe
+        annotations:
+          primaryRelation: true
         description: |
-          Alle elevforhold i basisgruppen.
+          Alle elevforhold i basisgruppen
+        multivalued: true
+      gruppemedlemskap:
+        range: Basisgruppemedlemskap
+        inverse: basisgruppe
+        description: |
+          Gruppemedlemskapene til en basisgruppe.
         multivalued: true
       kontaktlærergruppe:
         range: Kontaktlærergruppe
@@ -60,8 +68,20 @@ classes:
         description: |
           Skolen en basisgruppe tilhører.
         required: true
+      skoleår:
+        range: Skoleår
+        description: |
+          Skoleår for basisgruppe
+      termin:
+        range: Termin
+        description: |
+          Terminer for basisgruppe
+        multivalued: true
       trinn:
         range: Årstrinn
+        inverse: basisgruppe
+        annotations:
+          primaryRelation: true
         description: |
           Det overordnet trinnet som gruppen hører inn i
         required: true
@@ -71,6 +91,32 @@ classes:
         description: |
           Alle lærere tilknyttet basisgruppen.
         multivalued: true
+
+  Basisgruppemedlemskap:
+    description: |
+      Medlemskap i basisgrupper.
+      
+      # Beskrivelse
+      
+      Gruppemedlemskap som knytter sammen elevforhold og basisgrupper.
+    is_a: Gruppemedlemskap
+    attributes:
+      basisgruppe:
+        range: Basisgruppe
+        inverse: gruppemedlemskap
+        annotations:
+          primaryRelation: true
+        description: |
+          Basisgruppen et gruppemedlemskap tilhører.
+        required: true
+      elevforhold:
+        range: Elevforhold
+        inverse: basisgruppemedlemskap
+        annotations:
+          primaryRelation: true
+        description: |
+          Elevforhold et basisgruppemedlemskap tilhører.
+        required: true
 
   Elev:
     description: |
@@ -163,21 +209,45 @@ classes:
       En elev kan være i elevforhold med status privatist og deltid samtidig. Eller en elev kan ha flere elevforhold på flere forskjellige skoler.
     is_a: Utdanningsforhold
     attributes:
+      gyldighetsperiode:
+        range: Periode
+        description: |
+          Gyldig periode for et gitt elevforhold.
+          
+          # Beskrivelse
+          
+          Periode en elev er (eller har vært) i et elevforhold. Inneholder en startdato. Kan inneholde en sluttdato.
+      hovedskole:
+        range: boolean
+        description: |
+          Angir om elevforhold er tilknyttet hovedskole.
+          
+          # Beskrivelse
+          
+          En elev kan ha flere elevforhold, men kun ett elevforhold skal være tilknyttet en hovedskole.
       basisgruppe:
         range: Basisgruppe
         inverse: elevforhold
-        annotations:
-          primaryRelation: true
         description: |
-          Alle basisgrupper elevforholdet er medlem av.
+          Alle basisgrupper elevforholdet er medlem av
+        multivalued: true
+      basisgruppemedlemskap:
+        range: Basisgruppemedlemskap
+        inverse: elevforhold
+        description: |
+          Basisgruppemedlemskapene til et elevforhold.
         multivalued: true
       eksamensgruppe:
         range: Eksamensgruppe
         inverse: elevforhold
-        annotations:
-          primaryRelation: true
         description: |
-          Alle eksamensgruppene elevforhold er medlem av.
+          Alle eksamensgruppene elevforhold er medlem av
+        multivalued: true
+      eksamensgruppemedlemskap:
+        range: Eksamensgruppemedlemskap
+        inverse: elevforhold
+        description: |
+          Eksamensgruppemedlemskapene til et elevforhold
         multivalued: true
       elev:
         range: Elev
@@ -200,18 +270,26 @@ classes:
       kontaktlærergruppe:
         range: Kontaktlærergruppe
         inverse: elevforhold
-        annotations:
-          primaryRelation: true
         description: |
-          Alle kontaktlærergrupper elevforhold er medlem av.
+          Alle kontaktlærergrupper elevforhold er medlem av
+        multivalued: true
+      kontaktlærergruppemedlemskap:
+        range: Kontaktlærergruppemedlemskap
+        inverse: elevforhold
+        description: |
+          Kontaktlærergruppemedlemskapene til et elevforhold.
         multivalued: true
       programområde:
         range: Programområde
         inverse: elevforhold
-        annotations:
-          primaryRelation: true
         description: |
           Programområde elevforhold tilhører
+      programområdemedlemskap:
+        range: Programområdemedlemskap
+        inverse: elevforhold
+        description: |
+          Programområdemedlemskapene til et elevforhold.
+        multivalued: true
       skole:
         range: Skole
         inverse: elevforhold
@@ -223,10 +301,14 @@ classes:
       undervisningsgruppe:
         range: Undervisningsgruppe
         inverse: elevforhold
-        annotations:
-          primaryRelation: true
         description: |
-          Alle undervisningsgruppene elevforhold er medlem av.
+          Alle undervisningsgruppene elevforhold er medlem av
+        multivalued: true
+      undervisningsgruppemedlemskap:
+        range: Undervisningsgruppemedlemskap
+        inverse: elevforhold
+        description: |
+          Undervisningsmedlemskapene til et elevforhold.
         multivalued: true
       vurdering:
         range: Vurdering
@@ -256,8 +338,16 @@ classes:
       elevforhold:
         range: Elevforhold
         inverse: kontaktlærergruppe
+        annotations:
+          primaryRelation: true
         description: |
-          Alle elevforhold i kontaktlærergruppen.
+          Alle elevforhold i kontaktlærergruppen
+        multivalued: true
+      gruppemedlemskap:
+        range: Kontaktlærergruppemedlemskap
+        inverse: kontaktlærergruppe
+        description: |
+          Gruppemedlemskapene til en kontaktlærergruppe.
         multivalued: true
       skole:
         range: Skole
@@ -267,12 +357,47 @@ classes:
         description: |
           Skolen kontaktlærergruppen tilhører.
         required: true
+      skoleår:
+        range: Skoleår
+        description: |
+          Skoleår for kontaktlærergruppe
+      termin:
+        range: Termin
+        description: |
+          Terminer for kontaktlærergruppe
+        multivalued: true
       undervisningsforhold:
         range: Undervisningsforhold
         inverse: kontaktlærergruppe
         description: |
           Alle kontaktlærere i gruppen.
         multivalued: true
+
+  Kontaktlærergruppemedlemskap:
+    description: |
+      Medlemskap i kontaktlærergrupper.
+      
+      # Beskrivelse
+      
+      Gruppemedlemskap som knytter sammen elevforhold og kontaktlærergrupper.
+    is_a: Gruppemedlemskap
+    attributes:
+      elevforhold:
+        range: Elevforhold
+        inverse: kontaktlærergruppemedlemskap
+        annotations:
+          primaryRelation: true
+        description: |
+          Elevforhold et kontaktlærergruppemedlemskap tilhører.
+        required: true
+      kontaktlærergruppe:
+        range: Kontaktlærergruppe
+        inverse: gruppemedlemskap
+        annotations:
+          primaryRelation: true
+        description: |
+          Kontaktlærergruppen et gruppemedlemskap tilhører.
+        required: true
 
   Medlemskap:
     description: |
