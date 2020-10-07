@@ -193,7 +193,9 @@ classes:
         annotations:
           primaryRelation: true
         description: |
-          Privatperson som er knyttet til en elev
+          Privatperson som er knyttet til en elev.
+          
+          Relasjonen skal gå til et personobjekt i utdanningsdomenet.
         required: true
 
   Elevforhold:
@@ -485,6 +487,12 @@ classes:
         description: |
           Kildesystemets interne identifikator for skoleressurs.
         required: true
+      person:
+        range: Person
+        description: |
+          Privatperson som er knyttet til en skoleressurs.
+          
+          Relasjonen skal gå til et personobjekt i administrasjonsdomenet.
       personalressurs:
         range: Personalressurs
         inverse: skoleressurs

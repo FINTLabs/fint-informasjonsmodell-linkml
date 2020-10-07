@@ -439,6 +439,16 @@ classes:
           - KS Hovedtariffavtalen § 12
           - Statens personalhåndbok 2018, kapittel 7.3.4
           - https://snl.no/ansiennitet
+      jobbtittel:
+        range: string
+        annotations:
+          writeable: true
+        description: |
+          Navn som beskriver en jobb eller stilling.
+          
+          # Beskrivelse
+          
+          Jobbtitler er mer spesifikke siden de reflekterer nivået på jobben, samt ansvaret i jobben.
       kontaktinformasjon:
         range: Kontaktinformasjon
         annotations:

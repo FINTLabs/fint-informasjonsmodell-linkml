@@ -3,6 +3,7 @@ id: https://w3id.org/novari/fint/felles/komplekse-datatyper
 name: felles.komplekse-datatyper
 imports:
   - linkml:types
+  - felles.kodeverk
   - felles.kodeverk.iso
 
 classes:
@@ -252,6 +253,31 @@ classes:
           - 0047 23 23 23 23
           - 02643
           - 0VAFK
+
+  Matrikkelnummer:
+    description: |
+      Entydig identifisering av metrikkelenhet innen kommune, definert i matrikkelforskriften § 7.
+    attributes:
+      bruksnummer:
+        range: string
+        description: |
+          Fortløpende nummerering av bruk under gårdsnummer
+      festenummer:
+        range: string
+        description: |
+          Fortløpende nummerering av fester under gårdsnummer/bruksnummer
+      gårdsnummer:
+        range: string
+        description: |
+          Nummerering av gårdsenhet i matrikkelen, nummeret er unikt innenfor kommune
+      seksjonsnummer:
+        range: string
+        description: |
+          Fortløpende nummerering av seksjoner under gårdsnummer/bruksnummer og eventuelt festenummer
+      kommunenummer:
+        range: Kommune
+        description: |
+          Nummerering av kommunen i henhold til Statistisk sentralbyrå sin offisielle liste
 
   Periode:
     description: |
