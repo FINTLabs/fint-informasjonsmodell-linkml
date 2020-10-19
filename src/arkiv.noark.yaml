@@ -1140,6 +1140,7 @@ classes:
           # Referanser
           
           * https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
+        multivalued: true
       merknad:
         range: Merknad
         annotations:

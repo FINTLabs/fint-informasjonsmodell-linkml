@@ -2702,7 +2702,7 @@ Kun gyldig hvis Korrespondansepart er en organisasjon.
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_689578bde0f53fe350" name="klasse" visibility="public">
                 <type xmi:idref="EAID_CLS_64d08b021afec81525" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_b56b0b25342dd2a802" value="0" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_b56b0b25342dd2a802" value="1" />
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_UPR_b56b0b25342dd2a802" value="*" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_b56b0b25342dd2a802">
                   <body>Klassifisering av mappe.
 
@@ -7514,7 +7514,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             </attribute>
           <attribute xmi:idref="EAID_PRP_689578bde0f53fe350" idref="EAID_PRP_689578bde0f53fe350" name="klasse">
             <properties type="Klasse" />
-            <bounds lower="0" upper="1" />
+            <bounds lower="0" upper="*" />
             <stereotype stereotype="writable" />
             <documentation value="Klassifisering av mappe.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 standard - kap. 2.4&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;" />
             <tags />
