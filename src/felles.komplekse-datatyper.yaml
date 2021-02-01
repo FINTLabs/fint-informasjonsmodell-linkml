@@ -258,6 +258,10 @@ classes:
     description: |
       Entydig identifisering av metrikkelenhet innen kommune, definert i matrikkelforskriften § 7.
     attributes:
+      adresse:
+        range: Adresse
+        description: |
+          Adresse til matrikkelenhet.
       bruksnummer:
         range: string
         description: |

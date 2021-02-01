@@ -37,6 +37,12 @@ classes:
           
           Personopplysninger skal bare brukes for spesifikke, uttrykkelige, angitte og legitime formål. Virksomheten har plikt til å gi den enkelte informasjon om formålet med behandling av personopplysninger på en forståelig måte.
         required: true
+      samtykke:
+        range: Samtykke
+        inverse: behandling
+        description: |
+          Samtykker tilknyttet en behandling.
+        multivalued: true
       systemId:
         range: 
         description: |
@@ -69,8 +75,11 @@ classes:
     attributes:
       behandling:
         range: Behandling
+        inverse: samtykke
+        annotations:
+          primaryRelation: true
         description: |
-          Behandling som omfattes av samtykke
+          Behandling som omfattes av samtykke.
         required: true
       gyldighetsperiode:
         range: 

@@ -644,12 +644,30 @@ I motsatt fall har arbeidsforholdet overtid.
 Representerer fravær fra et gitt arbeidsforhold. Fraværet har en type og en varighet, og kan være helt eller delvis.
 </body>
                 </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_9426abd9e783a27590" name="kildesystemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_9f789df1dda869d01d" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_9f789df1dda869d01d" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_9f789df1dda869d01d">
+                  <body>Kildesystemets unike identifikator for fravær.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_242006e4a151c9fc0a" name="systemId" visibility="public">
                 <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_4a9b9bd98e02f68498" value="0" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_4a9b9bd98e02f68498" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_4a9b9bd98e02f68498">
                   <body>Unik identifikator i personalsystemet for fraværet.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_82b446848f7a63f9e8" name="godkjent" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#DateTime" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_935c01ece76fe00b4e" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_935c01ece76fe00b4e" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_935c01ece76fe00b4e">
+                  <body>Tidsstempel som angir når fravær ble godkjent.
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -691,6 +709,7 @@ Grad av sykemelding for arbeidsforhold.
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_6eef7e1094105f99a0" visibility="public" start="EAID_CLS_99e1fdeee7693150be" end="EAID_CLS_99e1fdeee7693150be" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_79b2a8e2eb9122f104" visibility="public" start="EAID_CLS_99e1fdeee7693150be" end="EAID_CLS_9bda5b4490bce8664e" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_9ad61b9d983ad34c8f" visibility="public" start="EAID_CLS_99e1fdeee7693150be" end="EAID_CLS_4fbf27adb2c39ef587" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_0223724fc70423523e" visibility="public" start="EAID_CLS_99e1fdeee7693150be" end="EAID_CLS_7f69968205107fe6de" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_081589ccb697846d22" name="Lønn" isAbstract="true">
               <properties documentation="Informasjon om lønn for et arbeidsforhold.&#10;&#10;# Beskrivelse&#10;&#10;Lønn inneholder informasjon om lønn som skal utbetales for et arbeidsforhold.  Lønn er enten Fastlønn, Fasttillegg  eller Variabellønn.&#10;&#10;Lønn blir kontert, attestert og anvist av personalressurser som har fullmakter til dette.&#10;&#10;Lønn utbetales til et arbeidsforhold, for en gitt periode.&#10;" stereotype="abstrakt" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_b0735c32020a3e6432">
@@ -3447,6 +3466,38 @@ Opplysninger i en personalmappe kan være personalia, arbeidskontrakt og annen ko
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_b6314c2c9c05c08168" visibility="public" start="EAID_CLS_1a212e2cd6fd9822f7" end="EAID_CLS_8548ca6ef4e9f948e9" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_88642cfd21988b421d" visibility="public" start="EAID_CLS_1a212e2cd6fd9822f7" end="EAID_CLS_7f69968205107fe6de" />
             </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_477ac905c7239e892e" name="Samferdsel">
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_52bf0ce8d8de81bc73" name="SøknadDrosjeløyve">
+              <properties documentation="Sak om søknad om løyve (tillatelse til å) kjøre drosje.&#10;&#10;# Beskrivelse&#10;&#10; Et drosjeløyve er en tillatelse til å transportere mennesker i personbil mot betaling.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_8a5f840fa074e8b18c">
+                <body>Sak om søknad om løyve (tillatelse til å) kjøre drosje.
+
+# Beskrivelse
+
+ Et drosjeløyve er en tillatelse til å transportere mennesker i personbil mot betaling.
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_8a5f840fa074e8b18c" general="EAID_CLS_7f29adb0e673610470" start="EAID_CLS_52bf0ce8d8de81bc73" end="EAID_CLS_7f29adb0e673610470" />
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_c3094af2dc2b11eda2" name="organisasjonsnavn" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_b62c11f7756fe57041" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_b62c11f7756fe57041" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_b62c11f7756fe57041">
+                  <body>Organisasjonsnavn til foretak som har søkt om drosjeløyve.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_3d852fb6ce01542e17" name="organisasjonsnummer" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_2164758a305e126752" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_2164758a305e126752" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_2164758a305e126752">
+                  <body>Organisasjonsnummer til foretak som har søkt om drosjeløyve.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            </packagedElement>
           </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_38f7bf53c51db64eb4" name="Felles">
           <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_f5cc7e74d95638309a" name="Kontaktperson">
@@ -4218,6 +4269,15 @@ Format m&amp;#229; f&amp;#248;lge norsk nummerplan E.164, alternativt med `+` fo
                 <body>Entydig identifisering av metrikkelenhet innen kommune, definert i matrikkelforskriften § 7.
 </body>
                 </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_106c6fed4196865391" name="adresse" visibility="public">
+                <type xmi:idref="EAID_CLS_16032b22e35475cac5" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_1fcffdd1f5d78a3972" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_1fcffdd1f5d78a3972" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_1fcffdd1f5d78a3972">
+                  <body>Adresse til matrikkelenhet.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_7b28e88a52cb91cd57" name="bruksnummer" visibility="public">
                 <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_6cc1e2a212f0659f6a" value="0" />
@@ -4859,6 +4919,15 @@ Personopplysninger skal bare brukes for spesifikke, uttrykkelige, angitte og leg
 </body>
                   </ownedComment>
                 </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_66bba02fdf3078a54d" name="samtykke" visibility="public">
+                <type xmi:idref="EAID_CLS_6d81f63c13e582f918" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_0ddca30d8994b9ea63" value="0" />
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_UPR_0ddca30d8994b9ea63" value="*" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_0ddca30d8994b9ea63">
+                  <body>Samtykker tilknyttet en behandling.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_526041d27ca86b597d" name="systemId" visibility="public">
                 <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_b43630a8b6f57f2e9e" value="1" />
@@ -4895,7 +4964,7 @@ En virksomhet kan behandle personopplysninger dersom den har innhentet gyldig sa
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_fba998749208cd9152" value="1" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_fba998749208cd9152" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_fba998749208cd9152">
-                  <body>Behandling som omfattes av samtykke
+                  <body>Behandling som omfattes av samtykke.
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -6569,11 +6638,25 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Fravær fra et arbeidsforhold.&#10;&#10;# Beskrivelse&#10;&#10;Representerer fravær fra et gitt arbeidsforhold. Fraværet har en type og en varighet, og kan være helt eller delvis.&#10;" stereotype="hovedklasse" />
         <attributes>
+          <attribute xmi:idref="EAID_PRP_9426abd9e783a27590" idref="EAID_PRP_9426abd9e783a27590" name="kildesystemId">
+            <properties type="Identifikator" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Kildesystemets unike identifikator for fravær.&#10;" />
+            <tags />
+            </attribute>
           <attribute xmi:idref="EAID_PRP_242006e4a151c9fc0a" idref="EAID_PRP_242006e4a151c9fc0a" name="systemId">
             <properties type="Identifikator" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
             <documentation value="Unik identifikator i personalsystemet for fraværet.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_82b446848f7a63f9e8" idref="EAID_PRP_82b446848f7a63f9e8" name="godkjent">
+            <properties type="datetime" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Tidsstempel som angir når fravær ble godkjent.&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_2e192450a7d5f6dbed" idref="EAID_PRP_2e192450a7d5f6dbed" name="periode">
@@ -7831,6 +7914,31 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             </attribute>
           </attributes>
         </element>
+      <element xmi:idref="EAID_PKG_477ac905c7239e892e" idref="EAID_PKG_477ac905c7239e892e" xmi:type="uml:Package" type="Package" name="Samferdsel" scope="public">
+        <model package2="EAID_PKG_477ac905c7239e892e" ea_eleType="package" package="EAID_PKG_0ae92956e80722d32a" />
+        <tags />
+        </element>
+      <element xmi:idref="EAID_CLS_52bf0ce8d8de81bc73" idref="EAID_CLS_52bf0ce8d8de81bc73" xmi:type="uml:Class" type="Class" name="SøknadDrosjeløyve" scope="public">
+        <model package="EAID_PKG_477ac905c7239e892e" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Sak om søknad om løyve (tillatelse til å) kjøre drosje.&#10;&#10;# Beskrivelse&#10;&#10; Et drosjeløyve er en tillatelse til å transportere mennesker i personbil mot betaling.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_c3094af2dc2b11eda2" idref="EAID_PRP_c3094af2dc2b11eda2" name="organisasjonsnavn">
+            <properties type="string" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Organisasjonsnavn til foretak som har søkt om drosjeløyve.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_3d852fb6ce01542e17" idref="EAID_PRP_3d852fb6ce01542e17" name="organisasjonsnummer">
+            <properties type="string" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Organisasjonsnummer til foretak som har søkt om drosjeløyve.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
       <element xmi:idref="EAID_PKG_29ed5f4335a77f3f29" idref="EAID_PKG_29ed5f4335a77f3f29" xmi:type="uml:Package" type="Package" name="Basisklasser" scope="public">
         <model package2="EAID_PKG_29ed5f4335a77f3f29" ea_eleType="package" package="EAID_PKG_38f7bf53c51db64eb4" />
         <tags />
@@ -8042,6 +8150,13 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Entydig identifisering av metrikkelenhet innen kommune, definert i matrikkelforskriften § 7.&#10;" />
         <attributes>
+          <attribute xmi:idref="EAID_PRP_106c6fed4196865391" idref="EAID_PRP_106c6fed4196865391" name="adresse">
+            <properties type="Adresse" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Adresse til matrikkelenhet.&#10;" />
+            <tags />
+            </attribute>
           <attribute xmi:idref="EAID_PRP_7b28e88a52cb91cd57" idref="EAID_PRP_7b28e88a52cb91cd57" name="bruksnummer">
             <properties type="string" />
             <bounds lower="0" upper="1" />
@@ -8405,6 +8520,13 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <documentation value="Begrunnelse for behandling av personopplysning&#10;&#10;# Beskrivelse&#10;&#10;Personopplysninger skal bare brukes for spesifikke, uttrykkelige, angitte og legitime formål. Virksomheten har plikt til å gi den enkelte informasjon om formålet med behandling av personopplysninger på en forståelig måte.&#10;" />
             <tags />
             </attribute>
+          <attribute xmi:idref="EAID_PRP_66bba02fdf3078a54d" idref="EAID_PRP_66bba02fdf3078a54d" name="samtykke">
+            <properties type="Samtykke" />
+            <bounds lower="0" upper="*" />
+            <stereotype stereotype="" />
+            <documentation value="Samtykker tilknyttet en behandling.&#10;" />
+            <tags />
+            </attribute>
           <attribute xmi:idref="EAID_PRP_526041d27ca86b597d" idref="EAID_PRP_526041d27ca86b597d" name="systemId">
             <properties type="string" />
             <bounds lower="1" upper="1" />
@@ -8430,7 +8552,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="Behandling" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Behandling som omfattes av samtykke&#10;" />
+            <documentation value="Behandling som omfattes av samtykke.&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_6880a8c29dfb1fb6f8" idref="EAID_PRP_6880a8c29dfb1fb6f8" name="gyldighetsperiode">
@@ -10114,6 +10236,23 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_0223724fc70423523e" idref="EAID_ASC_0223724fc70423523e" start="EAID_CLS_99e1fdeee7693150be" end="EAID_CLS_7f69968205107fe6de">
+        <source xmi:idref="EAID_CLS_99e1fdeee7693150be" idref="EAID_CLS_99e1fdeee7693150be">
+          <model type="Class" name="Fravær" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7f69968205107fe6de" idref="EAID_CLS_7f69968205107fe6de">
+          <model type="Class" name="Personalressurs" />
+          <role name="godkjenner" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Personalressurs som har godkjent fraværsmeldingen." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_b7d07fb4c2c2854b66" idref="EAID_ASC_b7d07fb4c2c2854b66" start="EAID_CLS_081589ccb697846d22" end="EAID_CLS_7f69968205107fe6de">
         <source xmi:idref="EAID_CLS_081589ccb697846d22" idref="EAID_CLS_081589ccb697846d22">
           <model type="Class" name="Lønn" />
@@ -11527,6 +11666,22 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_8a5f840fa074e8b18c" idref="EAID_GEN_8a5f840fa074e8b18c" start="EAID_CLS_52bf0ce8d8de81bc73" end="EAID_CLS_7f29adb0e673610470">
+        <source xmi:idref="EAID_CLS_52bf0ce8d8de81bc73" idref="EAID_CLS_52bf0ce8d8de81bc73">
+          <model type="Class" name="SøknadDrosjeløyve" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7f29adb0e673610470" idref="EAID_CLS_7f29adb0e673610470">
+          <model type="Class" name="Saksmappe" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_c17acf87fa4bf93333" idref="EAID_GEN_c17acf87fa4bf93333" start="EAID_CLS_2b24756f464cc1f31a" end="EAID_CLS_225ef60f99e8325a09">

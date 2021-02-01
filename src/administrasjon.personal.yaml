@@ -112,10 +112,22 @@ classes:
       
       Representerer fravær fra et gitt arbeidsforhold. Fraværet har en type og en varighet, og kan være helt eller delvis.
     attributes:
+      kildesystemId:
+        range: Identifikator
+        annotations:
+          writeable: true
+        description: |
+          Kildesystemets unike identifikator for fravær.
       systemId:
         range: Identifikator
         description: |
           Unik identifikator i personalsystemet for fraværet.
+      godkjent:
+        range: datetime
+        annotations:
+          writeable: true
+        description: |
+          Tidsstempel som angir når fravær ble godkjent.
       periode:
         range: Periode
         annotations:
@@ -179,6 +191,10 @@ classes:
         description: |
           Type fravær.
         required: true
+      godkjenner:
+        range: Personalressurs
+        description: |
+          Personalressurs som har godkjent fraværsmeldingen.
 
   Lønn:
     description: |
