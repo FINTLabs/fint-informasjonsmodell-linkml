@@ -6,17 +6,19 @@
         <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_87452f10731000f560" name="Administrasjon">
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_231fbd2cc7d6403ec0" name="Fullmakt">
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_7448e1a279ec7a138b" name="Fullmakt">
-              <properties documentation="Fullmakt til å gjøre handlinger i forhold til en gitt Rolle.&#10;&#10;# Beskrivelse&#10;&#10;Fullmakter innehas av fysiske eller juridiske personer, og er knyttet til Ansvar i kontoplanen. Fullmakter er delegert til personer, disse benevnes som fullmektige.&#10;&#10;Fullmektige kan ha stedfortreder. Stedfortrederen kan utøve den samme fullmakten som den fullmektige.&#10;&#10;Fullmakter beskrives i delegasjonsreglementet for organisasjonen. For fylkeskommuner er dette et reglement besluttet av Fylkestinget og videre delegert av Fylkesrådmannen.&#10;&#10;# Eksempler&#10;&#10;Rektor ved Eidsvoll VGS har anvisningsfullmakt for ansvar 241.&#10;" stereotype="hovedklasse" />
+              <properties documentation="Fullmakt til å gjøre handlinger i forhold til en gitt Rolle.&#10;&#10;# Beskrivelse&#10;&#10;Fullmakter innehas av fysiske eller juridiske personer, og er knyttet til kontodimensjon eller organisasjonselement. Fullmakter er delegert til personer, disse benevnes som fullmektige.&#10;&#10;Fullmektige kan ha stedfortreder. Stedfortrederen kan utøve den samme fullmakten som den fullmektige.&#10;&#10;Fullmakter beskrives i delegasjonsreglementet for organisasjonen. For fylkeskommuner er dette et reglement besluttet av Fylkestinget og videre delegert av Fylkesrådmannen.&#10;&#10;Dersom fullmakt har relasjon til mer enn en kontodimensjon (og organisasjonselement) er det å regne som en kombinasjonsfullmakt. &#10;&#10;# Eksempler&#10;&#10;Rektor ved Eidsvoll VGS har anvisningsfullmakt for ansvar 241.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_0155d96e810f369444">
                 <body>Fullmakt til å gjøre handlinger i forhold til en gitt Rolle.
 
 # Beskrivelse
 
-Fullmakter innehas av fysiske eller juridiske personer, og er knyttet til Ansvar i kontoplanen. Fullmakter er delegert til personer, disse benevnes som fullmektige.
+Fullmakter innehas av fysiske eller juridiske personer, og er knyttet til kontodimensjon eller organisasjonselement. Fullmakter er delegert til personer, disse benevnes som fullmektige.
 
 Fullmektige kan ha stedfortreder. Stedfortrederen kan utøve den samme fullmakten som den fullmektige.
 
 Fullmakter beskrives i delegasjonsreglementet for organisasjonen. For fylkeskommuner er dette et reglement besluttet av Fylkestinget og videre delegert av Fylkesrådmannen.
+
+Dersom fullmakt har relasjon til mer enn en kontodimensjon (og organisasjonselement) er det å regne som en kombinasjonsfullmakt. 
 
 # Eksempler
 
@@ -43,7 +45,19 @@ Rektor ved Eidsvoll VGS har anvisningsfullmakt for ansvar 241.
                 </ownedAttribute>
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_5414cdc530c1a79b9a" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_b2d51228fff1754e2b" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_81edb0250fa5ebd3c3" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_00e9ec8784c8936cea" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_885bacb9aa15914d0b" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_8cb8f8bcd872b52833" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a12d067028b579c19e" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_7a1842f8370ceb4648" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_54518a36bd26a33551" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_b86eb7152bf9ecacd7" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_f6e6f27b07608853f7" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_2b445e41471ed7a4c9" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_3a7c72615207d0ff33" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_7f69968205107fe6de" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_be389528114015fa39" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_b2fbf668ea3689009c" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_36b74e943e7de70deb" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_97acd9c5e2c4898e8b" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_6ea0b1a84964747aa2" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_c1a9372726e8777f93" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a721cef421cb5ed16f" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_7e721af34e787ad9c2" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_978ea1c1079d106c97" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_11c618a515753fb259" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_98d05b5be95ca2378e" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_0f00acb3fd0e96ed60" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_cb6042c9202c0d874e" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_dd92a52d92cf9bebff" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_1ce213f9ef37fd53b2" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_5f1fef9b7872cf088d" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_14606bc82e9a7b12cd" visibility="public" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_7f69968205107fe6de" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_5f1fef9b7872cf088d" name="Rolle">
@@ -1229,12 +1243,20 @@ Lønn i 100% stilling. Inneholder ikke definerte tillegg. Angis i øre.
                 </ownedAttribute>
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_2ea8b49e3a350dea3c" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_081589ccb697846d22" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a4f302d3cb5aa249da" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_00e9ec8784c8936cea" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_ff21162ca107b9a7ea" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_8cb8f8bcd872b52833" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_13fddcb6973e3fd5ac" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_7a1842f8370ceb4648" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_e40c19e1fd537e36d1" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_99ad8092a898497ae7" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_616777eead5b9bf1c9" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_11c618a515753fb259" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_cdbd2ddb6c321f502f" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_b86eb7152bf9ecacd7" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_11e4ee82a43c842b5e" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_2b445e41471ed7a4c9" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a7e834bec647b7071d" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_b2fbf668ea3689009c" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_09278676a176b0419d" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_97acd9c5e2c4898e8b" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_fe7381bb79c987ac97" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_c1a9372726e8777f93" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_2a4a8145af06426650" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_7e721af34e787ad9c2" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_50633b3319d717e74f" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_7f69968205107fe6de" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_9b4ffb2df2ecfd2ea7" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_0f00acb3fd0e96ed60" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_63b4e0b7fbd653eb2a" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_dd92a52d92cf9bebff" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_4702ec0f35c87e1d37" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_1d24d026ece51b64c5" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_cf2141cc136151dcf3" visibility="public" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_7928ce1d8618e22dce" />
             </packagedElement>
@@ -1272,6 +1294,35 @@ Lønn i 100% stilling. Inneholder ikke definerte tillegg. Angis i øre.
 </body>
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_00195d3573d7d94ff7" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_71d1434f67c09fa368" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_89c4263dd7d42fe84d" name="Format">
+              <properties documentation="Dokumentets format.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M701&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;* https://arkivverket.metakat.no/Objekttype/Index/EAID_A17DA4C4_5952_4511_B44F_C8CA6A790558&#10;&#10;* https://lovdata.no/forskrift/2017-12-19-2286/§5-17 (Godkjente filformater for arkivdokumenter ved avlevering eller deponering).&#10;&#10;# Eksempler&#10;&#10;* RA-TEKST&#10;* RA-TIFF6&#10;* RA-PDF&#10;* RA-XML&#10;* RA-JPEG&#10;* RA-SOSI&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_8e0894ec34199cfce9">
+                <body>Dokumentets format.
+
+# Beskrivelse
+
+* Noark 5 versjon 5.0 metadatakatalog - nr. M701
+
+# Referanser
+
+* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
+
+* https://arkivverket.metakat.no/Objekttype/Index/EAID_A17DA4C4_5952_4511_B44F_C8CA6A790558
+
+* https://lovdata.no/forskrift/2017-12-19-2286/§5-17 (Godkjente filformater for arkivdokumenter ved avlevering eller deponering).
+
+# Eksempler
+
+* RA-TEKST
+* RA-TIFF6
+* RA-PDF
+* RA-XML
+* RA-JPEG
+* RA-SOSI
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_8e0894ec34199cfce9" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_89c4263dd7d42fe84d" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_3f83fbe317d03d2b13" name="JournalpostType">
               <properties documentation="Navn på type journalpost.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M082&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;" stereotype="hovedklasse" />
@@ -1998,19 +2049,6 @@ Se https://www.iana.org/assignments/media-types/media-types.xhtml for en oversik
                 </ownedAttribute>
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_bef771cb395343aa52" name="Dokumentobjekt">
-              <properties documentation="Dokumentobjekt er det laveste metadatanivået i arkivstrukturen. Et dokumentobjekt skal referere til én og kun en &lt;i&gt;dokumentfil. &lt;/i&gt;Dokumentfila inneholder selve dokumentet. Dersom dokumentet er arkivert i flere &lt;i&gt;versjoner&lt;/i&gt;, må vi ha et dokumentobjekt og en dokumentfil for hver versjon. Hver versjon av dokumentet kan dessuten arkiveres i flere forskjellige &lt;i&gt;formater&lt;/i&gt;, og da må det i tillegg opprettes egne dokumentobjekter og dokumentfiler for hvert format.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 standard - kap. 2.7 &#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_331ed3df45290419a0">
-                <body>Dokumentobjekt er det laveste metadatanivået i arkivstrukturen. Et dokumentobjekt skal referere til én og kun en &lt;i&gt;dokumentfil. &lt;/i&gt;Dokumentfila inneholder selve dokumentet. Dersom dokumentet er arkivert i flere &lt;i&gt;versjoner&lt;/i&gt;, må vi ha et dokumentobjekt og en dokumentfil for hver versjon. Hver versjon av dokumentet kan dessuten arkiveres i flere forskjellige &lt;i&gt;formater&lt;/i&gt;, og da må det i tillegg opprettes egne dokumentobjekter og dokumentfiler for hvert format.
-
-# Beskrivelse
-
-* Noark 5 versjon 5.0 standard - kap. 2.7 
-
-# Referanser
-
-* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
-</body>
-                </ownedComment>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_8665f3cbd30f7d005f" name="filstorrelse" visibility="public">
                 <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_a956907122d2ba72a4" value="0" />
@@ -2021,23 +2059,6 @@ Se https://www.iana.org/assignments/media-types/media-types.xhtml for en oversik
 # Beskrivelse
 
 * Noark 5 versjon 5.0 metadatakatalog - nr. M707
-
-# Referanser
-
-* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
-</body>
-                  </ownedComment>
-                </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_6199c93ba6743fc843" name="format" visibility="public">
-                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_b9e2d86f34f28fd94e" value="0" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_b9e2d86f34f28fd94e" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_b9e2d86f34f28fd94e">
-                  <body>Dokumentets format.
-
-# Beskrivelse
-
-* Noark 5 versjon 5.0 metadatakatalog - nr. M701
 
 # Referanser
 
@@ -2114,6 +2135,7 @@ Se https://www.iana.org/assignments/media-types/media-types.xhtml for en oversik
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_6199c93ba6743fc843" visibility="public" start="EAID_CLS_bef771cb395343aa52" end="EAID_CLS_89c4263dd7d42fe84d" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_c82771cea3bd361a2a" visibility="public" start="EAID_CLS_bef771cb395343aa52" end="EAID_CLS_0c3df74298539a0472" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_e32420d2ad7b16f0aa" visibility="public" start="EAID_CLS_bef771cb395343aa52" end="EAID_CLS_9f60bb2995ee03859d" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_4e31d172944a223d15" visibility="public" start="EAID_CLS_bef771cb395343aa52" end="EAID_CLS_0f3e6f075329b971c5" />
@@ -3078,7 +3100,7 @@ Kun gyldig hvis Korrespondansepart er en organisasjon.
                 </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_f2ff3ecd1cca2e8e5e" name="klasse" visibility="public">
                 <type xmi:idref="EAID_CLS_64d08b021afec81525" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_7666576b035d5352e7" value="1" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_7666576b035d5352e7" value="0" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_7666576b035d5352e7" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7666576b035d5352e7">
                   <body>Klassifisering av registrering.
@@ -6372,7 +6394,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <element xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b" xmi:type="uml:Class" type="Class" name="Fullmakt" scope="public">
         <model package="EAID_PKG_231fbd2cc7d6403ec0" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Fullmakt til å gjøre handlinger i forhold til en gitt Rolle.&#10;&#10;# Beskrivelse&#10;&#10;Fullmakter innehas av fysiske eller juridiske personer, og er knyttet til Ansvar i kontoplanen. Fullmakter er delegert til personer, disse benevnes som fullmektige.&#10;&#10;Fullmektige kan ha stedfortreder. Stedfortrederen kan utøve den samme fullmakten som den fullmektige.&#10;&#10;Fullmakter beskrives i delegasjonsreglementet for organisasjonen. For fylkeskommuner er dette et reglement besluttet av Fylkestinget og videre delegert av Fylkesrådmannen.&#10;&#10;# Eksempler&#10;&#10;Rektor ved Eidsvoll VGS har anvisningsfullmakt for ansvar 241.&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Fullmakt til å gjøre handlinger i forhold til en gitt Rolle.&#10;&#10;# Beskrivelse&#10;&#10;Fullmakter innehas av fysiske eller juridiske personer, og er knyttet til kontodimensjon eller organisasjonselement. Fullmakter er delegert til personer, disse benevnes som fullmektige.&#10;&#10;Fullmektige kan ha stedfortreder. Stedfortrederen kan utøve den samme fullmakten som den fullmektige.&#10;&#10;Fullmakter beskrives i delegasjonsreglementet for organisasjonen. For fylkeskommuner er dette et reglement besluttet av Fylkestinget og videre delegert av Fylkesrådmannen.&#10;&#10;Dersom fullmakt har relasjon til mer enn en kontodimensjon (og organisasjonselement) er det å regne som en kombinasjonsfullmakt. &#10;&#10;# Eksempler&#10;&#10;Rektor ved Eidsvoll VGS har anvisningsfullmakt for ansvar 241.&#10;" stereotype="hovedklasse" />
         <attributes>
           <attribute xmi:idref="EAID_PRP_0754b9d316506ffdf4" idref="EAID_PRP_0754b9d316506ffdf4" name="systemId">
             <properties type="Identifikator" />
@@ -6915,6 +6937,12 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties isAbstract="false" sType="Class" scope="public" documentation="Kodeverk for type dokument.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M083&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
+      <element xmi:idref="EAID_CLS_89c4263dd7d42fe84d" idref="EAID_CLS_89c4263dd7d42fe84d" xmi:type="uml:Class" type="Class" name="Format" scope="public">
+        <model package="EAID_PKG_5284d8b4387ebb8937" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Dokumentets format.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M701&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;* https://arkivverket.metakat.no/Objekttype/Index/EAID_A17DA4C4_5952_4511_B44F_C8CA6A790558&#10;&#10;* https://lovdata.no/forskrift/2017-12-19-2286/§5-17 (Godkjente filformater for arkivdokumenter ved avlevering eller deponering).&#10;&#10;# Eksempler&#10;&#10;* RA-TEKST&#10;* RA-TIFF6&#10;* RA-PDF&#10;* RA-XML&#10;* RA-JPEG&#10;* RA-SOSI&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
       <element xmi:idref="EAID_CLS_3f83fbe317d03d2b13" idref="EAID_CLS_3f83fbe317d03d2b13" xmi:type="uml:Class" type="Class" name="JournalpostType" scope="public">
         <model package="EAID_PKG_5284d8b4387ebb8937" ea_eleType="element" />
         <tags />
@@ -7292,20 +7320,13 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <element xmi:idref="EAID_CLS_bef771cb395343aa52" idref="EAID_CLS_bef771cb395343aa52" xmi:type="uml:Class" type="Class" name="Dokumentobjekt" scope="public">
         <model package="EAID_PKG_988980828c6918b827" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Dokumentobjekt er det laveste metadatanivået i arkivstrukturen. Et dokumentobjekt skal referere til én og kun en &lt;i&gt;dokumentfil. &lt;/i&gt;Dokumentfila inneholder selve dokumentet. Dersom dokumentet er arkivert i flere &lt;i&gt;versjoner&lt;/i&gt;, må vi ha et dokumentobjekt og en dokumentfil for hver versjon. Hver versjon av dokumentet kan dessuten arkiveres i flere forskjellige &lt;i&gt;formater&lt;/i&gt;, og da må det i tillegg opprettes egne dokumentobjekter og dokumentfiler for hvert format.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 standard - kap. 2.7 &#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;" />
+        <properties isAbstract="false" sType="Class" scope="public" />
         <attributes>
           <attribute xmi:idref="EAID_PRP_8665f3cbd30f7d005f" idref="EAID_PRP_8665f3cbd30f7d005f" name="filstorrelse">
             <properties type="string" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
             <documentation value="Størrelsen på fila i antall bytes oppgitt med desimaltall.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M707&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;" />
-            <tags />
-            </attribute>
-          <attribute xmi:idref="EAID_PRP_6199c93ba6743fc843" idref="EAID_PRP_6199c93ba6743fc843" name="format">
-            <properties type="string" />
-            <bounds lower="0" upper="1" />
-            <stereotype stereotype="writable" />
-            <documentation value="Dokumentets format.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M701&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_7bbcb367d70957088b" idref="EAID_PRP_7bbcb367d70957088b" name="formatDetaljer">
@@ -7744,7 +7765,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             </attribute>
           <attribute xmi:idref="EAID_PRP_f2ff3ecd1cca2e8e5e" idref="EAID_PRP_f2ff3ecd1cca2e8e5e" name="klasse">
             <properties type="Klasse" />
-            <bounds lower="1" upper="1" />
+            <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
             <documentation value="Klassifisering av registrering.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 standard - kap. 2.4&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;" />
             <tags />
@@ -9353,6 +9374,91 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_81edb0250fa5ebd3c3" idref="EAID_ASC_81edb0250fa5ebd3c3" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_00e9ec8784c8936cea">
+        <source xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b">
+          <model type="Class" name="Fullmakt" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_00e9ec8784c8936cea" idref="EAID_CLS_00e9ec8784c8936cea">
+          <model type="Class" name="Aktivitet" />
+          <role name="aktivitet" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Myndighet på kontodimensjon aktivitet." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_885bacb9aa15914d0b" idref="EAID_ASC_885bacb9aa15914d0b" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_8cb8f8bcd872b52833">
+        <source xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b">
+          <model type="Class" name="Fullmakt" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_8cb8f8bcd872b52833" idref="EAID_CLS_8cb8f8bcd872b52833">
+          <model type="Class" name="Anlegg" />
+          <role name="anlegg" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Myndighet på kontodimensjon anlegg." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_a12d067028b579c19e" idref="EAID_ASC_a12d067028b579c19e" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_7a1842f8370ceb4648">
+        <source xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b">
+          <model type="Class" name="Fullmakt" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7a1842f8370ceb4648" idref="EAID_CLS_7a1842f8370ceb4648">
+          <model type="Class" name="Ansvar" />
+          <role name="ansvar" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Myndighet på kontodimensjon ansvar." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_54518a36bd26a33551" idref="EAID_ASC_54518a36bd26a33551" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_b86eb7152bf9ecacd7">
+        <source xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b">
+          <model type="Class" name="Fullmakt" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_b86eb7152bf9ecacd7" idref="EAID_CLS_b86eb7152bf9ecacd7">
+          <model type="Class" name="Art" />
+          <role name="art" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Myndighet på kontodimensjon art." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_f6e6f27b07608853f7" idref="EAID_ASC_f6e6f27b07608853f7" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_2b445e41471ed7a4c9">
+        <source xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b">
+          <model type="Class" name="Fullmakt" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_2b445e41471ed7a4c9" idref="EAID_CLS_2b445e41471ed7a4c9">
+          <model type="Class" name="Diverse" />
+          <role name="diverse" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Myndighet på kontodimensjon diverse." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_3a7c72615207d0ff33" idref="EAID_ASC_3a7c72615207d0ff33" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_7f69968205107fe6de">
         <source xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b">
           <model type="Class" name="Fullmakt" />
@@ -9369,6 +9475,125 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <tags />
           </target>
         <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_be389528114015fa39" idref="EAID_ASC_be389528114015fa39" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_b2fbf668ea3689009c">
+        <source xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b">
+          <model type="Class" name="Fullmakt" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_b2fbf668ea3689009c" idref="EAID_CLS_b2fbf668ea3689009c">
+          <model type="Class" name="Funksjon" />
+          <role name="funksjon" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Myndighet på kontodimensjon funksjon." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_36b74e943e7de70deb" idref="EAID_ASC_36b74e943e7de70deb" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_97acd9c5e2c4898e8b">
+        <source xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b">
+          <model type="Class" name="Fullmakt" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_97acd9c5e2c4898e8b" idref="EAID_CLS_97acd9c5e2c4898e8b">
+          <model type="Class" name="Kontrakt" />
+          <role name="kontrakt" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Myndighet på kontodimensjon kontrakt." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_6ea0b1a84964747aa2" idref="EAID_ASC_6ea0b1a84964747aa2" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_c1a9372726e8777f93">
+        <source xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b">
+          <model type="Class" name="Fullmakt" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_c1a9372726e8777f93" idref="EAID_CLS_c1a9372726e8777f93">
+          <model type="Class" name="Løpenummer" />
+          <role name="løpenummer" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Myndighet på kontodimensjon løpenummer." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_a721cef421cb5ed16f" idref="EAID_ASC_a721cef421cb5ed16f" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_7e721af34e787ad9c2">
+        <source xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b">
+          <model type="Class" name="Fullmakt" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7e721af34e787ad9c2" idref="EAID_CLS_7e721af34e787ad9c2">
+          <model type="Class" name="Objekt" />
+          <role name="objekt" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Myndighet på kontodimensjon objekt." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_978ea1c1079d106c97" idref="EAID_ASC_978ea1c1079d106c97" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_11c618a515753fb259">
+        <source xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b">
+          <model type="Class" name="Fullmakt" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_11c618a515753fb259" idref="EAID_CLS_11c618a515753fb259">
+          <model type="Class" name="Organisasjonselement" />
+          <role name="organisasjonselement" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Myndighet på organisasjonselement." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_98d05b5be95ca2378e" idref="EAID_ASC_98d05b5be95ca2378e" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_0f00acb3fd0e96ed60">
+        <source xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b">
+          <model type="Class" name="Fullmakt" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_0f00acb3fd0e96ed60" idref="EAID_CLS_0f00acb3fd0e96ed60">
+          <model type="Class" name="Prosjekt" />
+          <role name="prosjekt" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Myndighet på kontodimensjon prosjekt." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_cb6042c9202c0d874e" idref="EAID_ASC_cb6042c9202c0d874e" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_dd92a52d92cf9bebff">
+        <source xmi:idref="EAID_CLS_7448e1a279ec7a138b" idref="EAID_CLS_7448e1a279ec7a138b">
+          <model type="Class" name="Fullmakt" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_dd92a52d92cf9bebff" idref="EAID_CLS_dd92a52d92cf9bebff">
+          <model type="Class" name="Ramme" />
+          <role name="ramme" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Myndighet på kontodimensjon ramme." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_1ce213f9ef37fd53b2" idref="EAID_ASC_1ce213f9ef37fd53b2" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_5f1fef9b7872cf088d">
@@ -10407,6 +10632,40 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_a4f302d3cb5aa249da" idref="EAID_ASC_a4f302d3cb5aa249da" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_00e9ec8784c8936cea">
+        <source xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_00e9ec8784c8936cea" idref="EAID_CLS_00e9ec8784c8936cea">
+          <model type="Class" name="Aktivitet" />
+          <role name="aktivitet" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Aktivitet arbeidsforhold er tilknyttet." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_ff21162ca107b9a7ea" idref="EAID_ASC_ff21162ca107b9a7ea" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_8cb8f8bcd872b52833">
+        <source xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_8cb8f8bcd872b52833" idref="EAID_CLS_8cb8f8bcd872b52833">
+          <model type="Class" name="Anlegg" />
+          <role name="anlegg" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Anlegg arbeidsforhold er tilknyttet." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_13fddcb6973e3fd5ac" idref="EAID_ASC_13fddcb6973e3fd5ac" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_7a1842f8370ceb4648">
         <source xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
           <model type="Class" name="Arbeidsforhold" />
@@ -10476,6 +10735,23 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_11e4ee82a43c842b5e" idref="EAID_ASC_11e4ee82a43c842b5e" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_2b445e41471ed7a4c9">
+        <source xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_2b445e41471ed7a4c9" idref="EAID_CLS_2b445e41471ed7a4c9">
+          <model type="Class" name="Diverse" />
+          <role name="diverse" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Diverse arbeidsforhold er tilknyttet." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_a7e834bec647b7071d" idref="EAID_ASC_a7e834bec647b7071d" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_b2fbf668ea3689009c">
         <source xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
           <model type="Class" name="Arbeidsforhold" />
@@ -10488,6 +10764,57 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <role name="funksjon" visibility="Public" />
           <type multiplicity="0..1" />
           <documentation value="Arbeidsforholdets relasjon til funksjon. &#10;&#10;# Beskrivelse&#10;&#10;Beskriver hvilken funksjon arbeidsforholdet vanligvis knyttes til.&#10;&#10;Synonymer:  Tjeneste&#10;&#10;Se kodeverk [Funksjon](/docs/kodeverk_funksjon). &#10;&#10;&#10;# Eksempler&#10;&#10;R1 Visma 2 kostra funksjoner:&#10;&#10;For eksempel koden til &quot;Studiespesialisering&quot; eller &quot;PEDAGOGISK LEDELSE OG PEDAGOGISKE FELLESUTGIFTER&quot;." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_09278676a176b0419d" idref="EAID_ASC_09278676a176b0419d" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_97acd9c5e2c4898e8b">
+        <source xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_97acd9c5e2c4898e8b" idref="EAID_CLS_97acd9c5e2c4898e8b">
+          <model type="Class" name="Kontrakt" />
+          <role name="kontrakt" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Kontrakt arbeidsforhold er tilknyttet." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_fe7381bb79c987ac97" idref="EAID_ASC_fe7381bb79c987ac97" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_c1a9372726e8777f93">
+        <source xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_c1a9372726e8777f93" idref="EAID_CLS_c1a9372726e8777f93">
+          <model type="Class" name="Løpenummer" />
+          <role name="løpenummer" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Løpenummer arbeidsforhold er tilknyttet." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_2a4a8145af06426650" idref="EAID_ASC_2a4a8145af06426650" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_7e721af34e787ad9c2">
+        <source xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7e721af34e787ad9c2" idref="EAID_CLS_7e721af34e787ad9c2">
+          <model type="Class" name="Objekt" />
+          <role name="objekt" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Objekt arbeidsforhold er tilknyttet." />
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
@@ -10509,6 +10836,40 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <tags />
           </target>
         <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_9b4ffb2df2ecfd2ea7" idref="EAID_ASC_9b4ffb2df2ecfd2ea7" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_0f00acb3fd0e96ed60">
+        <source xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_0f00acb3fd0e96ed60" idref="EAID_CLS_0f00acb3fd0e96ed60">
+          <model type="Class" name="Prosjekt" />
+          <role name="prosjekt" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Prosjekt arbeidsforhold tilknyttet." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_63b4e0b7fbd653eb2a" idref="EAID_ASC_63b4e0b7fbd653eb2a" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_dd92a52d92cf9bebff">
+        <source xmi:idref="EAID_CLS_7ab71940bab910a223" idref="EAID_CLS_7ab71940bab910a223">
+          <model type="Class" name="Arbeidsforhold" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_dd92a52d92cf9bebff" idref="EAID_CLS_dd92a52d92cf9bebff">
+          <model type="Class" name="Ramme" />
+          <role name="ramme" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Ramme arbeidsforhold er tilknyttet." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_4702ec0f35c87e1d37" idref="EAID_ASC_4702ec0f35c87e1d37" start="EAID_CLS_7ab71940bab910a223" end="EAID_CLS_1d24d026ece51b64c5">
@@ -10564,6 +10925,22 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_00195d3573d7d94ff7" idref="EAID_GEN_00195d3573d7d94ff7" start="EAID_CLS_71d1434f67c09fa368" end="EAID_CLS_3385458244847ec7db">
         <source xmi:idref="EAID_CLS_71d1434f67c09fa368" idref="EAID_CLS_71d1434f67c09fa368">
           <model type="Class" name="DokumentType" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_8e0894ec34199cfce9" idref="EAID_GEN_8e0894ec34199cfce9" start="EAID_CLS_89c4263dd7d42fe84d" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_89c4263dd7d42fe84d" idref="EAID_CLS_89c4263dd7d42fe84d">
+          <model type="Class" name="Format" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -11001,6 +11378,23 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <role name="tilknyttetRegistreringSom" visibility="Public" />
           <type multiplicity="1..*" />
           <documentation value="Angivelse av hvilken &quot;rolle&quot; dokumentet har i forhold til registreringen.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M217&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_6199c93ba6743fc843" idref="EAID_ASC_6199c93ba6743fc843" start="EAID_CLS_bef771cb395343aa52" end="EAID_CLS_89c4263dd7d42fe84d">
+        <source xmi:idref="EAID_CLS_bef771cb395343aa52" idref="EAID_CLS_bef771cb395343aa52">
+          <model type="Class" name="Dokumentobjekt" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_89c4263dd7d42fe84d" idref="EAID_CLS_89c4263dd7d42fe84d">
+          <model type="Class" name="Format" />
+          <role name="format" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Dokumentets format.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M701&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden" />
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
@@ -13251,14 +13645,14 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <model type="Class" name="Programområde" />
           <role visibility="Public" name="programområde" />
           <type multiplicity="0..*" />
-          <documentation value="Alle underliggende programområdene" />
+          <documentation value="Alle underliggende programområder." />
           <tags />
           </source>
         <target xmi:idref="EAID_CLS_e755c56f229ed4bfb5" idref="EAID_CLS_e755c56f229ed4bfb5">
           <model type="Class" name="Utdanningsprogram" />
           <role name="utdanningsprogram" visibility="Public" />
-          <type multiplicity="1" />
-          <documentation value="Den overordnet utdanningsprogrammen" />
+          <type multiplicity="1..*" />
+          <documentation value="Alle overordnede utdanningsprogram." />
           <tags />
           </target>
         <properties ea_type="Association" direction="Bi-Directional" />

@@ -119,7 +119,8 @@ classes:
         annotations:
           primaryRelation: true
         description: |
-          Den overordnet utdanningsprogrammen
+          Alle overordnede utdanningsprogram.
+        multivalued: true
         required: true
 
   Programområdemedlemskap:
@@ -337,7 +338,7 @@ classes:
         range: Programområde
         inverse: utdanningsprogram
         description: |
-          Alle underliggende programområdene
+          Alle underliggende programområder.
         multivalued: true
       skole:
         range: Skole

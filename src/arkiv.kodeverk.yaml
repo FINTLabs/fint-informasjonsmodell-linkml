@@ -34,6 +34,32 @@ classes:
       * https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
     is_a: Begrep
 
+  Format:
+    description: |
+      Dokumentets format.
+      
+      # Beskrivelse
+      
+      * Noark 5 versjon 5.0 metadatakatalog - nr. M701
+      
+      # Referanser
+      
+      * https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
+      
+      * https://arkivverket.metakat.no/Objekttype/Index/EAID_A17DA4C4_5952_4511_B44F_C8CA6A790558
+      
+      * https://lovdata.no/forskrift/2017-12-19-2286/§5-17 (Godkjente filformater for arkivdokumenter ved avlevering eller deponering).
+      
+      # Eksempler
+      
+      * RA-TEKST
+      * RA-TIFF6
+      * RA-PDF
+      * RA-XML
+      * RA-JPEG
+      * RA-SOSI
+    is_a: Begrep
+
   JournalpostType:
     description: |
       Navn på type journalpost.

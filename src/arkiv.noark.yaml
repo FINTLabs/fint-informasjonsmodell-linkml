@@ -447,16 +447,6 @@ classes:
         required: true
 
   Dokumentobjekt:
-    description: |
-      Dokumentobjekt er det laveste metadatanivået i arkivstrukturen. Et dokumentobjekt skal referere til én og kun en <i>dokumentfil. </i>Dokumentfila inneholder selve dokumentet. Dersom dokumentet er arkivert i flere <i>versjoner</i>, må vi ha et dokumentobjekt og en dokumentfil for hver versjon. Hver versjon av dokumentet kan dessuten arkiveres i flere forskjellige <i>formater</i>, og da må det i tillegg opprettes egne dokumentobjekter og dokumentfiler for hvert format.
-      
-      # Beskrivelse
-      
-      * Noark 5 versjon 5.0 standard - kap. 2.7 
-      
-      # Referanser
-      
-      * https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
     attributes:
       filstorrelse:
         range: string
@@ -486,6 +476,7 @@ classes:
           # Referanser
           
           * https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
+        deprecated: "Erstattes av relasjon til kodeverk Format."
       formatDetaljer:
         range: string
         annotations:
@@ -538,6 +529,18 @@ classes:
           # Beskrivelse
           
           * Noark 5 versjon 5.0 metadatakatalog - nr. M005
+          
+          # Referanser
+          
+          * https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
+      format:
+        range: Format
+        description: |
+          Dokumentets format.
+          
+          # Beskrivelse
+          
+          * Noark 5 versjon 5.0 metadatakatalog - nr. M701
           
           # Referanser
           
@@ -1510,7 +1513,6 @@ classes:
           # Referanser
           
           * https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
-        required: true
       korrespondansepart:
         range: Korrespondansepart
         annotations:

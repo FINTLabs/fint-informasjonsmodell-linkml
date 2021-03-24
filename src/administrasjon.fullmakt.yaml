@@ -6,6 +6,7 @@ imports:
   - felles.basisklasser
   - felles.komplekse-datatyper
   - administrasjon.kodeverk
+  - administrasjon.organisasjon
   - administrasjon.personal
 
 classes:
@@ -16,11 +17,13 @@ classes:
       
       # Beskrivelse
       
-      Fullmakter innehas av fysiske eller juridiske personer, og er knyttet til Ansvar i kontoplanen. Fullmakter er delegert til personer, disse benevnes som fullmektige.
+      Fullmakter innehas av fysiske eller juridiske personer, og er knyttet til kontodimensjon eller organisasjonselement. Fullmakter er delegert til personer, disse benevnes som fullmektige.
       
       Fullmektige kan ha stedfortreder. Stedfortrederen kan utøve den samme fullmakten som den fullmektige.
       
       Fullmakter beskrives i delegasjonsreglementet for organisasjonen. For fylkeskommuner er dette et reglement besluttet av Fylkestinget og videre delegert av Fylkesrådmannen.
+      
+      Dersom fullmakt har relasjon til mer enn en kontodimensjon (og organisasjonselement) er det å regne som en kombinasjonsfullmakt. 
       
       # Eksempler
       
@@ -43,8 +46,29 @@ classes:
           primaryRelation: true
         description: |
           Del av kontodimensjon som Personalressurs har blitt delegert en fullmakt for.
+        deprecated: "Erstattes av relasjon til organisasjonselement og/eller relasjon til konkret kontodimensjon."
         multivalued: true
         required: true
+      aktivitet:
+        range: Aktivitet
+        description: |
+          Myndighet på kontodimensjon aktivitet.
+      anlegg:
+        range: Anlegg
+        description: |
+          Myndighet på kontodimensjon anlegg.
+      ansvar:
+        range: Ansvar
+        description: |
+          Myndighet på kontodimensjon ansvar.
+      art:
+        range: Art
+        description: |
+          Myndighet på kontodimensjon art.
+      diverse:
+        range: Diverse
+        description: |
+          Myndighet på kontodimensjon diverse.
       fullmektig:
         range: Personalressurs
         inverse: fullmakt
@@ -52,6 +76,34 @@ classes:
           primaryRelation: true
         description: |
           Personalressurs som har blitt gitt fullmakt til en gitt rolle.
+      funksjon:
+        range: Funksjon
+        description: |
+          Myndighet på kontodimensjon funksjon.
+      kontrakt:
+        range: Kontrakt
+        description: |
+          Myndighet på kontodimensjon kontrakt.
+      løpenummer:
+        range: Løpenummer
+        description: |
+          Myndighet på kontodimensjon løpenummer.
+      objekt:
+        range: Objekt
+        description: |
+          Myndighet på kontodimensjon objekt.
+      organisasjonselement:
+        range: Organisasjonselement
+        description: |
+          Myndighet på organisasjonselement.
+      prosjekt:
+        range: Prosjekt
+        description: |
+          Myndighet på kontodimensjon prosjekt.
+      ramme:
+        range: Ramme
+        description: |
+          Myndighet på kontodimensjon ramme.
       rolle:
         range: Rolle
         inverse: fullmakt

@@ -708,6 +708,14 @@ classes:
           
           * `40000000` tilsvarer 400 000
         required: true
+      aktivitet:
+        range: Aktivitet
+        description: |
+          Aktivitet arbeidsforhold er tilknyttet.
+      anlegg:
+        range: Anlegg
+        description: |
+          Anlegg arbeidsforhold er tilknyttet.
       ansvar:
         range: Ansvar
         description: |
@@ -766,6 +774,10 @@ classes:
         range: Art
         description: |
           Art arbeidsforhold er tilknyttet.
+      diverse:
+        range: Diverse
+        description: |
+          Diverse arbeidsforhold er tilknyttet.
       fastlønn:
         range: Fastlønn
         inverse: arbeidsforhold
@@ -803,6 +815,18 @@ classes:
           R1 Visma 2 kostra funksjoner:
           
           For eksempel koden til "Studiespesialisering" eller "PEDAGOGISK LEDELSE OG PEDAGOGISKE FELLESUTGIFTER".
+      kontrakt:
+        range: Kontrakt
+        description: |
+          Kontrakt arbeidsforhold er tilknyttet.
+      løpenummer:
+        range: Løpenummer
+        description: |
+          Løpenummer arbeidsforhold er tilknyttet.
+      objekt:
+        range: Objekt
+        description: |
+          Objekt arbeidsforhold er tilknyttet.
       personalleder:
         range: Personalressurs
         inverse: personalansvar
@@ -820,6 +844,14 @@ classes:
         description: |
           Pesonalressurs til et arbeidsforhold
         required: true
+      prosjekt:
+        range: Prosjekt
+        description: |
+          Prosjekt arbeidsforhold tilknyttet.
+      ramme:
+        range: Ramme
+        description: |
+          Ramme arbeidsforhold er tilknyttet.
       stillingskode:
         range: Stillingskode
         description: |
