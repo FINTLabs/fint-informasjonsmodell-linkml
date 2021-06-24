@@ -68,7 +68,7 @@ classes:
       grepreferanse:
         range: Grepreferanse
         description: |
-          Referanse til Grep-kode.
+          Referanse til Grep kodeverket.
       medlemskap:
         range: Medlemskap
         inverse: gruppe
@@ -79,7 +79,7 @@ classes:
       vigoreferanse:
         range: Vigoreferanse
         description: |
-          Referanse til VIGO kode.
+          Referanse til VIGO kodeverket.
 
   Gruppemedlemskap:
     description: |

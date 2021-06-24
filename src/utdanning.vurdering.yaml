@@ -30,6 +30,12 @@ classes:
       Eksamensgrupper har en kode som er sentralt definert av VIGO.
     is_a: Gruppe
     attributes:
+      eksamensdato:
+        range: datetime
+        annotations:
+          writeable: true
+        description: |
+          Dato og klokkeslett for eksamen
       elevforhold:
         range: Elevforhold
         inverse: eksamensgruppe
@@ -37,6 +43,7 @@ classes:
           primaryRelation: true
         description: |
           Alle elevforhold i eksamensgruppen
+        deprecated: "Relasjonen erstattes av Gruppemedlemskap i Eksamensgruppemedlemskap."
         multivalued: true
       fag:
         range: Fag

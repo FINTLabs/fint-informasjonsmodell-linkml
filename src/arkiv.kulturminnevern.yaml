@@ -48,7 +48,7 @@ classes:
         description: |
           Søknadsnummer fra Digisak.
         required: true
-      fartoyNavn:
+      fartøyNavn:
         range: string
         annotations:
           writeable: true

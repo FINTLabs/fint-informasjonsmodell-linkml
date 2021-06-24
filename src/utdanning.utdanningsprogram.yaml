@@ -94,6 +94,7 @@ classes:
           primaryRelation: true
         description: |
           Alle elevforhold på programområde
+        deprecated: "Relasjonen erstattes av Gruppemedlemskap i Programområdemedlemskap."
         multivalued: true
       fag:
         range: Fag

@@ -29,15 +29,17 @@ classes:
 
   Grepreferanse:
     description: |
-      Ekstern referanse til Grep-kodeverket.
+      Ekstern referanse til Grepkodeverket.
       
       # Beskrivelse
       
-      Grep er den nasjonale databasen for fag, læreplaner og opplæringstilbud i grunopplæringen.
+      Grep er den nasjonale databasen for fag, l&#230;replaner og oppl&#230;ringstilbud i grunnoppl&#230;ringen.
       
-      Referanser til Grep-kodeverket skal referere til gyldige og unike koder i REST (JSON) API fra Udir.
+      Referanser til Grepkodeverket skal referere til gyldige og unike koder i REST (JSON) API fra Udir.
       
       https://www.udir.no/om-udir/data/kl06-grep
+      
+      Det er viktig &#229; bruke Grepreferanser og ikke Vigoreferanser.
     annotations:
       stereotype: referanse
 

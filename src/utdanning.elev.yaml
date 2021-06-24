@@ -47,6 +47,7 @@ classes:
           primaryRelation: true
         description: |
           Alle elevforhold i basisgruppen
+        deprecated: "Relasjonen erstattes av Gruppemedlemskap i Basisgruppemedlemskap."
         multivalued: true
       gruppemedlemskap:
         range: Basisgruppemedlemskap
@@ -232,6 +233,7 @@ classes:
         inverse: elevforhold
         description: |
           Alle basisgrupper elevforholdet er medlem av
+        deprecated: "Relasjonen erstattes av Gruppemedlemskap i Basisgruppemedlemskap."
         multivalued: true
       basisgruppemedlemskap:
         range: Basisgruppemedlemskap
@@ -244,6 +246,7 @@ classes:
         inverse: elevforhold
         description: |
           Alle eksamensgruppene elevforhold er medlem av
+        deprecated: "Relasjonen erstattes av Gruppemedlemskap i Eksamensgruppemedlemskap."
         multivalued: true
       eksamensgruppemedlemskap:
         range: Eksamensgruppemedlemskap
@@ -274,6 +277,7 @@ classes:
         inverse: elevforhold
         description: |
           Alle kontaktlærergrupper elevforhold er medlem av
+        deprecated: "Relasjonen erstattes av Gruppemedlemskap i Kontaktlærergruppemedlemskap."
         multivalued: true
       kontaktlærergruppemedlemskap:
         range: Kontaktlærergruppemedlemskap
@@ -281,11 +285,16 @@ classes:
         description: |
           Kontaktlærergruppemedlemskapene til et elevforhold.
         multivalued: true
+      persongruppemedlemskap:
+        range: Persongruppemedlemskap
+        inverse: elevforhold
+        multivalued: true
       programområde:
         range: Programområde
         inverse: elevforhold
         description: |
           Programområde elevforhold tilhører
+        deprecated: "Relasjonen erstattes av Gruppemedlemskap i Programområdemedlemskap."
       programområdemedlemskap:
         range: Programområdemedlemskap
         inverse: elevforhold
@@ -305,6 +314,7 @@ classes:
         inverse: elevforhold
         description: |
           Alle undervisningsgruppene elevforhold er medlem av
+        deprecated: "Relasjonen erstattes med Gruppemedlemskap i Undervisningsgruppemedlemskap."
         multivalued: true
       undervisningsgruppemedlemskap:
         range: Undervisningsgruppemedlemskap
@@ -344,6 +354,7 @@ classes:
           primaryRelation: true
         description: |
           Alle elevforhold i kontaktlærergruppen
+        deprecated: "Relasjonen erstattes av Gruppemedlemskap i Kontaktlærergruppemedlemskap."
         multivalued: true
       gruppemedlemskap:
         range: Kontaktlærergruppemedlemskap
@@ -461,6 +472,73 @@ classes:
           Fraværet til både lærer og elev som har vært registrert innen en gitt gruppe.
         deprecated: "Erstattet av relasjon mellom Elevforhold og Fravær"
         multivalued: true
+
+  Persongruppe:
+    description: |
+      Gruppe av personer som ikke handler om undervisning. Dette kan f.eks. v&#230;re grupper av elever som skal faktureres.
+    is_a: Gruppe
+    attributes:
+      elev:
+        range: Elev
+        description: |
+          Hvilke elever som er knyttet til gruppen.
+        multivalued: true
+      persongruppemedlemskap:
+        range: Persongruppemedlemskap
+        inverse: persongruppe
+        annotations:
+          primaryRelation: true
+        description: |
+          Hvilke persongruppemedlemsskap som er knyttet til gruppen.
+        multivalued: true
+      skole:
+        range: Skole
+        description: |
+          Hvilke skoler som er knyttet til gruppen.
+        multivalued: true
+      skoleressurs:
+        range: Skoleressurs
+        description: |
+          Hvilke skoleresurser som er knyttet til gruppen
+        multivalued: true
+      skoleår:
+        range: Skoleår
+        description: |
+          Hvilke skoleår gruppen gjelder for.
+        multivalued: true
+      termin:
+        range: Termin
+        description: |
+          Hvilke termineer gruppen gjelder for.
+        multivalued: true
+      undervisningsforhold:
+        range: Undervisningsforhold
+        description: |
+          Hvilke undervisningsforhold som er knyttet til gruppen
+        multivalued: true
+
+  Persongruppemedlemskap:
+    description: |
+      Medlemskap i persongruppe.
+      
+      #Beskrivelse
+      
+      Gruppemedlemskap som knytter sammen personer.
+    is_a: Gruppemedlemskap
+    attributes:
+      elevforhold:
+        range: Elevforhold
+        inverse: persongruppemedlemskap
+        annotations:
+          primaryRelation: true
+        description: |
+          Hvilket elevforhold som er medlem i gruppen.
+      persongruppe:
+        range: Persongruppe
+        inverse: persongruppemedlemskap
+        description: |
+          Hvilken gruppe det er medlemskap for.
+        required: true
 
   Skoleressurs:
     description: |

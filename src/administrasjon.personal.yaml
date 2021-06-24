@@ -600,6 +600,14 @@ classes:
           # Beskrivelse
           
           Representerer reell start- og sluttdato for stilling, selv om stillingen er representert som flere arbeidsforhold.
+          
+          Prinsippet for anvendelse av gyldighetsperiode og arbeidsforholdsperiode er som f&#248;lger:
+          
+          * HRM eksporterer arbeidsforholdene for hvert stillingsnummer som en tidslinje hvor gyldighetsperioder ikke er overlappende.
+          
+          * For en gitt transaksjonsdato (f.eks. dagens dato):  Finn de instansene av Arbeidsforhold-objektet (versjon av arbeidsforhold) hvor transaksjonsdatoen faller innenfor gyldighetsperioden, dvs: gyldighetsperiode.start &lt;= transaksjonsdato &lt;= gyldighetsperiode.slutt
+          
+          * Kontroller transaksjonsdato mot arbeidsforholdsperiode:  For at en gitt instans av Arbeidsforhold skal regnes som aktiv for timeplanlegging og registrering av l&#248;nn og frav&#230;r m&#229; arbeidsforholdsperiode.start &lt;= transaksjonsdato &lt;= arbeidsforholdsperiode.slutt
       gyldighetsperiode:
         range: Periode
         description: |
@@ -607,9 +615,17 @@ classes:
           
           # Beskrivelse 
           
-          Periode en personalressurs har vært (eller er) ansatt i et bestemt arbeidsforhold. Inneholder en dato for start, og kan inneholde slutt-dato.
+          Periode en personalressurs har v&#230;rt (eller er) ansatt i et bestemt arbeidsforhold. Inneholder en dato for start, og kan inneholde slutt-dato.
           
           Endringer i samme stilling kan representeres som flere arbeidsforhold med samme stillingsnummer og ulike gyldighetsperioder.
+          
+          Prinsippet for anvendelse av gyldighetsperiode og arbeidsforholdsperiode er som f&#248;lger:
+          
+          * HRM eksporterer arbeidsforholdene for hvert stillingsnummer som en tidslinje hvor gyldighetsperioder ikke er overlappende.
+          
+          * For en gitt transaksjonsdato (f.eks. dagens dato):  Finn de instansene av Arbeidsforhold-objektet (versjon av arbeidsforhold) hvor transaksjonsdatoen faller innenfor gyldighetsperioden, dvs: gyldighetsperiode.start &lt;= transaksjonsdato &lt;= gyldighetsperiode.slutt
+          
+          * Kontroller transaksjonsdato mot arbeidsforholdsperiode:  For at en gitt instans av Arbeidsforhold skal regnes som aktiv for timeplanlegging og registrering av l&#248;nn og frav&#230;r m&#229; arbeidsforholdsperiode.start &lt;= transaksjonsdato &lt;= arbeidsforholdsperiode.slutt
         required: true
       hovedstilling:
         range: boolean
