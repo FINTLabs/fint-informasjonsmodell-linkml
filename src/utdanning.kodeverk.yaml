@@ -9,6 +9,15 @@ imports:
 
 classes:
 
+  Avbruddsårsak:
+    description: |
+      &#197;rsaken til at eleven avbryter utdanningsprogrammet (Vg1)/programomr&#229;det (Vg2/Vg3) ) i l&#248;pet av skole&#229;ret  eller l&#230;rlingen/l&#230;rekandidaten hever l&#230;rekontrakten/oppl&#230;ringskontrakten.
+      
+      # Referanse
+      
+      Registreringsh&#229;ndbok: https://regbok.udir.no/35004/3344/35042-1014313.html
+    is_a: Begrep
+
   Elevkategori:
     description: |
       Kategori som et elevforhold befinner seg innenfor
@@ -24,7 +33,33 @@ classes:
       * utenlandsk-utv-i-norge
     is_a: Begrep
 
+  Fagmerknad:
+    description: |
+      Merknader til vitnem&#229;l og kompetansebevis
+      
+      # Beskrivelse
+      
+      En fagmerknad er en merknad som har en eller flere av disse funksjonene
+      
+      - gir opplysninger om faget som ikke g&#229;r fram av karakterer eller eksamensform
+      - utdyper opplysninger om karakterer og/eller eksamensform
+      - henviser til vedlegg som gir slike opplysninger
+      
+      # Referanser
+      
+      https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/
+    is_a: Begrep
+
   Fraværstype:
+    description: |
+      Typer frav&#230;r.
+      
+      # Referanse
+      
+      https://www.udir.no/regelverk-og-tilsyn/skole-og-opplaring/saksbehandling/fravar/fravar-i-videregaende/
+      
+      VIS:
+      https://inschool.zendesk.com/hc/no/articles/360023264091
     is_a: Begrep
 
   Grepreferanse:
@@ -39,7 +74,8 @@ classes:
       
       https://www.udir.no/om-udir/data/kl06-grep
       
-      Det er viktig &#229; bruke Grepreferanser og ikke Vigoreferanser.
+      Det er viktig &#229; bruke Grepreferanser og ikke Vigoreferanser. 
+      Bruk data.udir.no , ikke psi.udir.no, eksempelvis https://data.udir.no/kl06/SAL3001 (korrekt), ikke https://psi.udir.no/kl06/SAL3001 (feil).
     annotations:
       stereotype: referanse
 
@@ -102,6 +138,11 @@ classes:
       # Beskrivelse
       
       Et skoleår er som hovedregel inndelt i to terminer. Første termin: medio august til medio januar. Andre termin: medio januar til medio juni.
+    is_a: Begrep
+
+  Tilrettelegging:
+    description: |
+      Tirettelegging en elev kan ha p&#229; eksamen.
     is_a: Begrep
 
   Vigoreferanse:

@@ -54,7 +54,7 @@ classes:
       systemId:
         range: Identifikator
         description: |
-          Intern identifikator som brukes enten i kildesystemmet eller i kildestandarden (for ISO, KS og lignende standarder)
+          Intern identifikator som brukes enten i kildesystemet eller i kildestandarden (for ISO, KS og lignende standarder)
         required: true
       gyldighetsperiode:
         range: Periode

@@ -5,6 +5,7 @@ imports:
   - linkml:types
   - administrasjon.personal
   - felles.basisklasser
+  - felles.kodeverk
   - felles.kodeverk.iso
   - felles.komplekse-datatyper
   - utdanning.elev
@@ -177,7 +178,9 @@ classes:
         annotations:
           primaryRelation: true
         description: |
-          Foreldre til person.
+          Den/De som har foreldreansvar til personen.
+          
+          Dette kan være personens foreldre eller adoptivforeldre.
         multivalued: true
       foreldreansvar:
         range: Person
@@ -201,6 +204,10 @@ classes:
           # Beskrivelse
           
           Se beskrivelse av [Kjønn klasse](Class:Kjønn)
+      kommune:
+        range: Kommune
+        description: |
+          Kommune hvor personen er bosatt
       morsmål:
         range: Språk
         description: |
@@ -208,7 +215,7 @@ classes:
       målform:
         range: Språk
         description: |
-          Språkform som denne personen foretrekker å bruke (i utgangspunktet - nynork, bokmål eller samisk).
+          Målform som denne personen foretrekker å bruke (eksempelvis nynorsk, bokmål eller samisk).
       personalressurs:
         range: Personalressurs
         inverse: person

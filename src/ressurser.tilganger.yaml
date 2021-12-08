@@ -18,7 +18,7 @@ classes:
       systemId:
         range: 
         description: |
-          Intern identifikator som brukes i kildesystemmet.
+          Intern identifikator som brukes i kildesystemet.
         required: true
       personalressurs:
         range: Personalressurs

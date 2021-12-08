@@ -172,6 +172,16 @@ classes:
           
           Dette kan være identifikator som eksisterer i SAS/SIS (IPOS/OID).
         required: true
+      gjest:
+        range: boolean
+        description: |
+          Viser om eleven er gjesteelev.
+      hybeladresse:
+        range: Adresse
+        annotations:
+          writeable: true
+        description: |
+          Hybeladresse som ikke er folkeregistrert.
       kontaktinformasjon:
         range: Kontaktinformasjon
         annotations:
@@ -212,6 +222,10 @@ classes:
       En elev kan være i elevforhold med status privatist og deltid samtidig. Eller en elev kan ha flere elevforhold på flere forskjellige skoler.
     is_a: Utdanningsforhold
     attributes:
+      avbruddsdato:
+        range: date
+        description: |
+          Dato da elevforholdet ble avbrutt
       gyldighetsperiode:
         range: Periode
         description: |
@@ -228,6 +242,16 @@ classes:
           # Beskrivelse
           
           En elev kan ha flere elevforhold, men kun ett elevforhold skal være tilknyttet en hovedskole.
+      anmerkninger:
+        range: Anmerkninger
+        description: |
+          Anmerkningene i elevforholdet.
+        multivalued: true
+      avbruddsårsak:
+        range: Avbruddsårsak
+        description: |
+          Årsak til avbrudd av elevforholdet.
+        multivalued: true
       basisgruppe:
         range: Basisgruppe
         inverse: elevforhold
@@ -262,11 +286,29 @@ classes:
         description: |
           Elev som elevforholdet gjelder for
         required: true
+      elevfravær:
+        range: Fraværsoversikt
+        inverse: elevforhold
+        description: |
+          Fraværsoversikt for elevforholdet
+        multivalued: true
       fravær:
         range: Fravær
         inverse: elevforhold
         description: |
           Alle fravær registrert på elevforhold.
+        multivalued: true
+      halvårsfagvurdering:
+        range: Halvårsfagvurdering
+        inverse: elevforhold
+        description: |
+          Halvårsvurdering i fag for eleven
+        multivalued: true
+      halvårsordensvurdering:
+        range: Halvårsordensvurdering
+        inverse: elevforhold
+        description: |
+          Halvårsvurdering av orden og atferd for eleven.
         multivalued: true
       kategori:
         range: Elevkategori
@@ -285,9 +327,15 @@ classes:
         description: |
           Kontaktlærergruppemedlemskapene til et elevforhold.
         multivalued: true
+      kroppsøving:
+        range: Fagmerknad
+        description: |
+          Viser hvilken type fritak eleven har i kroppsøving
       persongruppemedlemskap:
         range: Persongruppemedlemskap
         inverse: elevforhold
+        description: |
+          Persongruppemedlemskapene til et elevforhold.
         multivalued: true
       programområde:
         range: Programområde
@@ -301,6 +349,11 @@ classes:
         description: |
           Programområdemedlemskapene til et elevforhold.
         multivalued: true
+      sidemål:
+        range: Fagmerknad
+        description: |
+          Hvilke typer fritak eleven har i sidemål.
+        multivalued: true
       skole:
         range: Skole
         inverse: elevforhold
@@ -309,6 +362,36 @@ classes:
         description: |
           Skole elevforhold er knyttet til.
         required: true
+      sluttfagvurdering:
+        range: Sluttfagvurdering
+        inverse: elevforhold
+        description: |
+          Sluttvurdering i fag for eleven
+        multivalued: true
+      sluttordensvurdering:
+        range: Sluttordensvurdering
+        inverse: elevforhold
+        description: |
+          Sluttvurdering av orden og atferd for eleven
+        multivalued: true
+      tilrettelegging:
+        range: Elevtilrettelegging
+        inverse: elev
+        description: |
+          Tilrettelegginger for eleven.
+        multivalued: true
+      underveisfagvurdering:
+        range: Underveisfagvurdering
+        inverse: elevforhold
+        description: |
+          Underveisvurdering i fag for eleven
+        multivalued: true
+      underveisordensvurdering:
+        range: Underveisordensvurdering
+        inverse: elevforhold
+        description: |
+          Underveisvurdering av orden og atferd for eleven.
+        multivalued: true
       undervisningsgruppe:
         range: Undervisningsgruppe
         inverse: elevforhold
@@ -327,7 +410,35 @@ classes:
         inverse: elevforhold
         description: |
           Alle vurderinger i et elevforhold
+        deprecated: "Bruk Fagvurdering og Ordensvurdering"
         multivalued: true
+
+  Elevtilrettelegging:
+    description: |
+      Tilrettelegging en elev har p&#229; eksamen.
+    attributes:
+      systemId:
+        range: Identifikator
+        description: |
+          Intern identifikator som brukes i kildesystemet
+        required: true
+      elev:
+        range: Elevforhold
+        inverse: tilrettelegging
+        annotations:
+          primaryRelation: true
+        description: |
+          Eleven det skal tilrettelegges for.
+        required: true
+      fag:
+        range: Fag
+        description: |
+          Faget tilretteleggingen gjelder for.
+      tilrettelegging:
+        range: Tilrettelegging
+        description: |
+          Angir hvilken tilrettelegging som skal gis.
+        required: true
 
   Kontaktlærergruppe:
     description: |
@@ -609,6 +720,14 @@ classes:
       Dette kan for eksempel være lærerens undervisningsforhold til skolen. Underviser en lærer på to skoler, vil det være naturlig å ha to undervisningsforhold.
     is_a: Utdanningsforhold
     attributes:
+      hovedskole:
+        range: boolean
+        description: |
+          Angir om undervisningsforholdforhold er tilknyttet hovedskole.
+          
+          # Beskrivelse
+          
+          En skoleresurs kan ha flere undervisningsforhold, men kun ett undervisningsforhold skal v&#230;re tilknyttet en hovedskole.
       time:
         range: Time
         inverse: undervisningsforhold

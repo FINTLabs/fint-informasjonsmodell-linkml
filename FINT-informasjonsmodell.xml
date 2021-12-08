@@ -3833,6 +3833,7 @@ Se beskrivelse for [Personnavn klasse](Class:Personnavn)
             </packagedElement>
           <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_f982c0eba23b249cb5" visibility="public" start="EAID_CLS_8548ca6ef4e9f948e9" end="EAID_CLS_8548ca6ef4e9f948e9" />
           <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_589f8189ed7e7a2473" visibility="public" start="EAID_CLS_8548ca6ef4e9f948e9" end="EAID_CLS_6d25024112361642d4" />
+          <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_b5fef73a7ec2f96a22" visibility="public" start="EAID_CLS_8548ca6ef4e9f948e9" end="EAID_CLS_731db44765e710208d" />
           <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_c1f955166e83e4705b" visibility="public" start="EAID_CLS_8548ca6ef4e9f948e9" end="EAID_CLS_f3a58ccad0a288d490" />
           <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_b48c9d5c7c0331bb38" visibility="public" start="EAID_CLS_8548ca6ef4e9f948e9" end="EAID_CLS_f3a58ccad0a288d490" />
           <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_53edcf95399f514dd1" visibility="public" start="EAID_CLS_8548ca6ef4e9f948e9" end="EAID_CLS_7f69968205107fe6de" />
@@ -3895,7 +3896,7 @@ Sjekker ved innhenting av data:
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_2563d901e5012f4a9a" value="1" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_2563d901e5012f4a9a" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_2563d901e5012f4a9a">
-                  <body>Intern identifikator som brukes enten i kildesystemmet eller i kildestandarden (for ISO, KS og lignende standarder)
+                  <body>Intern identifikator som brukes enten i kildesystemet eller i kildestandarden (for ISO, KS og lignende standarder)
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -5201,7 +5202,7 @@ Kilden for denne type informasjon vil typisk være identitetsforvaltningssystemet
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_761d87f6ffac478a2e" value="1" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_761d87f6ffac478a2e" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_761d87f6ffac478a2e">
-                  <body>Intern identifikator som brukes i kildesystemmet.
+                  <body>Intern identifikator som brukes i kildesystemet.
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -5507,6 +5508,24 @@ Dette kan være identifikator som eksisterer i SAS/SIS (IPOS/OID).
 </body>
                   </ownedComment>
                 </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_d80b53cb6af29f41a0" name="gjest" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Boolean" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_d483f485b24543ab29" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_d483f485b24543ab29" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d483f485b24543ab29">
+                  <body>Viser om eleven er gjesteelev.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_1ed8af84efe9504fe6" name="hybeladresse" visibility="public">
+                <type xmi:idref="EAID_CLS_16032b22e35475cac5" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_fb1af3821e2bdfe877" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_fb1af3821e2bdfe877" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_fb1af3821e2bdfe877">
+                  <body>Hybeladresse som ikke er folkeregistrert.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_06b718ea656ff1a4a3" name="kontaktinformasjon" visibility="public">
                 <type xmi:idref="EAID_CLS_52527f3a976509c805" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_2b26a29d123cc19b6b" value="0" />
@@ -5537,6 +5556,15 @@ En elev kan være i elevforhold med status privatist og deltid samtidig. Eller en
 </body>
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_e21d60fd011d939b70" general="EAID_CLS_9564bd355ac64bb4d6" start="EAID_CLS_9be72467d299d27d2a" end="EAID_CLS_9564bd355ac64bb4d6" />
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_699c2fa22c5b8a9af8" name="avbruddsdato" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Date" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_8ae40500ea503ccef3" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_8ae40500ea503ccef3" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_8ae40500ea503ccef3">
+                  <body>Dato da elevforholdet ble avbrutt
+</body>
+                  </ownedComment>
+                </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_8cf6c63ea7ff1a8220" name="gyldighetsperiode" visibility="public">
                 <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_80bb18d4e5d51afb69" value="0" />
@@ -5564,10 +5592,33 @@ En elev kan ha flere elevforhold, men kun ett elevforhold skal være tilknyttet e
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_1393cad8de7009e272" visibility="public" start="EAID_CLS_9be72467d299d27d2a" end="EAID_CLS_183d00614805171fd3" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_ccee53e9c8098ee15d" visibility="public" start="EAID_CLS_9be72467d299d27d2a" end="EAID_CLS_d8c10b1c582791aca9" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_1e9eea3851714be968" visibility="public" start="EAID_CLS_9be72467d299d27d2a" end="EAID_CLS_389b7cf67bad56a453" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_884a6e96c961971426" visibility="public" start="EAID_CLS_99e1fdeee7693150be" end="EAID_CLS_9be72467d299d27d2a" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_064c0ef36d8b57ee55" visibility="public" start="EAID_CLS_9be72467d299d27d2a" end="EAID_CLS_20ee2391e13a5e2da9" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_7e26ba7b92c847dc04" visibility="public" start="EAID_CLS_9be72467d299d27d2a" end="EAID_CLS_31260c62481059007c" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_e7c222a05474f107c4" visibility="public" start="EAID_CLS_9be72467d299d27d2a" end="EAID_CLS_31260c62481059007c" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_c7369ae022a2f78fee" visibility="public" start="EAID_CLS_9be72467d299d27d2a" end="EAID_CLS_64e904f2ebf8b9f538" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_0bfa16ef8891939d13" name="Elevtilrettelegging">
+              <properties documentation="Tilrettelegging en elev har p&amp;#229; eksamen.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d752bdd6057657a61d">
+                <body>Tilrettelegging en elev har p&amp;#229; eksamen.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_c283b54d5e4b65af43" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_b228ea90fcc8fb6538" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_b228ea90fcc8fb6538" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_b228ea90fcc8fb6538">
+                  <body>Intern identifikator som brukes i kildesystemet
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_4a333809004cd6c920" visibility="public" start="EAID_CLS_0bfa16ef8891939d13" end="EAID_CLS_9be72467d299d27d2a" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_7fbecce61ab8f134c2" visibility="public" start="EAID_CLS_0bfa16ef8891939d13" end="EAID_CLS_e92c2079bc89c6d11a" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_f5f2fa7147ddf14998" visibility="public" start="EAID_CLS_0bfa16ef8891939d13" end="EAID_CLS_8c00232d083f0f1a84" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_11abbdc19270478625" name="Kontaktlærergruppe">
               <properties documentation="Elevgruppe som ein kontaktlærer har særleg ansvar for.&#10;&#10;# Beskrivelse&#10;&#10;Kontaktlæreren har i denne gruppa særleg ansvar for dei praktiske, administrative og sosialpedagogiske gjeremåla som gjeld klassen eller basisgruppa og dei elevane som er der, mellom anna kontakten med heimen, jf Opplæringslova §8-2.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_2876ab3f7ad9d58184">
@@ -5712,6 +5763,19 @@ Dette kan for eksempel være lærerens undervisningsforhold til skolen. Underviser
 </body>
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_26620df5d6b84ef22b" general="EAID_CLS_9564bd355ac64bb4d6" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_9564bd355ac64bb4d6" />
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_0bf9bb87330ed77a40" name="hovedskole" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Boolean" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_860e229e8935543cb6" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_860e229e8935543cb6" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_860e229e8935543cb6">
+                  <body>Angir om undervisningsforholdforhold er tilknyttet hovedskole.
+
+# Beskrivelse
+
+En skoleresurs kan ha flere undervisningsforhold, men kun ett undervisningsforhold skal v&amp;#230;re tilknyttet en hovedskole.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_b98b916864b10e3233" visibility="public" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_7bd281acb04022531a" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_08206e76492e006cb4" visibility="public" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_7ab71940bab910a223" />
@@ -5722,6 +5786,18 @@ Dette kan for eksempel være lærerens undervisningsforhold til skolen. Underviser
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_dcc85fc61ed9670a87" visibility="public" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_d404ea07009fe8b767" />
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_606159134ff04f6d3c" name="Kodeverk">
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_d8c10b1c582791aca9" name="Avbruddsårsak">
+              <properties documentation="&amp;#197;rsaken til at eleven avbryter utdanningsprogrammet (Vg1)/programomr&amp;#229;det (Vg2/Vg3) ) i l&amp;#248;pet av skole&amp;#229;ret  eller l&amp;#230;rlingen/l&amp;#230;rekandidaten hever l&amp;#230;rekontrakten/oppl&amp;#230;ringskontrakten.&#10;&#10;# Referanse&#10;&#10;Registreringsh&amp;#229;ndbok: https://regbok.udir.no/35004/3344/35042-1014313.html&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_af0243aae03a89e7d0">
+                <body>&amp;#197;rsaken til at eleven avbryter utdanningsprogrammet (Vg1)/programomr&amp;#229;det (Vg2/Vg3) ) i l&amp;#248;pet av skole&amp;#229;ret  eller l&amp;#230;rlingen/l&amp;#230;rekandidaten hever l&amp;#230;rekontrakten/oppl&amp;#230;ringskontrakten.
+
+# Referanse
+
+Registreringsh&amp;#229;ndbok: https://regbok.udir.no/35004/3344/35042-1014313.html
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_af0243aae03a89e7d0" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_d8c10b1c582791aca9" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_20ee2391e13a5e2da9" name="Elevkategori">
               <properties documentation="Kategori som et elevforhold befinner seg innenfor&#10;&#10;# Eksempel&#10;&#10;Gyldige verdier kan være:&#10;* heltid&#10;* deltid&#10;* voksen&#10;* privatist&#10;* norsk-utv-i-utlandet&#10;* utenlandsk-utv-i-norge&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_f274442bb3f08f4c22">
@@ -5740,12 +5816,43 @@ Gyldige verdier kan være:
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_f274442bb3f08f4c22" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_20ee2391e13a5e2da9" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_31260c62481059007c" name="Fagmerknad">
+              <properties documentation="Merknader til vitnem&amp;#229;l og kompetansebevis&#10;&#10;# Beskrivelse&#10;&#10;En fagmerknad er en merknad som har en eller flere av disse funksjonene&#10;&#10;- gir opplysninger om faget som ikke g&amp;#229;r fram av karakterer eller eksamensform&#10;- utdyper opplysninger om karakterer og/eller eksamensform&#10;- henviser til vedlegg som gir slike opplysninger&#10;&#10;# Referanser&#10;&#10;https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_61a1891a729663f73b">
+                <body>Merknader til vitnem&amp;#229;l og kompetansebevis
+
+# Beskrivelse
+
+En fagmerknad er en merknad som har en eller flere av disse funksjonene
+
+- gir opplysninger om faget som ikke g&amp;#229;r fram av karakterer eller eksamensform
+- utdyper opplysninger om karakterer og/eller eksamensform
+- henviser til vedlegg som gir slike opplysninger
+
+# Referanser
+
+https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_61a1891a729663f73b" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_31260c62481059007c" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_3076a148b4be460dce" name="Fraværstype">
-              <properties stereotype="hovedklasse" />
+              <properties documentation="Typer frav&amp;#230;r.&#10;&#10;# Referanse&#10;&#10;https://www.udir.no/regelverk-og-tilsyn/skole-og-opplaring/saksbehandling/fravar/fravar-i-videregaende/&#10;&#10;VIS:&#10;https://inschool.zendesk.com/hc/no/articles/360023264091&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_31f76c46860e903f54">
+                <body>Typer frav&amp;#230;r.
+
+# Referanse
+
+https://www.udir.no/regelverk-og-tilsyn/skole-og-opplaring/saksbehandling/fravar/fravar-i-videregaende/
+
+VIS:
+https://inschool.zendesk.com/hc/no/articles/360023264091
+</body>
+                </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_31f76c46860e903f54" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_3076a148b4be460dce" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_c9f60b4d15aa43dab9" name="Grepreferanse">
-              <properties documentation="Ekstern referanse til Grepkodeverket.&#10;&#10;# Beskrivelse&#10;&#10;Grep er den nasjonale databasen for fag, l&amp;#230;replaner og oppl&amp;#230;ringstilbud i grunnoppl&amp;#230;ringen.&#10;&#10;Referanser til Grepkodeverket skal referere til gyldige og unike koder i REST (JSON) API fra Udir.&#10;&#10;https://www.udir.no/om-udir/data/kl06-grep&#10;&#10;Det er viktig &amp;#229; bruke Grepreferanser og ikke Vigoreferanser.&#10;" stereotype="referanse" />
+              <properties documentation="Ekstern referanse til Grepkodeverket.&#10;&#10;# Beskrivelse&#10;&#10;Grep er den nasjonale databasen for fag, l&amp;#230;replaner og oppl&amp;#230;ringstilbud i grunnoppl&amp;#230;ringen.&#10;&#10;Referanser til Grepkodeverket skal referere til gyldige og unike koder i REST (JSON) API fra Udir.&#10;&#10;https://www.udir.no/om-udir/data/kl06-grep&#10;&#10;Det er viktig &amp;#229; bruke Grepreferanser og ikke Vigoreferanser. &#10;Bruk data.udir.no , ikke psi.udir.no, eksempelvis https://data.udir.no/kl06/SAL3001 (korrekt), ikke https://psi.udir.no/kl06/SAL3001 (feil).&#10;" stereotype="referanse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_165d3b6352915160e3">
                 <body>Ekstern referanse til Grepkodeverket.
 
@@ -5757,7 +5864,8 @@ Referanser til Grepkodeverket skal referere til gyldige og unike koder i REST (J
 
 https://www.udir.no/om-udir/data/kl06-grep
 
-Det er viktig &amp;#229; bruke Grepreferanser og ikke Vigoreferanser.
+Det er viktig &amp;#229; bruke Grepreferanser og ikke Vigoreferanser. 
+Bruk data.udir.no , ikke psi.udir.no, eksempelvis https://data.udir.no/kl06/SAL3001 (korrekt), ikke https://psi.udir.no/kl06/SAL3001 (feil).
 </body>
                 </ownedComment>
               </packagedElement>
@@ -5819,6 +5927,14 @@ Et skoleår er som hovedregel inndelt i to terminer. Første termin: medio august 
 </body>
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_dc81664f4e2d9c9fdd" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_aad6ed1e0d9928ed93" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_8c00232d083f0f1a84" name="Tilrettelegging">
+              <properties documentation="Tirettelegging en elev kan ha p&amp;#229; eksamen.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_247d8fb6758a34cdf6">
+                <body>Tirettelegging en elev kan ha p&amp;#229; eksamen.
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_247d8fb6758a34cdf6" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_8c00232d083f0f1a84" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_9be83411188065746c" name="Vigoreferanse">
               <properties documentation="Ekstern referanse til VIGO Kodeverksbase.&#10;&#10;# Beskrivelse&#10;&#10;Kodeverket kommer fra Grep (Utdanningsdirektoratet sin læreplandatabase), Nasjonalt skoleregister og VIGO.&#10;&#10;Referanser til VIGO Kodeverksbase skal referere til gyldige og unike koder i REST (JSON) API fra Vigo IKS/FINTLabs.&#10;&#10;https://api.felleskomponent.no/utdanning/vigo/kodeverk/swagger-ui.html#/&#10;" stereotype="referanse" />
@@ -6202,6 +6318,41 @@ Synonym: Utdanningsgruppe
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_5e39f07a49161d3faf" visibility="public" start="EAID_CLS_e755c56f229ed4bfb5" end="EAID_CLS_64e904f2ebf8b9f538" />
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_005aa392465e3500f2" name="Vurdering">
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_183d00614805171fd3" name="Anmerkninger">
+              <properties documentation="Aanmerkninger for en elev for et elevforhold.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_b950e519c778f8a2f2">
+                <body>Aanmerkninger for en elev for et elevforhold.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_80e23448f7e0881046" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_3f4a970133a6ff50d8" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_3f4a970133a6ff50d8" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_3f4a970133a6ff50d8">
+                  <body>Intern identifikator som brukes i kildesystemet.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_a5eb17c92bf29cd980" name="atferd" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Integer" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_def1d07bc3fa154a6f" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_def1d07bc3fa154a6f" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_def1d07bc3fa154a6f">
+                  <body>Antall anmerkninger for atferd for eleven
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_3e87a3fc6e7bd02a8b" name="orden" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Integer" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_7e6e3ff75e0cad5d2c" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_7e6e3ff75e0cad5d2c" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7e6e3ff75e0cad5d2c">
+                  <body>Antall anmerkninger for orden for eleven
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_24d710f9aa1a624b3f" visibility="public" start="EAID_CLS_183d00614805171fd3" end="EAID_CLS_8cd72252caa5382d06" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_befc698f1817a298c1" name="Eksamensgruppe">
               <properties documentation="Gruppering av elever som tar samme eksamen &#10;&#10;# Beskrivelse&#10;&#10;Underordnet til fag.&#10;&#10;Kan brukes for å:&#10;* Vise forhold mellom eksamensresultat og sensor&#10;* Vise gruppering av elever som tok eksamen sammen&#10;&#10;Det er også mulig å koble resultater av eksamener direkte på klasse `Fag`.&#10;&#10;Eksamensgrupper har en kode som er sentralt definert av VIGO.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_f3053e312270f2e9f7">
@@ -6250,32 +6401,83 @@ Gruppemedlemskap som knytter sammen elevforhold og eksamensgrupper.
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_da4f5c337f36d52aac" visibility="public" start="EAID_CLS_fcc8bab445fb55fc37" end="EAID_CLS_befc698f1817a298c1" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_e83aa14d13cb19156a" visibility="public" start="EAID_CLS_fcc8bab445fb55fc37" end="EAID_CLS_9be72467d299d27d2a" />
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_ebac31792d99fa6926" name="Fravær">
-              <properties documentation="Manglende tilstedeværelse i opplæringen.&#10;&#10;# Beskrivelse&#10;&#10;Fravær føres med relasjon til den undervisningen eleven har vært fraværende fra.  Det må derfor enten være en relasjon til en Undervisningsgruppe eller en Eksamensgruppe.&#10;&#10;# Fraværsgrense &#10;&#10;* Elever i videregående skole skal møte opp og delta aktivt i opplæringen. &#10;* Fravær skal registreres, og det foreligger grenser på hvor mye fravær som tillates før rett til å få halvårsvurdering med karakter eller standpunktkarakter i et fag bortfaller. &#10;* Eleven må legge fram relevant dokumentasjon for å få fravær unntatt fra fraværsgrensen.&#10;* Fraværsgrensen gjelder timefravær i enkeltfag, ikke elevenes totale fravær.&#10;* Eleven skal få et varsel om han eller hun står i fare for å ikke få karakter på grunn av fravær.&#10;&#10;# Referanser&#10;&#10;* UDir Registreringshåndbok: http://regbok.udir.no/35004/3344/35042-1018643.html&#10;* Forskrift til opplæringslova § 3-3, siste ledd: https://lovdata.no/forskrift/2006-06-23-724/§3-3&#10;* Forskrift til opplæringslova § 3-47: https://lovdata.no/forskrift/2006-06-23-724/§3-47&#10;* UDir. Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet, pkt 8: https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/8-fravar/&#10;* SNL. Fravær: https://snl.no/fravær&#10;* Rundskriv Udir-3-2016: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravarsgrense---udir-3-2016/&#10;* UDir. Fravær i videregående skole: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravar-i-videregaende-skole/&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_59abd69df4669f41d4">
-                <body>Manglende tilstedeværelse i opplæringen.
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_d070ec2ebf1c6459a5" name="Fagvurdering" isAbstract="true">
+              <properties documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i. Det skal ogs&amp;#229; settes relasjon direkte til angjeldende fag.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="abstrakt" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a5a5e4503b10264081">
+                <body>Karakterer og andre vurderingsuttrykk.
 
 # Beskrivelse
 
-Fravær føres med relasjon til den undervisningen eleven har vært fraværende fra.  Det må derfor enten være en relasjon til en Undervisningsgruppe eller en Eksamensgruppe.
-
-# Fraværsgrense 
-
-* Elever i videregående skole skal møte opp og delta aktivt i opplæringen. 
-* Fravær skal registreres, og det foreligger grenser på hvor mye fravær som tillates før rett til å få halvårsvurdering med karakter eller standpunktkarakter i et fag bortfaller. 
-* Eleven må legge fram relevant dokumentasjon for å få fravær unntatt fra fraværsgrensen.
-* Fraværsgrensen gjelder timefravær i enkeltfag, ikke elevenes totale fravær.
-* Eleven skal få et varsel om han eller hun står i fare for å ikke få karakter på grunn av fravær.
+Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i. Det skal ogs&amp;#229; settes relasjon direkte til angjeldende fag.
 
 # Referanser
 
-* UDir Registreringshåndbok: http://regbok.udir.no/35004/3344/35042-1018643.html
-* Forskrift til opplæringslova § 3-3, siste ledd: https://lovdata.no/forskrift/2006-06-23-724/§3-3
-* Forskrift til opplæringslova § 3-47: https://lovdata.no/forskrift/2006-06-23-724/§3-47
-* UDir. Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet, pkt 8: https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/8-fravar/
-* SNL. Fravær: https://snl.no/fravær
+* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_f69a6924cf9d956b3d" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_58765b11810635dfed" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_58765b11810635dfed" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_58765b11810635dfed">
+                  <body>Systemidentifikator i fagsystem
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_429c6e065b01671d09" name="kommentar" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_f15ee6c3ef0f27d849" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_f15ee6c3ef0f27d849" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_f15ee6c3ef0f27d849">
+                  <body>Kommentar til vurderingen
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_5ce7e7359f20305a7f" name="vurderingsdato" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#DateTime" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_1cf0396ad95d854049" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_1cf0396ad95d854049" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_1cf0396ad95d854049">
+                  <body>Datoen vurderingen er foretatt.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_2c61814721a3cc289f" visibility="public" start="EAID_CLS_d070ec2ebf1c6459a5" end="EAID_CLS_e92c2079bc89c6d11a" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_26466364f93dd5e55f" visibility="public" start="EAID_CLS_d070ec2ebf1c6459a5" end="EAID_CLS_e8d2c6028f4bdc557c" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_cf43cd008637cbf913" visibility="public" start="EAID_CLS_d070ec2ebf1c6459a5" end="EAID_CLS_8cd72252caa5382d06" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_44f17b5274f9d42de6" visibility="public" start="EAID_CLS_d070ec2ebf1c6459a5" end="EAID_CLS_d404ea07009fe8b767" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_ebac31792d99fa6926" name="Fravær">
+              <properties documentation="Manglende tilstedev&amp;#230;relse i oppl&amp;#230;ringen.&#10;&#10;# Beskrivelse&#10;&#10;Frav&amp;#230;r f&amp;#248;res med relasjon til den undervisningen eleven har v&amp;#230;rt frav&amp;#230;rende fra.  Det m&amp;#229; derfor v&amp;#230;re en relasjon til en Undervisningsgruppe.&#10;&#10;# Frav&amp;#230;rsgrense &#10;&#10;* Elever i videreg&amp;#229;ende skole skal m&amp;#248;te opp og delta aktivt i oppl&amp;#230;ringen. &#10;* Frav&amp;#230;r skal registreres, og det foreligger grenser p&amp;#229; hvor mye frav&amp;#230;r som tillates f&amp;#248;r rett til &amp;#229; f&amp;#229; halv&amp;#229;rsvurdering med karakter eller standpunktkarakter i et fag bortfaller. &#10;* Eleven m&amp;#229; legge fram relevant dokumentasjon for &amp;#229; f&amp;#229; frav&amp;#230;r unntatt fra frav&amp;#230;rsgrensen.&#10;* Frav&amp;#230;rsgrensen gjelder timefrav&amp;#230;r i enkeltfag, ikke elevenes totale frav&amp;#230;r.&#10;* Eleven skal f&amp;#229; et varsel om han eller hun st&amp;#229;r i fare for &amp;#229; ikke f&amp;#229; karakter p&amp;#229; grunn av frav&amp;#230;r.&#10;&#10;# Frav&amp;#230;r eksamen&#10;Det f&amp;#248;res ikke lenger frav&amp;#230;r p&amp;#229; eksamen. Dette vil bli satt som karakter. Pga dette utg&amp;#229;r relasjonen til eksamensgruppe. Ved en senere hovedoppdatering av Informasjonsmodellen vil multiplisitet for relasjonen  undervisningsgruppe bli satt til 1.&#10;&#10;# Referanser&#10;&#10;* UDir Registreringsh&amp;#229;ndbok: http://regbok.udir.no/35004/3344/35042-1018643.html&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-3, siste ledd: https://lovdata.no/forskrift/2006-06-23-724/&amp;#167;3-3&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-47: https://lovdata.no/forskrift/2006-06-23-724/&amp;#167;3-47&#10;* UDir. F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet, pkt 8: https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/8-fravar/&#10;* SNL. Frav&amp;#230;r: https://snl.no/frav&amp;#230;r&#10;* Rundskriv Udir-3-2016: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravarsgrense---udir-3-2016/&#10;* UDir. Frav&amp;#230;r i videreg&amp;#229;ende skole: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravar-i-videregaende-skole/&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_59abd69df4669f41d4">
+                <body>Manglende tilstedev&amp;#230;relse i oppl&amp;#230;ringen.
+
+# Beskrivelse
+
+Frav&amp;#230;r f&amp;#248;res med relasjon til den undervisningen eleven har v&amp;#230;rt frav&amp;#230;rende fra.  Det m&amp;#229; derfor v&amp;#230;re en relasjon til en Undervisningsgruppe.
+
+# Frav&amp;#230;rsgrense 
+
+* Elever i videreg&amp;#229;ende skole skal m&amp;#248;te opp og delta aktivt i oppl&amp;#230;ringen. 
+* Frav&amp;#230;r skal registreres, og det foreligger grenser p&amp;#229; hvor mye frav&amp;#230;r som tillates f&amp;#248;r rett til &amp;#229; f&amp;#229; halv&amp;#229;rsvurdering med karakter eller standpunktkarakter i et fag bortfaller. 
+* Eleven m&amp;#229; legge fram relevant dokumentasjon for &amp;#229; f&amp;#229; frav&amp;#230;r unntatt fra frav&amp;#230;rsgrensen.
+* Frav&amp;#230;rsgrensen gjelder timefrav&amp;#230;r i enkeltfag, ikke elevenes totale frav&amp;#230;r.
+* Eleven skal f&amp;#229; et varsel om han eller hun st&amp;#229;r i fare for &amp;#229; ikke f&amp;#229; karakter p&amp;#229; grunn av frav&amp;#230;r.
+
+# Frav&amp;#230;r eksamen
+Det f&amp;#248;res ikke lenger frav&amp;#230;r p&amp;#229; eksamen. Dette vil bli satt som karakter. Pga dette utg&amp;#229;r relasjonen til eksamensgruppe. Ved en senere hovedoppdatering av Informasjonsmodellen vil multiplisitet for relasjonen  undervisningsgruppe bli satt til 1.
+
+# Referanser
+
+* UDir Registreringsh&amp;#229;ndbok: http://regbok.udir.no/35004/3344/35042-1018643.html
+* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-3, siste ledd: https://lovdata.no/forskrift/2006-06-23-724/&amp;#167;3-3
+* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-47: https://lovdata.no/forskrift/2006-06-23-724/&amp;#167;3-47
+* UDir. F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet, pkt 8: https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/8-fravar/
+* SNL. Frav&amp;#230;r: https://snl.no/frav&amp;#230;r
 * Rundskriv Udir-3-2016: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravarsgrense---udir-3-2016/
-* UDir. Fravær i videregående skole: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravar-i-videregaende-skole/
+* UDir. Frav&amp;#230;r i videreg&amp;#229;ende skole: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravar-i-videregaende-skole/
 </body>
                 </ownedComment>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_5c36282c9eb57248bb" name="systemId" visibility="public">
@@ -6333,7 +6535,118 @@ Fravær skal registreres i dager eller timer (60-minutters enheter). Det er ikke 
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a6384da98f575dd300" visibility="public" start="EAID_CLS_ebac31792d99fa6926" end="EAID_CLS_befc698f1817a298c1" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_7274c3dc40022b14ca" visibility="public" start="EAID_CLS_ebac31792d99fa6926" end="EAID_CLS_9be72467d299d27d2a" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_784067c943c3a32a16" visibility="public" start="EAID_CLS_ebac31792d99fa6926" end="EAID_CLS_3076a148b4be460dce" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_ad1d4e1fb8e136740c" visibility="public" start="EAID_CLS_ebac31792d99fa6926" end="EAID_CLS_1effd1cacfa57a62ad" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_2852921ca636725553" visibility="public" start="EAID_CLS_ebac31792d99fa6926" end="EAID_CLS_d404ea07009fe8b767" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_f5f1953a5017495a18" name="Fraværsoversikt">
+              <properties documentation="Aggregert frav&amp;#230;rsoversikt for en elev i ett fag.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_5a64028017e8096a6a">
+                <body>Aggregert frav&amp;#230;rsoversikt for en elev i ett fag.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_ad715e49fd3fa7ee54" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_5fb1874586165705fa" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_5fb1874586165705fa" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_5fb1874586165705fa">
+                  <body>System-id fra kildesystemet
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_7a74212a8dbc440fe7" name="halvår" visibility="public">
+                <type xmi:idref="EAID_CLS_c4f96e9442f11aa2b2" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_70d145b61a23a93236" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_70d145b61a23a93236" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_70d145b61a23a93236">
+                  <body>Udokumentert frav&amp;#230;r for f&amp;#248;rste halv&amp;#229;r.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_e3a4f745b7b12dc940" name="skoleår" visibility="public">
+                <type xmi:idref="EAID_CLS_c4f96e9442f11aa2b2" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_af87079f14a0441ce4" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_af87079f14a0441ce4" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_af87079f14a0441ce4">
+                  <body>Udokumentert frav&amp;#230;r for hele skole&amp;#229;ret.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_1087d73729b00b1e45" visibility="public" start="EAID_CLS_f5f1953a5017495a18" end="EAID_CLS_9be72467d299d27d2a" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_1091c2f7b7e564b05d" visibility="public" start="EAID_CLS_f5f1953a5017495a18" end="EAID_CLS_e92c2079bc89c6d11a" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_c4f96e9442f11aa2b2" name="Fraværsprosent">
+              <properties documentation="Frav&amp;#230;rsdata for en periode.&#10;" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_3d877adc59f98f7c6c">
+                <body>Frav&amp;#230;rsdata for en periode.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_35770def657906a561" name="fraværstimer" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Integer" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_80dc4fb2023c2c32bf" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_80dc4fb2023c2c32bf" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_80dc4fb2023c2c32bf">
+                  <body>Antall timer udokumentert frav&amp;#230;r. Oppgis i hundredeler.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_a580cdd4a9f8e1e0a7" name="prosent" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Integer" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_84e2a0290bff8ecbf4" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_84e2a0290bff8ecbf4" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_84e2a0290bff8ecbf4">
+                  <body>Udokumentert frav&amp;#230;r i prosent. Oppgis i hundredeler.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_9c83da584e2f209a67" name="undervisningstimer" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Integer" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_5d01c3f84d3f74912d" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_5d01c3f84d3f74912d" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_5d01c3f84d3f74912d">
+                  <body>Antall timer planlagt undervisning. Oppgis i hundredeler.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_c5804500868c86675d" name="Halvårsfagvurdering">
+              <properties documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Halv&amp;#229;rsvurdering gis for deltakelse av en elev i en gruppe.&#10;&#10;Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` som vurderingen er foretatt i. Det er ogs&amp;#229; mulig &amp;#229; sette relasjon direkte til angjeldende fag.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_c2642c87ed70ef2d63">
+                <body>Karakterer og andre vurderingsuttrykk.
+
+# Beskrivelse
+
+Halv&amp;#229;rsvurdering gis for deltakelse av en elev i en gruppe.
+
+Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` som vurderingen er foretatt i. Det er ogs&amp;#229; mulig &amp;#229; sette relasjon direkte til angjeldende fag.
+
+# Referanser
+
+* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_c2642c87ed70ef2d63" general="EAID_CLS_d070ec2ebf1c6459a5" start="EAID_CLS_c5804500868c86675d" end="EAID_CLS_d070ec2ebf1c6459a5" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_d2b6a69161af8ea438" visibility="public" start="EAID_CLS_c5804500868c86675d" end="EAID_CLS_9be72467d299d27d2a" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_fe0d7f80dece2238c3" name="Halvårsordensvurdering">
+              <properties documentation="Halv&amp;#229;rsvurdering av orden og atferd..&#10;&#10;# Beskrivelse&#10;&#10;Vurderinger av orden og atferd gj&amp;#248;res uten relasjon til noen gruppe, kun til et elevforhold.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_79bf4dda2727b35f2f">
+                <body>Halv&amp;#229;rsvurdering av orden og atferd..
+
+# Beskrivelse
+
+Vurderinger av orden og atferd gj&amp;#248;res uten relasjon til noen gruppe, kun til et elevforhold.
+
+# Referanser
+
+* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_79bf4dda2727b35f2f" general="EAID_CLS_4d52cfab59c13879f2" start="EAID_CLS_fe0d7f80dece2238c3" end="EAID_CLS_4d52cfab59c13879f2" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_fa12bef9e9d2a9f987" visibility="public" start="EAID_CLS_fe0d7f80dece2238c3" end="EAID_CLS_9be72467d299d27d2a" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_e8d2c6028f4bdc557c" name="Karakterverdi">
               <properties documentation="Karakterer, målestokk for vurdering av elevers faglige standpunkt, prøve- eller eksamensprestasjoner&#10;&#10;# Beskrivelse&#10;&#10;De enkelte karakterer, som til sammen danner en karakterskala, blir betegnet med tall eller andre symboler.&#10;&#10;Den relaterte skalaen må refereres fra selve verdi.&#10;&#10;# Eksempel&#10;&#10;* 6 - Seks&#10;* IM - Ikke møtt&#10;* GK - Godkjent&#10;* R - Realkompetanse&#10;&#10;# Referanse&#10;&#10;* Vigo Kodeverkdatabase. Karakter: [vigo.no/vigokv/karakter.action](https://www.vigo.no/vigokv/karakter.action)&#10;* SNL. karakterer: [snl.no/karakterer](https://snl.no/karakterer)&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_098ff3fff097810f4b">
@@ -6361,24 +6674,152 @@ Den relaterte skalaen må refereres fra selve verdi.
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_098ff3fff097810f4b" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_e8d2c6028f4bdc557c" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_6d247e388329982229" visibility="public" start="EAID_CLS_e8d2c6028f4bdc557c" end="EAID_CLS_a63adb50e6db0f2347" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_4d52cfab59c13879f2" name="Ordensvurdering" isAbstract="true">
+              <properties documentation="Vurdering av orden og atferd..&#10;&#10;# Beskrivelse&#10;&#10;Vurderinger av orden og atferd gj&amp;#248;res uten relasjon til noen gruppe, kun til et elevforhold.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="abstrakt" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_0bac9662d7df554572">
+                <body>Vurdering av orden og atferd..
+
+# Beskrivelse
+
+Vurderinger av orden og atferd gj&amp;#248;res uten relasjon til noen gruppe, kun til et elevforhold.
+
+# Referanser
+
+* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_47fdf47de2d7e8c26a" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_b062a0134c8cdf8f14" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_b062a0134c8cdf8f14" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_b062a0134c8cdf8f14">
+                  <body>Systemidentifikator i fagsystem
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_95558755ce43e5b59e" name="kommentar" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_1ace356fcc363a4e93" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_1ace356fcc363a4e93" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_1ace356fcc363a4e93">
+                  <body>Kommentar til vurderingen
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_163e2690fc7d20d86f" name="vurderingsdato" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#DateTime" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_9f663e6ef0c78e0780" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_9f663e6ef0c78e0780" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_9f663e6ef0c78e0780">
+                  <body>Datoen vurderingen er foretatt.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_e30f23c9dd5249d9f3" visibility="public" start="EAID_CLS_4d52cfab59c13879f2" end="EAID_CLS_e8d2c6028f4bdc557c" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_97de346639aa8c653c" visibility="public" start="EAID_CLS_4d52cfab59c13879f2" end="EAID_CLS_e8d2c6028f4bdc557c" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_957379e13afe375f3b" visibility="public" start="EAID_CLS_4d52cfab59c13879f2" end="EAID_CLS_8cd72252caa5382d06" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_587e9da5042c0cd923" name="Sluttfagvurdering">
+              <properties documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Sluttvurdering (Standpunktkarakter) gis for deltakelse av en elev i en gruppe.&#10;&#10;Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i. Det er ogs&amp;#229; mulig &amp;#229; sette relasjon direkte til angjeldende fag.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_e54b71761f9de8f370">
+                <body>Karakterer og andre vurderingsuttrykk.
+
+# Beskrivelse
+
+Sluttvurdering (Standpunktkarakter) gis for deltakelse av en elev i en gruppe.
+
+Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i. Det er ogs&amp;#229; mulig &amp;#229; sette relasjon direkte til angjeldende fag.
+
+# Referanser
+
+* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_e54b71761f9de8f370" general="EAID_CLS_d070ec2ebf1c6459a5" start="EAID_CLS_587e9da5042c0cd923" end="EAID_CLS_d070ec2ebf1c6459a5" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_f688dba609ae1e7caf" visibility="public" start="EAID_CLS_587e9da5042c0cd923" end="EAID_CLS_befc698f1817a298c1" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_36455e7e629e5ddc9e" visibility="public" start="EAID_CLS_587e9da5042c0cd923" end="EAID_CLS_9be72467d299d27d2a" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_805a5c053f8f3e758d" name="Sluttordensvurdering">
+              <properties documentation="Sluttvurdering av orden og atferd..&#10;&#10;# Beskrivelse&#10;&#10;Vurderinger av orden og atferd gj&amp;#248;res uten relasjon til noen gruppe, kun til et elevforhold.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_c2cbf8c7d1abfcd471">
+                <body>Sluttvurdering av orden og atferd..
+
+# Beskrivelse
+
+Vurderinger av orden og atferd gj&amp;#248;res uten relasjon til noen gruppe, kun til et elevforhold.
+
+# Referanser
+
+* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_c2cbf8c7d1abfcd471" general="EAID_CLS_4d52cfab59c13879f2" start="EAID_CLS_805a5c053f8f3e758d" end="EAID_CLS_4d52cfab59c13879f2" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_2ffd160d41cf12a72a" visibility="public" start="EAID_CLS_805a5c053f8f3e758d" end="EAID_CLS_9be72467d299d27d2a" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_a657a9d80de3896018" name="Underveisfagvurdering">
+              <properties documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Underveisvurdering gis for deltakelse av en elev i en gruppe.&#10;&#10;Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` som vurderingen er foretatt i. Det er ogs&amp;#229; mulig &amp;#229; sette relasjon direkte til angjeldende fag.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_3d0db48bdf0b9e30df">
+                <body>Karakterer og andre vurderingsuttrykk.
+
+# Beskrivelse
+
+Underveisvurdering gis for deltakelse av en elev i en gruppe.
+
+Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` som vurderingen er foretatt i. Det er ogs&amp;#229; mulig &amp;#229; sette relasjon direkte til angjeldende fag.
+
+# Referanser
+
+* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_3d0db48bdf0b9e30df" general="EAID_CLS_d070ec2ebf1c6459a5" start="EAID_CLS_a657a9d80de3896018" end="EAID_CLS_d070ec2ebf1c6459a5" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_ee7b0b29930a982ba8" visibility="public" start="EAID_CLS_a657a9d80de3896018" end="EAID_CLS_9be72467d299d27d2a" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_05a74c616fb10986c9" name="Underveisordensvurdering">
+              <properties documentation="Underveisvurdering av orden og atferd..&#10;&#10;# Beskrivelse&#10;&#10;Vurderinger av orden og atferd gj&amp;#248;res uten relasjon til noen gruppe, kun til et elevforhold.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_89513afc7e2d47d590">
+                <body>Underveisvurdering av orden og atferd..
+
+# Beskrivelse
+
+Vurderinger av orden og atferd gj&amp;#248;res uten relasjon til noen gruppe, kun til et elevforhold.
+
+# Referanser
+
+* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_89513afc7e2d47d590" general="EAID_CLS_4d52cfab59c13879f2" start="EAID_CLS_05a74c616fb10986c9" end="EAID_CLS_4d52cfab59c13879f2" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_22bd8a1fb5e8b806ef" visibility="public" start="EAID_CLS_05a74c616fb10986c9" end="EAID_CLS_9be72467d299d27d2a" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_83824b46425e766c13" name="Vurdering">
-              <properties documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Vurdering gis for deltakelse av en elev i en gruppe. Dette kan innbære både endelig og foreløpende vurdering.  Dette angis av feltet `endelig`.&#10;&#10;Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i.&#10;&#10;Vurderinger av orden og andre frittstående vurderinger gjøres uten relasjon til noen gruppe.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til opplæringslova § 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#§3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#§3-4)&#10;" stereotype="hovedklasse" />
+              <properties documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Vurdering gis for deltakelse av en elev i en gruppe. Dette kan v&amp;#230;re Halv&amp;#229;rsvurdering, Standpunktkarakter, underveisvurdering eller annet. &#10;&#10;Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i. Det er ogs&amp;#229; mulig &amp;#229; sette relasjon direkte til angjeldende fag.&#10;&#10;Vurderinger av orden og andre frittst&amp;#229;ende vurderinger gj&amp;#248;res uten relasjon til noen gruppe.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_fe03c5eb1de5d3a992">
                 <body>Karakterer og andre vurderingsuttrykk.
 
 # Beskrivelse
 
-Vurdering gis for deltakelse av en elev i en gruppe. Dette kan innbære både endelig og foreløpende vurdering.  Dette angis av feltet `endelig`.
+Vurdering gis for deltakelse av en elev i en gruppe. Dette kan v&amp;#230;re Halv&amp;#229;rsvurdering, Standpunktkarakter, underveisvurdering eller annet. 
 
-Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i.
+Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i. Det er ogs&amp;#229; mulig &amp;#229; sette relasjon direkte til angjeldende fag.
 
-Vurderinger av orden og andre frittstående vurderinger gjøres uten relasjon til noen gruppe.
+Vurderinger av orden og andre frittst&amp;#229;ende vurderinger gj&amp;#248;res uten relasjon til noen gruppe.
 
 # Referanser
 
-* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
-* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
-* Forskrift til opplæringslova § 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#§3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#§3-4)
+* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)
 </body>
                 </ownedComment>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_8dfc605179ac569cea" name="systemId" visibility="public">
@@ -6415,6 +6856,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_61a6e3fe6586a31cd5" visibility="public" start="EAID_CLS_83824b46425e766c13" end="EAID_CLS_befc698f1817a298c1" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_1b113beedba23ffc00" visibility="public" start="EAID_CLS_83824b46425e766c13" end="EAID_CLS_9be72467d299d27d2a" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_2e1f2226162dc58835" visibility="public" start="EAID_CLS_83824b46425e766c13" end="EAID_CLS_e92c2079bc89c6d11a" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_2d92ab40e0758689a2" visibility="public" start="EAID_CLS_83824b46425e766c13" end="EAID_CLS_e8d2c6028f4bdc557c" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_160eaa7a1069d0d328" visibility="public" start="EAID_CLS_83824b46425e766c13" end="EAID_CLS_d404ea07009fe8b767" />
             </packagedElement>
@@ -8203,7 +8645,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="Identifikator" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Intern identifikator som brukes enten i kildesystemmet eller i kildestandarden (for ISO, KS og lignende standarder)&#10;" />
+            <documentation value="Intern identifikator som brukes enten i kildesystemet eller i kildestandarden (for ISO, KS og lignende standarder)&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_487d49ec438c385828" idref="EAID_PRP_487d49ec438c385828" name="gyldighetsperiode">
@@ -8849,7 +9291,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="string" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Intern identifikator som brukes i kildesystemmet.&#10;" />
+            <documentation value="Intern identifikator som brukes i kildesystemet.&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -9007,6 +9449,20 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <documentation value="Systemidentifikator til en elev.&#10;&#10;# Beskrivelse &#10;&#10;Dette kan være identifikator som eksisterer i SAS/SIS (IPOS/OID).&#10;" />
             <tags />
             </attribute>
+          <attribute xmi:idref="EAID_PRP_d80b53cb6af29f41a0" idref="EAID_PRP_d80b53cb6af29f41a0" name="gjest">
+            <properties type="boolean" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Viser om eleven er gjesteelev.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_1ed8af84efe9504fe6" idref="EAID_PRP_1ed8af84efe9504fe6" name="hybeladresse">
+            <properties type="Adresse" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Hybeladresse som ikke er folkeregistrert.&#10;" />
+            <tags />
+            </attribute>
           <attribute xmi:idref="EAID_PRP_06b718ea656ff1a4a3" idref="EAID_PRP_06b718ea656ff1a4a3" name="kontaktinformasjon">
             <properties type="Kontaktinformasjon" />
             <bounds lower="0" upper="1" />
@@ -9021,6 +9477,13 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Elevens forskjellige utdanningsforhold&#10;&#10;# Beskrivelse&#10;&#10;En Elev kan ha flere Elevforhold.&#10;&#10;# Eksempel&#10;&#10;En elev kan være i elevforhold med status privatist og deltid samtidig. Eller en elev kan ha flere elevforhold på flere forskjellige skoler.&#10;" stereotype="hovedklasse" />
         <attributes>
+          <attribute xmi:idref="EAID_PRP_699c2fa22c5b8a9af8" idref="EAID_PRP_699c2fa22c5b8a9af8" name="avbruddsdato">
+            <properties type="date" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Dato da elevforholdet ble avbrutt&#10;" />
+            <tags />
+            </attribute>
           <attribute xmi:idref="EAID_PRP_8cf6c63ea7ff1a8220" idref="EAID_PRP_8cf6c63ea7ff1a8220" name="gyldighetsperiode">
             <properties type="Periode" />
             <bounds lower="0" upper="1" />
@@ -9033,6 +9496,20 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
             <documentation value="Angir om elevforhold er tilknyttet hovedskole.&#10;&#10;# Beskrivelse&#10;&#10;En elev kan ha flere elevforhold, men kun ett elevforhold skal være tilknyttet en hovedskole.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_0bfa16ef8891939d13" idref="EAID_CLS_0bfa16ef8891939d13" xmi:type="uml:Class" type="Class" name="Elevtilrettelegging" scope="public">
+        <model package="EAID_PKG_c5ee21afe2335d549a" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Tilrettelegging en elev har p&amp;#229; eksamen.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_c283b54d5e4b65af43" idref="EAID_PRP_c283b54d5e4b65af43" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Intern identifikator som brukes i kildesystemet&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -9104,11 +9581,25 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <model package="EAID_PKG_c5ee21afe2335d549a" ea_eleType="element" />
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Undervisningsforhold til alle med en pedagogisk funksjon&#10;&#10;# Beskrivelse &#10;&#10;Alle med en pedagogisk funksjon på skolen kan ha et undervisningsforhold.&#10;&#10;# Eksempel&#10;&#10;Dette kan for eksempel være lærerens undervisningsforhold til skolen. Underviser en lærer på to skoler, vil det være naturlig å ha to undervisningsforhold.&#10;" stereotype="hovedklasse" />
-        <attributes />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_0bf9bb87330ed77a40" idref="EAID_PRP_0bf9bb87330ed77a40" name="hovedskole">
+            <properties type="boolean" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Angir om undervisningsforholdforhold er tilknyttet hovedskole.&#10;&#10;# Beskrivelse&#10;&#10;En skoleresurs kan ha flere undervisningsforhold, men kun ett undervisningsforhold skal v&amp;#230;re tilknyttet en hovedskole.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
         </element>
       <element xmi:idref="EAID_PKG_606159134ff04f6d3c" idref="EAID_PKG_606159134ff04f6d3c" xmi:type="uml:Package" type="Package" name="Kodeverk" scope="public">
         <model package2="EAID_PKG_606159134ff04f6d3c" ea_eleType="package" package="EAID_PKG_93ea470388b4d82056" />
         <tags />
+        </element>
+      <element xmi:idref="EAID_CLS_d8c10b1c582791aca9" idref="EAID_CLS_d8c10b1c582791aca9" xmi:type="uml:Class" type="Class" name="Avbruddsårsak" scope="public">
+        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="&amp;#197;rsaken til at eleven avbryter utdanningsprogrammet (Vg1)/programomr&amp;#229;det (Vg2/Vg3) ) i l&amp;#248;pet av skole&amp;#229;ret  eller l&amp;#230;rlingen/l&amp;#230;rekandidaten hever l&amp;#230;rekontrakten/oppl&amp;#230;ringskontrakten.&#10;&#10;# Referanse&#10;&#10;Registreringsh&amp;#229;ndbok: https://regbok.udir.no/35004/3344/35042-1014313.html&#10;" stereotype="hovedklasse" />
+        <attributes />
         </element>
       <element xmi:idref="EAID_CLS_20ee2391e13a5e2da9" idref="EAID_CLS_20ee2391e13a5e2da9" xmi:type="uml:Class" type="Class" name="Elevkategori" scope="public">
         <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
@@ -9116,16 +9607,22 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties isAbstract="false" sType="Class" scope="public" documentation="Kategori som et elevforhold befinner seg innenfor&#10;&#10;# Eksempel&#10;&#10;Gyldige verdier kan være:&#10;* heltid&#10;* deltid&#10;* voksen&#10;* privatist&#10;* norsk-utv-i-utlandet&#10;* utenlandsk-utv-i-norge&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
+      <element xmi:idref="EAID_CLS_31260c62481059007c" idref="EAID_CLS_31260c62481059007c" xmi:type="uml:Class" type="Class" name="Fagmerknad" scope="public">
+        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Merknader til vitnem&amp;#229;l og kompetansebevis&#10;&#10;# Beskrivelse&#10;&#10;En fagmerknad er en merknad som har en eller flere av disse funksjonene&#10;&#10;- gir opplysninger om faget som ikke g&amp;#229;r fram av karakterer eller eksamensform&#10;- utdyper opplysninger om karakterer og/eller eksamensform&#10;- henviser til vedlegg som gir slike opplysninger&#10;&#10;# Referanser&#10;&#10;https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
       <element xmi:idref="EAID_CLS_3076a148b4be460dce" idref="EAID_CLS_3076a148b4be460dce" xmi:type="uml:Class" type="Class" name="Fraværstype" scope="public">
         <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Typer frav&amp;#230;r.&#10;&#10;# Referanse&#10;&#10;https://www.udir.no/regelverk-og-tilsyn/skole-og-opplaring/saksbehandling/fravar/fravar-i-videregaende/&#10;&#10;VIS:&#10;https://inschool.zendesk.com/hc/no/articles/360023264091&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_c9f60b4d15aa43dab9" idref="EAID_CLS_c9f60b4d15aa43dab9" xmi:type="uml:Class" type="Class" name="Grepreferanse" scope="public">
         <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Ekstern referanse til Grepkodeverket.&#10;&#10;# Beskrivelse&#10;&#10;Grep er den nasjonale databasen for fag, l&amp;#230;replaner og oppl&amp;#230;ringstilbud i grunnoppl&amp;#230;ringen.&#10;&#10;Referanser til Grepkodeverket skal referere til gyldige og unike koder i REST (JSON) API fra Udir.&#10;&#10;https://www.udir.no/om-udir/data/kl06-grep&#10;&#10;Det er viktig &amp;#229; bruke Grepreferanser og ikke Vigoreferanser.&#10;" stereotype="referanse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Ekstern referanse til Grepkodeverket.&#10;&#10;# Beskrivelse&#10;&#10;Grep er den nasjonale databasen for fag, l&amp;#230;replaner og oppl&amp;#230;ringstilbud i grunnoppl&amp;#230;ringen.&#10;&#10;Referanser til Grepkodeverket skal referere til gyldige og unike koder i REST (JSON) API fra Udir.&#10;&#10;https://www.udir.no/om-udir/data/kl06-grep&#10;&#10;Det er viktig &amp;#229; bruke Grepreferanser og ikke Vigoreferanser. &#10;Bruk data.udir.no , ikke psi.udir.no, eksempelvis https://data.udir.no/kl06/SAL3001 (korrekt), ikke https://psi.udir.no/kl06/SAL3001 (feil).&#10;" stereotype="referanse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_a63adb50e6db0f2347" idref="EAID_CLS_a63adb50e6db0f2347" xmi:type="uml:Class" type="Class" name="Karakterskala" scope="public">
@@ -9150,6 +9647,12 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Inndeling av skoleåret&#10;&#10;# Beskrivelse&#10;&#10;Et skoleår er som hovedregel inndelt i to terminer. Første termin: medio august til medio januar. Andre termin: medio januar til medio juni.&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_8c00232d083f0f1a84" idref="EAID_CLS_8c00232d083f0f1a84" xmi:type="uml:Class" type="Class" name="Tilrettelegging" scope="public">
+        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Tirettelegging en elev kan ha p&amp;#229; eksamen.&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_9be83411188065746c" idref="EAID_CLS_9be83411188065746c" xmi:type="uml:Class" type="Class" name="Vigoreferanse" scope="public">
@@ -9310,6 +9813,34 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <model package2="EAID_PKG_005aa392465e3500f2" ea_eleType="package" package="EAID_PKG_93ea470388b4d82056" />
         <tags />
         </element>
+      <element xmi:idref="EAID_CLS_183d00614805171fd3" idref="EAID_CLS_183d00614805171fd3" xmi:type="uml:Class" type="Class" name="Anmerkninger" scope="public">
+        <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Aanmerkninger for en elev for et elevforhold.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_80e23448f7e0881046" idref="EAID_PRP_80e23448f7e0881046" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Intern identifikator som brukes i kildesystemet.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_a5eb17c92bf29cd980" idref="EAID_PRP_a5eb17c92bf29cd980" name="atferd">
+            <properties type="long" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Antall anmerkninger for atferd for eleven&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_3e87a3fc6e7bd02a8b" idref="EAID_PRP_3e87a3fc6e7bd02a8b" name="orden">
+            <properties type="long" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Antall anmerkninger for orden for eleven&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
       <element xmi:idref="EAID_CLS_befc698f1817a298c1" idref="EAID_CLS_befc698f1817a298c1" xmi:type="uml:Class" type="Class" name="Eksamensgruppe" scope="public">
         <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
         <tags />
@@ -9330,10 +9861,38 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties isAbstract="false" sType="Class" scope="public" documentation="Medlemskap i eksamensgrupper.&#10;&#10;# Beskrivelse&#10;&#10;Gruppemedlemskap som knytter sammen elevforhold og eksamensgrupper.&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
+      <element xmi:idref="EAID_CLS_d070ec2ebf1c6459a5" idref="EAID_CLS_d070ec2ebf1c6459a5" xmi:type="uml:Class" type="Class" name="Fagvurdering" scope="public">
+        <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="true" sType="Class" scope="public" documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i. Det skal ogs&amp;#229; settes relasjon direkte til angjeldende fag.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="abstrakt" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_f69a6924cf9d956b3d" idref="EAID_PRP_f69a6924cf9d956b3d" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Systemidentifikator i fagsystem&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_429c6e065b01671d09" idref="EAID_PRP_429c6e065b01671d09" name="kommentar">
+            <properties type="string" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Kommentar til vurderingen&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_5ce7e7359f20305a7f" idref="EAID_PRP_5ce7e7359f20305a7f" name="vurderingsdato">
+            <properties type="datetime" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Datoen vurderingen er foretatt.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
       <element xmi:idref="EAID_CLS_ebac31792d99fa6926" idref="EAID_CLS_ebac31792d99fa6926" xmi:type="uml:Class" type="Class" name="Fravær" scope="public">
         <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Manglende tilstedeværelse i opplæringen.&#10;&#10;# Beskrivelse&#10;&#10;Fravær føres med relasjon til den undervisningen eleven har vært fraværende fra.  Det må derfor enten være en relasjon til en Undervisningsgruppe eller en Eksamensgruppe.&#10;&#10;# Fraværsgrense &#10;&#10;* Elever i videregående skole skal møte opp og delta aktivt i opplæringen. &#10;* Fravær skal registreres, og det foreligger grenser på hvor mye fravær som tillates før rett til å få halvårsvurdering med karakter eller standpunktkarakter i et fag bortfaller. &#10;* Eleven må legge fram relevant dokumentasjon for å få fravær unntatt fra fraværsgrensen.&#10;* Fraværsgrensen gjelder timefravær i enkeltfag, ikke elevenes totale fravær.&#10;* Eleven skal få et varsel om han eller hun står i fare for å ikke få karakter på grunn av fravær.&#10;&#10;# Referanser&#10;&#10;* UDir Registreringshåndbok: http://regbok.udir.no/35004/3344/35042-1018643.html&#10;* Forskrift til opplæringslova § 3-3, siste ledd: https://lovdata.no/forskrift/2006-06-23-724/§3-3&#10;* Forskrift til opplæringslova § 3-47: https://lovdata.no/forskrift/2006-06-23-724/§3-47&#10;* UDir. Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet, pkt 8: https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/8-fravar/&#10;* SNL. Fravær: https://snl.no/fravær&#10;* Rundskriv Udir-3-2016: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravarsgrense---udir-3-2016/&#10;* UDir. Fravær i videregående skole: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravar-i-videregaende-skole/&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Manglende tilstedev&amp;#230;relse i oppl&amp;#230;ringen.&#10;&#10;# Beskrivelse&#10;&#10;Frav&amp;#230;r f&amp;#248;res med relasjon til den undervisningen eleven har v&amp;#230;rt frav&amp;#230;rende fra.  Det m&amp;#229; derfor v&amp;#230;re en relasjon til en Undervisningsgruppe.&#10;&#10;# Frav&amp;#230;rsgrense &#10;&#10;* Elever i videreg&amp;#229;ende skole skal m&amp;#248;te opp og delta aktivt i oppl&amp;#230;ringen. &#10;* Frav&amp;#230;r skal registreres, og det foreligger grenser p&amp;#229; hvor mye frav&amp;#230;r som tillates f&amp;#248;r rett til &amp;#229; f&amp;#229; halv&amp;#229;rsvurdering med karakter eller standpunktkarakter i et fag bortfaller. &#10;* Eleven m&amp;#229; legge fram relevant dokumentasjon for &amp;#229; f&amp;#229; frav&amp;#230;r unntatt fra frav&amp;#230;rsgrensen.&#10;* Frav&amp;#230;rsgrensen gjelder timefrav&amp;#230;r i enkeltfag, ikke elevenes totale frav&amp;#230;r.&#10;* Eleven skal f&amp;#229; et varsel om han eller hun st&amp;#229;r i fare for &amp;#229; ikke f&amp;#229; karakter p&amp;#229; grunn av frav&amp;#230;r.&#10;&#10;# Frav&amp;#230;r eksamen&#10;Det f&amp;#248;res ikke lenger frav&amp;#230;r p&amp;#229; eksamen. Dette vil bli satt som karakter. Pga dette utg&amp;#229;r relasjonen til eksamensgruppe. Ved en senere hovedoppdatering av Informasjonsmodellen vil multiplisitet for relasjonen  undervisningsgruppe bli satt til 1.&#10;&#10;# Referanser&#10;&#10;* UDir Registreringsh&amp;#229;ndbok: http://regbok.udir.no/35004/3344/35042-1018643.html&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-3, siste ledd: https://lovdata.no/forskrift/2006-06-23-724/&amp;#167;3-3&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-47: https://lovdata.no/forskrift/2006-06-23-724/&amp;#167;3-47&#10;* UDir. F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet, pkt 8: https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/8-fravar/&#10;* SNL. Frav&amp;#230;r: https://snl.no/frav&amp;#230;r&#10;* Rundskriv Udir-3-2016: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravarsgrense---udir-3-2016/&#10;* UDir. Frav&amp;#230;r i videreg&amp;#229;ende skole: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravar-i-videregaende-skole/&#10;" stereotype="hovedklasse" />
         <attributes>
           <attribute xmi:idref="EAID_PRP_5c36282c9eb57248bb" idref="EAID_PRP_5c36282c9eb57248bb" name="systemId">
             <properties type="Identifikator" />
@@ -9347,7 +9906,9 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
             <documentation value="Angir om fraværet er dokumentert eller ikke (ja/nei).&#10;&#10;Hva slags fravær som betraktes som dokumentert følger av [Rundskriv Udir 3-2016](https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravarsgrense---udir-3-2016/).&#10;" />
-            <tags />
+            <tags>
+              <tag name="DEPRECATED" value="Bruk Fraværstype" />
+              </tags>
             </attribute>
           <attribute xmi:idref="EAID_PRP_6705818bc66182b1a5" idref="EAID_PRP_6705818bc66182b1a5" name="føresPåVitnemål">
             <properties type="boolean" />
@@ -9372,16 +9933,138 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             </attribute>
           </attributes>
         </element>
+      <element xmi:idref="EAID_CLS_f5f1953a5017495a18" idref="EAID_CLS_f5f1953a5017495a18" xmi:type="uml:Class" type="Class" name="Fraværsoversikt" scope="public">
+        <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Aggregert frav&amp;#230;rsoversikt for en elev i ett fag.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_ad715e49fd3fa7ee54" idref="EAID_PRP_ad715e49fd3fa7ee54" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="System-id fra kildesystemet&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_7a74212a8dbc440fe7" idref="EAID_PRP_7a74212a8dbc440fe7" name="halvår">
+            <properties type="Fraværsprosent" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Udokumentert frav&amp;#230;r for f&amp;#248;rste halv&amp;#229;r.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_e3a4f745b7b12dc940" idref="EAID_PRP_e3a4f745b7b12dc940" name="skoleår">
+            <properties type="Fraværsprosent" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Udokumentert frav&amp;#230;r for hele skole&amp;#229;ret.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_c4f96e9442f11aa2b2" idref="EAID_CLS_c4f96e9442f11aa2b2" xmi:type="uml:Class" type="Class" name="Fraværsprosent" scope="public">
+        <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Frav&amp;#230;rsdata for en periode.&#10;" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_35770def657906a561" idref="EAID_PRP_35770def657906a561" name="fraværstimer">
+            <properties type="long" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Antall timer udokumentert frav&amp;#230;r. Oppgis i hundredeler.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_a580cdd4a9f8e1e0a7" idref="EAID_PRP_a580cdd4a9f8e1e0a7" name="prosent">
+            <properties type="long" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Udokumentert frav&amp;#230;r i prosent. Oppgis i hundredeler.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_9c83da584e2f209a67" idref="EAID_PRP_9c83da584e2f209a67" name="undervisningstimer">
+            <properties type="long" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Antall timer planlagt undervisning. Oppgis i hundredeler.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_c5804500868c86675d" idref="EAID_CLS_c5804500868c86675d" xmi:type="uml:Class" type="Class" name="Halvårsfagvurdering" scope="public">
+        <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Halv&amp;#229;rsvurdering gis for deltakelse av en elev i en gruppe.&#10;&#10;Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` som vurderingen er foretatt i. Det er ogs&amp;#229; mulig &amp;#229; sette relasjon direkte til angjeldende fag.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_fe0d7f80dece2238c3" idref="EAID_CLS_fe0d7f80dece2238c3" xmi:type="uml:Class" type="Class" name="Halvårsordensvurdering" scope="public">
+        <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Halv&amp;#229;rsvurdering av orden og atferd..&#10;&#10;# Beskrivelse&#10;&#10;Vurderinger av orden og atferd gj&amp;#248;res uten relasjon til noen gruppe, kun til et elevforhold.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
       <element xmi:idref="EAID_CLS_e8d2c6028f4bdc557c" idref="EAID_CLS_e8d2c6028f4bdc557c" xmi:type="uml:Class" type="Class" name="Karakterverdi" scope="public">
         <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Karakterer, målestokk for vurdering av elevers faglige standpunkt, prøve- eller eksamensprestasjoner&#10;&#10;# Beskrivelse&#10;&#10;De enkelte karakterer, som til sammen danner en karakterskala, blir betegnet med tall eller andre symboler.&#10;&#10;Den relaterte skalaen må refereres fra selve verdi.&#10;&#10;# Eksempel&#10;&#10;* 6 - Seks&#10;* IM - Ikke møtt&#10;* GK - Godkjent&#10;* R - Realkompetanse&#10;&#10;# Referanse&#10;&#10;* Vigo Kodeverkdatabase. Karakter: [vigo.no/vigokv/karakter.action](https://www.vigo.no/vigokv/karakter.action)&#10;* SNL. karakterer: [snl.no/karakterer](https://snl.no/karakterer)&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
-      <element xmi:idref="EAID_CLS_83824b46425e766c13" idref="EAID_CLS_83824b46425e766c13" xmi:type="uml:Class" type="Class" name="Vurdering" scope="public">
+      <element xmi:idref="EAID_CLS_4d52cfab59c13879f2" idref="EAID_CLS_4d52cfab59c13879f2" xmi:type="uml:Class" type="Class" name="Ordensvurdering" scope="public">
         <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Vurdering gis for deltakelse av en elev i en gruppe. Dette kan innbære både endelig og foreløpende vurdering.  Dette angis av feltet `endelig`.&#10;&#10;Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i.&#10;&#10;Vurderinger av orden og andre frittstående vurderinger gjøres uten relasjon til noen gruppe.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til opplæringslova § 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#§3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#§3-4)&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="true" sType="Class" scope="public" documentation="Vurdering av orden og atferd..&#10;&#10;# Beskrivelse&#10;&#10;Vurderinger av orden og atferd gj&amp;#248;res uten relasjon til noen gruppe, kun til et elevforhold.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="abstrakt" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_47fdf47de2d7e8c26a" idref="EAID_PRP_47fdf47de2d7e8c26a" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Systemidentifikator i fagsystem&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_95558755ce43e5b59e" idref="EAID_PRP_95558755ce43e5b59e" name="kommentar">
+            <properties type="string" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Kommentar til vurderingen&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_163e2690fc7d20d86f" idref="EAID_PRP_163e2690fc7d20d86f" name="vurderingsdato">
+            <properties type="datetime" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Datoen vurderingen er foretatt.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_587e9da5042c0cd923" idref="EAID_CLS_587e9da5042c0cd923" xmi:type="uml:Class" type="Class" name="Sluttfagvurdering" scope="public">
+        <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Sluttvurdering (Standpunktkarakter) gis for deltakelse av en elev i en gruppe.&#10;&#10;Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i. Det er ogs&amp;#229; mulig &amp;#229; sette relasjon direkte til angjeldende fag.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_805a5c053f8f3e758d" idref="EAID_CLS_805a5c053f8f3e758d" xmi:type="uml:Class" type="Class" name="Sluttordensvurdering" scope="public">
+        <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Sluttvurdering av orden og atferd..&#10;&#10;# Beskrivelse&#10;&#10;Vurderinger av orden og atferd gj&amp;#248;res uten relasjon til noen gruppe, kun til et elevforhold.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_a657a9d80de3896018" idref="EAID_CLS_a657a9d80de3896018" xmi:type="uml:Class" type="Class" name="Underveisfagvurdering" scope="public">
+        <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Underveisvurdering gis for deltakelse av en elev i en gruppe.&#10;&#10;Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` som vurderingen er foretatt i. Det er ogs&amp;#229; mulig &amp;#229; sette relasjon direkte til angjeldende fag.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_05a74c616fb10986c9" idref="EAID_CLS_05a74c616fb10986c9" xmi:type="uml:Class" type="Class" name="Underveisordensvurdering" scope="public">
+        <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Underveisvurdering av orden og atferd..&#10;&#10;# Beskrivelse&#10;&#10;Vurderinger av orden og atferd gj&amp;#248;res uten relasjon til noen gruppe, kun til et elevforhold.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_83824b46425e766c13" idref="EAID_CLS_83824b46425e766c13" xmi:type="uml:Class" type="Class" name="Vurdering" scope="public">
+        <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
+        <tags>
+          <tag name="DEPRECATED" value="Bruk Fagvurdering og Ordensvurdering." />
+          </tags>
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Vurdering gis for deltakelse av en elev i en gruppe. Dette kan v&amp;#230;re Halv&amp;#229;rsvurdering, Standpunktkarakter, underveisvurdering eller annet. &#10;&#10;Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i. Det er ogs&amp;#229; mulig &amp;#229; sette relasjon direkte til angjeldende fag.&#10;&#10;Vurderinger av orden og andre frittst&amp;#229;ende vurderinger gj&amp;#248;res uten relasjon til noen gruppe.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringsh&amp;#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* F&amp;#248;ring av vitnem&amp;#229;l og kompetansebevis for videreg&amp;#229;ende oppl&amp;#230;ring i Kunnskapsl&amp;#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til oppl&amp;#230;ringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
         <attributes>
           <attribute xmi:idref="EAID_PRP_8dfc605179ac569cea" idref="EAID_PRP_8dfc605179ac569cea" name="systemId">
             <properties type="Identifikator" />
@@ -9493,7 +10176,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <model type="Class" name="Person" />
           <role name="foreldre" visibility="Public" />
           <type multiplicity="0..*" />
-          <documentation value="Foreldre til person." />
+          <documentation value="Den/De som har foreldreansvar til personen.&#10;&#10;Dette kan være personens foreldre eller adoptivforeldre." />
           <tags />
           </target>
         <properties ea_type="Association" direction="Bi-Directional" />
@@ -9511,6 +10194,23 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <role name="kjønn" visibility="Public" />
           <type multiplicity="0..1" />
           <documentation value="Kjønn for person.&#10;&#10;# Beskrivelse&#10;&#10;Se beskrivelse av [Kjønn klasse](Class:Kjønn)" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_b5fef73a7ec2f96a22" idref="EAID_ASC_b5fef73a7ec2f96a22" start="EAID_CLS_8548ca6ef4e9f948e9" end="EAID_CLS_731db44765e710208d">
+        <source xmi:idref="EAID_CLS_8548ca6ef4e9f948e9" idref="EAID_CLS_8548ca6ef4e9f948e9">
+          <model type="Class" name="Person" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_731db44765e710208d" idref="EAID_CLS_731db44765e710208d">
+          <model type="Class" name="Kommune" />
+          <role name="kommune" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Kommune hvor personen er bosatt" />
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
@@ -9544,7 +10244,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <model type="Class" name="Språk" />
           <role name="målform" visibility="Public" />
           <type multiplicity="0..1" />
-          <documentation value="Språkform som denne personen foretrekker å bruke (i utgangspunktet - nynork, bokmål eller samisk)." />
+          <documentation value="Målform som denne personen foretrekker å bruke (eksempelvis nynorsk, bokmål eller samisk)." />
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
@@ -12936,6 +13636,40 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_1393cad8de7009e272" idref="EAID_ASC_1393cad8de7009e272" start="EAID_CLS_9be72467d299d27d2a" end="EAID_CLS_183d00614805171fd3">
+        <source xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
+          <model type="Class" name="Elevforhold" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_183d00614805171fd3" idref="EAID_CLS_183d00614805171fd3">
+          <model type="Class" name="Anmerkninger" />
+          <role name="anmerkninger" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Anmerkningene i elevforholdet." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_ccee53e9c8098ee15d" idref="EAID_ASC_ccee53e9c8098ee15d" start="EAID_CLS_9be72467d299d27d2a" end="EAID_CLS_d8c10b1c582791aca9">
+        <source xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
+          <model type="Class" name="Elevforhold" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_d8c10b1c582791aca9" idref="EAID_CLS_d8c10b1c582791aca9">
+          <model type="Class" name="Avbruddsårsak" />
+          <role name="avbruddsårsak" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Årsak til avbrudd av elevforholdet." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_1e9eea3851714be968" idref="EAID_ASC_1e9eea3851714be968" start="EAID_CLS_9be72467d299d27d2a" end="EAID_CLS_389b7cf67bad56a453">
         <source xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
           <model type="Class" name="Elevforhold" />
@@ -12988,6 +13722,40 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_7e26ba7b92c847dc04" idref="EAID_ASC_7e26ba7b92c847dc04" start="EAID_CLS_9be72467d299d27d2a" end="EAID_CLS_31260c62481059007c">
+        <source xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
+          <model type="Class" name="Elevforhold" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_31260c62481059007c" idref="EAID_CLS_31260c62481059007c">
+          <model type="Class" name="Fagmerknad" />
+          <role name="kroppsøving" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Viser hvilken type fritak eleven har i kroppsøving" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_e7c222a05474f107c4" idref="EAID_ASC_e7c222a05474f107c4" start="EAID_CLS_9be72467d299d27d2a" end="EAID_CLS_31260c62481059007c">
+        <source xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
+          <model type="Class" name="Elevforhold" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_31260c62481059007c" idref="EAID_CLS_31260c62481059007c">
+          <model type="Class" name="Fagmerknad" />
+          <role name="sidemål" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Hvilke typer fritak eleven har i sidemål." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_c7369ae022a2f78fee" idref="EAID_ASC_c7369ae022a2f78fee" start="EAID_CLS_9be72467d299d27d2a" end="EAID_CLS_64e904f2ebf8b9f538">
         <source xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
           <model type="Class" name="Elevforhold" />
@@ -13004,6 +13772,58 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <tags />
           </target>
         <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_4a333809004cd6c920" idref="EAID_ASC_4a333809004cd6c920" start="EAID_CLS_0bfa16ef8891939d13" end="EAID_CLS_9be72467d299d27d2a">
+        <source xmi:idref="EAID_CLS_0bfa16ef8891939d13" idref="EAID_CLS_0bfa16ef8891939d13">
+          <model type="Class" name="Elevtilrettelegging" />
+          <role visibility="Public" name="tilrettelegging" />
+          <type multiplicity="0..*" />
+          <documentation value="Tilrettelegginger for eleven." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
+          <model type="Class" name="Elevforhold" />
+          <role name="elev" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Eleven det skal tilrettelegges for." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_7fbecce61ab8f134c2" idref="EAID_ASC_7fbecce61ab8f134c2" start="EAID_CLS_0bfa16ef8891939d13" end="EAID_CLS_e92c2079bc89c6d11a">
+        <source xmi:idref="EAID_CLS_0bfa16ef8891939d13" idref="EAID_CLS_0bfa16ef8891939d13">
+          <model type="Class" name="Elevtilrettelegging" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_e92c2079bc89c6d11a" idref="EAID_CLS_e92c2079bc89c6d11a">
+          <model type="Class" name="Fag" />
+          <role name="fag" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Faget tilretteleggingen gjelder for." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_f5f2fa7147ddf14998" idref="EAID_ASC_f5f2fa7147ddf14998" start="EAID_CLS_0bfa16ef8891939d13" end="EAID_CLS_8c00232d083f0f1a84">
+        <source xmi:idref="EAID_CLS_0bfa16ef8891939d13" idref="EAID_CLS_0bfa16ef8891939d13">
+          <model type="Class" name="Elevtilrettelegging" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_8c00232d083f0f1a84" idref="EAID_CLS_8c00232d083f0f1a84">
+          <model type="Class" name="Tilrettelegging" />
+          <role name="tilrettelegging" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Angir hvilken tilrettelegging som skal gis." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_2876ab3f7ad9d58184" idref="EAID_GEN_2876ab3f7ad9d58184" start="EAID_CLS_11abbdc19270478625" end="EAID_CLS_a62447c9dd60a973b1">
@@ -13406,6 +14226,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <model type="Class" name="Persongruppemedlemskap" />
           <role visibility="Public" name="persongruppemedlemskap" />
           <type multiplicity="0..*" />
+          <documentation value="Persongruppemedlemskapene til et elevforhold." />
           <tags />
           </source>
         <target xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
@@ -13631,9 +14452,41 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_af0243aae03a89e7d0" idref="EAID_GEN_af0243aae03a89e7d0" start="EAID_CLS_d8c10b1c582791aca9" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_d8c10b1c582791aca9" idref="EAID_CLS_d8c10b1c582791aca9">
+          <model type="Class" name="Avbruddsårsak" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_f274442bb3f08f4c22" idref="EAID_GEN_f274442bb3f08f4c22" start="EAID_CLS_20ee2391e13a5e2da9" end="EAID_CLS_3385458244847ec7db">
         <source xmi:idref="EAID_CLS_20ee2391e13a5e2da9" idref="EAID_CLS_20ee2391e13a5e2da9">
           <model type="Class" name="Elevkategori" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_61a1891a729663f73b" idref="EAID_GEN_61a1891a729663f73b" start="EAID_CLS_31260c62481059007c" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_31260c62481059007c" idref="EAID_CLS_31260c62481059007c">
+          <model type="Class" name="Fagmerknad" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -13731,6 +14584,22 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_dc81664f4e2d9c9fdd" idref="EAID_GEN_dc81664f4e2d9c9fdd" start="EAID_CLS_aad6ed1e0d9928ed93" end="EAID_CLS_3385458244847ec7db">
         <source xmi:idref="EAID_CLS_aad6ed1e0d9928ed93" idref="EAID_CLS_aad6ed1e0d9928ed93">
           <model type="Class" name="Termin" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_247d8fb6758a34cdf6" idref="EAID_GEN_247d8fb6758a34cdf6" start="EAID_CLS_8c00232d083f0f1a84" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_8c00232d083f0f1a84" idref="EAID_CLS_8c00232d083f0f1a84">
+          <model type="Class" name="Tilrettelegging" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -14228,6 +15097,23 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_24d710f9aa1a624b3f" idref="EAID_ASC_24d710f9aa1a624b3f" start="EAID_CLS_183d00614805171fd3" end="EAID_CLS_8cd72252caa5382d06">
+        <source xmi:idref="EAID_CLS_183d00614805171fd3" idref="EAID_CLS_183d00614805171fd3">
+          <model type="Class" name="Anmerkninger" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_8cd72252caa5382d06" idref="EAID_CLS_8cd72252caa5382d06">
+          <model type="Class" name="Skoleår" />
+          <role name="skoleår" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Hvilket skoleår anmerkningene gjelder." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_f3053e312270f2e9f7" idref="EAID_GEN_f3053e312270f2e9f7" start="EAID_CLS_befc698f1817a298c1" end="EAID_CLS_a62447c9dd60a973b1">
         <source xmi:idref="EAID_CLS_befc698f1817a298c1" idref="EAID_CLS_befc698f1817a298c1">
           <model type="Class" name="Eksamensgruppe" />
@@ -14384,6 +15270,74 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_2c61814721a3cc289f" idref="EAID_ASC_2c61814721a3cc289f" start="EAID_CLS_d070ec2ebf1c6459a5" end="EAID_CLS_e92c2079bc89c6d11a">
+        <source xmi:idref="EAID_CLS_d070ec2ebf1c6459a5" idref="EAID_CLS_d070ec2ebf1c6459a5">
+          <model type="Class" name="Fagvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_e92c2079bc89c6d11a" idref="EAID_CLS_e92c2079bc89c6d11a">
+          <model type="Class" name="Fag" />
+          <role name="fag" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Faget det er foretatt vurdering i." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_26466364f93dd5e55f" idref="EAID_ASC_26466364f93dd5e55f" start="EAID_CLS_d070ec2ebf1c6459a5" end="EAID_CLS_e8d2c6028f4bdc557c">
+        <source xmi:idref="EAID_CLS_d070ec2ebf1c6459a5" idref="EAID_CLS_d070ec2ebf1c6459a5">
+          <model type="Class" name="Fagvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_e8d2c6028f4bdc557c" idref="EAID_CLS_e8d2c6028f4bdc557c">
+          <model type="Class" name="Karakterverdi" />
+          <role name="karakter" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Det aktuelle karakteren som er tildelt" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_cf43cd008637cbf913" idref="EAID_ASC_cf43cd008637cbf913" start="EAID_CLS_d070ec2ebf1c6459a5" end="EAID_CLS_8cd72252caa5382d06">
+        <source xmi:idref="EAID_CLS_d070ec2ebf1c6459a5" idref="EAID_CLS_d070ec2ebf1c6459a5">
+          <model type="Class" name="Fagvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_8cd72252caa5382d06" idref="EAID_CLS_8cd72252caa5382d06">
+          <model type="Class" name="Skoleår" />
+          <role name="skoleår" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Skoleåret vurderingen er fra." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_44f17b5274f9d42de6" idref="EAID_ASC_44f17b5274f9d42de6" start="EAID_CLS_d070ec2ebf1c6459a5" end="EAID_CLS_d404ea07009fe8b767">
+        <source xmi:idref="EAID_CLS_d070ec2ebf1c6459a5" idref="EAID_CLS_d070ec2ebf1c6459a5">
+          <model type="Class" name="Fagvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_d404ea07009fe8b767" idref="EAID_CLS_d404ea07009fe8b767">
+          <model type="Class" name="Undervisningsgruppe" />
+          <role name="undervisningsgruppe" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Undervisningsgruppe vurderingen er foretatt i." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_a6384da98f575dd300" idref="EAID_ASC_a6384da98f575dd300" start="EAID_CLS_ebac31792d99fa6926" end="EAID_CLS_befc698f1817a298c1">
         <source xmi:idref="EAID_CLS_ebac31792d99fa6926" idref="EAID_CLS_ebac31792d99fa6926">
           <model type="Class" name="Fravær" />
@@ -14436,6 +15390,23 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_ad1d4e1fb8e136740c" idref="EAID_ASC_ad1d4e1fb8e136740c" start="EAID_CLS_ebac31792d99fa6926" end="EAID_CLS_1effd1cacfa57a62ad">
+        <source xmi:idref="EAID_CLS_ebac31792d99fa6926" idref="EAID_CLS_ebac31792d99fa6926">
+          <model type="Class" name="Fravær" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_1effd1cacfa57a62ad" idref="EAID_CLS_1effd1cacfa57a62ad">
+          <model type="Class" name="Skoleressurs" />
+          <role name="registrertav" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Den som har registrert fraværet." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_2852921ca636725553" idref="EAID_ASC_2852921ca636725553" start="EAID_CLS_ebac31792d99fa6926" end="EAID_CLS_d404ea07009fe8b767">
         <source xmi:idref="EAID_CLS_ebac31792d99fa6926" idref="EAID_CLS_ebac31792d99fa6926">
           <model type="Class" name="Fravær" />
@@ -14451,6 +15422,109 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_1087d73729b00b1e45" idref="EAID_ASC_1087d73729b00b1e45" start="EAID_CLS_f5f1953a5017495a18" end="EAID_CLS_9be72467d299d27d2a">
+        <source xmi:idref="EAID_CLS_f5f1953a5017495a18" idref="EAID_CLS_f5f1953a5017495a18">
+          <model type="Class" name="Fraværsoversikt" />
+          <role visibility="Public" name="elevfravær" />
+          <type multiplicity="0..*" />
+          <documentation value="Fraværsoversikt for elevforholdet" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
+          <model type="Class" name="Elevforhold" />
+          <role name="elevforhold" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Elevforholdet fraværsoversikten gjelder for." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_1091c2f7b7e564b05d" idref="EAID_ASC_1091c2f7b7e564b05d" start="EAID_CLS_f5f1953a5017495a18" end="EAID_CLS_e92c2079bc89c6d11a">
+        <source xmi:idref="EAID_CLS_f5f1953a5017495a18" idref="EAID_CLS_f5f1953a5017495a18">
+          <model type="Class" name="Fraværsoversikt" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_e92c2079bc89c6d11a" idref="EAID_CLS_e92c2079bc89c6d11a">
+          <model type="Class" name="Fag" />
+          <role name="fag" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Faget fraværet er knyttet til" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_c2642c87ed70ef2d63" idref="EAID_GEN_c2642c87ed70ef2d63" start="EAID_CLS_c5804500868c86675d" end="EAID_CLS_d070ec2ebf1c6459a5">
+        <source xmi:idref="EAID_CLS_c5804500868c86675d" idref="EAID_CLS_c5804500868c86675d">
+          <model type="Class" name="Halvårsfagvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_d070ec2ebf1c6459a5" idref="EAID_CLS_d070ec2ebf1c6459a5">
+          <model type="Class" name="Fagvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_d2b6a69161af8ea438" idref="EAID_ASC_d2b6a69161af8ea438" start="EAID_CLS_c5804500868c86675d" end="EAID_CLS_9be72467d299d27d2a">
+        <source xmi:idref="EAID_CLS_c5804500868c86675d" idref="EAID_CLS_c5804500868c86675d">
+          <model type="Class" name="Halvårsfagvurdering" />
+          <role visibility="Public" name="halvårsfagvurdering" />
+          <type multiplicity="0..*" />
+          <documentation value="Halvårsvurdering i fag for eleven" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
+          <model type="Class" name="Elevforhold" />
+          <role name="elevforhold" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Elevforholdet vurderingen gjelder." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_79bf4dda2727b35f2f" idref="EAID_GEN_79bf4dda2727b35f2f" start="EAID_CLS_fe0d7f80dece2238c3" end="EAID_CLS_4d52cfab59c13879f2">
+        <source xmi:idref="EAID_CLS_fe0d7f80dece2238c3" idref="EAID_CLS_fe0d7f80dece2238c3">
+          <model type="Class" name="Halvårsordensvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_4d52cfab59c13879f2" idref="EAID_CLS_4d52cfab59c13879f2">
+          <model type="Class" name="Ordensvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_fa12bef9e9d2a9f987" idref="EAID_ASC_fa12bef9e9d2a9f987" start="EAID_CLS_fe0d7f80dece2238c3" end="EAID_CLS_9be72467d299d27d2a">
+        <source xmi:idref="EAID_CLS_fe0d7f80dece2238c3" idref="EAID_CLS_fe0d7f80dece2238c3">
+          <model type="Class" name="Halvårsordensvurdering" />
+          <role visibility="Public" name="halvårsordensvurdering" />
+          <type multiplicity="0..*" />
+          <documentation value="Halvårsvurdering av orden og atferd for eleven." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
+          <model type="Class" name="Elevforhold" />
+          <role name="elevforhold" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Elevforholdet vurderingen gjelder." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_098ff3fff097810f4b" idref="EAID_GEN_098ff3fff097810f4b" start="EAID_CLS_e8d2c6028f4bdc557c" end="EAID_CLS_3385458244847ec7db">
@@ -14487,6 +15561,210 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_e30f23c9dd5249d9f3" idref="EAID_ASC_e30f23c9dd5249d9f3" start="EAID_CLS_4d52cfab59c13879f2" end="EAID_CLS_e8d2c6028f4bdc557c">
+        <source xmi:idref="EAID_CLS_4d52cfab59c13879f2" idref="EAID_CLS_4d52cfab59c13879f2">
+          <model type="Class" name="Ordensvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_e8d2c6028f4bdc557c" idref="EAID_CLS_e8d2c6028f4bdc557c">
+          <model type="Class" name="Karakterverdi" />
+          <role name="atferd" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Det aktuelle karakteren som er tildelt i atferd" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_97de346639aa8c653c" idref="EAID_ASC_97de346639aa8c653c" start="EAID_CLS_4d52cfab59c13879f2" end="EAID_CLS_e8d2c6028f4bdc557c">
+        <source xmi:idref="EAID_CLS_4d52cfab59c13879f2" idref="EAID_CLS_4d52cfab59c13879f2">
+          <model type="Class" name="Ordensvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_e8d2c6028f4bdc557c" idref="EAID_CLS_e8d2c6028f4bdc557c">
+          <model type="Class" name="Karakterverdi" />
+          <role name="orden" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Det aktuelle karakteren som er tildelt i orden" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_957379e13afe375f3b" idref="EAID_ASC_957379e13afe375f3b" start="EAID_CLS_4d52cfab59c13879f2" end="EAID_CLS_8cd72252caa5382d06">
+        <source xmi:idref="EAID_CLS_4d52cfab59c13879f2" idref="EAID_CLS_4d52cfab59c13879f2">
+          <model type="Class" name="Ordensvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_8cd72252caa5382d06" idref="EAID_CLS_8cd72252caa5382d06">
+          <model type="Class" name="Skoleår" />
+          <role name="skoleår" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Skoleåret vurderingen gjelder for." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_e54b71761f9de8f370" idref="EAID_GEN_e54b71761f9de8f370" start="EAID_CLS_587e9da5042c0cd923" end="EAID_CLS_d070ec2ebf1c6459a5">
+        <source xmi:idref="EAID_CLS_587e9da5042c0cd923" idref="EAID_CLS_587e9da5042c0cd923">
+          <model type="Class" name="Sluttfagvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_d070ec2ebf1c6459a5" idref="EAID_CLS_d070ec2ebf1c6459a5">
+          <model type="Class" name="Fagvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_f688dba609ae1e7caf" idref="EAID_ASC_f688dba609ae1e7caf" start="EAID_CLS_587e9da5042c0cd923" end="EAID_CLS_befc698f1817a298c1">
+        <source xmi:idref="EAID_CLS_587e9da5042c0cd923" idref="EAID_CLS_587e9da5042c0cd923">
+          <model type="Class" name="Sluttfagvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_befc698f1817a298c1" idref="EAID_CLS_befc698f1817a298c1">
+          <model type="Class" name="Eksamensgruppe" />
+          <role name="eksamensgruppe" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Eksamensgruppe vurderingen er foretatt i." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_36455e7e629e5ddc9e" idref="EAID_ASC_36455e7e629e5ddc9e" start="EAID_CLS_587e9da5042c0cd923" end="EAID_CLS_9be72467d299d27d2a">
+        <source xmi:idref="EAID_CLS_587e9da5042c0cd923" idref="EAID_CLS_587e9da5042c0cd923">
+          <model type="Class" name="Sluttfagvurdering" />
+          <role visibility="Public" name="sluttfagvurdering" />
+          <type multiplicity="0..*" />
+          <documentation value="Sluttvurdering i fag for eleven" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
+          <model type="Class" name="Elevforhold" />
+          <role name="elevforhold" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Elevforholdet vurderingen gjelder." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_c2cbf8c7d1abfcd471" idref="EAID_GEN_c2cbf8c7d1abfcd471" start="EAID_CLS_805a5c053f8f3e758d" end="EAID_CLS_4d52cfab59c13879f2">
+        <source xmi:idref="EAID_CLS_805a5c053f8f3e758d" idref="EAID_CLS_805a5c053f8f3e758d">
+          <model type="Class" name="Sluttordensvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_4d52cfab59c13879f2" idref="EAID_CLS_4d52cfab59c13879f2">
+          <model type="Class" name="Ordensvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_2ffd160d41cf12a72a" idref="EAID_ASC_2ffd160d41cf12a72a" start="EAID_CLS_805a5c053f8f3e758d" end="EAID_CLS_9be72467d299d27d2a">
+        <source xmi:idref="EAID_CLS_805a5c053f8f3e758d" idref="EAID_CLS_805a5c053f8f3e758d">
+          <model type="Class" name="Sluttordensvurdering" />
+          <role visibility="Public" name="sluttordensvurdering" />
+          <type multiplicity="0..*" />
+          <documentation value="Sluttvurdering av orden og atferd for eleven" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
+          <model type="Class" name="Elevforhold" />
+          <role name="elevforhold" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Elevforholdet vurderingen gjelder." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_3d0db48bdf0b9e30df" idref="EAID_GEN_3d0db48bdf0b9e30df" start="EAID_CLS_a657a9d80de3896018" end="EAID_CLS_d070ec2ebf1c6459a5">
+        <source xmi:idref="EAID_CLS_a657a9d80de3896018" idref="EAID_CLS_a657a9d80de3896018">
+          <model type="Class" name="Underveisfagvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_d070ec2ebf1c6459a5" idref="EAID_CLS_d070ec2ebf1c6459a5">
+          <model type="Class" name="Fagvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_ee7b0b29930a982ba8" idref="EAID_ASC_ee7b0b29930a982ba8" start="EAID_CLS_a657a9d80de3896018" end="EAID_CLS_9be72467d299d27d2a">
+        <source xmi:idref="EAID_CLS_a657a9d80de3896018" idref="EAID_CLS_a657a9d80de3896018">
+          <model type="Class" name="Underveisfagvurdering" />
+          <role visibility="Public" name="underveisfagvurdering" />
+          <type multiplicity="0..*" />
+          <documentation value="Underveisvurdering i fag for eleven" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
+          <model type="Class" name="Elevforhold" />
+          <role name="elevforhold" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Elevforholdet vurderingen gjelder." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_89513afc7e2d47d590" idref="EAID_GEN_89513afc7e2d47d590" start="EAID_CLS_05a74c616fb10986c9" end="EAID_CLS_4d52cfab59c13879f2">
+        <source xmi:idref="EAID_CLS_05a74c616fb10986c9" idref="EAID_CLS_05a74c616fb10986c9">
+          <model type="Class" name="Underveisordensvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_4d52cfab59c13879f2" idref="EAID_CLS_4d52cfab59c13879f2">
+          <model type="Class" name="Ordensvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_22bd8a1fb5e8b806ef" idref="EAID_ASC_22bd8a1fb5e8b806ef" start="EAID_CLS_05a74c616fb10986c9" end="EAID_CLS_9be72467d299d27d2a">
+        <source xmi:idref="EAID_CLS_05a74c616fb10986c9" idref="EAID_CLS_05a74c616fb10986c9">
+          <model type="Class" name="Underveisordensvurdering" />
+          <role visibility="Public" name="underveisordensvurdering" />
+          <type multiplicity="0..*" />
+          <documentation value="Underveisvurdering av orden og atferd for eleven." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
+          <model type="Class" name="Elevforhold" />
+          <role name="elevforhold" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Elevforholdet vurderingen gjelder." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_61a6e3fe6586a31cd5" idref="EAID_ASC_61a6e3fe6586a31cd5" start="EAID_CLS_83824b46425e766c13" end="EAID_CLS_befc698f1817a298c1">
         <source xmi:idref="EAID_CLS_83824b46425e766c13" idref="EAID_CLS_83824b46425e766c13">
           <model type="Class" name="Vurdering" />
@@ -14515,11 +15793,28 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <target xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
           <model type="Class" name="Elevforhold" />
           <role name="elevforhold" visibility="Public" />
-          <type multiplicity="1" />
+          <type multiplicity="0..1" />
           <documentation value="Elevforhold som er vurdert." />
           <tags />
           </target>
         <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_2e1f2226162dc58835" idref="EAID_ASC_2e1f2226162dc58835" start="EAID_CLS_83824b46425e766c13" end="EAID_CLS_e92c2079bc89c6d11a">
+        <source xmi:idref="EAID_CLS_83824b46425e766c13" idref="EAID_CLS_83824b46425e766c13">
+          <model type="Class" name="Vurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_e92c2079bc89c6d11a" idref="EAID_CLS_e92c2079bc89c6d11a">
+          <model type="Class" name="Fag" />
+          <role name="fag" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Hvilket fag vurderingen gjelder" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_2d92ab40e0758689a2" idref="EAID_ASC_2d92ab40e0758689a2" start="EAID_CLS_83824b46425e766c13" end="EAID_CLS_e8d2c6028f4bdc557c">

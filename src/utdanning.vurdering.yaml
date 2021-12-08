@@ -13,6 +13,30 @@ imports:
 
 classes:
 
+  Anmerkninger:
+    description: |
+      Aanmerkninger for en elev for et elevforhold.
+    attributes:
+      systemId:
+        range: Identifikator
+        description: |
+          Intern identifikator som brukes i kildesystemet.
+        required: true
+      atferd:
+        range: integer
+        description: |
+          Antall anmerkninger for atferd for eleven
+        required: true
+      orden:
+        range: integer
+        description: |
+          Antall anmerkninger for orden for eleven
+        required: true
+      skoleår:
+        range: Skoleår
+        description: |
+          Hvilket skoleår anmerkningene gjelder.
+
   Eksamensgruppe:
     description: |
       Gruppering av elever som tar samme eksamen 
@@ -109,31 +133,83 @@ classes:
           Elevforhold et eksamensgruppemedlemskap tilhører.
         required: true
 
-  Fravær:
+  Fagvurdering:
     description: |
-      Manglende tilstedeværelse i opplæringen.
+      Karakterer og andre vurderingsuttrykk.
       
       # Beskrivelse
       
-      Fravær føres med relasjon til den undervisningen eleven har vært fraværende fra.  Det må derfor enten være en relasjon til en Undervisningsgruppe eller en Eksamensgruppe.
-      
-      # Fraværsgrense 
-      
-      * Elever i videregående skole skal møte opp og delta aktivt i opplæringen. 
-      * Fravær skal registreres, og det foreligger grenser på hvor mye fravær som tillates før rett til å få halvårsvurdering med karakter eller standpunktkarakter i et fag bortfaller. 
-      * Eleven må legge fram relevant dokumentasjon for å få fravær unntatt fra fraværsgrensen.
-      * Fraværsgrensen gjelder timefravær i enkeltfag, ikke elevenes totale fravær.
-      * Eleven skal få et varsel om han eller hun står i fare for å ikke få karakter på grunn av fravær.
+      Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i. Det skal ogs&#229; settes relasjon direkte til angjeldende fag.
       
       # Referanser
       
-      * UDir Registreringshåndbok: http://regbok.udir.no/35004/3344/35042-1018643.html
-      * Forskrift til opplæringslova § 3-3, siste ledd: https://lovdata.no/forskrift/2006-06-23-724/§3-3
-      * Forskrift til opplæringslova § 3-47: https://lovdata.no/forskrift/2006-06-23-724/§3-47
-      * UDir. Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet, pkt 8: https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/8-fravar/
-      * SNL. Fravær: https://snl.no/fravær
+      * UDir. Registreringsh&#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+      * F&#248;ring av vitnem&#229;l og kompetansebevis for videreg&#229;ende oppl&#230;ring i Kunnskapsl&#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+      * Forskrift til oppl&#230;ringslova &#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&#167;3-4)
+    abstract: true
+    attributes:
+      systemId:
+        range: Identifikator
+        description: |
+          Systemidentifikator i fagsystem
+        required: true
+      kommentar:
+        range: string
+        description: |
+          Kommentar til vurderingen
+        required: true
+      vurderingsdato:
+        range: datetime
+        description: |
+          Datoen vurderingen er foretatt.
+        required: true
+      fag:
+        range: Fag
+        description: |
+          Faget det er foretatt vurdering i.
+        required: true
+      karakter:
+        range: Karakterverdi
+        description: |
+          Det aktuelle karakteren som er tildelt
+        required: true
+      skoleår:
+        range: Skoleår
+        description: |
+          Skoleåret vurderingen er fra.
+      undervisningsgruppe:
+        range: Undervisningsgruppe
+        description: |
+          Undervisningsgruppe vurderingen er foretatt i.
+
+  Fravær:
+    description: |
+      Manglende tilstedev&#230;relse i oppl&#230;ringen.
+      
+      # Beskrivelse
+      
+      Frav&#230;r f&#248;res med relasjon til den undervisningen eleven har v&#230;rt frav&#230;rende fra.  Det m&#229; derfor v&#230;re en relasjon til en Undervisningsgruppe.
+      
+      # Frav&#230;rsgrense 
+      
+      * Elever i videreg&#229;ende skole skal m&#248;te opp og delta aktivt i oppl&#230;ringen. 
+      * Frav&#230;r skal registreres, og det foreligger grenser p&#229; hvor mye frav&#230;r som tillates f&#248;r rett til &#229; f&#229; halv&#229;rsvurdering med karakter eller standpunktkarakter i et fag bortfaller. 
+      * Eleven m&#229; legge fram relevant dokumentasjon for &#229; f&#229; frav&#230;r unntatt fra frav&#230;rsgrensen.
+      * Frav&#230;rsgrensen gjelder timefrav&#230;r i enkeltfag, ikke elevenes totale frav&#230;r.
+      * Eleven skal f&#229; et varsel om han eller hun st&#229;r i fare for &#229; ikke f&#229; karakter p&#229; grunn av frav&#230;r.
+      
+      # Frav&#230;r eksamen
+      Det f&#248;res ikke lenger frav&#230;r p&#229; eksamen. Dette vil bli satt som karakter. Pga dette utg&#229;r relasjonen til eksamensgruppe. Ved en senere hovedoppdatering av Informasjonsmodellen vil multiplisitet for relasjonen  undervisningsgruppe bli satt til 1.
+      
+      # Referanser
+      
+      * UDir Registreringsh&#229;ndbok: http://regbok.udir.no/35004/3344/35042-1018643.html
+      * Forskrift til oppl&#230;ringslova &#167; 3-3, siste ledd: https://lovdata.no/forskrift/2006-06-23-724/&#167;3-3
+      * Forskrift til oppl&#230;ringslova &#167; 3-47: https://lovdata.no/forskrift/2006-06-23-724/&#167;3-47
+      * UDir. F&#248;ring av vitnem&#229;l og kompetansebevis for videreg&#229;ende oppl&#230;ring i Kunnskapsl&#248;ftet, pkt 8: https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/8-fravar/
+      * SNL. Frav&#230;r: https://snl.no/frav&#230;r
       * Rundskriv Udir-3-2016: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravarsgrense---udir-3-2016/
-      * UDir. Fravær i videregående skole: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravar-i-videregaende-skole/
+      * UDir. Frav&#230;r i videreg&#229;ende skole: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravar-i-videregaende-skole/
     attributes:
       systemId:
         range: Identifikator
@@ -146,6 +222,7 @@ classes:
           Angir om fraværet er dokumentert eller ikke (ja/nei).
           
           Hva slags fravær som betraktes som dokumentert følger av [Rundskriv Udir 3-2016](https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravarsgrense---udir-3-2016/).
+        deprecated: "Bruk Fraværstype"
         required: true
       føresPåVitnemål:
         range: boolean
@@ -170,6 +247,7 @@ classes:
         range: Eksamensgruppe
         description: |
           Eksamensgruppe det er registrert fravær fra.
+        deprecated: "Fravær ved eksamen settes som vurdering/karakter"
       elevforhold:
         range: Elevforhold
         inverse: fravær
@@ -183,10 +261,117 @@ classes:
         description: |
           Type fravær.
         required: true
+      registrertav:
+        range: Skoleressurs
+        description: |
+          Den som har registrert fraværet.
       undervisningsgruppe:
         range: Undervisningsgruppe
         description: |
           Undervisningsgruppe det er registrert fravær fra.
+
+  Fraværsoversikt:
+    description: |
+      Aggregert frav&#230;rsoversikt for en elev i ett fag.
+    attributes:
+      systemId:
+        range: Identifikator
+        description: |
+          System-id fra kildesystemet
+        required: true
+      halvår:
+        range: Fraværsprosent
+        description: |
+          Udokumentert frav&#230;r for f&#248;rste halv&#229;r.
+        required: true
+      skoleår:
+        range: Fraværsprosent
+        description: |
+          Udokumentert frav&#230;r for hele skole&#229;ret.
+        required: true
+      elevforhold:
+        range: Elevforhold
+        inverse: elevfravær
+        annotations:
+          primaryRelation: true
+        description: |
+          Elevforholdet fraværsoversikten gjelder for.
+        required: true
+      fag:
+        range: Fag
+        description: |
+          Faget fraværet er knyttet til
+        required: true
+
+  Fraværsprosent:
+    description: |
+      Frav&#230;rsdata for en periode.
+    attributes:
+      fraværstimer:
+        range: integer
+        description: |
+          Antall timer udokumentert frav&#230;r. Oppgis i hundredeler.
+        required: true
+      prosent:
+        range: integer
+        description: |
+          Udokumentert frav&#230;r i prosent. Oppgis i hundredeler.
+        required: true
+      undervisningstimer:
+        range: integer
+        description: |
+          Antall timer planlagt undervisning. Oppgis i hundredeler.
+        required: true
+
+  Halvårsfagvurdering:
+    description: |
+      Karakterer og andre vurderingsuttrykk.
+      
+      # Beskrivelse
+      
+      Halv&#229;rsvurdering gis for deltakelse av en elev i en gruppe.
+      
+      Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` som vurderingen er foretatt i. Det er ogs&#229; mulig &#229; sette relasjon direkte til angjeldende fag.
+      
+      # Referanser
+      
+      * UDir. Registreringsh&#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+      * F&#248;ring av vitnem&#229;l og kompetansebevis for videreg&#229;ende oppl&#230;ring i Kunnskapsl&#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+      * Forskrift til oppl&#230;ringslova &#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&#167;3-4)
+    is_a: Fagvurdering
+    attributes:
+      elevforhold:
+        range: Elevforhold
+        inverse: halvårsfagvurdering
+        annotations:
+          primaryRelation: true
+        description: |
+          Elevforholdet vurderingen gjelder.
+        required: true
+
+  Halvårsordensvurdering:
+    description: |
+      Halv&#229;rsvurdering av orden og atferd..
+      
+      # Beskrivelse
+      
+      Vurderinger av orden og atferd gj&#248;res uten relasjon til noen gruppe, kun til et elevforhold.
+      
+      # Referanser
+      
+      * UDir. Registreringsh&#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+      * F&#248;ring av vitnem&#229;l og kompetansebevis for videreg&#229;ende oppl&#230;ring i Kunnskapsl&#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+      * Forskrift til oppl&#230;ringslova &#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&#167;3-4)
+    is_a: Ordensvurdering
+    attributes:
+      elevforhold:
+        range: Elevforhold
+        inverse: halvårsordensvurdering
+        annotations:
+          primaryRelation: true
+        description: |
+          Elevforholdet vurderingen gjelder.
+        required: true
 
   Karakterverdi:
     description: |
@@ -224,23 +409,173 @@ classes:
           * 5 er definer på Tall skala
         required: true
 
+  Ordensvurdering:
+    description: |
+      Vurdering av orden og atferd..
+      
+      # Beskrivelse
+      
+      Vurderinger av orden og atferd gj&#248;res uten relasjon til noen gruppe, kun til et elevforhold.
+      
+      # Referanser
+      
+      * UDir. Registreringsh&#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+      * F&#248;ring av vitnem&#229;l og kompetansebevis for videreg&#229;ende oppl&#230;ring i Kunnskapsl&#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+      * Forskrift til oppl&#230;ringslova &#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&#167;3-4)
+    abstract: true
+    attributes:
+      systemId:
+        range: Identifikator
+        description: |
+          Systemidentifikator i fagsystem
+        required: true
+      kommentar:
+        range: string
+        description: |
+          Kommentar til vurderingen
+        required: true
+      vurderingsdato:
+        range: datetime
+        description: |
+          Datoen vurderingen er foretatt.
+        required: true
+      atferd:
+        range: Karakterverdi
+        description: |
+          Det aktuelle karakteren som er tildelt i atferd
+        required: true
+      orden:
+        range: Karakterverdi
+        description: |
+          Det aktuelle karakteren som er tildelt i orden
+        required: true
+      skoleår:
+        range: Skoleår
+        description: |
+          Skoleåret vurderingen gjelder for.
+
+  Sluttfagvurdering:
+    description: |
+      Karakterer og andre vurderingsuttrykk.
+      
+      # Beskrivelse
+      
+      Sluttvurdering (Standpunktkarakter) gis for deltakelse av en elev i en gruppe.
+      
+      Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i. Det er ogs&#229; mulig &#229; sette relasjon direkte til angjeldende fag.
+      
+      # Referanser
+      
+      * UDir. Registreringsh&#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+      * F&#248;ring av vitnem&#229;l og kompetansebevis for videreg&#229;ende oppl&#230;ring i Kunnskapsl&#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+      * Forskrift til oppl&#230;ringslova &#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&#167;3-4)
+    is_a: Fagvurdering
+    attributes:
+      eksamensgruppe:
+        range: Eksamensgruppe
+        description: |
+          Eksamensgruppe vurderingen er foretatt i.
+      elevforhold:
+        range: Elevforhold
+        inverse: sluttfagvurdering
+        annotations:
+          primaryRelation: true
+        description: |
+          Elevforholdet vurderingen gjelder.
+        required: true
+
+  Sluttordensvurdering:
+    description: |
+      Sluttvurdering av orden og atferd..
+      
+      # Beskrivelse
+      
+      Vurderinger av orden og atferd gj&#248;res uten relasjon til noen gruppe, kun til et elevforhold.
+      
+      # Referanser
+      
+      * UDir. Registreringsh&#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+      * F&#248;ring av vitnem&#229;l og kompetansebevis for videreg&#229;ende oppl&#230;ring i Kunnskapsl&#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+      * Forskrift til oppl&#230;ringslova &#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&#167;3-4)
+    is_a: Ordensvurdering
+    attributes:
+      elevforhold:
+        range: Elevforhold
+        inverse: sluttordensvurdering
+        annotations:
+          primaryRelation: true
+        description: |
+          Elevforholdet vurderingen gjelder.
+        required: true
+
+  Underveisfagvurdering:
+    description: |
+      Karakterer og andre vurderingsuttrykk.
+      
+      # Beskrivelse
+      
+      Underveisvurdering gis for deltakelse av en elev i en gruppe.
+      
+      Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` som vurderingen er foretatt i. Det er ogs&#229; mulig &#229; sette relasjon direkte til angjeldende fag.
+      
+      # Referanser
+      
+      * UDir. Registreringsh&#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+      * F&#248;ring av vitnem&#229;l og kompetansebevis for videreg&#229;ende oppl&#230;ring i Kunnskapsl&#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+      * Forskrift til oppl&#230;ringslova &#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&#167;3-4)
+    is_a: Fagvurdering
+    attributes:
+      elevforhold:
+        range: Elevforhold
+        inverse: underveisfagvurdering
+        annotations:
+          primaryRelation: true
+        description: |
+          Elevforholdet vurderingen gjelder.
+        required: true
+
+  Underveisordensvurdering:
+    description: |
+      Underveisvurdering av orden og atferd..
+      
+      # Beskrivelse
+      
+      Vurderinger av orden og atferd gj&#248;res uten relasjon til noen gruppe, kun til et elevforhold.
+      
+      # Referanser
+      
+      * UDir. Registreringsh&#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+      * F&#248;ring av vitnem&#229;l og kompetansebevis for videreg&#229;ende oppl&#230;ring i Kunnskapsl&#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+      * Forskrift til oppl&#230;ringslova &#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&#167;3-4)
+    is_a: Ordensvurdering
+    attributes:
+      elevforhold:
+        range: Elevforhold
+        inverse: underveisordensvurdering
+        annotations:
+          primaryRelation: true
+        description: |
+          Elevforholdet vurderingen gjelder.
+        required: true
+
   Vurdering:
     description: |
       Karakterer og andre vurderingsuttrykk.
       
       # Beskrivelse
       
-      Vurdering gis for deltakelse av en elev i en gruppe. Dette kan innbære både endelig og foreløpende vurdering.  Dette angis av feltet `endelig`.
+      Vurdering gis for deltakelse av en elev i en gruppe. Dette kan v&#230;re Halv&#229;rsvurdering, Standpunktkarakter, underveisvurdering eller annet. 
       
-      Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i.
+      Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i. Det er ogs&#229; mulig &#229; sette relasjon direkte til angjeldende fag.
       
-      Vurderinger av orden og andre frittstående vurderinger gjøres uten relasjon til noen gruppe.
+      Vurderinger av orden og andre frittst&#229;ende vurderinger gj&#248;res uten relasjon til noen gruppe.
       
       # Referanser
       
-      * UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
-      * Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
-      * Forskrift til opplæringslova § 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#§3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#§3-4)
+      * UDir. Registreringsh&#229;ndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)
+      * F&#248;ring av vitnem&#229;l og kompetansebevis for videreg&#229;ende oppl&#230;ring i Kunnskapsl&#248;ftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)
+      * Forskrift til oppl&#230;ringslova &#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&#167;3-4)
+    deprecated: "Bruk Fagvurdering og Ordensvurdering."
     attributes:
       systemId:
         range: Identifikator
@@ -272,7 +607,11 @@ classes:
           primaryRelation: true
         description: |
           Elevforhold som er vurdert.
-        required: true
+        deprecated: "Bruk Fagvurdering og Ordensvurdering"
+      fag:
+        range: Fag
+        description: |
+          Hvilket fag vurderingen gjelder
       karakter:
         range: Karakterverdi
         description: |
