@@ -188,11 +188,11 @@ classes:
 
   Avskrivning:
     description: |
-      En Journalpost av typen ”inng&#229;ende dokument” eller ”organinternt dokument for oppf&#248;lging” st&#229;r i restanse inntil de er markert som ferdigbehandlet, eller avskrives. Det f&#248;lger av arkivforskriften &#167; 10 at avskrivningsm&#229;te skal fremg&#229; av journalen.
+      En Journalpost av typen ”inngående dokument” eller ”organinternt dokument for oppfølging” står i restanse inntil de er markert som ferdigbehandlet, eller avskrives. Det følger av arkivforskriften &#167; 10 at avskrivningsmåte skal fremgå av journalen.
       
       # Beskrivelse
       
-      * Noark 5 versjon 5.0 standard, kapittel 3.4 Avskrivning og saksoppf&#248;lging  
+      * Noark 5 versjon 5.0 standard, kapittel 3.4 Avskrivning og saksoppfølging  
       
       # Referanser 
       
@@ -241,11 +241,11 @@ classes:
           
           # Eksempel
           
-          | Verdi (avskrivningsm&#229;te) | Beskrivelse |
+          | Verdi (avskrivningsmåte) | Beskrivelse |
           | ------- | ---------------- |
           | BU | Besvart med brev |
           | BE | Besvart med e-post |
-          | TLF | Besvart p&#229; telefon |
+          | TLF | Besvart på telefon |
           | TE | Tatt til etterretning |
           | TO | Tatt til orientering |
           
@@ -429,9 +429,13 @@ classes:
           
           * Noark 5 versjon 5.0 metadatakatalog - nr. M083
           
+          I Noark ble begrepet Dokumentkategori endret til Dokumenttype i versjon 4.
+          Begrepet Dokumentkategori brukes i Elements og P360.
+          
           # Referanser
           
           * https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
+          * https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden#!#block-body-2
         required: true
       opprettetAv:
         range: Arkivressurs
@@ -462,7 +466,7 @@ classes:
       tilknyttetRegistreringSom:
         range: TilknyttetRegistreringSom
         description: |
-          Angivelse av hvilken "rolle" dokumentet har i forhold til registreringen.
+          Angivelse av hvilken rolle dokumentet har i forhold til registreringen.
           
           # Beskrivelse
           
@@ -688,7 +692,7 @@ classes:
           
           # Beskrivelse
           
-          * Noark 5 versjon 5.0 standard, kapittel 3.4 Avskrivning og saksoppf&#248;lging  
+          * Noark 5 versjon 5.0 standard, kapittel 3.4 Avskrivning og saksoppfølging  
           
           # Referanser 
           
@@ -1132,6 +1136,20 @@ classes:
           Organisasjonsnummer til Korrespondansepart.
           
           Kun gyldig hvis Korrespondansepart er en organisasjon.
+      skjerming:
+        range: Skjerming
+        annotations:
+          writeable: true
+        description: |
+          Skjerming av korrespodansepart.
+          
+          # Beskrivelse
+          
+          * Noark 5 versjon 5.0 standard - kap. 2.8.1
+          
+          # Referanser
+          
+          * https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
       korrespondanseparttype:
         range: KorrespondansepartType
         description: |
@@ -1931,6 +1949,10 @@ classes:
           
           * https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
         required: true
+      saksmappetype:
+        range: Saksmappetype
+        description: |
+          Type saksmappe.
       saksstatus:
         range: Saksstatus
         description: |

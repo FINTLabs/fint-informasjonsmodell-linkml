@@ -11,11 +11,25 @@ classes:
 
   Avbruddsårsak:
     description: |
-      &#197;rsaken til at eleven avbryter utdanningsprogrammet (Vg1)/programomr&#229;det (Vg2/Vg3) ) i l&#248;pet av skole&#229;ret  eller l&#230;rlingen/l&#230;rekandidaten hever l&#230;rekontrakten/oppl&#230;ringskontrakten.
+      Årsaken til at eleven avbryter utdanningsprogrammet (Vg1)/programområdet (Vg2/Vg3) ) i løpet av skoleåret  eller lærlingen/lærekandidaten hever lærekontrakten/opplæringskontrakten.
       
       # Referanse
       
-      Registreringsh&#229;ndbok: https://regbok.udir.no/35004/3344/35042-1014313.html
+      Registreringshåndbok: https://regbok.udir.no/35004/3344/35042-1014313.html
+    is_a: Begrep
+
+  Eksamensform:
+    description: |
+      Eksamensordningens form.
+      
+      # Eksempler:
+      * Muntlig
+      * Skriftlig
+      * Praktisk
+      
+      # Referanser
+      
+      * https://www.vigo.no/vigokv/ekstype.action
     is_a: Begrep
 
   Elevkategori:
@@ -35,13 +49,13 @@ classes:
 
   Fagmerknad:
     description: |
-      Merknader til vitnem&#229;l og kompetansebevis
+      Merknader til vitnemål og kompetansebevis
       
       # Beskrivelse
       
       En fagmerknad er en merknad som har en eller flere av disse funksjonene
       
-      - gir opplysninger om faget som ikke g&#229;r fram av karakterer eller eksamensform
+      - gir opplysninger om faget som ikke går fram av karakterer eller eksamensform
       - utdyper opplysninger om karakterer og/eller eksamensform
       - henviser til vedlegg som gir slike opplysninger
       
@@ -52,7 +66,7 @@ classes:
 
   Fraværstype:
     description: |
-      Typer frav&#230;r.
+      Typer fravær.
       
       # Referanse
       
@@ -68,13 +82,13 @@ classes:
       
       # Beskrivelse
       
-      Grep er den nasjonale databasen for fag, l&#230;replaner og oppl&#230;ringstilbud i grunnoppl&#230;ringen.
+      Grep er den nasjonale databasen for fag, læreplaner og opplæringstilbud i grunnopplæringen.
       
       Referanser til Grepkodeverket skal referere til gyldige og unike koder i REST (JSON) API fra Udir.
       
       https://www.udir.no/om-udir/data/kl06-grep
       
-      Det er viktig &#229; bruke Grepreferanser og ikke Vigoreferanser. 
+      Det er viktig å bruke Grepreferanser og ikke Vigoreferanser. 
       Bruk data.udir.no , ikke psi.udir.no, eksempelvis https://data.udir.no/kl06/SAL3001 (korrekt), ikke https://psi.udir.no/kl06/SAL3001 (feil).
     annotations:
       stereotype: referanse
@@ -105,6 +119,15 @@ classes:
         range: Vigoreferanse
         description: |
           Ekstern referanse til Vigo kodeverksdatabase.
+
+  Karakterstatus:
+    description: |
+      Kode for karakterer som blir endret.
+      
+      # Referanse
+      
+      https://regbok.udir.no/35004/3344/35042-1015043.html
+    is_a: Begrep
 
   Skoleår:
     description: |
@@ -142,7 +165,7 @@ classes:
 
   Tilrettelegging:
     description: |
-      Tirettelegging en elev kan ha p&#229; eksamen.
+      Tirettelegging en elev kan ha på eksamen.
     is_a: Begrep
 
   Vigoreferanse:

@@ -94,6 +94,11 @@ classes:
   Diverse:
     is_a: Kontodimensjon
 
+  Formål:
+    description: |
+      Kodeverk som detaljerer inntekter og utgifter ved drift
+    is_a: Kontodimensjon
+
   Fraværsgrunn:
     description: |
       Grunn til fravær.

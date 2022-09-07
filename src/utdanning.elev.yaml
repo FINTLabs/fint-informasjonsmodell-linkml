@@ -242,6 +242,16 @@ classes:
           # Beskrivelse
           
           En elev kan ha flere elevforhold, men kun ett elevforhold skal være tilknyttet en hovedskole.
+      tospråkligFagopplæring:
+        range: boolean
+        description: |
+          Viser om eleven har rett på tospråklig fagopplæring (opplæring i fag på to språk).
+          
+          # Referanser
+          
+          * UDir Registreringshåndbok:
+          https://regbok.udir.no/felt/?B11_S%C3%A6rskilt%20spr%C3%A5koppl%C3%A6ring%20for%20elever%20fra%20spr%C3%A5klige%20minoriteter.&amp;Id=1014318
+          * Lovdata: https://lovdata.no/lov/1998-07-17-61/&#167;3-12
       anmerkninger:
         range: Anmerkninger
         description: |
@@ -292,12 +302,25 @@ classes:
         description: |
           Fraværsoversikt for elevforholdet
         multivalued: true
+      faggruppemedlemskap:
+        range: Faggruppemedlemskap
+        description: |
+          Faggruppemedlemskapene til et elevforhold.
+        multivalued: true
       fravær:
         range: Fravær
         inverse: elevforhold
         description: |
           Alle fravær registrert på elevforhold.
+        deprecated: "Bruk Elevfravær"
         multivalued: true
+      fraværsregistreringer:
+        range: Elevfravær
+        inverse: elevforhold
+        annotations:
+          primaryRelation: true
+        description: |
+          Liste av fraværsregistreringer.
       halvårsfagvurdering:
         range: Halvårsfagvurdering
         inverse: elevforhold
@@ -362,6 +385,10 @@ classes:
         description: |
           Skole elevforhold er knyttet til.
         required: true
+      skoleår:
+        range: Skoleår
+        description: |
+          Skoleåret elevforholdet gjelder for.
       sluttfagvurdering:
         range: Sluttfagvurdering
         inverse: elevforhold
@@ -415,7 +442,7 @@ classes:
 
   Elevtilrettelegging:
     description: |
-      Tilrettelegging en elev har p&#229; eksamen.
+      Tilrettelegging en elev har på eksamen.
     attributes:
       systemId:
         range: Identifikator
@@ -586,7 +613,7 @@ classes:
 
   Persongruppe:
     description: |
-      Gruppe av personer som ikke handler om undervisning. Dette kan f.eks. v&#230;re grupper av elever som skal faktureres.
+      Gruppe av personer som ikke handler om undervisning. Dette kan f.eks. være grupper av elever som skal faktureres.
     is_a: Gruppe
     attributes:
       elev:
@@ -690,6 +717,12 @@ classes:
         description: |
           Relasjon til informasjon om ansettelsesforhold.
         required: true
+      sensor:
+        range: Sensor
+        inverse: skoleressurs
+        description: |
+          Sensoroppdrag.
+        multivalued: true
       skole:
         range: Skole
         inverse: skoleressurs
@@ -727,7 +760,7 @@ classes:
           
           # Beskrivelse
           
-          En skoleresurs kan ha flere undervisningsforhold, men kun ett undervisningsforhold skal v&#230;re tilknyttet en hovedskole.
+          En skoleresurs kan ha flere undervisningsforhold, men kun ett undervisningsforhold skal være tilknyttet en hovedskole.
       time:
         range: Time
         inverse: undervisningsforhold

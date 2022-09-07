@@ -48,7 +48,6 @@ classes:
           Del av kontodimensjon som Personalressurs har blitt delegert en fullmakt for.
         deprecated: "Erstattes av relasjon til organisasjonselement og/eller relasjon til konkret kontodimensjon."
         multivalued: true
-        required: true
       aktivitet:
         range: Aktivitet
         description: |
@@ -69,6 +68,10 @@ classes:
         range: Diverse
         description: |
           Myndighet på kontodimensjon diverse.
+      formål:
+        range: Formål
+        description: |
+          Formål viser aktivitet og tjenesteproduksjon
       fullmektig:
         range: Personalressurs
         inverse: fullmakt

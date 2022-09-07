@@ -39,6 +39,10 @@ classes:
         required: true
       diverse:
         range: Diverse
+      formål:
+        range: Formål
+        description: |
+          Formål viser aktivitet og tjenesteproduksjon
       funksjon:
         range: Funksjon
         description: |

@@ -47,6 +47,12 @@ classes:
       * https://www.vigo.no/vigokv/index.action
     is_a: Gruppe
     attributes:
+      faggruppe:
+        range: Faggruppe
+        inverse: fag
+        description: |
+          Faggruppe for faget.
+        multivalued: true
       eksamensgruppe:
         range: Eksamensgruppe
         inverse: fag
@@ -73,6 +79,47 @@ classes:
         description: |
           Alle undervisningsgrupper i et gitt fag
         multivalued: true
+
+  Faggruppe:
+    description: |
+      Gruppe av elever som mottar undervisning i samme fag.
+      
+      # Beskrivelse
+      
+      Undervisningsgrupper har vanligvis en kode, men denne er lokalt definert, og varierer fra skole til skole, og fra fylke til fylke.
+      
+      Denne grupperingen omhandler faglig organisering av undervisningen.
+      
+      Se også [Undervisningsgruppe](/docs/timeplan_undervisningsgruppe).
+    attributes:
+      fag:
+        range: Fag
+        inverse: faggruppe
+        annotations:
+          primaryRelation: true
+        description: |
+          Fag som gruppen gjelder for.
+        required: true
+      faggruppemedlemskap:
+        range: Faggruppemedlemskap
+        inverse: faggruppe
+        annotations:
+          primaryRelation: true
+        description: |
+          Faggruppemedlemskapene i et fag.
+        multivalued: true
+
+  Faggruppemedlemskap:
+    description: |
+      Medlemskap i faggruppe.
+    is_a: Gruppemedlemskap
+    attributes:
+      faggruppe:
+        range: Faggruppe
+        inverse: faggruppemedlemskap
+        description: |
+          Faggruppe det er medlemskap i.
+        required: true
 
   Rom:
     description: |
@@ -144,7 +191,7 @@ classes:
 
   Undervisningsgruppe:
     description: |
-      Gruppering av elever som lærer underviser i samme faget. 
+      Gruppering av elever som mottar undervisning. 
       
       # Beskrivelse
       
@@ -154,8 +201,9 @@ classes:
       
       Undervisningsgrupper har vanligvis en kode, men denne er lokalt definert, og varierer fra skole til skole, og fra fylke til fylke.
       
-      Synonym:
-      * Faggruppe (SATS)
+      Denne grupperingen omhandler administrering av undervisningen. 
+      
+      Se også [Faggruppe](/docs/timeplan_faggruppe).
     is_a: Gruppe
     attributes:
       time:
