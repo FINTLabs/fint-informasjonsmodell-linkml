@@ -8,122 +8,173 @@ imports:
 
 classes:
 
-  Adresse:
+  Matrikkelnummer:
     description: |
-      Fysisk adresse eller postadresse.
-      
-      # Beskrivelse
-      
-      Dette kan enten være en postadresse eller en fysisk adresse som det er mulig å besøke.
-      
-      # Eksempel
-      
-      |               adresse               |    poststed    | postnummer | land |
-      |-------------------------------------|----------------|------------|------|
-      | Nydalen allé 11                     | Oslo           |       0484 | NO   |
-      | Fakturamottak&lt;br&gt;Postboks 501 Lund  | Kristiansand   |       4605 | -    |
-      | Postboks 517 Lundsiden              | KRISTIANSAND S |       4605 | -    |
-      
-      
-      # Referanser
-      
-      - http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-postmottakere-i-norge
-      - http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-mottakere-i-utlandet
+      Entydig identifisering av metrikkelenhet innen kommune, definert i matrikkelforskriften § 7.
     attributes:
-      adresselinje:
+      adresse:
+        range: Adresse
+        description: |
+          Adresse til matrikkelenhet.
+      bruksnummer:
         range: string
         description: |
-          Adresseinformasjon
-          
-          # Beskrivelse
-          
-          Adresseinformasjon. Linjer representeres hver for seg, fra øverst til nederst.
-          
-          Dette kan være:
-          * Gateadresse
-          * Postboksadresse
-          * Bolignummer
-          * C/O adresse
-          * Attn:
-          * Mottak på vegne av andre
-          
-          # Format
-          
-          Som dokumentert i [referanser fra klassen](Class:Adresse).
-          
-          # Eksempler
-          
-          Se [eksempler fra klassen](Class:Adresse).
-        multivalued: true
-      postnummer:
+          Fortløpende nummerering av bruk under gårdsnummer
+      festenummer:
         range: string
         description: |
-          Postnummer
-          
-          # Beskrivelse
-          
-          
-          # Format
-          
-          
-          # Eksempler
-      poststed:
+          Fortløpende nummerering av fester under gårdsnummer/bruksnummer
+      gårdsnummer:
         range: string
         description: |
-          Poststed
-          
-          # Beskrivelse
-          
-          
-          # Format
-          
-          
-          # Eksempler
-      land:
-        range: Landkode
+          Nummerering av gårdsenhet i matrikkelen, nummeret er unikt innenfor kommune
+      seksjonsnummer:
+        range: string
         description: |
-          Land hvor adressen befinner seg
+          Fortløpende nummerering av seksjoner under gårdsnummer/bruksnummer og eventuelt festenummer
+      kommunenummer:
+        range: Kommune
+        description: |
+          Nummerering av kommunen i henhold til Statistisk sentralbyrå sin offisielle liste
 
-  Identifikator:
+  Personnavn:
     description: |
-      Unik identifikasjon til et objekt.
+      Angir navn til en person
       
       # Beskrivelse
       
-      En kombinasjon av tegn eller og/eller bokstaver som unikt identifiserer et objekt blant andre objekter av samme type uten arv.
+      Inneholder fornavn og etternavn for å beskrive navn til en person.
       
-      Identifikatorer må være stabile over tid, og henvise til samme objekt.
+      Fornavn, mellomnavn og etternavn skal leveres fra fagsystemene som de er, uten noe endringer.
       
-      Dersom identifikatorer konstrueres av sammensatte verdier må særskilt hensyn tas for å sikre at identifikatorverdien ikke endres over tid.
+      # Referanse
+      
+      * [Navneloven](https://lovdata.no/dokument/NL/lov/2002-06-07-19/)
+      * [Håndbok i folkeregistrering](http://www.skatteetaten.no/no/Radgiver/Rettskilder/Handboker/Handbok-i-folkeregistrering/)
+      * [Skal du ha to etternavn?](http://www.skatteetaten.no/no/Person/Folkeregister/Endre-navn/Skal-du-ha-to-etternavn/)
+      
+      # Eksempler
+      
+      |            Navn           |       Fornavn       | Mellomnavn | Etternavn   |
+      |---------------------------|---------------------|------------|--------------|
+      | Ole Olsen                 | Ole                 | -          | Olsen        |
+      | Lise Sofie Fuglevik Olsen | Lise Sofie          | Fuglevik   | Olsen        |
+      | Lise Sofie Fuglevik Olsen | Lise Sofie Fuglevik | -          | Olsen        |
+      | Anne Kari Nilsen-Olsen    | Anne Kari           | -          | Nilsen-Olsen |
+    attributes:
+      etternavn:
+        range: string
+        description: |
+          Angir etternavn til en person.
+          
+          # Beskrivelse
+          Etternavn. 
+          
+          # Format
+          Ren tekst.
+          
+          # Eksempler
+          
+          [Se eksempler på Personnavn](/docs/komplekse_datatyper_personnavn)
+        required: true
+      fornavn:
+        range: string
+        description: |
+          Angir fornavn til en person.
+          
+          # Beskrivelse
+          Fornavn. 
+          
+          # Format
+          Ren tekst.
+          
+          # Eksempler
+          
+          [Se eksempler på Personnavn](/docs/komplekse_datatyper_personnavn)
+        required: true
+      mellomnavn:
+        range: string
+        description: |
+          Mellomnavn
+          
+          # Beskrivelse
+          
+          Mellomnavn
+          
+          # Format
+          
+          Ren tekst
+          
+          # Eksempler
+          
+          [Se eksempler på Personnavn](/docs/komplekse_datatyper_personnavn)
+
+  Periode:
+    description: |
+      Tidsperiode (start- og sluttdato).
+      
+      # Beskrivelse
+      
+      Tidsperiode (start- og sluttdato).
+      Sluttdato må være senere eller lik startdato om den er definert.
       
       # Eksempel
       
-      Kan for eksempel brukes til å identifisere en person ut fra fødselsnummer eller ansattnummer.
-      
-      * For en person kan det være fødselsnummer
-      * For er personresurs kan det være ansattnummer eller signatur
-      * For er elev kan det være elevnummer.
-      * For organisasjonselement kan det være organisasjonsnummer fra Enhetsregistret.
-      * systemId kan være objektID eller rowID i underliggende database, dersom denne er stabil over tid.
+      Et arbeidsforhold kan ha gyldighetsperiode:
+      * Fra 1999.01.01T00:00:00Z til ubestemt tid
+      * Fra 1999.01.01T00:00:00Z til 2005.01.01T00:00:00Z
     attributes:
-      gyldighetsperiode:
-        range: Periode
-        description: |
-          Perioden, gitt i form av fra-og-med-dato og til-dato, som en gitt identifikator er gyldig.
-      identifikatorverdi:
+      beskrivelse:
         range: string
         description: |
-          En konkret kombinasjonen av tegn og/eller bokstaver som utgjør en bestemt identifikator.
-          
-          # Krav til identifikatorverdi
-          
-          - Må være et gyldig URI "path segment", ref. https://tools.ietf.org/html/rfc3986#section-3.3
-          - Må unikt identifisere en instans av en gitt type
-          - Kan ikke være tom
+          Brukes til å sette beskrivende navn på perioden.
           
           # Eksempel
           
-          For eksempel et fødselsnummer, ansattnummer, etc.
+          * 2010 – kalenderår
+          * 2010/2011 – skoleår
+          * H2010 – høstsemesteret
+          * V2011 – vårsemesteret
+      slutt:
+        range: datetime
+        description: |
+          Til dato
+          
+          # Beskrivelse
+          
+          Sluttdato må være senere eller lik startdato om den er definert.
+          
+          # Format
+          
+          Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601)
+          
+          Dersom klokkeslett ikke er definert, skal 00:00:00Z benyttes.
+          
+          YYYY-MM-DDThh:mm:ssZ
+          
+          # Eksempel
+          
+          1999.01.01T00:00:00Z
+      start:
+        range: datetime
+        description: |
+          Fra dato
+          
+          # Beskrivelse
+          
+          Sluttdato må være senere eller lik startdato om den er definert.
+          
+          # Format
+          
+          Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601)
+          
+          Dersom klokkeslett ikke er definert,skal 00:00:00Z benyttes.
+          
+          YYYY-MM-DDThh:mm:ssZ
+          
+          # Eksempel
+          
+          1999.01.01T00:00:00Z
         required: true
 
   Kontaktinformasjon:
@@ -254,171 +305,120 @@ classes:
           - 02643
           - 0VAFK
 
-  Matrikkelnummer:
+  Identifikator:
     description: |
-      Entydig identifisering av metrikkelenhet innen kommune, definert i matrikkelforskriften § 7.
-    attributes:
-      adresse:
-        range: Adresse
-        description: |
-          Adresse til matrikkelenhet.
-      bruksnummer:
-        range: string
-        description: |
-          Fortløpende nummerering av bruk under gårdsnummer
-      festenummer:
-        range: string
-        description: |
-          Fortløpende nummerering av fester under gårdsnummer/bruksnummer
-      gårdsnummer:
-        range: string
-        description: |
-          Nummerering av gårdsenhet i matrikkelen, nummeret er unikt innenfor kommune
-      seksjonsnummer:
-        range: string
-        description: |
-          Fortløpende nummerering av seksjoner under gårdsnummer/bruksnummer og eventuelt festenummer
-      kommunenummer:
-        range: Kommune
-        description: |
-          Nummerering av kommunen i henhold til Statistisk sentralbyrå sin offisielle liste
-
-  Periode:
-    description: |
-      Tidsperiode (start- og sluttdato).
+      Unik identifikasjon til et objekt.
       
       # Beskrivelse
       
-      Tidsperiode (start- og sluttdato).
-      Sluttdato må være senere eller lik startdato om den er definert.
+      En kombinasjon av tegn eller og/eller bokstaver som unikt identifiserer et objekt blant andre objekter av samme type uten arv.
+      
+      Identifikatorer må være stabile over tid, og henvise til samme objekt.
+      
+      Dersom identifikatorer konstrueres av sammensatte verdier må særskilt hensyn tas for å sikre at identifikatorverdien ikke endres over tid.
       
       # Eksempel
       
-      Et arbeidsforhold kan ha gyldighetsperiode:
-      * Fra 1999.01.01T00:00:00Z til ubestemt tid
-      * Fra 1999.01.01T00:00:00Z til 2005.01.01T00:00:00Z
+      Kan for eksempel brukes til å identifisere en person ut fra fødselsnummer eller ansattnummer.
+      
+      * For en person kan det være fødselsnummer
+      * For er personresurs kan det være ansattnummer eller signatur
+      * For er elev kan det være elevnummer.
+      * For organisasjonselement kan det være organisasjonsnummer fra Enhetsregistret.
+      * systemId kan være objektID eller rowID i underliggende database, dersom denne er stabil over tid.
     attributes:
-      beskrivelse:
+      gyldighetsperiode:
+        range: Periode
+        description: |
+          Perioden, gitt i form av fra-og-med-dato og til-dato, som en gitt identifikator er gyldig.
+      identifikatorverdi:
         range: string
         description: |
-          Brukes til å sette beskrivende navn på perioden.
+          En konkret kombinasjonen av tegn og/eller bokstaver som utgjør en bestemt identifikator.
+          
+          # Krav til identifikatorverdi
+          
+          - Må være et gyldig URI "path segment", ref. https://tools.ietf.org/html/rfc3986#section-3.3
+          - Må unikt identifisere en instans av en gitt type
+          - Kan ikke være tom
           
           # Eksempel
           
-          * 2010 – kalenderår
-          * 2010/2011 – skoleår
-          * H2010 – høstsemesteret
-          * V2011 – vårsemesteret
-      slutt:
-        range: datetime
-        description: |
-          Til dato
-          
-          # Beskrivelse
-          
-          Sluttdato må være senere eller lik startdato om den er definert.
-          
-          # Format
-          
-          Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601)
-          
-          Dersom klokkeslett ikke er definert, skal 00:00:00Z benyttes.
-          
-          YYYY-MM-DDThh:mm:ssZ
-          
-          # Eksempel
-          
-          1999.01.01T00:00:00Z
-      start:
-        range: datetime
-        description: |
-          Fra dato
-          
-          # Beskrivelse
-          
-          Sluttdato må være senere eller lik startdato om den er definert.
-          
-          # Format
-          
-          Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601)
-          
-          Dersom klokkeslett ikke er definert,skal 00:00:00Z benyttes.
-          
-          YYYY-MM-DDThh:mm:ssZ
-          
-          # Eksempel
-          
-          1999.01.01T00:00:00Z
+          For eksempel et fødselsnummer, ansattnummer, etc.
         required: true
 
-  Personnavn:
+  Adresse:
     description: |
-      Angir navn til en person
+      Fysisk adresse eller postadresse.
       
       # Beskrivelse
       
-      Inneholder fornavn og etternavn for å beskrive navn til en person.
+      Dette kan enten være en postadresse eller en fysisk adresse som det er mulig å besøke.
       
-      Fornavn, mellomnavn og etternavn skal leveres fra fagsystemene som de er, uten noe endringer.
+      # Eksempel
       
-      # Referanse
+      |               adresse               |    poststed    | postnummer | land |
+      |-------------------------------------|----------------|------------|------|
+      | Nydalen allé 11                     | Oslo           |       0484 | NO   |
+      | Fakturamottak&lt;br&gt;Postboks 501 Lund  | Kristiansand   |       4605 | -    |
+      | Postboks 517 Lundsiden              | KRISTIANSAND S |       4605 | -    |
       
-      * [Navneloven](https://lovdata.no/dokument/NL/lov/2002-06-07-19/)
-      * [Håndbok i folkeregistrering](http://www.skatteetaten.no/no/Radgiver/Rettskilder/Handboker/Handbok-i-folkeregistrering/)
-      * [Skal du ha to etternavn?](http://www.skatteetaten.no/no/Person/Folkeregister/Endre-navn/Skal-du-ha-to-etternavn/)
       
-      # Eksempler
+      # Referanser
       
-      |            Navn           |       Fornavn       | Mellomnavn | Etternavn   |
-      |---------------------------|---------------------|------------|--------------|
-      | Ole Olsen                 | Ole                 | -          | Olsen        |
-      | Lise Sofie Fuglevik Olsen | Lise Sofie          | Fuglevik   | Olsen        |
-      | Lise Sofie Fuglevik Olsen | Lise Sofie Fuglevik | -          | Olsen        |
-      | Anne Kari Nilsen-Olsen    | Anne Kari           | -          | Nilsen-Olsen |
+      - http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-postmottakere-i-norge
+      - http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-mottakere-i-utlandet
     attributes:
-      etternavn:
+      adresselinje:
         range: string
         description: |
-          Angir etternavn til en person.
-          
-          # Beskrivelse
-          Etternavn. 
-          
-          # Format
-          Ren tekst.
-          
-          # Eksempler
-          
-          [Se eksempler på Personnavn](/docs/komplekse_datatyper_personnavn)
-        required: true
-      fornavn:
-        range: string
-        description: |
-          Angir fornavn til en person.
-          
-          # Beskrivelse
-          Fornavn. 
-          
-          # Format
-          Ren tekst.
-          
-          # Eksempler
-          
-          [Se eksempler på Personnavn](/docs/komplekse_datatyper_personnavn)
-        required: true
-      mellomnavn:
-        range: string
-        description: |
-          Mellomnavn
+          Adresseinformasjon
           
           # Beskrivelse
           
-          Mellomnavn
+          Adresseinformasjon. Linjer representeres hver for seg, fra øverst til nederst.
+          
+          Dette kan være:
+          * Gateadresse
+          * Postboksadresse
+          * Bolignummer
+          * C/O adresse
+          * Attn:
+          * Mottak på vegne av andre
           
           # Format
           
-          Ren tekst
+          Som dokumentert i [referanser fra klassen](Class:Adresse).
           
           # Eksempler
           
-          [Se eksempler på Personnavn](/docs/komplekse_datatyper_personnavn)
+          Se [eksempler fra klassen](Class:Adresse).
+        multivalued: true
+      postnummer:
+        range: string
+        description: |
+          Postnummer
+          
+          # Beskrivelse
+          
+          
+          # Format
+          
+          
+          # Eksempler
+      poststed:
+        range: string
+        description: |
+          Poststed
+          
+          # Beskrivelse
+          
+          
+          # Format
+          
+          
+          # Eksempler
+      land:
+        range: Landkode
+        description: |
+          Land hvor adressen befinner seg

@@ -4197,144 +4197,226 @@ NO, NB, NN, DA, etc.
               </packagedElement>
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_f86973cf2c8168a1e8" name="Kompleksedatatyper">
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_16032b22e35475cac5" name="Adresse">
-              <properties documentation="Fysisk adresse eller postadresse.&#10;&#10;# Beskrivelse&#10;&#10;Dette kan enten være en postadresse eller en fysisk adresse som det er mulig å besøke.&#10;&#10;# Eksempel&#10;&#10;|               adresse               |    poststed    | postnummer | land |&#10;|-------------------------------------|----------------|------------|------|&#10;| Nydalen allé 11                     | Oslo           |       0484 | NO   |&#10;| Fakturamottak&amp;lt;br&amp;gt;Postboks 501 Lund  | Kristiansand   |       4605 | -    |&#10;| Postboks 517 Lundsiden              | KRISTIANSAND S |       4605 | -    |&#10;&#10;&#10;# Referanser&#10;&#10;- http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-postmottakere-i-norge&#10;- http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-mottakere-i-utlandet&#10;" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_cc265e54f46b13cc0a">
-                <body>Fysisk adresse eller postadresse.
-
-# Beskrivelse
-
-Dette kan enten være en postadresse eller en fysisk adresse som det er mulig å besøke.
-
-# Eksempel
-
-|               adresse               |    poststed    | postnummer | land |
-|-------------------------------------|----------------|------------|------|
-| Nydalen allé 11                     | Oslo           |       0484 | NO   |
-| Fakturamottak&amp;lt;br&amp;gt;Postboks 501 Lund  | Kristiansand   |       4605 | -    |
-| Postboks 517 Lundsiden              | KRISTIANSAND S |       4605 | -    |
-
-
-# Referanser
-
-- http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-postmottakere-i-norge
-- http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-mottakere-i-utlandet
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_4794cf60ccc021eafe" name="Matrikkelnummer">
+              <properties documentation="Entydig identifisering av metrikkelenhet innen kommune, definert i matrikkelforskriften § 7.&#10;" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_79004ebc8517e80752">
+                <body>Entydig identifisering av metrikkelenhet innen kommune, definert i matrikkelforskriften § 7.
 </body>
                 </ownedComment>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_ca1bd83c3d21a06e69" name="adresselinje" visibility="public">
-                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_d2ce1b7808e6699bba" value="0" />
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_UPR_d2ce1b7808e6699bba" value="*" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d2ce1b7808e6699bba">
-                  <body>Adresseinformasjon
-
-# Beskrivelse
-
-Adresseinformasjon. Linjer representeres hver for seg, fra øverst til nederst.
-
-Dette kan være:
-* Gateadresse
-* Postboksadresse
-* Bolignummer
-* C/O adresse
-* Attn:
-* Mottak på vegne av andre
-
-# Format
-
-Som dokumentert i [referanser fra klassen](Class:Adresse).
-
-# Eksempler
-
-Se [eksempler fra klassen](Class:Adresse).
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_106c6fed4196865391" name="adresse" visibility="public">
+                <type xmi:idref="EAID_CLS_16032b22e35475cac5" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_1fcffdd1f5d78a3972" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_1fcffdd1f5d78a3972" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_1fcffdd1f5d78a3972">
+                  <body>Adresse til matrikkelenhet.
 </body>
                   </ownedComment>
                 </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_ef16ae6f5fe55de365" name="postnummer" visibility="public">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_7b28e88a52cb91cd57" name="bruksnummer" visibility="public">
                 <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_2ad1ffc2f3fba61bea" value="0" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_2ad1ffc2f3fba61bea" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_2ad1ffc2f3fba61bea">
-                  <body>Postnummer
-
-# Beskrivelse
-
-
-# Format
-
-
-# Eksempler
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_6cc1e2a212f0659f6a" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_6cc1e2a212f0659f6a" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_6cc1e2a212f0659f6a">
+                  <body>Fortløpende nummerering av bruk under gårdsnummer
 </body>
                   </ownedComment>
                 </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_466edee5d5b2f6f1d9" name="poststed" visibility="public">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_af2add38f28d0d0206" name="festenummer" visibility="public">
                 <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_ebff77be271e9235f5" value="0" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_ebff77be271e9235f5" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_ebff77be271e9235f5">
-                  <body>Poststed
-
-# Beskrivelse
-
-
-# Format
-
-
-# Eksempler
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_86901a216891a1115b" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_86901a216891a1115b" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_86901a216891a1115b">
+                  <body>Fortløpende nummerering av fester under gårdsnummer/bruksnummer
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_773815bcbf468b894c" name="gårdsnummer" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_244e91b757db163465" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_244e91b757db163465" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_244e91b757db163465">
+                  <body>Nummerering av gårdsenhet i matrikkelen, nummeret er unikt innenfor kommune
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_cc2402cb902f2c0b35" name="seksjonsnummer" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_7d744b1f665e31e157" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_7d744b1f665e31e157" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7d744b1f665e31e157">
+                  <body>Fortløpende nummerering av seksjoner under gårdsnummer/bruksnummer og eventuelt festenummer
 </body>
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a1caaaf9175ac05a30" visibility="public" start="EAID_CLS_16032b22e35475cac5" end="EAID_CLS_21de96a2eceefd70b9" />
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_46d2316789ea33b875" name="Identifikator">
-              <properties documentation="Unik identifikasjon til et objekt.&#10;&#10;# Beskrivelse&#10;&#10;En kombinasjon av tegn eller og/eller bokstaver som unikt identifiserer et objekt blant andre objekter av samme type uten arv.&#10;&#10;Identifikatorer må være stabile over tid, og henvise til samme objekt.&#10;&#10;Dersom identifikatorer konstrueres av sammensatte verdier må særskilt hensyn tas for å sikre at identifikatorverdien ikke endres over tid.&#10;&#10;# Eksempel&#10;&#10;Kan for eksempel brukes til å identifisere en person ut fra fødselsnummer eller ansattnummer.&#10;&#10;* For en person kan det være fødselsnummer&#10;* For er personresurs kan det være ansattnummer eller signatur&#10;* For er elev kan det være elevnummer.&#10;* For organisasjonselement kan det være organisasjonsnummer fra Enhetsregistret.&#10;* systemId kan være objektID eller rowID i underliggende database, dersom denne er stabil over tid.&#10;" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a7f7fc27a2c2f9b911">
-                <body>Unik identifikasjon til et objekt.
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_25cd5c8ec25d484e9a" visibility="public" start="EAID_CLS_4794cf60ccc021eafe" end="EAID_CLS_731db44765e710208d" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_ef652e54b0a0aaa309" name="Personnavn">
+              <properties documentation="Angir navn til en person&#10;&#10;# Beskrivelse&#10;&#10;Inneholder fornavn og etternavn for å beskrive navn til en person.&#10;&#10;Fornavn, mellomnavn og etternavn skal leveres fra fagsystemene som de er, uten noe endringer.&#10;&#10;# Referanse&#10;&#10;* [Navneloven](https://lovdata.no/dokument/NL/lov/2002-06-07-19/)&#10;* [Håndbok i folkeregistrering](http://www.skatteetaten.no/no/Radgiver/Rettskilder/Handboker/Handbok-i-folkeregistrering/)&#10;* [Skal du ha to etternavn?](http://www.skatteetaten.no/no/Person/Folkeregister/Endre-navn/Skal-du-ha-to-etternavn/)&#10;&#10;# Eksempler&#10;&#10;|            Navn           |       Fornavn       | Mellomnavn | Etternavn   |&#10;|---------------------------|---------------------|------------|--------------|&#10;| Ole Olsen                 | Ole                 | -          | Olsen        |&#10;| Lise Sofie Fuglevik Olsen | Lise Sofie          | Fuglevik   | Olsen        |&#10;| Lise Sofie Fuglevik Olsen | Lise Sofie Fuglevik | -          | Olsen        |&#10;| Anne Kari Nilsen-Olsen    | Anne Kari           | -          | Nilsen-Olsen |&#10;" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_eb22a898a155a07e0d">
+                <body>Angir navn til en person
 
 # Beskrivelse
 
-En kombinasjon av tegn eller og/eller bokstaver som unikt identifiserer et objekt blant andre objekter av samme type uten arv.
+Inneholder fornavn og etternavn for å beskrive navn til en person.
 
-Identifikatorer må være stabile over tid, og henvise til samme objekt.
+Fornavn, mellomnavn og etternavn skal leveres fra fagsystemene som de er, uten noe endringer.
 
-Dersom identifikatorer konstrueres av sammensatte verdier må særskilt hensyn tas for å sikre at identifikatorverdien ikke endres over tid.
+# Referanse
 
-# Eksempel
+* [Navneloven](https://lovdata.no/dokument/NL/lov/2002-06-07-19/)
+* [Håndbok i folkeregistrering](http://www.skatteetaten.no/no/Radgiver/Rettskilder/Handboker/Handbok-i-folkeregistrering/)
+* [Skal du ha to etternavn?](http://www.skatteetaten.no/no/Person/Folkeregister/Endre-navn/Skal-du-ha-to-etternavn/)
 
-Kan for eksempel brukes til å identifisere en person ut fra fødselsnummer eller ansattnummer.
+# Eksempler
 
-* For en person kan det være fødselsnummer
-* For er personresurs kan det være ansattnummer eller signatur
-* For er elev kan det være elevnummer.
-* For organisasjonselement kan det være organisasjonsnummer fra Enhetsregistret.
-* systemId kan være objektID eller rowID i underliggende database, dersom denne er stabil over tid.
+|            Navn           |       Fornavn       | Mellomnavn | Etternavn   |
+|---------------------------|---------------------|------------|--------------|
+| Ole Olsen                 | Ole                 | -          | Olsen        |
+| Lise Sofie Fuglevik Olsen | Lise Sofie          | Fuglevik   | Olsen        |
+| Lise Sofie Fuglevik Olsen | Lise Sofie Fuglevik | -          | Olsen        |
+| Anne Kari Nilsen-Olsen    | Anne Kari           | -          | Nilsen-Olsen |
 </body>
                 </ownedComment>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_c65ab60f17c3db0bd1" name="gyldighetsperiode" visibility="public">
-                <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_9ffdfd093752238943" value="0" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_9ffdfd093752238943" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_9ffdfd093752238943">
-                  <body>Perioden, gitt i form av fra-og-med-dato og til-dato, som en gitt identifikator er gyldig.
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_c25c1af274fcec02af" name="etternavn" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_d86b375389cae4d531" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_d86b375389cae4d531" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d86b375389cae4d531">
+                  <body>Angir etternavn til en person.
+
+# Beskrivelse
+Etternavn. 
+
+# Format
+Ren tekst.
+
+# Eksempler
+
+[Se eksempler på Personnavn](/docs/komplekse_datatyper_personnavn)
 </body>
                   </ownedComment>
                 </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_500d7d0849db5cf4ee" name="identifikatorverdi" visibility="public">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_c1075f29e142938a2e" name="fornavn" visibility="public">
                 <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_9263b3bbb4980c57bb" value="1" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_9263b3bbb4980c57bb" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_9263b3bbb4980c57bb">
-                  <body>En konkret kombinasjonen av tegn og/eller bokstaver som utgjør en bestemt identifikator.
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_b73840796a94cb25ec" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_b73840796a94cb25ec" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_b73840796a94cb25ec">
+                  <body>Angir fornavn til en person.
 
-# Krav til identifikatorverdi
+# Beskrivelse
+Fornavn. 
 
-- Må være et gyldig URI "path segment", ref. https://tools.ietf.org/html/rfc3986#section-3.3
-- Må unikt identifisere en instans av en gitt type
-- Kan ikke være tom
+# Format
+Ren tekst.
+
+# Eksempler
+
+[Se eksempler på Personnavn](/docs/komplekse_datatyper_personnavn)
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_f2e868ccdb7f9e1a41" name="mellomnavn" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_ec2c1d83658d722659" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_ec2c1d83658d722659" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_ec2c1d83658d722659">
+                  <body>Mellomnavn
+
+# Beskrivelse
+
+Mellomnavn
+
+# Format
+
+Ren tekst
+
+# Eksempler
+
+[Se eksempler på Personnavn](/docs/komplekse_datatyper_personnavn)
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_ffdb8cc4adee01331a" name="Periode">
+              <properties documentation="Tidsperiode (start- og sluttdato).&#10;&#10;# Beskrivelse&#10;&#10;Tidsperiode (start- og sluttdato).&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Eksempel&#10;&#10;Et arbeidsforhold kan ha gyldighetsperiode:&#10;* Fra 1999.01.01T00:00:00Z til ubestemt tid&#10;* Fra 1999.01.01T00:00:00Z til 2005.01.01T00:00:00Z&#10;" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_634c56778a875c24a1">
+                <body>Tidsperiode (start- og sluttdato).
+
+# Beskrivelse
+
+Tidsperiode (start- og sluttdato).
+Sluttdato må være senere eller lik startdato om den er definert.
 
 # Eksempel
 
-For eksempel et fødselsnummer, ansattnummer, etc.
+Et arbeidsforhold kan ha gyldighetsperiode:
+* Fra 1999.01.01T00:00:00Z til ubestemt tid
+* Fra 1999.01.01T00:00:00Z til 2005.01.01T00:00:00Z
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_b6ec2bd8bfa90a028e" name="beskrivelse" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_43acbf9951fa8c6876" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_43acbf9951fa8c6876" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_43acbf9951fa8c6876">
+                  <body>Brukes til å sette beskrivende navn på perioden.
+
+# Eksempel
+
+* 2010 – kalenderår
+* 2010/2011 – skoleår
+* H2010 – høstsemesteret
+* V2011 – vårsemesteret
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_859ee6174b38f53a31" name="slutt" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#DateTime" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_7cf1632f5fad2cda8d" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_7cf1632f5fad2cda8d" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7cf1632f5fad2cda8d">
+                  <body>Til dato
+
+# Beskrivelse
+
+Sluttdato må være senere eller lik startdato om den er definert.
+
+# Format
+
+Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601)
+
+Dersom klokkeslett ikke er definert, skal 00:00:00Z benyttes.
+
+YYYY-MM-DDThh:mm:ssZ
+
+# Eksempel
+
+1999.01.01T00:00:00Z
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_193ae2b0dd4cb84fac" name="start" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#DateTime" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_5beabcbc44f6515193" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_5beabcbc44f6515193" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_5beabcbc44f6515193">
+                  <body>Fra dato
+
+# Beskrivelse
+
+Sluttdato må være senere eller lik startdato om den er definert.
+
+# Format
+
+Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601)
+
+Dersom klokkeslett ikke er definert,skal 00:00:00Z benyttes.
+
+YYYY-MM-DDThh:mm:ssZ
+
+# Eksempel
+
+1999.01.01T00:00:00Z
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -4494,230 +4576,148 @@ Format må følge norsk nummerplan E.164, alternativt med `+` for å angi internasj
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_4794cf60ccc021eafe" name="Matrikkelnummer">
-              <properties documentation="Entydig identifisering av metrikkelenhet innen kommune, definert i matrikkelforskriften § 7.&#10;" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_79004ebc8517e80752">
-                <body>Entydig identifisering av metrikkelenhet innen kommune, definert i matrikkelforskriften § 7.
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_46d2316789ea33b875" name="Identifikator">
+              <properties documentation="Unik identifikasjon til et objekt.&#10;&#10;# Beskrivelse&#10;&#10;En kombinasjon av tegn eller og/eller bokstaver som unikt identifiserer et objekt blant andre objekter av samme type uten arv.&#10;&#10;Identifikatorer må være stabile over tid, og henvise til samme objekt.&#10;&#10;Dersom identifikatorer konstrueres av sammensatte verdier må særskilt hensyn tas for å sikre at identifikatorverdien ikke endres over tid.&#10;&#10;# Eksempel&#10;&#10;Kan for eksempel brukes til å identifisere en person ut fra fødselsnummer eller ansattnummer.&#10;&#10;* For en person kan det være fødselsnummer&#10;* For er personresurs kan det være ansattnummer eller signatur&#10;* For er elev kan det være elevnummer.&#10;* For organisasjonselement kan det være organisasjonsnummer fra Enhetsregistret.&#10;* systemId kan være objektID eller rowID i underliggende database, dersom denne er stabil over tid.&#10;" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a7f7fc27a2c2f9b911">
+                <body>Unik identifikasjon til et objekt.
+
+# Beskrivelse
+
+En kombinasjon av tegn eller og/eller bokstaver som unikt identifiserer et objekt blant andre objekter av samme type uten arv.
+
+Identifikatorer må være stabile over tid, og henvise til samme objekt.
+
+Dersom identifikatorer konstrueres av sammensatte verdier må særskilt hensyn tas for å sikre at identifikatorverdien ikke endres over tid.
+
+# Eksempel
+
+Kan for eksempel brukes til å identifisere en person ut fra fødselsnummer eller ansattnummer.
+
+* For en person kan det være fødselsnummer
+* For er personresurs kan det være ansattnummer eller signatur
+* For er elev kan det være elevnummer.
+* For organisasjonselement kan det være organisasjonsnummer fra Enhetsregistret.
+* systemId kan være objektID eller rowID i underliggende database, dersom denne er stabil over tid.
 </body>
                 </ownedComment>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_106c6fed4196865391" name="adresse" visibility="public">
-                <type xmi:idref="EAID_CLS_16032b22e35475cac5" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_1fcffdd1f5d78a3972" value="0" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_1fcffdd1f5d78a3972" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_1fcffdd1f5d78a3972">
-                  <body>Adresse til matrikkelenhet.
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_c65ab60f17c3db0bd1" name="gyldighetsperiode" visibility="public">
+                <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_9ffdfd093752238943" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_9ffdfd093752238943" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_9ffdfd093752238943">
+                  <body>Perioden, gitt i form av fra-og-med-dato og til-dato, som en gitt identifikator er gyldig.
 </body>
                   </ownedComment>
                 </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_7b28e88a52cb91cd57" name="bruksnummer" visibility="public">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_500d7d0849db5cf4ee" name="identifikatorverdi" visibility="public">
                 <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_6cc1e2a212f0659f6a" value="0" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_6cc1e2a212f0659f6a" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_6cc1e2a212f0659f6a">
-                  <body>Fortløpende nummerering av bruk under gårdsnummer
-</body>
-                  </ownedComment>
-                </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_af2add38f28d0d0206" name="festenummer" visibility="public">
-                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_86901a216891a1115b" value="0" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_86901a216891a1115b" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_86901a216891a1115b">
-                  <body>Fortløpende nummerering av fester under gårdsnummer/bruksnummer
-</body>
-                  </ownedComment>
-                </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_773815bcbf468b894c" name="gårdsnummer" visibility="public">
-                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_244e91b757db163465" value="0" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_244e91b757db163465" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_244e91b757db163465">
-                  <body>Nummerering av gårdsenhet i matrikkelen, nummeret er unikt innenfor kommune
-</body>
-                  </ownedComment>
-                </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_cc2402cb902f2c0b35" name="seksjonsnummer" visibility="public">
-                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_7d744b1f665e31e157" value="0" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_7d744b1f665e31e157" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7d744b1f665e31e157">
-                  <body>Fortløpende nummerering av seksjoner under gårdsnummer/bruksnummer og eventuelt festenummer
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_9263b3bbb4980c57bb" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_9263b3bbb4980c57bb" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_9263b3bbb4980c57bb">
+                  <body>En konkret kombinasjonen av tegn og/eller bokstaver som utgjør en bestemt identifikator.
+
+# Krav til identifikatorverdi
+
+- Må være et gyldig URI "path segment", ref. https://tools.ietf.org/html/rfc3986#section-3.3
+- Må unikt identifisere en instans av en gitt type
+- Kan ikke være tom
+
+# Eksempel
+
+For eksempel et fødselsnummer, ansattnummer, etc.
 </body>
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_25cd5c8ec25d484e9a" visibility="public" start="EAID_CLS_4794cf60ccc021eafe" end="EAID_CLS_731db44765e710208d" />
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_ffdb8cc4adee01331a" name="Periode">
-              <properties documentation="Tidsperiode (start- og sluttdato).&#10;&#10;# Beskrivelse&#10;&#10;Tidsperiode (start- og sluttdato).&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Eksempel&#10;&#10;Et arbeidsforhold kan ha gyldighetsperiode:&#10;* Fra 1999.01.01T00:00:00Z til ubestemt tid&#10;* Fra 1999.01.01T00:00:00Z til 2005.01.01T00:00:00Z&#10;" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_634c56778a875c24a1">
-                <body>Tidsperiode (start- og sluttdato).
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_16032b22e35475cac5" name="Adresse">
+              <properties documentation="Fysisk adresse eller postadresse.&#10;&#10;# Beskrivelse&#10;&#10;Dette kan enten være en postadresse eller en fysisk adresse som det er mulig å besøke.&#10;&#10;# Eksempel&#10;&#10;|               adresse               |    poststed    | postnummer | land |&#10;|-------------------------------------|----------------|------------|------|&#10;| Nydalen allé 11                     | Oslo           |       0484 | NO   |&#10;| Fakturamottak&amp;lt;br&amp;gt;Postboks 501 Lund  | Kristiansand   |       4605 | -    |&#10;| Postboks 517 Lundsiden              | KRISTIANSAND S |       4605 | -    |&#10;&#10;&#10;# Referanser&#10;&#10;- http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-postmottakere-i-norge&#10;- http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-mottakere-i-utlandet&#10;" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_cc265e54f46b13cc0a">
+                <body>Fysisk adresse eller postadresse.
 
 # Beskrivelse
 
-Tidsperiode (start- og sluttdato).
-Sluttdato må være senere eller lik startdato om den er definert.
+Dette kan enten være en postadresse eller en fysisk adresse som det er mulig å besøke.
 
 # Eksempel
 
-Et arbeidsforhold kan ha gyldighetsperiode:
-* Fra 1999.01.01T00:00:00Z til ubestemt tid
-* Fra 1999.01.01T00:00:00Z til 2005.01.01T00:00:00Z
+|               adresse               |    poststed    | postnummer | land |
+|-------------------------------------|----------------|------------|------|
+| Nydalen allé 11                     | Oslo           |       0484 | NO   |
+| Fakturamottak&amp;lt;br&amp;gt;Postboks 501 Lund  | Kristiansand   |       4605 | -    |
+| Postboks 517 Lundsiden              | KRISTIANSAND S |       4605 | -    |
+
+
+# Referanser
+
+- http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-postmottakere-i-norge
+- http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-mottakere-i-utlandet
 </body>
                 </ownedComment>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_b6ec2bd8bfa90a028e" name="beskrivelse" visibility="public">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_ca1bd83c3d21a06e69" name="adresselinje" visibility="public">
                 <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_43acbf9951fa8c6876" value="0" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_43acbf9951fa8c6876" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_43acbf9951fa8c6876">
-                  <body>Brukes til å sette beskrivende navn på perioden.
-
-# Eksempel
-
-* 2010 – kalenderår
-* 2010/2011 – skoleår
-* H2010 – høstsemesteret
-* V2011 – vårsemesteret
-</body>
-                  </ownedComment>
-                </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_859ee6174b38f53a31" name="slutt" visibility="public">
-                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#DateTime" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_7cf1632f5fad2cda8d" value="0" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_7cf1632f5fad2cda8d" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7cf1632f5fad2cda8d">
-                  <body>Til dato
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_d2ce1b7808e6699bba" value="0" />
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_UPR_d2ce1b7808e6699bba" value="*" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d2ce1b7808e6699bba">
+                  <body>Adresseinformasjon
 
 # Beskrivelse
 
-Sluttdato må være senere eller lik startdato om den er definert.
+Adresseinformasjon. Linjer representeres hver for seg, fra øverst til nederst.
+
+Dette kan være:
+* Gateadresse
+* Postboksadresse
+* Bolignummer
+* C/O adresse
+* Attn:
+* Mottak på vegne av andre
 
 # Format
 
-Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601)
+Som dokumentert i [referanser fra klassen](Class:Adresse).
 
-Dersom klokkeslett ikke er definert, skal 00:00:00Z benyttes.
+# Eksempler
 
-YYYY-MM-DDThh:mm:ssZ
-
-# Eksempel
-
-1999.01.01T00:00:00Z
+Se [eksempler fra klassen](Class:Adresse).
 </body>
                   </ownedComment>
                 </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_193ae2b0dd4cb84fac" name="start" visibility="public">
-                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#DateTime" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_5beabcbc44f6515193" value="1" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_5beabcbc44f6515193" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_5beabcbc44f6515193">
-                  <body>Fra dato
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_ef16ae6f5fe55de365" name="postnummer" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_2ad1ffc2f3fba61bea" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_2ad1ffc2f3fba61bea" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_2ad1ffc2f3fba61bea">
+                  <body>Postnummer
 
 # Beskrivelse
 
-Sluttdato må være senere eller lik startdato om den er definert.
 
 # Format
 
-Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601)
 
-Dersom klokkeslett ikke er definert,skal 00:00:00Z benyttes.
+# Eksempler
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_466edee5d5b2f6f1d9" name="poststed" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_ebff77be271e9235f5" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_ebff77be271e9235f5" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_ebff77be271e9235f5">
+                  <body>Poststed
 
-YYYY-MM-DDThh:mm:ssZ
+# Beskrivelse
 
-# Eksempel
 
-1999.01.01T00:00:00Z
+# Format
+
+
+# Eksempler
 </body>
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_ef652e54b0a0aaa309" name="Personnavn">
-              <properties documentation="Angir navn til en person&#10;&#10;# Beskrivelse&#10;&#10;Inneholder fornavn og etternavn for å beskrive navn til en person.&#10;&#10;Fornavn, mellomnavn og etternavn skal leveres fra fagsystemene som de er, uten noe endringer.&#10;&#10;# Referanse&#10;&#10;* [Navneloven](https://lovdata.no/dokument/NL/lov/2002-06-07-19/)&#10;* [Håndbok i folkeregistrering](http://www.skatteetaten.no/no/Radgiver/Rettskilder/Handboker/Handbok-i-folkeregistrering/)&#10;* [Skal du ha to etternavn?](http://www.skatteetaten.no/no/Person/Folkeregister/Endre-navn/Skal-du-ha-to-etternavn/)&#10;&#10;# Eksempler&#10;&#10;|            Navn           |       Fornavn       | Mellomnavn | Etternavn   |&#10;|---------------------------|---------------------|------------|--------------|&#10;| Ole Olsen                 | Ole                 | -          | Olsen        |&#10;| Lise Sofie Fuglevik Olsen | Lise Sofie          | Fuglevik   | Olsen        |&#10;| Lise Sofie Fuglevik Olsen | Lise Sofie Fuglevik | -          | Olsen        |&#10;| Anne Kari Nilsen-Olsen    | Anne Kari           | -          | Nilsen-Olsen |&#10;" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_eb22a898a155a07e0d">
-                <body>Angir navn til en person
-
-# Beskrivelse
-
-Inneholder fornavn og etternavn for å beskrive navn til en person.
-
-Fornavn, mellomnavn og etternavn skal leveres fra fagsystemene som de er, uten noe endringer.
-
-# Referanse
-
-* [Navneloven](https://lovdata.no/dokument/NL/lov/2002-06-07-19/)
-* [Håndbok i folkeregistrering](http://www.skatteetaten.no/no/Radgiver/Rettskilder/Handboker/Handbok-i-folkeregistrering/)
-* [Skal du ha to etternavn?](http://www.skatteetaten.no/no/Person/Folkeregister/Endre-navn/Skal-du-ha-to-etternavn/)
-
-# Eksempler
-
-|            Navn           |       Fornavn       | Mellomnavn | Etternavn   |
-|---------------------------|---------------------|------------|--------------|
-| Ole Olsen                 | Ole                 | -          | Olsen        |
-| Lise Sofie Fuglevik Olsen | Lise Sofie          | Fuglevik   | Olsen        |
-| Lise Sofie Fuglevik Olsen | Lise Sofie Fuglevik | -          | Olsen        |
-| Anne Kari Nilsen-Olsen    | Anne Kari           | -          | Nilsen-Olsen |
-</body>
-                </ownedComment>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_c25c1af274fcec02af" name="etternavn" visibility="public">
-                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_d86b375389cae4d531" value="1" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_d86b375389cae4d531" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d86b375389cae4d531">
-                  <body>Angir etternavn til en person.
-
-# Beskrivelse
-Etternavn. 
-
-# Format
-Ren tekst.
-
-# Eksempler
-
-[Se eksempler på Personnavn](/docs/komplekse_datatyper_personnavn)
-</body>
-                  </ownedComment>
-                </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_c1075f29e142938a2e" name="fornavn" visibility="public">
-                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_b73840796a94cb25ec" value="1" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_b73840796a94cb25ec" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_b73840796a94cb25ec">
-                  <body>Angir fornavn til en person.
-
-# Beskrivelse
-Fornavn. 
-
-# Format
-Ren tekst.
-
-# Eksempler
-
-[Se eksempler på Personnavn](/docs/komplekse_datatyper_personnavn)
-</body>
-                  </ownedComment>
-                </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_f2e868ccdb7f9e1a41" name="mellomnavn" visibility="public">
-                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_ec2c1d83658d722659" value="0" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_ec2c1d83658d722659" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_ec2c1d83658d722659">
-                  <body>Mellomnavn
-
-# Beskrivelse
-
-Mellomnavn
-
-# Format
-
-Ren tekst
-
-# Eksempler
-
-[Se eksempler på Personnavn](/docs/komplekse_datatyper_personnavn)
-</body>
-                  </ownedComment>
-                </ownedAttribute>
-              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a1caaaf9175ac05a30" visibility="public" start="EAID_CLS_16032b22e35475cac5" end="EAID_CLS_21de96a2eceefd70b9" />
             </packagedElement>
           </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_6167796250140b5466" name="Okonomi">
@@ -6118,19 +6118,10 @@ De aktuelle fagtypene i henhold til [Registreringshåndboken A05](http://regbok.u
 </body>
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_5297fb1c9776456f97" general="EAID_CLS_a62447c9dd60a973b1" start="EAID_CLS_e92c2079bc89c6d11a" end="EAID_CLS_a62447c9dd60a973b1" />
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_3527cafe99d4187739" name="faggruppe" visibility="public">
-                <type xmi:idref="EAID_CLS_a7dee6f3f81a7ce38f" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_7189eae93dab8a0f44" value="0" />
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_UPR_7189eae93dab8a0f44" value="*" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7189eae93dab8a0f44">
-                  <body>Faggruppe for faget.
-</body>
-                  </ownedComment>
-                </ownedAttribute>
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a01add91a916a77b6b" visibility="public" start="EAID_CLS_e92c2079bc89c6d11a" end="EAID_CLS_c317e0b3ba883a1162" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_a7dee6f3f81a7ce38f" name="Faggruppe">
-              <properties documentation="Gruppe av elever som mottar undervisning i samme fag.&#10;&#10;# Beskrivelse&#10;&#10;Undervisningsgrupper har vanligvis en kode, men denne er lokalt definert, og varierer fra skole til skole, og fra fylke til fylke.&#10;&#10;Denne grupperingen omhandler faglig organisering av undervisningen.&#10;&#10;Se også [Undervisningsgruppe](/docs/timeplan_undervisningsgruppe).&#10;" />
+              <properties documentation="Gruppe av elever som mottar undervisning i samme fag.&#10;&#10;# Beskrivelse&#10;&#10;Undervisningsgrupper har vanligvis en kode, men denne er lokalt definert, og varierer fra skole til skole, og fra fylke til fylke.&#10;&#10;Denne grupperingen omhandler faglig organisering av undervisningen.&#10;&#10;Se også [Undervisningsgruppe](/docs/timeplan_undervisningsgruppe).&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_56f93726491290a9f4">
                 <body>Gruppe av elever som mottar undervisning i samme fag.
 
@@ -6143,6 +6134,7 @@ Denne grupperingen omhandler faglig organisering av undervisningen.
 Se også [Undervisningsgruppe](/docs/timeplan_undervisningsgruppe).
 </body>
                 </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_56f93726491290a9f4" general="EAID_CLS_a62447c9dd60a973b1" start="EAID_CLS_a7dee6f3f81a7ce38f" end="EAID_CLS_a62447c9dd60a973b1" />
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_e07fe1f8b439b24b60" visibility="public" start="EAID_CLS_a7dee6f3f81a7ce38f" end="EAID_CLS_e92c2079bc89c6d11a" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_fdf6fbd6a5eea3baff" visibility="public" start="EAID_CLS_a7dee6f3f81a7ce38f" end="EAID_CLS_1235e64f5c06b787df" />
@@ -6153,15 +6145,6 @@ Se også [Undervisningsgruppe](/docs/timeplan_undervisningsgruppe).
 </body>
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_41e8ff78485ebdc1fd" general="EAID_CLS_0d161f922b39eccebe" start="EAID_CLS_1235e64f5c06b787df" end="EAID_CLS_0d161f922b39eccebe" />
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_bd870d0e590b261b40" name="faggruppe" visibility="public">
-                <type xmi:idref="EAID_CLS_a7dee6f3f81a7ce38f" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_ebeb1b7ab0a3b95c80" value="1" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_ebeb1b7ab0a3b95c80" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_ebeb1b7ab0a3b95c80">
-                  <body>Faggruppe det er medlemskap i.
-</body>
-                  </ownedComment>
-                </ownedAttribute>
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_6613563c654c1f89b6" name="Rom">
               <properties documentation="Rom hvor timene gjennomføres.&#10;" stereotype="hovedklasse" />
@@ -9105,51 +9088,100 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <model package2="EAID_PKG_f86973cf2c8168a1e8" ea_eleType="package" package="EAID_PKG_38f7bf53c51db64eb4" />
         <tags />
         </element>
-      <element xmi:idref="EAID_CLS_16032b22e35475cac5" idref="EAID_CLS_16032b22e35475cac5" xmi:type="uml:Class" type="Class" name="Adresse" scope="public">
+      <element xmi:idref="EAID_CLS_4794cf60ccc021eafe" idref="EAID_CLS_4794cf60ccc021eafe" xmi:type="uml:Class" type="Class" name="Matrikkelnummer" scope="public">
         <model package="EAID_PKG_f86973cf2c8168a1e8" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Fysisk adresse eller postadresse.&#10;&#10;# Beskrivelse&#10;&#10;Dette kan enten være en postadresse eller en fysisk adresse som det er mulig å besøke.&#10;&#10;# Eksempel&#10;&#10;|               adresse               |    poststed    | postnummer | land |&#10;|-------------------------------------|----------------|------------|------|&#10;| Nydalen allé 11                     | Oslo           |       0484 | NO   |&#10;| Fakturamottak&amp;lt;br&amp;gt;Postboks 501 Lund  | Kristiansand   |       4605 | -    |&#10;| Postboks 517 Lundsiden              | KRISTIANSAND S |       4605 | -    |&#10;&#10;&#10;# Referanser&#10;&#10;- http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-postmottakere-i-norge&#10;- http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-mottakere-i-utlandet&#10;" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Entydig identifisering av metrikkelenhet innen kommune, definert i matrikkelforskriften § 7.&#10;" />
         <attributes>
-          <attribute xmi:idref="EAID_PRP_ca1bd83c3d21a06e69" idref="EAID_PRP_ca1bd83c3d21a06e69" name="adresselinje">
-            <properties type="string" />
-            <bounds lower="0" upper="*" />
+          <attribute xmi:idref="EAID_PRP_106c6fed4196865391" idref="EAID_PRP_106c6fed4196865391" name="adresse">
+            <properties type="Adresse" />
+            <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Adresseinformasjon&#10;&#10;# Beskrivelse&#10;&#10;Adresseinformasjon. Linjer representeres hver for seg, fra øverst til nederst.&#10;&#10;Dette kan være:&#10;* Gateadresse&#10;* Postboksadresse&#10;* Bolignummer&#10;* C/O adresse&#10;* Attn:&#10;* Mottak på vegne av andre&#10;&#10;# Format&#10;&#10;Som dokumentert i [referanser fra klassen](Class:Adresse).&#10;&#10;# Eksempler&#10;&#10;Se [eksempler fra klassen](Class:Adresse).&#10;" />
+            <documentation value="Adresse til matrikkelenhet.&#10;" />
             <tags />
             </attribute>
-          <attribute xmi:idref="EAID_PRP_ef16ae6f5fe55de365" idref="EAID_PRP_ef16ae6f5fe55de365" name="postnummer">
+          <attribute xmi:idref="EAID_PRP_7b28e88a52cb91cd57" idref="EAID_PRP_7b28e88a52cb91cd57" name="bruksnummer">
             <properties type="string" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Postnummer&#10;&#10;# Beskrivelse&#10;&#10;&#10;# Format&#10;&#10;&#10;# Eksempler&#10;" />
+            <documentation value="Fortløpende nummerering av bruk under gårdsnummer&#10;" />
             <tags />
             </attribute>
-          <attribute xmi:idref="EAID_PRP_466edee5d5b2f6f1d9" idref="EAID_PRP_466edee5d5b2f6f1d9" name="poststed">
+          <attribute xmi:idref="EAID_PRP_af2add38f28d0d0206" idref="EAID_PRP_af2add38f28d0d0206" name="festenummer">
             <properties type="string" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Poststed&#10;&#10;# Beskrivelse&#10;&#10;&#10;# Format&#10;&#10;&#10;# Eksempler&#10;" />
+            <documentation value="Fortløpende nummerering av fester under gårdsnummer/bruksnummer&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_773815bcbf468b894c" idref="EAID_PRP_773815bcbf468b894c" name="gårdsnummer">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Nummerering av gårdsenhet i matrikkelen, nummeret er unikt innenfor kommune&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_cc2402cb902f2c0b35" idref="EAID_PRP_cc2402cb902f2c0b35" name="seksjonsnummer">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Fortløpende nummerering av seksjoner under gårdsnummer/bruksnummer og eventuelt festenummer&#10;" />
             <tags />
             </attribute>
           </attributes>
         </element>
-      <element xmi:idref="EAID_CLS_46d2316789ea33b875" idref="EAID_CLS_46d2316789ea33b875" xmi:type="uml:Class" type="Class" name="Identifikator" scope="public">
+      <element xmi:idref="EAID_CLS_ef652e54b0a0aaa309" idref="EAID_CLS_ef652e54b0a0aaa309" xmi:type="uml:Class" type="Class" name="Personnavn" scope="public">
         <model package="EAID_PKG_f86973cf2c8168a1e8" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Unik identifikasjon til et objekt.&#10;&#10;# Beskrivelse&#10;&#10;En kombinasjon av tegn eller og/eller bokstaver som unikt identifiserer et objekt blant andre objekter av samme type uten arv.&#10;&#10;Identifikatorer må være stabile over tid, og henvise til samme objekt.&#10;&#10;Dersom identifikatorer konstrueres av sammensatte verdier må særskilt hensyn tas for å sikre at identifikatorverdien ikke endres over tid.&#10;&#10;# Eksempel&#10;&#10;Kan for eksempel brukes til å identifisere en person ut fra fødselsnummer eller ansattnummer.&#10;&#10;* For en person kan det være fødselsnummer&#10;* For er personresurs kan det være ansattnummer eller signatur&#10;* For er elev kan det være elevnummer.&#10;* For organisasjonselement kan det være organisasjonsnummer fra Enhetsregistret.&#10;* systemId kan være objektID eller rowID i underliggende database, dersom denne er stabil over tid.&#10;" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Angir navn til en person&#10;&#10;# Beskrivelse&#10;&#10;Inneholder fornavn og etternavn for å beskrive navn til en person.&#10;&#10;Fornavn, mellomnavn og etternavn skal leveres fra fagsystemene som de er, uten noe endringer.&#10;&#10;# Referanse&#10;&#10;* [Navneloven](https://lovdata.no/dokument/NL/lov/2002-06-07-19/)&#10;* [Håndbok i folkeregistrering](http://www.skatteetaten.no/no/Radgiver/Rettskilder/Handboker/Handbok-i-folkeregistrering/)&#10;* [Skal du ha to etternavn?](http://www.skatteetaten.no/no/Person/Folkeregister/Endre-navn/Skal-du-ha-to-etternavn/)&#10;&#10;# Eksempler&#10;&#10;|            Navn           |       Fornavn       | Mellomnavn | Etternavn   |&#10;|---------------------------|---------------------|------------|--------------|&#10;| Ole Olsen                 | Ole                 | -          | Olsen        |&#10;| Lise Sofie Fuglevik Olsen | Lise Sofie          | Fuglevik   | Olsen        |&#10;| Lise Sofie Fuglevik Olsen | Lise Sofie Fuglevik | -          | Olsen        |&#10;| Anne Kari Nilsen-Olsen    | Anne Kari           | -          | Nilsen-Olsen |&#10;" />
         <attributes>
-          <attribute xmi:idref="EAID_PRP_c65ab60f17c3db0bd1" idref="EAID_PRP_c65ab60f17c3db0bd1" name="gyldighetsperiode">
-            <properties type="Periode" />
-            <bounds lower="0" upper="1" />
-            <stereotype stereotype="" />
-            <documentation value="Perioden, gitt i form av fra-og-med-dato og til-dato, som en gitt identifikator er gyldig.&#10;" />
-            <tags />
-            </attribute>
-          <attribute xmi:idref="EAID_PRP_500d7d0849db5cf4ee" idref="EAID_PRP_500d7d0849db5cf4ee" name="identifikatorverdi">
+          <attribute xmi:idref="EAID_PRP_c25c1af274fcec02af" idref="EAID_PRP_c25c1af274fcec02af" name="etternavn">
             <properties type="string" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="En konkret kombinasjonen av tegn og/eller bokstaver som utgjør en bestemt identifikator.&#10;&#10;# Krav til identifikatorverdi&#10;&#10;- Må være et gyldig URI &quot;path segment&quot;, ref. https://tools.ietf.org/html/rfc3986#section-3.3&#10;- Må unikt identifisere en instans av en gitt type&#10;- Kan ikke være tom&#10;&#10;# Eksempel&#10;&#10;For eksempel et fødselsnummer, ansattnummer, etc.&#10;" />
+            <documentation value="Angir etternavn til en person.&#10;&#10;# Beskrivelse&#10;Etternavn. &#10;&#10;# Format&#10;Ren tekst.&#10;&#10;# Eksempler&#10;&#10;[Se eksempler på Personnavn](/docs/komplekse_datatyper_personnavn)&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_c1075f29e142938a2e" idref="EAID_PRP_c1075f29e142938a2e" name="fornavn">
+            <properties type="string" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Angir fornavn til en person.&#10;&#10;# Beskrivelse&#10;Fornavn. &#10;&#10;# Format&#10;Ren tekst.&#10;&#10;# Eksempler&#10;&#10;[Se eksempler på Personnavn](/docs/komplekse_datatyper_personnavn)&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_f2e868ccdb7f9e1a41" idref="EAID_PRP_f2e868ccdb7f9e1a41" name="mellomnavn">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Mellomnavn&#10;&#10;# Beskrivelse&#10;&#10;Mellomnavn&#10;&#10;# Format&#10;&#10;Ren tekst&#10;&#10;# Eksempler&#10;&#10;[Se eksempler på Personnavn](/docs/komplekse_datatyper_personnavn)&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_ffdb8cc4adee01331a" idref="EAID_CLS_ffdb8cc4adee01331a" xmi:type="uml:Class" type="Class" name="Periode" scope="public">
+        <model package="EAID_PKG_f86973cf2c8168a1e8" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Tidsperiode (start- og sluttdato).&#10;&#10;# Beskrivelse&#10;&#10;Tidsperiode (start- og sluttdato).&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Eksempel&#10;&#10;Et arbeidsforhold kan ha gyldighetsperiode:&#10;* Fra 1999.01.01T00:00:00Z til ubestemt tid&#10;* Fra 1999.01.01T00:00:00Z til 2005.01.01T00:00:00Z&#10;" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_b6ec2bd8bfa90a028e" idref="EAID_PRP_b6ec2bd8bfa90a028e" name="beskrivelse">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Brukes til å sette beskrivende navn på perioden.&#10;&#10;# Eksempel&#10;&#10;* 2010 – kalenderår&#10;* 2010/2011 – skoleår&#10;* H2010 – høstsemesteret&#10;* V2011 – vårsemesteret&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_859ee6174b38f53a31" idref="EAID_PRP_859ee6174b38f53a31" name="slutt">
+            <properties type="datetime" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Til dato&#10;&#10;# Beskrivelse&#10;&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Format&#10;&#10;Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601)&#10;&#10;Dersom klokkeslett ikke er definert, skal 00:00:00Z benyttes.&#10;&#10;YYYY-MM-DDThh:mm:ssZ&#10;&#10;# Eksempel&#10;&#10;1999.01.01T00:00:00Z&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_193ae2b0dd4cb84fac" idref="EAID_PRP_193ae2b0dd4cb84fac" name="start">
+            <properties type="datetime" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Fra dato&#10;&#10;# Beskrivelse&#10;&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Format&#10;&#10;Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601)&#10;&#10;Dersom klokkeslett ikke er definert,skal 00:00:00Z benyttes.&#10;&#10;YYYY-MM-DDThh:mm:ssZ&#10;&#10;# Eksempel&#10;&#10;1999.01.01T00:00:00Z&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -9196,100 +9228,51 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             </attribute>
           </attributes>
         </element>
-      <element xmi:idref="EAID_CLS_4794cf60ccc021eafe" idref="EAID_CLS_4794cf60ccc021eafe" xmi:type="uml:Class" type="Class" name="Matrikkelnummer" scope="public">
+      <element xmi:idref="EAID_CLS_46d2316789ea33b875" idref="EAID_CLS_46d2316789ea33b875" xmi:type="uml:Class" type="Class" name="Identifikator" scope="public">
         <model package="EAID_PKG_f86973cf2c8168a1e8" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Entydig identifisering av metrikkelenhet innen kommune, definert i matrikkelforskriften § 7.&#10;" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Unik identifikasjon til et objekt.&#10;&#10;# Beskrivelse&#10;&#10;En kombinasjon av tegn eller og/eller bokstaver som unikt identifiserer et objekt blant andre objekter av samme type uten arv.&#10;&#10;Identifikatorer må være stabile over tid, og henvise til samme objekt.&#10;&#10;Dersom identifikatorer konstrueres av sammensatte verdier må særskilt hensyn tas for å sikre at identifikatorverdien ikke endres over tid.&#10;&#10;# Eksempel&#10;&#10;Kan for eksempel brukes til å identifisere en person ut fra fødselsnummer eller ansattnummer.&#10;&#10;* For en person kan det være fødselsnummer&#10;* For er personresurs kan det være ansattnummer eller signatur&#10;* For er elev kan det være elevnummer.&#10;* For organisasjonselement kan det være organisasjonsnummer fra Enhetsregistret.&#10;* systemId kan være objektID eller rowID i underliggende database, dersom denne er stabil over tid.&#10;" />
         <attributes>
-          <attribute xmi:idref="EAID_PRP_106c6fed4196865391" idref="EAID_PRP_106c6fed4196865391" name="adresse">
-            <properties type="Adresse" />
+          <attribute xmi:idref="EAID_PRP_c65ab60f17c3db0bd1" idref="EAID_PRP_c65ab60f17c3db0bd1" name="gyldighetsperiode">
+            <properties type="Periode" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Adresse til matrikkelenhet.&#10;" />
+            <documentation value="Perioden, gitt i form av fra-og-med-dato og til-dato, som en gitt identifikator er gyldig.&#10;" />
             <tags />
             </attribute>
-          <attribute xmi:idref="EAID_PRP_7b28e88a52cb91cd57" idref="EAID_PRP_7b28e88a52cb91cd57" name="bruksnummer">
+          <attribute xmi:idref="EAID_PRP_500d7d0849db5cf4ee" idref="EAID_PRP_500d7d0849db5cf4ee" name="identifikatorverdi">
             <properties type="string" />
-            <bounds lower="0" upper="1" />
+            <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Fortløpende nummerering av bruk under gårdsnummer&#10;" />
-            <tags />
-            </attribute>
-          <attribute xmi:idref="EAID_PRP_af2add38f28d0d0206" idref="EAID_PRP_af2add38f28d0d0206" name="festenummer">
-            <properties type="string" />
-            <bounds lower="0" upper="1" />
-            <stereotype stereotype="" />
-            <documentation value="Fortløpende nummerering av fester under gårdsnummer/bruksnummer&#10;" />
-            <tags />
-            </attribute>
-          <attribute xmi:idref="EAID_PRP_773815bcbf468b894c" idref="EAID_PRP_773815bcbf468b894c" name="gårdsnummer">
-            <properties type="string" />
-            <bounds lower="0" upper="1" />
-            <stereotype stereotype="" />
-            <documentation value="Nummerering av gårdsenhet i matrikkelen, nummeret er unikt innenfor kommune&#10;" />
-            <tags />
-            </attribute>
-          <attribute xmi:idref="EAID_PRP_cc2402cb902f2c0b35" idref="EAID_PRP_cc2402cb902f2c0b35" name="seksjonsnummer">
-            <properties type="string" />
-            <bounds lower="0" upper="1" />
-            <stereotype stereotype="" />
-            <documentation value="Fortløpende nummerering av seksjoner under gårdsnummer/bruksnummer og eventuelt festenummer&#10;" />
+            <documentation value="En konkret kombinasjonen av tegn og/eller bokstaver som utgjør en bestemt identifikator.&#10;&#10;# Krav til identifikatorverdi&#10;&#10;- Må være et gyldig URI &quot;path segment&quot;, ref. https://tools.ietf.org/html/rfc3986#section-3.3&#10;- Må unikt identifisere en instans av en gitt type&#10;- Kan ikke være tom&#10;&#10;# Eksempel&#10;&#10;For eksempel et fødselsnummer, ansattnummer, etc.&#10;" />
             <tags />
             </attribute>
           </attributes>
         </element>
-      <element xmi:idref="EAID_CLS_ffdb8cc4adee01331a" idref="EAID_CLS_ffdb8cc4adee01331a" xmi:type="uml:Class" type="Class" name="Periode" scope="public">
+      <element xmi:idref="EAID_CLS_16032b22e35475cac5" idref="EAID_CLS_16032b22e35475cac5" xmi:type="uml:Class" type="Class" name="Adresse" scope="public">
         <model package="EAID_PKG_f86973cf2c8168a1e8" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Tidsperiode (start- og sluttdato).&#10;&#10;# Beskrivelse&#10;&#10;Tidsperiode (start- og sluttdato).&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Eksempel&#10;&#10;Et arbeidsforhold kan ha gyldighetsperiode:&#10;* Fra 1999.01.01T00:00:00Z til ubestemt tid&#10;* Fra 1999.01.01T00:00:00Z til 2005.01.01T00:00:00Z&#10;" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Fysisk adresse eller postadresse.&#10;&#10;# Beskrivelse&#10;&#10;Dette kan enten være en postadresse eller en fysisk adresse som det er mulig å besøke.&#10;&#10;# Eksempel&#10;&#10;|               adresse               |    poststed    | postnummer | land |&#10;|-------------------------------------|----------------|------------|------|&#10;| Nydalen allé 11                     | Oslo           |       0484 | NO   |&#10;| Fakturamottak&amp;lt;br&amp;gt;Postboks 501 Lund  | Kristiansand   |       4605 | -    |&#10;| Postboks 517 Lundsiden              | KRISTIANSAND S |       4605 | -    |&#10;&#10;&#10;# Referanser&#10;&#10;- http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-postmottakere-i-norge&#10;- http://www.bring.no/radgivning/sende-noe/klargjoring/klargjoring-adressert/adressering-til-mottakere-i-utlandet&#10;" />
         <attributes>
-          <attribute xmi:idref="EAID_PRP_b6ec2bd8bfa90a028e" idref="EAID_PRP_b6ec2bd8bfa90a028e" name="beskrivelse">
+          <attribute xmi:idref="EAID_PRP_ca1bd83c3d21a06e69" idref="EAID_PRP_ca1bd83c3d21a06e69" name="adresselinje">
+            <properties type="string" />
+            <bounds lower="0" upper="*" />
+            <stereotype stereotype="" />
+            <documentation value="Adresseinformasjon&#10;&#10;# Beskrivelse&#10;&#10;Adresseinformasjon. Linjer representeres hver for seg, fra øverst til nederst.&#10;&#10;Dette kan være:&#10;* Gateadresse&#10;* Postboksadresse&#10;* Bolignummer&#10;* C/O adresse&#10;* Attn:&#10;* Mottak på vegne av andre&#10;&#10;# Format&#10;&#10;Som dokumentert i [referanser fra klassen](Class:Adresse).&#10;&#10;# Eksempler&#10;&#10;Se [eksempler fra klassen](Class:Adresse).&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_ef16ae6f5fe55de365" idref="EAID_PRP_ef16ae6f5fe55de365" name="postnummer">
             <properties type="string" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Brukes til å sette beskrivende navn på perioden.&#10;&#10;# Eksempel&#10;&#10;* 2010 – kalenderår&#10;* 2010/2011 – skoleår&#10;* H2010 – høstsemesteret&#10;* V2011 – vårsemesteret&#10;" />
+            <documentation value="Postnummer&#10;&#10;# Beskrivelse&#10;&#10;&#10;# Format&#10;&#10;&#10;# Eksempler&#10;" />
             <tags />
             </attribute>
-          <attribute xmi:idref="EAID_PRP_859ee6174b38f53a31" idref="EAID_PRP_859ee6174b38f53a31" name="slutt">
-            <properties type="datetime" />
-            <bounds lower="0" upper="1" />
-            <stereotype stereotype="" />
-            <documentation value="Til dato&#10;&#10;# Beskrivelse&#10;&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Format&#10;&#10;Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601)&#10;&#10;Dersom klokkeslett ikke er definert, skal 00:00:00Z benyttes.&#10;&#10;YYYY-MM-DDThh:mm:ssZ&#10;&#10;# Eksempel&#10;&#10;1999.01.01T00:00:00Z&#10;" />
-            <tags />
-            </attribute>
-          <attribute xmi:idref="EAID_PRP_193ae2b0dd4cb84fac" idref="EAID_PRP_193ae2b0dd4cb84fac" name="start">
-            <properties type="datetime" />
-            <bounds lower="1" upper="1" />
-            <stereotype stereotype="" />
-            <documentation value="Fra dato&#10;&#10;# Beskrivelse&#10;&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Format&#10;&#10;Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601)&#10;&#10;Dersom klokkeslett ikke er definert,skal 00:00:00Z benyttes.&#10;&#10;YYYY-MM-DDThh:mm:ssZ&#10;&#10;# Eksempel&#10;&#10;1999.01.01T00:00:00Z&#10;" />
-            <tags />
-            </attribute>
-          </attributes>
-        </element>
-      <element xmi:idref="EAID_CLS_ef652e54b0a0aaa309" idref="EAID_CLS_ef652e54b0a0aaa309" xmi:type="uml:Class" type="Class" name="Personnavn" scope="public">
-        <model package="EAID_PKG_f86973cf2c8168a1e8" ea_eleType="element" />
-        <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Angir navn til en person&#10;&#10;# Beskrivelse&#10;&#10;Inneholder fornavn og etternavn for å beskrive navn til en person.&#10;&#10;Fornavn, mellomnavn og etternavn skal leveres fra fagsystemene som de er, uten noe endringer.&#10;&#10;# Referanse&#10;&#10;* [Navneloven](https://lovdata.no/dokument/NL/lov/2002-06-07-19/)&#10;* [Håndbok i folkeregistrering](http://www.skatteetaten.no/no/Radgiver/Rettskilder/Handboker/Handbok-i-folkeregistrering/)&#10;* [Skal du ha to etternavn?](http://www.skatteetaten.no/no/Person/Folkeregister/Endre-navn/Skal-du-ha-to-etternavn/)&#10;&#10;# Eksempler&#10;&#10;|            Navn           |       Fornavn       | Mellomnavn | Etternavn   |&#10;|---------------------------|---------------------|------------|--------------|&#10;| Ole Olsen                 | Ole                 | -          | Olsen        |&#10;| Lise Sofie Fuglevik Olsen | Lise Sofie          | Fuglevik   | Olsen        |&#10;| Lise Sofie Fuglevik Olsen | Lise Sofie Fuglevik | -          | Olsen        |&#10;| Anne Kari Nilsen-Olsen    | Anne Kari           | -          | Nilsen-Olsen |&#10;" />
-        <attributes>
-          <attribute xmi:idref="EAID_PRP_c25c1af274fcec02af" idref="EAID_PRP_c25c1af274fcec02af" name="etternavn">
-            <properties type="string" />
-            <bounds lower="1" upper="1" />
-            <stereotype stereotype="" />
-            <documentation value="Angir etternavn til en person.&#10;&#10;# Beskrivelse&#10;Etternavn. &#10;&#10;# Format&#10;Ren tekst.&#10;&#10;# Eksempler&#10;&#10;[Se eksempler på Personnavn](/docs/komplekse_datatyper_personnavn)&#10;" />
-            <tags />
-            </attribute>
-          <attribute xmi:idref="EAID_PRP_c1075f29e142938a2e" idref="EAID_PRP_c1075f29e142938a2e" name="fornavn">
-            <properties type="string" />
-            <bounds lower="1" upper="1" />
-            <stereotype stereotype="" />
-            <documentation value="Angir fornavn til en person.&#10;&#10;# Beskrivelse&#10;Fornavn. &#10;&#10;# Format&#10;Ren tekst.&#10;&#10;# Eksempler&#10;&#10;[Se eksempler på Personnavn](/docs/komplekse_datatyper_personnavn)&#10;" />
-            <tags />
-            </attribute>
-          <attribute xmi:idref="EAID_PRP_f2e868ccdb7f9e1a41" idref="EAID_PRP_f2e868ccdb7f9e1a41" name="mellomnavn">
+          <attribute xmi:idref="EAID_PRP_466edee5d5b2f6f1d9" idref="EAID_PRP_466edee5d5b2f6f1d9" name="poststed">
             <properties type="string" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Mellomnavn&#10;&#10;# Beskrivelse&#10;&#10;Mellomnavn&#10;&#10;# Format&#10;&#10;Ren tekst&#10;&#10;# Eksempler&#10;&#10;[Se eksempler på Personnavn](/docs/komplekse_datatyper_personnavn)&#10;" />
+            <documentation value="Poststed&#10;&#10;# Beskrivelse&#10;&#10;&#10;# Format&#10;&#10;&#10;# Eksempler&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -10067,35 +10050,19 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <model package="EAID_PKG_b9ee1761619271cf21" ea_eleType="element" />
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Emneområde i utdanning i henhold til læreplanverket.&#10;&#10;# Beskrivelse&#10;&#10;Utdanning gjennomføres i form av fag. Fag i videregående utdanning har en fagtype og en fagkode. Begge er definert i VIGO og Grep kodeverk.  For føring på vitnemål kan kun fagkoder fastsatt av Utdanningsdirektoratet benyttes.&#10;&#10;Fag og fagkoder kan slås opp hos Utdanningsdirektoratet på https://www.udir.no/laring-og-trivsel/lareplanverket/finn-fagkode/&#10;&#10;Fagkoder er også beskrevet i [Registreringshåndboken A04](http://regbok.udir.no/35004/3344/35042-1014304.html).&#10;&#10;# Fagtyper&#10;&#10;Fag grupperes etter  [Rundskriv Udir-01-2017](https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Innhold-i-opplaringen/udir-01-2017/) og skriv fra Utdanningsdirektoratet om [Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet, pkt 2.5](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/2-oppsett-av-vitnemal-og-kompetansebevis/#2.5-rekkefolge-for-foring-av-fag-og-fagtyper).&#10;&#10;De aktuelle fagtypene i henhold til [Registreringshåndboken A05](http://regbok.udir.no/35004/3344/35042-1014305.html) er:&#10;&#10;- Fellesfag&#10;- Felles programfag&#10;- Valgfrie programfag&#10;- Uspesifiserte programfag&#10;- Yrkesfaglig fordypning&#10;- Individuell opplæringsplan&#10;&#10;# Referanser&#10;&#10;* https://www.udir.no/laring-og-trivsel/lareplanverket/&#10;* https://www.udir.no/utdanningslopet/videregaende-opplaring/&#10;* http://regbok.udir.no/&#10;* http://grepwiki.udir.no/&#10;* https://www.vigo.no/vigokv/index.action&#10;" stereotype="hovedklasse" />
-        <attributes>
-          <attribute xmi:idref="EAID_PRP_3527cafe99d4187739" idref="EAID_PRP_3527cafe99d4187739" name="faggruppe">
-            <properties type="Faggruppe" />
-            <bounds lower="0" upper="*" />
-            <stereotype stereotype="" />
-            <documentation value="Faggruppe for faget.&#10;" />
-            <tags />
-            </attribute>
-          </attributes>
+        <attributes />
         </element>
       <element xmi:idref="EAID_CLS_a7dee6f3f81a7ce38f" idref="EAID_CLS_a7dee6f3f81a7ce38f" xmi:type="uml:Class" type="Class" name="Faggruppe" scope="public">
         <model package="EAID_PKG_b9ee1761619271cf21" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Gruppe av elever som mottar undervisning i samme fag.&#10;&#10;# Beskrivelse&#10;&#10;Undervisningsgrupper har vanligvis en kode, men denne er lokalt definert, og varierer fra skole til skole, og fra fylke til fylke.&#10;&#10;Denne grupperingen omhandler faglig organisering av undervisningen.&#10;&#10;Se også [Undervisningsgruppe](/docs/timeplan_undervisningsgruppe).&#10;" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Gruppe av elever som mottar undervisning i samme fag.&#10;&#10;# Beskrivelse&#10;&#10;Undervisningsgrupper har vanligvis en kode, men denne er lokalt definert, og varierer fra skole til skole, og fra fylke til fylke.&#10;&#10;Denne grupperingen omhandler faglig organisering av undervisningen.&#10;&#10;Se også [Undervisningsgruppe](/docs/timeplan_undervisningsgruppe).&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_1235e64f5c06b787df" idref="EAID_CLS_1235e64f5c06b787df" xmi:type="uml:Class" type="Class" name="Faggruppemedlemskap" scope="public">
         <model package="EAID_PKG_b9ee1761619271cf21" ea_eleType="element" />
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Medlemskap i faggruppe.&#10;" stereotype="hovedklasse" />
-        <attributes>
-          <attribute xmi:idref="EAID_PRP_bd870d0e590b261b40" idref="EAID_PRP_bd870d0e590b261b40" name="faggruppe">
-            <properties type="Faggruppe" />
-            <bounds lower="1" upper="1" />
-            <stereotype stereotype="" />
-            <documentation value="Faggruppe det er medlemskap i.&#10;" />
-            <tags />
-            </attribute>
-          </attributes>
+        <attributes />
         </element>
       <element xmi:idref="EAID_CLS_6613563c654c1f89b6" idref="EAID_CLS_6613563c654c1f89b6" xmi:type="uml:Class" type="Class" name="Rom" scope="public">
         <model package="EAID_PKG_b9ee1761619271cf21" ea_eleType="element" />
@@ -13699,23 +13666,6 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_a1caaaf9175ac05a30" idref="EAID_ASC_a1caaaf9175ac05a30" start="EAID_CLS_16032b22e35475cac5" end="EAID_CLS_21de96a2eceefd70b9">
-        <source xmi:idref="EAID_CLS_16032b22e35475cac5" idref="EAID_CLS_16032b22e35475cac5">
-          <model type="Class" name="Adresse" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_21de96a2eceefd70b9" idref="EAID_CLS_21de96a2eceefd70b9">
-          <model type="Class" name="Landkode" />
-          <role name="land" visibility="Public" />
-          <type multiplicity="0..1" />
-          <documentation value="Land hvor adressen befinner seg" />
-          <tags />
-          </target>
-        <properties ea_type="Association" direction="Source -&gt; Destination" />
-        <tags />
-        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_25cd5c8ec25d484e9a" idref="EAID_ASC_25cd5c8ec25d484e9a" start="EAID_CLS_4794cf60ccc021eafe" end="EAID_CLS_731db44765e710208d">
         <source xmi:idref="EAID_CLS_4794cf60ccc021eafe" idref="EAID_CLS_4794cf60ccc021eafe">
           <model type="Class" name="Matrikkelnummer" />
@@ -13728,6 +13678,23 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <role name="kommunenummer" visibility="Public" />
           <type multiplicity="0..1" />
           <documentation value="Nummerering av kommunen i henhold til Statistisk sentralbyrå sin offisielle liste" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_a1caaaf9175ac05a30" idref="EAID_ASC_a1caaaf9175ac05a30" start="EAID_CLS_16032b22e35475cac5" end="EAID_CLS_21de96a2eceefd70b9">
+        <source xmi:idref="EAID_CLS_16032b22e35475cac5" idref="EAID_CLS_16032b22e35475cac5">
+          <model type="Class" name="Adresse" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_21de96a2eceefd70b9" idref="EAID_CLS_21de96a2eceefd70b9">
+          <model type="Class" name="Landkode" />
+          <role name="land" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Land hvor adressen befinner seg" />
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
@@ -15355,6 +15322,22 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <tags />
           </target>
         <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_56f93726491290a9f4" idref="EAID_GEN_56f93726491290a9f4" start="EAID_CLS_a7dee6f3f81a7ce38f" end="EAID_CLS_a62447c9dd60a973b1">
+        <source xmi:idref="EAID_CLS_a7dee6f3f81a7ce38f" idref="EAID_CLS_a7dee6f3f81a7ce38f">
+          <model type="Class" name="Faggruppe" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_a62447c9dd60a973b1" idref="EAID_CLS_a62447c9dd60a973b1">
+          <model type="Class" name="Gruppe" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_e07fe1f8b439b24b60" idref="EAID_ASC_e07fe1f8b439b24b60" start="EAID_CLS_a7dee6f3f81a7ce38f" end="EAID_CLS_e92c2079bc89c6d11a">

@@ -47,17 +47,17 @@ classes:
       * https://www.vigo.no/vigokv/index.action
     is_a: Gruppe
     attributes:
-      faggruppe:
-        range: Faggruppe
-        inverse: fag
-        description: |
-          Faggruppe for faget.
-        multivalued: true
       eksamensgruppe:
         range: Eksamensgruppe
         inverse: fag
         description: |
           Alle relaterte eksamensgrupper
+        multivalued: true
+      faggruppe:
+        range: Faggruppe
+        inverse: fag
+        description: |
+          Faggruppe for faget.
         multivalued: true
       programområde:
         range: Programområde
@@ -91,6 +91,7 @@ classes:
       Denne grupperingen omhandler faglig organisering av undervisningen.
       
       Se også [Undervisningsgruppe](/docs/timeplan_undervisningsgruppe).
+    is_a: Gruppe
     attributes:
       fag:
         range: Fag
