@@ -786,6 +786,13 @@ classes:
           # Eksempler
           
           Se eksempel i Arbeidsforholdstype-kodeverk
+      arbeidslokasjon:
+        range: Arbeidslokasjon
+        inverse: arbeidsforhold
+        annotations:
+          primaryRelation: true
+        description: |
+          Fysisk lokasjon hvor den ansatte har sitt arbeidssted.
       arbeidssted:
         range: Organisasjonselement
         inverse: arbeidsforhold

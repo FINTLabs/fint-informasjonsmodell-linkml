@@ -11,6 +11,27 @@ imports:
 
 classes:
 
+  Arbeidslokasjon:
+    description: |
+      Fysisk lokasjon hvor en ansatt har sitt arbeidssted.
+    is_a: Enhet
+    attributes:
+      lokasjonskode:
+        range: Identifikator
+        description: |
+          Kode som identifiserer en arbeidslokasjon.
+        required: true
+      lokasjonsnavn:
+        range: string
+        description: |
+          Navn som beskriver en arbeidslokasjon.
+      arbeidsforhold:
+        range: Arbeidsforhold
+        inverse: arbeidslokasjon
+        description: |
+          Arbeidsforhold tilknyttet en arbeidslokasjon.
+        multivalued: true
+
   Organisasjonselement:
     description: |
       Et element i organisasjonsstrukturen

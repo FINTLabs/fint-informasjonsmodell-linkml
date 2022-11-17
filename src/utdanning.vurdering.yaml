@@ -440,6 +440,10 @@ classes:
           
           Fravær skal registreres i dager eller timer (60-minutters enheter). Det er ikke tillatt å konvertere timer til dager.
         required: true
+      faggruppe:
+        range: Faggruppe
+        description: |
+          Faggruppen det er registrert fravær fra.
       fraværstype:
         range: Fraværstype
         description: |
@@ -448,11 +452,11 @@ classes:
       registrertAv:
         range: Skoleressurs
         description: |
-          Den som har registrert fraværet.
+          Skoleressursen som har registrert fraværet.
       undervisningsgruppe:
         range: Undervisningsgruppe
         description: |
-          Undervisningsgruppe det er registrert fravær fra.
+          Undervisningsgruppen det er registrert fravær fra.
         required: true
 
   Halvårsfagvurdering:

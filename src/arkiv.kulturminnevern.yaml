@@ -35,6 +35,18 @@ classes:
         description: |
           Kulturminnets identifikator i Matrikkelen.
         required: true
+      tiltak:
+        range: string
+        annotations:
+          writeable: true
+        description: |
+          Beskriver hvilket tiltak som skal utføres på eiendommen. 
+          
+          ## Beskrivelse
+          Årsaken til at det søkes dispensasjon. 
+          
+          ## Eksempel
+          Eksempler kan være ‘Utskifting av vannledning’, ‘Etablering av landbruksvei’ og ‘Graving av grøft’
 
   TilskuddFartøy:
     description: |

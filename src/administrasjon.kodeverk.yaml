@@ -200,7 +200,7 @@ classes:
         inverse: myndighet
         description: |
           Alle fullmakter knyttet til kontodimensjonen.
-        deprecated: "Erstattes av relasjon til organisasjonselement og/eller relasjon til konkret kontodimensjon."
+        deprecated: "Relasjonen til fullmakt ble fjernet i v3.8.0"
         multivalued: true
 
   Kontrakt:

@@ -46,7 +46,7 @@ classes:
           primaryRelation: true
         description: |
           Del av kontodimensjon som Personalressurs har blitt delegert en fullmakt for.
-        deprecated: "Erstattes av relasjon til organisasjonselement og/eller relasjon til konkret kontodimensjon."
+        deprecated: "Relasjonen til fullmakt ble fjernet i v3.8.0"
         multivalued: true
       aktivitet:
         range: Aktivitet
