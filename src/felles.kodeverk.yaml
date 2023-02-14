@@ -4,6 +4,7 @@ name: felles.kodeverk
 imports:
   - linkml:types
   - felles.basisklasser
+  - felles.komplekse-datatyper
 
 classes:
 
@@ -42,4 +43,27 @@ classes:
           primaryRelation: true
         description: |
           Fylke som kommune hører i
+        required: true
+
+  Valuta:
+    description: |
+      Valutakodene for offisielle valutaer.
+      
+      # Referanse
+      I henhold til [ISO 4217](https://no.wikipedia.org/wiki/ISO_4217)
+    attributes:
+      bokstavkode:
+        range: Identifikator
+        description: |
+          Bokstavkode for aktuell valuta.
+        required: true
+      nummerkode:
+        range: Identifikator
+        description: |
+          Nummerkode for aktuell valuta.
+        required: true
+      navn:
+        range: string
+        description: |
+          Navn på valuta.
         required: true

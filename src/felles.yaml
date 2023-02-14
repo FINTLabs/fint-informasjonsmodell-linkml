@@ -12,6 +12,15 @@ imports:
 
 classes:
 
+  Virksomhet:
+    is_a: Enhet
+    attributes:
+      virksomhetsId:
+        range: Identifikator
+        description: |
+          Intern unik identifikator i økonomisystemet
+        required: true
+
   Kontaktperson:
     description: |
       Kontaktperson til en person.

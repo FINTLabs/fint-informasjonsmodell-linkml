@@ -3772,6 +3772,19 @@ Opplysninger i en personalmappe kan være personalia, arbeidskontrakt og annen ko
             </packagedElement>
           </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_38f7bf53c51db64eb4" name="Felles">
+          <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_ccb5d4e8b9f75f601d" name="Virksomhet">
+            <properties stereotype="hovedklasse" />
+            <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_be1200fcf09566be5f" general="EAID_CLS_2b24756f464cc1f31a" start="EAID_CLS_ccb5d4e8b9f75f601d" end="EAID_CLS_2b24756f464cc1f31a" />
+            <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_e9c7486e71e76e30c9" name="virksomhetsId" visibility="public">
+              <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_dee8ab94b5edab1a24" value="1" />
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_dee8ab94b5edab1a24" value="1" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_dee8ab94b5edab1a24">
+                <body>Intern unik identifikator i økonomisystemet
+</body>
+                </ownedComment>
+              </ownedAttribute>
+            </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_f5cc7e74d95638309a" name="Kontaktperson">
             <properties documentation="Kontaktperson til en person.&#10;&#10;# Beskrivelse&#10;&#10;Kontaktperson er personer som kan kontaktes dersom det er behov for det.&#10;&#10;Kontaktperson kalles også pårørende.&#10;" stereotype="hovedklasse" />
             <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7169e35666d2406bb6">
@@ -4166,6 +4179,43 @@ Kilde:
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_155f70c312208c3119" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_731db44765e710208d" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_6627612613ec4fbf5a" visibility="public" start="EAID_CLS_731db44765e710208d" end="EAID_CLS_f64277f4a90f494b7b" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_e9b5ec376bce4aae10" name="Valuta">
+              <properties documentation="Valutakodene for offisielle valutaer.&#10;&#10;# Referanse&#10;I henhold til [ISO 4217](https://no.wikipedia.org/wiki/ISO_4217)&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_8d1505fc9c660c9e93">
+                <body>Valutakodene for offisielle valutaer.
+
+# Referanse
+I henhold til [ISO 4217](https://no.wikipedia.org/wiki/ISO_4217)
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_4ff16b0cb1c84a32d7" name="bokstavkode" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_93b10bf34af195b598" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_93b10bf34af195b598" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_93b10bf34af195b598">
+                  <body>Bokstavkode for aktuell valuta.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_fde8954f33436ad0b9" name="nummerkode" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_029e6dbfcc5e8507ac" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_029e6dbfcc5e8507ac" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_029e6dbfcc5e8507ac">
+                  <body>Nummerkode for aktuell valuta.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_8f355e0f1a68e1e08f" name="navn" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_7b40763addabb6c0bb" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_7b40763addabb6c0bb" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7b40763addabb6c0bb">
+                  <body>Navn på valuta.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
             <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_4699b21dd27ec6815d" name="Iso">
               <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_6d25024112361642d4" name="Kjønn">
                 <properties documentation="Liste over verdier for kjønn basert på ISO/IEC 5218.&#10;&#10;# Beskrivelse&#10;&#10;Liste over verdier for kjønn basert på ISO/IEC 5218.&#10;&#10;Når vi i daglig tale prater om kjønn presiserer vi sjelden hva vi mener. Avhengig av sammenheng kan vi mene enten biologisk, sosialt, mentalt eller juridisk kjønn. Kjønn kan med andre ord betraktes som et samlebegrep.&#10;Kilde: llh.no  &#10;&#10;# Referanser&#10;&#10;* [FINT API for ISO/IEC 5218](https://api.felleskomponent.no/felles/kodeverk/kjonn)&#10;* [ISO/IEC 5218:2004](https://iso.org/standard/36266.html)&#10;* [Wikipedia artikkel](https://en.wikipedia.org/wiki/ISO/IEC_5218)&#10;&#10;# Eksempler&#10;&#10;    0 = uvisst (not known)&#10;    1 = mann (male)&#10;    2 = kvinne (female)&#10;    9 = gjelder ikke (not applicable)&#10;" stereotype="hovedklasse" />
@@ -5113,6 +5163,255 @@ Konteringen som varen har i økonomisystemet kan også angis.
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_418c3fdf254ccde610" visibility="public" start="EAID_CLS_d01a0ce1a131952555" end="EAID_CLS_484255e38d84c85a64" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_9ccd0751fae13e7092" visibility="public" start="EAID_CLS_d01a0ce1a131952555" end="EAID_CLS_88eb6fa6e16e9ed1c1" />
+            </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_723062f8814f44fcdb" name="Regnskap">
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_b7bd61ab91823f2e55" name="Bilag">
+              <properties documentation="Dokumentasjon til en transaksjon.&#10;" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a95429a607ecb983dc">
+                <body>Dokumentasjon til en transaksjon.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_7ffce78f7819136218" name="bilagsdato" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Date" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_a907aba6fbdb65b08f" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_a907aba6fbdb65b08f" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a907aba6fbdb65b08f">
+                  <body>Dato bilaget er registrert.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_ea586b0b7680f96027" name="bilagsnummer" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_02e8e879cc7dd8d468" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_02e8e879cc7dd8d468" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_02e8e879cc7dd8d468">
+                  <body>Nummer på bilaget.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_e6a3c9fd6c73fc5ff6" name="data" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_419b07b66596b9c728" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_419b07b66596b9c728" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_419b07b66596b9c728">
+                  <body>Bilagets fil, kodet som Base64.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_b0491c7fcfebe2597c" name="filnavn" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_3a30c64a19edaf5371" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_3a30c64a19edaf5371" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_3a30c64a19edaf5371">
+                  <body>Navn på bilagets fil.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_3bf410f40b59f4890c" name="referanse" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_9c15b0599dd6392b82" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_9c15b0599dd6392b82" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_9c15b0599dd6392b82">
+                  <body>Ekstern referanse, for eksempel fakturanummer.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_9fa3ca6b3efcecbf79" name="url" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_759a51f7cbf5d9e7e7" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_759a51f7cbf5d9e7e7" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_759a51f7cbf5d9e7e7">
+                  <body>URL til eksternt dokument.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_70bf942768e46ebd81" name="Leverandør">
+              <properties documentation="Person eller virksomhet som leverer produkter eller tjenester.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_6ae89c7598266183db">
+                <body>Person eller virksomhet som leverer produkter eller tjenester.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_cbc6633a905cd55904" name="leverandørnummer" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_d1d1c2f340c29e28eb" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_d1d1c2f340c29e28eb" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d1d1c2f340c29e28eb">
+                  <body>Nummer som identifiserer en leverandør.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_c0f1232b891acee03a" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_7546615e67e08bdab8" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_7546615e67e08bdab8" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7546615e67e08bdab8">
+                  <body>Intern identifikator i økonomisystemet.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_9db94f5e16500232c5" name="kontonummer" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_8e5490b6f4e8bdf3d8" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_8e5490b6f4e8bdf3d8" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_8e5490b6f4e8bdf3d8">
+                  <body>Kontonummer til leverandøren.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_551c294badfe50ad41" name="Leverandørgruppe">
+              <properties documentation="Gruppering av leverandører.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_b880b9efc6cc983780">
+                <body>Gruppering av leverandører.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_c005d4ebbb06dd4a54" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_c347f49c814e5a7e6a" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_c347f49c814e5a7e6a" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_c347f49c814e5a7e6a">
+                  <body>Intern unik identifikator i økonomisystemet.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_7615b397e4f9162885" name="navn" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_1d37cd70a7a651540f" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_1d37cd70a7a651540f" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_1d37cd70a7a651540f">
+                  <body>Navn på leverandørgruppen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_45bdccd1695f271c24" name="Postering">
+              <properties documentation="Føring på en konto i regnskapet.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_175094fdd1466889b5">
+                <body>Føring på en konto i regnskapet.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_bb8a2d4e956e4c7d08" name="posteringsId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_18e38f431a0887e7e6" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_18e38f431a0887e7e6" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_18e38f431a0887e7e6">
+                  <body>Intern unik identifikator i økonomisystemet.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_e39df981cd84eb4c7d" name="beløp" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Integer" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_fb1d3b4dc34fe77cd0" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_fb1d3b4dc34fe77cd0" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_fb1d3b4dc34fe77cd0">
+                  <body>Posteringens beløp med to desimaler.
+
+# Eksempel
+123,45 NOK tilsvarer verdien 12345.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_3e30c9af641f80cc9c" name="debet" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Boolean" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_9330470c41e0ba63ca" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_9330470c41e0ba63ca" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_9330470c41e0ba63ca">
+                  <body>Angir om posteringen er debet eller kredit.
+
+True: debet
+
+False: kredit
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_9a754346648909e975" name="kontering" visibility="public">
+                <type xmi:idref="EAID_CLS_f287e1ac31a6f4340e" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_915cd3d741dc38fc84" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_915cd3d741dc38fc84" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_915cd3d741dc38fc84">
+                  <body>Kontodimmensjoner for posteringen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_2d566cf85beace392e" visibility="public" start="EAID_CLS_45bdccd1695f271c24" end="EAID_CLS_f2894721405c98bf79" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_f2894721405c98bf79" name="Transaksjon">
+              <properties documentation="Overføring av penger til eller fra eksterne parter.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_705ec9cad6369f6f3b">
+                <body>Overføring av penger til eller fra eksterne parter.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_85e4eb626d29ac64cf" name="transaksjonsId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_d55630201a86ab3301" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_d55630201a86ab3301" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d55630201a86ab3301">
+                  <body>Intern unik identifikator i økonomisystemet.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_2ab200bf205212108b" name="beløp" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Integer" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_0dce3c62c2d7671fb0" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_0dce3c62c2d7671fb0" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_0dce3c62c2d7671fb0">
+                  <body>Transaksjonens beløp med to desimaler.
+
+# Eksempel
+123,45 NOK tilsvarer verdien 12345.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_2665f15db253b95212" name="beskrivelse" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_2ccfa5434051b9b748" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_2ccfa5434051b9b748" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_2ccfa5434051b9b748">
+                  <body>Beskrivelse av transaksjonen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_2bb3b311872b8ed08a" name="bilag" visibility="public">
+                <type xmi:idref="EAID_CLS_b7bd61ab91823f2e55" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_e1fea603f925afe520" value="0" />
+                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_UPR_e1fea603f925afe520" value="*" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_e1fea603f925afe520">
+                  <body>Bilag til transaksjonen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_91887b99226e1d490a" name="forfallsdato" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Date" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_6c329d95e86e2b64ff" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_6c329d95e86e2b64ff" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_6c329d95e86e2b64ff">
+                  <body>Dato transaksjonen forfaller.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_bfa5ca192cae19c19f" name="oppdateringstidspunkt" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#DateTime" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_066ec3d4b4126b6bbd" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_066ec3d4b4126b6bbd" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_066ec3d4b4126b6bbd">
+                  <body>Tidspunkt for siste endring i transaksjonen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_f48831da14e9d6ebb7" name="transaksjonstidspunkt" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#DateTime" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_a8a125095278bce1f4" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_a8a125095278bce1f4" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a8a125095278bce1f4">
+                  <body>Tidspunkt for registrering av transaksjonen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_74b30f8c095e285c29" visibility="public" start="EAID_CLS_f2894721405c98bf79" end="EAID_CLS_7f69968205107fe6de" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_e9c978e0491bd9134a" visibility="public" start="EAID_CLS_f2894721405c98bf79" end="EAID_CLS_70bf942768e46ebd81" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_68b28eecf8b8ac3fc7" visibility="public" start="EAID_CLS_f2894721405c98bf79" end="EAID_CLS_e9b5ec376bce4aae10" />
             </packagedElement>
           </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_b51dbf691147b92836" name="Personvern">
@@ -7275,6 +7574,20 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <tags />
         <properties stereotype="ApplicationSchema" />
         </element>
+      <element xmi:idref="EAID_CLS_ccb5d4e8b9f75f601d" idref="EAID_CLS_ccb5d4e8b9f75f601d" xmi:type="uml:Class" type="Class" name="Virksomhet" scope="public">
+        <model package="EAID_PKG_38f7bf53c51db64eb4" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_e9c7486e71e76e30c9" idref="EAID_PRP_e9c7486e71e76e30c9" name="virksomhetsId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Intern unik identifikator i økonomisystemet&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
       <element xmi:idref="EAID_CLS_f5cc7e74d95638309a" idref="EAID_CLS_f5cc7e74d95638309a" xmi:type="uml:Class" type="Class" name="Kontaktperson" scope="public">
         <model package="EAID_PKG_38f7bf53c51db64eb4" ea_eleType="element" />
         <tags />
@@ -9155,6 +9468,34 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties isAbstract="false" sType="Class" scope="public" documentation="Liste over Norges kommuner&#10;&#10;Kilde:&#10;&#10;* &quot;SSB. Kommuneinndeling 2017&quot;:http://www.ssb.no/klass/#!/klassifikasjoner/131&#10;* &quot;data.norge.no om kommuneinndeling&quot;:http://data.norge.no/data/statistisk-sentralbyr%C3%A5/kommuneinndeling&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
+      <element xmi:idref="EAID_CLS_e9b5ec376bce4aae10" idref="EAID_CLS_e9b5ec376bce4aae10" xmi:type="uml:Class" type="Class" name="Valuta" scope="public">
+        <model package="EAID_PKG_7356e937b9da6c2de4" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Valutakodene for offisielle valutaer.&#10;&#10;# Referanse&#10;I henhold til [ISO 4217](https://no.wikipedia.org/wiki/ISO_4217)&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_4ff16b0cb1c84a32d7" idref="EAID_PRP_4ff16b0cb1c84a32d7" name="bokstavkode">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Bokstavkode for aktuell valuta.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_fde8954f33436ad0b9" idref="EAID_PRP_fde8954f33436ad0b9" name="nummerkode">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Nummerkode for aktuell valuta.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_8f355e0f1a68e1e08f" idref="EAID_PRP_8f355e0f1a68e1e08f" name="navn">
+            <properties type="string" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Navn på valuta.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
       <element xmi:idref="EAID_PKG_f86973cf2c8168a1e8" idref="EAID_PKG_f86973cf2c8168a1e8" xmi:type="uml:Package" type="Package" name="Kompleksedatatyper" scope="public">
         <model package2="EAID_PKG_f86973cf2c8168a1e8" ea_eleType="package" package="EAID_PKG_38f7bf53c51db64eb4" />
         <tags />
@@ -9582,6 +9923,199 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <bounds lower="1" upper="1" />
             <stereotype stereotype="writable" />
             <documentation value="Varens pris per enhet i vareregisteret, i øre.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_PKG_723062f8814f44fcdb" idref="EAID_PKG_723062f8814f44fcdb" xmi:type="uml:Package" type="Package" name="Regnskap" scope="public">
+        <model package2="EAID_PKG_723062f8814f44fcdb" ea_eleType="package" package="EAID_PKG_6167796250140b5466" />
+        <tags />
+        </element>
+      <element xmi:idref="EAID_CLS_b7bd61ab91823f2e55" idref="EAID_CLS_b7bd61ab91823f2e55" xmi:type="uml:Class" type="Class" name="Bilag" scope="public">
+        <model package="EAID_PKG_723062f8814f44fcdb" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Dokumentasjon til en transaksjon.&#10;" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_7ffce78f7819136218" idref="EAID_PRP_7ffce78f7819136218" name="bilagsdato">
+            <properties type="date" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Dato bilaget er registrert.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_ea586b0b7680f96027" idref="EAID_PRP_ea586b0b7680f96027" name="bilagsnummer">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Nummer på bilaget.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_e6a3c9fd6c73fc5ff6" idref="EAID_PRP_e6a3c9fd6c73fc5ff6" name="data">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Bilagets fil, kodet som Base64.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_b0491c7fcfebe2597c" idref="EAID_PRP_b0491c7fcfebe2597c" name="filnavn">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Navn på bilagets fil.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_3bf410f40b59f4890c" idref="EAID_PRP_3bf410f40b59f4890c" name="referanse">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Ekstern referanse, for eksempel fakturanummer.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_9fa3ca6b3efcecbf79" idref="EAID_PRP_9fa3ca6b3efcecbf79" name="url">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="URL til eksternt dokument.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_70bf942768e46ebd81" idref="EAID_CLS_70bf942768e46ebd81" xmi:type="uml:Class" type="Class" name="Leverandør" scope="public">
+        <model package="EAID_PKG_723062f8814f44fcdb" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Person eller virksomhet som leverer produkter eller tjenester.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_cbc6633a905cd55904" idref="EAID_PRP_cbc6633a905cd55904" name="leverandørnummer">
+            <properties type="Identifikator" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Nummer som identifiserer en leverandør.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_c0f1232b891acee03a" idref="EAID_PRP_c0f1232b891acee03a" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Intern identifikator i økonomisystemet.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_9db94f5e16500232c5" idref="EAID_PRP_9db94f5e16500232c5" name="kontonummer">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Kontonummer til leverandøren.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_551c294badfe50ad41" idref="EAID_CLS_551c294badfe50ad41" xmi:type="uml:Class" type="Class" name="Leverandørgruppe" scope="public">
+        <model package="EAID_PKG_723062f8814f44fcdb" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Gruppering av leverandører.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_c005d4ebbb06dd4a54" idref="EAID_PRP_c005d4ebbb06dd4a54" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Intern unik identifikator i økonomisystemet.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_7615b397e4f9162885" idref="EAID_PRP_7615b397e4f9162885" name="navn">
+            <properties type="string" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Navn på leverandørgruppen.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_45bdccd1695f271c24" idref="EAID_CLS_45bdccd1695f271c24" xmi:type="uml:Class" type="Class" name="Postering" scope="public">
+        <model package="EAID_PKG_723062f8814f44fcdb" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Føring på en konto i regnskapet.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_bb8a2d4e956e4c7d08" idref="EAID_PRP_bb8a2d4e956e4c7d08" name="posteringsId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Intern unik identifikator i økonomisystemet.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_e39df981cd84eb4c7d" idref="EAID_PRP_e39df981cd84eb4c7d" name="beløp">
+            <properties type="long" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Posteringens beløp med to desimaler.&#10;&#10;# Eksempel&#10;123,45 NOK tilsvarer verdien 12345.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_3e30c9af641f80cc9c" idref="EAID_PRP_3e30c9af641f80cc9c" name="debet">
+            <properties type="boolean" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Angir om posteringen er debet eller kredit.&#10;&#10;True: debet&#10;&#10;False: kredit&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_9a754346648909e975" idref="EAID_PRP_9a754346648909e975" name="kontering">
+            <properties type="Kontostreng" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Kontodimmensjoner for posteringen.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_f2894721405c98bf79" idref="EAID_CLS_f2894721405c98bf79" xmi:type="uml:Class" type="Class" name="Transaksjon" scope="public">
+        <model package="EAID_PKG_723062f8814f44fcdb" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Overføring av penger til eller fra eksterne parter.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_85e4eb626d29ac64cf" idref="EAID_PRP_85e4eb626d29ac64cf" name="transaksjonsId">
+            <properties type="Identifikator" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Intern unik identifikator i økonomisystemet.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_2ab200bf205212108b" idref="EAID_PRP_2ab200bf205212108b" name="beløp">
+            <properties type="long" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Transaksjonens beløp med to desimaler.&#10;&#10;# Eksempel&#10;123,45 NOK tilsvarer verdien 12345.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_2665f15db253b95212" idref="EAID_PRP_2665f15db253b95212" name="beskrivelse">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Beskrivelse av transaksjonen.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_2bb3b311872b8ed08a" idref="EAID_PRP_2bb3b311872b8ed08a" name="bilag">
+            <properties type="Bilag" />
+            <bounds lower="0" upper="*" />
+            <stereotype stereotype="writable" />
+            <documentation value="Bilag til transaksjonen.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_91887b99226e1d490a" idref="EAID_PRP_91887b99226e1d490a" name="forfallsdato">
+            <properties type="date" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Dato transaksjonen forfaller.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_bfa5ca192cae19c19f" idref="EAID_PRP_bfa5ca192cae19c19f" name="oppdateringstidspunkt">
+            <properties type="datetime" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Tidspunkt for siste endring i transaksjonen.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_f48831da14e9d6ebb7" idref="EAID_PRP_f48831da14e9d6ebb7" name="transaksjonstidspunkt">
+            <properties type="datetime" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Tidspunkt for registrering av transaksjonen.&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -10677,6 +11211,22 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         </element>
       </elements>
     <connectors>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_be1200fcf09566be5f" idref="EAID_GEN_be1200fcf09566be5f" start="EAID_CLS_ccb5d4e8b9f75f601d" end="EAID_CLS_2b24756f464cc1f31a">
+        <source xmi:idref="EAID_CLS_ccb5d4e8b9f75f601d" idref="EAID_CLS_ccb5d4e8b9f75f601d">
+          <model type="Class" name="Virksomhet" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_2b24756f464cc1f31a" idref="EAID_CLS_2b24756f464cc1f31a">
+          <model type="Class" name="Enhet" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_05ec9d6bbfc69ec075" idref="EAID_ASC_05ec9d6bbfc69ec075" start="EAID_CLS_f5cc7e74d95638309a" end="EAID_CLS_8548ca6ef4e9f948e9">
         <source xmi:idref="EAID_CLS_f5cc7e74d95638309a" idref="EAID_CLS_f5cc7e74d95638309a">
           <model type="Class" name="Kontaktperson" />
@@ -13954,6 +14504,75 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <role name="merverdiavgift" visibility="Public" />
           <type multiplicity="1" />
           <documentation value="Varens avgiftsklasse- og sats." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_2d566cf85beace392e" idref="EAID_ASC_2d566cf85beace392e" start="EAID_CLS_45bdccd1695f271c24" end="EAID_CLS_f2894721405c98bf79">
+        <source xmi:idref="EAID_CLS_45bdccd1695f271c24" idref="EAID_CLS_45bdccd1695f271c24">
+          <model type="Class" name="Postering" />
+          <role visibility="Public" name="postering" />
+          <type multiplicity="1..*" />
+          <documentation value="Posteringer tilhørende transaksjonen." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_f2894721405c98bf79" idref="EAID_CLS_f2894721405c98bf79">
+          <model type="Class" name="Transaksjon" />
+          <role name="transaksjon" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Transaksjonen posteringen tilhører." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_74b30f8c095e285c29" idref="EAID_ASC_74b30f8c095e285c29" start="EAID_CLS_f2894721405c98bf79" end="EAID_CLS_7f69968205107fe6de">
+        <source xmi:idref="EAID_CLS_f2894721405c98bf79" idref="EAID_CLS_f2894721405c98bf79">
+          <model type="Class" name="Transaksjon" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7f69968205107fe6de" idref="EAID_CLS_7f69968205107fe6de">
+          <model type="Class" name="Personalressurs" />
+          <role name="ansvarlig" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Ansatt som er ansvarlig for å godkjenne transaksjonen." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_e9c978e0491bd9134a" idref="EAID_ASC_e9c978e0491bd9134a" start="EAID_CLS_f2894721405c98bf79" end="EAID_CLS_70bf942768e46ebd81">
+        <source xmi:idref="EAID_CLS_f2894721405c98bf79" idref="EAID_CLS_f2894721405c98bf79">
+          <model type="Class" name="Transaksjon" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_70bf942768e46ebd81" idref="EAID_CLS_70bf942768e46ebd81">
+          <model type="Class" name="Leverandør" />
+          <role name="leverandør" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Leverandør knyttet  til transaksjonen." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_68b28eecf8b8ac3fc7" idref="EAID_ASC_68b28eecf8b8ac3fc7" start="EAID_CLS_f2894721405c98bf79" end="EAID_CLS_e9b5ec376bce4aae10">
+        <source xmi:idref="EAID_CLS_f2894721405c98bf79" idref="EAID_CLS_f2894721405c98bf79">
+          <model type="Class" name="Transaksjon" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_e9b5ec376bce4aae10" idref="EAID_CLS_e9b5ec376bce4aae10">
+          <model type="Class" name="Valuta" />
+          <role name="valuta" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Valuta for oppgitt beløp." />
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
