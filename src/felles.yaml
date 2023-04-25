@@ -9,17 +9,10 @@ imports:
   - felles.kodeverk.iso
   - felles.komplekse-datatyper
   - utdanning.elev
+  - utdanning.larling
+  - utdanning.ot
 
 classes:
-
-  Virksomhet:
-    is_a: Enhet
-    attributes:
-      virksomhetsId:
-        range: Identifikator
-        description: |
-          Intern unik identifikator i økonomisystemet
-        required: true
 
   Kontaktperson:
     description: |
@@ -217,6 +210,12 @@ classes:
         range: Kommune
         description: |
           Kommune hvor personen er bosatt
+      lærling:
+        range: Lærling
+        inverse: person
+        description: |
+          En person kan være en lærling.
+        multivalued: true
       morsmål:
         range: Språk
         description: |
@@ -225,6 +224,11 @@ classes:
         range: Språk
         description: |
           Målform som denne personen foretrekker å bruke (eksempelvis nynorsk, bokmål eller samisk).
+      otungdom:
+        range: OTUngdom
+        inverse: person
+        description: |
+          En person kan være en OT-ungdom.
       personalressurs:
         range: Personalressurs
         inverse: person
@@ -242,4 +246,21 @@ classes:
         range: Landkode
         description: |
           Alle statsborgerskap som personen har
+        multivalued: true
+
+  Virksomhet:
+    description: |
+      En juridisk organisasjon som produserer varer eller tjenester.
+    is_a: Enhet
+    attributes:
+      virksomhetsId:
+        range: Identifikator
+        description: |
+          Intern unik identifikator i økonomisystemet
+        required: true
+      lærling:
+        range: Lærling
+        inverse: bedrift
+        description: |
+          Lærling i virksomheten.
         multivalued: true

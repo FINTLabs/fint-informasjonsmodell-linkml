@@ -5,6 +5,7 @@ imports:
   - linkml:types
   - felles.basisklasser
   - felles.komplekse-datatyper
+  - felles.kodeverk
   - utdanning.vurdering
 
 classes:
@@ -128,6 +129,44 @@ classes:
       
       https://regbok.udir.no/35004/3344/35042-1015043.html
     is_a: Begrep
+
+  OTEnhet:
+    description: |
+      Stedet hvor OT-ungdom er under oppfølging.
+    is_a: Begrep
+    attributes:
+      kommune:
+        range: Kommune
+        description: |
+          Kommunen hvor OT-enheten er lokalisert.
+        required: true
+
+  OTStatus:
+    description: |
+      Statuskoder angir hva som er ungdommens hovedaktivitet
+      
+      # Eksempel
+      
+      * OTAR – I arbeid
+      * OTMI – Er i militæret
+      * OTAP – Arbeidspraksis eller annet tiltak i regi av NAV
+      * OTUK – Ukjent aktivitet
+    is_a: Begrep
+    attributes:
+      beskrivelse:
+        range: string
+        description: |
+          Beskrivelse av OT-statusen.
+      type:
+        range: string
+        description: |
+          Viser type OT-status.
+          
+          # Verdier:
+          
+          * O = OT
+          * V = VIGO
+        required: true
 
   Skoleår:
     description: |

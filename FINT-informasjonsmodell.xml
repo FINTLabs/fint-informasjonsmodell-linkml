@@ -3772,19 +3772,6 @@ Opplysninger i en personalmappe kan være personalia, arbeidskontrakt og annen ko
             </packagedElement>
           </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_38f7bf53c51db64eb4" name="Felles">
-          <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_ccb5d4e8b9f75f601d" name="Virksomhet">
-            <properties stereotype="hovedklasse" />
-            <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_be1200fcf09566be5f" general="EAID_CLS_2b24756f464cc1f31a" start="EAID_CLS_ccb5d4e8b9f75f601d" end="EAID_CLS_2b24756f464cc1f31a" />
-            <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_e9c7486e71e76e30c9" name="virksomhetsId" visibility="public">
-              <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_dee8ab94b5edab1a24" value="1" />
-              <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_dee8ab94b5edab1a24" value="1" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_dee8ab94b5edab1a24">
-                <body>Intern unik identifikator i økonomisystemet
-</body>
-                </ownedComment>
-              </ownedAttribute>
-            </packagedElement>
           <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_f5cc7e74d95638309a" name="Kontaktperson">
             <properties documentation="Kontaktperson til en person.&#10;&#10;# Beskrivelse&#10;&#10;Kontaktperson er personer som kan kontaktes dersom det er behov for det.&#10;&#10;Kontaktperson kalles også pårørende.&#10;" stereotype="hovedklasse" />
             <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7169e35666d2406bb6">
@@ -3975,6 +3962,23 @@ Se beskrivelse for [Personnavn klasse](Class:Personnavn)
           <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_b48c9d5c7c0331bb38" visibility="public" start="EAID_CLS_8548ca6ef4e9f948e9" end="EAID_CLS_f3a58ccad0a288d490" />
           <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_53edcf95399f514dd1" visibility="public" start="EAID_CLS_8548ca6ef4e9f948e9" end="EAID_CLS_7f69968205107fe6de" />
           <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_607dceccd632050772" visibility="public" start="EAID_CLS_8548ca6ef4e9f948e9" end="EAID_CLS_21de96a2eceefd70b9" />
+          <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_ccb5d4e8b9f75f601d" name="Virksomhet">
+            <properties documentation="En juridisk organisasjon som produserer varer eller tjenester.&#10;" stereotype="hovedklasse" />
+            <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_be1200fcf09566be5f">
+              <body>En juridisk organisasjon som produserer varer eller tjenester.
+</body>
+              </ownedComment>
+            <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_be1200fcf09566be5f" general="EAID_CLS_2b24756f464cc1f31a" start="EAID_CLS_ccb5d4e8b9f75f601d" end="EAID_CLS_2b24756f464cc1f31a" />
+            <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_e9c7486e71e76e30c9" name="virksomhetsId" visibility="public">
+              <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_dee8ab94b5edab1a24" value="1" />
+              <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_dee8ab94b5edab1a24" value="1" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_dee8ab94b5edab1a24">
+                <body>Intern unik identifikator i økonomisystemet
+</body>
+                </ownedComment>
+              </ownedAttribute>
+            </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_29ed5f4335a77f3f29" name="Basisklasser">
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_225ef60f99e8325a09" name="Aktør" isAbstract="true">
               <properties documentation="Person eller enhet vi samhandler med.&#10;&#10;# Beskrivelse&#10;&#10;Abstrakt klasse som inneholder relasjon til kontaktinformasjon og identifikator. Må enten brukes som Person, Enhet, eller annen underliggende klasse, som feks organisasjonselement.&#10;" stereotype="abstrakt" />
@@ -6355,6 +6359,53 @@ https://regbok.udir.no/35004/3344/35042-1015043.html
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_5c3f43c7076215a591" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_1d2ea71766e6f9ab9c" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_c9f4b4fae3cc18656e" name="OTEnhet">
+              <properties documentation="Stedet hvor OT-ungdom er under oppfølging.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_190cb9d7f7410ae5e0">
+                <body>Stedet hvor OT-ungdom er under oppfølging.
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_190cb9d7f7410ae5e0" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_c9f4b4fae3cc18656e" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_dc7b4f9cc3fe9633d7" visibility="public" start="EAID_CLS_c9f4b4fae3cc18656e" end="EAID_CLS_731db44765e710208d" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_ede7a2b9e2bf2d771d" name="OTStatus">
+              <properties documentation="Statuskoder angir hva som er ungdommens hovedaktivitet&#10;&#10;# Eksempel&#10;&#10;* OTAR – I arbeid&#10;* OTMI – Er i militæret&#10;* OTAP – Arbeidspraksis eller annet tiltak i regi av NAV&#10;* OTUK – Ukjent aktivitet&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_2b9bec1af21ea8f635">
+                <body>Statuskoder angir hva som er ungdommens hovedaktivitet
+
+# Eksempel
+
+* OTAR – I arbeid
+* OTMI – Er i militæret
+* OTAP – Arbeidspraksis eller annet tiltak i regi av NAV
+* OTUK – Ukjent aktivitet
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_2b9bec1af21ea8f635" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_ede7a2b9e2bf2d771d" end="EAID_CLS_3385458244847ec7db" />
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_9aebe60847bd23941e" name="beskrivelse" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_a66ce636f763969a7e" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_a66ce636f763969a7e" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a66ce636f763969a7e">
+                  <body>Beskrivelse av OT-statusen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_4ec3f8230c2057870c" name="type" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_0ad4034592c6697df4" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_0ad4034592c6697df4" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_0ad4034592c6697df4">
+                  <body>Viser type OT-status.
+
+# Verdier:
+
+* O = OT
+* V = VIGO
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_8cd72252caa5382d06" name="Skoleår">
               <properties documentation="Del av året da skoler har undervisning (og ikke ferie).&#10;&#10;# Beskrivelse&#10;&#10;Et skoleår varer som hovedregel fra august til juni.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_03558e683bf74b2e5d">
@@ -6421,6 +6472,67 @@ https://api.felleskomponent.no/utdanning/vigo/kodeverk/swagger-ui.html#/
 </body>
                 </ownedComment>
               </packagedElement>
+            </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_d69b36e7b348f13887" name="Larling">
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_0092ea408548025df7" name="Lærling">
+              <properties documentation="Å være lærling betyr at du utdanner deg til et yrke ved å jobbe i en bedrift.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_eb2f9d83d3370aaeb3">
+                <body>Å være lærling betyr at du utdanner deg til et yrke ved å jobbe i en bedrift.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_bdfe7be1f51b768aa5" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_86901da4f9ea02d85f" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_86901da4f9ea02d85f" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_86901da4f9ea02d85f">
+                  <body>Unik identifikator for en lærling.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_1957d7f06356f7e5a2" name="kontraktstype" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_e489e3cc9a9f2b4aa8" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_e489e3cc9a9f2b4aa8" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_e489e3cc9a9f2b4aa8">
+                  <body>Kontraktstype for lærling.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_1ae08f1cdaf2e53be2" name="læretid" visibility="public">
+                <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_96206498e10174de2e" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_96206498e10174de2e" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_96206498e10174de2e">
+                  <body>Tidsperiode for læretiden.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_d3b7c7a5597cad99cd" visibility="public" start="EAID_CLS_0092ea408548025df7" end="EAID_CLS_ccb5d4e8b9f75f601d" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_8bfe733b8b2ffca867" visibility="public" start="EAID_CLS_0092ea408548025df7" end="EAID_CLS_8548ca6ef4e9f948e9" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_30da5aec9498c98c5f" visibility="public" start="EAID_CLS_0092ea408548025df7" end="EAID_CLS_cd6654e733e9adbc78" />
+            </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_6238ff01a241e19e6a" name="Ot">
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_6d3b9408a5d8295298" name="OTUngdom">
+              <properties documentation="Oppfølgingstjenesten (OT) har ansvar for å følge opp ungdom med rett til videregående opplæring som ikke er i opplæring eller arbeid.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_77c24ef1baf681a30f">
+                <body>Oppfølgingstjenesten (OT) har ansvar for å følge opp ungdom med rett til videregående opplæring som ikke er i opplæring eller arbeid.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_df440454dba92a842a" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_5f8062665dca9a4437" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_5f8062665dca9a4437" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_5f8062665dca9a4437">
+                  <body>Unik identifikator for OT-ungdom
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_be4b308ca452022b33" visibility="public" start="EAID_CLS_6d3b9408a5d8295298" end="EAID_CLS_c9f4b4fae3cc18656e" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_8d5d6b0c4b63241037" visibility="public" start="EAID_CLS_6d3b9408a5d8295298" end="EAID_CLS_8548ca6ef4e9f948e9" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_054b73885cd9522173" visibility="public" start="EAID_CLS_6d3b9408a5d8295298" end="EAID_CLS_cd6654e733e9adbc78" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_b81b5afbd6ff4e18ed" visibility="public" start="EAID_CLS_6d3b9408a5d8295298" end="EAID_CLS_ede7a2b9e2bf2d771d" />
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_b9ee1761619271cf21" name="Timeplan">
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_e92c2079bc89c6d11a" name="Fag">
@@ -7574,20 +7686,6 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <tags />
         <properties stereotype="ApplicationSchema" />
         </element>
-      <element xmi:idref="EAID_CLS_ccb5d4e8b9f75f601d" idref="EAID_CLS_ccb5d4e8b9f75f601d" xmi:type="uml:Class" type="Class" name="Virksomhet" scope="public">
-        <model package="EAID_PKG_38f7bf53c51db64eb4" ea_eleType="element" />
-        <tags />
-        <properties isAbstract="false" sType="Class" scope="public" stereotype="hovedklasse" />
-        <attributes>
-          <attribute xmi:idref="EAID_PRP_e9c7486e71e76e30c9" idref="EAID_PRP_e9c7486e71e76e30c9" name="virksomhetsId">
-            <properties type="Identifikator" />
-            <bounds lower="1" upper="1" />
-            <stereotype stereotype="" />
-            <documentation value="Intern unik identifikator i økonomisystemet&#10;" />
-            <tags />
-            </attribute>
-          </attributes>
-        </element>
       <element xmi:idref="EAID_CLS_f5cc7e74d95638309a" idref="EAID_CLS_f5cc7e74d95638309a" xmi:type="uml:Class" type="Class" name="Kontaktperson" scope="public">
         <model package="EAID_PKG_38f7bf53c51db64eb4" ea_eleType="element" />
         <tags />
@@ -7670,6 +7768,20 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
             <documentation value="Angir navn på en person. &#10;&#10;# Beskrivelse&#10;&#10;Se beskrivelse for [Personnavn klasse](Class:Personnavn)&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_ccb5d4e8b9f75f601d" idref="EAID_CLS_ccb5d4e8b9f75f601d" xmi:type="uml:Class" type="Class" name="Virksomhet" scope="public">
+        <model package="EAID_PKG_38f7bf53c51db64eb4" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="En juridisk organisasjon som produserer varer eller tjenester.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_e9c7486e71e76e30c9" idref="EAID_PRP_e9c7486e71e76e30c9" name="virksomhetsId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Intern unik identifikator i økonomisystemet&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -10617,6 +10729,33 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties isAbstract="false" sType="Class" scope="public" documentation="Kode for karakterer som blir endret.&#10;&#10;# Referanse&#10;&#10;https://regbok.udir.no/35004/3344/35042-1015043.html&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
+      <element xmi:idref="EAID_CLS_c9f4b4fae3cc18656e" idref="EAID_CLS_c9f4b4fae3cc18656e" xmi:type="uml:Class" type="Class" name="OTEnhet" scope="public">
+        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Stedet hvor OT-ungdom er under oppfølging.&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_ede7a2b9e2bf2d771d" idref="EAID_CLS_ede7a2b9e2bf2d771d" xmi:type="uml:Class" type="Class" name="OTStatus" scope="public">
+        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Statuskoder angir hva som er ungdommens hovedaktivitet&#10;&#10;# Eksempel&#10;&#10;* OTAR – I arbeid&#10;* OTMI – Er i militæret&#10;* OTAP – Arbeidspraksis eller annet tiltak i regi av NAV&#10;* OTUK – Ukjent aktivitet&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_9aebe60847bd23941e" idref="EAID_PRP_9aebe60847bd23941e" name="beskrivelse">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Beskrivelse av OT-statusen.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_4ec3f8230c2057870c" idref="EAID_PRP_4ec3f8230c2057870c" name="type">
+            <properties type="string" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Viser type OT-status.&#10;&#10;# Verdier:&#10;&#10;* O = OT&#10;* V = VIGO&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
       <element xmi:idref="EAID_CLS_8cd72252caa5382d06" idref="EAID_CLS_8cd72252caa5382d06" xmi:type="uml:Class" type="Class" name="Skoleår" scope="public">
         <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
         <tags />
@@ -10646,6 +10785,56 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Ekstern referanse til VIGO Kodeverksbase.&#10;&#10;# Beskrivelse&#10;&#10;Kodeverket kommer fra Grep (Utdanningsdirektoratet sin læreplandatabase), Nasjonalt skoleregister og VIGO.&#10;&#10;Referanser til VIGO Kodeverksbase skal referere til gyldige og unike koder i REST (JSON) API fra Vigo IKS/FINTLabs.&#10;&#10;https://api.felleskomponent.no/utdanning/vigo/kodeverk/swagger-ui.html#/&#10;" stereotype="referanse" />
         <attributes />
+        </element>
+      <element xmi:idref="EAID_PKG_d69b36e7b348f13887" idref="EAID_PKG_d69b36e7b348f13887" xmi:type="uml:Package" type="Package" name="Larling" scope="public">
+        <model package2="EAID_PKG_d69b36e7b348f13887" ea_eleType="package" package="EAID_PKG_93ea470388b4d82056" />
+        <tags />
+        </element>
+      <element xmi:idref="EAID_CLS_0092ea408548025df7" idref="EAID_CLS_0092ea408548025df7" xmi:type="uml:Class" type="Class" name="Lærling" scope="public">
+        <model package="EAID_PKG_d69b36e7b348f13887" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Å være lærling betyr at du utdanner deg til et yrke ved å jobbe i en bedrift.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_bdfe7be1f51b768aa5" idref="EAID_PRP_bdfe7be1f51b768aa5" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Unik identifikator for en lærling.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_1957d7f06356f7e5a2" idref="EAID_PRP_1957d7f06356f7e5a2" name="kontraktstype">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Kontraktstype for lærling.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_1ae08f1cdaf2e53be2" idref="EAID_PRP_1ae08f1cdaf2e53be2" name="læretid">
+            <properties type="Periode" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Tidsperiode for læretiden.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_PKG_6238ff01a241e19e6a" idref="EAID_PKG_6238ff01a241e19e6a" xmi:type="uml:Package" type="Package" name="Ot" scope="public">
+        <model package2="EAID_PKG_6238ff01a241e19e6a" ea_eleType="package" package="EAID_PKG_93ea470388b4d82056" />
+        <tags />
+        </element>
+      <element xmi:idref="EAID_CLS_6d3b9408a5d8295298" idref="EAID_CLS_6d3b9408a5d8295298" xmi:type="uml:Class" type="Class" name="OTUngdom" scope="public">
+        <model package="EAID_PKG_6238ff01a241e19e6a" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Oppfølgingstjenesten (OT) har ansvar for å følge opp ungdom med rett til videregående opplæring som ikke er i opplæring eller arbeid.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_df440454dba92a842a" idref="EAID_PRP_df440454dba92a842a" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Unik identifikator for OT-ungdom&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
         </element>
       <element xmi:idref="EAID_PKG_b9ee1761619271cf21" idref="EAID_PKG_b9ee1761619271cf21" xmi:type="uml:Package" type="Package" name="Timeplan" scope="public">
         <model package2="EAID_PKG_b9ee1761619271cf21" ea_eleType="package" package="EAID_PKG_93ea470388b4d82056" />
@@ -11211,22 +11400,6 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         </element>
       </elements>
     <connectors>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_be1200fcf09566be5f" idref="EAID_GEN_be1200fcf09566be5f" start="EAID_CLS_ccb5d4e8b9f75f601d" end="EAID_CLS_2b24756f464cc1f31a">
-        <source xmi:idref="EAID_CLS_ccb5d4e8b9f75f601d" idref="EAID_CLS_ccb5d4e8b9f75f601d">
-          <model type="Class" name="Virksomhet" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_2b24756f464cc1f31a" idref="EAID_CLS_2b24756f464cc1f31a">
-          <model type="Class" name="Enhet" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </target>
-        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
-        <tags />
-        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_05ec9d6bbfc69ec075" idref="EAID_ASC_05ec9d6bbfc69ec075" start="EAID_CLS_f5cc7e74d95638309a" end="EAID_CLS_8548ca6ef4e9f948e9">
         <source xmi:idref="EAID_CLS_f5cc7e74d95638309a" idref="EAID_CLS_f5cc7e74d95638309a">
           <model type="Class" name="Kontaktperson" />
@@ -11397,6 +11570,22 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_be1200fcf09566be5f" idref="EAID_GEN_be1200fcf09566be5f" start="EAID_CLS_ccb5d4e8b9f75f601d" end="EAID_CLS_2b24756f464cc1f31a">
+        <source xmi:idref="EAID_CLS_ccb5d4e8b9f75f601d" idref="EAID_CLS_ccb5d4e8b9f75f601d">
+          <model type="Class" name="Virksomhet" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_2b24756f464cc1f31a" idref="EAID_CLS_2b24756f464cc1f31a">
+          <model type="Class" name="Enhet" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_5414cdc530c1a79b9a" idref="EAID_ASC_5414cdc530c1a79b9a" start="EAID_CLS_7448e1a279ec7a138b" end="EAID_CLS_b2d51228fff1754e2b">
@@ -15950,6 +16139,55 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_190cb9d7f7410ae5e0" idref="EAID_GEN_190cb9d7f7410ae5e0" start="EAID_CLS_c9f4b4fae3cc18656e" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_c9f4b4fae3cc18656e" idref="EAID_CLS_c9f4b4fae3cc18656e">
+          <model type="Class" name="OTEnhet" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_dc7b4f9cc3fe9633d7" idref="EAID_ASC_dc7b4f9cc3fe9633d7" start="EAID_CLS_c9f4b4fae3cc18656e" end="EAID_CLS_731db44765e710208d">
+        <source xmi:idref="EAID_CLS_c9f4b4fae3cc18656e" idref="EAID_CLS_c9f4b4fae3cc18656e">
+          <model type="Class" name="OTEnhet" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_731db44765e710208d" idref="EAID_CLS_731db44765e710208d">
+          <model type="Class" name="Kommune" />
+          <role name="kommune" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Kommunen hvor OT-enheten er lokalisert." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_2b9bec1af21ea8f635" idref="EAID_GEN_2b9bec1af21ea8f635" start="EAID_CLS_ede7a2b9e2bf2d771d" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_ede7a2b9e2bf2d771d" idref="EAID_CLS_ede7a2b9e2bf2d771d">
+          <model type="Class" name="OTStatus" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_03558e683bf74b2e5d" idref="EAID_GEN_03558e683bf74b2e5d" start="EAID_CLS_8cd72252caa5382d06" end="EAID_CLS_3385458244847ec7db">
         <source xmi:idref="EAID_CLS_8cd72252caa5382d06" idref="EAID_CLS_8cd72252caa5382d06">
           <model type="Class" name="Skoleår" />
@@ -16012,6 +16250,130 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <tags />
           </target>
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_d3b7c7a5597cad99cd" idref="EAID_ASC_d3b7c7a5597cad99cd" start="EAID_CLS_0092ea408548025df7" end="EAID_CLS_ccb5d4e8b9f75f601d">
+        <source xmi:idref="EAID_CLS_0092ea408548025df7" idref="EAID_CLS_0092ea408548025df7">
+          <model type="Class" name="Lærling" />
+          <role visibility="Public" name="lærling" />
+          <type multiplicity="0..*" />
+          <documentation value="Lærling i virksomheten." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_ccb5d4e8b9f75f601d" idref="EAID_CLS_ccb5d4e8b9f75f601d">
+          <model type="Class" name="Virksomhet" />
+          <role name="bedrift" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Bedriften hvor lærlingen har sin læretid." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_8bfe733b8b2ffca867" idref="EAID_ASC_8bfe733b8b2ffca867" start="EAID_CLS_0092ea408548025df7" end="EAID_CLS_8548ca6ef4e9f948e9">
+        <source xmi:idref="EAID_CLS_0092ea408548025df7" idref="EAID_CLS_0092ea408548025df7">
+          <model type="Class" name="Lærling" />
+          <role visibility="Public" name="lærling" />
+          <type multiplicity="0..*" />
+          <documentation value="En person kan være en lærling." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_8548ca6ef4e9f948e9" idref="EAID_CLS_8548ca6ef4e9f948e9">
+          <model type="Class" name="Person" />
+          <role name="person" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Person som er lærling." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_30da5aec9498c98c5f" idref="EAID_ASC_30da5aec9498c98c5f" start="EAID_CLS_0092ea408548025df7" end="EAID_CLS_cd6654e733e9adbc78">
+        <source xmi:idref="EAID_CLS_0092ea408548025df7" idref="EAID_CLS_0092ea408548025df7">
+          <model type="Class" name="Lærling" />
+          <role visibility="Public" name="lærling" />
+          <type multiplicity="0..1" />
+          <documentation value="Lærling et programområdemedlemskap tilhører." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_cd6654e733e9adbc78" idref="EAID_CLS_cd6654e733e9adbc78">
+          <model type="Class" name="Programområdemedlemskap" />
+          <role name="programområdemedlemskap" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Fagretning for læretiden." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_be4b308ca452022b33" idref="EAID_ASC_be4b308ca452022b33" start="EAID_CLS_6d3b9408a5d8295298" end="EAID_CLS_c9f4b4fae3cc18656e">
+        <source xmi:idref="EAID_CLS_6d3b9408a5d8295298" idref="EAID_CLS_6d3b9408a5d8295298">
+          <model type="Class" name="OTUngdom" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_c9f4b4fae3cc18656e" idref="EAID_CLS_c9f4b4fae3cc18656e">
+          <model type="Class" name="OTEnhet" />
+          <role name="enhet" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="OT-enheten en OT-ungdom er tilknyttet." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_8d5d6b0c4b63241037" idref="EAID_ASC_8d5d6b0c4b63241037" start="EAID_CLS_6d3b9408a5d8295298" end="EAID_CLS_8548ca6ef4e9f948e9">
+        <source xmi:idref="EAID_CLS_6d3b9408a5d8295298" idref="EAID_CLS_6d3b9408a5d8295298">
+          <model type="Class" name="OTUngdom" />
+          <role visibility="Public" name="otungdom" />
+          <type multiplicity="0..1" />
+          <documentation value="En person kan være en OT-ungdom." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_8548ca6ef4e9f948e9" idref="EAID_CLS_8548ca6ef4e9f948e9">
+          <model type="Class" name="Person" />
+          <role name="person" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Person som er OT-ungdom." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_054b73885cd9522173" idref="EAID_ASC_054b73885cd9522173" start="EAID_CLS_6d3b9408a5d8295298" end="EAID_CLS_cd6654e733e9adbc78">
+        <source xmi:idref="EAID_CLS_6d3b9408a5d8295298" idref="EAID_CLS_6d3b9408a5d8295298">
+          <model type="Class" name="OTUngdom" />
+          <role visibility="Public" name="otungdom" />
+          <type multiplicity="0..1" />
+          <documentation value="OT-ungdom et programområdemedlemskap tilhører i inneværende skoleår." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_cd6654e733e9adbc78" idref="EAID_CLS_cd6654e733e9adbc78">
+          <model type="Class" name="Programområdemedlemskap" />
+          <role name="programområdemedlemskap" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Programområdemedlemskapene til en OT-ungdom i inneværende skoleår." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_b81b5afbd6ff4e18ed" idref="EAID_ASC_b81b5afbd6ff4e18ed" start="EAID_CLS_6d3b9408a5d8295298" end="EAID_CLS_ede7a2b9e2bf2d771d">
+        <source xmi:idref="EAID_CLS_6d3b9408a5d8295298" idref="EAID_CLS_6d3b9408a5d8295298">
+          <model type="Class" name="OTUngdom" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_ede7a2b9e2bf2d771d" idref="EAID_CLS_ede7a2b9e2bf2d771d">
+          <model type="Class" name="OTStatus" />
+          <role name="status" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="OT-statusen en OT-ungdom har." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_5297fb1c9776456f97" idref="EAID_GEN_5297fb1c9776456f97" start="EAID_CLS_e92c2079bc89c6d11a" end="EAID_CLS_a62447c9dd60a973b1">
@@ -16421,7 +16783,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <target xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
           <model type="Class" name="Elevforhold" />
           <role name="elevforhold" visibility="Public" />
-          <type multiplicity="1" />
+          <type multiplicity="0..1" />
           <documentation value="Elevforhold et programområdemedlemskap tilhører." />
           <tags />
           </target>
