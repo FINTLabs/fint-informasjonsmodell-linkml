@@ -42,11 +42,7 @@ classes:
         description: |
           Person som er lærling.
         required: true
-      programområdemedlemskap:
-        range: Programområdemedlemskap
-        inverse: lærling
-        annotations:
-          primaryRelation: true
+      programområde:
+        range: Programområde
         description: |
-          Fagretning for læretiden.
-        multivalued: true
+          Programområdet til lærling.

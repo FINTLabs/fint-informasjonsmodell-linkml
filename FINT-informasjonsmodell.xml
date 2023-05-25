@@ -6510,7 +6510,7 @@ https://api.felleskomponent.no/utdanning/vigo/kodeverk/swagger-ui.html#/
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_d3b7c7a5597cad99cd" visibility="public" start="EAID_CLS_0092ea408548025df7" end="EAID_CLS_ccb5d4e8b9f75f601d" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_8bfe733b8b2ffca867" visibility="public" start="EAID_CLS_0092ea408548025df7" end="EAID_CLS_8548ca6ef4e9f948e9" />
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_30da5aec9498c98c5f" visibility="public" start="EAID_CLS_0092ea408548025df7" end="EAID_CLS_cd6654e733e9adbc78" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_36924edafe13595b9a" visibility="public" start="EAID_CLS_0092ea408548025df7" end="EAID_CLS_c317e0b3ba883a1162" />
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_6238ff01a241e19e6a" name="Ot">
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_6d3b9408a5d8295298" name="OTUngdom">
@@ -6531,7 +6531,7 @@ https://api.felleskomponent.no/utdanning/vigo/kodeverk/swagger-ui.html#/
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_be4b308ca452022b33" visibility="public" start="EAID_CLS_6d3b9408a5d8295298" end="EAID_CLS_c9f4b4fae3cc18656e" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_8d5d6b0c4b63241037" visibility="public" start="EAID_CLS_6d3b9408a5d8295298" end="EAID_CLS_8548ca6ef4e9f948e9" />
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_054b73885cd9522173" visibility="public" start="EAID_CLS_6d3b9408a5d8295298" end="EAID_CLS_cd6654e733e9adbc78" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_70e6558c6c54074723" visibility="public" start="EAID_CLS_6d3b9408a5d8295298" end="EAID_CLS_c317e0b3ba883a1162" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_b81b5afbd6ff4e18ed" visibility="public" start="EAID_CLS_6d3b9408a5d8295298" end="EAID_CLS_ede7a2b9e2bf2d771d" />
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_b9ee1761619271cf21" name="Timeplan">
@@ -16288,22 +16288,21 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_30da5aec9498c98c5f" idref="EAID_ASC_30da5aec9498c98c5f" start="EAID_CLS_0092ea408548025df7" end="EAID_CLS_cd6654e733e9adbc78">
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_36924edafe13595b9a" idref="EAID_ASC_36924edafe13595b9a" start="EAID_CLS_0092ea408548025df7" end="EAID_CLS_c317e0b3ba883a1162">
         <source xmi:idref="EAID_CLS_0092ea408548025df7" idref="EAID_CLS_0092ea408548025df7">
           <model type="Class" name="Lærling" />
-          <role visibility="Public" name="lærling" />
+          <role visibility="Public" />
           <type multiplicity="0..1" />
-          <documentation value="Lærling et programområdemedlemskap tilhører." />
           <tags />
           </source>
-        <target xmi:idref="EAID_CLS_cd6654e733e9adbc78" idref="EAID_CLS_cd6654e733e9adbc78">
-          <model type="Class" name="Programområdemedlemskap" />
-          <role name="programområdemedlemskap" visibility="Public" />
-          <type multiplicity="0..*" />
-          <documentation value="Fagretning for læretiden." />
+        <target xmi:idref="EAID_CLS_c317e0b3ba883a1162" idref="EAID_CLS_c317e0b3ba883a1162">
+          <model type="Class" name="Programområde" />
+          <role name="programområde" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Programområdet til lærling." />
           <tags />
           </target>
-        <properties ea_type="Association" direction="Bi-Directional" />
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_be4b308ca452022b33" idref="EAID_ASC_be4b308ca452022b33" start="EAID_CLS_6d3b9408a5d8295298" end="EAID_CLS_c9f4b4fae3cc18656e">
@@ -16341,22 +16340,21 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_054b73885cd9522173" idref="EAID_ASC_054b73885cd9522173" start="EAID_CLS_6d3b9408a5d8295298" end="EAID_CLS_cd6654e733e9adbc78">
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_70e6558c6c54074723" idref="EAID_ASC_70e6558c6c54074723" start="EAID_CLS_6d3b9408a5d8295298" end="EAID_CLS_c317e0b3ba883a1162">
         <source xmi:idref="EAID_CLS_6d3b9408a5d8295298" idref="EAID_CLS_6d3b9408a5d8295298">
           <model type="Class" name="OTUngdom" />
-          <role visibility="Public" name="otungdom" />
+          <role visibility="Public" />
           <type multiplicity="0..1" />
-          <documentation value="OT-ungdom et programområdemedlemskap tilhører i inneværende skoleår." />
           <tags />
           </source>
-        <target xmi:idref="EAID_CLS_cd6654e733e9adbc78" idref="EAID_CLS_cd6654e733e9adbc78">
-          <model type="Class" name="Programområdemedlemskap" />
-          <role name="programområdemedlemskap" visibility="Public" />
-          <type multiplicity="0..*" />
-          <documentation value="Programområdemedlemskapene til en OT-ungdom i inneværende skoleår." />
+        <target xmi:idref="EAID_CLS_c317e0b3ba883a1162" idref="EAID_CLS_c317e0b3ba883a1162">
+          <model type="Class" name="Programområde" />
+          <role name="programområde" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Programområdet til OT-ungdom." />
           <tags />
           </target>
-        <properties ea_type="Association" direction="Bi-Directional" />
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_b81b5afbd6ff4e18ed" idref="EAID_ASC_b81b5afbd6ff4e18ed" start="EAID_CLS_6d3b9408a5d8295298" end="EAID_CLS_ede7a2b9e2bf2d771d">
@@ -16783,7 +16781,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <target xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
           <model type="Class" name="Elevforhold" />
           <role name="elevforhold" visibility="Public" />
-          <type multiplicity="0..1" />
+          <type multiplicity="1" />
           <documentation value="Elevforhold et programområdemedlemskap tilhører." />
           <tags />
           </target>

@@ -32,14 +32,10 @@ classes:
         description: |
           Person som er OT-ungdom.
         required: true
-      programområdemedlemskap:
-        range: Programområdemedlemskap
-        inverse: otungdom
-        annotations:
-          primaryRelation: true
+      programområde:
+        range: Programområde
         description: |
-          Programområdemedlemskapene til en OT-ungdom i inneværende skoleår.
-        multivalued: true
+          Programområdet til OT-ungdom.
       status:
         range: OTStatus
         description: |

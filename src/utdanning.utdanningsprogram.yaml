@@ -9,8 +9,6 @@ imports:
   - utdanning.basisklasser
   - utdanning.elev
   - utdanning.kodeverk
-  - utdanning.larling
-  - utdanning.ot
   - utdanning.timeplan
   - utdanning.vurdering
 
@@ -142,16 +140,7 @@ classes:
           primaryRelation: true
         description: |
           Elevforhold et programområdemedlemskap tilhører.
-      lærling:
-        range: Lærling
-        inverse: programområdemedlemskap
-        description: |
-          Lærling et programområdemedlemskap tilhører.
-      otungdom:
-        range: OTUngdom
-        inverse: programområdemedlemskap
-        description: |
-          OT-ungdom et programområdemedlemskap tilhører i inneværende skoleår.
+        required: true
       programområde:
         range: Programområde
         inverse: gruppemedlemskap
