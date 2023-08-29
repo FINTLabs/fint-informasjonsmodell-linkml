@@ -21,6 +21,22 @@ classes:
           writeable: true
         description: |
           Dato bilaget er registrert.
+          
+          # Format
+          
+          ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
+          
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
+          
+          ## Referanser
+          
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+          
+          ## Eksempler
+          
+          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          
+          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
         required: true
       bilagsnummer:
         range: string
@@ -170,6 +186,22 @@ classes:
           writeable: true
         description: |
           Dato transaksjonen forfaller.
+          
+          # Format
+          
+          ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
+          
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
+          
+          ## Referanser
+          
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+          
+          ## Eksempler
+          
+          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          
+          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
         required: true
       oppdateringstidspunkt:
         range: datetime
@@ -177,12 +209,40 @@ classes:
           writeable: true
         description: |
           Tidspunkt for siste endring i transaksjonen.
+          
+          # Format
+          
+          ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
+          
+          ## Referanser
+          
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+          
+          ## Eksempler
+          
+          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          
+          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
       transaksjonstidspunkt:
         range: datetime
         annotations:
           writeable: true
         description: |
           Tidspunkt for registrering av transaksjonen.
+          
+          # Format
+          
+          ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
+          
+          ## Referanser
+          
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+          
+          ## Eksempler
+          
+          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          
+          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
       ansvarlig:
         range: Personalressurs
         description: |

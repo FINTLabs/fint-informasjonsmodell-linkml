@@ -11,9 +11,13 @@ imports:
 classes:
 
   Aktivitet:
+    description: |
+      Aktivitet er en del av kontostrengen og er en detaljering av funksjon.
     is_a: Kontodimensjon
 
   Anlegg:
+    description: |
+      Anlegg er en del av kontostrengen og er et objekt som skal aktiveres eller avskrives.
     is_a: Kontodimensjon
 
   Ansvar:
@@ -92,6 +96,8 @@ classes:
     is_a: Kontodimensjon
 
   Diverse:
+    description: |
+      Diverser er en del av kontostrengen og benyttes som et supplement til de spesifikasjoner som framkommer i de øvrige dimensjonene.
     is_a: Kontodimensjon
 
   Formål:
@@ -204,6 +210,8 @@ classes:
         multivalued: true
 
   Kontrakt:
+    description: |
+      Kontrakt transaksjonen er knyttet til.
     is_a: Kontodimensjon
 
   Lønnsart:
@@ -245,9 +253,13 @@ classes:
           Art som lønnsart er tilknyttet.
 
   Løpenummer:
+    description: |
+      Løpenummer i en nummerserie.
     is_a: Kontodimensjon
 
   Objekt:
+    description: |
+      Et bygg, en vei eller en bestemt mottaker av en tjeneste eller et tilskudd m.m.
     is_a: Kontodimensjon
 
   Personalressurskategori:
@@ -290,12 +302,71 @@ classes:
 
   Prosjekt:
     description: |
-      Del av kontostrengen som peker på løpende prosjekter
-      
-      .
+      Del av kontostrengen som peker på løpende prosjekter.
     is_a: Kontodimensjon
+    attributes:
+      prosjektart:
+        range: Prosjektart
+        inverse: prosjekt
+        annotations:
+          primaryRelation: true
+        description: |
+          Deloppgave eller delprosjekt som hører til prosjektet.
+        multivalued: true
+
+  Prosjektart:
+    description: |
+      Prosjektart er et element i enten en prosjektnedbrytningsstruktur eller en arbeidsnedbrytningsstruktur.
+      
+      # Prosjektnedbrytningsstruktur (PNS)
+      
+      Engelsk: Project Breakdown Structure (PBS)
+      
+      Det fokuseres på delprodukter:
+      
+      * Delprodukt
+      * Delprosjekt
+      
+      # Arbeidsnedbrytningsstruktur
+      
+      Engelsk: Work Breakdown Structure (WBS)
+      
+      Det fokuseres på arbeidsoppgaver:
+      
+      * Arbeidspakke
+      * Oppgave
+      * Deloppgave
+      
+      # Lenker
+      
+      * [En enkel oppskrift på en arbeidsnedbrytningsstruktur ](https://www.prosjektbloggen.no/en-enkel-oppskrift-pa-en-arbeidsnedbrytningsstruktur)
+      * [Prosjektnedbrytningsstruktur(PNS/WBS)](http://ledelsesspire.blogspot.com/2013/10/prosjektnedbrytningsstruktur-pnswbs.html)
+    is_a: Kontodimensjon
+    attributes:
+      overordnet:
+        range: Prosjektart
+        inverse: underordnet
+        annotations:
+          primaryRelation: true
+        description: |
+          Prosjektart i nivået over i strukturen.
+      prosjekt:
+        range: Prosjekt
+        inverse: prosjektart
+        description: |
+          Prosjektet som er øverste nivå i en nedbrytningsstruktur.
+      underordnet:
+        range: Prosjektart
+        inverse: overordnet
+        annotations:
+          primaryRelation: true
+        description: |
+          Prosjektarter i nivået under i strukturen.
+        multivalued: true
 
   Ramme:
+    description: |
+      Ramme er en del av kontostrengen og viser hvilken budsjettramme som skal bære kostnadene.
     is_a: Kontodimensjon
 
   Stillingskode:

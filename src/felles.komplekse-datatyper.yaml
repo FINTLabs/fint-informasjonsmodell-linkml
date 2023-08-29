@@ -320,15 +320,19 @@ classes:
           
           # Format
           
-          Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601)
+          ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Dersom klokkeslett ikke er definert, skal 00:00:00Z benyttes.
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
-          YYYY-MM-DDThh:mm:ssZ
+          ## Referanser
           
-          # Eksempel
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
           
-          1999.01.01T00:00:00Z
+          ## Eksempler
+          
+          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          
+          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
       start:
         range: datetime
         description: |
@@ -340,15 +344,19 @@ classes:
           
           # Format
           
-          Det skal brukes UTC tid i [ISO 8601 format](https://en.wikipedia.org/wiki/ISO_8601)
+          ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Dersom klokkeslett ikke er definert,skal 00:00:00Z benyttes.
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
-          YYYY-MM-DDThh:mm:ssZ
+          ## Referanser
           
-          # Eksempel
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
           
-          1999.01.01T00:00:00Z
+          ## Eksempler
+          
+          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          
+          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
         required: true
 
   Personnavn:

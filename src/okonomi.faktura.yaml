@@ -41,6 +41,22 @@ classes:
         range: date
         description: |
           Dato for utstedelse av faktura.
+          
+          # Format
+          
+          ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
+          
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
+          
+          ## Referanser
+          
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+          
+          ## Eksempler
+          
+          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          
+          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
         required: true
       fakturert:
         range: boolean
@@ -52,6 +68,22 @@ classes:
           writeable: true
         description: |
           Frist for betaling
+          
+          # Format
+          
+          ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
+          
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
+          
+          ## Referanser
+          
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+          
+          ## Eksempler
+          
+          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          
+          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
         required: true
       kreditert:
         range: boolean
@@ -118,6 +150,22 @@ classes:
           writeable: true
         description: |
           Dato varer eller tjenester ble levert.
+          
+          # Format
+          
+          ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
+          
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
+          
+          ## Referanser
+          
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+          
+          ## Eksempler
+          
+          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          
+          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
       mottaker:
         range: Fakturamottaker
         annotations:

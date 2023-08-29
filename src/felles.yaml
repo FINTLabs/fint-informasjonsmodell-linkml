@@ -142,24 +142,19 @@ classes:
           
           # Format
           
-          ISO 8601 format YYYY-MM-DDThh:mm:ssZ.
+          ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          # Referanser
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
-          * [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)
+          ## Referanser
           
-          # Eksempler
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
           
-          ## Riktig
+          ## Eksempler
           
-          * `1990-03-29T00:00:00Z`
+          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
           
-          # Feil
-          
-          * `26.05.1678`
-          * `29. Mar 1984`
-          * `Første januar`
-          * `I fjor`
+          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
       navn:
         range: Personnavn
         description: |
@@ -225,7 +220,7 @@ classes:
         description: |
           Målform som denne personen foretrekker å bruke (eksempelvis nynorsk, bokmål eller samisk).
       otungdom:
-        range: OTUngdom
+        range: OtUngdom
         inverse: person
         description: |
           En person kan være en OT-ungdom.

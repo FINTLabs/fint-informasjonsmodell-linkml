@@ -26,12 +26,12 @@ classes:
         annotations:
           writeable: true
         description: |
-          Status på behandling
+          Status på behandling.
         required: true
       formål:
         range: string
         description: |
-          Begrunnelse for behandling av personopplysning
+          Begrunnelse for behandling av personopplysning.
           
           # Beskrivelse
           
@@ -43,10 +43,30 @@ classes:
         description: |
           Samtykker tilknyttet en behandling.
         multivalued: true
+      slettet:
+        range: datetime
+        annotations:
+          writeable: true
+        description: |
+          Tidspunkt behandlingen er slettet.
+          
+          # Format
+          
+          ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
+          
+          ## Referanser
+          
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+          
+          ## Eksempler
+          
+          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          
+          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
       systemId:
         range: 
         description: |
-          Intern identifikator som brukes i kildesystemet
+          Intern identifikator som brukes i kildesystemet.
         required: true
       tjeneste:
         range: Tjeneste
@@ -92,6 +112,20 @@ classes:
         range: datetime
         description: |
           Dato når samtykke ble opprettet.
+          
+          # Format
+          
+          ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
+          
+          ## Referanser
+          
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+          
+          ## Eksempler
+          
+          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          
+          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
         required: true
       systemId:
         range: 
@@ -131,6 +165,26 @@ classes:
         description: |
           Tittel på tjeneste.
         required: true
+      slettet:
+        range: datetime
+        annotations:
+          writeable: true
+        description: |
+          Tidspunkt tjenesten er slettet.
+          
+          # Format
+          
+          ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
+          
+          ## Referanser
+          
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+          
+          ## Eksempler
+          
+          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          
+          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
       systemId:
         range: 
         description: |

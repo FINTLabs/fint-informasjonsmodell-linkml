@@ -130,7 +130,7 @@ classes:
       https://regbok.udir.no/35004/3344/35042-1015043.html
     is_a: Begrep
 
-  OTEnhet:
+  OtEnhet:
     description: |
       Stedet hvor OT-ungdom er under oppfølging.
     is_a: Begrep
@@ -141,7 +141,7 @@ classes:
           Kommunen hvor OT-enheten er lokalisert.
         required: true
 
-  OTStatus:
+  OtStatus:
     description: |
       Statuskoder angir hva som er ungdommens hovedaktivitet
       

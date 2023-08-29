@@ -11,7 +11,7 @@ imports:
 
 classes:
 
-  OTUngdom:
+  OtUngdom:
     description: |
       Oppfølgingstjenesten (OT) har ansvar for å følge opp ungdom med rett til videregående opplæring som ikke er i opplæring eller arbeid.
     attributes:
@@ -21,7 +21,7 @@ classes:
           Unik identifikator for OT-ungdom
         required: true
       enhet:
-        range: OTEnhet
+        range: OtEnhet
         description: |
           OT-enheten en OT-ungdom er tilknyttet.
       person:
@@ -37,6 +37,6 @@ classes:
         description: |
           Programområdet til OT-ungdom.
       status:
-        range: OTStatus
+        range: OtStatus
         description: |
           OT-statusen en OT-ungdom har.

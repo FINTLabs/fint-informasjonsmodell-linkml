@@ -137,6 +137,20 @@ classes:
           writeable: true
         description: |
           Tidsstempel som angir når fravær ble godkjent.
+          
+          # Format
+          
+          ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
+          
+          ## Referanser
+          
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+          
+          ## Eksempler
+          
+          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          
+          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
       periode:
         range: Periode
         annotations:
@@ -242,12 +256,40 @@ classes:
           writeable: true
         description: |
           Tidsstempel som angir når lønn ble anvist.
+          
+          # Format
+          
+          ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
+          
+          ## Referanser
+          
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+          
+          ## Eksempler
+          
+          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          
+          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
       attestert:
         range: datetime
         annotations:
           writeable: true
         description: |
           Tidsstempel som angir når lønn ble attestert.
+          
+          # Format
+          
+          ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
+          
+          ## Referanser
+          
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+          
+          ## Eksempler
+          
+          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          
+          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
       beskrivelse:
         range: string
         annotations:
@@ -271,6 +313,20 @@ classes:
           writeable: true
         description: |
           Tidsstempel som angir når lønn ble kontert.
+          
+          # Format
+          
+          ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
+          
+          ## Referanser
+          
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+          
+          ## Eksempler
+          
+          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          
+          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
       kontostreng:
         range: Kontostreng
         annotations:
@@ -432,10 +488,6 @@ classes:
           # Format
           
           Brukernavn i det format en personalressurs trenger for å logge seg på systemer i organisasjonen.
-          
-          # NB!
-          
-          Fremtidig funksjon for dette feltet er under revisjon.
       systemId:
         range: Identifikator
         description: |
@@ -465,9 +517,25 @@ classes:
           
           # Referanser
           
-          - KS Hovedtariffavtalen § 12
+          - KS Hovedtariffavtalen &#167; 12
           - Statens personalhåndbok 2018, kapittel 7.3.4
           - https://snl.no/ansiennitet
+          
+          # Format
+          
+          ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
+          
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
+          
+          ## Referanser
+          
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+          
+          ## Eksempler
+          
+          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          
+          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
       jobbtittel:
         range: string
         annotations:

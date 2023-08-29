@@ -16,29 +16,29 @@ classes:
       # Beskrivelse
       
       Henvisninger til koder i alle kontodimensjoner for kontering av en kostnad eller inntekt.
-      
-      # Eksempel
-      
-      For kontering av lønn kreves Art, Ansvar, Funksjon og eventuelt Prosjekt.
-      
-      Det finnes flere kontodimensjoner enn disse fire. Modellen vil utvides senere med disse dimensjonene.
     attributes:
       aktivitet:
         range: Aktivitet
+        description: |
+          Detaljering av funksjon.
       anlegg:
         range: Anlegg
+        description: |
+          Objekt som skal aktiveres eller avskrives.
       ansvar:
         range: Ansvar
         description: |
-          Ansvar eller kostsenter.
+          Ansvarlig for en utgift eller inntekt.
         required: true
       art:
         range: Art
         description: |
-          Art eller konto.
+          Typen inntekt eller utgift.
         required: true
       diverse:
         range: Diverse
+        description: |
+          Spesifikasjon som ikke fremkommer i øvrige dimensjoner.
       formål:
         range: Formål
         description: |
@@ -46,17 +46,29 @@ classes:
       funksjon:
         range: Funksjon
         description: |
-          Funksjon eller tjeneste.
+          Det som blir produsert eller tjenesten som blir levert.
         required: true
       kontrakt:
         range: Kontrakt
+        description: |
+          Kontostrengens kontraktsegment.
       løpenummer:
         range: Løpenummer
+        description: |
+          Løpenummer i en nummerserie.
       objekt:
         range: Objekt
+        description: |
+          Objekt som skal aktiveres eller avskrives.
       prosjekt:
         range: Prosjekt
         description: |
-          Prosjekt.
+          Kontostrengens prosjektsegment.
+      prosjektart:
+        range: Prosjektart
+        description: |
+          Deloppgave eller delprosjekt.
       ramme:
         range: Ramme
+        description: |
+          Budsjettramme som skal bære kostnadene.
