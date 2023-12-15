@@ -13,6 +13,44 @@ imports:
 
 classes:
 
+  Eksamen:
+    description: |
+      En eksamen som avholdes på en skole.
+    attributes:
+      systemId:
+        range: Identifikator
+        description: |
+          Unik identifikator for eksamenen.
+        required: true
+      beskrivelse:
+        range: string
+        description: |
+          Utfyllende beskrivelse av eksamenen.
+      navn:
+        range: string
+        description: |
+          Navn på eksamenen.
+        required: true
+      tidsrom:
+        range: Periode
+        description: |
+          Dato og tid for eksamenen.
+        required: true
+      eksamensgruppe:
+        range: Eksamensgruppe
+        inverse: eksamen
+        description: |
+          Eksamensgrupper som skal ha en eksamen.
+        multivalued: true
+      rom:
+        range: Rom
+        inverse: eksamen
+        annotations:
+          primaryRelation: true
+        description: |
+          Lokale hvor eksamen skal avholdes.
+        multivalued: true
+
   Fag:
     description: |
       Emneområde i utdanning i henhold til læreplanverket.
@@ -109,6 +147,17 @@ classes:
         description: |
           Faggruppemedlemskapene i et fag.
         multivalued: true
+      skole:
+        range: Skole
+        inverse: faggruppe
+        annotations:
+          primaryRelation: true
+        description: |
+          Skolen faggruppen tilhører.
+      skoleår:
+        range: Skoleår
+        description: |
+          Skoleåret faggruppen er aktiv.
 
   Faggruppemedlemskap:
     description: |
@@ -121,6 +170,14 @@ classes:
         description: |
           Faggruppe det er medlemskap i.
         required: true
+      fagmerknad:
+        range: Fagmerknad
+        description: |
+          Merknad om faget.
+      fagstatus:
+        range: Fagstatus
+        description: |
+          Status i faget.
 
   Rom:
     description: |
@@ -142,6 +199,12 @@ classes:
           primaryRelation: true
         description: |
           Timene som gjennomføres på et bestemt rom
+        multivalued: true
+      eksamen:
+        range: Eksamen
+        inverse: rom
+        description: |
+          Eksamen(er) som skal avholdes i rommet.
         multivalued: true
 
   Time:

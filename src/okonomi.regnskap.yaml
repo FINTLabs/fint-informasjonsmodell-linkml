@@ -34,9 +34,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. juni 1990` -&gt; `1990-06-29T12:00:00Z`
         required: true
       bilagsnummer:
         range: string
@@ -199,9 +199,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. juni 1990` -&gt; `1990-06-29T12:00:00Z`
         required: true
       oppdateringstidspunkt:
         range: datetime
@@ -220,9 +220,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          * `29. mars 1990 klokken 13:30 (UTC +1)` -&gt; `1990-03-29T12:30:00Z`
           
-          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
+          * `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&gt; `1990-06-29T11:30:00Z`
       transaksjonstidspunkt:
         range: datetime
         annotations:
@@ -240,9 +240,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          * `29. mars 1990 klokken 13:30 (UTC +1)` -&gt; `1990-03-29T12:30:00Z`
           
-          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
+          * `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&gt; `1990-06-29T11:30:00Z`
       ansvarlig:
         range: Personalressurs
         description: |

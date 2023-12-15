@@ -238,9 +238,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          * `29. mars 1990 klokken 13:30 (UTC +1)` -&gt; `1990-03-29T12:30:00Z`
           
-          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
+          * `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&gt; `1990-06-29T11:30:00Z`
         required: true
       avskrivningsmate:
         range: string
@@ -361,9 +361,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          * `29. mars 1990 klokken 13:30 (UTC +1)` -&gt; `1990-03-29T12:30:00Z`
           
-          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
+          * `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&gt; `1990-06-29T11:30:00Z`
       part:
         range: Part
         annotations:
@@ -433,9 +433,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. juni 1990` -&gt; `1990-06-29T12:00:00Z`
       tittel:
         range: string
         annotations:
@@ -770,9 +770,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. juni 1990` -&gt; `1990-06-29T12:00:00Z`
       forfallsDato:
         range: datetime
         annotations:
@@ -800,9 +800,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. juni 1990` -&gt; `1990-06-29T12:00:00Z`
       journalAr:
         range: string
         description: |
@@ -840,9 +840,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. juni 1990` -&gt; `1990-06-29T12:00:00Z`
       journalPostnummer:
         range: integer
         description: |
@@ -894,9 +894,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. juni 1990` -&gt; `1990-06-29T12:00:00Z`
       offentlighetsvurdertDato:
         range: datetime
         annotations:
@@ -924,9 +924,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. juni 1990` -&gt; `1990-06-29T12:00:00Z`
       sendtDato:
         range: datetime
         annotations:
@@ -954,9 +954,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. juni 1990` -&gt; `1990-06-29T12:00:00Z`
       journalenhet:
         range: AdministrativEnhet
         description: |
@@ -1128,9 +1128,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          * `29. mars 1990 klokken 13:30 (UTC +1)` -&gt; `1990-03-29T12:30:00Z`
           
-          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
+          * `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&gt; `1990-06-29T11:30:00Z`
       beskrivelse:
         range: string
         description: |
@@ -1185,9 +1185,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          * `29. mars 1990 klokken 13:30 (UTC +1)` -&gt; `1990-03-29T12:30:00Z`
           
-          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
+          * `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&gt; `1990-06-29T11:30:00Z`
         required: true
       tittel:
         range: string
@@ -1396,9 +1396,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          * `29. mars 1990 klokken 13:30 (UTC +1)` -&gt; `1990-03-29T12:30:00Z`
           
-          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
+          * `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&gt; `1990-06-29T11:30:00Z`
       beskrivelse:
         range: string
         annotations:
@@ -1496,9 +1496,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          * `29. mars 1990 klokken 13:30 (UTC +1)` -&gt; `1990-03-29T12:30:00Z`
           
-          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
+          * `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&gt; `1990-06-29T11:30:00Z`
       part:
         range: Part
         annotations:
@@ -1612,9 +1612,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          * `29. mars 1990 klokken 13:30 (UTC +1)` -&gt; `1990-03-29T12:30:00Z`
           
-          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
+          * `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&gt; `1990-06-29T11:30:00Z`
         required: true
       merknadstekst:
         range: string
@@ -1778,9 +1778,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          * `29. mars 1990 klokken 13:30 (UTC +1)` -&gt; `1990-03-29T12:30:00Z`
           
-          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
+          * `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&gt; `1990-06-29T11:30:00Z`
       beskrivelse:
         range: string
         annotations:
@@ -1922,9 +1922,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          * `29. mars 1990 klokken 13:30 (UTC +1)` -&gt; `1990-03-29T12:30:00Z`
           
-          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
+          * `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&gt; `1990-06-29T11:30:00Z`
       part:
         range: Part
         annotations:
@@ -2140,9 +2140,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. juni 1990` -&gt; `1990-06-29T12:00:00Z`
       sakssekvensnummer:
         range: string
         description: |
@@ -2182,7 +2182,7 @@ classes:
           
           29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          29. juni 1990 -&gt; `1990-06-29T12:00:00Z`
       administrativEnhet:
         range: AdministrativEnhet
         description: |

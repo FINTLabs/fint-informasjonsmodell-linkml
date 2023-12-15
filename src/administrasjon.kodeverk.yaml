@@ -376,8 +376,6 @@ classes:
       # Beskrivelse
       
       I det fylkeskommunale lønnssystemet har alle stillinger en stillingskode og en stillingsbetegnelse (for eksempel 7026 for bibliotekar eller 7076 for hjelpepleier). Stillingskoden kan angi noe om stillingens innhold og lønnsnivå.
-      
-      Det finnes en [KS standard for stillingskoder](http://www.ks.no/globalassets/vedlegg-til-hvert-fagomrader/arbeidsgiver/lonnpersonal---analyse-og-statistikk/innsamling-av-data/del-3---stillingskoder.pdf)
     is_a: Begrep
     attributes:
       forelder:

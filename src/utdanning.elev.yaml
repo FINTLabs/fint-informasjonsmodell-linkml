@@ -239,9 +239,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. juni 1990` -&gt; `1990-06-29T12:00:00Z`
       gyldighetsperiode:
         range: Periode
         description: |
@@ -370,6 +370,7 @@ classes:
         range: Fagmerknad
         description: |
           Viser hvilken type fritak eleven har i kroppsøving
+        deprecated: "Bruk relasjon fra Faggruppemedlemskap."
       persongruppemedlemskap:
         range: Persongruppemedlemskap
         inverse: elevforhold
@@ -392,6 +393,7 @@ classes:
         range: Fagmerknad
         description: |
           Hvilke typer fritak eleven har i sidemål.
+        deprecated: "Bruk relasjon fra Faggruppemedlemskap."
         multivalued: true
       skole:
         range: Skole

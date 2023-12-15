@@ -148,9 +148,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          * `29. mars 1990 klokken 13:30 (UTC +1)` -&gt; `1990-03-29T12:30:00Z`
           
-          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
+          * `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&gt; `1990-06-29T11:30:00Z`
       periode:
         range: Periode
         annotations:
@@ -267,9 +267,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          * `29. mars 1990 klokken 13:30 (UTC +1)` -&gt; `1990-03-29T12:30:00Z`
           
-          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
+          * `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&gt; `1990-06-29T11:30:00Z`
       attestert:
         range: datetime
         annotations:
@@ -287,9 +287,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          * `29. mars 1990 klokken 13:30 (UTC +1)` -&gt; `1990-03-29T12:30:00Z`
           
-          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
+          * `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&gt; `1990-06-29T11:30:00Z`
       beskrivelse:
         range: string
         annotations:
@@ -324,9 +324,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          * `29. mars 1990 klokken 13:30 (UTC +1)` -&gt; `1990-03-29T12:30:00Z`
           
-          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
+          * `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&gt; `1990-06-29T11:30:00Z`
       kontostreng:
         range: Kontostreng
         annotations:
@@ -533,9 +533,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. juni 1990` -&gt; `1990-06-29T12:00:00Z`
       jobbtittel:
         range: string
         annotations:
@@ -983,14 +983,6 @@ classes:
           # Beskrivelse
           
           Se kodeverk Stillingskode.
-          
-          # Format
-          
-          # Eksempler
-          
-          # Referanser 
-          
-          Tar utgangspunkt i stillingskodene fra hovedtariffavtalen: [Oversikt over stillingskoder fra KS.no](http://www.ks.no/globalassets/vedlegg-til-hvert-fagomrader/arbeidsgiver/lonnpersonal---analyse-og-statistikk/innsamling-av-data/del-3---stillingskoder.pdf)
       timerPerUke:
         range: Uketimetall
         description: |

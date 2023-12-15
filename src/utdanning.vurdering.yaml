@@ -5,6 +5,7 @@ imports:
   - linkml:types
   - felles.basisklasser
   - felles.komplekse-datatyper
+  - felles.kodeverk
   - utdanning.basisklasser
   - utdanning.elev
   - utdanning.kodeverk
@@ -71,9 +72,16 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 klokken 13:30 (UTC +1) -&gt; `1990-03-29T12:30:00Z`
+          * `29. mars 1990 klokken 13:30 (UTC +1)` -&gt; `1990-03-29T12:30:00Z`
           
-          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; `1990-06-29T11:30:00Z`
+          * `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&gt; `1990-06-29T11:30:00Z`
+      eksamen:
+        range: Eksamen
+        inverse: eksamensgruppe
+        annotations:
+          primaryRelation: true
+        description: |
+          Eksamenen som skal avholdes.
       eksamensform:
         range: Eksamensform
         description: |
@@ -140,6 +148,18 @@ classes:
       Gruppemedlemskap som knytter sammen elevforhold og eksamensgrupper.
     is_a: Gruppemedlemskap
     attributes:
+      delegert:
+        range: boolean
+        description: |
+          Viser om det er en delegert kandidat.
+      kandidatnummer:
+        range: string
+        description: |
+          PAS kandidatnummer.
+      delegertTil:
+        range: Fylke
+        description: |
+          Fylke en eksamenskandidat er deligert/overført til.
       eksamensgruppe:
         range: Eksamensgruppe
         inverse: gruppemedlemskap
@@ -156,6 +176,14 @@ classes:
         description: |
           Elevforhold et eksamensgruppemedlemskap tilhører.
         required: true
+      foretrukketSensor:
+        range: Sensor
+        description: |
+          Ønsket sensor 1 hos en ekstern kurstilbyder knyttet til eksamensoppmeldingen til en privatistkandidat fra den eksterne kurstilbyderen.
+      foretrukketSkole:
+        range: Skole
+        description: |
+          Skole hvor kandidaten foretrekker å ha eksamen.
       nus:
         range: Karakterstatus
         description: |
@@ -201,17 +229,20 @@ classes:
         description: |
           Kildesystemets unike identifikator
         required: true
-      fravær:
-        range: Fraværsregistrering
-        description: |
-          Liste av fraværsregistreringer.
-        multivalued: true
       elevforhold:
         range: Elevforhold
         inverse: fraværsregistreringer
         description: |
           Elevforholdet fraværet er registrert på.
         required: true
+      fraværsregistrering:
+        range: Fraværsregistrering
+        inverse: elevfravær
+        annotations:
+          primaryRelation: true
+        description: |
+          Liste av fraværsregistreringer.
+        multivalued: true
 
   Fagvurdering:
     description: |
@@ -255,9 +286,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. juni 1990` -&gt; `1990-06-29T12:00:00Z`
         required: true
       fag:
         range: Fag
@@ -452,6 +483,11 @@ classes:
     description: |
       Manglende tilstedeværelse i opplæringen.
     attributes:
+      systemId:
+        range: Identifikator
+        description: |
+          Kildesystemets unike identifikator.
+        required: true
       føresPåVitnemål:
         range: boolean
         description: |
@@ -463,13 +499,18 @@ classes:
         range: string
         description: |
           Kommentar til fraværet, evt ekstrainformasjon
-        required: true
       periode:
-        range: 
+        range: Periode
         description: |
           Tidsperioden fraværet gjelder for.
           
           Fravær skal registreres i dager eller timer (60-minutters enheter). Det er ikke tillatt å konvertere timer til dager.
+        required: true
+      elevfravær:
+        range: Elevfravær
+        inverse: fraværsregistrering
+        description: |
+          Samling av fraværsregistreringer for en elev.
         required: true
       faggruppe:
         range: Faggruppe
@@ -566,9 +607,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. juni 1990` -&gt; `1990-06-29T12:00:00Z`
         required: true
       karakterstatus:
         range: Karakterstatus
@@ -669,9 +710,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. juni 1990` -&gt; `1990-03-29T12:00:00Z`
         required: true
       atferd:
         range: Karakterverdi
@@ -731,7 +772,7 @@ classes:
       
       Sluttvurdering (Standpunktkarakter) gis for deltakelse av en elev i en gruppe.
       
-      Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i. Det er også mulig å sette relasjon direkte til angjeldende fag.
+      Vurderingen skal ha en relasjon til det angjeldende faget. Det er også mulig å sette en relasjon til den eksamensgruppen som vurderingen er foretatt i.
       
       # Referanser
       

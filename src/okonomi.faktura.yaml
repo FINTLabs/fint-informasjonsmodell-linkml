@@ -31,7 +31,7 @@ classes:
       beløp:
         range: integer
         description: |
-          Beløp mottaker skal betale.
+          Beløp mottaker skal betale, i øre.
         required: true
       betalt:
         range: boolean
@@ -54,9 +54,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. juni 1990` -&gt; `1990-06-29T12:00:00Z`
         required: true
       fakturert:
         range: boolean
@@ -81,9 +81,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. juni 1990` -&gt; `1990-06-29T12:00:00Z`
         required: true
       kreditert:
         range: boolean
@@ -101,7 +101,7 @@ classes:
         annotations:
           writeable: true
         description: |
-          Gjenstående beløp å betale
+          Gjenstående beløp å betale, i øre.
       fakturagrunnlag:
         range: Fakturagrunnlag
         inverse: faktura
@@ -163,9 +163,9 @@ classes:
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
           
-          29. juni 1990 -&gt; `1990-03-29T12:00:00Z`
+          * `29. juni 1990` -&gt; `1990-06-29T12:00:00Z`
       mottaker:
         range: Fakturamottaker
         annotations:

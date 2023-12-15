@@ -248,6 +248,12 @@ classes:
         description: |
           Fagene som skolen tilbyr
         multivalued: true
+      faggruppe:
+        range: Faggruppe
+        inverse: skole
+        description: |
+          Skolens faggrupper.
+        multivalued: true
       kontaktlærergruppe:
         range: Kontaktlærergruppe
         inverse: skole

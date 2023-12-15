@@ -437,15 +437,13 @@ Det fokuseres på arbeidsoppgaver:
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_37bff47e82e7696ff9" general="EAID_CLS_b2d51228fff1754e2b" start="EAID_CLS_dd92a52d92cf9bebff" end="EAID_CLS_b2d51228fff1754e2b" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_1d24d026ece51b64c5" name="Stillingskode">
-              <properties documentation="Et felles kodeverk for stillinger&#10;&#10;# Beskrivelse&#10;&#10;I det fylkeskommunale lønnssystemet har alle stillinger en stillingskode og en stillingsbetegnelse (for eksempel 7026 for bibliotekar eller 7076 for hjelpepleier). Stillingskoden kan angi noe om stillingens innhold og lønnsnivå.&#10;&#10;Det finnes en [KS standard for stillingskoder](http://www.ks.no/globalassets/vedlegg-til-hvert-fagomrader/arbeidsgiver/lonnpersonal---analyse-og-statistikk/innsamling-av-data/del-3---stillingskoder.pdf)&#10;" stereotype="hovedklasse" />
+              <properties documentation="Et felles kodeverk for stillinger&#10;&#10;# Beskrivelse&#10;&#10;I det fylkeskommunale lønnssystemet har alle stillinger en stillingskode og en stillingsbetegnelse (for eksempel 7026 for bibliotekar eller 7076 for hjelpepleier). Stillingskoden kan angi noe om stillingens innhold og lønnsnivå.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d5249330beae743515">
                 <body>Et felles kodeverk for stillinger
 
 # Beskrivelse
 
 I det fylkeskommunale lønnssystemet har alle stillinger en stillingskode og en stillingsbetegnelse (for eksempel 7026 for bibliotekar eller 7076 for hjelpepleier). Stillingskoden kan angi noe om stillingens innhold og lønnsnivå.
-
-Det finnes en [KS standard for stillingskoder](http://www.ks.no/globalassets/vedlegg-til-hvert-fagomrader/arbeidsgiver/lonnpersonal---analyse-og-statistikk/innsamling-av-data/del-3---stillingskoder.pdf)
 </body>
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_d5249330beae743515" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_1d24d026ece51b64c5" end="EAID_CLS_3385458244847ec7db" />
@@ -793,9 +791,9 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -895,9 +893,9 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -918,9 +916,9 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -960,9 +958,9 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -1188,9 +1186,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -2106,9 +2104,9 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -2247,9 +2245,9 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -2331,9 +2329,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -2602,9 +2600,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -2635,9 +2633,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -2685,9 +2683,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -2752,9 +2750,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -2785,9 +2783,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -2818,9 +2816,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -2981,9 +2979,9 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -3055,9 +3053,9 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -3276,9 +3274,9 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -3393,9 +3391,9 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -3493,9 +3491,9 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -3642,9 +3640,9 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -3810,9 +3808,9 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -3991,9 +3989,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -4043,7 +4041,7 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+29. juni 1990 -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -4328,9 +4326,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                 </ownedComment>
               </ownedAttribute>
@@ -5092,9 +5090,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -5123,7 +5121,7 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+29. juni 1990 -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -5252,7 +5250,7 @@ Faktura opprettes med basis i ett fakturagrunnlag og ustedes til en eller flere 
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_69744e18af6a13efb0" value="1" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_69744e18af6a13efb0" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_69744e18af6a13efb0">
-                  <body>Beløp mottaker skal betale.
+                  <body>Beløp mottaker skal betale, i øre.
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -5284,9 +5282,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -5318,9 +5316,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -5347,7 +5345,7 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_1cbcfeb76e0df4ead4" value="0" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_1cbcfeb76e0df4ead4" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_1cbcfeb76e0df4ead4">
-                  <body>Gjenstående beløp å betale
+                  <body>Gjenstående beløp å betale, i øre.
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -5414,9 +5412,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -5643,9 +5641,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -5869,9 +5867,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -5892,9 +5890,9 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -5915,9 +5913,9 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -5971,7 +5969,7 @@ Personvernforordningen artikkel 4
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_0728537f42d29a1e98" name="Samtykke">
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_8fae47cb7779cd09d9" name="Behandling">
-              <properties documentation="All bruk av personopplysninger&#10;&#10;# Beskrivelse&#10;&#10;All bruk av personopplysninger, slik som innsamling, registrering, sammenstilling, lagring og utlevering, eller en kombinasjon av slike bruksmåter.&#10;&#10;Personopplysninger skal bare brukes for spesifikke, uttrykkelige, angitte og legitime formål. Virksomheten har plikt til å gi den enkelte informasjon om formålet med behandling av personopplysning samt behandlingsgrunnlaget.&#10;" />
+              <properties documentation="All bruk av personopplysninger&#10;&#10;# Beskrivelse&#10;&#10;All bruk av personopplysninger, slik som innsamling, registrering, sammenstilling, lagring og utlevering, eller en kombinasjon av slike bruksmåter.&#10;&#10;Personopplysninger skal bare brukes for spesifikke, uttrykkelige, angitte og legitime formål. Virksomheten har plikt til å gi den enkelte informasjon om formålet med behandling av personopplysning samt behandlingsgrunnlaget.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_0f4bb7e38fc89ca902">
                 <body>All bruk av personopplysninger
 
@@ -5982,6 +5980,15 @@ All bruk av personopplysninger, slik som innsamling, registrering, sammenstillin
 Personopplysninger skal bare brukes for spesifikke, uttrykkelige, angitte og legitime formål. Virksomheten har plikt til å gi den enkelte informasjon om formålet med behandling av personopplysning samt behandlingsgrunnlaget.
 </body>
                 </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_526041d27ca86b597d" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_b43630a8b6f57f2e9e" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_b43630a8b6f57f2e9e" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_b43630a8b6f57f2e9e">
+                  <body>Intern identifikator som brukes i kildesystemet.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_7bc9e812fed6b9b3d7" name="aktiv" visibility="public">
                 <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Boolean" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_a5b33c7579fb7a4782" value="1" />
@@ -6004,15 +6011,6 @@ Personopplysninger skal bare brukes for spesifikke, uttrykkelige, angitte og leg
 </body>
                   </ownedComment>
                 </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_66bba02fdf3078a54d" name="samtykke" visibility="public">
-                <type xmi:idref="EAID_CLS_6d81f63c13e582f918" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_0ddca30d8994b9ea63" value="0" />
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_UPR_0ddca30d8994b9ea63" value="*" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_0ddca30d8994b9ea63">
-                  <body>Samtykker tilknyttet en behandling.
-</body>
-                  </ownedComment>
-                </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_e2a8f892557d7b49c9" name="slettet" visibility="public">
                 <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#DateTime" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_788432c161d0f36db6" value="0" />
@@ -6030,27 +6028,9 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
-</body>
-                  </ownedComment>
-                </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_526041d27ca86b597d" name="systemId" visibility="public">
-                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_b43630a8b6f57f2e9e" value="1" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_b43630a8b6f57f2e9e" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_b43630a8b6f57f2e9e">
-                  <body>Intern identifikator som brukes i kildesystemet.
-</body>
-                  </ownedComment>
-                </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_95f0bad0d1a1b10b05" name="tjeneste" visibility="public">
-                <type xmi:idref="EAID_CLS_2a1da426b7f2a400e2" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_448e1ace869ec7ae55" value="1" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_448e1ace869ec7ae55" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_448e1ace869ec7ae55">
-                  <body>Tjeneste som behandling tilhører
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -6058,7 +6038,7 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_46e00d68a2a358d0d4" visibility="public" start="EAID_CLS_8fae47cb7779cd09d9" end="EAID_CLS_14d417a32baf64e200" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_bfd7d55d4efa3e67a8" visibility="public" start="EAID_CLS_8fae47cb7779cd09d9" end="EAID_CLS_a4b53dbc8fd178533b" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_6d81f63c13e582f918" name="Samtykke">
-              <properties documentation="Tillatelse til behandling av personopplysning.&#10;&#10;# Beskrivelse&#10;&#10;En virksomhet kan behandle personopplysninger dersom den har innhentet gyldig samtykke fra personen eller personene det gjelder.&#10;" />
+              <properties documentation="Tillatelse til behandling av personopplysning.&#10;&#10;# Beskrivelse&#10;&#10;En virksomhet kan behandle personopplysninger dersom den har innhentet gyldig samtykke fra personen eller personene det gjelder.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_c5afa230f4cd308ad7">
                 <body>Tillatelse til behandling av personopplysning.
 
@@ -6067,17 +6047,17 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 En virksomhet kan behandle personopplysninger dersom den har innhentet gyldig samtykke fra personen eller personene det gjelder.
 </body>
                 </ownedComment>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_430526aa333efa73af" name="behandling" visibility="public">
-                <type xmi:idref="EAID_CLS_8fae47cb7779cd09d9" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_fba998749208cd9152" value="1" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_fba998749208cd9152" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_fba998749208cd9152">
-                  <body>Behandling som omfattes av samtykke.
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_af3e126f24d28d099a" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_ef51fb9ce539b39e73" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_ef51fb9ce539b39e73" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_ef51fb9ce539b39e73">
+                  <body>Intern identifikator som brukes i kildesystemet.
 </body>
                   </ownedComment>
                 </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_6880a8c29dfb1fb6f8" name="gyldighetsperiode" visibility="public">
-                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_311ff16ce041083d25" value="1" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_311ff16ce041083d25" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_311ff16ce041083d25">
@@ -6102,26 +6082,18 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
-</body>
-                  </ownedComment>
-                </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_af3e126f24d28d099a" name="systemId" visibility="public">
-                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_ef51fb9ce539b39e73" value="1" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_ef51fb9ce539b39e73" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_ef51fb9ce539b39e73">
-                  <body>Intern identifikator som brukes i kildesystemet.
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_430526aa333efa73af" visibility="public" start="EAID_CLS_6d81f63c13e582f918" end="EAID_CLS_8fae47cb7779cd09d9" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_b178005fc908965436" visibility="public" start="EAID_CLS_6d81f63c13e582f918" end="EAID_CLS_11c618a515753fb259" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_2da567f6c5dd539f86" visibility="public" start="EAID_CLS_6d81f63c13e582f918" end="EAID_CLS_8548ca6ef4e9f948e9" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_2a1da426b7f2a400e2" name="Tjeneste">
-              <properties documentation="Tjeneste eller system som behandler personopplysninger. &#10;&#10;# Beskrivelse&#10;&#10;Tjeneste eller system som behandler personopplysninger må ha et behandlingsgrunnlag og formål for behandling av hver enkelt personopplysning.&#10;" />
+              <properties documentation="Tjeneste eller system som behandler personopplysninger. &#10;&#10;# Beskrivelse&#10;&#10;Tjeneste eller system som behandler personopplysninger må ha et behandlingsgrunnlag og formål for behandling av hver enkelt personopplysning.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_3c85c6455d2f575742">
                 <body>Tjeneste eller system som behandler personopplysninger. 
 
@@ -6130,12 +6102,12 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 Tjeneste eller system som behandler personopplysninger må ha et behandlingsgrunnlag og formål for behandling av hver enkelt personopplysning.
 </body>
                 </ownedComment>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_6b34c1bf2803ab0db4" name="behandling" visibility="public">
-                <type xmi:idref="EAID_CLS_8fae47cb7779cd09d9" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_3a170249e0cdb9fbc4" value="0" />
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_UPR_3a170249e0cdb9fbc4" value="*" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_3a170249e0cdb9fbc4">
-                  <body>Alle behandlinger til en tjeneste
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_5c75df730732cc27fb" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_e54a600d3a8172437a" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_e54a600d3a8172437a" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_e54a600d3a8172437a">
+                  <body>Intern identifikator som brukes i kildesystemet.
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -6165,28 +6137,20 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
-</body>
-                  </ownedComment>
-                </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_5c75df730732cc27fb" name="systemId" visibility="public">
-                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_e54a600d3a8172437a" value="1" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_e54a600d3a8172437a" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_e54a600d3a8172437a">
-                  <body>Intern identifikator som brukes i kildesystemet.
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_6b34c1bf2803ab0db4" visibility="public" start="EAID_CLS_2a1da426b7f2a400e2" end="EAID_CLS_8fae47cb7779cd09d9" />
             </packagedElement>
           </packagedElement>
         <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_0baf0de00c8f5a0c51" name="Ressurser">
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_4165ba11a971fac2eb" name="Tilganger">
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_51ceb2dd60eb96d1af" name="Identitet">
-              <properties documentation="Identitet identifiserer innehaver av rettigheter i relasjonen til organisasjonen.&#10;&#10;Kilden for denne type informasjon vil typisk være identitetsforvaltningssystemet.&#10;" />
+              <properties documentation="Identitet identifiserer innehaver av rettigheter i relasjonen til organisasjonen.&#10;&#10;Kilden for denne type informasjon vil typisk være identitetsforvaltningssystemet.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_92d2f06855ce3402dc">
                 <body>Identitet identifiserer innehaver av rettigheter i relasjonen til organisasjonen.
 
@@ -6194,7 +6158,7 @@ Kilden for denne type informasjon vil typisk være identitetsforvaltningssystemet
 </body>
                 </ownedComment>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_c1c082ac9750dbe810" name="systemId" visibility="public">
-                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_761d87f6ffac478a2e" value="1" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_761d87f6ffac478a2e" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_761d87f6ffac478a2e">
@@ -6218,15 +6182,6 @@ Kilden for denne type informasjon vil typisk være identitetsforvaltningssystemet
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_499fc38dcaf43eaead" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_499fc38dcaf43eaead">
                   <body>En beskrivelse av hva rettigheten innebærer.
-</body>
-                  </ownedComment>
-                </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_b7a08db9e8d5d04d36" name="identitet" visibility="public">
-                <type xmi:idref="EAID_CLS_51ceb2dd60eb96d1af" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_ffc3c9190def10b70a" value="0" />
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_UPR_ffc3c9190def10b70a" value="*" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_ffc3c9190def10b70a">
-                  <body>Identiteter knyttet til rettigheten.
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -6571,9 +6526,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -6864,7 +6819,7 @@ Gyldige verdier kan være:
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_f274442bb3f08f4c22" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_20ee2391e13a5e2da9" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_31260c62481059007c" name="Fagmerknad">
-              <properties documentation="Merknader til vitnemål og kompetansebevis&#10;&#10;# Beskrivelse&#10;&#10;En fagmerknad er en merknad som har en eller flere av disse funksjonene&#10;&#10;- gir opplysninger om faget som ikke går fram av karakterer eller eksamensform&#10;- utdyper opplysninger om karakterer og/eller eksamensform&#10;- henviser til vedlegg som gir slike opplysninger&#10;&#10;# Referanser&#10;&#10;https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/&#10;" stereotype="hovedklasse" />
+              <properties documentation="Merknader til vitnemål og kompetansebevis&#10;&#10;# Beskrivelse&#10;&#10;En fagmerknad er en merknad som har en eller flere av disse funksjonene&#10;&#10;- gir opplysninger om faget som ikke går fram av karakterer eller eksamensform&#10;- utdyper opplysninger om karakterer og/eller eksamensform&#10;- henviser til vedlegg som gir slike opplysninger&#10;&#10;# Referanser&#10;&#10;[Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_61a1891a729663f73b">
                 <body>Merknader til vitnemål og kompetansebevis
 
@@ -6878,10 +6833,31 @@ En fagmerknad er en merknad som har en eller flere av disse funksjonene
 
 # Referanser
 
-https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/
+[Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)
 </body>
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_61a1891a729663f73b" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_31260c62481059007c" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_98f04a023d51f0d848" name="Fagstatus">
+              <properties documentation="Elevens, privatistens eller kandidatens (voksne) status på et gitt fag.&#10;&#10;# Beskrivelse&#10;&#10;Fagstatus er en kode for undervisningen og/eller grunnlaget for karakteren. Den gir informasjon om hvordan det enkelte faget er gjennomført eller evt. ikke gjennomført.&#10;&#10;# Eksempler&#10;&#10;* E - Elev&#10;* F - Fritatt&#10;&#10;# Referanse&#10;&#10;[Registreringshåndbok]( https://regbok.udir.no/felt/?Id=1014315)&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_45753febdaa1d06fc6">
+                <body>Elevens, privatistens eller kandidatens (voksne) status på et gitt fag.
+
+# Beskrivelse
+
+Fagstatus er en kode for undervisningen og/eller grunnlaget for karakteren. Den gir informasjon om hvordan det enkelte faget er gjennomført eller evt. ikke gjennomført.
+
+# Eksempler
+
+* E - Elev
+* F - Fritatt
+
+# Referanse
+
+[Registreringshåndbok]( https://regbok.udir.no/felt/?Id=1014315)
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_45753febdaa1d06fc6" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_98f04a023d51f0d848" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_3076a148b4be460dce" name="Fraværstype">
               <properties documentation="Typer fravær.&#10;&#10;# Referanse&#10;&#10;https://www.udir.no/regelverk-og-tilsyn/skole-og-opplaring/saksbehandling/fravar/fravar-i-videregaende/&#10;&#10;VIS:&#10;https://inschool.zendesk.com/hc/no/articles/360023264091&#10;" stereotype="hovedklasse" />
@@ -7035,9 +7011,9 @@ Et skoleår er som hovedregel inndelt i to terminer. Første termin: medio august 
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_dc81664f4e2d9c9fdd" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_aad6ed1e0d9928ed93" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_8c00232d083f0f1a84" name="Tilrettelegging">
-              <properties documentation="Tirettelegging en elev kan ha på eksamen.&#10;" stereotype="hovedklasse" />
+              <properties documentation="Tilrettelegging en elev kan ha på eksamen.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_247d8fb6758a34cdf6">
-                <body>Tirettelegging en elev kan ha på eksamen.
+                <body>Tilrettelegging en elev kan ha på eksamen.
 </body>
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_247d8fb6758a34cdf6" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_8c00232d083f0f1a84" end="EAID_CLS_3385458244847ec7db" />
@@ -7120,6 +7096,50 @@ https://api.felleskomponent.no/utdanning/vigo/kodeverk/swagger-ui.html#/
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_078358c22066331df6" visibility="public" start="EAID_CLS_a7ae662a3b8e1364cf" end="EAID_CLS_6338ce2e1019e83927" />
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_b9ee1761619271cf21" name="Timeplan">
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_c1bdb0a99745f93933" name="Eksamen">
+              <properties documentation="En eksamen som avholdes på en skole.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_e653b7f81377378e20">
+                <body>En eksamen som avholdes på en skole.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_b3886c383ceb3a46c9" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_9eeef7f248fe3d023d" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_9eeef7f248fe3d023d" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_9eeef7f248fe3d023d">
+                  <body>Unik identifikator for eksamenen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_1977ab9cfee0435149" name="beskrivelse" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_1eb86a8391fd5a7c43" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_1eb86a8391fd5a7c43" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_1eb86a8391fd5a7c43">
+                  <body>Utfyllende beskrivelse av eksamenen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_82c53f930aaab2a893" name="navn" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_0467ef65a7138b2b8c" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_0467ef65a7138b2b8c" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_0467ef65a7138b2b8c">
+                  <body>Navn på eksamenen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_42fac041cb184efb1e" name="tidsrom" visibility="public">
+                <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_862492c89ca9dae793" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_862492c89ca9dae793" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_862492c89ca9dae793">
+                  <body>Dato og tid for eksamenen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_69439f38599855828f" visibility="public" start="EAID_CLS_c1bdb0a99745f93933" end="EAID_CLS_6613563c654c1f89b6" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_e92c2079bc89c6d11a" name="Fag">
               <properties documentation="Emneområde i utdanning i henhold til læreplanverket.&#10;&#10;# Beskrivelse&#10;&#10;Utdanning gjennomføres i form av fag. Fag i videregående utdanning har en fagtype og en fagkode. Begge er definert i VIGO og Grep kodeverk.  For føring på vitnemål kan kun fagkoder fastsatt av Utdanningsdirektoratet benyttes.&#10;&#10;Fag og fagkoder kan slås opp hos Utdanningsdirektoratet på https://www.udir.no/laring-og-trivsel/lareplanverket/finn-fagkode/&#10;&#10;Fagkoder er også beskrevet i [Registreringshåndboken A04](http://regbok.udir.no/35004/3344/35042-1014304.html).&#10;&#10;# Fagtyper&#10;&#10;Fag grupperes etter  [Rundskriv Udir-01-2017](https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Innhold-i-opplaringen/udir-01-2017/) og skriv fra Utdanningsdirektoratet om [Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet, pkt 2.5](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/2-oppsett-av-vitnemal-og-kompetansebevis/#2.5-rekkefolge-for-foring-av-fag-og-fagtyper).&#10;&#10;De aktuelle fagtypene i henhold til [Registreringshåndboken A05](http://regbok.udir.no/35004/3344/35042-1014305.html) er:&#10;&#10;- Fellesfag&#10;- Felles programfag&#10;- Valgfrie programfag&#10;- Uspesifiserte programfag&#10;- Yrkesfaglig fordypning&#10;- Individuell opplæringsplan&#10;&#10;# Referanser&#10;&#10;* https://www.udir.no/laring-og-trivsel/lareplanverket/&#10;* https://www.udir.no/utdanningslopet/videregaende-opplaring/&#10;* http://regbok.udir.no/&#10;* http://grepwiki.udir.no/&#10;* https://www.vigo.no/vigokv/index.action&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_5297fb1c9776456f97">
@@ -7176,6 +7196,8 @@ Se også [Undervisningsgruppe](/docs/timeplan_undervisningsgruppe).
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_e07fe1f8b439b24b60" visibility="public" start="EAID_CLS_a7dee6f3f81a7ce38f" end="EAID_CLS_e92c2079bc89c6d11a" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_fdf6fbd6a5eea3baff" visibility="public" start="EAID_CLS_a7dee6f3f81a7ce38f" end="EAID_CLS_1235e64f5c06b787df" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_e944e7359a2eb1c28a" visibility="public" start="EAID_CLS_a7dee6f3f81a7ce38f" end="EAID_CLS_64e904f2ebf8b9f538" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_f8e418f9414bf0ef7a" visibility="public" start="EAID_CLS_a7dee6f3f81a7ce38f" end="EAID_CLS_8cd72252caa5382d06" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_1235e64f5c06b787df" name="Faggruppemedlemskap">
               <properties documentation="Medlemskap i faggruppe.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_41e8ff78485ebdc1fd">
@@ -7184,6 +7206,8 @@ Se også [Undervisningsgruppe](/docs/timeplan_undervisningsgruppe).
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_41e8ff78485ebdc1fd" general="EAID_CLS_0d161f922b39eccebe" start="EAID_CLS_1235e64f5c06b787df" end="EAID_CLS_0d161f922b39eccebe" />
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_3c2780a5da89ee7243" visibility="public" start="EAID_CLS_1235e64f5c06b787df" end="EAID_CLS_31260c62481059007c" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_4b7931327104db457f" visibility="public" start="EAID_CLS_1235e64f5c06b787df" end="EAID_CLS_98f04a023d51f0d848" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_6613563c654c1f89b6" name="Rom">
               <properties documentation="Rom hvor timene gjennomføres.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a9008a6dc352fbf4e6">
@@ -7583,13 +7607,14 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 ## Eksempler
 
-29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`
+* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`
 
-29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`
+* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_00478186d346ef8755" visibility="public" start="EAID_CLS_befc698f1817a298c1" end="EAID_CLS_c1bdb0a99745f93933" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_bf8167aeb0023d1756" visibility="public" start="EAID_CLS_befc698f1817a298c1" end="EAID_CLS_c8081bf05b678612ce" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_c65ceb67b4daa46549" visibility="public" start="EAID_CLS_befc698f1817a298c1" end="EAID_CLS_9be72467d299d27d2a" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_d1d21e3f1a07afc3dd" visibility="public" start="EAID_CLS_befc698f1817a298c1" end="EAID_CLS_e92c2079bc89c6d11a" />
@@ -7607,9 +7632,30 @@ Gruppemedlemskap som knytter sammen elevforhold og eksamensgrupper.
 </body>
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_ab5b677871f99f3c43" general="EAID_CLS_0d161f922b39eccebe" start="EAID_CLS_fcc8bab445fb55fc37" end="EAID_CLS_0d161f922b39eccebe" />
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_074600fefd4aed2db0" name="delegert" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Boolean" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_dab701f0d594d8810d" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_dab701f0d594d8810d" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_dab701f0d594d8810d">
+                  <body>Viser om det er en delegert kandidat.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_0fcb78cf26c077873c" name="kandidatnummer" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_3432b45f56f2e4206b" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_3432b45f56f2e4206b" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_3432b45f56f2e4206b">
+                  <body>PAS kandidatnummer.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_9d6f47de11fbb0c55a" visibility="public" start="EAID_CLS_fcc8bab445fb55fc37" end="EAID_CLS_f64277f4a90f494b7b" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_da4f5c337f36d52aac" visibility="public" start="EAID_CLS_fcc8bab445fb55fc37" end="EAID_CLS_befc698f1817a298c1" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_e83aa14d13cb19156a" visibility="public" start="EAID_CLS_fcc8bab445fb55fc37" end="EAID_CLS_9be72467d299d27d2a" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_fc70ed524f4efe5f9d" visibility="public" start="EAID_CLS_fcc8bab445fb55fc37" end="EAID_CLS_0b3332931f7cc69b89" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_4642089598f23101dc" visibility="public" start="EAID_CLS_fcc8bab445fb55fc37" end="EAID_CLS_64e904f2ebf8b9f538" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_bcb87751469b071801" visibility="public" start="EAID_CLS_fcc8bab445fb55fc37" end="EAID_CLS_1d2ea71766e6f9ab9c" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_8ebe762414fdaf3d36" name="Elevfravær">
               <properties documentation="Manglende tilstedeværelse i opplæringen.&#10;&#10;# Beskrivelse&#10;&#10;Fravær føres med relasjon til den undervisningen eleven har vært fraværende fra.&#10;&#10;# Fraværsgrense &#10;&#10;* Elever i videregående skole skal møte opp og delta aktivt i opplæringen. &#10;* Fravær skal registreres, og det foreligger grenser på hvor mye fravær som tillates før rett til å få halvårsvurdering med karakter eller standpunktkarakter i et fag bortfaller. &#10;* Eleven må legge fram relevant dokumentasjon for å få fravær unntatt fra fraværsgrensen.&#10;* Fraværsgrensen gjelder timefravær i enkeltfag, ikke elevenes totale fravær.&#10;* Eleven skal få et varsel om han eller hun står i fare for å ikke få karakter på grunn av fravær.&#10;&#10;# Fravær eksamen&#10;Det føres ikke lenger fravær på eksamen. Dette vil bli satt som karakter. Pga dette utgår relasjonen til eksamensgruppe. Ved en senere hovedoppdatering av Informasjonsmodellen vil multiplisitet for relasjonen  undervisningsgruppe bli satt til 1.&#10;&#10;# Referanser&#10;&#10;* UDir Registreringshåndbok: http://regbok.udir.no/35004/3344/35042-1018643.html&#10;* Forskrift til opplæringslova &amp;#167; 3-3, siste ledd: https://lovdata.no/forskrift/2006-06-23-724/&amp;#167;3-3&#10;* Forskrift til opplæringslova &amp;#167; 3-47: https://lovdata.no/forskrift/2006-06-23-724/&amp;#167;3-47&#10;* UDir. Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet, pkt 8: https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/8-fravar/&#10;* SNL. Fravær: https://snl.no/fravær&#10;* Rundskriv Udir-3-2016: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravarsgrense---udir-3-2016/&#10;* UDir. Fravær i videregående skole: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravar-i-videregaende-skole/&#10;" stereotype="hovedklasse" />
@@ -7651,16 +7697,8 @@ Det føres ikke lenger fravær på eksamen. Dette vil bli satt som karakter. Pga de
 </body>
                   </ownedComment>
                 </ownedAttribute>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_7ad5e32be9c54b4b61" name="fravær" visibility="public">
-                <type xmi:idref="EAID_CLS_ef58a543f483b22da3" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_63777a9e0431ec01bb" value="0" />
-                <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="EAID_UPR_63777a9e0431ec01bb" value="*" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_63777a9e0431ec01bb">
-                  <body>Liste av fraværsregistreringer.
-</body>
-                  </ownedComment>
-                </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_7818f093090d4009cd" visibility="public" start="EAID_CLS_8ebe762414fdaf3d36" end="EAID_CLS_ef58a543f483b22da3" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_d070ec2ebf1c6459a5" name="Fagvurdering" isAbstract="true">
               <properties documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Vurdering i fag skal ha relasjon til det faget det er foretatt vurdering i.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til opplæringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="abstrakt" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a5a5e4503b10264081">
@@ -7714,9 +7752,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -7911,11 +7949,20 @@ I informasjonsmodellen oppgis en prosentverdi som et heltall. Dette tallet er an
                 </ownedAttribute>
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_ef58a543f483b22da3" name="Fraværsregistrering">
-              <properties documentation="Manglende tilstedeværelse i opplæringen.&#10;" />
+              <properties documentation="Manglende tilstedeværelse i opplæringen.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_979966adaf2f8120d0">
                 <body>Manglende tilstedeværelse i opplæringen.
 </body>
                 </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_a32747ed4533c74f97" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_bde396cb33342f5fd0" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_bde396cb33342f5fd0" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_bde396cb33342f5fd0">
+                  <body>Kildesystemets unike identifikator.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_e67e9720e56c0f6a22" name="føresPåVitnemål" visibility="public">
                 <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Boolean" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_ba3af334ac4a902ee3" value="1" />
@@ -7929,7 +7976,7 @@ Føring på vitnemål bestemmes av [forskrift til opplæringslova &amp;#167; 3-47](h
                 </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_1e57e4dbebf68f1563" name="kommentar" visibility="public">
                 <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_50109ab8477bd35308" value="1" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_50109ab8477bd35308" value="0" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_50109ab8477bd35308" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_50109ab8477bd35308">
                   <body>Kommentar til fraværet, evt ekstrainformasjon
@@ -7937,7 +7984,7 @@ Føring på vitnemål bestemmes av [forskrift til opplæringslova &amp;#167; 3-47](h
                   </ownedComment>
                 </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_e2708cf0ea336fbbae" name="periode" visibility="public">
-                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_246d48e55178771528" value="1" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_246d48e55178771528" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_246d48e55178771528">
@@ -8026,9 +8073,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -8118,9 +8165,9 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 
-29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+* `29. juni 1990` -&amp;gt; `1990-03-29T12:00:00Z`
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -8165,7 +8212,7 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_f8af5492b711512cd6" visibility="public" start="EAID_CLS_0b3332931f7cc69b89" end="EAID_CLS_befc698f1817a298c1" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_da123816374cfa7452" visibility="public" start="EAID_CLS_0b3332931f7cc69b89" end="EAID_CLS_1effd1cacfa57a62ad" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_587e9da5042c0cd923" name="Sluttfagvurdering">
-              <properties documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Sluttvurdering (Standpunktkarakter) gis for deltakelse av en elev i en gruppe.&#10;&#10;Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i. Det er også mulig å sette relasjon direkte til angjeldende fag.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til opplæringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
+              <properties documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Sluttvurdering (Standpunktkarakter) gis for deltakelse av en elev i en gruppe.&#10;&#10;Vurderingen skal ha en relasjon til det angjeldende faget. Det er også mulig å sette en relasjon til den eksamensgruppen som vurderingen er foretatt i.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til opplæringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_e54b71761f9de8f370">
                 <body>Karakterer og andre vurderingsuttrykk.
 
@@ -8173,7 +8220,7 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 Sluttvurdering (Standpunktkarakter) gis for deltakelse av en elev i en gruppe.
 
-Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i. Det er også mulig å sette relasjon direkte til angjeldende fag.
+Vurderingen skal ha en relasjon til det angjeldende faget. Det er også mulig å sette en relasjon til den eksamensgruppen som vurderingen er foretatt i.
 
 # Referanser
 
@@ -8407,7 +8454,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="date" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Dato for fødsel&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Dato for fødsel&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_fa7d67325798e4a81f" idref="EAID_PRP_fa7d67325798e4a81f" name="navn">
@@ -8635,7 +8682,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <element xmi:idref="EAID_CLS_1d24d026ece51b64c5" idref="EAID_CLS_1d24d026ece51b64c5" xmi:type="uml:Class" type="Class" name="Stillingskode" scope="public">
         <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Et felles kodeverk for stillinger&#10;&#10;# Beskrivelse&#10;&#10;I det fylkeskommunale lønnssystemet har alle stillinger en stillingskode og en stillingsbetegnelse (for eksempel 7026 for bibliotekar eller 7076 for hjelpepleier). Stillingskoden kan angi noe om stillingens innhold og lønnsnivå.&#10;&#10;Det finnes en [KS standard for stillingskoder](http://www.ks.no/globalassets/vedlegg-til-hvert-fagomrader/arbeidsgiver/lonnpersonal---analyse-og-statistikk/innsamling-av-data/del-3---stillingskoder.pdf)&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Et felles kodeverk for stillinger&#10;&#10;# Beskrivelse&#10;&#10;I det fylkeskommunale lønnssystemet har alle stillinger en stillingskode og en stillingsbetegnelse (for eksempel 7026 for bibliotekar eller 7076 for hjelpepleier). Stillingskoden kan angi noe om stillingens innhold og lønnsnivå.&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_7928ce1d8618e22dce" idref="EAID_CLS_7928ce1d8618e22dce" xmi:type="uml:Class" type="Class" name="Uketimetall" scope="public">
@@ -8776,7 +8823,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Tidsstempel som angir når fravær ble godkjent.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
+            <documentation value="Tidsstempel som angir når fravær ble godkjent.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_2e192450a7d5f6dbed" idref="EAID_PRP_2e192450a7d5f6dbed" name="periode">
@@ -8818,14 +8865,14 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Tidsstempel som angir når lønn ble anvist.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
+            <documentation value="Tidsstempel som angir når lønn ble anvist.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_7222b9b6ecc74761e5" idref="EAID_PRP_7222b9b6ecc74761e5" name="attestert">
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Tidsstempel som angir når lønn ble attestert.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
+            <documentation value="Tidsstempel som angir når lønn ble attestert.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_d76878b7687552627e" idref="EAID_PRP_d76878b7687552627e" name="beskrivelse">
@@ -8839,7 +8886,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Tidsstempel som angir når lønn ble kontert.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
+            <documentation value="Tidsstempel som angir når lønn ble kontert.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_30adea4b882d0854f8" idref="EAID_PRP_30adea4b882d0854f8" name="kontostreng">
@@ -8923,7 +8970,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="date" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Ansiennitet for personalressurs hos arbeidsgiver.&#10;&#10;# Beskrivelse&#10;&#10;Ansiennitet er normalt den ansattes tiltredelsesdato hos arbeidsgiver, men tariffavtalene fastsetter tilleggsregler blant annet for godskriving av tidligere offentlig og privat tjeneste.&#10;&#10;# Referanser&#10;&#10;- KS Hovedtariffavtalen &amp;#167; 12&#10;- Statens personalhåndbok 2018, kapittel 7.3.4&#10;- https://snl.no/ansiennitet&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Ansiennitet for personalressurs hos arbeidsgiver.&#10;&#10;# Beskrivelse&#10;&#10;Ansiennitet er normalt den ansattes tiltredelsesdato hos arbeidsgiver, men tariffavtalene fastsetter tilleggsregler blant annet for godskriving av tidligere offentlig og privat tjeneste.&#10;&#10;# Referanser&#10;&#10;- KS Hovedtariffavtalen &amp;#167; 12&#10;- Statens personalhåndbok 2018, kapittel 7.3.4&#10;- https://snl.no/ansiennitet&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_3bd3c0f68dc5db7a88" idref="EAID_PRP_3bd3c0f68dc5db7a88" name="jobbtittel">
@@ -9332,7 +9379,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Dato og klokkelsett for avskrivning&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog, M617&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
+            <documentation value="Dato og klokkelsett for avskrivning&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog, M617&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_2fffe56996660f2058" idref="EAID_PRP_2fffe56996660f2058" name="avskrivningsmate">
@@ -9381,7 +9428,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Dato og klokkeslett når arkivenheten ble opprettet/registrert.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M600&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
+            <documentation value="Dato og klokkeslett når arkivenheten ble opprettet/registrert.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M600&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_d290a3abdd8d9f2ef0" idref="EAID_PRP_d290a3abdd8d9f2ef0" name="part">
@@ -9409,7 +9456,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Datoen et dokument ble knyttet til en registrering.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M620&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Datoen et dokument ble knyttet til en registrering.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M620&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_98753f584764fc374b" idref="EAID_PRP_98753f584764fc374b" name="tittel">
@@ -9530,14 +9577,14 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Dato som er påført selve dokumentet.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M103&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Dato som er påført selve dokumentet.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M103&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_bbf9d2acf1081c14c3" idref="EAID_PRP_bbf9d2acf1081c14c3" name="forfallsDato">
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Dato som angir fristen for når et inngående dokument må være besvart.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M109&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Dato som angir fristen for når et inngående dokument må være besvart.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M109&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_8af3c13cab31ea8b05" idref="EAID_PRP_8af3c13cab31ea8b05" name="journalAr">
@@ -9551,7 +9598,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Datoen journalposten er opprettet/arkivert.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M101&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Datoen journalposten er opprettet/arkivert.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M101&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_e4b5a033680afbec2a" idref="EAID_PRP_e4b5a033680afbec2a" name="journalPostnummer">
@@ -9572,21 +9619,21 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Dato et eksternt dokument ble mottatt.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M104&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Dato et eksternt dokument ble mottatt.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M104&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_68a4e74df0a458e6bf" idref="EAID_PRP_68a4e74df0a458e6bf" name="offentlighetsvurdertDato">
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Datoen da offentlighetsvurdering ble foretatt.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M110&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Datoen da offentlighetsvurdering ble foretatt.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M110&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_7fed5c8b67299a73e5" idref="EAID_PRP_7fed5c8b67299a73e5" name="sendtDato">
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Dato et internt produsert dokument ble sendt/ekspedert.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M105&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Dato et internt produsert dokument ble sendt/ekspedert.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M105&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -9649,7 +9696,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Dato og klokkeslett når arkivenheten ble avsluttet/lukket.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M602&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
+            <documentation value="Dato og klokkeslett når arkivenheten ble avsluttet/lukket.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M602&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_1543772becf6f1b916" idref="EAID_PRP_1543772becf6f1b916" name="beskrivelse">
@@ -9677,7 +9724,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Dato og klokkeslett når arkivenheten ble opprettet/registrert.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M600&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
+            <documentation value="Dato og klokkeslett når arkivenheten ble opprettet/registrert.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M600&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_474b96234dfc7c1e04" idref="EAID_PRP_474b96234dfc7c1e04" name="tittel">
@@ -9768,7 +9815,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Dato og klokkeslett når arkivenheten ble avsluttet/lukket&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M602&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
+            <documentation value="Dato og klokkeslett når arkivenheten ble avsluttet/lukket&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M602&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_714c2087c9a94a3ef4" idref="EAID_PRP_714c2087c9a94a3ef4" name="beskrivelse">
@@ -9810,7 +9857,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Dato og klokkeslett når arkivenheten ble opprettet/registrert&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M600&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
+            <documentation value="Dato og klokkeslett når arkivenheten ble opprettet/registrert&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M600&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_fc4be69403e9d6d1e0" idref="EAID_PRP_fc4be69403e9d6d1e0" name="part">
@@ -9845,7 +9892,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Dato og klokkeslett når merknaden ble registrert&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M611&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
+            <documentation value="Dato og klokkeslett når merknaden ble registrert&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M611&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_25b8778eb95aa08f1d" idref="EAID_PRP_25b8778eb95aa08f1d" name="merknadstekst">
@@ -9901,7 +9948,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Dato og klokkeslett når alle dokumentene som er tilknyttet registreringen ble arkivert&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M604&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
+            <documentation value="Dato og klokkeslett når alle dokumentene som er tilknyttet registreringen ble arkivert&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M604&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_1fc8ce6ed6c1e36772" idref="EAID_PRP_1fc8ce6ed6c1e36772" name="beskrivelse">
@@ -9964,7 +10011,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Dato og klokkeslett når arkivenheten ble opprettet/registrert.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M600&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
+            <documentation value="Dato og klokkeslett når arkivenheten ble opprettet/registrert.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M600&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_58c18c109918c7be10" idref="EAID_PRP_58c18c109918c7be10" name="part">
@@ -10033,7 +10080,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Datoen saken er opprettet&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M100&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Datoen saken er opprettet&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M100&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_ec4826845a49de5808" idref="EAID_PRP_ec4826845a49de5808" name="sakssekvensnummer">
@@ -10047,7 +10094,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Dato når en fysisk saksmappe eller journalpost ble utlånt&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M106&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Dato når en fysisk saksmappe eller journalpost ble utlånt&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M106&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -10414,14 +10461,14 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Til dato&#10;&#10;# Beskrivelse&#10;&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Til dato&#10;&#10;# Beskrivelse&#10;&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_193ae2b0dd4cb84fac" idref="EAID_PRP_193ae2b0dd4cb84fac" name="start">
             <properties type="datetime" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Fra dato&#10;&#10;# Beskrivelse&#10;&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Fra dato&#10;&#10;# Beskrivelse&#10;&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -10481,7 +10528,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="long" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Beløp mottaker skal betale.&#10;" />
+            <documentation value="Beløp mottaker skal betale, i øre.&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_bb0b61a962dc1e0e03" idref="EAID_PRP_bb0b61a962dc1e0e03" name="betalt">
@@ -10495,7 +10542,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="date" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Dato for utstedelse av faktura.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Dato for utstedelse av faktura.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_5c20946884e4c685b1" idref="EAID_PRP_5c20946884e4c685b1" name="fakturert">
@@ -10509,7 +10556,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="date" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Frist for betaling&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Frist for betaling&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_067ece7b506ce3dbbe" idref="EAID_PRP_067ece7b506ce3dbbe" name="kreditert">
@@ -10530,7 +10577,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="long" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Gjenstående beløp å betale&#10;" />
+            <documentation value="Gjenstående beløp å betale, i øre.&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -10565,7 +10612,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="date" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Dato varer eller tjenester ble levert.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Dato varer eller tjenester ble levert.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_dcac606b661a36309f" idref="EAID_PRP_dcac606b661a36309f" name="mottaker">
@@ -10705,7 +10752,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="date" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Dato bilaget er registrert.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Dato bilaget er registrert.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_ea586b0b7680f96027" idref="EAID_PRP_ea586b0b7680f96027" name="bilagsnummer">
@@ -10866,21 +10913,21 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="date" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Dato transaksjonen forfaller.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Dato transaksjonen forfaller.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_bfa5ca192cae19c19f" idref="EAID_PRP_bfa5ca192cae19c19f" name="oppdateringstidspunkt">
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Tidspunkt for siste endring i transaksjonen.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
+            <documentation value="Tidspunkt for siste endring i transaksjonen.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_f48831da14e9d6ebb7" idref="EAID_PRP_f48831da14e9d6ebb7" name="transaksjonstidspunkt">
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Tidspunkt for registrering av transaksjonen.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
+            <documentation value="Tidspunkt for registrering av transaksjonen.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -10908,8 +10955,15 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <element xmi:idref="EAID_CLS_8fae47cb7779cd09d9" idref="EAID_CLS_8fae47cb7779cd09d9" xmi:type="uml:Class" type="Class" name="Behandling" scope="public">
         <model package="EAID_PKG_0728537f42d29a1e98" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="All bruk av personopplysninger&#10;&#10;# Beskrivelse&#10;&#10;All bruk av personopplysninger, slik som innsamling, registrering, sammenstilling, lagring og utlevering, eller en kombinasjon av slike bruksmåter.&#10;&#10;Personopplysninger skal bare brukes for spesifikke, uttrykkelige, angitte og legitime formål. Virksomheten har plikt til å gi den enkelte informasjon om formålet med behandling av personopplysning samt behandlingsgrunnlaget.&#10;" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="All bruk av personopplysninger&#10;&#10;# Beskrivelse&#10;&#10;All bruk av personopplysninger, slik som innsamling, registrering, sammenstilling, lagring og utlevering, eller en kombinasjon av slike bruksmåter.&#10;&#10;Personopplysninger skal bare brukes for spesifikke, uttrykkelige, angitte og legitime formål. Virksomheten har plikt til å gi den enkelte informasjon om formålet med behandling av personopplysning samt behandlingsgrunnlaget.&#10;" stereotype="hovedklasse" />
         <attributes>
+          <attribute xmi:idref="EAID_PRP_526041d27ca86b597d" idref="EAID_PRP_526041d27ca86b597d" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Intern identifikator som brukes i kildesystemet.&#10;" />
+            <tags />
+            </attribute>
           <attribute xmi:idref="EAID_PRP_7bc9e812fed6b9b3d7" idref="EAID_PRP_7bc9e812fed6b9b3d7" name="aktiv">
             <properties type="boolean" />
             <bounds lower="1" upper="1" />
@@ -10924,32 +10978,11 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <documentation value="Begrunnelse for behandling av personopplysning.&#10;&#10;# Beskrivelse&#10;&#10;Personopplysninger skal bare brukes for spesifikke, uttrykkelige, angitte og legitime formål. Virksomheten har plikt til å gi den enkelte informasjon om formålet med behandling av personopplysninger på en forståelig måte.&#10;" />
             <tags />
             </attribute>
-          <attribute xmi:idref="EAID_PRP_66bba02fdf3078a54d" idref="EAID_PRP_66bba02fdf3078a54d" name="samtykke">
-            <properties type="Samtykke" />
-            <bounds lower="0" upper="*" />
-            <stereotype stereotype="" />
-            <documentation value="Samtykker tilknyttet en behandling.&#10;" />
-            <tags />
-            </attribute>
           <attribute xmi:idref="EAID_PRP_e2a8f892557d7b49c9" idref="EAID_PRP_e2a8f892557d7b49c9" name="slettet">
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Tidspunkt behandlingen er slettet.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
-            <tags />
-            </attribute>
-          <attribute xmi:idref="EAID_PRP_526041d27ca86b597d" idref="EAID_PRP_526041d27ca86b597d" name="systemId">
-            <properties type="string" />
-            <bounds lower="1" upper="1" />
-            <stereotype stereotype="" />
-            <documentation value="Intern identifikator som brukes i kildesystemet.&#10;" />
-            <tags />
-            </attribute>
-          <attribute xmi:idref="EAID_PRP_95f0bad0d1a1b10b05" idref="EAID_PRP_95f0bad0d1a1b10b05" name="tjeneste">
-            <properties type="Tjeneste" />
-            <bounds lower="1" upper="1" />
-            <stereotype stereotype="" />
-            <documentation value="Tjeneste som behandling tilhører&#10;" />
+            <documentation value="Tidspunkt behandlingen er slettet.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -10957,17 +10990,17 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <element xmi:idref="EAID_CLS_6d81f63c13e582f918" idref="EAID_CLS_6d81f63c13e582f918" xmi:type="uml:Class" type="Class" name="Samtykke" scope="public">
         <model package="EAID_PKG_0728537f42d29a1e98" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Tillatelse til behandling av personopplysning.&#10;&#10;# Beskrivelse&#10;&#10;En virksomhet kan behandle personopplysninger dersom den har innhentet gyldig samtykke fra personen eller personene det gjelder.&#10;" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Tillatelse til behandling av personopplysning.&#10;&#10;# Beskrivelse&#10;&#10;En virksomhet kan behandle personopplysninger dersom den har innhentet gyldig samtykke fra personen eller personene det gjelder.&#10;" stereotype="hovedklasse" />
         <attributes>
-          <attribute xmi:idref="EAID_PRP_430526aa333efa73af" idref="EAID_PRP_430526aa333efa73af" name="behandling">
-            <properties type="Behandling" />
+          <attribute xmi:idref="EAID_PRP_af3e126f24d28d099a" idref="EAID_PRP_af3e126f24d28d099a" name="systemId">
+            <properties type="Identifikator" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Behandling som omfattes av samtykke.&#10;" />
+            <documentation value="Intern identifikator som brukes i kildesystemet.&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_6880a8c29dfb1fb6f8" idref="EAID_PRP_6880a8c29dfb1fb6f8" name="gyldighetsperiode">
-            <properties type="string" />
+            <properties type="Periode" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="writable" />
             <documentation value="Tidsrom som samtykke er gyldig.&#10;" />
@@ -10977,14 +11010,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Dato når samtykke ble opprettet.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
-            <tags />
-            </attribute>
-          <attribute xmi:idref="EAID_PRP_af3e126f24d28d099a" idref="EAID_PRP_af3e126f24d28d099a" name="systemId">
-            <properties type="string" />
-            <bounds lower="1" upper="1" />
-            <stereotype stereotype="" />
-            <documentation value="Intern identifikator som brukes i kildesystemet.&#10;" />
+            <documentation value="Dato når samtykke ble opprettet.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -10992,13 +11018,13 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <element xmi:idref="EAID_CLS_2a1da426b7f2a400e2" idref="EAID_CLS_2a1da426b7f2a400e2" xmi:type="uml:Class" type="Class" name="Tjeneste" scope="public">
         <model package="EAID_PKG_0728537f42d29a1e98" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Tjeneste eller system som behandler personopplysninger. &#10;&#10;# Beskrivelse&#10;&#10;Tjeneste eller system som behandler personopplysninger må ha et behandlingsgrunnlag og formål for behandling av hver enkelt personopplysning.&#10;" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Tjeneste eller system som behandler personopplysninger. &#10;&#10;# Beskrivelse&#10;&#10;Tjeneste eller system som behandler personopplysninger må ha et behandlingsgrunnlag og formål for behandling av hver enkelt personopplysning.&#10;" stereotype="hovedklasse" />
         <attributes>
-          <attribute xmi:idref="EAID_PRP_6b34c1bf2803ab0db4" idref="EAID_PRP_6b34c1bf2803ab0db4" name="behandling">
-            <properties type="Behandling" />
-            <bounds lower="0" upper="*" />
+          <attribute xmi:idref="EAID_PRP_5c75df730732cc27fb" idref="EAID_PRP_5c75df730732cc27fb" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Alle behandlinger til en tjeneste&#10;" />
+            <documentation value="Intern identifikator som brukes i kildesystemet.&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_c2b6dea575e3d40ef5" idref="EAID_PRP_c2b6dea575e3d40ef5" name="navn">
@@ -11012,14 +11038,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Tidspunkt tjenesten er slettet.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
-            <tags />
-            </attribute>
-          <attribute xmi:idref="EAID_PRP_5c75df730732cc27fb" idref="EAID_PRP_5c75df730732cc27fb" name="systemId">
-            <properties type="string" />
-            <bounds lower="1" upper="1" />
-            <stereotype stereotype="" />
-            <documentation value="Intern identifikator som brukes i kildesystemet.&#10;" />
+            <documentation value="Tidspunkt tjenesten er slettet.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -11031,10 +11050,10 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <element xmi:idref="EAID_CLS_51ceb2dd60eb96d1af" idref="EAID_CLS_51ceb2dd60eb96d1af" xmi:type="uml:Class" type="Class" name="Identitet" scope="public">
         <model package="EAID_PKG_4165ba11a971fac2eb" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Identitet identifiserer innehaver av rettigheter i relasjonen til organisasjonen.&#10;&#10;Kilden for denne type informasjon vil typisk være identitetsforvaltningssystemet.&#10;" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Identitet identifiserer innehaver av rettigheter i relasjonen til organisasjonen.&#10;&#10;Kilden for denne type informasjon vil typisk være identitetsforvaltningssystemet.&#10;" stereotype="hovedklasse" />
         <attributes>
           <attribute xmi:idref="EAID_PRP_c1c082ac9750dbe810" idref="EAID_PRP_c1c082ac9750dbe810" name="systemId">
-            <properties type="string" />
+            <properties type="Identifikator" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
             <documentation value="Intern identifikator som brukes i kildesystemet.&#10;" />
@@ -11052,13 +11071,6 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
             <documentation value="En beskrivelse av hva rettigheten innebærer.&#10;" />
-            <tags />
-            </attribute>
-          <attribute xmi:idref="EAID_PRP_b7a08db9e8d5d04d36" idref="EAID_PRP_b7a08db9e8d5d04d36" name="identitet">
-            <properties type="Identitet" />
-            <bounds lower="0" upper="*" />
-            <stereotype stereotype="" />
-            <documentation value="Identiteter knyttet til rettigheten.&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -11227,7 +11239,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="date" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Dato da elevforholdet ble avbrutt&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Dato da elevforholdet ble avbrutt&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_8cf6c63ea7ff1a8220" idref="EAID_PRP_8cf6c63ea7ff1a8220" name="gyldighetsperiode">
@@ -11369,7 +11381,13 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <element xmi:idref="EAID_CLS_31260c62481059007c" idref="EAID_CLS_31260c62481059007c" xmi:type="uml:Class" type="Class" name="Fagmerknad" scope="public">
         <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Merknader til vitnemål og kompetansebevis&#10;&#10;# Beskrivelse&#10;&#10;En fagmerknad er en merknad som har en eller flere av disse funksjonene&#10;&#10;- gir opplysninger om faget som ikke går fram av karakterer eller eksamensform&#10;- utdyper opplysninger om karakterer og/eller eksamensform&#10;- henviser til vedlegg som gir slike opplysninger&#10;&#10;# Referanser&#10;&#10;https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Merknader til vitnemål og kompetansebevis&#10;&#10;# Beskrivelse&#10;&#10;En fagmerknad er en merknad som har en eller flere av disse funksjonene&#10;&#10;- gir opplysninger om faget som ikke går fram av karakterer eller eksamensform&#10;- utdyper opplysninger om karakterer og/eller eksamensform&#10;- henviser til vedlegg som gir slike opplysninger&#10;&#10;# Referanser&#10;&#10;[Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_98f04a023d51f0d848" idref="EAID_CLS_98f04a023d51f0d848" xmi:type="uml:Class" type="Class" name="Fagstatus" scope="public">
+        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Elevens, privatistens eller kandidatens (voksne) status på et gitt fag.&#10;&#10;# Beskrivelse&#10;&#10;Fagstatus er en kode for undervisningen og/eller grunnlaget for karakteren. Den gir informasjon om hvordan det enkelte faget er gjennomført eller evt. ikke gjennomført.&#10;&#10;# Eksempler&#10;&#10;* E - Elev&#10;* F - Fritatt&#10;&#10;# Referanse&#10;&#10;[Registreringshåndbok]( https://regbok.udir.no/felt/?Id=1014315)&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_3076a148b4be460dce" idref="EAID_CLS_3076a148b4be460dce" xmi:type="uml:Class" type="Class" name="Fraværstype" scope="public">
@@ -11444,7 +11462,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <element xmi:idref="EAID_CLS_8c00232d083f0f1a84" idref="EAID_CLS_8c00232d083f0f1a84" xmi:type="uml:Class" type="Class" name="Tilrettelegging" scope="public">
         <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Tirettelegging en elev kan ha på eksamen.&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Tilrettelegging en elev kan ha på eksamen.&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_9be83411188065746c" idref="EAID_CLS_9be83411188065746c" xmi:type="uml:Class" type="Class" name="Vigoreferanse" scope="public">
@@ -11506,6 +11524,41 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <element xmi:idref="EAID_PKG_b9ee1761619271cf21" idref="EAID_PKG_b9ee1761619271cf21" xmi:type="uml:Package" type="Package" name="Timeplan" scope="public">
         <model package2="EAID_PKG_b9ee1761619271cf21" ea_eleType="package" package="EAID_PKG_93ea470388b4d82056" />
         <tags />
+        </element>
+      <element xmi:idref="EAID_CLS_c1bdb0a99745f93933" idref="EAID_CLS_c1bdb0a99745f93933" xmi:type="uml:Class" type="Class" name="Eksamen" scope="public">
+        <model package="EAID_PKG_b9ee1761619271cf21" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="En eksamen som avholdes på en skole.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_b3886c383ceb3a46c9" idref="EAID_PRP_b3886c383ceb3a46c9" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Unik identifikator for eksamenen.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_1977ab9cfee0435149" idref="EAID_PRP_1977ab9cfee0435149" name="beskrivelse">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Utfyllende beskrivelse av eksamenen.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_82c53f930aaab2a893" idref="EAID_PRP_82c53f930aaab2a893" name="navn">
+            <properties type="string" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Navn på eksamenen.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_42fac041cb184efb1e" idref="EAID_PRP_42fac041cb184efb1e" name="tidsrom">
+            <properties type="Periode" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Dato og tid for eksamenen.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
         </element>
       <element xmi:idref="EAID_CLS_e92c2079bc89c6d11a" idref="EAID_CLS_e92c2079bc89c6d11a" xmi:type="uml:Class" type="Class" name="Fag" scope="public">
         <model package="EAID_PKG_b9ee1761619271cf21" ea_eleType="element" />
@@ -11704,7 +11757,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
-            <documentation value="Dato og klokkeslett for eksamen&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
+            <documentation value="Dato og klokkeslett for eksamen&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990 klokken 13:30 (UTC +1)` -&amp;gt; `1990-03-29T12:30:00Z`&#10;&#10;* `29. juni 1990 klokken 13:30 (UTC +2 sommertid)` -&amp;gt; `1990-06-29T11:30:00Z`&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -11713,7 +11766,22 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Medlemskap i eksamensgrupper.&#10;&#10;# Beskrivelse&#10;&#10;Gruppemedlemskap som knytter sammen elevforhold og eksamensgrupper.&#10;" stereotype="hovedklasse" />
-        <attributes />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_074600fefd4aed2db0" idref="EAID_PRP_074600fefd4aed2db0" name="delegert">
+            <properties type="boolean" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Viser om det er en delegert kandidat.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_0fcb78cf26c077873c" idref="EAID_PRP_0fcb78cf26c077873c" name="kandidatnummer">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="PAS kandidatnummer.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
         </element>
       <element xmi:idref="EAID_CLS_8ebe762414fdaf3d36" idref="EAID_CLS_8ebe762414fdaf3d36" xmi:type="uml:Class" type="Class" name="Elevfravær" scope="public">
         <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
@@ -11725,13 +11793,6 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
             <documentation value="Kildesystemets unike identifikator&#10;" />
-            <tags />
-            </attribute>
-          <attribute xmi:idref="EAID_PRP_7ad5e32be9c54b4b61" idref="EAID_PRP_7ad5e32be9c54b4b61" name="fravær">
-            <properties type="Fraværsregistrering" />
-            <bounds lower="0" upper="*" />
-            <stereotype stereotype="" />
-            <documentation value="Liste av fraværsregistreringer.&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -11759,7 +11820,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Datoen vurderingen er foretatt.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Datoen vurderingen er foretatt.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -11869,8 +11930,15 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <element xmi:idref="EAID_CLS_ef58a543f483b22da3" idref="EAID_CLS_ef58a543f483b22da3" xmi:type="uml:Class" type="Class" name="Fraværsregistrering" scope="public">
         <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Manglende tilstedeværelse i opplæringen.&#10;" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Manglende tilstedeværelse i opplæringen.&#10;" stereotype="hovedklasse" />
         <attributes>
+          <attribute xmi:idref="EAID_PRP_a32747ed4533c74f97" idref="EAID_PRP_a32747ed4533c74f97" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Kildesystemets unike identifikator.&#10;" />
+            <tags />
+            </attribute>
           <attribute xmi:idref="EAID_PRP_e67e9720e56c0f6a22" idref="EAID_PRP_e67e9720e56c0f6a22" name="føresPåVitnemål">
             <properties type="boolean" />
             <bounds lower="1" upper="1" />
@@ -11880,13 +11948,13 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             </attribute>
           <attribute xmi:idref="EAID_PRP_1e57e4dbebf68f1563" idref="EAID_PRP_1e57e4dbebf68f1563" name="kommentar">
             <properties type="string" />
-            <bounds lower="1" upper="1" />
+            <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
             <documentation value="Kommentar til fraværet, evt ekstrainformasjon&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_e2708cf0ea336fbbae" idref="EAID_PRP_e2708cf0ea336fbbae" name="periode">
-            <properties type="string" />
+            <properties type="Periode" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
             <documentation value="Tidsperioden fraværet gjelder for.&#10;&#10;Fravær skal registreres i dager eller timer (60-minutters enheter). Det er ikke tillatt å konvertere timer til dager.&#10;" />
@@ -11922,7 +11990,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Dato for endring av karakter.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Dato for endring av karakter.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -11956,7 +12024,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Datoen vurderingen er foretatt.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
+            <documentation value="Datoen vurderingen er foretatt.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -11992,7 +12060,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <element xmi:idref="EAID_CLS_587e9da5042c0cd923" idref="EAID_CLS_587e9da5042c0cd923" xmi:type="uml:Class" type="Class" name="Sluttfagvurdering" scope="public">
         <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Sluttvurdering (Standpunktkarakter) gis for deltakelse av en elev i en gruppe.&#10;&#10;Vurdering i fag skal ha relasjon til den `Undervisningsgruppe` eller `Eksamensgruppe` som vurderingen er foretatt i. Det er også mulig å sette relasjon direkte til angjeldende fag.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til opplæringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Sluttvurdering (Standpunktkarakter) gis for deltakelse av en elev i en gruppe.&#10;&#10;Vurderingen skal ha en relasjon til det angjeldende faget. Det er også mulig å sette en relasjon til den eksamensgruppen som vurderingen er foretatt i.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til opplæringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_805a5c053f8f3e758d" idref="EAID_CLS_805a5c053f8f3e758d" xmi:type="uml:Class" type="Class" name="Sluttordensvurdering" scope="public">
@@ -13959,7 +14027,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <model type="Class" name="Stillingskode" />
           <role name="stillingskode" visibility="Public" />
           <type multiplicity="0..1" />
-          <documentation value="En fire- eller sekssifret stillingskode. Firesiffret kodeliste fra KS. Kan være utvidet i tillegg med to siffer. De to siste er egentilpasset.&#10;&#10;# Beskrivelse&#10;&#10;Se kodeverk Stillingskode.&#10;&#10;# Format&#10;&#10;# Eksempler&#10;&#10;# Referanser &#10;&#10;Tar utgangspunkt i stillingskodene fra hovedtariffavtalen: [Oversikt over stillingskoder fra KS.no](http://www.ks.no/globalassets/vedlegg-til-hvert-fagomrader/arbeidsgiver/lonnpersonal---analyse-og-statistikk/innsamling-av-data/del-3---stillingskoder.pdf)" />
+          <documentation value="En fire- eller sekssifret stillingskode. Firesiffret kodeliste fra KS. Kan være utvidet i tillegg med to siffer. De to siste er egentilpasset.&#10;&#10;# Beskrivelse&#10;&#10;Se kodeverk Stillingskode." />
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
@@ -15576,6 +15644,24 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_430526aa333efa73af" idref="EAID_ASC_430526aa333efa73af" start="EAID_CLS_6d81f63c13e582f918" end="EAID_CLS_8fae47cb7779cd09d9">
+        <source xmi:idref="EAID_CLS_6d81f63c13e582f918" idref="EAID_CLS_6d81f63c13e582f918">
+          <model type="Class" name="Samtykke" />
+          <role visibility="Public" name="samtykke" />
+          <type multiplicity="0..*" />
+          <documentation value="Samtykker tilknyttet en behandling." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_8fae47cb7779cd09d9" idref="EAID_CLS_8fae47cb7779cd09d9">
+          <model type="Class" name="Behandling" />
+          <role name="behandling" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Behandling som omfattes av samtykke." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_b178005fc908965436" idref="EAID_ASC_b178005fc908965436" start="EAID_CLS_6d81f63c13e582f918" end="EAID_CLS_11c618a515753fb259">
         <source xmi:idref="EAID_CLS_6d81f63c13e582f918" idref="EAID_CLS_6d81f63c13e582f918">
           <model type="Class" name="Samtykke" />
@@ -15608,6 +15694,24 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_6b34c1bf2803ab0db4" idref="EAID_ASC_6b34c1bf2803ab0db4" start="EAID_CLS_2a1da426b7f2a400e2" end="EAID_CLS_8fae47cb7779cd09d9">
+        <source xmi:idref="EAID_CLS_2a1da426b7f2a400e2" idref="EAID_CLS_2a1da426b7f2a400e2">
+          <model type="Class" name="Tjeneste" />
+          <role visibility="Public" name="tjeneste" />
+          <type multiplicity="1" />
+          <documentation value="Tjeneste som behandling tilhører" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_8fae47cb7779cd09d9" idref="EAID_CLS_8fae47cb7779cd09d9">
+          <model type="Class" name="Behandling" />
+          <role name="behandling" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle behandlinger til en tjeneste" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_e0ff79175b9bc1282d" idref="EAID_ASC_e0ff79175b9bc1282d" start="EAID_CLS_51ceb2dd60eb96d1af" end="EAID_CLS_7f69968205107fe6de">
@@ -16817,6 +16921,22 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_45753febdaa1d06fc6" idref="EAID_GEN_45753febdaa1d06fc6" start="EAID_CLS_98f04a023d51f0d848" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_98f04a023d51f0d848" idref="EAID_CLS_98f04a023d51f0d848">
+          <model type="Class" name="Fagstatus" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_31f76c46860e903f54" idref="EAID_GEN_31f76c46860e903f54" start="EAID_CLS_3076a148b4be460dce" end="EAID_CLS_3385458244847ec7db">
         <source xmi:idref="EAID_CLS_3076a148b4be460dce" idref="EAID_CLS_3076a148b4be460dce">
           <model type="Class" name="Fraværstype" />
@@ -17117,6 +17237,24 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_69439f38599855828f" idref="EAID_ASC_69439f38599855828f" start="EAID_CLS_c1bdb0a99745f93933" end="EAID_CLS_6613563c654c1f89b6">
+        <source xmi:idref="EAID_CLS_c1bdb0a99745f93933" idref="EAID_CLS_c1bdb0a99745f93933">
+          <model type="Class" name="Eksamen" />
+          <role visibility="Public" name="eksamen" />
+          <type multiplicity="0..*" />
+          <documentation value="Eksamen(er) som skal avholdes i rommet." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_6613563c654c1f89b6" idref="EAID_CLS_6613563c654c1f89b6">
+          <model type="Class" name="Rom" />
+          <role name="rom" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Lokale hvor eksamen skal avholdes." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_5297fb1c9776456f97" idref="EAID_GEN_5297fb1c9776456f97" start="EAID_CLS_e92c2079bc89c6d11a" end="EAID_CLS_a62447c9dd60a973b1">
         <source xmi:idref="EAID_CLS_e92c2079bc89c6d11a" idref="EAID_CLS_e92c2079bc89c6d11a">
           <model type="Class" name="Fag" />
@@ -17203,6 +17341,41 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_e944e7359a2eb1c28a" idref="EAID_ASC_e944e7359a2eb1c28a" start="EAID_CLS_a7dee6f3f81a7ce38f" end="EAID_CLS_64e904f2ebf8b9f538">
+        <source xmi:idref="EAID_CLS_a7dee6f3f81a7ce38f" idref="EAID_CLS_a7dee6f3f81a7ce38f">
+          <model type="Class" name="Faggruppe" />
+          <role visibility="Public" name="faggruppe" />
+          <type multiplicity="0..*" />
+          <documentation value="Skolens faggrupper." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_64e904f2ebf8b9f538" idref="EAID_CLS_64e904f2ebf8b9f538">
+          <model type="Class" name="Skole" />
+          <role name="skole" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Skolen faggruppen tilhører." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_f8e418f9414bf0ef7a" idref="EAID_ASC_f8e418f9414bf0ef7a" start="EAID_CLS_a7dee6f3f81a7ce38f" end="EAID_CLS_8cd72252caa5382d06">
+        <source xmi:idref="EAID_CLS_a7dee6f3f81a7ce38f" idref="EAID_CLS_a7dee6f3f81a7ce38f">
+          <model type="Class" name="Faggruppe" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_8cd72252caa5382d06" idref="EAID_CLS_8cd72252caa5382d06">
+          <model type="Class" name="Skoleår" />
+          <role name="skoleår" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Skoleåret faggruppen er aktiv." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_41e8ff78485ebdc1fd" idref="EAID_GEN_41e8ff78485ebdc1fd" start="EAID_CLS_1235e64f5c06b787df" end="EAID_CLS_0d161f922b39eccebe">
         <source xmi:idref="EAID_CLS_1235e64f5c06b787df" idref="EAID_CLS_1235e64f5c06b787df">
           <model type="Class" name="Faggruppemedlemskap" />
@@ -17217,6 +17390,40 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <tags />
           </target>
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_3c2780a5da89ee7243" idref="EAID_ASC_3c2780a5da89ee7243" start="EAID_CLS_1235e64f5c06b787df" end="EAID_CLS_31260c62481059007c">
+        <source xmi:idref="EAID_CLS_1235e64f5c06b787df" idref="EAID_CLS_1235e64f5c06b787df">
+          <model type="Class" name="Faggruppemedlemskap" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_31260c62481059007c" idref="EAID_CLS_31260c62481059007c">
+          <model type="Class" name="Fagmerknad" />
+          <role name="fagmerknad" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Merknad om faget." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_4b7931327104db457f" idref="EAID_ASC_4b7931327104db457f" start="EAID_CLS_1235e64f5c06b787df" end="EAID_CLS_98f04a023d51f0d848">
+        <source xmi:idref="EAID_CLS_1235e64f5c06b787df" idref="EAID_CLS_1235e64f5c06b787df">
+          <model type="Class" name="Faggruppemedlemskap" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_98f04a023d51f0d848" idref="EAID_CLS_98f04a023d51f0d848">
+          <model type="Class" name="Fagstatus" />
+          <role name="fagstatus" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Status i faget." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_3ec4b8cf6586711c34" idref="EAID_ASC_3ec4b8cf6586711c34" start="EAID_CLS_6613563c654c1f89b6" end="EAID_CLS_7bd281acb04022531a">
@@ -17702,6 +17909,24 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_00478186d346ef8755" idref="EAID_ASC_00478186d346ef8755" start="EAID_CLS_befc698f1817a298c1" end="EAID_CLS_c1bdb0a99745f93933">
+        <source xmi:idref="EAID_CLS_befc698f1817a298c1" idref="EAID_CLS_befc698f1817a298c1">
+          <model type="Class" name="Eksamensgruppe" />
+          <role visibility="Public" name="eksamensgruppe" />
+          <type multiplicity="0..*" />
+          <documentation value="Eksamensgrupper som skal ha en eksamen." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_c1bdb0a99745f93933" idref="EAID_CLS_c1bdb0a99745f93933">
+          <model type="Class" name="Eksamen" />
+          <role name="eksamen" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Eksamenen som skal avholdes." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_bf8167aeb0023d1756" idref="EAID_ASC_bf8167aeb0023d1756" start="EAID_CLS_befc698f1817a298c1" end="EAID_CLS_c8081bf05b678612ce">
         <source xmi:idref="EAID_CLS_befc698f1817a298c1" idref="EAID_CLS_befc698f1817a298c1">
           <model type="Class" name="Eksamensgruppe" />
@@ -17823,6 +18048,23 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_9d6f47de11fbb0c55a" idref="EAID_ASC_9d6f47de11fbb0c55a" start="EAID_CLS_fcc8bab445fb55fc37" end="EAID_CLS_f64277f4a90f494b7b">
+        <source xmi:idref="EAID_CLS_fcc8bab445fb55fc37" idref="EAID_CLS_fcc8bab445fb55fc37">
+          <model type="Class" name="Eksamensgruppemedlemskap" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_f64277f4a90f494b7b" idref="EAID_CLS_f64277f4a90f494b7b">
+          <model type="Class" name="Fylke" />
+          <role name="delegertTil" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Fylke en eksamenskandidat er deligert/overført til." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_da4f5c337f36d52aac" idref="EAID_ASC_da4f5c337f36d52aac" start="EAID_CLS_fcc8bab445fb55fc37" end="EAID_CLS_befc698f1817a298c1">
         <source xmi:idref="EAID_CLS_fcc8bab445fb55fc37" idref="EAID_CLS_fcc8bab445fb55fc37">
           <model type="Class" name="Eksamensgruppemedlemskap" />
@@ -17859,6 +18101,40 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_fc70ed524f4efe5f9d" idref="EAID_ASC_fc70ed524f4efe5f9d" start="EAID_CLS_fcc8bab445fb55fc37" end="EAID_CLS_0b3332931f7cc69b89">
+        <source xmi:idref="EAID_CLS_fcc8bab445fb55fc37" idref="EAID_CLS_fcc8bab445fb55fc37">
+          <model type="Class" name="Eksamensgruppemedlemskap" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_0b3332931f7cc69b89" idref="EAID_CLS_0b3332931f7cc69b89">
+          <model type="Class" name="Sensor" />
+          <role name="foretrukketSensor" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Ønsket sensor 1 hos en ekstern kurstilbyder knyttet til eksamensoppmeldingen til en privatistkandidat fra den eksterne kurstilbyderen." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_4642089598f23101dc" idref="EAID_ASC_4642089598f23101dc" start="EAID_CLS_fcc8bab445fb55fc37" end="EAID_CLS_64e904f2ebf8b9f538">
+        <source xmi:idref="EAID_CLS_fcc8bab445fb55fc37" idref="EAID_CLS_fcc8bab445fb55fc37">
+          <model type="Class" name="Eksamensgruppemedlemskap" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_64e904f2ebf8b9f538" idref="EAID_CLS_64e904f2ebf8b9f538">
+          <model type="Class" name="Skole" />
+          <role name="foretrukketSkole" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Skole hvor kandidaten foretrekker å ha eksamen." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_bcb87751469b071801" idref="EAID_ASC_bcb87751469b071801" start="EAID_CLS_fcc8bab445fb55fc37" end="EAID_CLS_1d2ea71766e6f9ab9c">
         <source xmi:idref="EAID_CLS_fcc8bab445fb55fc37" idref="EAID_CLS_fcc8bab445fb55fc37">
           <model type="Class" name="Eksamensgruppemedlemskap" />
@@ -17874,6 +18150,24 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_7818f093090d4009cd" idref="EAID_ASC_7818f093090d4009cd" start="EAID_CLS_8ebe762414fdaf3d36" end="EAID_CLS_ef58a543f483b22da3">
+        <source xmi:idref="EAID_CLS_8ebe762414fdaf3d36" idref="EAID_CLS_8ebe762414fdaf3d36">
+          <model type="Class" name="Elevfravær" />
+          <role visibility="Public" name="elevfravær" />
+          <type multiplicity="1" />
+          <documentation value="Samling av fraværsregistreringer for en elev." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_ef58a543f483b22da3" idref="EAID_CLS_ef58a543f483b22da3">
+          <model type="Class" name="Fraværsregistrering" />
+          <role name="fraværsregistrering" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Liste av fraværsregistreringer." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_2c61814721a3cc289f" idref="EAID_ASC_2c61814721a3cc289f" start="EAID_CLS_d070ec2ebf1c6459a5" end="EAID_CLS_e92c2079bc89c6d11a">

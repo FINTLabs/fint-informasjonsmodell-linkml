@@ -62,7 +62,25 @@ classes:
       
       # Referanser
       
-      https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/
+      [Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)
+    is_a: Begrep
+
+  Fagstatus:
+    description: |
+      Elevens, privatistens eller kandidatens (voksne) status på et gitt fag.
+      
+      # Beskrivelse
+      
+      Fagstatus er en kode for undervisningen og/eller grunnlaget for karakteren. Den gir informasjon om hvordan det enkelte faget er gjennomført eller evt. ikke gjennomført.
+      
+      # Eksempler
+      
+      * E - Elev
+      * F - Fritatt
+      
+      # Referanse
+      
+      [Registreringshåndbok]( https://regbok.udir.no/felt/?Id=1014315)
     is_a: Begrep
 
   Fraværstype:
@@ -204,7 +222,7 @@ classes:
 
   Tilrettelegging:
     description: |
-      Tirettelegging en elev kan ha på eksamen.
+      Tilrettelegging en elev kan ha på eksamen.
     is_a: Begrep
 
   Vigoreferanse:

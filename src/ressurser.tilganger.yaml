@@ -16,7 +16,7 @@ classes:
       Kilden for denne type informasjon vil typisk være identitetsforvaltningssystemet.
     attributes:
       systemId:
-        range: 
+        range: Identifikator
         description: |
           Intern identifikator som brukes i kildesystemet.
         required: true
