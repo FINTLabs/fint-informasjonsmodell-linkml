@@ -318,6 +318,11 @@ classes:
         description: |
           Fraværsoversikt for elevforholdet
         multivalued: true
+      elevvurdering:
+        range: Elevvurdering
+        inverse: elevforhold
+        description: |
+          Vurderingsinformasjon for en elev.
       faggruppemedlemskap:
         range: Faggruppemedlemskap
         description: |
@@ -342,12 +347,14 @@ classes:
         inverse: elevforhold
         description: |
           Halvårsvurdering i fag for eleven
+        deprecated: "Bruk Elevvurdering.halvårsfagvurdering."
         multivalued: true
       halvårsordensvurdering:
         range: Halvårsordensvurdering
         inverse: elevforhold
         description: |
           Halvårsvurdering av orden og atferd for eleven.
+        deprecated: "Bruk Elevvurdering.halvårsordensvurdering."
         multivalued: true
       kategori:
         range: Elevkategori
@@ -412,12 +419,14 @@ classes:
         inverse: elevforhold
         description: |
           Sluttvurdering i fag for eleven
+        deprecated: "Bruk Elevvurdering.sluttfagvurdering."
         multivalued: true
       sluttordensvurdering:
         range: Sluttordensvurdering
         inverse: elevforhold
         description: |
           Sluttvurdering av orden og atferd for eleven
+        deprecated: "Bruk Elevvurdering.sluttordensvurdering."
         multivalued: true
       tilrettelegging:
         range: Elevtilrettelegging
@@ -430,12 +439,14 @@ classes:
         inverse: elevforhold
         description: |
           Underveisvurdering i fag for eleven
+        deprecated: "Bruk Elevvurdering.underveisfagvurdering."
         multivalued: true
       underveisordensvurdering:
         range: Underveisordensvurdering
         inverse: elevforhold
         description: |
           Underveisvurdering av orden og atferd for eleven.
+        deprecated: "Bruk Elevvurdering.underveisordensvurdering."
         multivalued: true
       undervisningsgruppe:
         range: Undervisningsgruppe
@@ -455,18 +466,28 @@ classes:
         inverse: elevforhold
         description: |
           Alle vurderinger i et elevforhold
-        deprecated: "Bruk Fagvurdering og Ordensvurdering"
+        deprecated: "Bruk Elevvurdering"
         multivalued: true
 
   Elevtilrettelegging:
     description: |
       Tilrettelegging en elev har på eksamen.
+      
+      Det skal her oppgis enten fag eller eksamensform.
+      
+      # Referanse
+      
+      [Registrere tilretteleggingstype for eksamen](https://inschool.zendesk.com/hc/no/articles/360031198011-5a-02-Registrere-tilretteleggingstype-for-eksamen)
     attributes:
       systemId:
         range: Identifikator
         description: |
           Intern identifikator som brukes i kildesystemet
         required: true
+      eksamensform:
+        range: Eksamensform
+        description: |
+          Eksamensformen tilretteleggingen gjelder for.
       elev:
         range: Elevforhold
         inverse: tilrettelegging
@@ -477,6 +498,9 @@ classes:
         required: true
       fag:
         range: Fag
+        inverse: tilrettelegging
+        annotations:
+          primaryRelation: true
         description: |
           Faget tilretteleggingen gjelder for.
       tilrettelegging:
@@ -841,3 +865,62 @@ classes:
         description: |
           Alle undervisningsgrupper læreren deltar i.
         multivalued: true
+
+  Varsel:
+    description: |
+      Varsel sendt til en elev.
+      
+      # Referanse
+      
+      * [VIS - Opprette og sende varsel ](https://inschool.zendesk.com/hc/no/articles/360030859132-4b-21-Opprette-og-sende-varsel)
+      * [Forskrift til opplæringslova - &#167; 3-8. Varsling](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_5-1#%C2%A73-8)
+    attributes:
+      systemId:
+        range: Identifikator
+        description: |
+          Unik identifikator for varselet.
+        required: true
+      fraværsprosent:
+        range: integer
+        description: |
+          Fraværsprosenten i varselbrev for fravær.
+          
+          # Representasjon av prosent
+          
+          I informasjonsmodellen oppgis en prosentverdi som et heltall. Dette tallet er antall hundredels prosent.
+          
+          ## Eksempel
+          
+          * 44 prosent vil ha verdien 4400.
+          * 58,73 prosent vil ha verdien 5873
+        required: true
+      sendt:
+        range: date
+        description: |
+          Dato da varselet ble sendt.
+        required: true
+      tekst:
+        range: string
+        description: |
+          Varselets tekstinnhold.
+        required: true
+      faggruppemedlemskap:
+        range: Faggruppemedlemskap
+        inverse: varsel
+        annotations:
+          primaryRelation: true
+        description: |
+          Elevens faggruppe varselet gjelder.
+        required: true
+      karakteransvarlig:
+        range: Undervisningsforhold
+        description: |
+          Læreren i faggruppen. Hovedfaglærer hvis der er flere.
+      type:
+        range: Varseltype
+        description: |
+          Type varsel.
+      utsteder:
+        range: Skoleressurs
+        description: |
+          Den som utsteder brevet.

@@ -19,6 +19,35 @@ classes:
       Registreringshåndbok: https://regbok.udir.no/35004/3344/35042-1014313.html
     is_a: Begrep
 
+  Betalingsstatus:
+    description: |
+      Statuser for betaling av eksamen for privatister.
+    is_a: Begrep
+
+  Bevistype:
+    description: |
+      Viser hvilken bevistype eleven har fått på opplæringen.
+      
+      * KB - Kompetansebevis
+      * VM - Vitnemål
+      
+      
+      # Referanse
+      [UDIR - Registreringshåndbok - B22](https://regbok.udir.no/oversikt)
+    is_a: Begrep
+
+  Brevtype:
+    description: |
+      Beskriver hvilken prøve lærlingen/lærekandidaten går opp til.
+      * F - Fagbrev
+      * S - Svennebrev
+      * K - Kompetansebevis
+      * B - Praksisbrev
+      
+      # Referanse
+      [UDIR - Registreringshåndbok - C22](https://regbok.udir.no/oversikt)
+    is_a: Begrep
+
   Eksamensform:
     description: |
       Eksamensordningens form.
@@ -93,6 +122,14 @@ classes:
       
       VIS:
       https://inschool.zendesk.com/hc/no/articles/360023264091
+    is_a: Begrep
+
+  Fullførtkode:
+    description: |
+      Gir status på hvordan eleven har gjennomført et programområde ved (det normale) skoleårs slutt.
+      
+      # Referanse
+      [UDIR - Registreringshåndbok - B21](https://regbok.udir.no/oversikt)
     is_a: Begrep
 
   Grepreferanse:
@@ -186,6 +223,14 @@ classes:
           * V = VIGO
         required: true
 
+  Prøvestatus:
+    description: |
+      Resultat av avlagt prøve - Praktisk prøve + teori.
+      
+      # Referanse
+      [UDIR - Registreringshåndbok - C26](https://regbok.udir.no/oversikt)
+    is_a: Begrep
+
   Skoleår:
     description: |
       Del av året da skoler har undervisning (og ikke ferie).
@@ -225,6 +270,26 @@ classes:
       Tilrettelegging en elev kan ha på eksamen.
     is_a: Begrep
 
+  Varseltype:
+    description: |
+      Viser hvilken type et varsel er.
+      
+      # Eksempel
+      
+      * Fravær
+      
+      * Orden
+      
+      * Atferd
+      
+      * Manglende vurderingsgrunnlag i fag
+      
+      # Referanse
+      
+      * [VIS - Opprette og sende varsel ](https://inschool.zendesk.com/hc/no/articles/360030859132-4b-21-Opprette-og-sende-varsel)
+      * [Forskrift til opplæringslova - &#167; 3-8. Varsling](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_5-1#%C2%A73-8)
+    is_a: Begrep
+
   Vigoreferanse:
     description: |
       Ekstern referanse til VIGO Kodeverksbase.
@@ -238,3 +303,19 @@ classes:
       https://api.felleskomponent.no/utdanning/vigo/kodeverk/swagger-ui.html#/
     annotations:
       stereotype: referanse
+
+  Vitnemålsmerknad:
+    description: |
+      En vitnemålsmerknad har en eller flere av følgende funksjoner:
+      
+      * gir opplysninger som gjelder opplæringen generelt eller som gjelder hele vitnemålet/kompetansebeviset
+      
+      * henviser til vedlegg som gir slike opplysninger
+      
+      * utdyper en fagmerknad
+      
+      Det kan bare føres vitnemålsmerknader som er gitt av Utdanningsdirektoratet.
+      
+      # Referanser
+      [UDIR : Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)
+    is_a: Begrep

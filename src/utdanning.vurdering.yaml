@@ -156,6 +156,10 @@ classes:
         range: string
         description: |
           PAS kandidatnummer.
+      betalingsstatus:
+        range: Betalingsstatus
+        description: |
+          Status for betaling av eksamen for privatister.
       delegertTil:
         range: Fylke
         description: |
@@ -242,6 +246,77 @@ classes:
           primaryRelation: true
         description: |
           Liste av fraværsregistreringer.
+        multivalued: true
+
+  Elevvurdering:
+    description: |
+      Vurderingsinformasjon for en elev.
+    attributes:
+      systemId:
+        range: Identifikator
+        description: |
+          Systemidentifikator i fagsystemet.
+        required: true
+      elevforhold:
+        range: Elevforhold
+        inverse: elevvurdering
+        annotations:
+          primaryRelation: true
+        description: |
+          Elevforholdet til eleven vurderingsinformasjonen gjelder.
+        required: true
+      halvårsfagvurdering:
+        range: Halvårsfagvurdering
+        inverse: elevvurdering
+        annotations:
+          primaryRelation: true
+        description: |
+          Halvårsvurdering i fag for eleven.
+        multivalued: true
+      halvårsordensvurdering:
+        range: Halvårsordensvurdering
+        inverse: elevvurdering
+        annotations:
+          primaryRelation: true
+        description: |
+          Halvårsvurdering av orden og atferd for eleven.
+        multivalued: true
+      sluttfagvurdering:
+        range: Sluttfagvurdering
+        inverse: elevvurdering
+        annotations:
+          primaryRelation: true
+        description: |
+          Sluttvurdering i fag for eleven.
+        multivalued: true
+      sluttordensvurdering:
+        range: Sluttordensvurdering
+        inverse: elevvurdering
+        annotations:
+          primaryRelation: true
+        description: |
+          Sluttvurdering av orden og atferd for eleven.
+        multivalued: true
+      underveisfagvurdering:
+        range: Underveisfagvurdering
+        inverse: elevvurdering
+        annotations:
+          primaryRelation: true
+        description: |
+          Underveisvurdering i fag for eleven.
+        multivalued: true
+      underveisordensvurdering:
+        range: Underveisordensvurdering
+        inverse: elevvurdering
+        annotations:
+          primaryRelation: true
+        description: |
+          Underveisvurdering av orden og atferd for eleven.
+        multivalued: true
+      vitnemålsmerknad:
+        range: Vitnemålsmerknad
+        description: |
+          Elevens vitnemålsmerknader.
         multivalued: true
 
   Fagvurdering:
@@ -555,6 +630,13 @@ classes:
           primaryRelation: true
         description: |
           Elevforholdet vurderingen gjelder.
+        deprecated: "Bruk Elevvurdering.halvårsfagvurdering."
+        required: true
+      elevvurdering:
+        range: Elevvurdering
+        inverse: halvårsfagvurdering
+        description: |
+          Vurderingsinformasjon for en elev.
         required: true
 
   Halvårsordensvurdering:
@@ -579,6 +661,13 @@ classes:
           primaryRelation: true
         description: |
           Elevforholdet vurderingen gjelder.
+        deprecated: "Bruk Elevvurdering.halvårsordensvurdering."
+        required: true
+      elevvurdering:
+        range: Elevvurdering
+        inverse: halvårsordensvurdering
+        description: |
+          Vurderingsinformasjon for en elev.
         required: true
 
   Karakterhistorie:
@@ -792,6 +881,13 @@ classes:
           primaryRelation: true
         description: |
           Elevforholdet vurderingen gjelder.
+        deprecated: "Bruk Elevvurdering.sluttfagvurdering."
+        required: true
+      elevvurdering:
+        range: Elevvurdering
+        inverse: sluttfagvurdering
+        description: |
+          Vurderingsinformasjon for en elev.
         required: true
       karakterhistorie:
         range: Karakterhistorie
@@ -821,6 +917,13 @@ classes:
           primaryRelation: true
         description: |
           Elevforholdet vurderingen gjelder.
+        deprecated: "Bruk Elevvurdering.sluttordensvurdering."
+        required: true
+      elevvurdering:
+        range: Elevvurdering
+        inverse: sluttordensvurdering
+        description: |
+          Vurderingsinformasjon for en elev.
         required: true
 
   Underveisfagvurdering:
@@ -847,6 +950,13 @@ classes:
           primaryRelation: true
         description: |
           Elevforholdet vurderingen gjelder.
+        deprecated: "Bruk Elevvurdering.underveisfagvurdering."
+        required: true
+      elevvurdering:
+        range: Elevvurdering
+        inverse: underveisfagvurdering
+        description: |
+          Vurderingsinformasjon for en elev.
         required: true
 
   Underveisordensvurdering:
@@ -871,6 +981,13 @@ classes:
           primaryRelation: true
         description: |
           Elevforholdet vurderingen gjelder.
+        deprecated: "Bruk Elevvurdering.underveisordensvurdering."
+        required: true
+      elevvurdering:
+        range: Elevvurdering
+        inverse: underveisordensvurdering
+        description: |
+          Vurderingsinformasjon for en elev.
         required: true
 
   Vurdering:
@@ -922,7 +1039,7 @@ classes:
           primaryRelation: true
         description: |
           Elevforhold som er vurdert.
-        deprecated: "Bruk Fagvurdering og Ordensvurdering"
+        deprecated: "Bruk Elevvurdering"
       fag:
         range: Fag
         description: |

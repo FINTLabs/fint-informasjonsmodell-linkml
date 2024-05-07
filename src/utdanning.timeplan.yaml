@@ -111,6 +111,12 @@ classes:
         description: |
           Alle skoler som tilbyr faget
         multivalued: true
+      tilrettelegging:
+        range: Elevtilrettelegging
+        inverse: fag
+        description: |
+          Tilrettelegging i faget.
+        multivalued: true
       undervisningsgruppe:
         range: Undervisningsgruppe
         inverse: fag
@@ -178,6 +184,12 @@ classes:
         range: Fagstatus
         description: |
           Status i faget.
+      varsel:
+        range: Varsel
+        inverse: faggruppemedlemskap
+        description: |
+          Varsel i faget.
+        multivalued: true
 
   Rom:
     description: |
