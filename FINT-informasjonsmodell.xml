@@ -6147,40 +6147,282 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_6b34c1bf2803ab0db4" visibility="public" start="EAID_CLS_2a1da426b7f2a400e2" end="EAID_CLS_8fae47cb7779cd09d9" />
             </packagedElement>
           </packagedElement>
-        <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_0baf0de00c8f5a0c51" name="Ressurser">
-          <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_4165ba11a971fac2eb" name="Tilganger">
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_51ceb2dd60eb96d1af" name="Identitet">
+        <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_a79bb65b39f7246e3f" name="Ressurs">
+          <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_c48245093616af666d" name="Eiendel">
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_c51850746191a0b2ab" name="Applikasjon">
+              <properties documentation="En applikasjon med tilhørende ressurser. &#10;&#10;En ressurs kan være en lisens eller en rolle som tilganger inne i en applikasjon. Applikasjonen kan være en desktopapplikasjon eller en skybasert tjeneste. Brukere kan da få tilgang til denne applikasjonen hvis vedkommende har fått tildelt en ressurs knyttet til applikasjonen.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_e99826aacbd6dda383">
+                <body>En applikasjon med tilhørende ressurser. 
+
+En ressurs kan være en lisens eller en rolle som tilganger inne i en applikasjon. Applikasjonen kan være en desktopapplikasjon eller en skybasert tjeneste. Brukere kan da få tilgang til denne applikasjonen hvis vedkommende har fått tildelt en ressurs knyttet til applikasjonen.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_d9c81b4ab063bd4657" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_7ea1d487f4f883ec02" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_7ea1d487f4f883ec02" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7ea1d487f4f883ec02">
+                  <body>Unik identifikator i kildesystemet.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_4ffc285d399c413d8e" name="beskrivelse" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_62f99ef20ed2aa79c2" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_62f99ef20ed2aa79c2" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_62f99ef20ed2aa79c2">
+                  <body>Beskrivelse av applikasjonen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_fd882572c62ab5a454" name="gyldighetsperiode" visibility="public">
+                <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_0df857eb97e452279f" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_0df857eb97e452279f" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_0df857eb97e452279f">
+                  <body>Start- og sluttdato for gyldighetsperioden til applikasjonen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_9bd4de1345be91134b" name="navn" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_778ae74e8cd8f26634" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_778ae74e8cd8f26634" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_778ae74e8cd8f26634">
+                  <body>Navn på applikasjonen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a787e7a5dae7379bd8" visibility="public" start="EAID_CLS_c51850746191a0b2ab" end="EAID_CLS_e3592ca6d4ed5f9bee" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_f08b210e137590e248" visibility="public" start="EAID_CLS_c51850746191a0b2ab" end="EAID_CLS_1671dc6cd6e8063b64" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_e0df41dc80ed4ab470" visibility="public" start="EAID_CLS_c51850746191a0b2ab" end="EAID_CLS_da147fd4d4864d684c" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_da147fd4d4864d684c" name="Applikasjonsressurs">
+              <properties documentation="Informasjon om hvor en applikasjon kan benyttes.&#10;&#10;En ressurs er knyttet til en avtale som beskriver antall lisenser, lisensmodell og hvem som kan benytte den.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_37dd1cefb9bfacbc84">
+                <body>Informasjon om hvor en applikasjon kan benyttes.
+
+En ressurs er knyttet til en avtale som beskriver antall lisenser, lisensmodell og hvem som kan benytte den.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_31ea25a1efa506cc05" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_a2ba1097cc1631a28e" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_a2ba1097cc1631a28e" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a2ba1097cc1631a28e">
+                  <body>Unik identifikator i kildesystemet.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_6011f974e2a34be1ca" name="beskrivelse" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_34c29ddb942b1e0aa4" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_34c29ddb942b1e0aa4" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_34c29ddb942b1e0aa4">
+                  <body>Beskrivelse av ressursen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_b630859bbb8da6f618" name="enhetskostnad" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Integer" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_718e095184bdcbbff1" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_718e095184bdcbbff1" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_718e095184bdcbbff1">
+                  <body>Kostnad per ressurs.
+
+Oppgis i øre.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_ea072882345d4b9992" name="gyldighetsperiode" visibility="public">
+                <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_f6399bbe73373c1fd5" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_f6399bbe73373c1fd5" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_f6399bbe73373c1fd5">
+                  <body>Start- og sluttdato for gyldighetsperioden til ressursen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_622e2534234f407c52" name="kreverGodkjenning" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Boolean" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_7e8ff9a361e9c3baa8" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_7e8ff9a361e9c3baa8" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7e8ff9a361e9c3baa8">
+                  <body>Settes true dersom tildeling av ressursen forutsetter godkjenning av leder/tjenesterforvalter eller tjenesteeier.
+Årsaker kan være høy enhetskostnad som leder må godkjenne.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_1e87de3929d247ef5d" name="lisensantall" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Integer" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_1624908812dd70f7bd" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_1624908812dd70f7bd" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_1624908812dd70f7bd">
+                  <body>Totalt antall lisenser
+
+Brukes kun når ressursene er lisenser.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_3a6d38ed3f13e8563c" name="navn" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_94e1cee548202b11aa" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_94e1cee548202b11aa" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_94e1cee548202b11aa">
+                  <body>Navn på ressursen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_29d8823567f06d87d5" visibility="public" start="EAID_CLS_da147fd4d4864d684c" end="EAID_CLS_df88bdbfcdf5b2c46d" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_4478b0804e22919ad9" visibility="public" start="EAID_CLS_da147fd4d4864d684c" end="EAID_CLS_11c618a515753fb259" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_718031e6db5659bd3a" visibility="public" start="EAID_CLS_da147fd4d4864d684c" end="EAID_CLS_7d9641c41e900d56d3" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_4bbef03bddea68cbc7" visibility="public" start="EAID_CLS_da147fd4d4864d684c" end="EAID_CLS_62f6f17053da93f531" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_8126de7f1c5696b59e" visibility="public" start="EAID_CLS_da147fd4d4864d684c" end="EAID_CLS_6694468f7a3c25cd18" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_6694468f7a3c25cd18" name="Applikasjonsressurstilgjengelighet">
+              <properties documentation="Hvilke organisasjonselementers brukere som har tilgang til en ressurs.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_ff8595d39ac58a6a7e">
+                <body>Hvilke organisasjonselementers brukere som har tilgang til en ressurs.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_57f7f2a32c77954ec1" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_14f1a382ba8519231c" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_14f1a382ba8519231c" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_14f1a382ba8519231c">
+                  <body>Unik identifikator i kildesystemet.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_b3e3f9b3437852154c" name="gyldighetsperiode" visibility="public">
+                <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_a506a1b44a8c94bfed" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_a506a1b44a8c94bfed" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a506a1b44a8c94bfed">
+                  <body>Gyldighetsperioden til applikasjonsressurstilgjengeligheten.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_d57f74cab3a4a4d61a" name="lisensantall" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Integer" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_bdbb341c069a9b77e7" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_bdbb341c069a9b77e7" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_bdbb341c069a9b77e7">
+                  <body>Totalt antall lisenser tilgjengelig for brukere tilhørende en konsument.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_c7e39623b2a2ad2d89" visibility="public" start="EAID_CLS_6694468f7a3c25cd18" end="EAID_CLS_11c618a515753fb259" />
+            </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_8eecacff2524336d0e" name="Kodeverk">
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_e3592ca6d4ed5f9bee" name="Applikasjonskategori">
+              <properties documentation="Kategorier av applikasjoner.&#10;&#10;Eksempel:&#10;&#10;* Pedagogisk programvare&#10;* Kontorstøtte&#10;* Fagsystemer&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_1a1cba47adb83c62a2">
+                <body>Kategorier av applikasjoner.
+
+Eksempel:
+
+* Pedagogisk programvare
+* Kontorstøtte
+* Fagsystemer
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_1a1cba47adb83c62a2" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_e3592ca6d4ed5f9bee" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_df88bdbfcdf5b2c46d" name="Brukertype">
+              <properties documentation="De ulike brukertypene som kan benytte lisensen.&#10;&#10;Eksempler:&#10;&#10;* ELEV&#10;* ANSATTSKOLE&#10;* ANSATTADMINISTRASJON&#10;* EKSTERN&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_9ab415c7423ffd2266">
+                <body>De ulike brukertypene som kan benytte lisensen.
+
+Eksempler:
+
+* ELEV
+* ANSATTSKOLE
+* ANSATTADMINISTRASJON
+* EKSTERN
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_9ab415c7423ffd2266" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_df88bdbfcdf5b2c46d" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_7d9641c41e900d56d3" name="Håndhevingstype">
+              <properties documentation="Hvordan ulike lisensmodeller kan håndheves av systemer for forvaltning av applikasjonen.&#10;&#10;Eksempel:&#10;&#10;* Hardstopp (ikke lov å tildele flere lisenser enn det kildesystemet angir)&#10;* Ubegrenset (ingen begrensing på antall lisenser som kan tildeles)&#10;* Overallokering tillatt (kan tildeles lisenser utover maks antall. Ikke nødvendigvis ubegrenset)&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a4d435a1d4c0d3ffa6">
+                <body>Hvordan ulike lisensmodeller kan håndheves av systemer for forvaltning av applikasjonen.
+
+Eksempel:
+
+* Hardstopp (ikke lov å tildele flere lisenser enn det kildesystemet angir)
+* Ubegrenset (ingen begrensing på antall lisenser som kan tildeles)
+* Overallokering tillatt (kan tildeles lisenser utover maks antall. Ikke nødvendigvis ubegrenset)
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_a4d435a1d4c0d3ffa6" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_7d9641c41e900d56d3" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_62f6f17053da93f531" name="Lisensmodell">
+              <properties documentation="Lisensmodeller som kan knyttes til en lisens.&#10;&#10;Eksempel:&#10;&#10;* site&#10;* user&#10;* device&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_e7c588d78c97cfc0f3">
+                <body>Lisensmodeller som kan knyttes til en lisens.
+
+Eksempel:
+
+* site
+* user
+* device
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_e7c588d78c97cfc0f3" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_62f6f17053da93f531" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_1671dc6cd6e8063b64" name="Plattform">
+              <properties documentation="Plattformen tjenesten kan leveres på.&#10;&#10;Eksempel:&#10;&#10;* Windows&#10;* MAC OS&#10;* Linux&#10;* IOS&#10;* Android&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_2828afa4aabccf5763">
+                <body>Plattformen tjenesten kan leveres på.
+
+Eksempel:
+
+* Windows
+* MAC OS
+* Linux
+* IOS
+* Android
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_2828afa4aabccf5763" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_1671dc6cd6e8063b64" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            </packagedElement>
+          <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_11747fd7c7dcca9ea3" name="Tilgang">
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_0c13ad97f810aa744d" name="Identitet">
               <properties documentation="Identitet identifiserer innehaver av rettigheter i relasjonen til organisasjonen.&#10;&#10;Kilden for denne type informasjon vil typisk være identitetsforvaltningssystemet.&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_92d2f06855ce3402dc">
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_40c32959b72c392715">
                 <body>Identitet identifiserer innehaver av rettigheter i relasjonen til organisasjonen.
 
 Kilden for denne type informasjon vil typisk være identitetsforvaltningssystemet.
 </body>
                 </ownedComment>
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_c1c082ac9750dbe810" name="systemId" visibility="public">
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_17892e8b0b59bdbdff" name="systemId" visibility="public">
                 <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_761d87f6ffac478a2e" value="1" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_761d87f6ffac478a2e" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_761d87f6ffac478a2e">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_15e80d7a56a3bd56bd" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_15e80d7a56a3bd56bd" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_15e80d7a56a3bd56bd">
                   <body>Intern identifikator som brukes i kildesystemet.
 </body>
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_e0ff79175b9bc1282d" visibility="public" start="EAID_CLS_51ceb2dd60eb96d1af" end="EAID_CLS_7f69968205107fe6de" />
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_79c9e02346273c40d7" visibility="public" start="EAID_CLS_51ceb2dd60eb96d1af" end="EAID_CLS_925eaf9a5f68c3e90b" />
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_925eaf9a5f68c3e90b" name="Rettighet">
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_08ab65d56082ccbc29" visibility="public" start="EAID_CLS_0c13ad97f810aa744d" end="EAID_CLS_7f69968205107fe6de" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_2065edc573bc30be32" visibility="public" start="EAID_CLS_0c13ad97f810aa744d" end="EAID_CLS_3a475aa37e328b924e" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_3a475aa37e328b924e" name="Rettighet">
               <properties documentation="Navngir en rettighet. Hva rettigheten gir tilgang til er systemspesifikt.&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d951e63539b74db84d">
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_bc9e2b69d4dc95565f">
                 <body>Navngir en rettighet. Hva rettigheten gir tilgang til er systemspesifikt.
 </body>
                 </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_d951e63539b74db84d" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_925eaf9a5f68c3e90b" end="EAID_CLS_3385458244847ec7db" />
-              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_37cef934c57b6df73f" name="beskrivelse" visibility="public">
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_bc9e2b69d4dc95565f" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_3a475aa37e328b924e" end="EAID_CLS_3385458244847ec7db" />
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_46cb66a5b45043af89" name="beskrivelse" visibility="public">
                 <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
-                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_499fc38dcaf43eaead" value="1" />
-                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_499fc38dcaf43eaead" value="1" />
-                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_499fc38dcaf43eaead">
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_5e7842999b69413bdf" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_5e7842999b69413bdf" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_5e7842999b69413bdf">
                   <body>En beskrivelse av hva rettigheten innebærer.
 </body>
                   </ownedComment>
@@ -8715,9 +8957,10 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <tags />
         <properties stereotype="ApplicationSchema" />
         </element>
-      <element xmi:idref="EAID_PKG_0baf0de00c8f5a0c51" idref="EAID_PKG_0baf0de00c8f5a0c51" xmi:type="uml:Package" type="Package" name="Ressurser" scope="public">
-        <model package2="EAID_PKG_0baf0de00c8f5a0c51" ea_eleType="package" package="EAID_PKG_58bd5b0e37fbcdd8ac" />
+      <element xmi:idref="EAID_PKG_a79bb65b39f7246e3f" idref="EAID_PKG_a79bb65b39f7246e3f" xmi:type="uml:Package" type="Package" name="Ressurs" scope="public">
+        <model package2="EAID_PKG_a79bb65b39f7246e3f" ea_eleType="package" package="EAID_PKG_58bd5b0e37fbcdd8ac" />
         <tags />
+        <properties stereotype="ApplicationSchema" />
         </element>
       <element xmi:idref="EAID_PKG_93ea470388b4d82056" idref="EAID_PKG_93ea470388b4d82056" xmi:type="uml:Package" type="Package" name="Utdanning" scope="public">
         <model package2="EAID_PKG_93ea470388b4d82056" ea_eleType="package" package="EAID_PKG_58bd5b0e37fbcdd8ac" />
@@ -11268,16 +11511,173 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             </attribute>
           </attributes>
         </element>
-      <element xmi:idref="EAID_PKG_4165ba11a971fac2eb" idref="EAID_PKG_4165ba11a971fac2eb" xmi:type="uml:Package" type="Package" name="Tilganger" scope="public">
-        <model package2="EAID_PKG_4165ba11a971fac2eb" ea_eleType="package" package="EAID_PKG_0baf0de00c8f5a0c51" />
+      <element xmi:idref="EAID_PKG_c48245093616af666d" idref="EAID_PKG_c48245093616af666d" xmi:type="uml:Package" type="Package" name="Eiendel" scope="public">
+        <model package2="EAID_PKG_c48245093616af666d" ea_eleType="package" package="EAID_PKG_a79bb65b39f7246e3f" />
         <tags />
         </element>
-      <element xmi:idref="EAID_CLS_51ceb2dd60eb96d1af" idref="EAID_CLS_51ceb2dd60eb96d1af" xmi:type="uml:Class" type="Class" name="Identitet" scope="public">
-        <model package="EAID_PKG_4165ba11a971fac2eb" ea_eleType="element" />
+      <element xmi:idref="EAID_CLS_c51850746191a0b2ab" idref="EAID_CLS_c51850746191a0b2ab" xmi:type="uml:Class" type="Class" name="Applikasjon" scope="public">
+        <model package="EAID_PKG_c48245093616af666d" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="En applikasjon med tilhørende ressurser. &#10;&#10;En ressurs kan være en lisens eller en rolle som tilganger inne i en applikasjon. Applikasjonen kan være en desktopapplikasjon eller en skybasert tjeneste. Brukere kan da få tilgang til denne applikasjonen hvis vedkommende har fått tildelt en ressurs knyttet til applikasjonen.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_d9c81b4ab063bd4657" idref="EAID_PRP_d9c81b4ab063bd4657" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Unik identifikator i kildesystemet.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_4ffc285d399c413d8e" idref="EAID_PRP_4ffc285d399c413d8e" name="beskrivelse">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Beskrivelse av applikasjonen.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_fd882572c62ab5a454" idref="EAID_PRP_fd882572c62ab5a454" name="gyldighetsperiode">
+            <properties type="Periode" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Start- og sluttdato for gyldighetsperioden til applikasjonen.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_9bd4de1345be91134b" idref="EAID_PRP_9bd4de1345be91134b" name="navn">
+            <properties type="string" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Navn på applikasjonen.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_da147fd4d4864d684c" idref="EAID_CLS_da147fd4d4864d684c" xmi:type="uml:Class" type="Class" name="Applikasjonsressurs" scope="public">
+        <model package="EAID_PKG_c48245093616af666d" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Informasjon om hvor en applikasjon kan benyttes.&#10;&#10;En ressurs er knyttet til en avtale som beskriver antall lisenser, lisensmodell og hvem som kan benytte den.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_31ea25a1efa506cc05" idref="EAID_PRP_31ea25a1efa506cc05" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Unik identifikator i kildesystemet.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_6011f974e2a34be1ca" idref="EAID_PRP_6011f974e2a34be1ca" name="beskrivelse">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Beskrivelse av ressursen.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_b630859bbb8da6f618" idref="EAID_PRP_b630859bbb8da6f618" name="enhetskostnad">
+            <properties type="long" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Kostnad per ressurs.&#10;&#10;Oppgis i øre.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_ea072882345d4b9992" idref="EAID_PRP_ea072882345d4b9992" name="gyldighetsperiode">
+            <properties type="Periode" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Start- og sluttdato for gyldighetsperioden til ressursen.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_622e2534234f407c52" idref="EAID_PRP_622e2534234f407c52" name="kreverGodkjenning">
+            <properties type="boolean" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Settes true dersom tildeling av ressursen forutsetter godkjenning av leder/tjenesterforvalter eller tjenesteeier.&#10;Årsaker kan være høy enhetskostnad som leder må godkjenne.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_1e87de3929d247ef5d" idref="EAID_PRP_1e87de3929d247ef5d" name="lisensantall">
+            <properties type="long" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Totalt antall lisenser&#10;&#10;Brukes kun når ressursene er lisenser.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_3a6d38ed3f13e8563c" idref="EAID_PRP_3a6d38ed3f13e8563c" name="navn">
+            <properties type="string" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Navn på ressursen.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_CLS_6694468f7a3c25cd18" idref="EAID_CLS_6694468f7a3c25cd18" xmi:type="uml:Class" type="Class" name="Applikasjonsressurstilgjengelighet" scope="public">
+        <model package="EAID_PKG_c48245093616af666d" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Hvilke organisasjonselementers brukere som har tilgang til en ressurs.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_57f7f2a32c77954ec1" idref="EAID_PRP_57f7f2a32c77954ec1" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Unik identifikator i kildesystemet.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_b3e3f9b3437852154c" idref="EAID_PRP_b3e3f9b3437852154c" name="gyldighetsperiode">
+            <properties type="Periode" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Gyldighetsperioden til applikasjonsressurstilgjengeligheten.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_d57f74cab3a4a4d61a" idref="EAID_PRP_d57f74cab3a4a4d61a" name="lisensantall">
+            <properties type="long" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Totalt antall lisenser tilgjengelig for brukere tilhørende en konsument.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
+        </element>
+      <element xmi:idref="EAID_PKG_8eecacff2524336d0e" idref="EAID_PKG_8eecacff2524336d0e" xmi:type="uml:Package" type="Package" name="Kodeverk" scope="public">
+        <model package2="EAID_PKG_8eecacff2524336d0e" ea_eleType="package" package="EAID_PKG_a79bb65b39f7246e3f" />
+        <tags />
+        </element>
+      <element xmi:idref="EAID_CLS_e3592ca6d4ed5f9bee" idref="EAID_CLS_e3592ca6d4ed5f9bee" xmi:type="uml:Class" type="Class" name="Applikasjonskategori" scope="public">
+        <model package="EAID_PKG_8eecacff2524336d0e" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Kategorier av applikasjoner.&#10;&#10;Eksempel:&#10;&#10;* Pedagogisk programvare&#10;* Kontorstøtte&#10;* Fagsystemer&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_df88bdbfcdf5b2c46d" idref="EAID_CLS_df88bdbfcdf5b2c46d" xmi:type="uml:Class" type="Class" name="Brukertype" scope="public">
+        <model package="EAID_PKG_8eecacff2524336d0e" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="De ulike brukertypene som kan benytte lisensen.&#10;&#10;Eksempler:&#10;&#10;* ELEV&#10;* ANSATTSKOLE&#10;* ANSATTADMINISTRASJON&#10;* EKSTERN&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_7d9641c41e900d56d3" idref="EAID_CLS_7d9641c41e900d56d3" xmi:type="uml:Class" type="Class" name="Håndhevingstype" scope="public">
+        <model package="EAID_PKG_8eecacff2524336d0e" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Hvordan ulike lisensmodeller kan håndheves av systemer for forvaltning av applikasjonen.&#10;&#10;Eksempel:&#10;&#10;* Hardstopp (ikke lov å tildele flere lisenser enn det kildesystemet angir)&#10;* Ubegrenset (ingen begrensing på antall lisenser som kan tildeles)&#10;* Overallokering tillatt (kan tildeles lisenser utover maks antall. Ikke nødvendigvis ubegrenset)&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_62f6f17053da93f531" idref="EAID_CLS_62f6f17053da93f531" xmi:type="uml:Class" type="Class" name="Lisensmodell" scope="public">
+        <model package="EAID_PKG_8eecacff2524336d0e" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Lisensmodeller som kan knyttes til en lisens.&#10;&#10;Eksempel:&#10;&#10;* site&#10;* user&#10;* device&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_1671dc6cd6e8063b64" idref="EAID_CLS_1671dc6cd6e8063b64" xmi:type="uml:Class" type="Class" name="Plattform" scope="public">
+        <model package="EAID_PKG_8eecacff2524336d0e" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Plattformen tjenesten kan leveres på.&#10;&#10;Eksempel:&#10;&#10;* Windows&#10;* MAC OS&#10;* Linux&#10;* IOS&#10;* Android&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_PKG_11747fd7c7dcca9ea3" idref="EAID_PKG_11747fd7c7dcca9ea3" xmi:type="uml:Package" type="Package" name="Tilgang" scope="public">
+        <model package2="EAID_PKG_11747fd7c7dcca9ea3" ea_eleType="package" package="EAID_PKG_a79bb65b39f7246e3f" />
+        <tags />
+        </element>
+      <element xmi:idref="EAID_CLS_0c13ad97f810aa744d" idref="EAID_CLS_0c13ad97f810aa744d" xmi:type="uml:Class" type="Class" name="Identitet" scope="public">
+        <model package="EAID_PKG_11747fd7c7dcca9ea3" ea_eleType="element" />
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Identitet identifiserer innehaver av rettigheter i relasjonen til organisasjonen.&#10;&#10;Kilden for denne type informasjon vil typisk være identitetsforvaltningssystemet.&#10;" stereotype="hovedklasse" />
         <attributes>
-          <attribute xmi:idref="EAID_PRP_c1c082ac9750dbe810" idref="EAID_PRP_c1c082ac9750dbe810" name="systemId">
+          <attribute xmi:idref="EAID_PRP_17892e8b0b59bdbdff" idref="EAID_PRP_17892e8b0b59bdbdff" name="systemId">
             <properties type="Identifikator" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
@@ -11286,12 +11686,12 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             </attribute>
           </attributes>
         </element>
-      <element xmi:idref="EAID_CLS_925eaf9a5f68c3e90b" idref="EAID_CLS_925eaf9a5f68c3e90b" xmi:type="uml:Class" type="Class" name="Rettighet" scope="public">
-        <model package="EAID_PKG_4165ba11a971fac2eb" ea_eleType="element" />
+      <element xmi:idref="EAID_CLS_3a475aa37e328b924e" idref="EAID_CLS_3a475aa37e328b924e" xmi:type="uml:Class" type="Class" name="Rettighet" scope="public">
+        <model package="EAID_PKG_11747fd7c7dcca9ea3" ea_eleType="element" />
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Navngir en rettighet. Hva rettigheten gir tilgang til er systemspesifikt.&#10;" stereotype="hovedklasse" />
         <attributes>
-          <attribute xmi:idref="EAID_PRP_37cef934c57b6df73f" idref="EAID_PRP_37cef934c57b6df73f" name="beskrivelse">
+          <attribute xmi:idref="EAID_PRP_46cb66a5b45043af89" idref="EAID_PRP_46cb66a5b45043af89" name="beskrivelse">
             <properties type="string" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
@@ -16051,8 +16451,243 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_e0ff79175b9bc1282d" idref="EAID_ASC_e0ff79175b9bc1282d" start="EAID_CLS_51ceb2dd60eb96d1af" end="EAID_CLS_7f69968205107fe6de">
-        <source xmi:idref="EAID_CLS_51ceb2dd60eb96d1af" idref="EAID_CLS_51ceb2dd60eb96d1af">
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_a787e7a5dae7379bd8" idref="EAID_ASC_a787e7a5dae7379bd8" start="EAID_CLS_c51850746191a0b2ab" end="EAID_CLS_e3592ca6d4ed5f9bee">
+        <source xmi:idref="EAID_CLS_c51850746191a0b2ab" idref="EAID_CLS_c51850746191a0b2ab">
+          <model type="Class" name="Applikasjon" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_e3592ca6d4ed5f9bee" idref="EAID_CLS_e3592ca6d4ed5f9bee">
+          <model type="Class" name="Applikasjonskategori" />
+          <role name="applikasjonskategori" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Kategorier av applikasjoner." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_f08b210e137590e248" idref="EAID_ASC_f08b210e137590e248" start="EAID_CLS_c51850746191a0b2ab" end="EAID_CLS_1671dc6cd6e8063b64">
+        <source xmi:idref="EAID_CLS_c51850746191a0b2ab" idref="EAID_CLS_c51850746191a0b2ab">
+          <model type="Class" name="Applikasjon" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_1671dc6cd6e8063b64" idref="EAID_CLS_1671dc6cd6e8063b64">
+          <model type="Class" name="Plattform" />
+          <role name="plattform" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Den eller de plattform(ene) applikasjonen kan kjøre på." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_e0df41dc80ed4ab470" idref="EAID_ASC_e0df41dc80ed4ab470" start="EAID_CLS_c51850746191a0b2ab" end="EAID_CLS_da147fd4d4864d684c">
+        <source xmi:idref="EAID_CLS_c51850746191a0b2ab" idref="EAID_CLS_c51850746191a0b2ab">
+          <model type="Class" name="Applikasjon" />
+          <role visibility="Public" name="applikasjon" />
+          <type multiplicity="1" />
+          <documentation value="Ulike ressurs (lisenser) som er knyttet til denne applikasjonen. Dette kan være flere da ulike organisasjonesenheter kan ha kjøpt inn lisenser separat. Evt at samme applikasjon har flere lisensmodeller." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_da147fd4d4864d684c" idref="EAID_CLS_da147fd4d4864d684c">
+          <model type="Class" name="Applikasjonsressurs" />
+          <role name="ressurs" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Ulike ressurser (lisenser) som er knyttet til denne applikasjonen. Dette kan være flere da ulike organisasjonesenheter kan ha kjøpt inn lisenser separat. Evt at samme applikasjon har flere lisensmodeller." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_29d8823567f06d87d5" idref="EAID_ASC_29d8823567f06d87d5" start="EAID_CLS_da147fd4d4864d684c" end="EAID_CLS_df88bdbfcdf5b2c46d">
+        <source xmi:idref="EAID_CLS_da147fd4d4864d684c" idref="EAID_CLS_da147fd4d4864d684c">
+          <model type="Class" name="Applikasjonsressurs" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_df88bdbfcdf5b2c46d" idref="EAID_CLS_df88bdbfcdf5b2c46d">
+          <model type="Class" name="Brukertype" />
+          <role name="brukertype" visibility="Public" />
+          <type multiplicity="1..*" />
+          <documentation value="For hvilke brukertyper denne lisensen er gyldig." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_4478b0804e22919ad9" idref="EAID_ASC_4478b0804e22919ad9" start="EAID_CLS_da147fd4d4864d684c" end="EAID_CLS_11c618a515753fb259">
+        <source xmi:idref="EAID_CLS_da147fd4d4864d684c" idref="EAID_CLS_da147fd4d4864d684c">
+          <model type="Class" name="Applikasjonsressurs" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_11c618a515753fb259" idref="EAID_CLS_11c618a515753fb259">
+          <model type="Class" name="Organisasjonselement" />
+          <role name="eier" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Organisasjonselement som har eierskap til lisensen dvs inngått avtalen." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_718031e6db5659bd3a" idref="EAID_ASC_718031e6db5659bd3a" start="EAID_CLS_da147fd4d4864d684c" end="EAID_CLS_7d9641c41e900d56d3">
+        <source xmi:idref="EAID_CLS_da147fd4d4864d684c" idref="EAID_CLS_da147fd4d4864d684c">
+          <model type="Class" name="Applikasjonsressurs" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_7d9641c41e900d56d3" idref="EAID_CLS_7d9641c41e900d56d3">
+          <model type="Class" name="Håndhevingstype" />
+          <role name="håndhevingstype" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Hvordan det skal håndheves når lisensantall blir overskredet." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_4bbef03bddea68cbc7" idref="EAID_ASC_4bbef03bddea68cbc7" start="EAID_CLS_da147fd4d4864d684c" end="EAID_CLS_62f6f17053da93f531">
+        <source xmi:idref="EAID_CLS_da147fd4d4864d684c" idref="EAID_CLS_da147fd4d4864d684c">
+          <model type="Class" name="Applikasjonsressurs" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_62f6f17053da93f531" idref="EAID_CLS_62f6f17053da93f531">
+          <model type="Class" name="Lisensmodell" />
+          <role name="lisensmodell" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Hvilken lisensmodell applikasjonsressursen har." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_8126de7f1c5696b59e" idref="EAID_ASC_8126de7f1c5696b59e" start="EAID_CLS_da147fd4d4864d684c" end="EAID_CLS_6694468f7a3c25cd18">
+        <source xmi:idref="EAID_CLS_da147fd4d4864d684c" idref="EAID_CLS_da147fd4d4864d684c">
+          <model type="Class" name="Applikasjonsressurs" />
+          <role visibility="Public" name="ressurs" />
+          <type multiplicity="1" />
+          <documentation value="Ressursen organisasjonselementet har tilgang til." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_6694468f7a3c25cd18" idref="EAID_CLS_6694468f7a3c25cd18">
+          <model type="Class" name="Applikasjonsressurstilgjengelighet" />
+          <role name="ressurstilgjengelighet" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Angir hvilken orgenhet og hvor mange ressurser som skal tilordnes denne orgenheten." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_c7e39623b2a2ad2d89" idref="EAID_ASC_c7e39623b2a2ad2d89" start="EAID_CLS_6694468f7a3c25cd18" end="EAID_CLS_11c618a515753fb259">
+        <source xmi:idref="EAID_CLS_6694468f7a3c25cd18" idref="EAID_CLS_6694468f7a3c25cd18">
+          <model type="Class" name="Applikasjonsressurstilgjengelighet" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_11c618a515753fb259" idref="EAID_CLS_11c618a515753fb259">
+          <model type="Class" name="Organisasjonselement" />
+          <role name="konsument" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Organisasjonselement som har tilgang til denne ressursen." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_1a1cba47adb83c62a2" idref="EAID_GEN_1a1cba47adb83c62a2" start="EAID_CLS_e3592ca6d4ed5f9bee" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_e3592ca6d4ed5f9bee" idref="EAID_CLS_e3592ca6d4ed5f9bee">
+          <model type="Class" name="Applikasjonskategori" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_9ab415c7423ffd2266" idref="EAID_GEN_9ab415c7423ffd2266" start="EAID_CLS_df88bdbfcdf5b2c46d" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_df88bdbfcdf5b2c46d" idref="EAID_CLS_df88bdbfcdf5b2c46d">
+          <model type="Class" name="Brukertype" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_a4d435a1d4c0d3ffa6" idref="EAID_GEN_a4d435a1d4c0d3ffa6" start="EAID_CLS_7d9641c41e900d56d3" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_7d9641c41e900d56d3" idref="EAID_CLS_7d9641c41e900d56d3">
+          <model type="Class" name="Håndhevingstype" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_e7c588d78c97cfc0f3" idref="EAID_GEN_e7c588d78c97cfc0f3" start="EAID_CLS_62f6f17053da93f531" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_62f6f17053da93f531" idref="EAID_CLS_62f6f17053da93f531">
+          <model type="Class" name="Lisensmodell" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_2828afa4aabccf5763" idref="EAID_GEN_2828afa4aabccf5763" start="EAID_CLS_1671dc6cd6e8063b64" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_1671dc6cd6e8063b64" idref="EAID_CLS_1671dc6cd6e8063b64">
+          <model type="Class" name="Plattform" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_08ab65d56082ccbc29" idref="EAID_ASC_08ab65d56082ccbc29" start="EAID_CLS_0c13ad97f810aa744d" end="EAID_CLS_7f69968205107fe6de">
+        <source xmi:idref="EAID_CLS_0c13ad97f810aa744d" idref="EAID_CLS_0c13ad97f810aa744d">
           <model type="Class" name="Identitet" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
@@ -16068,15 +16703,15 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_79c9e02346273c40d7" idref="EAID_ASC_79c9e02346273c40d7" start="EAID_CLS_51ceb2dd60eb96d1af" end="EAID_CLS_925eaf9a5f68c3e90b">
-        <source xmi:idref="EAID_CLS_51ceb2dd60eb96d1af" idref="EAID_CLS_51ceb2dd60eb96d1af">
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_2065edc573bc30be32" idref="EAID_ASC_2065edc573bc30be32" start="EAID_CLS_0c13ad97f810aa744d" end="EAID_CLS_3a475aa37e328b924e">
+        <source xmi:idref="EAID_CLS_0c13ad97f810aa744d" idref="EAID_CLS_0c13ad97f810aa744d">
           <model type="Class" name="Identitet" />
           <role visibility="Public" name="identitet" />
           <type multiplicity="0..*" />
           <documentation value="Identiteter knyttet til rettigheten." />
           <tags />
           </source>
-        <target xmi:idref="EAID_CLS_925eaf9a5f68c3e90b" idref="EAID_CLS_925eaf9a5f68c3e90b">
+        <target xmi:idref="EAID_CLS_3a475aa37e328b924e" idref="EAID_CLS_3a475aa37e328b924e">
           <model type="Class" name="Rettighet" />
           <role name="rettighet" visibility="Public" />
           <type multiplicity="0..*" />
@@ -16086,8 +16721,8 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_d951e63539b74db84d" idref="EAID_GEN_d951e63539b74db84d" start="EAID_CLS_925eaf9a5f68c3e90b" end="EAID_CLS_3385458244847ec7db">
-        <source xmi:idref="EAID_CLS_925eaf9a5f68c3e90b" idref="EAID_CLS_925eaf9a5f68c3e90b">
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_bc9e2b69d4dc95565f" idref="EAID_GEN_bc9e2b69d4dc95565f" start="EAID_CLS_3a475aa37e328b924e" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_3a475aa37e328b924e" idref="EAID_CLS_3a475aa37e328b924e">
           <model type="Class" name="Rettighet" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
