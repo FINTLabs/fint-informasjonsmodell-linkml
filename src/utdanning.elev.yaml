@@ -365,7 +365,7 @@ classes:
         inverse: elevforhold
         description: |
           Alle kontaktlærergrupper elevforhold er medlem av
-        deprecated: "Relasjonen erstattes av Gruppemedlemskap i Kontaktlærergruppemedlemskap."
+        deprecated: "Relasjonen erstattes av Elevforhold i Kontaktlærergruppemedlemskap."
         multivalued: true
       kontaktlærergruppemedlemskap:
         range: Kontaktlærergruppemedlemskap
@@ -389,7 +389,7 @@ classes:
         inverse: elevforhold
         description: |
           Programområde elevforhold tilhører
-        deprecated: "Relasjonen erstattes av Gruppemedlemskap i Programområdemedlemskap."
+        deprecated: "Relasjonen erstattes av Elevforhold i Programområdemedlemskap."
       programområdemedlemskap:
         range: Programområdemedlemskap
         inverse: elevforhold
@@ -534,7 +534,7 @@ classes:
           primaryRelation: true
         description: |
           Alle elevforhold i kontaktlærergruppen
-        deprecated: "Relasjonen erstattes av Gruppemedlemskap i Kontaktlærergruppemedlemskap."
+        deprecated: "Relasjonen erstattes av Elevforhold i Kontaktlærergruppemedlemskap."
         multivalued: true
       gruppemedlemskap:
         range: Kontaktlærergruppemedlemskap

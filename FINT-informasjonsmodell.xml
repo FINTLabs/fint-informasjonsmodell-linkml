@@ -1696,6 +1696,14 @@ Dette er ikke en del av Noark standarden.
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_778f862b3c7aaa41bf" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_400c17df9cda4e236e" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_e708e481b49efc11b3" name="Tilgangsgruppe">
+              <properties documentation="Tilgangsgruppe gir mulighet for å skjerme innhold internt for andre brukere.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_6f70d73f1608272f1f">
+                <body>Tilgangsgruppe gir mulighet for å skjerme innhold internt for andre brukere.
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_6f70d73f1608272f1f" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_e708e481b49efc11b3" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_b140ac7b8275ca5f19" name="Tilgangsrestriksjon">
               <properties documentation="Angivelse av at dokumentene som tilhører arkivenheten ikke er offentligtilgjengelig i henhold til offentlighetsloven eller av en annen grunn.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M500&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_70d6b606420498ba0e">
@@ -3548,6 +3556,15 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 </body>
                   </ownedComment>
                 </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_d00867ca60360d03ac" name="fødselsnummer" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_17fbc502911d9e26ba" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_17fbc502911d9e26ba" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_17fbc502911d9e26ba">
+                  <body>Fødselsnummer til part. Kun gyldig hvis Part er en Privatperson.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_59dc4c5c378bb667ee" name="kontaktinformasjon" visibility="public">
                 <type xmi:idref="EAID_CLS_52527f3a976509c805" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_08e2f5eeb235a77dd0" value="0" />
@@ -3579,6 +3596,15 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 # Referanser
 
 * https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_6090b9a1db23ae0522" name="organisasjonsnummer" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_e8fdcea96f27397e8a" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_e8fdcea96f27397e8a" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_e8fdcea96f27397e8a">
+                  <body>Organisasjonsnummer til Part. Kun gyldig hvis Part er en organisasjon.
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -3905,6 +3931,7 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_d4b2ddd7d3f88287ba" visibility="public" start="EAID_CLS_7fc0b5bc1bb4640561" end="EAID_CLS_0c3df74298539a0472" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_b98b6ea5de45795ba8" visibility="public" start="EAID_CLS_7fc0b5bc1bb4640561" end="EAID_CLS_0c3df74298539a0472" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_1db50cc7ba9351c3bd" visibility="public" start="EAID_CLS_7fc0b5bc1bb4640561" end="EAID_CLS_0c3df74298539a0472" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_c418a5583234f555e4" visibility="public" start="EAID_CLS_7fc0b5bc1bb4640561" end="EAID_CLS_e708e481b49efc11b3" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_e565fdfbe4dc72b706" name="Sak">
               <properties documentation="Generisk sak.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_c6a1054173ec7020c6">
@@ -3914,9 +3941,9 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_c6a1054173ec7020c6" general="EAID_CLS_7f29adb0e673610470" start="EAID_CLS_e565fdfbe4dc72b706" end="EAID_CLS_7f29adb0e673610470" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_7f29adb0e673610470" name="Saksmappe" isAbstract="true">
-              <properties documentation="Spesialisering av Mappe som tilsvarer en ”sak” i Noark-4.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 standard - kap. 2.5 &#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;" stereotype="abstrakt" />
+              <properties documentation="Spesialisering av Mappe som tilsvarer en ”sak” i Noark.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 standard - kap. 2.5 &#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;" stereotype="abstrakt" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_fcb7c1d1afdae4dcbb">
-                <body>Spesialisering av Mappe som tilsvarer en ”sak” i Noark-4.
+                <body>Spesialisering av Mappe som tilsvarer en ”sak” i Noark.
 
 # Beskrivelse
 
@@ -4052,6 +4079,7 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_d810524899195a7fd8" visibility="public" start="EAID_CLS_7f29adb0e673610470" end="EAID_CLS_0c3df74298539a0472" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_859c8711db1924e7e2" visibility="public" start="EAID_CLS_7f29adb0e673610470" end="EAID_CLS_0f9b549a2de4faec59" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_71c885adc0a5a15e61" visibility="public" start="EAID_CLS_7f29adb0e673610470" end="EAID_CLS_3afc77c9e19b3ed6e5" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_533dcfaadcfbe5735d" visibility="public" start="EAID_CLS_7f29adb0e673610470" end="EAID_CLS_e708e481b49efc11b3" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_66dc546bb8be316506" name="Skjerming">
               <properties documentation="Skjerming benyttes til å skjerme registrerte opplysninger eller enkeltdokumenter. Skjermingen trer i kraft når en tilgangskode påføres den enkelte mappe, registrering eller det enkelte dokument.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 standard - kap. 2.8.1 &#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_adb7ab0200ba4c53fb">
@@ -4191,7 +4219,7 @@ Kontaktperson kalles også pårørende.
               </ownedAttribute>
             <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_ac8bbd596064b0870f" name="foreldreansvar" visibility="public">
               <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Boolean" />
-              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_a88a037c09ef0029b8" value="1" />
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_a88a037c09ef0029b8" value="0" />
               <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_a88a037c09ef0029b8" value="1" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a88a037c09ef0029b8">
                 <body>Angir om kontaktpersonen har foreldreansvar for personen vedkommende er pårørende for.
@@ -5035,20 +5063,15 @@ Format må følge norsk nummerplan E.164, alternativt med `+` for å angi internasj
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_25cd5c8ec25d484e9a" visibility="public" start="EAID_CLS_4794cf60ccc021eafe" end="EAID_CLS_731db44765e710208d" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_ffdb8cc4adee01331a" name="Periode">
-              <properties documentation="Tidsperiode (start- og sluttdato).&#10;&#10;# Beskrivelse&#10;&#10;Tidsperiode (start- og sluttdato).&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Eksempel&#10;&#10;Et arbeidsforhold kan ha gyldighetsperiode:&#10;* Fra 1999.01.01T00:00:00Z til ubestemt tid&#10;* Fra 1999.01.01T00:00:00Z til 2005.01.01T00:00:00Z&#10;" />
+              <properties documentation="Tidsperiode (start- og sluttdato).&#10;&#10;# Beskrivelse&#10;&#10;Tidsperiode (start- og slutttidspunkt). &#10;Slutttidspunkt må være senere eller lik starttidspunktet om det er definert.&#10;Både start og slutt kan brukes som dato eller datotid.&#10;" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_634c56778a875c24a1">
                 <body>Tidsperiode (start- og sluttdato).
 
 # Beskrivelse
 
-Tidsperiode (start- og sluttdato).
-Sluttdato må være senere eller lik startdato om den er definert.
-
-# Eksempel
-
-Et arbeidsforhold kan ha gyldighetsperiode:
-* Fra 1999.01.01T00:00:00Z til ubestemt tid
-* Fra 1999.01.01T00:00:00Z til 2005.01.01T00:00:00Z
+Tidsperiode (start- og slutttidspunkt). 
+Slutttidspunkt må være senere eller lik starttidspunktet om det er definert.
+Både start og slutt kan brukes som dato eller datotid.
 </body>
                 </ownedComment>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_b6ec2bd8bfa90a028e" name="beskrivelse" visibility="public">
@@ -5072,27 +5095,43 @@ Et arbeidsforhold kan ha gyldighetsperiode:
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_7cf1632f5fad2cda8d" value="0" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_7cf1632f5fad2cda8d" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7cf1632f5fad2cda8d">
-                  <body>Til dato
+                  <body>Til tidspunkt
 
 # Beskrivelse
 
-Sluttdato må være senere eller lik startdato om den er definert.
+Slutttidspunkt for perioden.
 
-# Format
+Slutttidspunkt må være senere eller lik startdato om det er definert.
+
+# Når feltet brukes som et rent datofelt:
+
+## Format
 
 ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
 
-## Referanser
+## Eksempler
 
-* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+29. mars 1990 -&amp;gt; 1990-03-29T12:00:00Z
+
+29. juni 1990 -&amp;gt; 1990-06-29T12:00:00Z
+
+# Når feltet brukes som et datotid felt:
+
+## Format
+
+ISO 8601 format YYYY-MM-DDThh:mm:ssZ
 
 ## Eksempler
 
-* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`
+29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; 1990-03-29T12:30:00Z
 
-* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`
+29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; 1990-06-29T11:30:00Z
+
+# Referanser
+
+* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -5101,27 +5140,41 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_5beabcbc44f6515193" value="1" />
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_5beabcbc44f6515193" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_5beabcbc44f6515193">
-                  <body>Fra dato
+                  <body>Fra tidspunkt
 
 # Beskrivelse
 
-Sluttdato må være senere eller lik startdato om den er definert.
+Starttidspunkt for perioden.
 
-# Format
+# Når feltet brukes som et rent datofelt:
+
+## Format
 
 ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
 
 Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
 
-## Referanser
+## Eksempler
 
-* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+29. mars 1990 -&amp;gt; 1990-03-29T12:00:00Z
+
+29. juni 1990 -&amp;gt; 1990-06-29T12:00:00Z
+
+# Når feltet brukes som et datotid felt:
+
+## Format
+
+ISO 8601 format YYYY-MM-DDThh:mm:ssZ
 
 ## Eksempler
 
-29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`
+29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; 1990-03-29T12:30:00Z
 
-29. juni 1990 -&amp;gt; `1990-06-29T12:00:00Z`
+29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; 1990-06-29T11:30:00Z
+
+# Referanser
+
+* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -8100,6 +8153,17 @@ Gruppemedlemskap som knytter sammen elevforhold og eksamensgrupper.
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_fc70ed524f4efe5f9d" visibility="public" start="EAID_CLS_fcc8bab445fb55fc37" end="EAID_CLS_0b3332931f7cc69b89" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_4642089598f23101dc" visibility="public" start="EAID_CLS_fcc8bab445fb55fc37" end="EAID_CLS_64e904f2ebf8b9f538" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_bcb87751469b071801" visibility="public" start="EAID_CLS_fcc8bab445fb55fc37" end="EAID_CLS_1d2ea71766e6f9ab9c" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_113299785c8fce952b" name="Eksamensvurdering">
+              <properties documentation="Eksamensvurdering gis etter deltakelse på eksamen.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_ba8c38d8cc0a877789">
+                <body>Eksamensvurdering gis etter deltakelse på eksamen.
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_ba8c38d8cc0a877789" general="EAID_CLS_d070ec2ebf1c6459a5" start="EAID_CLS_113299785c8fce952b" end="EAID_CLS_d070ec2ebf1c6459a5" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_4029ef768d5c8cbedb" visibility="public" start="EAID_CLS_113299785c8fce952b" end="EAID_CLS_befc698f1817a298c1" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_0493aaa3681477e0b9" visibility="public" start="EAID_CLS_113299785c8fce952b" end="EAID_CLS_d940508e47051c726a" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_38523b0b3b564a29b7" visibility="public" start="EAID_CLS_113299785c8fce952b" end="EAID_CLS_ad233220fb929ee615" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_8ebe762414fdaf3d36" name="Elevfravær">
               <properties documentation="Manglende tilstedeværelse i opplæringen.&#10;&#10;# Beskrivelse&#10;&#10;Fravær føres med relasjon til den undervisningen eleven har vært fraværende fra.&#10;&#10;# Fraværsgrense &#10;&#10;* Elever i videregående skole skal møte opp og delta aktivt i opplæringen. &#10;* Fravær skal registreres, og det foreligger grenser på hvor mye fravær som tillates før rett til å få halvårsvurdering med karakter eller standpunktkarakter i et fag bortfaller. &#10;* Eleven må legge fram relevant dokumentasjon for å få fravær unntatt fra fraværsgrensen.&#10;* Fraværsgrensen gjelder timefravær i enkeltfag, ikke elevenes totale fravær.&#10;* Eleven skal få et varsel om han eller hun står i fare for å ikke få karakter på grunn av fravær.&#10;&#10;# Fravær eksamen&#10;Det føres ikke lenger fravær på eksamen. Dette vil bli satt som karakter. Pga dette utgår relasjonen til eksamensgruppe. Ved en senere hovedoppdatering av Informasjonsmodellen vil multiplisitet for relasjonen  undervisningsgruppe bli satt til 1.&#10;&#10;# Referanser&#10;&#10;* UDir Registreringshåndbok: http://regbok.udir.no/35004/3344/35042-1018643.html&#10;* Forskrift til opplæringslova &amp;#167; 3-3, siste ledd: https://lovdata.no/forskrift/2006-06-23-724/&amp;#167;3-3&#10;* Forskrift til opplæringslova &amp;#167; 3-47: https://lovdata.no/forskrift/2006-06-23-724/&amp;#167;3-47&#10;* UDir. Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet, pkt 8: https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/8-fravar/&#10;* SNL. Fravær: https://snl.no/fravær&#10;* Rundskriv Udir-3-2016: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravarsgrense---udir-3-2016/&#10;* UDir. Fravær i videregående skole: https://www.udir.no/regelverk-og-tilsyn/finn-regelverk/etter-tema/Vitnemal/fravar-i-videregaende-skole/&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_f751aa4469fd2106ad">
@@ -8679,7 +8743,7 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_f8af5492b711512cd6" visibility="public" start="EAID_CLS_0b3332931f7cc69b89" end="EAID_CLS_befc698f1817a298c1" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_da123816374cfa7452" visibility="public" start="EAID_CLS_0b3332931f7cc69b89" end="EAID_CLS_1effd1cacfa57a62ad" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_587e9da5042c0cd923" name="Sluttfagvurdering">
-              <properties documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Sluttvurdering (Standpunktkarakter) gis for deltakelse av en elev i en gruppe.&#10;&#10;Vurderingen skal ha en relasjon til det angjeldende faget. Det er også mulig å sette en relasjon til den eksamensgruppen som vurderingen er foretatt i.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til opplæringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
+              <properties documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Sluttvurdering (Standpunktkarakter) gis for deltakelse av en elev i en gruppe.&#10;&#10;Vurderingen skal ha en relasjon til det angjeldende faget.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til opplæringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_e54b71761f9de8f370">
                 <body>Karakterer og andre vurderingsuttrykk.
 
@@ -8687,7 +8751,7 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
 
 Sluttvurdering (Standpunktkarakter) gis for deltakelse av en elev i en gruppe.
 
-Vurderingen skal ha en relasjon til det angjeldende faget. Det er også mulig å sette en relasjon til den eksamensgruppen som vurderingen er foretatt i.
+Vurderingen skal ha en relasjon til det angjeldende faget.
 
 # Referanser
 
@@ -8861,7 +8925,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             </attribute>
           <attribute xmi:idref="EAID_PRP_ac8bbd596064b0870f" idref="EAID_PRP_ac8bbd596064b0870f" name="foreldreansvar">
             <properties type="boolean" />
-            <bounds lower="1" upper="1" />
+            <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
             <documentation value="Angir om kontaktpersonen har foreldreansvar for personen vedkommende er pårørende for.&#10;" />
             <tags>
@@ -9614,6 +9678,12 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <model package="EAID_PKG_5284d8b4387ebb8937" ea_eleType="element" />
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Henvisning til hjemmel (paragraf) i offentlighetsloven, sikkerhetsloven eller beskyttelsesinstruksen.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M501&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_e708e481b49efc11b3" idref="EAID_CLS_e708e481b49efc11b3" xmi:type="uml:Class" type="Class" name="Tilgangsgruppe" scope="public">
+        <model package="EAID_PKG_5284d8b4387ebb8937" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Tilgangsgruppe gir mulighet for å skjerme innhold internt for andre brukere.&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_b140ac7b8275ca5f19" idref="EAID_CLS_b140ac7b8275ca5f19" xmi:type="uml:Class" type="Class" name="Tilgangsrestriksjon" scope="public">
@@ -10384,6 +10454,13 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <documentation value="Adressen til saksparten.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M406, M407, M408 og M409&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;" />
             <tags />
             </attribute>
+          <attribute xmi:idref="EAID_PRP_d00867ca60360d03ac" idref="EAID_PRP_d00867ca60360d03ac" name="fødselsnummer">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Fødselsnummer til part. Kun gyldig hvis Part er en Privatperson.&#10;" />
+            <tags />
+            </attribute>
           <attribute xmi:idref="EAID_PRP_59dc4c5c378bb667ee" idref="EAID_PRP_59dc4c5c378bb667ee" name="kontaktinformasjon">
             <properties type="Kontaktinformasjon" />
             <bounds lower="0" upper="1" />
@@ -10396,6 +10473,13 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <bounds lower="0" upper="1" />
             <stereotype stereotype="writable" />
             <documentation value="Kontaktperson hos en organisasjon som er avsender eller mottaker, eller sakspart.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M412&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_6090b9a1db23ae0522" idref="EAID_PRP_6090b9a1db23ae0522" name="organisasjonsnummer">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="writable" />
+            <documentation value="Organisasjonsnummer til Part. Kun gyldig hvis Part er en organisasjon.&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_c22360278cab711ba9" idref="EAID_PRP_c22360278cab711ba9" name="partNavn">
@@ -10528,7 +10612,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <element xmi:idref="EAID_CLS_7f29adb0e673610470" idref="EAID_CLS_7f29adb0e673610470" xmi:type="uml:Class" type="Class" name="Saksmappe" scope="public">
         <model package="EAID_PKG_988980828c6918b827" ea_eleType="element" />
         <tags />
-        <properties isAbstract="true" sType="Class" scope="public" documentation="Spesialisering av Mappe som tilsvarer en ”sak” i Noark-4.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 standard - kap. 2.5 &#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;" stereotype="abstrakt" />
+        <properties isAbstract="true" sType="Class" scope="public" documentation="Spesialisering av Mappe som tilsvarer en ”sak” i Noark.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 standard - kap. 2.5 &#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden&#10;" stereotype="abstrakt" />
         <attributes>
           <attribute xmi:idref="EAID_PRP_9bd3a1977be8f19d20" idref="EAID_PRP_9bd3a1977be8f19d20" name="journalpost">
             <properties type="Journalpost" />
@@ -10916,7 +11000,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <element xmi:idref="EAID_CLS_ffdb8cc4adee01331a" idref="EAID_CLS_ffdb8cc4adee01331a" xmi:type="uml:Class" type="Class" name="Periode" scope="public">
         <model package="EAID_PKG_f86973cf2c8168a1e8" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Tidsperiode (start- og sluttdato).&#10;&#10;# Beskrivelse&#10;&#10;Tidsperiode (start- og sluttdato).&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Eksempel&#10;&#10;Et arbeidsforhold kan ha gyldighetsperiode:&#10;* Fra 1999.01.01T00:00:00Z til ubestemt tid&#10;* Fra 1999.01.01T00:00:00Z til 2005.01.01T00:00:00Z&#10;" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Tidsperiode (start- og sluttdato).&#10;&#10;# Beskrivelse&#10;&#10;Tidsperiode (start- og slutttidspunkt). &#10;Slutttidspunkt må være senere eller lik starttidspunktet om det er definert.&#10;Både start og slutt kan brukes som dato eller datotid.&#10;" />
         <attributes>
           <attribute xmi:idref="EAID_PRP_b6ec2bd8bfa90a028e" idref="EAID_PRP_b6ec2bd8bfa90a028e" name="beskrivelse">
             <properties type="string" />
@@ -10929,14 +11013,14 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <properties type="datetime" />
             <bounds lower="0" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Til dato&#10;&#10;# Beskrivelse&#10;&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;* `29. mars 1990` -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;* `29. juni 1990` -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
+            <documentation value="Til tidspunkt&#10;&#10;# Beskrivelse&#10;&#10;Slutttidspunkt for perioden.&#10;&#10;Slutttidspunkt må være senere eller lik startdato om det er definert.&#10;&#10;# Når feltet brukes som et rent datofelt:&#10;&#10;## Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; 1990-03-29T12:00:00Z&#10;&#10;29. juni 1990 -&amp;gt; 1990-06-29T12:00:00Z&#10;&#10;# Når feltet brukes som et datotid felt:&#10;&#10;## Format&#10;&#10;ISO 8601 format YYYY-MM-DDThh:mm:ssZ&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; 1990-03-29T12:30:00Z&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; 1990-06-29T11:30:00Z&#10;&#10;# Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;" />
             <tags />
             </attribute>
           <attribute xmi:idref="EAID_PRP_193ae2b0dd4cb84fac" idref="EAID_PRP_193ae2b0dd4cb84fac" name="start">
             <properties type="datetime" />
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
-            <documentation value="Fra dato&#10;&#10;# Beskrivelse&#10;&#10;Sluttdato må være senere eller lik startdato om den er definert.&#10;&#10;# Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; `1990-03-29T12:00:00Z`&#10;&#10;29. juni 1990 -&amp;gt; `1990-06-29T12:00:00Z`&#10;" />
+            <documentation value="Fra tidspunkt&#10;&#10;# Beskrivelse&#10;&#10;Starttidspunkt for perioden.&#10;&#10;# Når feltet brukes som et rent datofelt:&#10;&#10;## Format&#10;&#10;ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`&#10;&#10;Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 -&amp;gt; 1990-03-29T12:00:00Z&#10;&#10;29. juni 1990 -&amp;gt; 1990-06-29T12:00:00Z&#10;&#10;# Når feltet brukes som et datotid felt:&#10;&#10;## Format&#10;&#10;ISO 8601 format YYYY-MM-DDThh:mm:ssZ&#10;&#10;## Eksempler&#10;&#10;29. mars 1990 klokken 13:30 (UTC +1) -&amp;gt; 1990-03-29T12:30:00Z&#10;&#10;29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&amp;gt; 1990-06-29T11:30:00Z&#10;&#10;# Referanser&#10;&#10;* ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -12506,6 +12590,12 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             </attribute>
           </attributes>
         </element>
+      <element xmi:idref="EAID_CLS_113299785c8fce952b" idref="EAID_CLS_113299785c8fce952b" xmi:type="uml:Class" type="Class" name="Eksamensvurdering" scope="public">
+        <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Eksamensvurdering gis etter deltakelse på eksamen.&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
       <element xmi:idref="EAID_CLS_8ebe762414fdaf3d36" idref="EAID_CLS_8ebe762414fdaf3d36" xmi:type="uml:Class" type="Class" name="Elevfravær" scope="public">
         <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
         <tags />
@@ -12797,7 +12887,7 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
       <element xmi:idref="EAID_CLS_587e9da5042c0cd923" idref="EAID_CLS_587e9da5042c0cd923" xmi:type="uml:Class" type="Class" name="Sluttfagvurdering" scope="public">
         <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Sluttvurdering (Standpunktkarakter) gis for deltakelse av en elev i en gruppe.&#10;&#10;Vurderingen skal ha en relasjon til det angjeldende faget. Det er også mulig å sette en relasjon til den eksamensgruppen som vurderingen er foretatt i.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til opplæringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Karakterer og andre vurderingsuttrykk.&#10;&#10;# Beskrivelse&#10;&#10;Sluttvurdering (Standpunktkarakter) gis for deltakelse av en elev i en gruppe.&#10;&#10;Vurderingen skal ha en relasjon til det angjeldende faget.&#10;&#10;# Referanser&#10;&#10;* UDir. Registreringshåndbok, Karakterer og andre vurderingsuttrykk: [regbok.udir.no/35004/3344/35042-1021153.html](http://regbok.udir.no/35004/3344/35042-1021153.html)&#10;* Føring av vitnemål og kompetansebevis for videregående opplæring i Kunnskapsløftet 2017. Karakterer og andre vurderingsuttrykk: [https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/5-karakterer-og-andre-vurderingsuttrykk/)&#10;* Forskrift til opplæringslova &amp;#167; 3-4: [https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_4-1#&amp;#167;3-4)&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_805a5c053f8f3e758d" idref="EAID_CLS_805a5c053f8f3e758d" xmi:type="uml:Class" type="Class" name="Sluttordensvurdering" scope="public">
@@ -14995,6 +15085,22 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_6f70d73f1608272f1f" idref="EAID_GEN_6f70d73f1608272f1f" start="EAID_CLS_e708e481b49efc11b3" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_e708e481b49efc11b3" idref="EAID_CLS_e708e481b49efc11b3">
+          <model type="Class" name="Tilgangsgruppe" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_70d6b606420498ba0e" idref="EAID_GEN_70d6b606420498ba0e" start="EAID_CLS_b140ac7b8275ca5f19" end="EAID_CLS_3385458244847ec7db">
         <source xmi:idref="EAID_CLS_b140ac7b8275ca5f19" idref="EAID_CLS_b140ac7b8275ca5f19">
           <model type="Class" name="Tilgangsrestriksjon" />
@@ -15655,6 +15761,23 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_c418a5583234f555e4" idref="EAID_ASC_c418a5583234f555e4" start="EAID_CLS_7fc0b5bc1bb4640561" end="EAID_CLS_e708e481b49efc11b3">
+        <source xmi:idref="EAID_CLS_7fc0b5bc1bb4640561" idref="EAID_CLS_7fc0b5bc1bb4640561">
+          <model type="Class" name="Registrering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_e708e481b49efc11b3" idref="EAID_CLS_e708e481b49efc11b3">
+          <model type="Class" name="Tilgangsgruppe" />
+          <role name="tilgangsgruppe" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Angir hvilken tilgangsgruppe som har tilgang til Registreringen" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_c6a1054173ec7020c6" idref="EAID_GEN_c6a1054173ec7020c6" start="EAID_CLS_e565fdfbe4dc72b706" end="EAID_CLS_7f29adb0e673610470">
         <source xmi:idref="EAID_CLS_e565fdfbe4dc72b706" idref="EAID_CLS_e565fdfbe4dc72b706">
           <model type="Class" name="Sak" />
@@ -15784,6 +15907,23 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <role name="saksstatus" visibility="Public" />
           <type multiplicity="1" />
           <documentation value="Registreres automatisk gjennom forskjellig saksbehandlings- funksjonalitet, eller overstyres manuelt.&#10;&#10;# Beskrivelse&#10;&#10;* Noark 5 versjon 5.0 metadatakatalog - nr. M052&#10;&#10;# Referanser&#10;&#10;* https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_533dcfaadcfbe5735d" idref="EAID_ASC_533dcfaadcfbe5735d" start="EAID_CLS_7f29adb0e673610470" end="EAID_CLS_e708e481b49efc11b3">
+        <source xmi:idref="EAID_CLS_7f29adb0e673610470" idref="EAID_CLS_7f29adb0e673610470">
+          <model type="Class" name="Saksmappe" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_e708e481b49efc11b3" idref="EAID_CLS_e708e481b49efc11b3">
+          <model type="Class" name="Tilgangsgruppe" />
+          <role name="tilgangsgruppe" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Angir hvilken tilgangsgruppe som har tilgang til saksmappen." />
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
@@ -19421,6 +19561,74 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <role name="nus" visibility="Public" />
           <type multiplicity="0..1" />
           <documentation value="Viser om dette er ny (N), utsatt (U) eller særskilt (S) eksamen (NUS-eksamen )&#10;&#10;Andre koder skal ikke brukes i denne sammenheng.&#10;&#10;# Referanser&#10;&#10;https://www.udir.no/eksamen-og-prover/eksamen/ny-utsatt-og-sarskilt-eksamen-nus-eksamen-/" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_ba8c38d8cc0a877789" idref="EAID_GEN_ba8c38d8cc0a877789" start="EAID_CLS_113299785c8fce952b" end="EAID_CLS_d070ec2ebf1c6459a5">
+        <source xmi:idref="EAID_CLS_113299785c8fce952b" idref="EAID_CLS_113299785c8fce952b">
+          <model type="Class" name="Eksamensvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_d070ec2ebf1c6459a5" idref="EAID_CLS_d070ec2ebf1c6459a5">
+          <model type="Class" name="Fagvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_4029ef768d5c8cbedb" idref="EAID_ASC_4029ef768d5c8cbedb" start="EAID_CLS_113299785c8fce952b" end="EAID_CLS_befc698f1817a298c1">
+        <source xmi:idref="EAID_CLS_113299785c8fce952b" idref="EAID_CLS_113299785c8fce952b">
+          <model type="Class" name="Eksamensvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_befc698f1817a298c1" idref="EAID_CLS_befc698f1817a298c1">
+          <model type="Class" name="Eksamensgruppe" />
+          <role name="eksamensgruppe" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Eksamensgruppe vurderingen er foretatt i." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_0493aaa3681477e0b9" idref="EAID_ASC_0493aaa3681477e0b9" start="EAID_CLS_113299785c8fce952b" end="EAID_CLS_d940508e47051c726a">
+        <source xmi:idref="EAID_CLS_113299785c8fce952b" idref="EAID_CLS_113299785c8fce952b">
+          <model type="Class" name="Eksamensvurdering" />
+          <role visibility="Public" name="eksamensvurdering" />
+          <type multiplicity="0..*" />
+          <documentation value="Eksamensvurdering i fag for eleven." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_d940508e47051c726a" idref="EAID_CLS_d940508e47051c726a">
+          <model type="Class" name="Elevvurdering" />
+          <role name="elevvurdering" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Vurderingsinformasjon for en elev." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_38523b0b3b564a29b7" idref="EAID_ASC_38523b0b3b564a29b7" start="EAID_CLS_113299785c8fce952b" end="EAID_CLS_ad233220fb929ee615">
+        <source xmi:idref="EAID_CLS_113299785c8fce952b" idref="EAID_CLS_113299785c8fce952b">
+          <model type="Class" name="Eksamensvurdering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_ad233220fb929ee615" idref="EAID_CLS_ad233220fb929ee615">
+          <model type="Class" name="Karakterhistorie" />
+          <role name="karakterhistorie" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Viser tidligere karakterer hvis karakter er endret." />
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />

@@ -199,6 +199,11 @@ classes:
       * https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
     is_a: Begrep
 
+  Tilgangsgruppe:
+    description: |
+      Tilgangsgruppe gir mulighet for å skjerme innhold internt for andre brukere.
+    is_a: Begrep
+
   Tilgangsrestriksjon:
     description: |
       Angivelse av at dokumentene som tilhører arkivenheten ikke er offentligtilgjengelig i henhold til offentlighetsloven eller av en annen grunn.

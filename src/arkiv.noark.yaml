@@ -1684,6 +1684,12 @@ classes:
           # Referanser
           
           * https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
+      fødselsnummer:
+        range: string
+        annotations:
+          writeable: true
+        description: |
+          Fødselsnummer til part. Kun gyldig hvis Part er en Privatperson.
       kontaktinformasjon:
         range: Kontaktinformasjon
         annotations:
@@ -1712,6 +1718,12 @@ classes:
           # Referanser
           
           * https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
+      organisasjonsnummer:
+        range: string
+        annotations:
+          writeable: true
+        description: |
+          Organisasjonsnummer til Part. Kun gyldig hvis Part er en organisasjon.
       partNavn:
         range: string
         annotations:
@@ -2053,6 +2065,10 @@ classes:
           # Referanser
           
           * https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
+      tilgangsgruppe:
+        range: Tilgangsgruppe
+        description: |
+          Angir hvilken tilgangsgruppe som har tilgang til Registreringen
 
   Sak:
     description: |
@@ -2061,7 +2077,7 @@ classes:
 
   Saksmappe:
     description: |
-      Spesialisering av Mappe som tilsvarer en ”sak” i Noark-4.
+      Spesialisering av Mappe som tilsvarer en ”sak” i Noark.
       
       # Beskrivelse
       
@@ -2238,6 +2254,10 @@ classes:
           
           * https://www.arkivverket.no/forvaltning-og-utvikling/noark-standarden/noark-5/noark5-standarden
         required: true
+      tilgangsgruppe:
+        range: Tilgangsgruppe
+        description: |
+          Angir hvilken tilgangsgruppe som har tilgang til saksmappen.
 
   Skjerming:
     description: |

@@ -199,6 +199,29 @@ classes:
           
           https://www.udir.no/eksamen-og-prover/eksamen/ny-utsatt-og-sarskilt-eksamen-nus-eksamen-/
 
+  Eksamensvurdering:
+    description: |
+      Eksamensvurdering gis etter deltakelse på eksamen.
+    is_a: Fagvurdering
+    attributes:
+      eksamensgruppe:
+        range: Eksamensgruppe
+        description: |
+          Eksamensgruppe vurderingen er foretatt i.
+        required: true
+      elevvurdering:
+        range: Elevvurdering
+        inverse: eksamensvurdering
+        annotations:
+          primaryRelation: true
+        description: |
+          Vurderingsinformasjon for en elev.
+        required: true
+      karakterhistorie:
+        range: Karakterhistorie
+        description: |
+          Viser tidligere karakterer hvis karakter er endret.
+
   Elevfravær:
     description: |
       Manglende tilstedeværelse i opplæringen.
@@ -257,6 +280,12 @@ classes:
         description: |
           Systemidentifikator i fagsystemet.
         required: true
+      eksamensvurdering:
+        range: Eksamensvurdering
+        inverse: elevvurdering
+        description: |
+          Eksamensvurdering i fag for eleven.
+        multivalued: true
       elevforhold:
         range: Elevforhold
         inverse: elevvurdering
@@ -861,7 +890,7 @@ classes:
       
       Sluttvurdering (Standpunktkarakter) gis for deltakelse av en elev i en gruppe.
       
-      Vurderingen skal ha en relasjon til det angjeldende faget. Det er også mulig å sette en relasjon til den eksamensgruppen som vurderingen er foretatt i.
+      Vurderingen skal ha en relasjon til det angjeldende faget.
       
       # Referanser
       
@@ -874,6 +903,7 @@ classes:
         range: Eksamensgruppe
         description: |
           Eksamensgruppe vurderingen er foretatt i.
+        deprecated: "Bruk Eksamensvurdering"
       elevforhold:
         range: Elevforhold
         inverse: sluttfagvurdering

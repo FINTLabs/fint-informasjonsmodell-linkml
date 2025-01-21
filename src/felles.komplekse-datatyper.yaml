@@ -289,14 +289,9 @@ classes:
       
       # Beskrivelse
       
-      Tidsperiode (start- og sluttdato).
-      Sluttdato må være senere eller lik startdato om den er definert.
-      
-      # Eksempel
-      
-      Et arbeidsforhold kan ha gyldighetsperiode:
-      * Fra 1999.01.01T00:00:00Z til ubestemt tid
-      * Fra 1999.01.01T00:00:00Z til 2005.01.01T00:00:00Z
+      Tidsperiode (start- og slutttidspunkt). 
+      Slutttidspunkt må være senere eller lik starttidspunktet om det er definert.
+      Både start og slutt kan brukes som dato eller datotid.
     attributes:
       beskrivelse:
         range: string
@@ -312,51 +307,81 @@ classes:
       slutt:
         range: datetime
         description: |
-          Til dato
+          Til tidspunkt
           
           # Beskrivelse
           
-          Sluttdato må være senere eller lik startdato om den er definert.
+          Slutttidspunkt for perioden.
           
-          # Format
+          Slutttidspunkt må være senere eller lik startdato om det er definert.
+          
+          # Når feltet brukes som et rent datofelt:
+          
+          ## Format
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
           Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
-          ## Referanser
+          ## Eksempler
           
-          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+          29. mars 1990 -&gt; 1990-03-29T12:00:00Z
+          
+          29. juni 1990 -&gt; 1990-06-29T12:00:00Z
+          
+          # Når feltet brukes som et datotid felt:
+          
+          ## Format
+          
+          ISO 8601 format YYYY-MM-DDThh:mm:ssZ
           
           ## Eksempler
           
-          * `29. mars 1990` -&gt; `1990-03-29T12:00:00Z`
+          29. mars 1990 klokken 13:30 (UTC +1) -&gt; 1990-03-29T12:30:00Z
           
-          * `29. juni 1990` -&gt; `1990-06-29T12:00:00Z`
+          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; 1990-06-29T11:30:00Z
+          
+          # Referanser
+          
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
       start:
         range: datetime
         description: |
-          Fra dato
+          Fra tidspunkt
           
           # Beskrivelse
           
-          Sluttdato må være senere eller lik startdato om den er definert.
+          Starttidspunkt for perioden.
           
-          # Format
+          # Når feltet brukes som et rent datofelt:
+          
+          ## Format
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
           Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
-          ## Referanser
+          ## Eksempler
           
-          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
+          29. mars 1990 -&gt; 1990-03-29T12:00:00Z
+          
+          29. juni 1990 -&gt; 1990-06-29T12:00:00Z
+          
+          # Når feltet brukes som et datotid felt:
+          
+          ## Format
+          
+          ISO 8601 format YYYY-MM-DDThh:mm:ssZ
           
           ## Eksempler
           
-          29. mars 1990 -&gt; `1990-03-29T12:00:00Z`
+          29. mars 1990 klokken 13:30 (UTC +1) -&gt; 1990-03-29T12:30:00Z
           
-          29. juni 1990 -&gt; `1990-06-29T12:00:00Z`
+          29. juni 1990 klokken 13:30 (UTC +2 sommertid) -&gt; 1990-06-29T11:30:00Z
+          
+          # Referanser
+          
+          * ISO 8601 : https://en.wikipedia.org/wiki/ISO_8601
         required: true
 
   Personnavn:

@@ -36,7 +36,6 @@ classes:
         description: |
           Angir om kontaktpersonen har foreldreansvar for personen vedkommende er pårørende for.
         deprecated: "Feltet utgår.  Benytt relasjon `foreldreansvar` på Person."
-        required: true
       kontaktinformasjon:
         range: Kontaktinformasjon
         annotations:
