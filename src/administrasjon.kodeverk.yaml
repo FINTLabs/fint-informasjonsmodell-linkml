@@ -262,6 +262,22 @@ classes:
       Et bygg, en vei eller en bestemt mottaker av en tjeneste eller et tilskudd m.m.
     is_a: Kontodimensjon
 
+  Organisasjonstype:
+    description: |
+      Typen til et organisasjonselement.
+      
+      # Eksempler
+      
+      * Virksomhet
+      * Klinikk
+      * Seksjon
+      * Avdeling
+      * Team
+      * Divisjon
+      * Stab
+      * Skolegruppe
+    is_a: Begrep
+
   Personalressurskategori:
     description: |
       Ansattform til et arbeidsforhold

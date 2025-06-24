@@ -345,6 +345,25 @@ Kategori er et felt som indikerer denne begrensningen.
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_e95e00be35bf0fa23e" general="EAID_CLS_b2d51228fff1754e2b" start="EAID_CLS_7e721af34e787ad9c2" end="EAID_CLS_b2d51228fff1754e2b" />
               </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_1f265be5e72241d582" name="Organisasjonstype">
+              <properties documentation="Typen til et organisasjonselement.&#10;&#10;# Eksempler&#10;&#10;* Virksomhet&#10;* Klinikk&#10;* Seksjon&#10;* Avdeling&#10;* Team&#10;* Divisjon&#10;* Stab&#10;* Skolegruppe&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_fd7ac3bb5129aea2cb">
+                <body>Typen til et organisasjonselement.
+
+# Eksempler
+
+* Virksomhet
+* Klinikk
+* Seksjon
+* Avdeling
+* Team
+* Divisjon
+* Stab
+* Skolegruppe
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_fd7ac3bb5129aea2cb" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_1f265be5e72241d582" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_0e902a06c5b70e4340" name="Personalressurskategori">
               <properties documentation="Ansattform til et arbeidsforhold&#10;&#10;# Beskrivelse&#10;&#10;Alternativ navn:&#10;* Ansatt (er ikke datatype, men kodeverk)&#10;* Ansattkategori&#10;* Ansattformer&quot;&#10;&#10;# Eksempel&#10;&#10;## Eksempel fra Visma HR - Kategori:&#10;&#10;Kode | Beskrivelse&#10;---|---&#10;F | Fast&#10;M | Midlertidig&#10;O | Oppdragstaker&#10;P | Politiker&#10;S | Sluttet&#10;&#10;## Eksempel fra Agresso - Ressurstype:&#10;&#10;Kode  | Beskrivelse&#10;---|---&#10;1 | Ansatt - kommunal&#10;10 | Lærling/Ung arb.taker&#10;2 | Ansatt - undervisning&#10;3 | Honorar/godtgjørelse&#10;4 | Sluttet&#10;5 | Nyansatt&#10;6 | Ikke ansatt - kun bruker&#10;7 | Politikere&#10;8|  Selvstendig næringsdrivende&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_dd1c29bad74dec7bd9">
@@ -657,6 +676,7 @@ For eksempel:
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_5064a6296f394f455d" visibility="public" start="EAID_CLS_11c618a515753fb259" end="EAID_CLS_7a1842f8370ceb4648" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_0739a6ded5022e2f3e" visibility="public" start="EAID_CLS_11c618a515753fb259" end="EAID_CLS_7f69968205107fe6de" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_71ead83a066aaed310" visibility="public" start="EAID_CLS_11c618a515753fb259" end="EAID_CLS_1f265be5e72241d582" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_c2236976b005082939" visibility="public" start="EAID_CLS_11c618a515753fb259" end="EAID_CLS_11c618a515753fb259" />
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_b8abbe9c3c43e8a841" name="Personal">
@@ -7624,6 +7644,15 @@ Det kan bare føres vitnemålsmerknader som er gitt av Utdanningsdirektoratet.
 </body>
                   </ownedComment>
                 </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_5d60a1e97c7270703a" name="oppmøtetidspunkt" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#DateTime" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_7ee2b3d9b25413c919" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_7ee2b3d9b25413c919" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_7ee2b3d9b25413c919">
+                  <body>Seneste tidspunkt for fremmøte til eksamen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_42fac041cb184efb1e" name="tidsrom" visibility="public">
                 <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_862492c89ca9dae793" value="1" />
@@ -9185,6 +9214,12 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Et bygg, en vei eller en bestemt mottaker av en tjeneste eller et tilskudd m.m.&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_1f265be5e72241d582" idref="EAID_CLS_1f265be5e72241d582" xmi:type="uml:Class" type="Class" name="Organisasjonstype" scope="public">
+        <model package="EAID_PKG_bffb9eb00a2f968a52" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Typen til et organisasjonselement.&#10;&#10;# Eksempler&#10;&#10;* Virksomhet&#10;* Klinikk&#10;* Seksjon&#10;* Avdeling&#10;* Team&#10;* Divisjon&#10;* Stab&#10;* Skolegruppe&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_0e902a06c5b70e4340" idref="EAID_CLS_0e902a06c5b70e4340" xmi:type="uml:Class" type="Class" name="Personalressurskategori" scope="public">
@@ -12358,6 +12393,13 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
             <documentation value="Navn på eksamenen.&#10;" />
             <tags />
             </attribute>
+          <attribute xmi:idref="EAID_PRP_5d60a1e97c7270703a" idref="EAID_PRP_5d60a1e97c7270703a" name="oppmøtetidspunkt">
+            <properties type="datetime" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Seneste tidspunkt for fremmøte til eksamen.&#10;" />
+            <tags />
+            </attribute>
           <attribute xmi:idref="EAID_PRP_42fac041cb184efb1e" idref="EAID_PRP_42fac041cb184efb1e" name="tidsrom">
             <properties type="Periode" />
             <bounds lower="1" upper="1" />
@@ -13770,6 +13812,22 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_fd7ac3bb5129aea2cb" idref="EAID_GEN_fd7ac3bb5129aea2cb" start="EAID_CLS_1f265be5e72241d582" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_1f265be5e72241d582" idref="EAID_CLS_1f265be5e72241d582">
+          <model type="Class" name="Organisasjonstype" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_dd1c29bad74dec7bd9" idref="EAID_GEN_dd1c29bad74dec7bd9" start="EAID_CLS_0e902a06c5b70e4340" end="EAID_CLS_3385458244847ec7db">
         <source xmi:idref="EAID_CLS_0e902a06c5b70e4340" idref="EAID_CLS_0e902a06c5b70e4340">
           <model type="Class" name="Personalressurskategori" />
@@ -14206,6 +14264,23 @@ Vurderinger som ikke er endelige, regnes som underveisvurderinger.
           <tags />
           </target>
         <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_71ead83a066aaed310" idref="EAID_ASC_71ead83a066aaed310" start="EAID_CLS_11c618a515753fb259" end="EAID_CLS_1f265be5e72241d582">
+        <source xmi:idref="EAID_CLS_11c618a515753fb259" idref="EAID_CLS_11c618a515753fb259">
+          <model type="Class" name="Organisasjonselement" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_1f265be5e72241d582" idref="EAID_CLS_1f265be5e72241d582">
+          <model type="Class" name="Organisasjonstype" />
+          <role name="organisasjonstype" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Hvilken type organisasjonselement dette er." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_c2236976b005082939" idref="EAID_ASC_c2236976b005082939" start="EAID_CLS_11c618a515753fb259" end="EAID_CLS_11c618a515753fb259">

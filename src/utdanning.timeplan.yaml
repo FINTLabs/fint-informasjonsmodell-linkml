@@ -31,6 +31,10 @@ classes:
         description: |
           Navn på eksamenen.
         required: true
+      oppmøtetidspunkt:
+        range: datetime
+        description: |
+          Seneste tidspunkt for fremmøte til eksamen.
       tidsrom:
         range: Periode
         description: |

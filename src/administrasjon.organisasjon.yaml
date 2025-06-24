@@ -162,6 +162,10 @@ classes:
           Relasjon til en bestemt leder (Personalressurs).
           
           # Eksempler
+      organisasjonstype:
+        range: Organisasjonstype
+        description: |
+          Hvilken type organisasjonselement dette er.
       overordnet:
         range: Organisasjonselement
         description: |
