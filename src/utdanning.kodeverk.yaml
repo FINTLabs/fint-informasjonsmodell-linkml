@@ -12,11 +12,11 @@ classes:
 
   Avbruddsårsak:
     description: |
-      Årsaken til at eleven avbryter utdanningsprogrammet (Vg1)/programområdet (Vg2/Vg3) ) i løpet av skoleåret  eller lærlingen/lærekandidaten hever lærekontrakten/opplæringskontrakten.
+      &#197;rsaken til at eleven avbryter utdanningsprogrammet (Vg1)/programomr&#229;det (Vg2/Vg3) ) i l&#248;pet av skole&#229;ret  eller l&#230;rlingen/l&#230;rekandidaten hever l&#230;rekontrakten/oppl&#230;ringskontrakten.
       
       # Referanse
       
-      Registreringshåndbok: https://regbok.udir.no/35004/3344/35042-1014313.html
+      Registreringsh&#229;ndbok: https://regbok.udir.no/35004/3344/35042-1014313.html
     is_a: Begrep
 
   Betalingsstatus:
@@ -26,26 +26,26 @@ classes:
 
   Bevistype:
     description: |
-      Viser hvilken bevistype eleven har fått på opplæringen.
+      Viser hvilken bevistype eleven har f&#229;tt p&#229; oppl&#230;ringen.
       
       * KB - Kompetansebevis
-      * VM - Vitnemål
+      * VM - Vitnem&#229;l
       
       
       # Referanse
-      [UDIR - Registreringshåndbok - B22](https://regbok.udir.no/oversikt)
+      [UDIR - Registreringsh&#229;ndbok - B22](https://regbok.udir.no/oversikt)
     is_a: Begrep
 
   Brevtype:
     description: |
-      Beskriver hvilken prøve lærlingen/lærekandidaten går opp til.
+      Beskriver hvilken pr&#248;ve l&#230;rlingen/l&#230;rekandidaten g&#229;r opp til.
       * F - Fagbrev
       * S - Svennebrev
       * K - Kompetansebevis
       * B - Praksisbrev
       
       # Referanse
-      [UDIR - Registreringshåndbok - C22](https://regbok.udir.no/oversikt)
+      [UDIR - Registreringsh&#229;ndbok - C22](https://regbok.udir.no/oversikt)
     is_a: Begrep
 
   Eksamensform:
@@ -79,28 +79,28 @@ classes:
 
   Fagmerknad:
     description: |
-      Merknader til vitnemål og kompetansebevis
+      Merknader til vitnem&#229;l og kompetansebevis
       
       # Beskrivelse
       
       En fagmerknad er en merknad som har en eller flere av disse funksjonene
       
-      - gir opplysninger om faget som ikke går fram av karakterer eller eksamensform
+      - gir opplysninger om faget som ikke g&#229;r fram av karakterer eller eksamensform
       - utdyper opplysninger om karakterer og/eller eksamensform
       - henviser til vedlegg som gir slike opplysninger
       
       # Referanser
       
-      [Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)
+      [Merknader til vitnem&#229;l og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)
     is_a: Begrep
 
   Fagstatus:
     description: |
-      Elevens, privatistens eller kandidatens (voksne) status på et gitt fag.
+      Elevens, privatistens eller kandidatens (voksne) status p&#229; et gitt fag.
       
       # Beskrivelse
       
-      Fagstatus er en kode for undervisningen og/eller grunnlaget for karakteren. Den gir informasjon om hvordan det enkelte faget er gjennomført eller evt. ikke gjennomført.
+      Fagstatus er en kode for undervisningen og/eller grunnlaget for karakteren. Den gir informasjon om hvordan det enkelte faget er gjennomf&#248;rt eller evt. ikke gjennomf&#248;rt.
       
       # Eksempler
       
@@ -109,12 +109,12 @@ classes:
       
       # Referanse
       
-      [Registreringshåndbok]( https://regbok.udir.no/felt/?Id=1014315)
+      [Registreringsh&#229;ndbok]( https://regbok.udir.no/felt/?Id=1014315)
     is_a: Begrep
 
   Fraværstype:
     description: |
-      Typer fravær.
+      Typer frav&#230;r.
       
       # Referanse
       
@@ -126,10 +126,10 @@ classes:
 
   Fullførtkode:
     description: |
-      Gir status på hvordan eleven har gjennomført et programområde ved (det normale) skoleårs slutt.
+      Gir status p&#229; hvordan eleven har gjennomf&#248;rt et programomr&#229;de ved (det normale) skole&#229;rs slutt.
       
       # Referanse
-      [UDIR - Registreringshåndbok - B21](https://regbok.udir.no/oversikt)
+      [UDIR - Registreringsh&#229;ndbok - B21](https://regbok.udir.no/oversikt)
     is_a: Begrep
 
   Grepreferanse:
@@ -138,13 +138,13 @@ classes:
       
       # Beskrivelse
       
-      Grep er den nasjonale databasen for fag, læreplaner og opplæringstilbud i grunnopplæringen.
+      Grep er den nasjonale databasen for fag, l&#230;replaner og oppl&#230;ringstilbud i grunnoppl&#230;ringen.
       
       Referanser til Grepkodeverket skal referere til gyldige og unike koder i REST (JSON) API fra Udir.
       
       https://www.udir.no/om-udir/data/kl06-grep
       
-      Det er viktig å bruke Grepreferanser og ikke Vigoreferanser. 
+      Det er viktig &#229; bruke Grepreferanser og ikke Vigoreferanser. 
       Bruk data.udir.no , ikke psi.udir.no, eksempelvis https://data.udir.no/kl06/SAL3001 (korrekt), ikke https://psi.udir.no/kl06/SAL3001 (feil).
     annotations:
       stereotype: referanse
@@ -187,7 +187,7 @@ classes:
 
   OtEnhet:
     description: |
-      Stedet hvor OT-ungdom er under oppfølging.
+      Stedet hvor OT-ungdom er under oppf&#248;lging.
     is_a: Begrep
     attributes:
       kommune:
@@ -203,7 +203,7 @@ classes:
       # Eksempel
       
       * OTAR – I arbeid
-      * OTMI – Er i militæret
+      * OTMI – Er i milit&#230;ret
       * OTAP – Arbeidspraksis eller annet tiltak i regi av NAV
       * OTUK – Ukjent aktivitet
     is_a: Begrep
@@ -225,10 +225,10 @@ classes:
 
   Prøvestatus:
     description: |
-      Resultat av avlagt prøve - Praktisk prøve + teori.
+      Resultat av avlagt pr&#248;ve - Praktisk pr&#248;ve + teori.
       
       # Referanse
-      [UDIR - Registreringshåndbok - C26](https://regbok.udir.no/oversikt)
+      [UDIR - Registreringsh&#229;ndbok - C26](https://regbok.udir.no/oversikt)
     is_a: Begrep
 
   Skoleår:
@@ -267,7 +267,7 @@ classes:
 
   Tilrettelegging:
     description: |
-      Tilrettelegging en elev kan ha på eksamen.
+      Tilrettelegging en elev kan ha p&#229; eksamen.
     is_a: Begrep
 
   Varseltype:
@@ -276,7 +276,7 @@ classes:
       
       # Eksempel
       
-      * Fravær
+      * Frav&#230;r
       
       * Orden
       
@@ -287,7 +287,7 @@ classes:
       # Referanse
       
       * [VIS - Opprette og sende varsel ](https://inschool.zendesk.com/hc/no/articles/360030859132-4b-21-Opprette-og-sende-varsel)
-      * [Forskrift til opplæringslova - &#167; 3-8. Varsling](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_5-1#%C2%A73-8)
+      * [Forskrift til oppl&#230;ringslova - &#167; 3-8. Varsling](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_5-1#%C2%A73-8)
     is_a: Begrep
 
   Vigoreferanse:
@@ -306,16 +306,16 @@ classes:
 
   Vitnemålsmerknad:
     description: |
-      En vitnemålsmerknad har en eller flere av følgende funksjoner:
+      En vitnem&#229;lsmerknad har en eller flere av f&#248;lgende funksjoner:
       
-      * gir opplysninger som gjelder opplæringen generelt eller som gjelder hele vitnemålet/kompetansebeviset
+      * gir opplysninger som gjelder oppl&#230;ringen generelt eller som gjelder hele vitnem&#229;let/kompetansebeviset
       
       * henviser til vedlegg som gir slike opplysninger
       
       * utdyper en fagmerknad
       
-      Det kan bare føres vitnemålsmerknader som er gitt av Utdanningsdirektoratet.
+      Det kan bare f&#248;res vitnem&#229;lsmerknader som er gitt av Utdanningsdirektoratet.
       
       # Referanser
-      [UDIR : Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)
+      [UDIR : Merknader til vitnem&#229;l og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)
     is_a: Begrep

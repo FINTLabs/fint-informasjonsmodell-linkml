@@ -153,7 +153,7 @@ classes:
           
           # Format
           
-          Format må følge norsk nummerplan E.164, alternativt med `+` for å angi internasjonalt prefiks for internasjonale numre.
+          Format m&#229; f&#248;lge norsk nummerplan E.164, alternativt med `+` for &#229; angi internasjonalt prefiks for internasjonale numre.
           
           # Referanser
           
@@ -232,7 +232,7 @@ classes:
           
           # Format
           
-          Format må følge norsk nummerplan E.164, alternativt med `+` for å angi internasjonalt prefiks for internasjonale numre.
+          Format m&#229; f&#248;lge norsk nummerplan E.164, alternativt med `+` for &#229; angi internasjonalt prefiks for internasjonale numre.
           
           # Referanser
           
@@ -290,8 +290,8 @@ classes:
       # Beskrivelse
       
       Tidsperiode (start- og slutttidspunkt). 
-      Slutttidspunkt må være senere eller lik starttidspunktet om det er definert.
-      Både start og slutt kan brukes som dato eller datotid.
+      Slutttidspunkt m&#229; v&#230;re senere eller lik starttidspunktet om det er definert.
+      B&#229;de start og slutt kan brukes som dato eller datotid.
     attributes:
       beskrivelse:
         range: string
@@ -313,15 +313,15 @@ classes:
           
           Slutttidspunkt for perioden.
           
-          Slutttidspunkt må være senere eller lik startdato om det er definert.
+          Slutttidspunkt m&#229; v&#230;re senere eller lik startdato om det er definert.
           
-          # Når feltet brukes som et rent datofelt:
+          # N&#229;r feltet brukes som et rent datofelt:
           
           ## Format
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
+          Timedelen er egentlig un&#248;dvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 p&#229; dagen (zulu). Derved kan dato leses direkte uten &#229; gj&#248;re om til lokaltid ( i Norge).
           
           ## Eksempler
           
@@ -329,7 +329,7 @@ classes:
           
           29. juni 1990 -&gt; 1990-06-29T12:00:00Z
           
-          # Når feltet brukes som et datotid felt:
+          # N&#229;r feltet brukes som et datotid felt:
           
           ## Format
           
@@ -353,13 +353,13 @@ classes:
           
           Starttidspunkt for perioden.
           
-          # Når feltet brukes som et rent datofelt:
+          # N&#229;r feltet brukes som et rent datofelt:
           
           ## Format
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
+          Timedelen er egentlig un&#248;dvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 p&#229; dagen (zulu). Derved kan dato leses direkte uten &#229; gj&#248;re om til lokaltid ( i Norge).
           
           ## Eksempler
           
@@ -367,7 +367,7 @@ classes:
           
           29. juni 1990 -&gt; 1990-06-29T12:00:00Z
           
-          # Når feltet brukes som et datotid felt:
+          # N&#229;r feltet brukes som et datotid felt:
           
           ## Format
           

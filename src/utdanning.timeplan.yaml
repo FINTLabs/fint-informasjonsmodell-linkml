@@ -15,7 +15,7 @@ classes:
 
   Eksamen:
     description: |
-      En eksamen som avholdes på en skole.
+      En eksamen som avholdes p&#229; en skole.
     attributes:
       systemId:
         range: Identifikator
@@ -29,12 +29,12 @@ classes:
       navn:
         range: string
         description: |
-          Navn på eksamenen.
+          Navn p&#229; eksamenen.
         required: true
       oppmøtetidspunkt:
         range: datetime
         description: |
-          Seneste tidspunkt for fremmøte til eksamen.
+          Seneste tidspunkt for fremm&#248;te til eksamen.
       tidsrom:
         range: Periode
         description: |
@@ -138,7 +138,7 @@ classes:
       
       Denne grupperingen omhandler faglig organisering av undervisningen.
       
-      Se også [Undervisningsgruppe](/docs/timeplan_undervisningsgruppe).
+      Se ogs&#229; [Undervisningsgruppe](/docs/timeplan_undervisningsgruppe).
     is_a: Gruppe
     attributes:
       fag:
@@ -277,13 +277,13 @@ classes:
       
       Elever i forskjellige undervisningsgrupper kan ta samme faget.
       Flere fag kan undervises i samme undervisningsgruppe.
-      Det kan være flere lærere i en undervisningsgruppe.
+      Det kan v&#230;re flere l&#230;rere i en undervisningsgruppe.
       
       Undervisningsgrupper har vanligvis en kode, men denne er lokalt definert, og varierer fra skole til skole, og fra fylke til fylke.
       
       Denne grupperingen omhandler administrering av undervisningen. 
       
-      Se også [Faggruppe](/docs/timeplan_faggruppe).
+      Se ogs&#229; [Faggruppe](/docs/timeplan_faggruppe).
     is_a: Gruppe
     attributes:
       time:

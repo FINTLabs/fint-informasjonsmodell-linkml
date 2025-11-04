@@ -13,7 +13,7 @@ classes:
 
   AvlagtPrøve:
     description: |
-      Informasjon om en avlagt prøve for en person i et fag.
+      Informasjon om en avlagt pr&#248;ve for en person i et fag.
     attributes:
       systemId:
         range: Identifikator
@@ -23,7 +23,7 @@ classes:
       prøvedato:
         range: date
         description: |
-          Dato for avlagt prøve i perioden.
+          Dato for avlagt pr&#248;ve i perioden.
       bevistype:
         range: Bevistype
         description: |
@@ -51,21 +51,21 @@ classes:
 
   Lærling:
     description: |
-      Å være lærling betyr at du utdanner deg til et yrke ved å jobbe i en bedrift.
+      &#197; v&#230;re l&#230;rling betyr at du utdanner deg til et yrke ved &#229; jobbe i en bedrift.
     attributes:
       systemId:
         range: Identifikator
         description: |
-          Unik identifikator for en lærling.
+          Unik identifikator for en l&#230;rling.
         required: true
       kontraktstype:
         range: string
         description: |
-          Kontraktstype for lærling.
+          Kontraktstype for l&#230;rling.
       læretid:
         range: Periode
         description: |
-          Tidsperiode for læretiden.
+          Tidsperiode for l&#230;retiden.
       avlagtprøve:
         range: AvlagtPrøve
         inverse: lærling

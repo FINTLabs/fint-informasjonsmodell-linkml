@@ -137,13 +137,13 @@ classes:
       fødselsdato:
         range: date
         description: |
-          Dato for fødsel
+          Dato for f&#248;dsel
           
           # Format
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
+          Timedelen er egentlig un&#248;dvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 p&#229; dagen (zulu). Derved kan dato leses direkte uten &#229; gj&#248;re om til lokaltid ( i Norge).
           
           ## Referanser
           
@@ -250,7 +250,7 @@ classes:
       virksomhetsId:
         range: Identifikator
         description: |
-          Intern unik identifikator i økonomisystemet
+          Intern unik identifikator i &#248;konomisystemet
         required: true
       lærling:
         range: Lærling

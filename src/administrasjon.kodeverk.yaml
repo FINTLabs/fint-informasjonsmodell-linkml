@@ -97,7 +97,7 @@ classes:
 
   Diverse:
     description: |
-      Diverser er en del av kontostrengen og benyttes som et supplement til de spesifikasjoner som framkommer i de øvrige dimensjonene.
+      Diverser er en del av kontostrengen og benyttes som et supplement til de spesifikasjoner som framkommer i de &#248;vrige dimensjonene.
     is_a: Kontodimensjon
 
   Formål:
@@ -254,7 +254,7 @@ classes:
 
   Løpenummer:
     description: |
-      Løpenummer i en nummerserie.
+      L&#248;penummer i en nummerserie.
     is_a: Kontodimensjon
 
   Objekt:
@@ -318,7 +318,7 @@ classes:
 
   Prosjekt:
     description: |
-      Del av kontostrengen som peker på løpende prosjekter.
+      Del av kontostrengen som peker p&#229; l&#248;pende prosjekter.
     is_a: Kontodimensjon
     attributes:
       prosjektart:
@@ -338,7 +338,7 @@ classes:
       
       Engelsk: Project Breakdown Structure (PBS)
       
-      Det fokuseres på delprodukter:
+      Det fokuseres p&#229; delprodukter:
       
       * Delprodukt
       * Delprosjekt
@@ -347,7 +347,7 @@ classes:
       
       Engelsk: Work Breakdown Structure (WBS)
       
-      Det fokuseres på arbeidsoppgaver:
+      Det fokuseres p&#229; arbeidsoppgaver:
       
       * Arbeidspakke
       * Oppgave
@@ -355,7 +355,7 @@ classes:
       
       # Lenker
       
-      * [En enkel oppskrift på en arbeidsnedbrytningsstruktur ](https://www.prosjektbloggen.no/en-enkel-oppskrift-pa-en-arbeidsnedbrytningsstruktur)
+      * [En enkel oppskrift p&#229; en arbeidsnedbrytningsstruktur ](https://www.prosjektbloggen.no/en-enkel-oppskrift-pa-en-arbeidsnedbrytningsstruktur)
       * [Prosjektnedbrytningsstruktur(PNS/WBS)](http://ledelsesspire.blogspot.com/2013/10/prosjektnedbrytningsstruktur-pnswbs.html)
     is_a: Kontodimensjon
     attributes:
@@ -382,7 +382,7 @@ classes:
 
   Ramme:
     description: |
-      Ramme er en del av kontostrengen og viser hvilken budsjettramme som skal bære kostnadene.
+      Ramme er en del av kontostrengen og viser hvilken budsjettramme som skal b&#230;re kostnadene.
     is_a: Kontodimensjon
 
   Stillingskode:
@@ -391,7 +391,7 @@ classes:
       
       # Beskrivelse
       
-      I det fylkeskommunale lønnssystemet har alle stillinger en stillingskode og en stillingsbetegnelse (for eksempel 7026 for bibliotekar eller 7076 for hjelpepleier). Stillingskoden kan angi noe om stillingens innhold og lønnsnivå.
+      I det fylkeskommunale l&#248;nnssystemet har alle stillinger en stillingskode og en stillingsbetegnelse (for eksempel 7026 for bibliotekar eller 7076 for hjelpepleier). Stillingskoden kan angi noe om stillingens innhold og l&#248;nnsniv&#229;.
     is_a: Begrep
     attributes:
       forelder:

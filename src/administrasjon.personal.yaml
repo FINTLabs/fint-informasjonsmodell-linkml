@@ -47,7 +47,7 @@ classes:
         annotations:
           writeable: true
         description: |
-          Andel av lønnsprosent som beslaglegges.
+          Andel av l&#248;nnsprosent som beslaglegges.
           
           # Representasjon av prosent
           
@@ -136,7 +136,7 @@ classes:
         annotations:
           writeable: true
         description: |
-          Tidsstempel som angir når fravær ble godkjent.
+          Tidsstempel som angir n&#229;r frav&#230;r ble godkjent.
           
           # Format
           
@@ -167,7 +167,7 @@ classes:
         annotations:
           writeable: true
         description: |
-          Prosent fraværende
+          Prosent frav&#230;rende
           
           # Beskrivelse
           
@@ -255,7 +255,7 @@ classes:
         annotations:
           writeable: true
         description: |
-          Tidsstempel som angir når lønn ble anvist.
+          Tidsstempel som angir n&#229;r l&#248;nn ble anvist.
           
           # Format
           
@@ -275,7 +275,7 @@ classes:
         annotations:
           writeable: true
         description: |
-          Tidsstempel som angir når lønn ble attestert.
+          Tidsstempel som angir n&#229;r l&#248;nn ble attestert.
           
           # Format
           
@@ -312,7 +312,7 @@ classes:
         annotations:
           writeable: true
         description: |
-          Tidsstempel som angir når lønn ble kontert.
+          Tidsstempel som angir n&#229;r l&#248;nn ble kontert.
           
           # Format
           
@@ -483,11 +483,11 @@ classes:
           
           # Beskrivelse
           
-          Skal inneholde brukernavn for pålogging, som finnes i katalogtjenesten (feks Active Directory). Brukes som en identifikator som består, når fødselsnummer og/eller andre identifikatorer endrer seg.
+          Skal inneholde brukernavn for p&#229;logging, som finnes i katalogtjenesten (feks Active Directory). Brukes som en identifikator som best&#229;r, n&#229;r f&#248;dselsnummer og/eller andre identifikatorer endrer seg.
           
           # Format
           
-          Brukernavn i det format en personalressurs trenger for å logge seg på systemer i organisasjonen.
+          Brukernavn i det format en personalressurs trenger for &#229; logge seg p&#229; systemer i organisasjonen.
       systemId:
         range: Identifikator
         description: |
@@ -518,14 +518,14 @@ classes:
           # Referanser
           
           - KS Hovedtariffavtalen &#167; 12
-          - Statens personalhåndbok 2018, kapittel 7.3.4
+          - Statens personalh&#229;ndbok 2018, kapittel 7.3.4
           - https://snl.no/ansiennitet
           
           # Format
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
+          Timedelen er egentlig un&#248;dvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 p&#229; dagen (zulu). Derved kan dato leses direkte uten &#229; gj&#248;re om til lokaltid ( i Norge).
           
           ## Referanser
           
@@ -682,13 +682,13 @@ classes:
           
           Representerer reell start- og sluttdato for stilling, selv om stillingen er representert som flere arbeidsforhold.
           
-          Prinsippet for anvendelse av gyldighetsperiode og arbeidsforholdsperiode er som følger:
+          Prinsippet for anvendelse av gyldighetsperiode og arbeidsforholdsperiode er som f&#248;lger:
           
           * HRM eksporterer arbeidsforholdene for hvert stillingsnummer som en tidslinje hvor gyldighetsperioder ikke er overlappende.
           
           * For en gitt transaksjonsdato (f.eks. dagens dato):  Finn de instansene av Arbeidsforhold-objektet (versjon av arbeidsforhold) hvor transaksjonsdatoen faller innenfor gyldighetsperioden, dvs: gyldighetsperiode.start &lt;= transaksjonsdato &lt;= gyldighetsperiode.slutt
           
-          * Kontroller transaksjonsdato mot arbeidsforholdsperiode:  For at en gitt instans av Arbeidsforhold skal regnes som aktiv for timeplanlegging og registrering av lønn og fravær må arbeidsforholdsperiode.start &lt;= transaksjonsdato &lt;= arbeidsforholdsperiode.slutt
+          * Kontroller transaksjonsdato mot arbeidsforholdsperiode:  For at en gitt instans av Arbeidsforhold skal regnes som aktiv for timeplanlegging og registrering av l&#248;nn og frav&#230;r m&#229; arbeidsforholdsperiode.start &lt;= transaksjonsdato &lt;= arbeidsforholdsperiode.slutt
       gyldighetsperiode:
         range: Periode
         description: |
@@ -696,17 +696,17 @@ classes:
           
           # Beskrivelse 
           
-          Periode en personalressurs har vært (eller er) ansatt i et bestemt arbeidsforhold. Inneholder en dato for start, og kan inneholde slutt-dato.
+          Periode en personalressurs har v&#230;rt (eller er) ansatt i et bestemt arbeidsforhold. Inneholder en dato for start, og kan inneholde slutt-dato.
           
           Endringer i samme stilling kan representeres som flere arbeidsforhold med samme stillingsnummer og ulike gyldighetsperioder.
           
-          Prinsippet for anvendelse av gyldighetsperiode og arbeidsforholdsperiode er som følger:
+          Prinsippet for anvendelse av gyldighetsperiode og arbeidsforholdsperiode er som f&#248;lger:
           
           * HRM eksporterer arbeidsforholdene for hvert stillingsnummer som en tidslinje hvor gyldighetsperioder ikke er overlappende.
           
           * For en gitt transaksjonsdato (f.eks. dagens dato):  Finn de instansene av Arbeidsforhold-objektet (versjon av arbeidsforhold) hvor transaksjonsdatoen faller innenfor gyldighetsperioden, dvs: gyldighetsperiode.start &lt;= transaksjonsdato &lt;= gyldighetsperiode.slutt
           
-          * Kontroller transaksjonsdato mot arbeidsforholdsperiode:  For at en gitt instans av Arbeidsforhold skal regnes som aktiv for timeplanlegging og registrering av lønn og fravær må arbeidsforholdsperiode.start &lt;= transaksjonsdato &lt;= arbeidsforholdsperiode.slutt
+          * Kontroller transaksjonsdato mot arbeidsforholdsperiode:  For at en gitt instans av Arbeidsforhold skal regnes som aktiv for timeplanlegging og registrering av l&#248;nn og frav&#230;r m&#229; arbeidsforholdsperiode.start &lt;= transaksjonsdato &lt;= arbeidsforholdsperiode.slutt
         required: true
       hovedstilling:
         range: boolean
@@ -732,7 +732,7 @@ classes:
       lønnsprosent:
         range: integer
         description: |
-          Prosent av årslønn den ansatte  skal ha utbetalt
+          Prosent av &#229;rsl&#248;nn den ansatte  skal ha utbetalt
           
           # Beskrivelse
           
@@ -795,7 +795,7 @@ classes:
           
           # Beskrivelse
           
-          I hvilken prosentstørrelse personalressursen er tilgjengelig for arbeidsgiver.
+          I hvilken prosentst&#248;rrelse personalressursen er tilgjengelig for arbeidsgiver.
           
           # Format
           

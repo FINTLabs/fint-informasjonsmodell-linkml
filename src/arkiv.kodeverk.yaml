@@ -157,7 +157,7 @@ classes:
 
   Saksmappetype:
     description: |
-      Saksmappetyper brukes for å differensiere innhold og etter hvilke rutiner saker skal behandles.
+      Saksmappetyper brukes for &#229; differensiere innhold og etter hvilke rutiner saker skal behandles.
       
       Dette er ikke en del av Noark standarden.
       
@@ -201,7 +201,7 @@ classes:
 
   Tilgangsgruppe:
     description: |
-      Tilgangsgruppe gir mulighet for å skjerme innhold internt for andre brukere.
+      Tilgangsgruppe gir mulighet for &#229; skjerme innhold internt for andre brukere.
     is_a: Begrep
 
   Tilgangsrestriksjon:

@@ -15,7 +15,7 @@ classes:
       Eksempel:
       
       * Pedagogisk programvare
-      * Kontorstøtte
+      * Kontorst&#248;tte
       * Fagsystemer
     is_a: Begrep
 
@@ -31,15 +31,26 @@ classes:
       * EKSTERN
     is_a: Begrep
 
+  Enhetstype:
+    description: |
+      Kategori som den digitale enheten h&#248;rer til.
+      
+      Eksempler:
+      
+      * mobiltelefon
+      * datamaskin
+      * nettbrett
+    is_a: Begrep
+
   Håndhevingstype:
     description: |
-      Hvordan ulike lisensmodeller kan håndheves av systemer for forvaltning av applikasjonen.
+      Hvordan ulike lisensmodeller kan h&#229;ndheves av systemer for forvaltning av applikasjonen.
       
       Eksempel:
       
-      * Hardstopp (ikke lov å tildele flere lisenser enn det kildesystemet angir)
-      * Ubegrenset (ingen begrensing på antall lisenser som kan tildeles)
-      * Overallokering tillatt (kan tildeles lisenser utover maks antall. Ikke nødvendigvis ubegrenset)
+      * Hardstopp (ikke lov &#229; tildele flere lisenser enn det kildesystemet angir)
+      * Ubegrenset (ingen begrensing p&#229; antall lisenser som kan tildeles)
+      * Overallokering tillatt (kan tildeles lisenser utover maks antall. Ikke n&#248;dvendigvis ubegrenset)
     is_a: Begrep
 
   Lisensmodell:
@@ -55,7 +66,7 @@ classes:
 
   Plattform:
     description: |
-      Plattformen tjenesten kan leveres på.
+      Plattformen tjenesten kan leveres p&#229;.
       
       Eksempel:
       
@@ -64,4 +75,28 @@ classes:
       * Linux
       * IOS
       * Android
+    is_a: Begrep
+
+  Produsent:
+    description: |
+      Navn p&#229; produsenten av den  digitale enheten.
+      
+      Eksempler:
+      
+      * HP
+      * Lenovo
+      * Apple
+      * Samsung
+    is_a: Begrep
+
+  Status:
+    description: |
+      Status p&#229; den digitale enheten i fagsystemet (feks ett asset management system):
+      
+      Eksempler:
+      
+      * i bruk
+      * p&#229; lager
+      * defekt
+      * utg&#229;tt
     is_a: Begrep
