@@ -26,7 +26,7 @@ classes:
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Timedelen er egentlig un&#248;dvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 p&#229; dagen (zulu). Derved kan dato leses direkte uten &#229; gj&#248;re om til lokaltid ( i Norge).
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
           ## Referanser
           
@@ -41,7 +41,7 @@ classes:
       bilagsnummer:
         range: string
         description: |
-          Nummer p&#229; bilaget.
+          Nummer på bilaget.
       data:
         range: string
         annotations:
@@ -53,7 +53,7 @@ classes:
         annotations:
           writeable: true
         description: |
-          Navn p&#229; bilagets fil.
+          Navn på bilagets fil.
       referanse:
         range: string
         annotations:
@@ -74,51 +74,51 @@ classes:
       leverandørnummer:
         range: Identifikator
         description: |
-          Nummer som identifiserer en leverand&#248;r.
+          Nummer som identifiserer en leverandør.
       systemId:
         range: Identifikator
         description: |
-          Intern identifikator i &#248;konomisystemet.
+          Intern identifikator i økonomisystemet.
         required: true
       kontonummer:
         range: string
         annotations:
           writeable: true
         description: |
-          Kontonummer til leverand&#248;ren.
+          Kontonummer til leverandøren.
 
   Leverandørgruppe:
     description: |
-      Gruppering av leverand&#248;rer.
+      Gruppering av leverandører.
     attributes:
       systemId:
         range: Identifikator
         description: |
-          Intern unik identifikator i &#248;konomisystemet.
+          Intern unik identifikator i økonomisystemet.
         required: true
       navn:
         range: string
         annotations:
           writeable: true
         description: |
-          Navn p&#229; leverand&#248;rgruppen.
+          Navn på leverandørgruppen.
         required: true
 
   Postering:
     description: |
-      F&#248;ring p&#229; en konto i regnskapet.
+      Føring på en konto i regnskapet.
     attributes:
       posteringsId:
         range: Identifikator
         description: |
-          Intern unik identifikator i &#248;konomisystemet.
+          Intern unik identifikator i økonomisystemet.
         required: true
       beløp:
         range: integer
         annotations:
           writeable: true
         description: |
-          Posteringens bel&#248;p med to desimaler.
+          Posteringens beløp med to desimaler.
           
           # Eksempel
           123,45 NOK tilsvarer verdien 12345.
@@ -151,18 +151,18 @@ classes:
 
   Transaksjon:
     description: |
-      Overf&#248;ring av penger til eller fra eksterne parter.
+      Overføring av penger til eller fra eksterne parter.
     attributes:
       transaksjonsId:
         range: Identifikator
         description: |
-          Intern unik identifikator i &#248;konomisystemet.
+          Intern unik identifikator i økonomisystemet.
       beløp:
         range: integer
         annotations:
           writeable: true
         description: |
-          Transaksjonens bel&#248;p med to desimaler.
+          Transaksjonens beløp med to desimaler.
           
           # Eksempel
           123,45 NOK tilsvarer verdien 12345.
@@ -191,7 +191,7 @@ classes:
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Timedelen er egentlig un&#248;dvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 p&#229; dagen (zulu). Derved kan dato leses direkte uten &#229; gj&#248;re om til lokaltid ( i Norge).
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
           ## Referanser
           

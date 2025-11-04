@@ -12,9 +12,9 @@ classes:
 
   Applikasjon:
     description: |
-      En applikasjon med tilh&#248;rende ressurser. 
+      En applikasjon med tilhørende ressurser. 
       
-      En ressurs kan v&#230;re en lisens eller en rolle som tilganger inne i en applikasjon. Applikasjonen kan v&#230;re en desktopapplikasjon eller en skybasert tjeneste. Brukere kan da f&#229; tilgang til denne applikasjonen hvis vedkommende har f&#229;tt tildelt en ressurs knyttet til applikasjonen.
+      En ressurs kan være en lisens eller en rolle som tilganger inne i en applikasjon. Applikasjonen kan være en desktopapplikasjon eller en skybasert tjeneste. Brukere kan da få tilgang til denne applikasjonen hvis vedkommende har fått tildelt en ressurs knyttet til applikasjonen.
     attributes:
       systemId:
         range: Identifikator
@@ -33,7 +33,7 @@ classes:
       navn:
         range: string
         description: |
-          Navn p&#229; applikasjonen.
+          Navn på applikasjonen.
         required: true
       applikasjonskategori:
         range: Applikasjonskategori
@@ -74,7 +74,7 @@ classes:
         description: |
           Kostnad per ressurs.
           
-          Oppgis i &#248;re.
+          Oppgis i øre.
       gyldighetsperiode:
         range: Periode
         description: |
@@ -84,17 +84,17 @@ classes:
         range: boolean
         description: |
           Settes true dersom tildeling av ressursen forutsetter godkjenning av leder/tjenesterforvalter eller tjenesteeier.
-          &#197;rsaker kan v&#230;re h&#248;y enhetskostnad som leder m&#229; godkjenne.
+          Årsaker kan være høy enhetskostnad som leder må godkjenne.
       lisensantall:
         range: integer
         description: |
           Totalt antall lisenser
           
-          Brukes kun n&#229;r ressursene er lisenser.
+          Brukes kun når ressursene er lisenser.
       navn:
         range: string
         description: |
-          Navn p&#229; ressursen.
+          Navn på ressursen.
         required: true
       applikasjon:
         range: Applikasjon
@@ -147,7 +147,7 @@ classes:
       lisensantall:
         range: integer
         description: |
-          Totalt antall lisenser tilgjengelig for brukere tilh&#248;rende en konsument.
+          Totalt antall lisenser tilgjengelig for brukere tilhørende en konsument.
       konsument:
         range: Organisasjonselement
         description: |

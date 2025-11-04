@@ -31,7 +31,7 @@ classes:
       beløp:
         range: integer
         description: |
-          Bel&#248;p mottaker skal betale, i &#248;re.
+          Beløp mottaker skal betale, i øre.
         required: true
       betalt:
         range: boolean
@@ -46,7 +46,7 @@ classes:
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Timedelen er egentlig un&#248;dvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 p&#229; dagen (zulu). Derved kan dato leses direkte uten &#229; gj&#248;re om til lokaltid ( i Norge).
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
           ## Referanser
           
@@ -73,7 +73,7 @@ classes:
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Timedelen er egentlig un&#248;dvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 p&#229; dagen (zulu). Derved kan dato leses direkte uten &#229; gj&#248;re om til lokaltid ( i Norge).
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
           ## Referanser
           
@@ -101,7 +101,7 @@ classes:
         annotations:
           writeable: true
         description: |
-          Gjenst&#229;ende bel&#248;p &#229; betale, i &#248;re.
+          Gjenstående beløp å betale, i øre.
       fakturagrunnlag:
         range: Fakturagrunnlag
         inverse: faktura
@@ -155,7 +155,7 @@ classes:
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Timedelen er egentlig un&#248;dvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 p&#229; dagen (zulu). Derved kan dato leses direkte uten &#229; gj&#248;re om til lokaltid ( i Norge).
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
           ## Referanser
           

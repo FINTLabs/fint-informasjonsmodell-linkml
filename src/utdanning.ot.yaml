@@ -13,7 +13,7 @@ classes:
 
   OtUngdom:
     description: |
-      Oppf&#248;lgingstjenesten (OT) har ansvar for &#229; f&#248;lge opp ungdom med rett til videreg&#229;ende oppl&#230;ring som ikke er i oppl&#230;ring eller arbeid.
+      Oppfølgingstjenesten (OT) har ansvar for å følge opp ungdom med rett til videregående opplæring som ikke er i opplæring eller arbeid.
     attributes:
       systemId:
         range: Identifikator

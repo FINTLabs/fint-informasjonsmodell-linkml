@@ -65,5 +65,5 @@ classes:
       navn:
         range: string
         description: |
-          Navn p&#229; valuta.
+          Navn på valuta.
         required: true

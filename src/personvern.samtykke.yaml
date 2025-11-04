@@ -31,7 +31,7 @@ classes:
         annotations:
           writeable: true
         description: |
-          Status p&#229; behandling.
+          Status på behandling.
         required: true
       formål:
         range: string
@@ -40,7 +40,7 @@ classes:
           
           # Beskrivelse
           
-          Personopplysninger skal bare brukes for spesifikke, uttrykkelige, angitte og legitime form&#229;l. Virksomheten har plikt til &#229; gi den enkelte informasjon om form&#229;let med behandling av personopplysninger p&#229; en forst&#229;elig m&#229;te.
+          Personopplysninger skal bare brukes for spesifikke, uttrykkelige, angitte og legitime formål. Virksomheten har plikt til å gi den enkelte informasjon om formålet med behandling av personopplysninger på en forståelig måte.
         required: true
       slettet:
         range: datetime
@@ -108,7 +108,7 @@ classes:
       opprettet:
         range: datetime
         description: |
-          Dato n&#229;r samtykke ble opprettet.
+          Dato når samtykke ble opprettet.
           
           # Format
           

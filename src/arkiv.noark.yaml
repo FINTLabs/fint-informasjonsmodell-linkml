@@ -188,11 +188,11 @@ classes:
 
   Avskrivning:
     description: |
-      En Journalpost av typen ”inng&#229;ende dokument” eller ”organinternt dokument for oppf&#248;lging” st&#229;r i restanse inntil de er markert som ferdigbehandlet, eller avskrives. Det f&#248;lger av arkivforskriften &#167; 10 at avskrivningsm&#229;te skal fremg&#229; av journalen.
+      En Journalpost av typen ”inngående dokument” eller ”organinternt dokument for oppfølging” står i restanse inntil de er markert som ferdigbehandlet, eller avskrives. Det følger av arkivforskriften &#167; 10 at avskrivningsmåte skal fremgå av journalen.
       
       # Beskrivelse
       
-      * Noark 5 versjon 5.0 standard, kapittel 3.4 Avskrivning og saksoppf&#248;lging  
+      * Noark 5 versjon 5.0 standard, kapittel 3.4 Avskrivning og saksoppfølging  
       
       # Referanser 
       
@@ -255,11 +255,11 @@ classes:
           
           # Eksempel
           
-          | Verdi (avskrivningsm&#229;te) | Beskrivelse |
+          | Verdi (avskrivningsmåte) | Beskrivelse |
           | ------- | ---------------- |
           | BU | Besvart med brev |
           | BE | Besvart med e-post |
-          | TLF | Besvart p&#229; telefon |
+          | TLF | Besvart på telefon |
           | TE | Tatt til etterretning |
           | TO | Tatt til orientering |
           
@@ -341,7 +341,7 @@ classes:
       opprettetDato:
         range: datetime
         description: |
-          Dato og klokkeslett n&#229;r arkivenheten ble opprettet/registrert.
+          Dato og klokkeslett når arkivenheten ble opprettet/registrert.
           
           # Beskrivelse
           
@@ -425,7 +425,7 @@ classes:
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Timedelen er egentlig un&#248;dvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 p&#229; dagen (zulu). Derved kan dato leses direkte uten &#229; gj&#248;re om til lokaltid ( i Norge).
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
           ## Referanser
           
@@ -738,7 +738,7 @@ classes:
           
           # Beskrivelse
           
-          * Noark 5 versjon 5.0 standard, kapittel 3.4 Avskrivning og saksoppf&#248;lging  
+          * Noark 5 versjon 5.0 standard, kapittel 3.4 Avskrivning og saksoppfølging  
           
           # Referanser 
           
@@ -748,7 +748,7 @@ classes:
         annotations:
           writeable: true
         description: |
-          Dato som er p&#229;f&#248;rt selve dokumentet.
+          Dato som er påført selve dokumentet.
           
           # Beskrivelse
           
@@ -762,7 +762,7 @@ classes:
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Timedelen er egentlig un&#248;dvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 p&#229; dagen (zulu). Derved kan dato leses direkte uten &#229; gj&#248;re om til lokaltid ( i Norge).
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
           ## Referanser
           
@@ -778,7 +778,7 @@ classes:
         annotations:
           writeable: true
         description: |
-          Dato som angir fristen for n&#229;r et inng&#229;ende dokument m&#229; v&#230;re besvart.
+          Dato som angir fristen for når et inngående dokument må være besvart.
           
           # Beskrivelse
           
@@ -792,7 +792,7 @@ classes:
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Timedelen er egentlig un&#248;dvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 p&#229; dagen (zulu). Derved kan dato leses direkte uten &#229; gj&#248;re om til lokaltid ( i Norge).
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
           ## Referanser
           
@@ -832,7 +832,7 @@ classes:
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Timedelen er egentlig un&#248;dvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 p&#229; dagen (zulu). Derved kan dato leses direkte uten &#229; gj&#248;re om til lokaltid ( i Norge).
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
           ## Referanser
           
@@ -886,7 +886,7 @@ classes:
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Timedelen er egentlig un&#248;dvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 p&#229; dagen (zulu). Derved kan dato leses direkte uten &#229; gj&#248;re om til lokaltid ( i Norge).
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
           ## Referanser
           
@@ -916,7 +916,7 @@ classes:
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Timedelen er egentlig un&#248;dvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 p&#229; dagen (zulu). Derved kan dato leses direkte uten &#229; gj&#248;re om til lokaltid ( i Norge).
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
           ## Referanser
           
@@ -946,7 +946,7 @@ classes:
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Timedelen er egentlig un&#248;dvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 p&#229; dagen (zulu). Derved kan dato leses direkte uten &#229; gj&#248;re om til lokaltid ( i Norge).
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
           ## Referanser
           
@@ -1108,7 +1108,7 @@ classes:
       avsluttetDato:
         range: datetime
         description: |
-          Dato og klokkeslett n&#229;r arkivenheten ble avsluttet/lukket.
+          Dato og klokkeslett når arkivenheten ble avsluttet/lukket.
           
           # Beskrivelse
           
@@ -1165,7 +1165,7 @@ classes:
       opprettetDato:
         range: datetime
         description: |
-          Dato og klokkeslett n&#229;r arkivenheten ble opprettet/registrert.
+          Dato og klokkeslett når arkivenheten ble opprettet/registrert.
           
           # Beskrivelse
           
@@ -1376,7 +1376,7 @@ classes:
         annotations:
           writeable: true
         description: |
-          Dato og klokkeslett n&#229;r arkivenheten ble avsluttet/lukket
+          Dato og klokkeslett når arkivenheten ble avsluttet/lukket
           
           # Beskrivelse
           
@@ -1476,7 +1476,7 @@ classes:
       opprettetDato:
         range: datetime
         description: |
-          Dato og klokkeslett n&#229;r arkivenheten ble opprettet/registrert
+          Dato og klokkeslett når arkivenheten ble opprettet/registrert
           
           # Beskrivelse
           
@@ -1592,7 +1592,7 @@ classes:
         annotations:
           writeable: true
         description: |
-          Dato og klokkeslett n&#229;r merknaden ble registrert
+          Dato og klokkeslett når merknaden ble registrert
           
           # Beskrivelse
           
@@ -1689,7 +1689,7 @@ classes:
         annotations:
           writeable: true
         description: |
-          F&#248;dselsnummer til part. Kun gyldig hvis Part er en Privatperson.
+          Fødselsnummer til part. Kun gyldig hvis Part er en Privatperson.
       kontaktinformasjon:
         range: Kontaktinformasjon
         annotations:
@@ -1770,7 +1770,7 @@ classes:
         annotations:
           writeable: true
         description: |
-          Dato og klokkeslett n&#229;r alle dokumentene som er tilknyttet registreringen ble arkivert
+          Dato og klokkeslett når alle dokumentene som er tilknyttet registreringen ble arkivert
           
           # Beskrivelse
           
@@ -1914,7 +1914,7 @@ classes:
       opprettetDato:
         range: datetime
         description: |
-          Dato og klokkeslett n&#229;r arkivenheten ble opprettet/registrert.
+          Dato og klokkeslett når arkivenheten ble opprettet/registrert.
           
           # Beskrivelse
           
@@ -2148,7 +2148,7 @@ classes:
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Timedelen er egentlig un&#248;dvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 p&#229; dagen (zulu). Derved kan dato leses direkte uten &#229; gj&#248;re om til lokaltid ( i Norge).
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
           ## Referanser
           
@@ -2174,7 +2174,7 @@ classes:
       utlaantDato:
         range: datetime
         description: |
-          Dato n&#229;r en fysisk saksmappe eller journalpost ble utl&#229;nt
+          Dato når en fysisk saksmappe eller journalpost ble utlånt
           
           # Beskrivelse
           
@@ -2188,7 +2188,7 @@ classes:
           
           ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
           
-          Timedelen er egentlig un&#248;dvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 p&#229; dagen (zulu). Derved kan dato leses direkte uten &#229; gj&#248;re om til lokaltid ( i Norge).
+          Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da setter den til klokken 12 på dagen (zulu). Derved kan dato leses direkte uten å gjøre om til lokaltid ( i Norge).
           
           ## Referanser
           
