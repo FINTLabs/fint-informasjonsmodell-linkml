@@ -101,6 +101,10 @@ classes:
         description: |
           Faggruppe for faget.
         multivalued: true
+      grepreferanse:
+        range: Grepreferanse
+        description: |
+          Referanse til GREP kodeverket.
       programområde:
         range: Programområde
         inverse: fag
@@ -127,6 +131,10 @@ classes:
         description: |
           Alle undervisningsgrupper i et gitt fag
         multivalued: true
+      vigoreferanse:
+        range: Vigoreferanse
+        description: |
+          Referanse til VIGO kodeverket.
 
   Faggruppe:
     description: |
@@ -291,15 +299,6 @@ classes:
         inverse: undervisningsgruppe
         description: |
           Timene hvor undervisningen til en undervisningsgruppe gjennomføres
-        multivalued: true
-      elevforhold:
-        range: Elevforhold
-        inverse: undervisningsgruppe
-        annotations:
-          primaryRelation: true
-        description: |
-          Alle elevforhold i undervisningsgruppen
-        deprecated: "Relasjonen erstattes med Gruppemedlemskap i Undervisningsgruppemedlemskap."
         multivalued: true
       fag:
         range: Fag

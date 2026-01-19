@@ -39,15 +39,6 @@ classes:
         description: |
           Periode som fullmakten er gyldig for.
         required: true
-      myndighet:
-        range: Kontodimensjon
-        inverse: fullmakt
-        annotations:
-          primaryRelation: true
-        description: |
-          Del av kontodimensjon som Personalressurs har blitt delegert en fullmakt for.
-        deprecated: "Relasjonen til fullmakt ble fjernet i v3.8.0"
-        multivalued: true
       aktivitet:
         range: Aktivitet
         description: |

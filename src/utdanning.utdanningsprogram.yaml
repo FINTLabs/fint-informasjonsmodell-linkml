@@ -37,11 +37,15 @@ classes:
       * http://psi.udir.no/ontologi/kl06/aarstrinn
     is_a: Gruppe
     attributes:
-      basisgruppe:
-        range: Basisgruppe
+      grepreferanse:
+        range: Grepreferanse
+        description: |
+          Referanse til GREP kodeverket.
+      klasse:
+        range: Klasse
         inverse: trinn
         description: |
-          Basisgruppene som hører hjemme på dette trinnet
+          Klassene som hører hjemme på dette trinnet
         multivalued: true
       programområde:
         range: Programområde
@@ -51,6 +55,10 @@ classes:
         description: |
           Alle programområder som er relevante for trinnet
         multivalued: true
+      vigoreferanse:
+        range: Vigoreferanse
+        description: |
+          Referanse til VIGO kodeverket.
 
   Programområde:
     description: |
@@ -87,21 +95,16 @@ classes:
       * Grepwiki: http://grepwiki.udir.no/index.php?title=Programområde
     is_a: Gruppe
     attributes:
-      elevforhold:
-        range: Elevforhold
-        inverse: programområde
-        annotations:
-          primaryRelation: true
-        description: |
-          Alle elevforhold på programområde
-        deprecated: "Relasjonen erstattes av Elevforhold i Programområdemedlemskap."
-        multivalued: true
       fag:
         range: Fag
         inverse: programområde
         description: |
           Alle fag som er relatert til et gitt programområde
         multivalued: true
+      grepreferanse:
+        range: Grepreferanse
+        description: |
+          Referanse til GREP kodeverket.
       gruppemedlemskap:
         range: Programområdemedlemskap
         inverse: programområde
@@ -123,6 +126,10 @@ classes:
           Alle overordnede utdanningsprogram.
         multivalued: true
         required: true
+      vigoreferanse:
+        range: Vigoreferanse
+        description: |
+          Referanse til VIGO kodeverket.
 
   Programområdemedlemskap:
     description: |
@@ -222,12 +229,6 @@ classes:
           * Moelv videregående skole (som Skole)
           * Telemark fylkeskommune (som Skoleeier)
         required: true
-      basisgruppe:
-        range: Basisgruppe
-        inverse: skole
-        description: |
-          Alle basisgrupper ved en skole.
-        multivalued: true
       eksamensgruppe:
         range: Eksamensgruppe
         inverse: skole
@@ -253,6 +254,12 @@ classes:
         inverse: skole
         description: |
           Skolens faggrupper.
+        multivalued: true
+      klasse:
+        range: Klasse
+        inverse: skole
+        description: |
+          Alle klasser ved en skole.
         multivalued: true
       kontaktlærergruppe:
         range: Kontaktlærergruppe
@@ -341,6 +348,10 @@ classes:
       * Grepwiki: http://grepwiki.udir.no/index.php?title=Utdanningsprogram
     is_a: Gruppe
     attributes:
+      grepreferanse:
+        range: Grepreferanse
+        description: |
+          Referanse til GREP kodeverket.
       programområde:
         range: Programområde
         inverse: utdanningsprogram
@@ -355,3 +366,7 @@ classes:
         description: |
           Alle skoler som tilbyr utdanningsprogrammet
         multivalued: true
+      vigoreferanse:
+        range: Vigoreferanse
+        description: |
+          Referanse til VIGO kodeverket.

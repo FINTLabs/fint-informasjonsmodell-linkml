@@ -157,6 +157,7 @@ classes:
         range: Identifikator
         description: |
           Intern unik identifikator i økonomisystemet.
+        required: true
       beløp:
         range: integer
         annotations:
