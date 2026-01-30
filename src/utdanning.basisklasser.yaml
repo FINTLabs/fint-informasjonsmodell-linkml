@@ -17,19 +17,6 @@ classes:
       Gruppe representeres som en spesialisering (se tabell nedenfor).
       
       Grupper knyttes til Utdanningsforhold via Gruppemedlemskap eller direkte relasjoner.
-      
-      En gruppe kan ha referanser til kodeverk fra Grep og VIGO. En gruppe kan ha perioder som angir når den er gyldig eller aktiv. Hvorvidt en gruppe har referanser og perioder avhenger av hvilken konkret klasse som benyttes.
-      
-      | Klasse | Kode | Periode |
-      | ------- | ----- | ------ |
-      | Basisgruppe | | X |
-      | Kontaktlærergruppe | | X |
-      | Utdanningsprogram | X | |
-      | Programområde | X | |
-      | Fag | X | |
-      | Årstrinn | X | |
-      | Eksamensgruppe | | X |
-      | Undervisningsgruppe | | X |
     abstract: true
     attributes:
       systemId:
@@ -58,7 +45,7 @@ classes:
       
       # Beskrivelse
       
-      Knytter sammen et elevforhold og en gruppe (basisgruppe, kontaktlærergruppe, undervisningsgruppe, eksamensgruppe eller programområde). Gjør det mulig å uttrykke gyldighetsperiode for et medlemskap.
+      Knytter sammen et elevforhold og en gruppe. Gjør det mulig å uttrykke gyldighetsperiode for et medlemskap.
     abstract: true
     attributes:
       systemId:

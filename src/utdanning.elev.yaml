@@ -443,6 +443,8 @@ classes:
       undervisningsforhold:
         range: Undervisningsforhold
         inverse: kontaktlærergruppe
+        annotations:
+          primaryRelation: true
         description: |
           Alle kontaktlærere i gruppen.
         multivalued: true
@@ -642,8 +644,6 @@ classes:
       eksamensgruppe:
         range: Eksamensgruppe
         inverse: undervisningsforhold
-        annotations:
-          primaryRelation: true
         description: |
           Alle eksamensgruppene tilknyttet læreren.
         multivalued: true
@@ -658,8 +658,6 @@ classes:
       kontaktlærergruppe:
         range: Kontaktlærergruppe
         inverse: undervisningsforhold
-        annotations:
-          primaryRelation: true
         description: |
           Alle grupper læreren er kontaktlærer for.
         multivalued: true
@@ -680,8 +678,6 @@ classes:
       undervisningsgruppe:
         range: Undervisningsgruppe
         inverse: undervisningsforhold
-        annotations:
-          primaryRelation: true
         description: |
           Alle undervisningsgrupper læreren deltar i.
         multivalued: true

@@ -6619,7 +6619,7 @@ Kilden for denne type informasjon vil typisk være identitetsforvaltningssystemet
         <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_93ea470388b4d82056" name="Utdanning">
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_e292aace01a8566dda" name="Basisklasser">
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_a62447c9dd60a973b1" name="Gruppe" isAbstract="true">
-              <properties documentation="En generisk samling av elever og lærere&#10;&#10;# Beskrivelse &#10;&#10;Gruppe representeres som en spesialisering (se tabell nedenfor).&#10;&#10;Grupper knyttes til Utdanningsforhold via Gruppemedlemskap eller direkte relasjoner.&#10;&#10;En gruppe kan ha referanser til kodeverk fra Grep og VIGO. En gruppe kan ha perioder som angir når den er gyldig eller aktiv. Hvorvidt en gruppe har referanser og perioder avhenger av hvilken konkret klasse som benyttes.&#10;&#10;| Klasse | Kode | Periode |&#10;| ------- | ----- | ------ |&#10;| Basisgruppe | | X |&#10;| Kontaktlærergruppe | | X |&#10;| Utdanningsprogram | X | |&#10;| Programområde | X | |&#10;| Fag | X | |&#10;| Årstrinn | X | |&#10;| Eksamensgruppe | | X |&#10;| Undervisningsgruppe | | X |&#10;" stereotype="abstrakt" />
+              <properties documentation="En generisk samling av elever og lærere&#10;&#10;# Beskrivelse &#10;&#10;Gruppe representeres som en spesialisering (se tabell nedenfor).&#10;&#10;Grupper knyttes til Utdanningsforhold via Gruppemedlemskap eller direkte relasjoner.&#10;" stereotype="abstrakt" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_a009494b5beb442c77">
                 <body>En generisk samling av elever og lærere
 
@@ -6628,19 +6628,6 @@ Kilden for denne type informasjon vil typisk være identitetsforvaltningssystemet
 Gruppe representeres som en spesialisering (se tabell nedenfor).
 
 Grupper knyttes til Utdanningsforhold via Gruppemedlemskap eller direkte relasjoner.
-
-En gruppe kan ha referanser til kodeverk fra Grep og VIGO. En gruppe kan ha perioder som angir når den er gyldig eller aktiv. Hvorvidt en gruppe har referanser og perioder avhenger av hvilken konkret klasse som benyttes.
-
-| Klasse | Kode | Periode |
-| ------- | ----- | ------ |
-| Basisgruppe | | X |
-| Kontaktlærergruppe | | X |
-| Utdanningsprogram | X | |
-| Programområde | X | |
-| Fag | X | |
-| Årstrinn | X | |
-| Eksamensgruppe | | X |
-| Undervisningsgruppe | | X |
 </body>
                 </ownedComment>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_68fca34b52d9165eaf" name="systemId" visibility="public">
@@ -6676,13 +6663,13 @@ Systemspesifikk id, som normalt ikke er synlig i fagsystemet.
                 </ownedAttribute>
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_0d161f922b39eccebe" name="Gruppemedlemskap" isAbstract="true">
-              <properties documentation="Deltagelse i en gruppe&#10;&#10;# Beskrivelse&#10;&#10;Knytter sammen et elevforhold og en gruppe (basisgruppe, kontaktlærergruppe, undervisningsgruppe, eksamensgruppe eller programområde). Gjør det mulig å uttrykke gyldighetsperiode for et medlemskap.&#10;" stereotype="abstrakt" />
+              <properties documentation="Deltagelse i en gruppe&#10;&#10;# Beskrivelse&#10;&#10;Knytter sammen et elevforhold og en gruppe. Gjør det mulig å uttrykke gyldighetsperiode for et medlemskap.&#10;" stereotype="abstrakt" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d4d49a2d6454c2bf93">
                 <body>Deltagelse i en gruppe
 
 # Beskrivelse
 
-Knytter sammen et elevforhold og en gruppe (basisgruppe, kontaktlærergruppe, undervisningsgruppe, eksamensgruppe eller programområde). Gjør det mulig å uttrykke gyldighetsperiode for et medlemskap.
+Knytter sammen et elevforhold og en gruppe. Gjør det mulig å uttrykke gyldighetsperiode for et medlemskap.
 </body>
                 </ownedComment>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_5c089a76c0b96ee4ee" name="systemId" visibility="public">
@@ -7034,6 +7021,7 @@ Kontaktlæreren har i denne gruppa særleg ansvar for dei praktiske, administrativ
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a745db24a39fdb30bf" visibility="public" start="EAID_CLS_11abbdc19270478625" end="EAID_CLS_64e904f2ebf8b9f538" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_1dcb5212e0c9775a7c" visibility="public" start="EAID_CLS_11abbdc19270478625" end="EAID_CLS_8cd72252caa5382d06" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_dbca8ed7d94f938284" visibility="public" start="EAID_CLS_11abbdc19270478625" end="EAID_CLS_aad6ed1e0d9928ed93" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_793de7c7eb783922d2" visibility="public" start="EAID_CLS_11abbdc19270478625" end="EAID_CLS_917b8b67ec1ceae3be" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_0329c6b14ca12dbdba" name="Kontaktlærergruppemedlemskap">
               <properties documentation="Medlemskap i kontaktlærergrupper.&#10;&#10;# Beskrivelse&#10;&#10;Gruppemedlemskap som knytter sammen elevforhold og kontaktlærergrupper.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_1c4fa17ba3347570e9">
@@ -7146,11 +7134,8 @@ En skoleresurs kan ha flere undervisningsforhold, men kun ett undervisningsforho
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_b98b916864b10e3233" visibility="public" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_7bd281acb04022531a" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_08206e76492e006cb4" visibility="public" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_7ab71940bab910a223" />
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_5c655b4e2cfb2e6ac3" visibility="public" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_befc698f1817a298c1" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_3845109a70b1757cb9" visibility="public" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_a9ab455ab2f60a172a" />
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_76af7718f908f8acd4" visibility="public" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_11abbdc19270478625" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_47a1e2d1e68dcbfd66" visibility="public" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_64e904f2ebf8b9f538" />
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_dcc85fc61ed9670a87" visibility="public" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_d404ea07009fe8b767" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_c211ac66a7cfc47e85" name="Varsel">
               <properties documentation="Varsel sendt til en elev.&#10;&#10;# Referanse&#10;&#10;* [VIS - Opprette og sende varsel ](https://inschool.zendesk.com/hc/no/articles/360030859132-4b-21-Opprette-og-sende-varsel)&#10;* [Forskrift til opplæringslova - &amp;#167; 3-8. Varsling](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_5-1#%C2%A73-8)&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_2e7f5c5248c2d11350">
@@ -7214,20 +7199,25 @@ I informasjonsmodellen oppgis en prosentverdi som et heltall. Dette tallet er an
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_ab94869e17cb08d24b" visibility="public" start="EAID_CLS_c211ac66a7cfc47e85" end="EAID_CLS_1effd1cacfa57a62ad" />
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_606159134ff04f6d3c" name="Kodeverk">
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_d5c4c414d65d20a7f9" name="Brevtype">
-              <properties documentation="Beskriver hvilken prøve lærlingen/lærekandidaten går opp til.&#10;* F - Fagbrev&#10;* S - Svennebrev&#10;* K - Kompetansebevis&#10;* B - Praksisbrev&#10;&#10;# Referanse&#10;[UDIR - Registreringshåndbok - C22](https://regbok.udir.no/oversikt)&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_77eb539658b3941595">
-                <body>Beskriver hvilken prøve lærlingen/lærekandidaten går opp til.
-* F - Fagbrev
-* S - Svennebrev
-* K - Kompetansebevis
-* B - Praksisbrev
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_d8c10b1c582791aca9" name="Avbruddsårsak">
+              <properties documentation="Årsaken til at eleven avbryter utdanningsprogrammet (Vg1)/programområdet (Vg2/Vg3) ) i løpet av skoleåret  eller lærlingen/lærekandidaten hever lærekontrakten/opplæringskontrakten.&#10;&#10;# Referanse&#10;&#10;Registreringshåndbok: https://regbok.udir.no/35004/3344/35042-1014313.html&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_af0243aae03a89e7d0">
+                <body>Årsaken til at eleven avbryter utdanningsprogrammet (Vg1)/programområdet (Vg2/Vg3) ) i løpet av skoleåret  eller lærlingen/lærekandidaten hever lærekontrakten/opplæringskontrakten.
 
 # Referanse
-[UDIR - Registreringshåndbok - C22](https://regbok.udir.no/oversikt)
+
+Registreringshåndbok: https://regbok.udir.no/35004/3344/35042-1014313.html
 </body>
                 </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_77eb539658b3941595" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_d5c4c414d65d20a7f9" end="EAID_CLS_3385458244847ec7db" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_af0243aae03a89e7d0" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_d8c10b1c582791aca9" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_5b7ff6c97259284c76" name="Betalingsstatus">
+              <properties documentation="Statuser for betaling av eksamen for privatister.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_e8a391bb2810077081">
+                <body>Statuser for betaling av eksamen for privatister.
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_e8a391bb2810077081" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_5b7ff6c97259284c76" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_bc9da10a0926871a92" name="Bevistype">
               <properties documentation="Viser hvilken bevistype eleven har fått på opplæringen.&#10;&#10;* KB - Kompetansebevis&#10;* VM - Vitnemål&#10;&#10;&#10;# Referanse&#10;[UDIR - Registreringshåndbok - B22](https://regbok.udir.no/oversikt)&#10;" stereotype="hovedklasse" />
@@ -7244,77 +7234,75 @@ I informasjonsmodellen oppgis en prosentverdi som et heltall. Dette tallet er an
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_5e59474da6a34da169" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_bc9da10a0926871a92" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_543a0ea73e30d8781d" name="Fullførtkode">
-              <properties documentation="Gir status på hvordan eleven har gjennomført et programområde ved (det normale) skoleårs slutt.&#10;&#10;# Referanse&#10;[UDIR - Registreringshåndbok - B21](https://regbok.udir.no/oversikt)&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_6109ac4e2a674b9d2c">
-                <body>Gir status på hvordan eleven har gjennomført et programområde ved (det normale) skoleårs slutt.
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_d5c4c414d65d20a7f9" name="Brevtype">
+              <properties documentation="Beskriver hvilken prøve lærlingen/lærekandidaten går opp til.&#10;* F - Fagbrev&#10;* S - Svennebrev&#10;* K - Kompetansebevis&#10;* B - Praksisbrev&#10;&#10;# Referanse&#10;[UDIR - Registreringshåndbok - C22](https://regbok.udir.no/oversikt)&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_77eb539658b3941595">
+                <body>Beskriver hvilken prøve lærlingen/lærekandidaten går opp til.
+* F - Fagbrev
+* S - Svennebrev
+* K - Kompetansebevis
+* B - Praksisbrev
 
 # Referanse
-[UDIR - Registreringshåndbok - B21](https://regbok.udir.no/oversikt)
+[UDIR - Registreringshåndbok - C22](https://regbok.udir.no/oversikt)
 </body>
                 </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_6109ac4e2a674b9d2c" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_543a0ea73e30d8781d" end="EAID_CLS_3385458244847ec7db" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_77eb539658b3941595" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_d5c4c414d65d20a7f9" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_b95e4a1f323baa9201" name="Prøvestatus">
-              <properties documentation="Resultat av avlagt prøve - Praktisk prøve + teori.&#10;&#10;# Referanse&#10;[UDIR - Registreringshåndbok - C26](https://regbok.udir.no/oversikt)&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_c7e254eafb4c5e70c2">
-                <body>Resultat av avlagt prøve - Praktisk prøve + teori.
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_c8081bf05b678612ce" name="Eksamensform">
+              <properties documentation="Eksamensordningens form.&#10;&#10;# Eksempler:&#10;* Muntlig&#10;* Skriftlig&#10;* Praktisk&#10;&#10;# Referanser&#10;&#10;* https://www.vigo.no/vigokv/ekstype.action&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_9ee3b741669148e8bc">
+                <body>Eksamensordningens form.
 
-# Referanse
-[UDIR - Registreringshåndbok - C26](https://regbok.udir.no/oversikt)
+# Eksempler:
+* Muntlig
+* Skriftlig
+* Praktisk
+
+# Referanser
+
+* https://www.vigo.no/vigokv/ekstype.action
 </body>
                 </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_c7e254eafb4c5e70c2" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_b95e4a1f323baa9201" end="EAID_CLS_3385458244847ec7db" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_9ee3b741669148e8bc" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_c8081bf05b678612ce" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_5b7ff6c97259284c76" name="Betalingsstatus">
-              <properties documentation="Statuser for betaling av eksamen for privatister.&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_e8a391bb2810077081">
-                <body>Statuser for betaling av eksamen for privatister.
-</body>
-                </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_e8a391bb2810077081" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_5b7ff6c97259284c76" end="EAID_CLS_3385458244847ec7db" />
-              </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_3b6b3fc089f5e00dda" name="Varseltype">
-              <properties documentation="Viser hvilken type et varsel er.&#10;&#10;# Eksempel&#10;&#10;* Fravær&#10;&#10;* Orden&#10;&#10;* Atferd&#10;&#10;* Manglende vurderingsgrunnlag i fag&#10;&#10;# Referanse&#10;&#10;* [VIS - Opprette og sende varsel ](https://inschool.zendesk.com/hc/no/articles/360030859132-4b-21-Opprette-og-sende-varsel)&#10;* [Forskrift til opplæringslova - &amp;#167; 3-8. Varsling](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_5-1#%C2%A73-8)&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_e414482ebea21cdfef">
-                <body>Viser hvilken type et varsel er.
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_20ee2391e13a5e2da9" name="Elevkategori">
+              <properties documentation="Kategori som et elevforhold befinner seg innenfor&#10;&#10;# Eksempel&#10;&#10;Gyldige verdier kan være:&#10;* heltid&#10;* deltid&#10;* voksen&#10;* privatist&#10;* norsk-utv-i-utlandet&#10;* utenlandsk-utv-i-norge&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_f274442bb3f08f4c22">
+                <body>Kategori som et elevforhold befinner seg innenfor
 
 # Eksempel
 
-* Fravær
-
-* Orden
-
-* Atferd
-
-* Manglende vurderingsgrunnlag i fag
-
-# Referanse
-
-* [VIS - Opprette og sende varsel ](https://inschool.zendesk.com/hc/no/articles/360030859132-4b-21-Opprette-og-sende-varsel)
-* [Forskrift til opplæringslova - &amp;#167; 3-8. Varsling](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_5-1#%C2%A73-8)
+Gyldige verdier kan være:
+* heltid
+* deltid
+* voksen
+* privatist
+* norsk-utv-i-utlandet
+* utenlandsk-utv-i-norge
 </body>
                 </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_e414482ebea21cdfef" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_3b6b3fc089f5e00dda" end="EAID_CLS_3385458244847ec7db" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_f274442bb3f08f4c22" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_20ee2391e13a5e2da9" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_437a8fea0eef7941c6" name="Vitnemålsmerknad">
-              <properties documentation="En vitnemålsmerknad har en eller flere av følgende funksjoner:&#10;&#10;* gir opplysninger som gjelder opplæringen generelt eller som gjelder hele vitnemålet/kompetansebeviset&#10;&#10;* henviser til vedlegg som gir slike opplysninger&#10;&#10;* utdyper en fagmerknad&#10;&#10;Det kan bare føres vitnemålsmerknader som er gitt av Utdanningsdirektoratet.&#10;&#10;# Referanser&#10;[UDIR : Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_09b1804d9a517e92c8">
-                <body>En vitnemålsmerknad har en eller flere av følgende funksjoner:
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_31260c62481059007c" name="Fagmerknad">
+              <properties documentation="Merknader til vitnemål og kompetansebevis&#10;&#10;# Beskrivelse&#10;&#10;En fagmerknad er en merknad som har en eller flere av disse funksjonene&#10;&#10;- gir opplysninger om faget som ikke går fram av karakterer eller eksamensform&#10;- utdyper opplysninger om karakterer og/eller eksamensform&#10;- henviser til vedlegg som gir slike opplysninger&#10;&#10;# Referanser&#10;&#10;[Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_61a1891a729663f73b">
+                <body>Merknader til vitnemål og kompetansebevis
 
-* gir opplysninger som gjelder opplæringen generelt eller som gjelder hele vitnemålet/kompetansebeviset
+# Beskrivelse
 
-* henviser til vedlegg som gir slike opplysninger
+En fagmerknad er en merknad som har en eller flere av disse funksjonene
 
-* utdyper en fagmerknad
-
-Det kan bare føres vitnemålsmerknader som er gitt av Utdanningsdirektoratet.
+- gir opplysninger om faget som ikke går fram av karakterer eller eksamensform
+- utdyper opplysninger om karakterer og/eller eksamensform
+- henviser til vedlegg som gir slike opplysninger
 
 # Referanser
-[UDIR : Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)
+
+[Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)
 </body>
                 </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_09b1804d9a517e92c8" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_437a8fea0eef7941c6" end="EAID_CLS_3385458244847ec7db" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_61a1891a729663f73b" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_31260c62481059007c" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_98f04a023d51f0d848" name="Fagstatus">
               <properties documentation="Elevens, privatistens eller kandidatens (voksne) status på et gitt fag.&#10;&#10;# Beskrivelse&#10;&#10;Fagstatus er en kode for undervisningen og/eller grunnlaget for karakteren. Den gir informasjon om hvordan det enkelte faget er gjennomført eller evt. ikke gjennomført.&#10;&#10;# Eksempler&#10;&#10;* E - Elev&#10;* F - Fritatt&#10;&#10;# Referanse&#10;&#10;[Registreringshåndbok]( https://regbok.udir.no/felt/?Id=1014315)&#10;" stereotype="hovedklasse" />
@@ -7336,6 +7324,78 @@ Fagstatus er en kode for undervisningen og/eller grunnlaget for karakteren. Den 
 </body>
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_45753febdaa1d06fc6" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_98f04a023d51f0d848" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_3076a148b4be460dce" name="Fraværstype">
+              <properties documentation="Typer fravær.&#10;&#10;# Referanse&#10;&#10;https://www.udir.no/regelverk-og-tilsyn/skole-og-opplaring/saksbehandling/fravar/fravar-i-videregaende/&#10;&#10;VIS:&#10;https://inschool.zendesk.com/hc/no/articles/360023264091&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_31f76c46860e903f54">
+                <body>Typer fravær.
+
+# Referanse
+
+https://www.udir.no/regelverk-og-tilsyn/skole-og-opplaring/saksbehandling/fravar/fravar-i-videregaende/
+
+VIS:
+https://inschool.zendesk.com/hc/no/articles/360023264091
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_31f76c46860e903f54" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_3076a148b4be460dce" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_543a0ea73e30d8781d" name="Fullførtkode">
+              <properties documentation="Gir status på hvordan eleven har gjennomført et programområde ved (det normale) skoleårs slutt.&#10;&#10;# Referanse&#10;[UDIR - Registreringshåndbok - B21](https://regbok.udir.no/oversikt)&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_6109ac4e2a674b9d2c">
+                <body>Gir status på hvordan eleven har gjennomført et programområde ved (det normale) skoleårs slutt.
+
+# Referanse
+[UDIR - Registreringshåndbok - B21](https://regbok.udir.no/oversikt)
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_6109ac4e2a674b9d2c" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_543a0ea73e30d8781d" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_c9f60b4d15aa43dab9" name="Grepreferanse">
+              <properties documentation="Ekstern referanse til Grepkodeverket.&#10;&#10;# Beskrivelse&#10;&#10;Grep er den nasjonale databasen for fag, læreplaner og opplæringstilbud i grunnopplæringen.&#10;&#10;Referanser til Grepkodeverket skal referere til gyldige og unike koder i REST (JSON) API fra Udir.&#10;&#10;https://www.udir.no/om-udir/data/kl06-grep&#10;&#10;Det er viktig å bruke Grepreferanser og ikke Vigoreferanser. &#10;Bruk data.udir.no , ikke psi.udir.no, eksempelvis https://data.udir.no/kl06/SAL3001 (korrekt), ikke https://psi.udir.no/kl06/SAL3001 (feil).&#10;" stereotype="referanse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_165d3b6352915160e3">
+                <body>Ekstern referanse til Grepkodeverket.
+
+# Beskrivelse
+
+Grep er den nasjonale databasen for fag, læreplaner og opplæringstilbud i grunnopplæringen.
+
+Referanser til Grepkodeverket skal referere til gyldige og unike koder i REST (JSON) API fra Udir.
+
+https://www.udir.no/om-udir/data/kl06-grep
+
+Det er viktig å bruke Grepreferanser og ikke Vigoreferanser. 
+Bruk data.udir.no , ikke psi.udir.no, eksempelvis https://data.udir.no/kl06/SAL3001 (korrekt), ikke https://psi.udir.no/kl06/SAL3001 (feil).
+</body>
+                </ownedComment>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_a63adb50e6db0f2347" name="Karakterskala">
+              <properties documentation="Gruppering av karakterer etter skala (bokstav, orden osv). &#10;&#10;# Eksempler&#10;&#10;* Bokstav – bokstavkarakterer&#10;* Tall – tallkarakterer&#10;* Binær – Bestått/Ikke-bestått&#10;* Prosent – prosentpoeng.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_2107f91810b47f38a4">
+                <body>Gruppering av karakterer etter skala (bokstav, orden osv). 
+
+# Eksempler
+
+* Bokstav – bokstavkarakterer
+* Tall – tallkarakterer
+* Binær – Bestått/Ikke-bestått
+* Prosent – prosentpoeng.
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_2107f91810b47f38a4" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_a63adb50e6db0f2347" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_79c05c66d0b4de5ce0" visibility="public" start="EAID_CLS_a63adb50e6db0f2347" end="EAID_CLS_9be83411188065746c" />
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_1d2ea71766e6f9ab9c" name="Karakterstatus">
+              <properties documentation="Kode for karakterer som blir endret.&#10;&#10;# Referanse&#10;&#10;https://regbok.udir.no/35004/3344/35042-1015043.html&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_5c3f43c7076215a591">
+                <body>Kode for karakterer som blir endret.
+
+# Referanse
+
+https://regbok.udir.no/35004/3344/35042-1015043.html
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_5c3f43c7076215a591" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_1d2ea71766e6f9ab9c" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_1a236a7ef38591501c" name="OtEnhet">
               <properties documentation="Stedet hvor OT-ungdom er under oppfølging.&#10;" stereotype="hovedklasse" />
@@ -7384,74 +7444,16 @@ Fagstatus er en kode for undervisningen og/eller grunnlaget for karakteren. Den 
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_31260c62481059007c" name="Fagmerknad">
-              <properties documentation="Merknader til vitnemål og kompetansebevis&#10;&#10;# Beskrivelse&#10;&#10;En fagmerknad er en merknad som har en eller flere av disse funksjonene&#10;&#10;- gir opplysninger om faget som ikke går fram av karakterer eller eksamensform&#10;- utdyper opplysninger om karakterer og/eller eksamensform&#10;- henviser til vedlegg som gir slike opplysninger&#10;&#10;# Referanser&#10;&#10;[Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_61a1891a729663f73b">
-                <body>Merknader til vitnemål og kompetansebevis
-
-# Beskrivelse
-
-En fagmerknad er en merknad som har en eller flere av disse funksjonene
-
-- gir opplysninger om faget som ikke går fram av karakterer eller eksamensform
-- utdyper opplysninger om karakterer og/eller eksamensform
-- henviser til vedlegg som gir slike opplysninger
-
-# Referanser
-
-[Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)
-</body>
-                </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_61a1891a729663f73b" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_31260c62481059007c" end="EAID_CLS_3385458244847ec7db" />
-              </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_8c00232d083f0f1a84" name="Tilrettelegging">
-              <properties documentation="Tilrettelegging en elev kan ha på eksamen.&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_247d8fb6758a34cdf6">
-                <body>Tilrettelegging en elev kan ha på eksamen.
-</body>
-                </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_247d8fb6758a34cdf6" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_8c00232d083f0f1a84" end="EAID_CLS_3385458244847ec7db" />
-              </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_d8c10b1c582791aca9" name="Avbruddsårsak">
-              <properties documentation="Årsaken til at eleven avbryter utdanningsprogrammet (Vg1)/programområdet (Vg2/Vg3) ) i løpet av skoleåret  eller lærlingen/lærekandidaten hever lærekontrakten/opplæringskontrakten.&#10;&#10;# Referanse&#10;&#10;Registreringshåndbok: https://regbok.udir.no/35004/3344/35042-1014313.html&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_af0243aae03a89e7d0">
-                <body>Årsaken til at eleven avbryter utdanningsprogrammet (Vg1)/programområdet (Vg2/Vg3) ) i løpet av skoleåret  eller lærlingen/lærekandidaten hever lærekontrakten/opplæringskontrakten.
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_b95e4a1f323baa9201" name="Prøvestatus">
+              <properties documentation="Resultat av avlagt prøve - Praktisk prøve + teori.&#10;&#10;# Referanse&#10;[UDIR - Registreringshåndbok - C26](https://regbok.udir.no/oversikt)&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_c7e254eafb4c5e70c2">
+                <body>Resultat av avlagt prøve - Praktisk prøve + teori.
 
 # Referanse
-
-Registreringshåndbok: https://regbok.udir.no/35004/3344/35042-1014313.html
+[UDIR - Registreringshåndbok - C26](https://regbok.udir.no/oversikt)
 </body>
                 </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_af0243aae03a89e7d0" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_d8c10b1c582791aca9" end="EAID_CLS_3385458244847ec7db" />
-              </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_c8081bf05b678612ce" name="Eksamensform">
-              <properties documentation="Eksamensordningens form.&#10;&#10;# Eksempler:&#10;* Muntlig&#10;* Skriftlig&#10;* Praktisk&#10;&#10;# Referanser&#10;&#10;* https://www.vigo.no/vigokv/ekstype.action&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_9ee3b741669148e8bc">
-                <body>Eksamensordningens form.
-
-# Eksempler:
-* Muntlig
-* Skriftlig
-* Praktisk
-
-# Referanser
-
-* https://www.vigo.no/vigokv/ekstype.action
-</body>
-                </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_9ee3b741669148e8bc" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_c8081bf05b678612ce" end="EAID_CLS_3385458244847ec7db" />
-              </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_1d2ea71766e6f9ab9c" name="Karakterstatus">
-              <properties documentation="Kode for karakterer som blir endret.&#10;&#10;# Referanse&#10;&#10;https://regbok.udir.no/35004/3344/35042-1015043.html&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_5c3f43c7076215a591">
-                <body>Kode for karakterer som blir endret.
-
-# Referanse
-
-https://regbok.udir.no/35004/3344/35042-1015043.html
-</body>
-                </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_5c3f43c7076215a591" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_1d2ea71766e6f9ab9c" end="EAID_CLS_3385458244847ec7db" />
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_c7e254eafb4c5e70c2" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_b95e4a1f323baa9201" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_8cd72252caa5382d06" name="Skoleår">
               <properties documentation="Del av året da skoler har undervisning (og ikke ferie).&#10;&#10;# Beskrivelse&#10;&#10;Et skoleår varer som hovedregel fra august til juni.&#10;" stereotype="hovedklasse" />
@@ -7464,100 +7466,6 @@ Et skoleår varer som hovedregel fra august til juni.
 </body>
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_03558e683bf74b2e5d" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_8cd72252caa5382d06" end="EAID_CLS_3385458244847ec7db" />
-              </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_aad6ed1e0d9928ed93" name="Termin">
-              <properties documentation="Inndeling av skoleåret&#10;&#10;# Beskrivelse&#10;&#10;Et skoleår er som hovedregel inndelt i to terminer. Første termin: medio august til medio januar. Andre termin: medio januar til medio juni.&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_dc81664f4e2d9c9fdd">
-                <body>Inndeling av skoleåret
-
-# Beskrivelse
-
-Et skoleår er som hovedregel inndelt i to terminer. Første termin: medio august til medio januar. Andre termin: medio januar til medio juni.
-</body>
-                </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_dc81664f4e2d9c9fdd" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_aad6ed1e0d9928ed93" end="EAID_CLS_3385458244847ec7db" />
-              </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_a63adb50e6db0f2347" name="Karakterskala">
-              <properties documentation="Gruppering av karakterer etter skala (bokstav, orden osv). &#10;&#10;# Eksempler&#10;&#10;* Bokstav – bokstavkarakterer&#10;* Tall – tallkarakterer&#10;* Binær – Bestått/Ikke-bestått&#10;* Prosent – prosentpoeng.&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_2107f91810b47f38a4">
-                <body>Gruppering av karakterer etter skala (bokstav, orden osv). 
-
-# Eksempler
-
-* Bokstav – bokstavkarakterer
-* Tall – tallkarakterer
-* Binær – Bestått/Ikke-bestått
-* Prosent – prosentpoeng.
-</body>
-                </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_2107f91810b47f38a4" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_a63adb50e6db0f2347" end="EAID_CLS_3385458244847ec7db" />
-              </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_79c05c66d0b4de5ce0" visibility="public" start="EAID_CLS_a63adb50e6db0f2347" end="EAID_CLS_9be83411188065746c" />
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_3076a148b4be460dce" name="Fraværstype">
-              <properties documentation="Typer fravær.&#10;&#10;# Referanse&#10;&#10;https://www.udir.no/regelverk-og-tilsyn/skole-og-opplaring/saksbehandling/fravar/fravar-i-videregaende/&#10;&#10;VIS:&#10;https://inschool.zendesk.com/hc/no/articles/360023264091&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_31f76c46860e903f54">
-                <body>Typer fravær.
-
-# Referanse
-
-https://www.udir.no/regelverk-og-tilsyn/skole-og-opplaring/saksbehandling/fravar/fravar-i-videregaende/
-
-VIS:
-https://inschool.zendesk.com/hc/no/articles/360023264091
-</body>
-                </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_31f76c46860e903f54" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_3076a148b4be460dce" end="EAID_CLS_3385458244847ec7db" />
-              </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_9be83411188065746c" name="Vigoreferanse">
-              <properties documentation="Ekstern referanse til VIGO Kodeverksbase.&#10;&#10;# Beskrivelse&#10;&#10;Kodeverket kommer fra Grep (Utdanningsdirektoratet sin læreplandatabase), Nasjonalt skoleregister og VIGO.&#10;&#10;Referanser til VIGO Kodeverksbase skal referere til gyldige og unike koder i REST (JSON) API fra Vigo IKS/FINTLabs.&#10;&#10;https://api.felleskomponent.no/utdanning/vigo/kodeverk/swagger-ui.html#/&#10;" stereotype="referanse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_94e64b3f528d8a316e">
-                <body>Ekstern referanse til VIGO Kodeverksbase.
-
-# Beskrivelse
-
-Kodeverket kommer fra Grep (Utdanningsdirektoratet sin læreplandatabase), Nasjonalt skoleregister og VIGO.
-
-Referanser til VIGO Kodeverksbase skal referere til gyldige og unike koder i REST (JSON) API fra Vigo IKS/FINTLabs.
-
-https://api.felleskomponent.no/utdanning/vigo/kodeverk/swagger-ui.html#/
-</body>
-                </ownedComment>
-              </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_c9f60b4d15aa43dab9" name="Grepreferanse">
-              <properties documentation="Ekstern referanse til Grepkodeverket.&#10;&#10;# Beskrivelse&#10;&#10;Grep er den nasjonale databasen for fag, læreplaner og opplæringstilbud i grunnopplæringen.&#10;&#10;Referanser til Grepkodeverket skal referere til gyldige og unike koder i REST (JSON) API fra Udir.&#10;&#10;https://www.udir.no/om-udir/data/kl06-grep&#10;&#10;Det er viktig å bruke Grepreferanser og ikke Vigoreferanser. &#10;Bruk data.udir.no , ikke psi.udir.no, eksempelvis https://data.udir.no/kl06/SAL3001 (korrekt), ikke https://psi.udir.no/kl06/SAL3001 (feil).&#10;" stereotype="referanse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_165d3b6352915160e3">
-                <body>Ekstern referanse til Grepkodeverket.
-
-# Beskrivelse
-
-Grep er den nasjonale databasen for fag, læreplaner og opplæringstilbud i grunnopplæringen.
-
-Referanser til Grepkodeverket skal referere til gyldige og unike koder i REST (JSON) API fra Udir.
-
-https://www.udir.no/om-udir/data/kl06-grep
-
-Det er viktig å bruke Grepreferanser og ikke Vigoreferanser. 
-Bruk data.udir.no , ikke psi.udir.no, eksempelvis https://data.udir.no/kl06/SAL3001 (korrekt), ikke https://psi.udir.no/kl06/SAL3001 (feil).
-</body>
-                </ownedComment>
-              </packagedElement>
-            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_20ee2391e13a5e2da9" name="Elevkategori">
-              <properties documentation="Kategori som et elevforhold befinner seg innenfor&#10;&#10;# Eksempel&#10;&#10;Gyldige verdier kan være:&#10;* heltid&#10;* deltid&#10;* voksen&#10;* privatist&#10;* norsk-utv-i-utlandet&#10;* utenlandsk-utv-i-norge&#10;" stereotype="hovedklasse" />
-              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_f274442bb3f08f4c22">
-                <body>Kategori som et elevforhold befinner seg innenfor
-
-# Eksempel
-
-Gyldige verdier kan være:
-* heltid
-* deltid
-* voksen
-* privatist
-* norsk-utv-i-utlandet
-* utenlandsk-utv-i-norge
-</body>
-                </ownedComment>
-              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_f274442bb3f08f4c22" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_20ee2391e13a5e2da9" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_8ec705d192e01ca4aa" name="Skoleeiertype">
               <properties documentation="Angir hvem er det som eier skole&#10;&#10;# Eksempler&#10;&#10;1 = Fylke&#10;2 = Stat&#10;3 = Kommune&#10;4 = Privat &#10;&#10;# Referanser&#10;&#10;* Vigo Kodeverkdatabase. Skole: [vigo.no/vigokv/skole.action](https://www.vigo.no/vigokv/skole.action)&#10;" stereotype="hovedklasse" />
@@ -7577,6 +7485,83 @@ Gyldige verdier kan være:
 </body>
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_96e17bd431b34547c9" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_8ec705d192e01ca4aa" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_aad6ed1e0d9928ed93" name="Termin">
+              <properties documentation="Inndeling av skoleåret&#10;&#10;# Beskrivelse&#10;&#10;Et skoleår er som hovedregel inndelt i to terminer. Første termin: medio august til medio januar. Andre termin: medio januar til medio juni.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_dc81664f4e2d9c9fdd">
+                <body>Inndeling av skoleåret
+
+# Beskrivelse
+
+Et skoleår er som hovedregel inndelt i to terminer. Første termin: medio august til medio januar. Andre termin: medio januar til medio juni.
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_dc81664f4e2d9c9fdd" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_aad6ed1e0d9928ed93" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_8c00232d083f0f1a84" name="Tilrettelegging">
+              <properties documentation="Tilrettelegging en elev kan ha på eksamen.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_247d8fb6758a34cdf6">
+                <body>Tilrettelegging en elev kan ha på eksamen.
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_247d8fb6758a34cdf6" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_8c00232d083f0f1a84" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_3b6b3fc089f5e00dda" name="Varseltype">
+              <properties documentation="Viser hvilken type et varsel er.&#10;&#10;# Eksempel&#10;&#10;* Fravær&#10;&#10;* Orden&#10;&#10;* Atferd&#10;&#10;* Manglende vurderingsgrunnlag i fag&#10;&#10;# Referanse&#10;&#10;* [VIS - Opprette og sende varsel ](https://inschool.zendesk.com/hc/no/articles/360030859132-4b-21-Opprette-og-sende-varsel)&#10;* [Forskrift til opplæringslova - &amp;#167; 3-8. Varsling](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_5-1#%C2%A73-8)&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_e414482ebea21cdfef">
+                <body>Viser hvilken type et varsel er.
+
+# Eksempel
+
+* Fravær
+
+* Orden
+
+* Atferd
+
+* Manglende vurderingsgrunnlag i fag
+
+# Referanse
+
+* [VIS - Opprette og sende varsel ](https://inschool.zendesk.com/hc/no/articles/360030859132-4b-21-Opprette-og-sende-varsel)
+* [Forskrift til opplæringslova - &amp;#167; 3-8. Varsling](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_5-1#%C2%A73-8)
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_e414482ebea21cdfef" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_3b6b3fc089f5e00dda" end="EAID_CLS_3385458244847ec7db" />
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_9be83411188065746c" name="Vigoreferanse">
+              <properties documentation="Ekstern referanse til VIGO Kodeverksbase.&#10;&#10;# Beskrivelse&#10;&#10;Kodeverket kommer fra Grep (Utdanningsdirektoratet sin læreplandatabase), Nasjonalt skoleregister og VIGO.&#10;&#10;Referanser til VIGO Kodeverksbase skal referere til gyldige og unike koder i REST (JSON) API fra Vigo IKS/FINTLabs.&#10;&#10;https://api.felleskomponent.no/utdanning/vigo/kodeverk/swagger-ui.html#/&#10;" stereotype="referanse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_94e64b3f528d8a316e">
+                <body>Ekstern referanse til VIGO Kodeverksbase.
+
+# Beskrivelse
+
+Kodeverket kommer fra Grep (Utdanningsdirektoratet sin læreplandatabase), Nasjonalt skoleregister og VIGO.
+
+Referanser til VIGO Kodeverksbase skal referere til gyldige og unike koder i REST (JSON) API fra Vigo IKS/FINTLabs.
+
+https://api.felleskomponent.no/utdanning/vigo/kodeverk/swagger-ui.html#/
+</body>
+                </ownedComment>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_437a8fea0eef7941c6" name="Vitnemålsmerknad">
+              <properties documentation="En vitnemålsmerknad har en eller flere av følgende funksjoner:&#10;&#10;* gir opplysninger som gjelder opplæringen generelt eller som gjelder hele vitnemålet/kompetansebeviset&#10;&#10;* henviser til vedlegg som gir slike opplysninger&#10;&#10;* utdyper en fagmerknad&#10;&#10;Det kan bare føres vitnemålsmerknader som er gitt av Utdanningsdirektoratet.&#10;&#10;# Referanser&#10;[UDIR : Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_09b1804d9a517e92c8">
+                <body>En vitnemålsmerknad har en eller flere av følgende funksjoner:
+
+* gir opplysninger som gjelder opplæringen generelt eller som gjelder hele vitnemålet/kompetansebeviset
+
+* henviser til vedlegg som gir slike opplysninger
+
+* utdyper en fagmerknad
+
+Det kan bare føres vitnemålsmerknader som er gitt av Utdanningsdirektoratet.
+
+# Referanser
+[UDIR : Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)
+</body>
+                </ownedComment>
+              <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_09b1804d9a517e92c8" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_437a8fea0eef7941c6" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_d69b36e7b348f13887" name="Larling">
@@ -7762,7 +7747,7 @@ De aktuelle fagtypene i henhold til [Registreringshåndboken A05](http://regbok.u
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_5297fb1c9776456f97" general="EAID_CLS_a62447c9dd60a973b1" start="EAID_CLS_e92c2079bc89c6d11a" end="EAID_CLS_a62447c9dd60a973b1" />
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_d6e6b667c77cd42fc4" visibility="public" start="EAID_CLS_e92c2079bc89c6d11a" end="EAID_CLS_c9f60b4d15aa43dab9" />
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a01add91a916a77b6b" visibility="public" start="EAID_CLS_e92c2079bc89c6d11a" end="EAID_CLS_c317e0b3ba883a1162" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_43047b819fec4b7c87" visibility="public" start="EAID_CLS_e92c2079bc89c6d11a" end="EAID_CLS_64e904f2ebf8b9f538" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_ca194fdd25edf8f528" visibility="public" start="EAID_CLS_e92c2079bc89c6d11a" end="EAID_CLS_9be83411188065746c" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_a7dee6f3f81a7ce38f" name="Faggruppe">
               <properties documentation="Gruppe av elever som mottar undervisning i samme fag.&#10;&#10;# Beskrivelse&#10;&#10;Undervisningsgrupper har vanligvis en kode, men denne er lokalt definert, og varierer fra skole til skole, og fra fylke til fylke.&#10;&#10;Denne grupperingen omhandler faglig organisering av undervisningen.&#10;&#10;Se også [Undervisningsgruppe](/docs/timeplan_undervisningsgruppe).&#10;" stereotype="hovedklasse" />
@@ -7888,6 +7873,7 @@ Se også [Faggruppe](/docs/timeplan_faggruppe).
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_ac1d5c9bd89da99f3c" visibility="public" start="EAID_CLS_d404ea07009fe8b767" end="EAID_CLS_64e904f2ebf8b9f538" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_21ba2faa37875bc82b" visibility="public" start="EAID_CLS_d404ea07009fe8b767" end="EAID_CLS_8cd72252caa5382d06" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_7483e5c947ff1ebc8c" visibility="public" start="EAID_CLS_d404ea07009fe8b767" end="EAID_CLS_aad6ed1e0d9928ed93" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_e08e0e9966d70cb45f" visibility="public" start="EAID_CLS_d404ea07009fe8b767" end="EAID_CLS_917b8b67ec1ceae3be" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_1adfd5c22867ff649b" name="Undervisningsgruppemedlemskap">
               <properties documentation="Medlemskap i undervisningsgrupper.&#10;&#10;# Beskrivelse&#10;&#10;Gruppemedlemskap som knytter sammen elevforhold og undervisningsgrupper.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_2c0b8228b01362fa9c">
@@ -7931,7 +7917,6 @@ Gruppemedlemskap som knytter sammen elevforhold og undervisningsgrupper.
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_7aca24a699321f2d2f" general="EAID_CLS_a62447c9dd60a973b1" start="EAID_CLS_b2a41a5ceca288c6f4" end="EAID_CLS_a62447c9dd60a973b1" />
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_95cfa997e2a1837e44" visibility="public" start="EAID_CLS_b2a41a5ceca288c6f4" end="EAID_CLS_c9f60b4d15aa43dab9" />
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_2e929067e5016cb40d" visibility="public" start="EAID_CLS_b2a41a5ceca288c6f4" end="EAID_CLS_c317e0b3ba883a1162" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a97304abe9222d6526" visibility="public" start="EAID_CLS_b2a41a5ceca288c6f4" end="EAID_CLS_9be83411188065746c" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_c317e0b3ba883a1162" name="Programområde">
               <properties documentation="Programområde er et kurs i den videregående skolen. Et programområde strekker seg vanligvis over ett eller flere år og er gjerne en spesialisert retning eller område for fordypning innen utdanningsprogrammet.&#10;&#10;# Beskrivelse&#10;&#10;Innenfor utdanningsprogrammet studiespesialisering, er eksempler på programområder realfag, språk, samfunnsfag og økonomi og formgivingsfag.&#10;&#10;Innenfor utdanningsprogrammet naturbruk, finnes det for eksempel i andre klasse (Vg2) programområdene akvakultur, anleggsgartner og driftsoperatør idrettsanlegg, fiske og fangst, heste- og hovslagerfag, landbruk og gartneri, reindrift og skogbruk.&#10;&#10;Programområdekoder som slutter på  `----` angir at det er standardversjon av programområdet, og ikke en fylkeskommunal variant.&#10;&#10;# Eksempler&#10;&#10;* Anleggsmaskinførerf,PB&#10;* Asfaltfaget,PB&#10;* Banemontørfaget,PB&#10;* Betongfaget,PB&#10;* Bioenergi (D)&#10;* Byggdrifterfaget,PB&#10;* FDV-utdanning, 1 år (D)&#10;* Feierfaget,PB&#10;* Matrosfaget,PB&#10;* Modellbyggerfaget,PB&#10;* Motormannfaget,PB&#10;* Motormekanikerfaget,PB&#10;* Motorsykkelfaget,PB&#10;&#10;# Referanser&#10;&#10;* UDir Registreringshåndbok: [regbok.udir.no/35004/3344/35042-1014307.html](http://regbok.udir.no/35004/3344/35042-1014307.html)&#10;* Wikipedia: https://no.wikipedia.org/wiki/Programområde&#10;* Grepwiki: http://grepwiki.udir.no/index.php?title=Programområde&#10;" stereotype="hovedklasse" />
@@ -7971,7 +7956,9 @@ Programområdekoder som slutter på  `----` angir at det er standardversjon av pro
                 </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_411d06a84574bb96be" general="EAID_CLS_a62447c9dd60a973b1" start="EAID_CLS_c317e0b3ba883a1162" end="EAID_CLS_a62447c9dd60a973b1" />
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_c3b488e76b5b29dbe9" visibility="public" start="EAID_CLS_c317e0b3ba883a1162" end="EAID_CLS_e92c2079bc89c6d11a" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_2a6ecc06cc576cc409" visibility="public" start="EAID_CLS_c317e0b3ba883a1162" end="EAID_CLS_c9f60b4d15aa43dab9" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_de219d5d86eb02bd03" visibility="public" start="EAID_CLS_c317e0b3ba883a1162" end="EAID_CLS_b2a41a5ceca288c6f4" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_0dc51685891595212a" visibility="public" start="EAID_CLS_c317e0b3ba883a1162" end="EAID_CLS_e755c56f229ed4bfb5" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_7b67f3abbf956764ff" visibility="public" start="EAID_CLS_c317e0b3ba883a1162" end="EAID_CLS_9be83411188065746c" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_cd6654e733e9adbc78" name="Programområdemedlemskap">
@@ -8085,7 +8072,6 @@ Navn på skole eller skoleeier
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a8f53b31b12e2ff29a" visibility="public" start="EAID_CLS_64e904f2ebf8b9f538" end="EAID_CLS_e92c2079bc89c6d11a" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_2c30516b91cd777ef8" visibility="public" start="EAID_CLS_64e904f2ebf8b9f538" end="EAID_CLS_11c618a515753fb259" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_5677e42c429841a148" visibility="public" start="EAID_CLS_64e904f2ebf8b9f538" end="EAID_CLS_8ec705d192e01ca4aa" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_8937900734d184557e" visibility="public" start="EAID_CLS_64e904f2ebf8b9f538" end="EAID_CLS_9be83411188065746c" />
@@ -8210,6 +8196,7 @@ ISO 8601 format `YYYY-MM-DDThh:mm:ssZ`
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_94df97bb64ed158e54" visibility="public" start="EAID_CLS_befc698f1817a298c1" end="EAID_CLS_64e904f2ebf8b9f538" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_6ac342a9c7647d80ff" visibility="public" start="EAID_CLS_befc698f1817a298c1" end="EAID_CLS_8cd72252caa5382d06" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_ecaed97dbf227e830b" visibility="public" start="EAID_CLS_befc698f1817a298c1" end="EAID_CLS_aad6ed1e0d9928ed93" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_484d2a362d100b7787" visibility="public" start="EAID_CLS_befc698f1817a298c1" end="EAID_CLS_917b8b67ec1ceae3be" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_fcc8bab445fb55fc37" name="Eksamensgruppemedlemskap">
               <properties documentation="Medlemskap i eksamensgrupper.&#10;&#10;# Beskrivelse&#10;&#10;Gruppemedlemskap som knytter sammen elevforhold og eksamensgrupper.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_ab5b677871f99f3c43">
@@ -11827,7 +11814,7 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
       <element xmi:idref="EAID_CLS_a62447c9dd60a973b1" idref="EAID_CLS_a62447c9dd60a973b1" xmi:type="uml:Class" type="Class" name="Gruppe" scope="public">
         <model package="EAID_PKG_e292aace01a8566dda" ea_eleType="element" />
         <tags />
-        <properties isAbstract="true" sType="Class" scope="public" documentation="En generisk samling av elever og lærere&#10;&#10;# Beskrivelse &#10;&#10;Gruppe representeres som en spesialisering (se tabell nedenfor).&#10;&#10;Grupper knyttes til Utdanningsforhold via Gruppemedlemskap eller direkte relasjoner.&#10;&#10;En gruppe kan ha referanser til kodeverk fra Grep og VIGO. En gruppe kan ha perioder som angir når den er gyldig eller aktiv. Hvorvidt en gruppe har referanser og perioder avhenger av hvilken konkret klasse som benyttes.&#10;&#10;| Klasse | Kode | Periode |&#10;| ------- | ----- | ------ |&#10;| Basisgruppe | | X |&#10;| Kontaktlærergruppe | | X |&#10;| Utdanningsprogram | X | |&#10;| Programområde | X | |&#10;| Fag | X | |&#10;| Årstrinn | X | |&#10;| Eksamensgruppe | | X |&#10;| Undervisningsgruppe | | X |&#10;" stereotype="abstrakt" />
+        <properties isAbstract="true" sType="Class" scope="public" documentation="En generisk samling av elever og lærere&#10;&#10;# Beskrivelse &#10;&#10;Gruppe representeres som en spesialisering (se tabell nedenfor).&#10;&#10;Grupper knyttes til Utdanningsforhold via Gruppemedlemskap eller direkte relasjoner.&#10;" stereotype="abstrakt" />
         <attributes>
           <attribute xmi:idref="EAID_PRP_68fca34b52d9165eaf" idref="EAID_PRP_68fca34b52d9165eaf" name="systemId">
             <properties type="Identifikator" />
@@ -11855,7 +11842,7 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
       <element xmi:idref="EAID_CLS_0d161f922b39eccebe" idref="EAID_CLS_0d161f922b39eccebe" xmi:type="uml:Class" type="Class" name="Gruppemedlemskap" scope="public">
         <model package="EAID_PKG_e292aace01a8566dda" ea_eleType="element" />
         <tags />
-        <properties isAbstract="true" sType="Class" scope="public" documentation="Deltagelse i en gruppe&#10;&#10;# Beskrivelse&#10;&#10;Knytter sammen et elevforhold og en gruppe (basisgruppe, kontaktlærergruppe, undervisningsgruppe, eksamensgruppe eller programområde). Gjør det mulig å uttrykke gyldighetsperiode for et medlemskap.&#10;" stereotype="abstrakt" />
+        <properties isAbstract="true" sType="Class" scope="public" documentation="Deltagelse i en gruppe&#10;&#10;# Beskrivelse&#10;&#10;Knytter sammen et elevforhold og en gruppe. Gjør det mulig å uttrykke gyldighetsperiode for et medlemskap.&#10;" stereotype="abstrakt" />
         <attributes>
           <attribute xmi:idref="EAID_PRP_5c089a76c0b96ee4ee" idref="EAID_PRP_5c089a76c0b96ee4ee" name="systemId">
             <properties type="Identifikator" />
@@ -12113,28 +12100,10 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <model package2="EAID_PKG_606159134ff04f6d3c" ea_eleType="package" package="EAID_PKG_93ea470388b4d82056" />
         <tags />
         </element>
-      <element xmi:idref="EAID_CLS_d5c4c414d65d20a7f9" idref="EAID_CLS_d5c4c414d65d20a7f9" xmi:type="uml:Class" type="Class" name="Brevtype" scope="public">
+      <element xmi:idref="EAID_CLS_d8c10b1c582791aca9" idref="EAID_CLS_d8c10b1c582791aca9" xmi:type="uml:Class" type="Class" name="Avbruddsårsak" scope="public">
         <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Beskriver hvilken prøve lærlingen/lærekandidaten går opp til.&#10;* F - Fagbrev&#10;* S - Svennebrev&#10;* K - Kompetansebevis&#10;* B - Praksisbrev&#10;&#10;# Referanse&#10;[UDIR - Registreringshåndbok - C22](https://regbok.udir.no/oversikt)&#10;" stereotype="hovedklasse" />
-        <attributes />
-        </element>
-      <element xmi:idref="EAID_CLS_bc9da10a0926871a92" idref="EAID_CLS_bc9da10a0926871a92" xmi:type="uml:Class" type="Class" name="Bevistype" scope="public">
-        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
-        <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Viser hvilken bevistype eleven har fått på opplæringen.&#10;&#10;* KB - Kompetansebevis&#10;* VM - Vitnemål&#10;&#10;&#10;# Referanse&#10;[UDIR - Registreringshåndbok - B22](https://regbok.udir.no/oversikt)&#10;" stereotype="hovedklasse" />
-        <attributes />
-        </element>
-      <element xmi:idref="EAID_CLS_543a0ea73e30d8781d" idref="EAID_CLS_543a0ea73e30d8781d" xmi:type="uml:Class" type="Class" name="Fullførtkode" scope="public">
-        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
-        <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Gir status på hvordan eleven har gjennomført et programområde ved (det normale) skoleårs slutt.&#10;&#10;# Referanse&#10;[UDIR - Registreringshåndbok - B21](https://regbok.udir.no/oversikt)&#10;" stereotype="hovedklasse" />
-        <attributes />
-        </element>
-      <element xmi:idref="EAID_CLS_b95e4a1f323baa9201" idref="EAID_CLS_b95e4a1f323baa9201" xmi:type="uml:Class" type="Class" name="Prøvestatus" scope="public">
-        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
-        <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Resultat av avlagt prøve - Praktisk prøve + teori.&#10;&#10;# Referanse&#10;[UDIR - Registreringshåndbok - C26](https://regbok.udir.no/oversikt)&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Årsaken til at eleven avbryter utdanningsprogrammet (Vg1)/programområdet (Vg2/Vg3) ) i løpet av skoleåret  eller lærlingen/lærekandidaten hever lærekontrakten/opplæringskontrakten.&#10;&#10;# Referanse&#10;&#10;Registreringshåndbok: https://regbok.udir.no/35004/3344/35042-1014313.html&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_5b7ff6c97259284c76" idref="EAID_CLS_5b7ff6c97259284c76" xmi:type="uml:Class" type="Class" name="Betalingsstatus" scope="public">
@@ -12143,22 +12112,70 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties isAbstract="false" sType="Class" scope="public" documentation="Statuser for betaling av eksamen for privatister.&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
-      <element xmi:idref="EAID_CLS_3b6b3fc089f5e00dda" idref="EAID_CLS_3b6b3fc089f5e00dda" xmi:type="uml:Class" type="Class" name="Varseltype" scope="public">
+      <element xmi:idref="EAID_CLS_bc9da10a0926871a92" idref="EAID_CLS_bc9da10a0926871a92" xmi:type="uml:Class" type="Class" name="Bevistype" scope="public">
         <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Viser hvilken type et varsel er.&#10;&#10;# Eksempel&#10;&#10;* Fravær&#10;&#10;* Orden&#10;&#10;* Atferd&#10;&#10;* Manglende vurderingsgrunnlag i fag&#10;&#10;# Referanse&#10;&#10;* [VIS - Opprette og sende varsel ](https://inschool.zendesk.com/hc/no/articles/360030859132-4b-21-Opprette-og-sende-varsel)&#10;* [Forskrift til opplæringslova - &amp;#167; 3-8. Varsling](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_5-1#%C2%A73-8)&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Viser hvilken bevistype eleven har fått på opplæringen.&#10;&#10;* KB - Kompetansebevis&#10;* VM - Vitnemål&#10;&#10;&#10;# Referanse&#10;[UDIR - Registreringshåndbok - B22](https://regbok.udir.no/oversikt)&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
-      <element xmi:idref="EAID_CLS_437a8fea0eef7941c6" idref="EAID_CLS_437a8fea0eef7941c6" xmi:type="uml:Class" type="Class" name="Vitnemålsmerknad" scope="public">
+      <element xmi:idref="EAID_CLS_d5c4c414d65d20a7f9" idref="EAID_CLS_d5c4c414d65d20a7f9" xmi:type="uml:Class" type="Class" name="Brevtype" scope="public">
         <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="En vitnemålsmerknad har en eller flere av følgende funksjoner:&#10;&#10;* gir opplysninger som gjelder opplæringen generelt eller som gjelder hele vitnemålet/kompetansebeviset&#10;&#10;* henviser til vedlegg som gir slike opplysninger&#10;&#10;* utdyper en fagmerknad&#10;&#10;Det kan bare føres vitnemålsmerknader som er gitt av Utdanningsdirektoratet.&#10;&#10;# Referanser&#10;[UDIR : Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Beskriver hvilken prøve lærlingen/lærekandidaten går opp til.&#10;* F - Fagbrev&#10;* S - Svennebrev&#10;* K - Kompetansebevis&#10;* B - Praksisbrev&#10;&#10;# Referanse&#10;[UDIR - Registreringshåndbok - C22](https://regbok.udir.no/oversikt)&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_c8081bf05b678612ce" idref="EAID_CLS_c8081bf05b678612ce" xmi:type="uml:Class" type="Class" name="Eksamensform" scope="public">
+        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Eksamensordningens form.&#10;&#10;# Eksempler:&#10;* Muntlig&#10;* Skriftlig&#10;* Praktisk&#10;&#10;# Referanser&#10;&#10;* https://www.vigo.no/vigokv/ekstype.action&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_20ee2391e13a5e2da9" idref="EAID_CLS_20ee2391e13a5e2da9" xmi:type="uml:Class" type="Class" name="Elevkategori" scope="public">
+        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Kategori som et elevforhold befinner seg innenfor&#10;&#10;# Eksempel&#10;&#10;Gyldige verdier kan være:&#10;* heltid&#10;* deltid&#10;* voksen&#10;* privatist&#10;* norsk-utv-i-utlandet&#10;* utenlandsk-utv-i-norge&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_31260c62481059007c" idref="EAID_CLS_31260c62481059007c" xmi:type="uml:Class" type="Class" name="Fagmerknad" scope="public">
+        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Merknader til vitnemål og kompetansebevis&#10;&#10;# Beskrivelse&#10;&#10;En fagmerknad er en merknad som har en eller flere av disse funksjonene&#10;&#10;- gir opplysninger om faget som ikke går fram av karakterer eller eksamensform&#10;- utdyper opplysninger om karakterer og/eller eksamensform&#10;- henviser til vedlegg som gir slike opplysninger&#10;&#10;# Referanser&#10;&#10;[Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_98f04a023d51f0d848" idref="EAID_CLS_98f04a023d51f0d848" xmi:type="uml:Class" type="Class" name="Fagstatus" scope="public">
         <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Elevens, privatistens eller kandidatens (voksne) status på et gitt fag.&#10;&#10;# Beskrivelse&#10;&#10;Fagstatus er en kode for undervisningen og/eller grunnlaget for karakteren. Den gir informasjon om hvordan det enkelte faget er gjennomført eller evt. ikke gjennomført.&#10;&#10;# Eksempler&#10;&#10;* E - Elev&#10;* F - Fritatt&#10;&#10;# Referanse&#10;&#10;[Registreringshåndbok]( https://regbok.udir.no/felt/?Id=1014315)&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_3076a148b4be460dce" idref="EAID_CLS_3076a148b4be460dce" xmi:type="uml:Class" type="Class" name="Fraværstype" scope="public">
+        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Typer fravær.&#10;&#10;# Referanse&#10;&#10;https://www.udir.no/regelverk-og-tilsyn/skole-og-opplaring/saksbehandling/fravar/fravar-i-videregaende/&#10;&#10;VIS:&#10;https://inschool.zendesk.com/hc/no/articles/360023264091&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_543a0ea73e30d8781d" idref="EAID_CLS_543a0ea73e30d8781d" xmi:type="uml:Class" type="Class" name="Fullførtkode" scope="public">
+        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Gir status på hvordan eleven har gjennomført et programområde ved (det normale) skoleårs slutt.&#10;&#10;# Referanse&#10;[UDIR - Registreringshåndbok - B21](https://regbok.udir.no/oversikt)&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_c9f60b4d15aa43dab9" idref="EAID_CLS_c9f60b4d15aa43dab9" xmi:type="uml:Class" type="Class" name="Grepreferanse" scope="public">
+        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Ekstern referanse til Grepkodeverket.&#10;&#10;# Beskrivelse&#10;&#10;Grep er den nasjonale databasen for fag, læreplaner og opplæringstilbud i grunnopplæringen.&#10;&#10;Referanser til Grepkodeverket skal referere til gyldige og unike koder i REST (JSON) API fra Udir.&#10;&#10;https://www.udir.no/om-udir/data/kl06-grep&#10;&#10;Det er viktig å bruke Grepreferanser og ikke Vigoreferanser. &#10;Bruk data.udir.no , ikke psi.udir.no, eksempelvis https://data.udir.no/kl06/SAL3001 (korrekt), ikke https://psi.udir.no/kl06/SAL3001 (feil).&#10;" stereotype="referanse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_a63adb50e6db0f2347" idref="EAID_CLS_a63adb50e6db0f2347" xmi:type="uml:Class" type="Class" name="Karakterskala" scope="public">
+        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Gruppering av karakterer etter skala (bokstav, orden osv). &#10;&#10;# Eksempler&#10;&#10;* Bokstav – bokstavkarakterer&#10;* Tall – tallkarakterer&#10;* Binær – Bestått/Ikke-bestått&#10;* Prosent – prosentpoeng.&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
+      <element xmi:idref="EAID_CLS_1d2ea71766e6f9ab9c" idref="EAID_CLS_1d2ea71766e6f9ab9c" xmi:type="uml:Class" type="Class" name="Karakterstatus" scope="public">
+        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Kode for karakterer som blir endret.&#10;&#10;# Referanse&#10;&#10;https://regbok.udir.no/35004/3344/35042-1015043.html&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_1a236a7ef38591501c" idref="EAID_CLS_1a236a7ef38591501c" xmi:type="uml:Class" type="Class" name="OtEnhet" scope="public">
@@ -12188,34 +12205,10 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
             </attribute>
           </attributes>
         </element>
-      <element xmi:idref="EAID_CLS_31260c62481059007c" idref="EAID_CLS_31260c62481059007c" xmi:type="uml:Class" type="Class" name="Fagmerknad" scope="public">
+      <element xmi:idref="EAID_CLS_b95e4a1f323baa9201" idref="EAID_CLS_b95e4a1f323baa9201" xmi:type="uml:Class" type="Class" name="Prøvestatus" scope="public">
         <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Merknader til vitnemål og kompetansebevis&#10;&#10;# Beskrivelse&#10;&#10;En fagmerknad er en merknad som har en eller flere av disse funksjonene&#10;&#10;- gir opplysninger om faget som ikke går fram av karakterer eller eksamensform&#10;- utdyper opplysninger om karakterer og/eller eksamensform&#10;- henviser til vedlegg som gir slike opplysninger&#10;&#10;# Referanser&#10;&#10;[Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)&#10;" stereotype="hovedklasse" />
-        <attributes />
-        </element>
-      <element xmi:idref="EAID_CLS_8c00232d083f0f1a84" idref="EAID_CLS_8c00232d083f0f1a84" xmi:type="uml:Class" type="Class" name="Tilrettelegging" scope="public">
-        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
-        <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Tilrettelegging en elev kan ha på eksamen.&#10;" stereotype="hovedklasse" />
-        <attributes />
-        </element>
-      <element xmi:idref="EAID_CLS_d8c10b1c582791aca9" idref="EAID_CLS_d8c10b1c582791aca9" xmi:type="uml:Class" type="Class" name="Avbruddsårsak" scope="public">
-        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
-        <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Årsaken til at eleven avbryter utdanningsprogrammet (Vg1)/programområdet (Vg2/Vg3) ) i løpet av skoleåret  eller lærlingen/lærekandidaten hever lærekontrakten/opplæringskontrakten.&#10;&#10;# Referanse&#10;&#10;Registreringshåndbok: https://regbok.udir.no/35004/3344/35042-1014313.html&#10;" stereotype="hovedklasse" />
-        <attributes />
-        </element>
-      <element xmi:idref="EAID_CLS_c8081bf05b678612ce" idref="EAID_CLS_c8081bf05b678612ce" xmi:type="uml:Class" type="Class" name="Eksamensform" scope="public">
-        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
-        <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Eksamensordningens form.&#10;&#10;# Eksempler:&#10;* Muntlig&#10;* Skriftlig&#10;* Praktisk&#10;&#10;# Referanser&#10;&#10;* https://www.vigo.no/vigokv/ekstype.action&#10;" stereotype="hovedklasse" />
-        <attributes />
-        </element>
-      <element xmi:idref="EAID_CLS_1d2ea71766e6f9ab9c" idref="EAID_CLS_1d2ea71766e6f9ab9c" xmi:type="uml:Class" type="Class" name="Karakterstatus" scope="public">
-        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
-        <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Kode for karakterer som blir endret.&#10;&#10;# Referanse&#10;&#10;https://regbok.udir.no/35004/3344/35042-1015043.html&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Resultat av avlagt prøve - Praktisk prøve + teori.&#10;&#10;# Referanse&#10;[UDIR - Registreringshåndbok - C26](https://regbok.udir.no/oversikt)&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_8cd72252caa5382d06" idref="EAID_CLS_8cd72252caa5382d06" xmi:type="uml:Class" type="Class" name="Skoleår" scope="public">
@@ -12224,22 +12217,28 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties isAbstract="false" sType="Class" scope="public" documentation="Del av året da skoler har undervisning (og ikke ferie).&#10;&#10;# Beskrivelse&#10;&#10;Et skoleår varer som hovedregel fra august til juni.&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
+      <element xmi:idref="EAID_CLS_8ec705d192e01ca4aa" idref="EAID_CLS_8ec705d192e01ca4aa" xmi:type="uml:Class" type="Class" name="Skoleeiertype" scope="public">
+        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Angir hvem er det som eier skole&#10;&#10;# Eksempler&#10;&#10;1 = Fylke&#10;2 = Stat&#10;3 = Kommune&#10;4 = Privat &#10;&#10;# Referanser&#10;&#10;* Vigo Kodeverkdatabase. Skole: [vigo.no/vigokv/skole.action](https://www.vigo.no/vigokv/skole.action)&#10;" stereotype="hovedklasse" />
+        <attributes />
+        </element>
       <element xmi:idref="EAID_CLS_aad6ed1e0d9928ed93" idref="EAID_CLS_aad6ed1e0d9928ed93" xmi:type="uml:Class" type="Class" name="Termin" scope="public">
         <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
         <tags />
         <properties isAbstract="false" sType="Class" scope="public" documentation="Inndeling av skoleåret&#10;&#10;# Beskrivelse&#10;&#10;Et skoleår er som hovedregel inndelt i to terminer. Første termin: medio august til medio januar. Andre termin: medio januar til medio juni.&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
-      <element xmi:idref="EAID_CLS_a63adb50e6db0f2347" idref="EAID_CLS_a63adb50e6db0f2347" xmi:type="uml:Class" type="Class" name="Karakterskala" scope="public">
+      <element xmi:idref="EAID_CLS_8c00232d083f0f1a84" idref="EAID_CLS_8c00232d083f0f1a84" xmi:type="uml:Class" type="Class" name="Tilrettelegging" scope="public">
         <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Gruppering av karakterer etter skala (bokstav, orden osv). &#10;&#10;# Eksempler&#10;&#10;* Bokstav – bokstavkarakterer&#10;* Tall – tallkarakterer&#10;* Binær – Bestått/Ikke-bestått&#10;* Prosent – prosentpoeng.&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Tilrettelegging en elev kan ha på eksamen.&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
-      <element xmi:idref="EAID_CLS_3076a148b4be460dce" idref="EAID_CLS_3076a148b4be460dce" xmi:type="uml:Class" type="Class" name="Fraværstype" scope="public">
+      <element xmi:idref="EAID_CLS_3b6b3fc089f5e00dda" idref="EAID_CLS_3b6b3fc089f5e00dda" xmi:type="uml:Class" type="Class" name="Varseltype" scope="public">
         <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Typer fravær.&#10;&#10;# Referanse&#10;&#10;https://www.udir.no/regelverk-og-tilsyn/skole-og-opplaring/saksbehandling/fravar/fravar-i-videregaende/&#10;&#10;VIS:&#10;https://inschool.zendesk.com/hc/no/articles/360023264091&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Viser hvilken type et varsel er.&#10;&#10;# Eksempel&#10;&#10;* Fravær&#10;&#10;* Orden&#10;&#10;* Atferd&#10;&#10;* Manglende vurderingsgrunnlag i fag&#10;&#10;# Referanse&#10;&#10;* [VIS - Opprette og sende varsel ](https://inschool.zendesk.com/hc/no/articles/360030859132-4b-21-Opprette-og-sende-varsel)&#10;* [Forskrift til opplæringslova - &amp;#167; 3-8. Varsling](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_5-1#%C2%A73-8)&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_9be83411188065746c" idref="EAID_CLS_9be83411188065746c" xmi:type="uml:Class" type="Class" name="Vigoreferanse" scope="public">
@@ -12248,22 +12247,10 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties isAbstract="false" sType="Class" scope="public" documentation="Ekstern referanse til VIGO Kodeverksbase.&#10;&#10;# Beskrivelse&#10;&#10;Kodeverket kommer fra Grep (Utdanningsdirektoratet sin læreplandatabase), Nasjonalt skoleregister og VIGO.&#10;&#10;Referanser til VIGO Kodeverksbase skal referere til gyldige og unike koder i REST (JSON) API fra Vigo IKS/FINTLabs.&#10;&#10;https://api.felleskomponent.no/utdanning/vigo/kodeverk/swagger-ui.html#/&#10;" stereotype="referanse" />
         <attributes />
         </element>
-      <element xmi:idref="EAID_CLS_c9f60b4d15aa43dab9" idref="EAID_CLS_c9f60b4d15aa43dab9" xmi:type="uml:Class" type="Class" name="Grepreferanse" scope="public">
+      <element xmi:idref="EAID_CLS_437a8fea0eef7941c6" idref="EAID_CLS_437a8fea0eef7941c6" xmi:type="uml:Class" type="Class" name="Vitnemålsmerknad" scope="public">
         <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Ekstern referanse til Grepkodeverket.&#10;&#10;# Beskrivelse&#10;&#10;Grep er den nasjonale databasen for fag, læreplaner og opplæringstilbud i grunnopplæringen.&#10;&#10;Referanser til Grepkodeverket skal referere til gyldige og unike koder i REST (JSON) API fra Udir.&#10;&#10;https://www.udir.no/om-udir/data/kl06-grep&#10;&#10;Det er viktig å bruke Grepreferanser og ikke Vigoreferanser. &#10;Bruk data.udir.no , ikke psi.udir.no, eksempelvis https://data.udir.no/kl06/SAL3001 (korrekt), ikke https://psi.udir.no/kl06/SAL3001 (feil).&#10;" stereotype="referanse" />
-        <attributes />
-        </element>
-      <element xmi:idref="EAID_CLS_20ee2391e13a5e2da9" idref="EAID_CLS_20ee2391e13a5e2da9" xmi:type="uml:Class" type="Class" name="Elevkategori" scope="public">
-        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
-        <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Kategori som et elevforhold befinner seg innenfor&#10;&#10;# Eksempel&#10;&#10;Gyldige verdier kan være:&#10;* heltid&#10;* deltid&#10;* voksen&#10;* privatist&#10;* norsk-utv-i-utlandet&#10;* utenlandsk-utv-i-norge&#10;" stereotype="hovedklasse" />
-        <attributes />
-        </element>
-      <element xmi:idref="EAID_CLS_8ec705d192e01ca4aa" idref="EAID_CLS_8ec705d192e01ca4aa" xmi:type="uml:Class" type="Class" name="Skoleeiertype" scope="public">
-        <model package="EAID_PKG_606159134ff04f6d3c" ea_eleType="element" />
-        <tags />
-        <properties isAbstract="false" sType="Class" scope="public" documentation="Angir hvem er det som eier skole&#10;&#10;# Eksempler&#10;&#10;1 = Fylke&#10;2 = Stat&#10;3 = Kommune&#10;4 = Privat &#10;&#10;# Referanser&#10;&#10;* Vigo Kodeverkdatabase. Skole: [vigo.no/vigokv/skole.action](https://www.vigo.no/vigokv/skole.action)&#10;" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="En vitnemålsmerknad har en eller flere av følgende funksjoner:&#10;&#10;* gir opplysninger som gjelder opplæringen generelt eller som gjelder hele vitnemålet/kompetansebeviset&#10;&#10;* henviser til vedlegg som gir slike opplysninger&#10;&#10;* utdyper en fagmerknad&#10;&#10;Det kan bare føres vitnemålsmerknader som er gitt av Utdanningsdirektoratet.&#10;&#10;# Referanser&#10;[UDIR : Merknader til vitnemål og kompetansebevis](https://www.udir.no/eksamen-og-prover/dokumentasjon/vitnemal-og-kompetansebevis/foring-vitnemal-kompetansebevis-vgs/3-merknader-til-vitnemal-og-kompetansebevis/)&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_PKG_d69b36e7b348f13887" idref="EAID_PKG_d69b36e7b348f13887" xmi:type="uml:Package" type="Package" name="Larling" scope="public">
@@ -17517,6 +17504,24 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_793de7c7eb783922d2" idref="EAID_ASC_793de7c7eb783922d2" start="EAID_CLS_11abbdc19270478625" end="EAID_CLS_917b8b67ec1ceae3be">
+        <source xmi:idref="EAID_CLS_11abbdc19270478625" idref="EAID_CLS_11abbdc19270478625">
+          <model type="Class" name="Kontaktlærergruppe" />
+          <role visibility="Public" name="kontaktlærergruppe" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle grupper læreren er kontaktlærer for." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_917b8b67ec1ceae3be" idref="EAID_CLS_917b8b67ec1ceae3be">
+          <model type="Class" name="Undervisningsforhold" />
+          <role name="undervisningsforhold" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle kontaktlærere i gruppen." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_1c4fa17ba3347570e9" idref="EAID_GEN_1c4fa17ba3347570e9" start="EAID_CLS_0329c6b14ca12dbdba" end="EAID_CLS_0d161f922b39eccebe">
         <source xmi:idref="EAID_CLS_0329c6b14ca12dbdba" idref="EAID_CLS_0329c6b14ca12dbdba">
           <model type="Class" name="Kontaktlærergruppemedlemskap" />
@@ -17862,24 +17867,6 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_5c655b4e2cfb2e6ac3" idref="EAID_ASC_5c655b4e2cfb2e6ac3" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_befc698f1817a298c1">
-        <source xmi:idref="EAID_CLS_917b8b67ec1ceae3be" idref="EAID_CLS_917b8b67ec1ceae3be">
-          <model type="Class" name="Undervisningsforhold" />
-          <role visibility="Public" name="undervisningsforhold" />
-          <type multiplicity="0..*" />
-          <documentation value="Alle lærerne tilknyttet eksamensgruppen." />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_befc698f1817a298c1" idref="EAID_CLS_befc698f1817a298c1">
-          <model type="Class" name="Eksamensgruppe" />
-          <role name="eksamensgruppe" visibility="Public" />
-          <type multiplicity="0..*" />
-          <documentation value="Alle eksamensgruppene tilknyttet læreren." />
-          <tags />
-          </target>
-        <properties ea_type="Association" direction="Bi-Directional" />
-        <tags />
-        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_3845109a70b1757cb9" idref="EAID_ASC_3845109a70b1757cb9" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_a9ab455ab2f60a172a">
         <source xmi:idref="EAID_CLS_917b8b67ec1ceae3be" idref="EAID_CLS_917b8b67ec1ceae3be">
           <model type="Class" name="Undervisningsforhold" />
@@ -17898,24 +17885,6 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_76af7718f908f8acd4" idref="EAID_ASC_76af7718f908f8acd4" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_11abbdc19270478625">
-        <source xmi:idref="EAID_CLS_917b8b67ec1ceae3be" idref="EAID_CLS_917b8b67ec1ceae3be">
-          <model type="Class" name="Undervisningsforhold" />
-          <role visibility="Public" name="undervisningsforhold" />
-          <type multiplicity="0..*" />
-          <documentation value="Alle kontaktlærere i gruppen." />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_11abbdc19270478625" idref="EAID_CLS_11abbdc19270478625">
-          <model type="Class" name="Kontaktlærergruppe" />
-          <role name="kontaktlærergruppe" visibility="Public" />
-          <type multiplicity="0..*" />
-          <documentation value="Alle grupper læreren er kontaktlærer for." />
-          <tags />
-          </target>
-        <properties ea_type="Association" direction="Bi-Directional" />
-        <tags />
-        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_47a1e2d1e68dcbfd66" idref="EAID_ASC_47a1e2d1e68dcbfd66" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_64e904f2ebf8b9f538">
         <source xmi:idref="EAID_CLS_917b8b67ec1ceae3be" idref="EAID_CLS_917b8b67ec1ceae3be">
           <model type="Class" name="Undervisningsforhold" />
@@ -17929,24 +17898,6 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
           <role name="skole" visibility="Public" />
           <type multiplicity="1" />
           <documentation value="Skole som undervisningsforhold er tilknyttet." />
-          <tags />
-          </target>
-        <properties ea_type="Association" direction="Bi-Directional" />
-        <tags />
-        </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_dcc85fc61ed9670a87" idref="EAID_ASC_dcc85fc61ed9670a87" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_d404ea07009fe8b767">
-        <source xmi:idref="EAID_CLS_917b8b67ec1ceae3be" idref="EAID_CLS_917b8b67ec1ceae3be">
-          <model type="Class" name="Undervisningsforhold" />
-          <role visibility="Public" name="undervisningsforhold" />
-          <type multiplicity="0..*" />
-          <documentation value="Alle lærere i gruppen." />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_d404ea07009fe8b767" idref="EAID_CLS_d404ea07009fe8b767">
-          <model type="Class" name="Undervisningsgruppe" />
-          <role name="undervisningsgruppe" visibility="Public" />
-          <type multiplicity="0..*" />
-          <documentation value="Alle undervisningsgrupper læreren deltar i." />
           <tags />
           </target>
         <properties ea_type="Association" direction="Bi-Directional" />
@@ -18021,57 +17972,9 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_77eb539658b3941595" idref="EAID_GEN_77eb539658b3941595" start="EAID_CLS_d5c4c414d65d20a7f9" end="EAID_CLS_3385458244847ec7db">
-        <source xmi:idref="EAID_CLS_d5c4c414d65d20a7f9" idref="EAID_CLS_d5c4c414d65d20a7f9">
-          <model type="Class" name="Brevtype" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
-          <model type="Class" name="Begrep" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </target>
-        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
-        <tags />
-        </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_5e59474da6a34da169" idref="EAID_GEN_5e59474da6a34da169" start="EAID_CLS_bc9da10a0926871a92" end="EAID_CLS_3385458244847ec7db">
-        <source xmi:idref="EAID_CLS_bc9da10a0926871a92" idref="EAID_CLS_bc9da10a0926871a92">
-          <model type="Class" name="Bevistype" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
-          <model type="Class" name="Begrep" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </target>
-        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
-        <tags />
-        </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_6109ac4e2a674b9d2c" idref="EAID_GEN_6109ac4e2a674b9d2c" start="EAID_CLS_543a0ea73e30d8781d" end="EAID_CLS_3385458244847ec7db">
-        <source xmi:idref="EAID_CLS_543a0ea73e30d8781d" idref="EAID_CLS_543a0ea73e30d8781d">
-          <model type="Class" name="Fullførtkode" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
-          <model type="Class" name="Begrep" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </target>
-        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
-        <tags />
-        </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_c7e254eafb4c5e70c2" idref="EAID_GEN_c7e254eafb4c5e70c2" start="EAID_CLS_b95e4a1f323baa9201" end="EAID_CLS_3385458244847ec7db">
-        <source xmi:idref="EAID_CLS_b95e4a1f323baa9201" idref="EAID_CLS_b95e4a1f323baa9201">
-          <model type="Class" name="Prøvestatus" />
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_af0243aae03a89e7d0" idref="EAID_GEN_af0243aae03a89e7d0" start="EAID_CLS_d8c10b1c582791aca9" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_d8c10b1c582791aca9" idref="EAID_CLS_d8c10b1c582791aca9">
+          <model type="Class" name="Avbruddsårsak" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -18101,9 +18004,9 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_e414482ebea21cdfef" idref="EAID_GEN_e414482ebea21cdfef" start="EAID_CLS_3b6b3fc089f5e00dda" end="EAID_CLS_3385458244847ec7db">
-        <source xmi:idref="EAID_CLS_3b6b3fc089f5e00dda" idref="EAID_CLS_3b6b3fc089f5e00dda">
-          <model type="Class" name="Varseltype" />
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_5e59474da6a34da169" idref="EAID_GEN_5e59474da6a34da169" start="EAID_CLS_bc9da10a0926871a92" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_bc9da10a0926871a92" idref="EAID_CLS_bc9da10a0926871a92">
+          <model type="Class" name="Bevistype" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -18117,9 +18020,57 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_09b1804d9a517e92c8" idref="EAID_GEN_09b1804d9a517e92c8" start="EAID_CLS_437a8fea0eef7941c6" end="EAID_CLS_3385458244847ec7db">
-        <source xmi:idref="EAID_CLS_437a8fea0eef7941c6" idref="EAID_CLS_437a8fea0eef7941c6">
-          <model type="Class" name="Vitnemålsmerknad" />
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_77eb539658b3941595" idref="EAID_GEN_77eb539658b3941595" start="EAID_CLS_d5c4c414d65d20a7f9" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_d5c4c414d65d20a7f9" idref="EAID_CLS_d5c4c414d65d20a7f9">
+          <model type="Class" name="Brevtype" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_9ee3b741669148e8bc" idref="EAID_GEN_9ee3b741669148e8bc" start="EAID_CLS_c8081bf05b678612ce" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_c8081bf05b678612ce" idref="EAID_CLS_c8081bf05b678612ce">
+          <model type="Class" name="Eksamensform" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_f274442bb3f08f4c22" idref="EAID_GEN_f274442bb3f08f4c22" start="EAID_CLS_20ee2391e13a5e2da9" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_20ee2391e13a5e2da9" idref="EAID_CLS_20ee2391e13a5e2da9">
+          <model type="Class" name="Elevkategori" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_61a1891a729663f73b" idref="EAID_GEN_61a1891a729663f73b" start="EAID_CLS_31260c62481059007c" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_31260c62481059007c" idref="EAID_CLS_31260c62481059007c">
+          <model type="Class" name="Fagmerknad" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -18136,6 +18087,87 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_45753febdaa1d06fc6" idref="EAID_GEN_45753febdaa1d06fc6" start="EAID_CLS_98f04a023d51f0d848" end="EAID_CLS_3385458244847ec7db">
         <source xmi:idref="EAID_CLS_98f04a023d51f0d848" idref="EAID_CLS_98f04a023d51f0d848">
           <model type="Class" name="Fagstatus" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_31f76c46860e903f54" idref="EAID_GEN_31f76c46860e903f54" start="EAID_CLS_3076a148b4be460dce" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_3076a148b4be460dce" idref="EAID_CLS_3076a148b4be460dce">
+          <model type="Class" name="Fraværstype" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_6109ac4e2a674b9d2c" idref="EAID_GEN_6109ac4e2a674b9d2c" start="EAID_CLS_543a0ea73e30d8781d" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_543a0ea73e30d8781d" idref="EAID_CLS_543a0ea73e30d8781d">
+          <model type="Class" name="Fullførtkode" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_2107f91810b47f38a4" idref="EAID_GEN_2107f91810b47f38a4" start="EAID_CLS_a63adb50e6db0f2347" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_a63adb50e6db0f2347" idref="EAID_CLS_a63adb50e6db0f2347">
+          <model type="Class" name="Karakterskala" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_79c05c66d0b4de5ce0" idref="EAID_ASC_79c05c66d0b4de5ce0" start="EAID_CLS_a63adb50e6db0f2347" end="EAID_CLS_9be83411188065746c">
+        <source xmi:idref="EAID_CLS_a63adb50e6db0f2347" idref="EAID_CLS_a63adb50e6db0f2347">
+          <model type="Class" name="Karakterskala" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_9be83411188065746c" idref="EAID_CLS_9be83411188065746c">
+          <model type="Class" name="Vigoreferanse" />
+          <role name="vigoreferanse" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Ekstern referanse til Vigo kodeverksdatabase." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_5c3f43c7076215a591" idref="EAID_GEN_5c3f43c7076215a591" start="EAID_CLS_1d2ea71766e6f9ab9c" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_1d2ea71766e6f9ab9c" idref="EAID_CLS_1d2ea71766e6f9ab9c">
+          <model type="Class" name="Karakterstatus" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -18198,73 +18230,9 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_61a1891a729663f73b" idref="EAID_GEN_61a1891a729663f73b" start="EAID_CLS_31260c62481059007c" end="EAID_CLS_3385458244847ec7db">
-        <source xmi:idref="EAID_CLS_31260c62481059007c" idref="EAID_CLS_31260c62481059007c">
-          <model type="Class" name="Fagmerknad" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
-          <model type="Class" name="Begrep" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </target>
-        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
-        <tags />
-        </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_247d8fb6758a34cdf6" idref="EAID_GEN_247d8fb6758a34cdf6" start="EAID_CLS_8c00232d083f0f1a84" end="EAID_CLS_3385458244847ec7db">
-        <source xmi:idref="EAID_CLS_8c00232d083f0f1a84" idref="EAID_CLS_8c00232d083f0f1a84">
-          <model type="Class" name="Tilrettelegging" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
-          <model type="Class" name="Begrep" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </target>
-        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
-        <tags />
-        </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_af0243aae03a89e7d0" idref="EAID_GEN_af0243aae03a89e7d0" start="EAID_CLS_d8c10b1c582791aca9" end="EAID_CLS_3385458244847ec7db">
-        <source xmi:idref="EAID_CLS_d8c10b1c582791aca9" idref="EAID_CLS_d8c10b1c582791aca9">
-          <model type="Class" name="Avbruddsårsak" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
-          <model type="Class" name="Begrep" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </target>
-        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
-        <tags />
-        </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_9ee3b741669148e8bc" idref="EAID_GEN_9ee3b741669148e8bc" start="EAID_CLS_c8081bf05b678612ce" end="EAID_CLS_3385458244847ec7db">
-        <source xmi:idref="EAID_CLS_c8081bf05b678612ce" idref="EAID_CLS_c8081bf05b678612ce">
-          <model type="Class" name="Eksamensform" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
-          <model type="Class" name="Begrep" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </target>
-        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
-        <tags />
-        </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_5c3f43c7076215a591" idref="EAID_GEN_5c3f43c7076215a591" start="EAID_CLS_1d2ea71766e6f9ab9c" end="EAID_CLS_3385458244847ec7db">
-        <source xmi:idref="EAID_CLS_1d2ea71766e6f9ab9c" idref="EAID_CLS_1d2ea71766e6f9ab9c">
-          <model type="Class" name="Karakterstatus" />
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_c7e254eafb4c5e70c2" idref="EAID_GEN_c7e254eafb4c5e70c2" start="EAID_CLS_b95e4a1f323baa9201" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_b95e4a1f323baa9201" idref="EAID_CLS_b95e4a1f323baa9201">
+          <model type="Class" name="Prøvestatus" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -18294,6 +18262,22 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_96e17bd431b34547c9" idref="EAID_GEN_96e17bd431b34547c9" start="EAID_CLS_8ec705d192e01ca4aa" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_8ec705d192e01ca4aa" idref="EAID_CLS_8ec705d192e01ca4aa">
+          <model type="Class" name="Skoleeiertype" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
+          <model type="Class" name="Begrep" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </target>
+        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_dc81664f4e2d9c9fdd" idref="EAID_GEN_dc81664f4e2d9c9fdd" start="EAID_CLS_aad6ed1e0d9928ed93" end="EAID_CLS_3385458244847ec7db">
         <source xmi:idref="EAID_CLS_aad6ed1e0d9928ed93" idref="EAID_CLS_aad6ed1e0d9928ed93">
           <model type="Class" name="Termin" />
@@ -18310,9 +18294,9 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_2107f91810b47f38a4" idref="EAID_GEN_2107f91810b47f38a4" start="EAID_CLS_a63adb50e6db0f2347" end="EAID_CLS_3385458244847ec7db">
-        <source xmi:idref="EAID_CLS_a63adb50e6db0f2347" idref="EAID_CLS_a63adb50e6db0f2347">
-          <model type="Class" name="Karakterskala" />
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_247d8fb6758a34cdf6" idref="EAID_GEN_247d8fb6758a34cdf6" start="EAID_CLS_8c00232d083f0f1a84" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_8c00232d083f0f1a84" idref="EAID_CLS_8c00232d083f0f1a84">
+          <model type="Class" name="Tilrettelegging" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -18326,26 +18310,9 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_79c05c66d0b4de5ce0" idref="EAID_ASC_79c05c66d0b4de5ce0" start="EAID_CLS_a63adb50e6db0f2347" end="EAID_CLS_9be83411188065746c">
-        <source xmi:idref="EAID_CLS_a63adb50e6db0f2347" idref="EAID_CLS_a63adb50e6db0f2347">
-          <model type="Class" name="Karakterskala" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_9be83411188065746c" idref="EAID_CLS_9be83411188065746c">
-          <model type="Class" name="Vigoreferanse" />
-          <role name="vigoreferanse" visibility="Public" />
-          <type multiplicity="0..1" />
-          <documentation value="Ekstern referanse til Vigo kodeverksdatabase." />
-          <tags />
-          </target>
-        <properties ea_type="Association" direction="Source -&gt; Destination" />
-        <tags />
-        </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_31f76c46860e903f54" idref="EAID_GEN_31f76c46860e903f54" start="EAID_CLS_3076a148b4be460dce" end="EAID_CLS_3385458244847ec7db">
-        <source xmi:idref="EAID_CLS_3076a148b4be460dce" idref="EAID_CLS_3076a148b4be460dce">
-          <model type="Class" name="Fraværstype" />
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_e414482ebea21cdfef" idref="EAID_GEN_e414482ebea21cdfef" start="EAID_CLS_3b6b3fc089f5e00dda" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_3b6b3fc089f5e00dda" idref="EAID_CLS_3b6b3fc089f5e00dda">
+          <model type="Class" name="Varseltype" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -18359,25 +18326,9 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_f274442bb3f08f4c22" idref="EAID_GEN_f274442bb3f08f4c22" start="EAID_CLS_20ee2391e13a5e2da9" end="EAID_CLS_3385458244847ec7db">
-        <source xmi:idref="EAID_CLS_20ee2391e13a5e2da9" idref="EAID_CLS_20ee2391e13a5e2da9">
-          <model type="Class" name="Elevkategori" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_3385458244847ec7db" idref="EAID_CLS_3385458244847ec7db">
-          <model type="Class" name="Begrep" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
-          <tags />
-          </target>
-        <properties ea_type="Generalization" direction="Source -&gt; Destination" />
-        <tags />
-        </connector>
-      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_96e17bd431b34547c9" idref="EAID_GEN_96e17bd431b34547c9" start="EAID_CLS_8ec705d192e01ca4aa" end="EAID_CLS_3385458244847ec7db">
-        <source xmi:idref="EAID_CLS_8ec705d192e01ca4aa" idref="EAID_CLS_8ec705d192e01ca4aa">
-          <model type="Class" name="Skoleeiertype" />
+      <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_09b1804d9a517e92c8" idref="EAID_GEN_09b1804d9a517e92c8" start="EAID_CLS_437a8fea0eef7941c6" end="EAID_CLS_3385458244847ec7db">
+        <source xmi:idref="EAID_CLS_437a8fea0eef7941c6" idref="EAID_CLS_437a8fea0eef7941c6">
+          <model type="Class" name="Vitnemålsmerknad" />
           <role visibility="Public" />
           <type multiplicity="0..1" />
           <tags />
@@ -18650,19 +18601,19 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_a01add91a916a77b6b" idref="EAID_ASC_a01add91a916a77b6b" start="EAID_CLS_e92c2079bc89c6d11a" end="EAID_CLS_c317e0b3ba883a1162">
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_43047b819fec4b7c87" idref="EAID_ASC_43047b819fec4b7c87" start="EAID_CLS_e92c2079bc89c6d11a" end="EAID_CLS_64e904f2ebf8b9f538">
         <source xmi:idref="EAID_CLS_e92c2079bc89c6d11a" idref="EAID_CLS_e92c2079bc89c6d11a">
           <model type="Class" name="Fag" />
           <role visibility="Public" name="fag" />
           <type multiplicity="0..*" />
-          <documentation value="Alle fag som er relatert til et gitt programområde" />
+          <documentation value="Fagene som skolen tilbyr." />
           <tags />
           </source>
-        <target xmi:idref="EAID_CLS_c317e0b3ba883a1162" idref="EAID_CLS_c317e0b3ba883a1162">
-          <model type="Class" name="Programområde" />
-          <role name="programområde" visibility="Public" />
+        <target xmi:idref="EAID_CLS_64e904f2ebf8b9f538" idref="EAID_CLS_64e904f2ebf8b9f538">
+          <model type="Class" name="Skole" />
+          <role name="skole" visibility="Public" />
           <type multiplicity="0..*" />
-          <documentation value="Programområde faget tilhører." />
+          <documentation value="Alle skoler som tilbyr faget." />
           <tags />
           </target>
         <properties ea_type="Association" direction="Bi-Directional" />
@@ -18944,6 +18895,24 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_e08e0e9966d70cb45f" idref="EAID_ASC_e08e0e9966d70cb45f" start="EAID_CLS_d404ea07009fe8b767" end="EAID_CLS_917b8b67ec1ceae3be">
+        <source xmi:idref="EAID_CLS_d404ea07009fe8b767" idref="EAID_CLS_d404ea07009fe8b767">
+          <model type="Class" name="Undervisningsgruppe" />
+          <role visibility="Public" name="undervisningsgruppe" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle undervisningsgrupper læreren deltar i." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_917b8b67ec1ceae3be" idref="EAID_CLS_917b8b67ec1ceae3be">
+          <model type="Class" name="Undervisningsforhold" />
+          <role name="undervisningsforhold" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle lærere i gruppen." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_2c0b8228b01362fa9c" idref="EAID_GEN_2c0b8228b01362fa9c" start="EAID_CLS_1adfd5c22867ff649b" end="EAID_CLS_0d161f922b39eccebe">
         <source xmi:idref="EAID_CLS_1adfd5c22867ff649b" idref="EAID_CLS_1adfd5c22867ff649b">
           <model type="Class" name="Undervisningsgruppemedlemskap" />
@@ -19029,24 +18998,6 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_2e929067e5016cb40d" idref="EAID_ASC_2e929067e5016cb40d" start="EAID_CLS_b2a41a5ceca288c6f4" end="EAID_CLS_c317e0b3ba883a1162">
-        <source xmi:idref="EAID_CLS_b2a41a5ceca288c6f4" idref="EAID_CLS_b2a41a5ceca288c6f4">
-          <model type="Class" name="Årstrinn" />
-          <role visibility="Public" name="trinn" />
-          <type multiplicity="0..*" />
-          <documentation value="Alle trinn som finnes på dette programområdet" />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_c317e0b3ba883a1162" idref="EAID_CLS_c317e0b3ba883a1162">
-          <model type="Class" name="Programområde" />
-          <role name="programområde" visibility="Public" />
-          <type multiplicity="0..*" />
-          <documentation value="Alle programområder som er relevante for trinnet" />
-          <tags />
-          </target>
-        <properties ea_type="Association" direction="Bi-Directional" />
-        <tags />
-        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_a97304abe9222d6526" idref="EAID_ASC_a97304abe9222d6526" start="EAID_CLS_b2a41a5ceca288c6f4" end="EAID_CLS_9be83411188065746c">
         <source xmi:idref="EAID_CLS_b2a41a5ceca288c6f4" idref="EAID_CLS_b2a41a5ceca288c6f4">
           <model type="Class" name="Årstrinn" />
@@ -19080,6 +19031,24 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_c3b488e76b5b29dbe9" idref="EAID_ASC_c3b488e76b5b29dbe9" start="EAID_CLS_c317e0b3ba883a1162" end="EAID_CLS_e92c2079bc89c6d11a">
+        <source xmi:idref="EAID_CLS_c317e0b3ba883a1162" idref="EAID_CLS_c317e0b3ba883a1162">
+          <model type="Class" name="Programområde" />
+          <role visibility="Public" name="programområde" />
+          <type multiplicity="0..*" />
+          <documentation value="Programområde faget tilhører." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_e92c2079bc89c6d11a" idref="EAID_CLS_e92c2079bc89c6d11a">
+          <model type="Class" name="Fag" />
+          <role name="fag" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle fag som er relatert til et gitt programområde." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_2a6ecc06cc576cc409" idref="EAID_ASC_2a6ecc06cc576cc409" start="EAID_CLS_c317e0b3ba883a1162" end="EAID_CLS_c9f60b4d15aa43dab9">
         <source xmi:idref="EAID_CLS_c317e0b3ba883a1162" idref="EAID_CLS_c317e0b3ba883a1162">
           <model type="Class" name="Programområde" />
@@ -19095,6 +19064,24 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_de219d5d86eb02bd03" idref="EAID_ASC_de219d5d86eb02bd03" start="EAID_CLS_c317e0b3ba883a1162" end="EAID_CLS_b2a41a5ceca288c6f4">
+        <source xmi:idref="EAID_CLS_c317e0b3ba883a1162" idref="EAID_CLS_c317e0b3ba883a1162">
+          <model type="Class" name="Programområde" />
+          <role visibility="Public" name="programområde" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle programområder som er relevante for trinnet." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_b2a41a5ceca288c6f4" idref="EAID_CLS_b2a41a5ceca288c6f4">
+          <model type="Class" name="Årstrinn" />
+          <role name="trinn" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle trinn som finnes på dette programområdet." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_0dc51685891595212a" idref="EAID_ASC_0dc51685891595212a" start="EAID_CLS_c317e0b3ba883a1162" end="EAID_CLS_e755c56f229ed4bfb5">
@@ -19198,24 +19185,6 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
           <tags />
           </target>
         <properties ea_type="Generalization" direction="Source -&gt; Destination" />
-        <tags />
-        </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_a8f53b31b12e2ff29a" idref="EAID_ASC_a8f53b31b12e2ff29a" start="EAID_CLS_64e904f2ebf8b9f538" end="EAID_CLS_e92c2079bc89c6d11a">
-        <source xmi:idref="EAID_CLS_64e904f2ebf8b9f538" idref="EAID_CLS_64e904f2ebf8b9f538">
-          <model type="Class" name="Skole" />
-          <role visibility="Public" name="skole" />
-          <type multiplicity="0..*" />
-          <documentation value="Alle skoler som tilbyr faget" />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_e92c2079bc89c6d11a" idref="EAID_CLS_e92c2079bc89c6d11a">
-          <model type="Class" name="Fag" />
-          <role name="fag" visibility="Public" />
-          <type multiplicity="0..*" />
-          <documentation value="Fagene som skolen tilbyr" />
-          <tags />
-          </target>
-        <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_2c30516b91cd777ef8" idref="EAID_ASC_2c30516b91cd777ef8" start="EAID_CLS_64e904f2ebf8b9f538" end="EAID_CLS_11c618a515753fb259">
@@ -19474,6 +19443,24 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_484d2a362d100b7787" idref="EAID_ASC_484d2a362d100b7787" start="EAID_CLS_befc698f1817a298c1" end="EAID_CLS_917b8b67ec1ceae3be">
+        <source xmi:idref="EAID_CLS_befc698f1817a298c1" idref="EAID_CLS_befc698f1817a298c1">
+          <model type="Class" name="Eksamensgruppe" />
+          <role visibility="Public" name="eksamensgruppe" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle eksamensgruppene tilknyttet læreren." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_917b8b67ec1ceae3be" idref="EAID_CLS_917b8b67ec1ceae3be">
+          <model type="Class" name="Undervisningsforhold" />
+          <role name="undervisningsforhold" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle lærerne tilknyttet eksamensgruppen." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_ab5b677871f99f3c43" idref="EAID_GEN_ab5b677871f99f3c43" start="EAID_CLS_fcc8bab445fb55fc37" end="EAID_CLS_0d161f922b39eccebe">

@@ -126,6 +126,8 @@ classes:
       undervisningsforhold:
         range: Undervisningsforhold
         inverse: eksamensgruppe
+        annotations:
+          primaryRelation: true
         description: |
           Alle lærerne tilknyttet eksamensgruppen.
         multivalued: true

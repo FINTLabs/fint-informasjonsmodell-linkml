@@ -108,16 +108,16 @@ classes:
       programområde:
         range: Programområde
         inverse: fag
-        annotations:
-          primaryRelation: true
         description: |
           Programområde faget tilhører.
         multivalued: true
       skole:
         range: Skole
         inverse: fag
+        annotations:
+          primaryRelation: true
         description: |
-          Alle skoler som tilbyr faget
+          Alle skoler som tilbyr faget.
         multivalued: true
       tilrettelegging:
         range: Elevtilrettelegging
@@ -335,6 +335,8 @@ classes:
       undervisningsforhold:
         range: Undervisningsforhold
         inverse: undervisningsgruppe
+        annotations:
+          primaryRelation: true
         description: |
           Alle lærere i gruppen.
         multivalued: true
