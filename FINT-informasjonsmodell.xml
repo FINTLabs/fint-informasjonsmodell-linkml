@@ -6991,6 +6991,7 @@ Synonym:
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_0cf9e2e1969783ebef" visibility="public" start="EAID_CLS_a9ab455ab2f60a172a" end="EAID_CLS_8cd72252caa5382d06" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_bd3549a593eefeaa46" visibility="public" start="EAID_CLS_a9ab455ab2f60a172a" end="EAID_CLS_aad6ed1e0d9928ed93" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_3a82837bd7dbc5c4bb" visibility="public" start="EAID_CLS_a9ab455ab2f60a172a" end="EAID_CLS_b2a41a5ceca288c6f4" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_0f53cfeab1b3476c8f" visibility="public" start="EAID_CLS_a9ab455ab2f60a172a" end="EAID_CLS_917b8b67ec1ceae3be" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_bc18f199919735718f" name="Klassemedlemskap">
               <properties documentation="Medlemskap i klasser.&#10;&#10;# Beskrivelse&#10;&#10;Gruppemedlemskap som knytter sammen elevforhold og klasser.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_fd7a74dee439daaa30">
@@ -7134,7 +7135,6 @@ En skoleresurs kan ha flere undervisningsforhold, men kun ett undervisningsforho
               </packagedElement>
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_b98b916864b10e3233" visibility="public" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_7bd281acb04022531a" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_08206e76492e006cb4" visibility="public" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_7ab71940bab910a223" />
-            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_3845109a70b1757cb9" visibility="public" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_a9ab455ab2f60a172a" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_47a1e2d1e68dcbfd66" visibility="public" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_64e904f2ebf8b9f538" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_c211ac66a7cfc47e85" name="Varsel">
               <properties documentation="Varsel sendt til en elev.&#10;&#10;# Referanse&#10;&#10;* [VIS - Opprette og sende varsel ](https://inschool.zendesk.com/hc/no/articles/360030859132-4b-21-Opprette-og-sende-varsel)&#10;* [Forskrift til opplæringslova - &amp;#167; 3-8. Varsling](https://lovdata.no/dokument/SF/forskrift/2006-06-23-724/KAPITTEL_5-1#%C2%A73-8)&#10;" stereotype="hovedklasse" />
@@ -17366,6 +17366,24 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_0f53cfeab1b3476c8f" idref="EAID_ASC_0f53cfeab1b3476c8f" start="EAID_CLS_a9ab455ab2f60a172a" end="EAID_CLS_917b8b67ec1ceae3be">
+        <source xmi:idref="EAID_CLS_a9ab455ab2f60a172a" idref="EAID_CLS_a9ab455ab2f60a172a">
+          <model type="Class" name="Klasse" />
+          <role visibility="Public" name="klasse" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle klasser tilknyttet læreren." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_917b8b67ec1ceae3be" idref="EAID_CLS_917b8b67ec1ceae3be">
+          <model type="Class" name="Undervisningsforhold" />
+          <role name="undervisningsforhold" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle lærere tilknyttet klassen." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_fd7a74dee439daaa30" idref="EAID_GEN_fd7a74dee439daaa30" start="EAID_CLS_bc18f199919735718f" end="EAID_CLS_0d161f922b39eccebe">
         <source xmi:idref="EAID_CLS_bc18f199919735718f" idref="EAID_CLS_bc18f199919735718f">
           <model type="Class" name="Klassemedlemskap" />
@@ -17862,24 +17880,6 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
           <role name="arbeidsforhold" visibility="Public" />
           <type multiplicity="1" />
           <documentation value="Relasjon til en tilsvarende objekt i Adminstrasjons domenet" />
-          <tags />
-          </target>
-        <properties ea_type="Association" direction="Bi-Directional" />
-        <tags />
-        </connector>
-      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_3845109a70b1757cb9" idref="EAID_ASC_3845109a70b1757cb9" start="EAID_CLS_917b8b67ec1ceae3be" end="EAID_CLS_a9ab455ab2f60a172a">
-        <source xmi:idref="EAID_CLS_917b8b67ec1ceae3be" idref="EAID_CLS_917b8b67ec1ceae3be">
-          <model type="Class" name="Undervisningsforhold" />
-          <role visibility="Public" name="undervisningsforhold" />
-          <type multiplicity="0..*" />
-          <documentation value="Alle lærere tilknyttet klassen." />
-          <tags />
-          </source>
-        <target xmi:idref="EAID_CLS_a9ab455ab2f60a172a" idref="EAID_CLS_a9ab455ab2f60a172a">
-          <model type="Class" name="Klasse" />
-          <role name="klasse" visibility="Public" />
-          <type multiplicity="0..*" />
-          <documentation value="Alle klasser tilknyttet læreren." />
           <tags />
           </target>
         <properties ea_type="Association" direction="Bi-Directional" />

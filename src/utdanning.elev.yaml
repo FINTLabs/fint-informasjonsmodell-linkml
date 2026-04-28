@@ -369,6 +369,8 @@ classes:
       undervisningsforhold:
         range: Undervisningsforhold
         inverse: klasse
+        annotations:
+          primaryRelation: true
         description: |
           Alle lærere tilknyttet klassen.
         multivalued: true
@@ -650,8 +652,6 @@ classes:
       klasse:
         range: Klasse
         inverse: undervisningsforhold
-        annotations:
-          primaryRelation: true
         description: |
           Alle klasser tilknyttet læreren.
         multivalued: true
