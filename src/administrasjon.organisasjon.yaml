@@ -168,6 +168,9 @@ classes:
           Hvilken type organisasjonselement dette er.
       overordnet:
         range: Organisasjonselement
+        inverse: underordnet
+        annotations:
+          primaryRelation: true
         description: |
           Referanse til organisasjonselement på nivået over gjeldende organisasjonselement.
           
@@ -189,3 +192,11 @@ classes:
         inverse: organisasjon
         description: |
           Referanse til Utdannings domenet
+      underordnet:
+        range: Organisasjonselement
+        inverse: overordnet
+        annotations:
+          primaryRelation: true
+        description: |
+          Alle underordnene (barn) organisasjonselementer
+        multivalued: true

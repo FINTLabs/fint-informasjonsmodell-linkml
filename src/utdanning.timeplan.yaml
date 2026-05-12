@@ -182,6 +182,12 @@ classes:
       Medlemskap i faggruppe.
     is_a: Gruppemedlemskap
     attributes:
+      elevforhold:
+        range: Elevforhold
+        inverse: faggruppemedlemskap
+        description: |
+          Elevforholdet et faggruppemedlemskap tilhører.
+        required: true
       faggruppe:
         range: Faggruppe
         inverse: faggruppemedlemskap

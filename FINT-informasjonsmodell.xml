@@ -5770,6 +5770,7 @@ Timedelen er egentlig unødvendig der bare dato har verdi. Det anbefales at en da
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_6b1df7189580da91e8" visibility="public" start="EAID_CLS_70bf942768e46ebd81" end="EAID_CLS_551c294badfe50ad41" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_551c294badfe50ad41" name="Leverandørgruppe">
               <properties documentation="Gruppering av leverandører.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_b880b9efc6cc983780">
@@ -14136,8 +14137,9 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_c2236976b005082939" idref="EAID_ASC_c2236976b005082939" start="EAID_CLS_11c618a515753fb259" end="EAID_CLS_11c618a515753fb259">
         <source xmi:idref="EAID_CLS_11c618a515753fb259" idref="EAID_CLS_11c618a515753fb259">
           <model type="Class" name="Organisasjonselement" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
+          <role visibility="Public" name="underordnet" />
+          <type multiplicity="0..*" />
+          <documentation value="Alle underordnene (barn) organisasjonselementer" />
           <tags />
           </source>
         <target xmi:idref="EAID_CLS_11c618a515753fb259" idref="EAID_CLS_11c618a515753fb259">
@@ -14147,7 +14149,7 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
           <documentation value="Referanse til organisasjonselement på nivået over gjeldende organisasjonselement.&#10;&#10;# Beskrivelse&#10;Alle overordnede (forelder) organisasjonselement.&#10;&#10;På øverste nivå, vil overordnet peke til seg selv.&#10;&#10;# Format&#10;Referanse til seg selv.&#10;&#10;# Eksempler&#10;&#10;* *Faggruppe for digitalisering og systemforvaltning* refererer til overordnet organisasjonselement, som er *IT-seksjonen*.&#10;* *Avdeling for helse og sosial* kan referere til organisasjonselemenetet til skolen, som kan være *Byremo videregående skole*" />
           <tags />
           </target>
-        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
       <connector xmi:type="uml:Generalization" xmi:idref="EAID_GEN_ec7b2850aa40c56108" idref="EAID_GEN_ec7b2850aa40c56108" start="EAID_CLS_0205423290c9bc7553" end="EAID_CLS_081589ccb697846d22">
@@ -16275,6 +16277,24 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_6b1df7189580da91e8" idref="EAID_ASC_6b1df7189580da91e8" start="EAID_CLS_70bf942768e46ebd81" end="EAID_CLS_551c294badfe50ad41">
+        <source xmi:idref="EAID_CLS_70bf942768e46ebd81" idref="EAID_CLS_70bf942768e46ebd81">
+          <model type="Class" name="Leverandør" />
+          <role visibility="Public" name="leverandør" />
+          <type multiplicity="0..*" />
+          <documentation value="Leverandører i en leverandørgruppe." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_551c294badfe50ad41" idref="EAID_CLS_551c294badfe50ad41">
+          <model type="Class" name="Leverandørgruppe" />
+          <role name="leverandørgruppe" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Gruppe av leverandører." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_2d566cf85beace392e" idref="EAID_ASC_2d566cf85beace392e" start="EAID_CLS_45bdccd1695f271c24" end="EAID_CLS_f2894721405c98bf79">
         <source xmi:idref="EAID_CLS_45bdccd1695f271c24" idref="EAID_CLS_45bdccd1695f271c24">
           <model type="Class" name="Postering" />
@@ -17126,8 +17146,9 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_8f0957917b09314cd3" idref="EAID_ASC_8f0957917b09314cd3" start="EAID_CLS_9be72467d299d27d2a" end="EAID_CLS_1235e64f5c06b787df">
         <source xmi:idref="EAID_CLS_9be72467d299d27d2a" idref="EAID_CLS_9be72467d299d27d2a">
           <model type="Class" name="Elevforhold" />
-          <role visibility="Public" />
-          <type multiplicity="0..1" />
+          <role visibility="Public" name="elevforhold" />
+          <type multiplicity="1" />
+          <documentation value="Elevforholdet et faggruppemedlemskap tilhører." />
           <tags />
           </source>
         <target xmi:idref="EAID_CLS_1235e64f5c06b787df" idref="EAID_CLS_1235e64f5c06b787df">
@@ -17137,7 +17158,7 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
           <documentation value="Faggruppemedlemskapene til et elevforhold." />
           <tags />
           </target>
-        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <properties ea_type="Association" direction="Bi-Directional" />
         <tags />
         </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_67e1bed015135d3876" idref="EAID_ASC_67e1bed015135d3876" start="EAID_CLS_9be72467d299d27d2a" end="EAID_CLS_8ebe762414fdaf3d36">

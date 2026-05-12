@@ -201,6 +201,9 @@ classes:
           Vurderingsinformasjon for en elev.
       faggruppemedlemskap:
         range: Faggruppemedlemskap
+        inverse: elevforhold
+        annotations:
+          primaryRelation: true
         description: |
           Faggruppemedlemskapene til et elevforhold.
         multivalued: true

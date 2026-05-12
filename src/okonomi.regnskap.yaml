@@ -86,6 +86,13 @@ classes:
           writeable: true
         description: |
           Kontonummer til leverandøren.
+      leverandørgruppe:
+        range: Leverandørgruppe
+        inverse: leverandør
+        annotations:
+          primaryRelation: true
+        description: |
+          Gruppe av leverandører.
 
   Leverandørgruppe:
     description: |
@@ -103,6 +110,12 @@ classes:
         description: |
           Navn på leverandørgruppen.
         required: true
+      leverandør:
+        range: Leverandør
+        inverse: leverandørgruppe
+        description: |
+          Leverandører i en leverandørgruppe.
+        multivalued: true
 
   Postering:
     description: |
