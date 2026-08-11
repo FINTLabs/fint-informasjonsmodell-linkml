@@ -113,6 +113,10 @@ classes:
         description: |
           Id i fagsystemet.
         required: true
+      gyldighetsperiode:
+        range: Periode
+        description: |
+          Gyldighetsperiode for enhetsgruppen.
       navn:
         range: string
         description: |
@@ -151,6 +155,10 @@ classes:
         description: |
           Unik identifikator for enhetsgruppemedlemskapet.
         required: true
+      gyldighetsperiode:
+        range: Periode
+        description: |
+          Gyldighetsperiode for enhetsgruppemedlemskapet.
       digitalEnhet:
         range: DigitalEnhet
         inverse: enhetsgruppemedlemskap

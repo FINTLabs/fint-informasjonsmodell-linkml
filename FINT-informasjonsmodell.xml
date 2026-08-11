@@ -6289,6 +6289,15 @@ Feltet har verdiene:
 </body>
                   </ownedComment>
                 </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_0778ce7acfdb3139f8" name="gyldighetsperiode" visibility="public">
+                <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_57cc89ef05be65ff13" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_57cc89ef05be65ff13" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_57cc89ef05be65ff13">
+                  <body>Gyldighetsperiode for enhetsgruppen.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
               <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_3fd89cf27f312c635c" name="navn" visibility="public">
                 <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
                 <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_f87b46981057654309" value="1" />
@@ -6316,6 +6325,15 @@ Gruppemedlemskap som knytter sammen Digitalenhet og Enhetsgrupper.
                 <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_c363f6de26c8e3c8da" value="1" />
                 <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_c363f6de26c8e3c8da">
                   <body>Unik identifikator for enhetsgruppemedlemskapet.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_4fc183480f628c6e2b" name="gyldighetsperiode" visibility="public">
+                <type xmi:idref="EAID_CLS_ffdb8cc4adee01331a" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_b0ab72f813f8feeb9f" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_b0ab72f813f8feeb9f" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_b0ab72f813f8feeb9f">
+                  <body>Gyldighetsperiode for enhetsgruppemedlemskapet.
 </body>
                   </ownedComment>
                 </ownedAttribute>
@@ -6521,7 +6539,17 @@ Eksempler:
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_9ab415c7423ffd2266" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_df88bdbfcdf5b2c46d" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_9fc9ed03404204e554" name="Enhetstype">
-              <properties stereotype="hovedklasse" />
+              <properties documentation="Kategori som den digitale enheten hører til.&#10;&#10;Eksempler:&#10;&#10;* mobiltelefon&#10;* datamaskin&#10;* nettbrett&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_da9fbbf53746ec2192">
+                <body>Kategori som den digitale enheten hører til.
+
+Eksempler:
+
+* mobiltelefon
+* datamaskin
+* nettbrett
+</body>
+                </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_da9fbbf53746ec2192" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_9fc9ed03404204e554" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_7d9641c41e900d56d3" name="Håndhevingstype">
@@ -6569,11 +6597,33 @@ Eksempel:
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_2828afa4aabccf5763" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_1671dc6cd6e8063b64" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_62ae3d650ea9c83562" name="Produsent">
-              <properties stereotype="hovedklasse" />
+              <properties documentation="Navn på produsenten av den digitale enheten.&#10;&#10;Eksempler:&#10;&#10;* HP&#10;* Lenovo&#10;* Apple&#10;* Samsung&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_d6696f363a9e0b9b45">
+                <body>Navn på produsenten av den digitale enheten.
+
+Eksempler:
+
+* HP
+* Lenovo
+* Apple
+* Samsung
+</body>
+                </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_d6696f363a9e0b9b45" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_62ae3d650ea9c83562" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_f93d6f6a3c37517153" name="Status">
-              <properties stereotype="hovedklasse" />
+              <properties documentation="Status på den digitale enheten i fagsystemet (feks ett asset management system):&#10;&#10;Eksempler:&#10;&#10;* i bruk&#10;* på lager&#10;* defekt&#10;* utgått&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_3935407cb7e9db0d72">
+                <body>Status på den digitale enheten i fagsystemet (feks ett asset management system):
+
+Eksempler:
+
+* i bruk
+* på lager
+* defekt
+* utgått
+</body>
+                </ownedComment>
               <generalization xmi:type="uml:Generalization" xmi:id="EAID_GEN_3935407cb7e9db0d72" general="EAID_CLS_3385458244847ec7db" start="EAID_CLS_f93d6f6a3c37517153" end="EAID_CLS_3385458244847ec7db" />
               </packagedElement>
             </packagedElement>
@@ -8113,6 +8163,55 @@ Synonym: Utdanningsgruppe
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_314807340ce48e7bfc" visibility="public" start="EAID_CLS_e755c56f229ed4bfb5" end="EAID_CLS_9be83411188065746c" />
             </packagedElement>
           <packagedElement xmi:type="uml:Package" xmi:id="EAID_PKG_005aa392465e3500f2" name="Vurdering">
+            <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_ccf0298028ac1233ac" name="Aktivitetsfravær">
+              <properties documentation="Manglende tilstedeværelse i en aktivitet.&#10;&#10;Har eleven flere fag knyttet til aktiviteten, vil det opprettes ett fravær for hvert fag eleven har i aktiviteten.&#10;" stereotype="hovedklasse" />
+              <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_de851d432c07eae819">
+                <body>Manglende tilstedeværelse i en aktivitet.
+
+Har eleven flere fag knyttet til aktiviteten, vil det opprettes ett fravær for hvert fag eleven har i aktiviteten.
+</body>
+                </ownedComment>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_7a6ecf32ed5945605b" name="systemId" visibility="public">
+                <type xmi:idref="EAID_CLS_46d2316789ea33b875" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_0ae70fa1a84f5e6834" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_0ae70fa1a84f5e6834" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_0ae70fa1a84f5e6834">
+                  <body>Kildesystemets unike identifikator.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_d32fbb61c92ce36788" name="dato" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Date" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_27c1d3d9ebaf7caafb" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_27c1d3d9ebaf7caafb" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_27c1d3d9ebaf7caafb">
+                  <body>Dato for fraværet.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_a1498011eab39f6b6c" name="kommentar" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#String" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_69e826662bb1d9a9d9" value="0" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_69e826662bb1d9a9d9" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_69e826662bb1d9a9d9">
+                  <body>Kommentar til fraværet, evt ekstrainformasjon.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              <ownedAttribute xmi:type="uml:Property" xmi:id="EAID_PRP_b0e04fc07618d98e9c" name="minutter" visibility="public">
+                <type href="http://schema.omg.org/spec/UML/2.1/uml.xml#Integer" />
+                <lowerValue xmi:type="uml:LiteralInteger" xmi:id="EAID_LWR_08aab8b0636f69b7e6" value="1" />
+                <upperValue xmi:type="uml:LiteralInteger" xmi:id="EAID_UPR_08aab8b0636f69b7e6" value="1" />
+                <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_08aab8b0636f69b7e6">
+                  <body>Antall minutters fravær som knyttes til et bestemt fag.
+</body>
+                  </ownedComment>
+                </ownedAttribute>
+              </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_d75508bbe44f5d10ab" visibility="public" start="EAID_CLS_ccf0298028ac1233ac" end="EAID_CLS_e92c2079bc89c6d11a" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_4077227f7afb1391dd" visibility="public" start="EAID_CLS_ccf0298028ac1233ac" end="EAID_CLS_3076a148b4be460dce" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_beee7d8ea6a7756b81" visibility="public" start="EAID_CLS_ccf0298028ac1233ac" end="EAID_CLS_1effd1cacfa57a62ad" />
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_630562a9d20c5b0019" visibility="public" start="EAID_CLS_ccf0298028ac1233ac" end="EAID_CLS_d404ea07009fe8b767" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_183d00614805171fd3" name="Anmerkninger">
               <properties documentation="Anmerkninger for en elev for et elevforhold.&#10;" stereotype="hovedklasse" />
               <ownedComment xmi:type="uml:Comment" xmi:id="EAID_CMT_b950e519c778f8a2f2">
@@ -8287,6 +8386,7 @@ Det føres ikke lenger fravær på eksamen. Dette vil bli satt som karakter. Pga de
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a118b76639d9169004" visibility="public" start="EAID_CLS_8ebe762414fdaf3d36" end="EAID_CLS_ccf0298028ac1233ac" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_7818f093090d4009cd" visibility="public" start="EAID_CLS_8ebe762414fdaf3d36" end="EAID_CLS_ef58a543f483b22da3" />
             <packagedElement xmi:type="uml:Class" xmi:id="EAID_CLS_d940508e47051c726a" name="Elevvurdering">
               <properties documentation="Vurderingsinformasjon for en elev.&#10;" stereotype="hovedklasse" />
@@ -8519,6 +8619,7 @@ Fravær skal registreres i dager eller timer (60-minutters enheter). Det er ikke 
                   </ownedComment>
                 </ownedAttribute>
               </packagedElement>
+            <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_a78cd5f703fd3670e9" visibility="public" start="EAID_CLS_ef58a543f483b22da3" end="EAID_CLS_e92c2079bc89c6d11a" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_640a2263050eb26588" visibility="public" start="EAID_CLS_ef58a543f483b22da3" end="EAID_CLS_a7dee6f3f81a7ce38f" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_11839eae5bcc88c8bb" visibility="public" start="EAID_CLS_ef58a543f483b22da3" end="EAID_CLS_3076a148b4be460dce" />
             <packagedElement xmi:type="uml:Association" xmi:id="EAID_ASC_011617d5a47868a220" visibility="public" start="EAID_CLS_ef58a543f483b22da3" end="EAID_CLS_1effd1cacfa57a62ad" />
@@ -11578,6 +11679,13 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
             <documentation value="Id i fagsystemet.&#10;" />
             <tags />
             </attribute>
+          <attribute xmi:idref="EAID_PRP_0778ce7acfdb3139f8" idref="EAID_PRP_0778ce7acfdb3139f8" name="gyldighetsperiode">
+            <properties type="Periode" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Gyldighetsperiode for enhetsgruppen.&#10;" />
+            <tags />
+            </attribute>
           <attribute xmi:idref="EAID_PRP_3fd89cf27f312c635c" idref="EAID_PRP_3fd89cf27f312c635c" name="navn">
             <properties type="string" />
             <bounds lower="1" upper="1" />
@@ -11597,6 +11705,13 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
             <bounds lower="1" upper="1" />
             <stereotype stereotype="" />
             <documentation value="Unik identifikator for enhetsgruppemedlemskapet.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_4fc183480f628c6e2b" idref="EAID_PRP_4fc183480f628c6e2b" name="gyldighetsperiode">
+            <properties type="Periode" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Gyldighetsperiode for enhetsgruppemedlemskapet.&#10;" />
             <tags />
             </attribute>
           </attributes>
@@ -11743,7 +11858,7 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
       <element xmi:idref="EAID_CLS_9fc9ed03404204e554" idref="EAID_CLS_9fc9ed03404204e554" xmi:type="uml:Class" type="Class" name="Enhetstype" scope="public">
         <model package="EAID_PKG_8eecacff2524336d0e" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Kategori som den digitale enheten hører til.&#10;&#10;Eksempler:&#10;&#10;* mobiltelefon&#10;* datamaskin&#10;* nettbrett&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_7d9641c41e900d56d3" idref="EAID_CLS_7d9641c41e900d56d3" xmi:type="uml:Class" type="Class" name="Håndhevingstype" scope="public">
@@ -11767,13 +11882,13 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
       <element xmi:idref="EAID_CLS_62ae3d650ea9c83562" idref="EAID_CLS_62ae3d650ea9c83562" xmi:type="uml:Class" type="Class" name="Produsent" scope="public">
         <model package="EAID_PKG_8eecacff2524336d0e" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Navn på produsenten av den digitale enheten.&#10;&#10;Eksempler:&#10;&#10;* HP&#10;* Lenovo&#10;* Apple&#10;* Samsung&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_CLS_f93d6f6a3c37517153" idref="EAID_CLS_f93d6f6a3c37517153" xmi:type="uml:Class" type="Class" name="Status" scope="public">
         <model package="EAID_PKG_8eecacff2524336d0e" ea_eleType="element" />
         <tags />
-        <properties isAbstract="false" sType="Class" scope="public" stereotype="hovedklasse" />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Status på den digitale enheten i fagsystemet (feks ett asset management system):&#10;&#10;Eksempler:&#10;&#10;* i bruk&#10;* på lager&#10;* defekt&#10;* utgått&#10;" stereotype="hovedklasse" />
         <attributes />
         </element>
       <element xmi:idref="EAID_PKG_11747fd7c7dcca9ea3" idref="EAID_PKG_11747fd7c7dcca9ea3" xmi:type="uml:Package" type="Package" name="Tilgang" scope="public">
@@ -12530,6 +12645,41 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
       <element xmi:idref="EAID_PKG_005aa392465e3500f2" idref="EAID_PKG_005aa392465e3500f2" xmi:type="uml:Package" type="Package" name="Vurdering" scope="public">
         <model package2="EAID_PKG_005aa392465e3500f2" ea_eleType="package" package="EAID_PKG_93ea470388b4d82056" />
         <tags />
+        </element>
+      <element xmi:idref="EAID_CLS_ccf0298028ac1233ac" idref="EAID_CLS_ccf0298028ac1233ac" xmi:type="uml:Class" type="Class" name="Aktivitetsfravær" scope="public">
+        <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
+        <tags />
+        <properties isAbstract="false" sType="Class" scope="public" documentation="Manglende tilstedeværelse i en aktivitet.&#10;&#10;Har eleven flere fag knyttet til aktiviteten, vil det opprettes ett fravær for hvert fag eleven har i aktiviteten.&#10;" stereotype="hovedklasse" />
+        <attributes>
+          <attribute xmi:idref="EAID_PRP_7a6ecf32ed5945605b" idref="EAID_PRP_7a6ecf32ed5945605b" name="systemId">
+            <properties type="Identifikator" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Kildesystemets unike identifikator.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_d32fbb61c92ce36788" idref="EAID_PRP_d32fbb61c92ce36788" name="dato">
+            <properties type="date" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Dato for fraværet.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_a1498011eab39f6b6c" idref="EAID_PRP_a1498011eab39f6b6c" name="kommentar">
+            <properties type="string" />
+            <bounds lower="0" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Kommentar til fraværet, evt ekstrainformasjon.&#10;" />
+            <tags />
+            </attribute>
+          <attribute xmi:idref="EAID_PRP_b0e04fc07618d98e9c" idref="EAID_PRP_b0e04fc07618d98e9c" name="minutter">
+            <properties type="long" />
+            <bounds lower="1" upper="1" />
+            <stereotype stereotype="" />
+            <documentation value="Antall minutters fravær som knyttes til et bestemt fag.&#10;" />
+            <tags />
+            </attribute>
+          </attributes>
         </element>
       <element xmi:idref="EAID_CLS_183d00614805171fd3" idref="EAID_CLS_183d00614805171fd3" xmi:type="uml:Class" type="Class" name="Anmerkninger" scope="public">
         <model package="EAID_PKG_005aa392465e3500f2" ea_eleType="element" />
@@ -18858,7 +19008,7 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
           <model type="Class" name="Fag" />
           <role name="fag" visibility="Public" />
           <type multiplicity="1..*" />
-          <documentation value="Fagene som det undervises i i gruppen" />
+          <documentation value="Et av fagene som det undervises i i gruppen.&#10;Dette er data fra feltet Fag i Rediger Undervisningsgruppe i InSchool." />
           <tags />
           </target>
         <properties ea_type="Association" direction="Bi-Directional" />
@@ -19328,6 +19478,74 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_d75508bbe44f5d10ab" idref="EAID_ASC_d75508bbe44f5d10ab" start="EAID_CLS_ccf0298028ac1233ac" end="EAID_CLS_e92c2079bc89c6d11a">
+        <source xmi:idref="EAID_CLS_ccf0298028ac1233ac" idref="EAID_CLS_ccf0298028ac1233ac">
+          <model type="Class" name="Aktivitetsfravær" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_e92c2079bc89c6d11a" idref="EAID_CLS_e92c2079bc89c6d11a">
+          <model type="Class" name="Fag" />
+          <role name="fag" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Faget det er fravær fra." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_4077227f7afb1391dd" idref="EAID_ASC_4077227f7afb1391dd" start="EAID_CLS_ccf0298028ac1233ac" end="EAID_CLS_3076a148b4be460dce">
+        <source xmi:idref="EAID_CLS_ccf0298028ac1233ac" idref="EAID_CLS_ccf0298028ac1233ac">
+          <model type="Class" name="Aktivitetsfravær" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_3076a148b4be460dce" idref="EAID_CLS_3076a148b4be460dce">
+          <model type="Class" name="Fraværstype" />
+          <role name="fraværstype" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Type fravær." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_beee7d8ea6a7756b81" idref="EAID_ASC_beee7d8ea6a7756b81" start="EAID_CLS_ccf0298028ac1233ac" end="EAID_CLS_1effd1cacfa57a62ad">
+        <source xmi:idref="EAID_CLS_ccf0298028ac1233ac" idref="EAID_CLS_ccf0298028ac1233ac">
+          <model type="Class" name="Aktivitetsfravær" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_1effd1cacfa57a62ad" idref="EAID_CLS_1effd1cacfa57a62ad">
+          <model type="Class" name="Skoleressurs" />
+          <role name="registrertAv" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Den som har registrert fraværet." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_630562a9d20c5b0019" idref="EAID_ASC_630562a9d20c5b0019" start="EAID_CLS_ccf0298028ac1233ac" end="EAID_CLS_d404ea07009fe8b767">
+        <source xmi:idref="EAID_CLS_ccf0298028ac1233ac" idref="EAID_CLS_ccf0298028ac1233ac">
+          <model type="Class" name="Aktivitetsfravær" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_d404ea07009fe8b767" idref="EAID_CLS_d404ea07009fe8b767">
+          <model type="Class" name="Undervisningsgruppe" />
+          <role name="undervisningsgruppe" visibility="Public" />
+          <type multiplicity="1" />
+          <documentation value="Undervisningsgruppen det er registrert fravær fra." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_24d710f9aa1a624b3f" idref="EAID_ASC_24d710f9aa1a624b3f" start="EAID_CLS_183d00614805171fd3" end="EAID_CLS_8cd72252caa5382d06">
         <source xmi:idref="EAID_CLS_183d00614805171fd3" idref="EAID_CLS_183d00614805171fd3">
           <model type="Class" name="Anmerkninger" />
@@ -19689,6 +19907,24 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
         <properties ea_type="Association" direction="Source -&gt; Destination" />
         <tags />
         </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_a118b76639d9169004" idref="EAID_ASC_a118b76639d9169004" start="EAID_CLS_8ebe762414fdaf3d36" end="EAID_CLS_ccf0298028ac1233ac">
+        <source xmi:idref="EAID_CLS_8ebe762414fdaf3d36" idref="EAID_CLS_8ebe762414fdaf3d36">
+          <model type="Class" name="Elevfravær" />
+          <role visibility="Public" name="elevfravær" />
+          <type multiplicity="1" />
+          <documentation value="Samling av fraværsregistreringer for en elev." />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_ccf0298028ac1233ac" idref="EAID_CLS_ccf0298028ac1233ac">
+          <model type="Class" name="Aktivitetsfravær" />
+          <role name="aktivitetsfravær" visibility="Public" />
+          <type multiplicity="0..*" />
+          <documentation value="Liste av aktivitetsfravær." />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Bi-Directional" />
+        <tags />
+        </connector>
       <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_7818f093090d4009cd" idref="EAID_ASC_7818f093090d4009cd" start="EAID_CLS_8ebe762414fdaf3d36" end="EAID_CLS_ef58a543f483b22da3">
         <source xmi:idref="EAID_CLS_8ebe762414fdaf3d36" idref="EAID_CLS_8ebe762414fdaf3d36">
           <model type="Class" name="Elevfravær" />
@@ -19931,6 +20167,23 @@ Vurderinger av orden og atferd gjøres uten relasjon til noen gruppe, kun til et 
           <role name="fag" visibility="Public" />
           <type multiplicity="1" />
           <documentation value="Faget fraværet er knyttet til" />
+          <tags />
+          </target>
+        <properties ea_type="Association" direction="Source -&gt; Destination" />
+        <tags />
+        </connector>
+      <connector xmi:type="uml:Association" xmi:idref="EAID_ASC_a78cd5f703fd3670e9" idref="EAID_ASC_a78cd5f703fd3670e9" start="EAID_CLS_ef58a543f483b22da3" end="EAID_CLS_e92c2079bc89c6d11a">
+        <source xmi:idref="EAID_CLS_ef58a543f483b22da3" idref="EAID_CLS_ef58a543f483b22da3">
+          <model type="Class" name="Fraværsregistrering" />
+          <role visibility="Public" />
+          <type multiplicity="0..1" />
+          <tags />
+          </source>
+        <target xmi:idref="EAID_CLS_e92c2079bc89c6d11a" idref="EAID_CLS_e92c2079bc89c6d11a">
+          <model type="Class" name="Fag" />
+          <role name="fag" visibility="Public" />
+          <type multiplicity="0..1" />
+          <documentation value="Faget det er fravær fra." />
           <tags />
           </target>
         <properties ea_type="Association" direction="Source -&gt; Destination" />

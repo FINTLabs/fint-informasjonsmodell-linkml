@@ -312,7 +312,8 @@ classes:
         annotations:
           primaryRelation: true
         description: |
-          Fagene som det undervises i i gruppen
+          Et av fagene som det undervises i i gruppen.
+          Dette er data fra feltet Fag i Rediger Undervisningsgruppe i InSchool.
         multivalued: true
         required: true
       gruppemedlemskap:

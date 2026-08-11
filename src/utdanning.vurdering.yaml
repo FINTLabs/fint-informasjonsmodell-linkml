@@ -14,6 +14,57 @@ imports:
 
 classes:
 
+  Aktivitetsfravær:
+    description: |
+      Manglende tilstedeværelse i en aktivitet.
+      
+      Har eleven flere fag knyttet til aktiviteten, vil det opprettes ett fravær for hvert fag eleven har i aktiviteten.
+    attributes:
+      systemId:
+        range: Identifikator
+        description: |
+          Kildesystemets unike identifikator.
+        required: true
+      dato:
+        range: date
+        description: |
+          Dato for fraværet.
+        required: true
+      kommentar:
+        range: string
+        description: |
+          Kommentar til fraværet, evt ekstrainformasjon.
+      minutter:
+        range: integer
+        description: |
+          Antall minutters fravær som knyttes til et bestemt fag.
+        required: true
+      elevfravær:
+        range: Elevfravær
+        inverse: aktivitetsfravær
+        description: |
+          Samling av fraværsregistreringer for en elev.
+        required: true
+      fag:
+        range: Fag
+        description: |
+          Faget det er fravær fra.
+        required: true
+      fraværstype:
+        range: Fraværstype
+        description: |
+          Type fravær.
+        required: true
+      registrertAv:
+        range: Skoleressurs
+        description: |
+          Den som har registrert fraværet.
+      undervisningsgruppe:
+        range: Undervisningsgruppe
+        description: |
+          Undervisningsgruppen det er registrert fravær fra.
+        required: true
+
   Anmerkninger:
     description: |
       Anmerkninger for en elev for et elevforhold.
@@ -249,6 +300,14 @@ classes:
         description: |
           Kildesystemets unike identifikator
         required: true
+      aktivitetsfravær:
+        range: Aktivitetsfravær
+        inverse: elevfravær
+        annotations:
+          primaryRelation: true
+        description: |
+          Liste av aktivitetsfravær.
+        multivalued: true
       elevforhold:
         range: Elevforhold
         inverse: fraværsregistreringer
@@ -514,6 +573,10 @@ classes:
         description: |
           Samling av fraværsregistreringer for en elev.
         required: true
+      fag:
+        range: Fag
+        description: |
+          Faget det er fravær fra.
       faggruppe:
         range: Faggruppe
         description: |
